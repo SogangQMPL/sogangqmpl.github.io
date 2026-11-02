@@ -30,17 +30,16 @@ const sectionTitle = (title, link, label) => `<div class="section-heading"><h2>$
 function header(data,page) {
  const member=['people','students'].includes(page),highlights=['news','activities'].includes(page)||page.startsWith('post-');
  const link=(id,label,active=false)=>`<a href="${id}.html" ${page===id?'aria-current="page"':active?'class="section-current"':''}>${label}</a>`;
- return `<header class="site-header"><div class="container header-inner">
-   <a class="brand" href="index.html" aria-label="${e(data.site.title)} — Home"><span>${e(data.site.group)}</span><small>@ Sogang Univ.</small></a>
-   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="menu-label">Menu</span><span class="menu-icon" aria-hidden="true">☰</span></button>
-   <nav id="main-nav" aria-label="Main navigation">
-     <div class="nav-item">${link('index','Home')}</div>
+ const navigation=()=>`<div class="nav-item">${link('index','Home')}</div>
      <div class="nav-item has-submenu">${link('people','Member',member)}<div class="nav-dropdown">${link('people','Professor')}${link('students','Students')}</div></div>
      <div class="nav-item">${link('publications','Publication')}</div>
      <div class="nav-item">${link('research','Research')}</div>
-     <div class="nav-item has-submenu">${link('news','Highlights',highlights)}<div class="nav-dropdown">${link('news','News')}${link('activities','Activities')}</div></div>
-   </nav>
- </div></header>`;
+     <div class="nav-item has-submenu">${link('news','Highlights',highlights)}<div class="nav-dropdown">${link('news','News')}${link('activities','Activities')}</div></div>`;
+ return `<header class="site-header"><div class="container header-inner">
+   <a class="brand" href="index.html" aria-label="${e(data.site.title)} — Home"><span>${e(data.site.group)}</span><small>@ Sogang Univ.</small></a>
+   <button class="menu-toggle" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="mobile-navigation"><span class="menu-label">Menu</span><span class="menu-icon" aria-hidden="true">☰</span></button>
+   <nav id="main-nav" aria-label="Main navigation">${navigation()}</nav>
+ </div><dialog id="mobile-navigation" class="mobile-menu" aria-labelledby="mobile-menu-title"><div class="mobile-menu-heading"><h2 id="mobile-menu-title">Menu</h2><button class="mobile-menu-close" type="button" aria-label="Close menu" autofocus><span aria-hidden="true">×</span></button></div><nav class="mobile-menu-links" aria-label="Mobile navigation">${navigation()}</nav></dialog></header>`;
 }
 
 function footer(data) {
