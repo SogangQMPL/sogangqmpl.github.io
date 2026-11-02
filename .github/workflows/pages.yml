@@ -1,53 +1,34 @@
-name: Import prepared lab source
+name: Publish lab website
 on:
   push:
     branches: [main]
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
 jobs:
-  import:
-    if: ${{ github.actor != 'github-actions[bot]' }}
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Restore verified website source
-        env:
-          EXPECTED_SOURCE_SHA256: 38da892a1a8bba83a232e1fad10be4af3d4ca5332da6c475ff6a4fea6172bd31
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import hashlib, os, shutil, tempfile, zipfile
-          parts = [Path('site-source.zip.part%02d' % n) for n in range(1, 5)]
-          assert all(p.is_file() for p in parts), 'Missing source archive part'
-          with tempfile.TemporaryDirectory() as tmp:
-              archive = Path(tmp) / 'source.zip'
-              with archive.open('wb') as output:
-                  for part in parts:
-                      with part.open('rb') as source:
-                          shutil.copyfileobj(source, output)
-              assert hashlib.sha256(archive.read_bytes()).hexdigest() == os.environ['EXPECTED_SOURCE_SHA256'], 'Archive hash mismatch'
-              with zipfile.ZipFile(archive) as bundle:
-                  source_files = [n for n in bundle.namelist() if not n.endswith('/')]
-                  assert len(source_files) == 192, 'Unexpected source file count'
-                  copied = 0
-                  for name in source_files:
-                      rel = Path(name)
-                      assert rel.parts[0] == 'qmp-lab' and '..' not in rel.parts, 'Unsafe archive path'
-                      rel = Path(*rel.parts[1:])
-                      if rel.parts[0] == '.github':
-                          continue
-                      target = Path.cwd() / rel
-                      target.parent.mkdir(parents=True, exist_ok=True)
-                      target.write_bytes(bundle.read(name))
-                      copied += 1
-                  assert copied == 191, 'Incomplete source restoration'
-          for part in parts:
-              part.unlink()
-          print('Restored 191 source files; preserved the workflow and removed upload parts.')
-          PY
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add --all
-          git commit -m 'Import lab website source'
-          git push origin HEAD:main
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Validate content
+        run: node scripts/check.mjs
+      - name: Build static pages
+        run: node scripts/build.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
