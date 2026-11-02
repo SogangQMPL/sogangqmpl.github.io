@@ -93,6 +93,7 @@
     });
     value.news.forEach((post) => {
       if (post.excerpt !== undefined && typeof post.excerpt !== 'string') throw new Error('목록 소개는 글자로 입력해야 합니다.');
+      if (post.facts !== undefined && (!Array.isArray(post.facts) || post.facts.some((fact) => !fact || typeof fact !== 'object' || Array.isArray(fact) || typeof fact.label !== 'string' || typeof fact.value !== 'string'))) throw new Error('수상 소식 핵심 정보는 글자로 된 label과 value를 담은 목록이어야 합니다.');
       if (post.content !== undefined && (!Array.isArray(post.content) || post.content.some((block) => !block || typeof block !== 'object' || Array.isArray(block)))) throw new Error('게시물 content는 문단·사진 블록 목록이어야 합니다.');
       (post.content || []).forEach((block) => {
         if (block.children !== undefined && (!Array.isArray(block.children) || block.children.some((run) => !run || typeof run !== 'object' || Array.isArray(run)))) throw new Error('게시물 문단의 children은 글자·링크 목록이어야 합니다.');
@@ -292,6 +293,29 @@
     if (block) block.open = true;
     (block || entry).querySelector('input,textarea,select')?.focus();
   }
+  function isAwardPost(post) {
+    return String(post.category || '').trim().toLowerCase() === 'awards';
+  }
+  function renderPostFacts(post) {
+    const wrapper = node('details', undefined, 'entry');
+    wrapper.hidden = !isAwardPost(post);
+    wrapper.append(node('summary', '수상 소식 핵심 정보'));
+    const body = node('div', undefined, 'entry-body');
+    body.append(node('p', 'Awards 목록에 표시할 수상자·상명·행사를 입력하세요. 비워 둔 항목은 표시하지 않습니다.', 'panel-note'));
+    const group = node('div', undefined, 'fields');
+    const definitions = [['Recipient', '수상자 (Recipient)'], ['Award', '상명 (Award)'], ['Event', '행사 (Event)']];
+    const labels = definitions.map(([label]) => label);
+    const edit = Object.fromEntries(definitions.map(([label]) => [label, (post.facts || []).find((fact) => fact.label === label)?.value || '']));
+    const updateFacts = () => {
+      const facts = definitions.map(([label]) => ({ label, value: edit[label].trim() })).filter((fact) => fact.value);
+      const extraFacts = (post.facts || []).filter((fact) => !labels.includes(fact.label));
+      if (facts.length || extraFacts.length) post.facts = [...facts, ...extraFacts];
+      else delete post.facts;
+    };
+    definitions.forEach(([label, title]) => renderField(edit, [label, title, 'text', true], group, null, updateFacts));
+    body.append(group); wrapper.append(body);
+    return wrapper;
+  }
   function renderPostContent(post, postIndex, target) {
     const wrapper = node('section', undefined, 'post-content-editor');
     wrapper.append(node('h3', '게시물 내용', 'group-heading'), node('p', '문단과 사진을 표시할 순서대로 추가하세요. 기존 원문의 강조·링크는 해당 문단을 수정하기 전까지 보존됩니다.', 'panel-note'));
@@ -379,12 +403,13 @@
     entries.forEach((item, index) => {
       const entry = node('details', undefined, 'entry'); entry.dataset.entryIndex = String(index);
       const summary = node('summary'); const text = node('div', undefined, 'entry-title'); const meta = node('div', undefined, 'entry-meta');
-      const updateTitle = () => { text.replaceChildren(document.createTextNode(item.title || item.name || '제목 없는 새 항목'), meta); meta.textContent = [item.date || item.year || '', item.category || item.role || ''].filter(Boolean).join(' · '); };
+      let factsGroup = null;
+      const updateTitle = () => { text.replaceChildren(document.createTextNode(item.title || item.name || '제목 없는 새 항목'), meta); meta.textContent = [item.date || item.year || '', item.category || item.role || ''].filter(Boolean).join(' · '); if (factsGroup) factsGroup.hidden = !isAwardPost(item); };
       updateTitle(); summary.append(text); entry.append(summary);
       const body = node('div', undefined, 'entry-body'); const group = node('div', undefined, 'fields');
       fields[current].forEach((field) => renderField(item, field, group, updateTitle)); body.append(group);
       if (current === 'research') renderTopics(item, index, body);
-      if (current === 'news') renderPostContent(item, index, body);
+      if (current === 'news') { factsGroup = renderPostFacts(item); body.append(factsGroup); renderPostContent(item, index, body); }
       const actions = node('div', undefined, 'entry-actions');
       [['↑ 위로', -1], ['↓ 아래로', 1]].forEach(([label, direction]) => {
         const button = node('button', label); button.type = 'button'; button.disabled = index + direction < 0 || index + direction >= entries.length;
