@@ -32,11 +32,12 @@ function connect() {
    else if(/^(index|research|people|students|publications|news|activities|join)\.html/.test(href)) {const url=new URL(href,location.href);url.searchParams.set('preview','1');link.href=url.pathname+url.search+url.hash;}
  }
  const search=document.getElementById('publication-search'), year=document.getElementById('publication-year');
+ const publicationSearchText=value=>String(value).normalize('NFKC').replace(/[‐‑‒–—−]/g,'-').toLowerCase();
  function filterPublications(){
-  const query=search.value.trim().toLowerCase(), selected=year.value;
+  const query=publicationSearchText(search.value.trim()), selected=year.value;
   const list=sortedPublications(data); let count=0;
   document.querySelectorAll('#publication-results .publication').forEach((article,i)=>{
-   const p=list[i], text=[p.title,p.authors,p.journal,p.doi].join(' ').toLowerCase();
+   const p=list[i], text=publicationSearchText([p.title,p.authors,p.journal,p.doi].join(' '));
    const visible=(!query||text.includes(query))&&(selected==='all'||publicationYearGroup(p.year,data.publicationYearGroups)===selected);
    article.hidden=!visible;if(visible) count++;
   });
