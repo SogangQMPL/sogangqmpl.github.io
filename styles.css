@@ -62,7 +62,6 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 .authors{font-size:16px;line-height:1.75;color:var(--muted);margin-top:9px}
 .authors .lab-author{font-weight:700;color:var(--ink);text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .authors .author-markers{font-size:.75em;line-height:0;vertical-align:super;margin-left:.08em;color:inherit}
-.author-legend{display:flex;flex-wrap:wrap;gap:6px 22px;margin:-18px 0 26px;color:var(--muted);font-size:14px;line-height:1.6}
 .pub-journal{font-size:16px;color:var(--muted);margin-top:8px;line-height:1.7}
 .publication-short{display:block;padding-block:24px}
 .publication-short .pub-content h3{font-size:19px;font-weight:450;color:var(--ink)}
@@ -591,7 +590,6 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
  .under-review>h2{font-size:22px}
  .under-review-entry{padding-block:8px}
  .under-review-entry .pub-content h3{font-size:18px;line-height:1.6}
- .author-legend{gap:5px 18px;margin-bottom:22px}
  .highlight-image img{max-height:320px}
  .post-header h1{font-size:26px;line-height:1.4}
  .post-body{line-height:1.8}
