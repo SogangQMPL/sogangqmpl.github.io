@@ -33,6 +33,7 @@ for(const key of ['research','publications','news','people',...(data.underReview
   }
   if(key==='news'){
    if(item.excerpt!==undefined)assert(typeof item.excerpt==='string',`Invalid post excerpt: ${item.id}`);
+   if(item.facts!==undefined)assert(Array.isArray(item.facts)&&item.facts.every(f=>f&&typeof f.label==='string'&&typeof f.value==='string'),`Invalid news facts: ${item.id}`);
    assert(/^\d{4}-\d{2}(?:-\d{2})?$/.test(item.date),`Invalid date: ${item.id}`);
    assert(/^[a-z0-9][a-z0-9_-]*$/i.test(item.id),`Unsafe post id: ${item.id}`);
    if(item.content){

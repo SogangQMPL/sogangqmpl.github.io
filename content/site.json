@@ -1587,7 +1587,7 @@
       "date": "2026-10-27",
       "category": "Awards",
       "title": "G-LAMP Undergraduate Research Program (Spring 2026): Award Received — Junha Park",
-      "body": "Junha Park, an undergraduate researcher, received an award at the G-LAMP Undergraduate Research Program final presentation for Spring 2026.\n\nCongratulations on this well-deserved achievement.",
+      "body": "Junha Park, an undergraduate researcher, received an award at the G-LAMP Undergraduate Research Program final presentation for Spring 2026.",
       "summary": "Junha Park, an undergraduate researcher, received an award at the G-LAMP Undergraduate Research Program final presentation for Spring 2026.",
       "url": "",
       "source": "User-provided lab update, 2026-11-01",
@@ -1603,21 +1603,31 @@
         {
           "type": "paragraph",
           "text": "Junha Park, an undergraduate researcher, received an award at the G-LAMP Undergraduate Research Program final presentation for Spring 2026."
-        },
-        {
-          "type": "paragraph",
-          "text": "Congratulations on this well-deserved achievement."
         }
       ],
       "image": "assets/posts/news-2026-glamp-junha-park-award-display.webp",
-      "imageAlt": "Group photograph at the G-LAMP undergraduate research award ceremony on October 27, 2026."
+      "imageAlt": "Group photograph at the G-LAMP undergraduate research award ceremony on October 27, 2026.",
+      "facts": [
+        {
+          "label": "Recipient",
+          "value": "Junha Park"
+        },
+        {
+          "label": "Award",
+          "value": "Award received"
+        },
+        {
+          "label": "Event",
+          "value": "G-LAMP Undergraduate Research Program final presentation (Spring 2026)"
+        }
+      ]
     },
     {
       "id": "news-2026-kps-yongju-jeong-oral-award",
       "date": "2026-10-22",
       "category": "Awards",
       "title": "2026 KPS Fall: Oral Presentation Award — Yongju Jeong",
-      "body": "Yongju Jeong received an Oral Presentation Award at the 2026 KPS Fall Meeting.\n\nCongratulations on this well-deserved achievement.",
+      "body": "Yongju Jeong received an Oral Presentation Award at the 2026 KPS Fall Meeting.",
       "summary": "Yongju Jeong received an Oral Presentation Award at the 2026 KPS Fall Meeting.",
       "url": "",
       "source": "User-provided lab update, 2026-11-01",
@@ -1633,21 +1643,31 @@
         {
           "type": "paragraph",
           "text": "Yongju Jeong received an Oral Presentation Award at the 2026 KPS Fall Meeting."
-        },
-        {
-          "type": "paragraph",
-          "text": "Congratulations on this well-deserved achievement."
         }
       ],
       "image": "assets/posts/news-2026-kps-yongju-jeong-oral-award-display.webp",
-      "imageAlt": "Yongju Jeong presenting at the 2026 KPS Fall Meeting."
+      "imageAlt": "Yongju Jeong presenting at the 2026 KPS Fall Meeting.",
+      "facts": [
+        {
+          "label": "Recipient",
+          "value": "Yongju Jeong"
+        },
+        {
+          "label": "Award",
+          "value": "Oral Presentation Award"
+        },
+        {
+          "label": "Event",
+          "value": "2026 KPS Fall Meeting"
+        }
+      ]
     },
     {
       "id": "news-2026-kps-taegyu-jang-poster-award",
       "date": "2026-10-21",
       "category": "Awards",
       "title": "2026 KPS Fall: Poster Presentation Award — Taegyu Jang",
-      "body": "Taegyu Jang received a Poster Presentation Award at the 2026 KPS Fall Meeting.\n\nCongratulations on this well-deserved achievement.",
+      "body": "Taegyu Jang received a Poster Presentation Award at the 2026 KPS Fall Meeting.",
       "summary": "Taegyu Jang received a Poster Presentation Award at the 2026 KPS Fall Meeting.",
       "url": "",
       "source": "User-provided lab update, 2026-11-01",
@@ -1663,14 +1683,24 @@
         {
           "type": "paragraph",
           "text": "Taegyu Jang received a Poster Presentation Award at the 2026 KPS Fall Meeting."
-        },
-        {
-          "type": "paragraph",
-          "text": "Congratulations on this well-deserved achievement."
         }
       ],
       "image": "assets/posts/news-2026-kps-taegyu-jang-poster-award-display.webp",
-      "imageAlt": "Taegyu Jang's poster with an Outstanding Poster Presentation Awards ribbon at the 2026 KPS Fall Meeting."
+      "imageAlt": "Taegyu Jang's poster with an Outstanding Poster Presentation Awards ribbon at the 2026 KPS Fall Meeting.",
+      "facts": [
+        {
+          "label": "Recipient",
+          "value": "Taegyu Jang"
+        },
+        {
+          "label": "Award",
+          "value": "Poster Presentation Award"
+        },
+        {
+          "label": "Event",
+          "value": "2026 KPS Fall Meeting"
+        }
+      ]
     },
     {
       "id": "news-2026-kps-seongwon-gim-poster",
@@ -1702,7 +1732,7 @@
       "date": "2026-08-03",
       "category": "Awards",
       "title": "BK21 FOUR 4th Workshop: Outstanding Poster Award — Yongju Jeong",
-      "body": "Yongju Jeong received the Outstanding Poster Award at the 4th BK21 FOUR Physics Workshop in 2026.\n\nCongratulations on this well-deserved achievement.",
+      "body": "Yongju Jeong received the Outstanding Poster Award at the 4th BK21 FOUR Physics Workshop in 2026.",
       "url": "https://baahyyjuu.wixsite.com/hyeonjun/post/bk21-four-4th-workshop-outstanding-poster-award",
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/post/bk21-four-4th-workshop-outstanding-poster-award",
       "image": "assets/posts/news-08-1-display.webp",
@@ -1725,15 +1755,20 @@
               "text": "Yongju Jeong received the Outstanding Poster Award at the 4th BK21 FOUR Physics Workshop in 2026."
             }
           ]
+        }
+      ],
+      "facts": [
+        {
+          "label": "Recipient",
+          "value": "Yongju Jeong"
         },
         {
-          "type": "paragraph",
-          "text": "Congratulations on this well-deserved achievement.",
-          "children": [
-            {
-              "text": "Congratulations on this well-deserved achievement."
-            }
-          ]
+          "label": "Award",
+          "value": "Outstanding Poster Award"
+        },
+        {
+          "label": "Event",
+          "value": "4th BK21 FOUR Physics Workshop (2026)"
         }
       ]
     },
@@ -1764,10 +1799,10 @@
       "date": "2026-03-24",
       "category": "Awards",
       "title": "G-LAMP Undergraduate Research Program (Fall 2025): Award Received — Jihyun Lee",
-      "body": "Jihyun Lee, currently a master's student, received an award at the G-LAMP Undergraduate Research Program final presentation for Fall 2025 in recognition of outstanding research performance. Congratulations on this well-deserved achievement.",
+      "body": "Jihyun Lee, currently a master's student, received an award at the G-LAMP Undergraduate Research Program final presentation for Fall 2025.",
       "url": "https://baahyyjuu.wixsite.com/hyeonjun/post/g-lamp-undergraduate-research-program-fall-2025-award-received",
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/post/g-lamp-undergraduate-research-program-fall-2025-award-received",
-      "summary": "Jihyun Lee, currently a master's student, received an award at the G-LAMP Undergraduate Research Program final presentation for Fall 2025 in recognition of outstanding research performance. Congratulations on this well-deserved achievement.",
+      "summary": "Jihyun Lee, currently a master's student, received an award at the G-LAMP Undergraduate Research Program final presentation for Fall 2025.",
       "content": [
         {
           "type": "image",
@@ -1779,16 +1814,30 @@
         },
         {
           "type": "paragraph",
-          "text": "Jihyun Lee, currently a master's student, received an award at the G-LAMP Undergraduate Research Program final presentation for Fall 2025 in recognition of outstanding research performance. Congratulations on this well-deserved achievement.",
+          "text": "Jihyun Lee, currently a master's student, received an award at the G-LAMP Undergraduate Research Program final presentation for Fall 2025.",
           "children": [
             {
-              "text": "Jihyun Lee, currently a master's student, received an award at the G-LAMP Undergraduate Research Program final presentation for Fall 2025 in recognition of outstanding research performance. Congratulations on this well-deserved achievement."
+              "text": "Jihyun Lee, currently a master's student, received an award at the G-LAMP Undergraduate Research Program final presentation for Fall 2025."
             }
           ]
         }
       ],
       "image": "assets/posts/news-09-1-display.webp",
-      "imageAlt": "G-LAMP Undergraduate Research Program (Fall 2025): Award Received"
+      "imageAlt": "G-LAMP Undergraduate Research Program (Fall 2025): Award Received",
+      "facts": [
+        {
+          "label": "Recipient",
+          "value": "Jihyun Lee"
+        },
+        {
+          "label": "Award",
+          "value": "Award received"
+        },
+        {
+          "label": "Event",
+          "value": "G-LAMP Undergraduate Research Program final presentation (Fall 2025)"
+        }
+      ]
     },
     {
       "id": "news-10",
@@ -1825,10 +1874,10 @@
       "date": "2026-02-05",
       "category": "Awards",
       "title": "BK21 FOUR 3rd Workshop: Awards Received — Seongwon Gim",
-      "body": "Seongwon Gim was honored with both the Best Paper Award and the Most Papers Award for outstanding research contributions. Congratulations on this well-deserved achievement.",
+      "body": "Seongwon Gim was honored with both the Best Paper Award and the Most Papers Award.",
       "url": "https://baahyyjuu.wixsite.com/hyeonjun/post/bk21-four-3rd-workshop-awards-received",
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/post/bk21-four-3rd-workshop-awards-received",
-      "summary": "Seongwon Gim was honored with both the Best Paper Award and the Most Papers Award for outstanding research contributions. Congratulations on this well-deserved achievement.",
+      "summary": "Seongwon Gim was honored with both the Best Paper Award and the Most Papers Award.",
       "content": [
         {
           "type": "image",
@@ -1840,16 +1889,30 @@
         },
         {
           "type": "paragraph",
-          "text": "Seongwon Gim was honored with both the Best Paper Award and the Most Papers Award for outstanding research contributions. Congratulations on this well-deserved achievement.",
+          "text": "Seongwon Gim was honored with both the Best Paper Award and the Most Papers Award.",
           "children": [
             {
-              "text": "Seongwon Gim was honored with both the Best Paper Award and the Most Papers Award for outstanding research contributions. Congratulations on this well-deserved achievement."
+              "text": "Seongwon Gim was honored with both the Best Paper Award and the Most Papers Award."
             }
           ]
         }
       ],
       "image": "assets/posts/news-11-1-display.webp",
-      "imageAlt": "BK21 FOUR 3rd Workshop: Awards Received"
+      "imageAlt": "BK21 FOUR 3rd Workshop: Awards Received",
+      "facts": [
+        {
+          "label": "Recipient",
+          "value": "Seongwon Gim"
+        },
+        {
+          "label": "Award",
+          "value": "Best Paper Award and Most Papers Award"
+        },
+        {
+          "label": "Event",
+          "value": "BK21 FOUR 3rd Workshop"
+        }
+      ]
     },
     {
       "id": "news-12",
