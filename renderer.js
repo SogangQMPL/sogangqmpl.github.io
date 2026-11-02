@@ -176,7 +176,7 @@ const biographyContent=value=>String(value||'').split(/\n+/).filter(Boolean).map
  return dated?`<p><strong class="biography-date">${e(dated[1])}</strong>${e(dated[2])}</p>`:`<p>${e(line)}</p>`;
 }).join('');
 function personCard(p,professor=false) {
- return `<article class="person-card ${professor?'professor-card':'student-card'}"><img src="${e(safeURL(p.image,'assets/portrait.svg'))}" alt="${e(p.name)}" loading="lazy" width="${professor?160:120}" height="${professor?200:150}"><div class="person-info"><h3>${e(p.name)}</h3><p class="person-role">${e(p.role)}</p>${professor?`<p>${mail(p.email)}</p>${p.description?`<div class="biography">${biographyContent(p.description)}</div>`:''}`:`${p.description?paragraphs(p.description):''}${mail(p.email)}`}${p.url?external(p.url,'Personal website','person-profile'):''}</div></article>`;
+ return `<article class="person-card ${professor?'professor-card':'student-card'}"><img src="${e(safeURL(p.image,'assets/portrait.svg'))}" alt="${e(p.name)}" loading="lazy" width="${professor?160:120}" height="${professor?200:150}"><div class="person-info"><h3>${e(p.name)}</h3>${professor?'':`<p class="person-role">${e(p.role)}</p>`}${professor?`<p>${mail(p.email)}</p>${p.description?`<div class="biography">${biographyContent(p.description)}</div>`:''}`:`${p.description?paragraphs(p.description):''}${mail(p.email)}`}${p.url?external(p.url,'Personal website','person-profile'):''}</div></article>`;
 }
 function peoplePage(data) {
  return `<main id="main" class="container page-layout interior">${pageIntro('Professor','')}${memberNavigation('people')}<section class="professors">${data.people.filter(isPI).map(p=>personCard(p,true)).join('')}</section></main>`;
