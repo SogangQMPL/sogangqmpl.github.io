@@ -8,7 +8,7 @@ export function safeURL(value, fallback = '') {
   return fallback;
 }
 const external = (url, text, cls = '') => safeURL(url) ? `<a class="${cls}" href="${e(safeURL(url))}" target="_blank" rel="noopener noreferrer">${text}<span class="sr-only"> (opens in a new tab)</span></a>` : `<span>${text}</span>`;
-const mail = (email, text) => /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(email || '') ? `<a href="mailto:${e(email)}">${e(text || email)}</a>` : '';
+const mail = (email, text) => /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(email || '') ? `<a href="mailto:${e(email)}">${e(text || email).replace('@','@<wbr>')}</a>` : '';
 const paragraphs = value => String(value || '').split(/\n+/).filter(Boolean).map(v => `<p>${e(v)}</p>`).join('');
 const date = value => String(value || '').replaceAll('-','.');
 export const sortedNews = data => [...data.news].sort((a,b) => String(b.date).localeCompare(String(a.date)));
@@ -32,7 +32,7 @@ function header(data,page) {
  const link=(id,label,active=false)=>`<a href="${id}.html" ${page===id?'aria-current="page"':active?'class="section-current"':''}>${label}</a>`;
  return `<header class="site-header"><div class="container header-inner">
    <a class="brand" href="index.html" aria-label="${e(data.site.title)} — Home"><span>${e(data.site.group)}</span><small>@ Sogang Univ.</small></a>
-   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">☰</span></button>
+   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="menu-label">Menu</span><span class="menu-icon" aria-hidden="true">☰</span></button>
    <nav id="main-nav" aria-label="Main navigation">
      <div class="nav-item">${link('index','Home')}</div>
      <div class="nav-item has-submenu">${link('people','Member',member)}<div class="nav-dropdown">${link('people','Professor')}${link('students','Students')}</div></div>

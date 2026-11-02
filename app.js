@@ -1,17 +1,32 @@
 import {render, sortedNews, sortedPublications, publicationYearGroup, pageTitle} from './renderer.js';
 const params=new URLSearchParams(location.search),preview=params.get('preview')==='1';
 const page=preview&&params.get('post')?'post-'+params.get('post'):(document.body.dataset.page || 'index');
+const mobileNavigation=matchMedia('(max-width:900px)');
+function setMenuOpen(open,restoreFocus=false){
+ const toggle=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');
+ if(!toggle||!nav)return;
+ const returnToToggle=restoreFocus||(!open&&nav.contains(document.activeElement));
+ toggle.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);
+ const label=toggle.querySelector('.menu-label'),icon=toggle.querySelector('.menu-icon');
+ if(label)label.textContent=open?'Close':'Menu';
+ if(icon)icon.textContent=open?'×':'☰';
+ if(returnToToggle&&mobileNavigation.matches)toggle.focus();
+}
+mobileNavigation.addEventListener('change',()=>{
+ const focusInNavigation=document.getElementById('main-nav')?.contains(document.activeElement);
+ setMenuOpen(false,focusInNavigation);
+});
+
 document.addEventListener('click',event=>{
  const toggle=event.target.closest('.menu-toggle');
- if(!toggle)return;
- const nav=document.getElementById('main-nav');
- const open=toggle.getAttribute('aria-expanded')!=='true';
- toggle.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);
+ if(toggle){setMenuOpen(toggle.getAttribute('aria-expanded')!=='true');return;}
+ if(mobileNavigation.matches&&(event.target.closest('#main-nav a')||!event.target.closest('.header-inner')))setMenuOpen(false);
 });
+
 document.addEventListener('keydown',event=>{
  if(event.key!=='Escape')return;
- const toggle=document.querySelector('.menu-toggle'),nav=document.getElementById('main-nav');
- if(toggle&&toggle.getAttribute('aria-expanded')==='true'){toggle.setAttribute('aria-expanded','false');nav.classList.remove('open');toggle.focus();}
+ const toggle=document.querySelector('.menu-toggle');
+ if(toggle&&toggle.getAttribute('aria-expanded')==='true')setMenuOpen(false,true);
 });
 let data;
 try {
