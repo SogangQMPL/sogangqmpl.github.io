@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile,access} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {render,pages,safeURL,postFileName} from '../renderer.js';
+import {render,pages,safeURL,postFileName,escapeHTML,sortedPublications} from '../renderer.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const data=JSON.parse(await readFile(path.join(root,'content/site.json'),'utf8'));
 for(const key of ['site','hero','join']) assert(data[key]&&typeof data[key]==='object',`Missing ${key}`);
@@ -85,6 +85,8 @@ for(const category of data.research){
  }
 }
 for(const page of [...pages,...data.news.map(n=>'post-'+n.id)]){const html=render(data,page);assert.equal((html.match(/<h1\b/g)||[]).length,1,`${page}: one h1 required`);assert(html.includes('id="main"'),`${page}: main missing`);}
+const citations=[...render(data,'publications').matchAll(/<p class="pub-journal">(.*?)<\/p>/g)].map(match=>match[1].replace(/<[^>]+>/g,''));
+assert.deepEqual(citations,sortedPublications(data).map(p=>escapeHTML(p.journal)),'Citation formatting must preserve every journal, volume, page and year');
 for(const post of data.news){
  const archive=post.category==='Activities'?'activities':'news';
  assert(render(data,archive).includes(`href="${postFileName(post)}"`),`Post link missing: ${post.id}`);
