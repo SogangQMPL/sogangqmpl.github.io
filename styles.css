@@ -584,7 +584,7 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 @media(max-width:600px){
  .header-inner{column-gap:8px}
  .home-hero{gap:16px;padding:4px 0 24px}
- .home-hero-figure{width:70%;max-width:220px}
+ .home-hero-figure{width:100%;max-width:340px}
  .home-news .news-entry,.home-publications .publication-short{padding-block:20px}
  .announcement h2{font-size:25px;line-height:1.5}
  .announcement-body{margin-top:8px}
