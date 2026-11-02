@@ -1,0 +1,1847 @@
+{
+  "checkedAt": "2026-11-02",
+  "method": "Compare each title and citation with publisher article metadata, original paper or supporting information, and publisher-deposited Crossref DOI records. Preserve scientific title wording; render chemical subscripts as Unicode. Page ranges use en dashes; article numbers retain leading zeros. Cite the paginated issue year while recording early-online dates separately.",
+  "summary": {
+    "papers": 46,
+    "changedTitles": 15,
+    "changedCitations": 25,
+    "addedDOIs": 12,
+    "changedYears": 1
+  },
+  "exceptions": [
+    {
+      "id": "pub-02",
+      "note": "The publisher and current Crossref deposit do not assign a volume or article number; retain journal and year only."
+    }
+  ],
+  "unpublishedManuscripts": "Under-review title is retained exactly as supplied by the user; it has no published DOI record to substitute.",
+  "records": [
+    {
+      "id": "pub-01",
+      "status": "verified",
+      "title": "Photoresponsive MoS₂‐Based Artificial Synaptic Transistor for Wavelength‐Dependent Physical Reservoir Computing",
+      "journalTitle": "Small Structures",
+      "volume": "7",
+      "issue": "8",
+      "pages": null,
+      "articleNumber": "e70581",
+      "year": 2026,
+      "doi": "10.1002/sstr.70581",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/sstr.70581",
+      "sourceUrls": [
+        "https://onlinelibrary.wiley.com/doi/10.1002/sstr.70581",
+        "https://api.crossref.org/works/10.1002/sstr.70581",
+        "https://www.researchgate.net/publication/412254320_Photoresponsive_MoS2-Based_Artificial_Synaptic_Transistor_for_Wavelength-Dependent_Physical_Reservoir_Computing"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display. Also verified Wiley-provided published PDF first page; preserved publisher hyphen glyphs.",
+      "changes": [
+        {
+          "field": "title",
+          "before": "Photoresponsive MoS₂-Based Artificial Synaptic Transistor for Wavelength-Dependent Physical Reservoir Computing",
+          "after": "Photoresponsive MoS₂‐Based Artificial Synaptic Transistor for Wavelength‐Dependent Physical Reservoir Computing"
+        },
+        {
+          "field": "journal",
+          "before": "Small Structures 7, e70581 (2026).",
+          "after": "Small Structures 7, e70581 (2026)"
+        }
+      ],
+      "journal": "Small Structures 7, e70581 (2026)",
+      "previous": {
+        "title": "Photoresponsive MoS₂-Based Artificial Synaptic Transistor for Wavelength-Dependent Physical Reservoir Computing",
+        "journal": "Small Structures 7, e70581 (2026).",
+        "year": 2026,
+        "doi": "10.1002/sstr.70581",
+        "url": "https://onlinelibrary.wiley.com/doi/10.1002/sstr.70581"
+      },
+      "bibliographicCitation": "Small Structures 7, e70581 (2026)",
+      "displayCitation": "Small Structures 7, e70581 (2026)",
+      "appliedUrl": "https://onlinelibrary.wiley.com/doi/10.1002/sstr.70581",
+      "appliedChanges": {
+        "title": {
+          "before": "Photoresponsive MoS₂-Based Artificial Synaptic Transistor for Wavelength-Dependent Physical Reservoir Computing",
+          "after": "Photoresponsive MoS₂‐Based Artificial Synaptic Transistor for Wavelength‐Dependent Physical Reservoir Computing"
+        },
+        "journal": {
+          "before": "Small Structures 7, e70581 (2026).",
+          "after": "Small Structures 7, e70581 (2026)"
+        }
+      }
+    },
+    {
+      "id": "pub-02",
+      "status": "verified",
+      "title": "Photoexcitation of moiré-trapped interlayer excitons via chiral phonons",
+      "journalTitle": "npj 2D Materials and Applications",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "articleNumber": null,
+      "year": 2026,
+      "doi": "10.1038/s41699-026-00701-5",
+      "url": "https://www.nature.com/articles/s41699-026-00701-5",
+      "sourceUrls": [
+        "https://www.nature.com/articles/s41699-026-00701-5",
+        "https://api.crossref.org/works/10.1038/s41699-026-00701-5"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Current Crossref publisher deposit and cached Nature publisher article both list early publication on 2026-06-02, without volume, issue or article number. These remain null rather than invented.",
+      "changes": [],
+      "journal": "npj 2D Materials and Applications (2026)",
+      "exception": "Volume/article number not yet assigned in currently available publisher metadata.",
+      "previous": {
+        "title": "Photoexcitation of moiré-trapped interlayer excitons via chiral phonons",
+        "journal": "npj 2D Materials and Applications (2026)",
+        "year": 2026,
+        "doi": "10.1038/s41699-026-00701-5",
+        "url": "https://www.nature.com/articles/s41699-026-00701-5"
+      },
+      "bibliographicCitation": "npj 2D Materials and Applications (2026)",
+      "displayCitation": "npj 2D Materials and Applications (2026)",
+      "appliedUrl": "https://www.nature.com/articles/s41699-026-00701-5",
+      "appliedChanges": {}
+    },
+    {
+      "id": "pub-03",
+      "status": "verified",
+      "title": "WSe₂ Nanodots on Dielectric Nanopillars for Efficient Waveguide Coupling of Localized Emitters",
+      "journalTitle": "ACS Applied Nano Materials",
+      "volume": "9",
+      "issue": "20",
+      "pages": "9471–9477",
+      "articleNumber": null,
+      "year": 2026,
+      "doi": "10.1021/acsanm.6c01123",
+      "url": "https://pubs.acs.org/doi/10.1021/acsanm.6c01123",
+      "sourceUrls": [
+        "https://pubs.acs.org/doi/10.1021/acsanm.6c01123",
+        "https://api.crossref.org/works/10.1021/acsanm.6c01123"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display.",
+      "changes": [
+        {
+          "field": "journal",
+          "before": "ACS Applied Nano Materials 9, 9471-9477 (2026)",
+          "after": "ACS Applied Nano Materials 9, 9471–9477 (2026)"
+        }
+      ],
+      "journal": "ACS Applied Nano Materials 9, 9471–9477 (2026)",
+      "previous": {
+        "title": "WSe₂ Nanodots on Dielectric Nanopillars for Efficient Waveguide Coupling of Localized Emitters",
+        "journal": "ACS Applied Nano Materials 9, 9471-9477 (2026)",
+        "year": 2026,
+        "doi": "10.1021/acsanm.6c01123",
+        "url": "https://pubs.acs.org/doi/10.1021/acsanm.6c01123"
+      },
+      "bibliographicCitation": "ACS Applied Nano Materials 9, 9471–9477 (2026)",
+      "displayCitation": "ACS Applied Nano Materials 9, 9471–9477 (2026)",
+      "appliedUrl": "https://pubs.acs.org/doi/10.1021/acsanm.6c01123",
+      "appliedChanges": {
+        "journal": {
+          "before": "ACS Applied Nano Materials 9, 9471-9477 (2026)",
+          "after": "ACS Applied Nano Materials 9, 9471–9477 (2026)"
+        }
+      }
+    },
+    {
+      "id": "pub-04",
+      "status": "verified",
+      "title": "Interfacial Interaction Monitoring and Constitutional Isomer Discrimination Using a Graphene-Integrated Terahertz Metasurface",
+      "journalTitle": "Analytical Chemistry",
+      "volume": "98",
+      "issue": "11",
+      "pages": "8340–8348",
+      "articleNumber": null,
+      "year": 2026,
+      "doi": "10.1021/acs.analchem.5c07495",
+      "url": "https://pubs.acs.org/doi/10.1021/acs.analchem.5c07495",
+      "sourceUrls": [
+        "https://pubs.acs.org/doi/10.1021/acs.analchem.5c07495",
+        "https://api.crossref.org/works/10.1021/acs.analchem.5c07495"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display.",
+      "changes": [
+        {
+          "field": "journal",
+          "before": "Analytical Chemistry 98, 8340 (2026)",
+          "after": "Analytical Chemistry 98, 8340–8348 (2026)"
+        }
+      ],
+      "journal": "Analytical Chemistry 98, 8340–8348 (2026)",
+      "previous": {
+        "title": "Interfacial Interaction Monitoring and Constitutional Isomer Discrimination Using a Graphene-Integrated Terahertz Metasurface",
+        "journal": "Analytical Chemistry 98, 8340 (2026)",
+        "year": 2026,
+        "doi": "10.1021/acs.analchem.5c07495",
+        "url": "https://pubs.acs.org/doi/full/10.1021/acs.analchem.5c07495"
+      },
+      "bibliographicCitation": "Analytical Chemistry 98, 8340–8348 (2026)",
+      "displayCitation": "Analytical Chemistry 98, 8340–8348 (2026)",
+      "appliedUrl": "https://pubs.acs.org/doi/full/10.1021/acs.analchem.5c07495",
+      "appliedChanges": {
+        "journal": {
+          "before": "Analytical Chemistry 98, 8340 (2026)",
+          "after": "Analytical Chemistry 98, 8340–8348 (2026)"
+        }
+      }
+    },
+    {
+      "id": "pub-05",
+      "status": "verified",
+      "title": "Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers",
+      "journalTitle": "ACS Photonics",
+      "volume": "12",
+      "issue": "12",
+      "pages": "6957–6963",
+      "articleNumber": null,
+      "year": 2025,
+      "doi": "10.1021/acsphotonics.5c02169",
+      "url": "https://pubs.acs.org/doi/10.1021/acsphotonics.5c02169",
+      "sourceUrls": [
+        "https://pubs.acs.org/doi/10.1021/acsphotonics.5c02169",
+        "https://api.crossref.org/works/10.1021/acsphotonics.5c02169"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display.",
+      "changes": [
+        {
+          "field": "journal",
+          "before": "ACS Photonics 12, 6957 (2025)",
+          "after": "ACS Photonics 12, 6957–6963 (2025)"
+        }
+      ],
+      "journal": "ACS Photonics 12, 6957–6963 (2025)",
+      "previous": {
+        "title": "Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers",
+        "journal": "ACS Photonics 12, 6957 (2025)",
+        "year": 2025,
+        "doi": "10.1021/acsphotonics.5c02169",
+        "url": "https://pubs.acs.org/doi/10.1021/acsphotonics.5c02169"
+      },
+      "bibliographicCitation": "ACS Photonics 12, 6957–6963 (2025)",
+      "displayCitation": "ACS Photonics 12, 6957–6963 (2025)",
+      "appliedUrl": "https://pubs.acs.org/doi/10.1021/acsphotonics.5c02169",
+      "appliedChanges": {
+        "journal": {
+          "before": "ACS Photonics 12, 6957 (2025)",
+          "after": "ACS Photonics 12, 6957–6963 (2025)"
+        }
+      }
+    },
+    {
+      "id": "pub-06",
+      "status": "verified",
+      "title": "Wavelength-tunable Zn₁₋ₓMgₓO nanotube lasers on graphene films",
+      "journalTitle": "Journal of Applied Physics",
+      "volume": "137",
+      "issue": "24",
+      "pages": null,
+      "articleNumber": "244301",
+      "year": 2025,
+      "doi": "10.1063/5.0266808",
+      "url": "https://pubs.aip.org/jap/article/137/24/244301/3350695/Wavelength-tunable-Zn1-xMgxO-nanotube-lasers-on",
+      "sourceUrls": [
+        "https://pubs.aip.org/jap/article/137/24/244301/3350695/Wavelength-tunable-Zn1-xMgxO-nanotube-lasers-on",
+        "https://api.crossref.org/works/10.1063/5.0266808"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display. Cached full AIP article explicitly gives DOI10.1063/5.0266808, volume137, article244301.",
+      "changes": [
+        {
+          "field": "title",
+          "before": "Wavelength-tunable Zn 1− x Mg x O nanotube lasers on graphene films",
+          "after": "Wavelength-tunable Zn₁₋ₓMgₓO nanotube lasers on graphene films"
+        },
+        {
+          "field": "doi",
+          "before": "",
+          "after": "10.1063/5.0266808"
+        }
+      ],
+      "journal": "Journal of Applied Physics 137, 244301 (2025)",
+      "previous": {
+        "title": "Wavelength-tunable Zn 1− x Mg x O nanotube lasers on graphene films",
+        "journal": "Journal of Applied Physics 137, 244301 (2025)",
+        "year": 2025,
+        "doi": "",
+        "url": "https://pubs.aip.org/aip/jap/article/137/24/244301/3350695/Wavelength-tunable-Zn1-xMgxO-nanotube-lasers-on"
+      },
+      "bibliographicCitation": "Journal of Applied Physics 137, 244301 (2025)",
+      "displayCitation": "Journal of Applied Physics 137, 244301 (2025)",
+      "appliedUrl": "https://pubs.aip.org/aip/jap/article/137/24/244301/3350695/Wavelength-tunable-Zn1-xMgxO-nanotube-lasers-on",
+      "appliedChanges": {
+        "title": {
+          "before": "Wavelength-tunable Zn 1− x Mg x O nanotube lasers on graphene films",
+          "after": "Wavelength-tunable Zn₁₋ₓMgₓO nanotube lasers on graphene films"
+        },
+        "doi": {
+          "before": "",
+          "after": "10.1063/5.0266808"
+        }
+      }
+    },
+    {
+      "id": "pub-07",
+      "status": "verified",
+      "title": "Quadrupolar and Dipolar Excitons in Bilayer 2H-MoSe₂",
+      "journalTitle": "Physical Review Letters",
+      "volume": "134",
+      "issue": "16",
+      "pages": null,
+      "articleNumber": "166901",
+      "year": 2025,
+      "doi": "10.1103/PhysRevLett.134.166901",
+      "url": "https://link.aps.org/doi/10.1103/PhysRevLett.134.166901",
+      "sourceUrls": [
+        "https://link.aps.org/doi/10.1103/PhysRevLett.134.166901",
+        "https://api.crossref.org/works/10.1103/PhysRevLett.134.166901"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display.",
+      "changes": [
+        {
+          "field": "journal",
+          "before": "Physical Review Letters 134 , 166901 (2025)",
+          "after": "Physical Review Letters 134, 166901 (2025)"
+        }
+      ],
+      "journal": "Physical Review Letters 134, 166901 (2025)",
+      "previous": {
+        "title": "Quadrupolar and Dipolar Excitons in Bilayer 2H-MoSe₂",
+        "journal": "Physical Review Letters 134 , 166901 (2025)",
+        "year": 2025,
+        "doi": "10.1103/PhysRevLett.134.166901",
+        "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.166901"
+      },
+      "bibliographicCitation": "Physical Review Letters 134, 166901 (2025)",
+      "displayCitation": "Physical Review Letters 134, 166901 (2025)",
+      "appliedUrl": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.166901",
+      "appliedChanges": {
+        "journal": {
+          "before": "Physical Review Letters 134 , 166901 (2025)",
+          "after": "Physical Review Letters 134, 166901 (2025)"
+        }
+      }
+    },
+    {
+      "id": "pub-08",
+      "status": "verified",
+      "title": "In-situ fabrication of GaN/short-range ordered BN heterostructure light-emitting diodes",
+      "journalTitle": "NPG Asia Materials",
+      "volume": "17",
+      "issue": "1",
+      "pages": null,
+      "articleNumber": "13",
+      "year": 2025,
+      "doi": "10.1038/s41427-025-00594-8",
+      "url": "https://www.nature.com/articles/s41427-025-00594-8",
+      "sourceUrls": [
+        "https://www.nature.com/articles/s41427-025-00594-8",
+        "https://api.crossref.org/works/10.1038/s41427-025-00594-8"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display.",
+      "changes": [],
+      "journal": "NPG Asia Materials 17, 13 (2025)",
+      "previous": {
+        "title": "In-situ fabrication of GaN/short-range ordered BN heterostructure light-emitting diodes",
+        "journal": "NPG Asia Materials 17, 13 (2025)",
+        "year": 2025,
+        "doi": "10.1038/s41427-025-00594-8",
+        "url": "https://www.nature.com/articles/s41427-025-00594-8"
+      },
+      "bibliographicCitation": "NPG Asia Materials 17, 13 (2025)",
+      "displayCitation": "NPG Asia Materials 17, 13 (2025)",
+      "appliedUrl": "https://www.nature.com/articles/s41427-025-00594-8",
+      "appliedChanges": {}
+    },
+    {
+      "id": "pub-09",
+      "status": "verified",
+      "title": "MoTe₂ synaptic transistor and its application to physical reservoir computing",
+      "journalTitle": "RSC Advances",
+      "volume": "15",
+      "issue": "29",
+      "pages": "24031–24039",
+      "articleNumber": null,
+      "year": 2025,
+      "doi": "10.1039/D5RA02010G",
+      "url": "https://pubs.rsc.org/ra/article/15/29/24031-24039/906612",
+      "sourceUrls": [
+        "https://pubs.rsc.org/ra/article/15/29/24031-24039/906612",
+        "https://api.crossref.org/works/10.1039/D5RA02010G",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12242375/"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display. RSC publisher XML archived by PMC agrees on pages24031–24039 and DOI10.1039/d5ra02010g.",
+      "changes": [
+        {
+          "field": "title",
+          "before": "MoTe 2 synaptic transistor and its application to physical reservoir computing",
+          "after": "MoTe₂ synaptic transistor and its application to physical reservoir computing"
+        },
+        {
+          "field": "journal",
+          "before": "RSC Advances 15, 24031 (2025)",
+          "after": "RSC Advances 15, 24031–24039 (2025)"
+        },
+        {
+          "field": "doi",
+          "before": "",
+          "after": "10.1039/D5RA02010G"
+        }
+      ],
+      "journal": "RSC Advances 15, 24031–24039 (2025)",
+      "previous": {
+        "title": "MoTe 2 synaptic transistor and its application to physical reservoir computing",
+        "journal": "RSC Advances 15, 24031 (2025)",
+        "year": 2025,
+        "doi": "",
+        "url": "https://pubs.rsc.org/ra/article/15/29/24031/906612/MoTe2-synaptic-transistor-and-its-application-to"
+      },
+      "bibliographicCitation": "RSC Advances 15, 24031–24039 (2025)",
+      "displayCitation": "RSC Advances 15, 24031–24039 (2025)",
+      "appliedUrl": "https://pubs.rsc.org/ra/article/15/29/24031/906612/MoTe2-synaptic-transistor-and-its-application-to",
+      "appliedChanges": {
+        "title": {
+          "before": "MoTe 2 synaptic transistor and its application to physical reservoir computing",
+          "after": "MoTe₂ synaptic transistor and its application to physical reservoir computing"
+        },
+        "journal": {
+          "before": "RSC Advances 15, 24031 (2025)",
+          "after": "RSC Advances 15, 24031–24039 (2025)"
+        },
+        "doi": {
+          "before": "",
+          "after": "10.1039/D5RA02010G"
+        }
+      }
+    },
+    {
+      "id": "pub-10",
+      "status": "verified",
+      "title": "Highly tunable ground and excited state excitonic dipoles in multilayer 2H-MoSe₂",
+      "journalTitle": "Nature Communications",
+      "volume": "15",
+      "issue": "1",
+      "pages": null,
+      "articleNumber": "4377",
+      "year": 2024,
+      "doi": "10.1038/s41467-024-48476-x",
+      "url": "https://www.nature.com/articles/s41467-024-48476-x",
+      "sourceUrls": [
+        "https://www.nature.com/articles/s41467-024-48476-x",
+        "https://api.crossref.org/works/10.1038/s41467-024-48476-x"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display.",
+      "changes": [],
+      "journal": "Nature Communications 15, 4377 (2024)",
+      "previous": {
+        "title": "Highly tunable ground and excited state excitonic dipoles in multilayer 2H-MoSe₂",
+        "journal": "Nature Communications 15, 4377 (2024)",
+        "year": 2024,
+        "doi": "10.1038/s41467-024-48476-x",
+        "url": "https://www.nature.com/articles/s41467-024-48476-x"
+      },
+      "bibliographicCitation": "Nature Communications 15, 4377 (2024)",
+      "displayCitation": "Nature Communications 15, 4377 (2024)",
+      "appliedUrl": "https://www.nature.com/articles/s41467-024-48476-x",
+      "appliedChanges": {}
+    },
+    {
+      "id": "pub-11",
+      "status": "verified",
+      "title": "The interplay of field-tunable strongly correlated states in a multi-orbital moiré system",
+      "journalTitle": "Nature Physics",
+      "volume": "20",
+      "issue": "4",
+      "pages": "589–596",
+      "articleNumber": null,
+      "year": 2024,
+      "doi": "10.1038/s41567-024-02385-4",
+      "url": "https://www.nature.com/articles/s41567-024-02385-4",
+      "sourceUrls": [
+        "https://www.nature.com/articles/s41567-024-02385-4",
+        "https://api.crossref.org/works/10.1038/s41567-024-02385-4"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display.",
+      "changes": [
+        {
+          "field": "journal",
+          "before": "Nature Physics , 20, 589 (2024)",
+          "after": "Nature Physics 20, 589–596 (2024)"
+        }
+      ],
+      "journal": "Nature Physics 20, 589–596 (2024)",
+      "previous": {
+        "title": "The interplay of field-tunable strongly correlated states in a multi-orbital moiré system",
+        "journal": "Nature Physics , 20, 589 (2024)",
+        "year": 2024,
+        "doi": "10.1038/s41567-024-02385-4",
+        "url": "https://www.nature.com/articles/s41567-024-02385-4"
+      },
+      "bibliographicCitation": "Nature Physics 20, 589–596 (2024)",
+      "displayCitation": "Nature Physics 20, 589–596 (2024)",
+      "appliedUrl": "https://www.nature.com/articles/s41567-024-02385-4",
+      "appliedChanges": {
+        "journal": {
+          "before": "Nature Physics , 20, 589 (2024)",
+          "after": "Nature Physics 20, 589–596 (2024)"
+        }
+      }
+    },
+    {
+      "id": "pub-12",
+      "status": "verified",
+      "title": "Initial Growth Behavior in Catalyst-Free-Grown Vertical ZnO Nanorods on c-Al₂O₃, as Observed Using Synchrotron Radiation X-ray Scattering",
+      "journalTitle": "Crystal Growth & Design",
+      "volume": "23",
+      "issue": "3",
+      "pages": "1434–1441",
+      "articleNumber": null,
+      "year": 2023,
+      "doi": "10.1021/acs.cgd.2c00959",
+      "url": "https://pubs.acs.org/doi/10.1021/acs.cgd.2c00959",
+      "sourceUrls": [
+        "https://pubs.acs.org/doi/10.1021/acs.cgd.2c00959",
+        "https://api.crossref.org/works/10.1021/acs.cgd.2c00959"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display.",
+      "changes": [
+        {
+          "field": "title",
+          "before": "Initial Growth Behavior in Catalyst-Free-Grown Vertical ZnO Nanorods on c-A l 2 O 3 , as Observed Using Synchrotron Radiation X-ray Scattering",
+          "after": "Initial Growth Behavior in Catalyst-Free-Grown Vertical ZnO Nanorods on c-Al₂O₃, as Observed Using Synchrotron Radiation X-ray Scattering"
+        },
+        {
+          "field": "journal",
+          "before": "Crystal Growth & Design 23, 1434 (2023)",
+          "after": "Crystal Growth & Design 23, 1434–1441 (2023)"
+        }
+      ],
+      "journal": "Crystal Growth & Design 23, 1434–1441 (2023)",
+      "previous": {
+        "title": "Initial Growth Behavior in Catalyst-Free-Grown Vertical ZnO Nanorods on c-A l 2 O 3 , as Observed Using Synchrotron Radiation X-ray Scattering",
+        "journal": "Crystal Growth & Design 23, 1434 (2023)",
+        "year": 2023,
+        "doi": "10.1021/acs.cgd.2c00959",
+        "url": "https://pubs.acs.org/doi/10.1021/acs.cgd.2c00959"
+      },
+      "bibliographicCitation": "Crystal Growth & Design 23, 1434–1441 (2023)",
+      "displayCitation": "Crystal Growth & Design 23, 1434–1441 (2023)",
+      "appliedUrl": "https://pubs.acs.org/doi/10.1021/acs.cgd.2c00959",
+      "appliedChanges": {
+        "title": {
+          "before": "Initial Growth Behavior in Catalyst-Free-Grown Vertical ZnO Nanorods on c-A l 2 O 3 , as Observed Using Synchrotron Radiation X-ray Scattering",
+          "after": "Initial Growth Behavior in Catalyst-Free-Grown Vertical ZnO Nanorods on c-Al₂O₃, as Observed Using Synchrotron Radiation X-ray Scattering"
+        },
+        "journal": {
+          "before": "Crystal Growth & Design 23, 1434 (2023)",
+          "after": "Crystal Growth & Design 23, 1434–1441 (2023)"
+        }
+      }
+    },
+    {
+      "id": "pub-13",
+      "status": "verified",
+      "title": "Exciton-polarons in the presence of strongly correlated electronic states in a MoSe₂/WSe₂ moiré superlattice",
+      "journalTitle": "npj 2D Materials and Applications",
+      "volume": "6",
+      "issue": "1",
+      "pages": null,
+      "articleNumber": "79",
+      "year": 2022,
+      "doi": "10.1038/s41699-022-00358-w",
+      "url": "https://www.nature.com/articles/s41699-022-00358-w",
+      "sourceUrls": [
+        "https://www.nature.com/articles/s41699-022-00358-w",
+        "https://api.crossref.org/works/10.1038/s41699-022-00358-w"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display.",
+      "changes": [
+        {
+          "field": "title",
+          "before": "Exciton-polarons in the presence of strongly correlated electronic states in a MoSe₂ /WSe₂ moiré superlattice",
+          "after": "Exciton-polarons in the presence of strongly correlated electronic states in a MoSe₂/WSe₂ moiré superlattice"
+        }
+      ],
+      "journal": "npj 2D Materials and Applications 6, 79 (2022)",
+      "previous": {
+        "title": "Exciton-polarons in the presence of strongly correlated electronic states in a MoSe₂ /WSe₂ moiré superlattice",
+        "journal": "npj 2D Materials and Applications 6, 79 (2022)",
+        "year": 2022,
+        "doi": "10.1038/s41699-022-00358-w",
+        "url": "https://www.nature.com/articles/s41699-022-00358-w"
+      },
+      "bibliographicCitation": "npj 2D Materials and Applications 6, 79 (2022)",
+      "displayCitation": "npj 2D Materials and Applications 6, 79 (2022)",
+      "appliedUrl": "https://www.nature.com/articles/s41699-022-00358-w",
+      "appliedChanges": {
+        "title": {
+          "before": "Exciton-polarons in the presence of strongly correlated electronic states in a MoSe₂ /WSe₂ moiré superlattice",
+          "after": "Exciton-polarons in the presence of strongly correlated electronic states in a MoSe₂/WSe₂ moiré superlattice"
+        }
+      }
+    },
+    {
+      "id": "pub-14",
+      "status": "verified",
+      "title": "Nanoscale mapping of surface strain in tapered nanorods using confocal photoluminescence spectroscopy",
+      "journalTitle": "Nanotechnology",
+      "volume": "33",
+      "issue": "48",
+      "pages": null,
+      "articleNumber": "485703",
+      "year": 2022,
+      "doi": "10.1088/1361-6528/ac8bd9",
+      "url": "https://iopscience.iop.org/article/10.1088/1361-6528/ac8bd9",
+      "sourceUrls": [
+        "https://iopscience.iop.org/article/10.1088/1361-6528/ac8bd9",
+        "https://api.crossref.org/works/10.1088/1361-6528/ac8bd9"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display. Cached IOP page explicitly gives Nanotechnology33(48),485703; six-digit locator is stored as articleNumber, not a page range.",
+      "changes": [],
+      "journal": "Nanotechnology 33, 485703 (2022)",
+      "previous": {
+        "title": "Nanoscale mapping of surface strain in tapered nanorods using confocal photoluminescence spectroscopy",
+        "journal": "Nanotechnology 33, 485703 (2022)",
+        "year": 2022,
+        "doi": "10.1088/1361-6528/ac8bd9",
+        "url": "https://iopscience.iop.org/article/10.1088/1361-6528/ac8bd9"
+      },
+      "bibliographicCitation": "Nanotechnology 33, 485703 (2022)",
+      "displayCitation": "Nanotechnology 33, 485703 (2022)",
+      "appliedUrl": "https://iopscience.iop.org/article/10.1088/1361-6528/ac8bd9",
+      "appliedChanges": {}
+    },
+    {
+      "id": "pub-15",
+      "status": "verified",
+      "title": "IGZO synaptic thin-film transistors with embedded AlOₓ charge-trapping layers",
+      "journalTitle": "Applied Physics Express",
+      "volume": "15",
+      "issue": "6",
+      "pages": null,
+      "articleNumber": "061005",
+      "year": 2022,
+      "doi": "10.35848/1882-0786/ac7032",
+      "url": "https://iopscience.iop.org/article/10.35848/1882-0786/ac7032",
+      "sourceUrls": [
+        "https://iopscience.iop.org/article/10.35848/1882-0786/ac7032",
+        "https://api.crossref.org/works/10.35848/1882-0786/ac7032"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display. Cached IOP page explicitly gives Applied Physics Express15(6),061005. Existing6 was issue number, not the article number.",
+      "changes": [
+        {
+          "field": "title",
+          "before": "IGZO synaptic thin-film transistors with embedded AlOx charge-trapping layers",
+          "after": "IGZO synaptic thin-film transistors with embedded AlOₓ charge-trapping layers"
+        },
+        {
+          "field": "journal",
+          "before": "Applied Physics Express 15, 6 (2022)",
+          "after": "Applied Physics Express 15, 061005 (2022)"
+        }
+      ],
+      "journal": "Applied Physics Express 15, 061005 (2022)",
+      "previous": {
+        "title": "IGZO synaptic thin-film transistors with embedded AlOx charge-trapping layers",
+        "journal": "Applied Physics Express 15, 6 (2022)",
+        "year": 2022,
+        "doi": "10.35848/1882-0786/ac7032",
+        "url": "https://iopscience.iop.org/article/10.35848/1882-0786/ac7032"
+      },
+      "bibliographicCitation": "Applied Physics Express 15, 061005 (2022)",
+      "displayCitation": "Applied Physics Express 15, 061005 (2022)",
+      "appliedUrl": "https://iopscience.iop.org/article/10.35848/1882-0786/ac7032",
+      "appliedChanges": {
+        "title": {
+          "before": "IGZO synaptic thin-film transistors with embedded AlOx charge-trapping layers",
+          "after": "IGZO synaptic thin-film transistors with embedded AlOₓ charge-trapping layers"
+        },
+        "journal": {
+          "before": "Applied Physics Express 15, 6 (2022)",
+          "after": "Applied Physics Express 15, 061005 (2022)"
+        }
+      }
+    },
+    {
+      "id": "pub-16",
+      "status": "verified",
+      "title": "2×N twin-field quantum key distribution network configuration based on polarization, wavelength, and time division multiplexing",
+      "journalTitle": "npj Quantum Information",
+      "volume": "8",
+      "issue": "1",
+      "pages": null,
+      "articleNumber": "48",
+      "year": 2022,
+      "doi": "10.1038/s41534-022-00558-8",
+      "url": "https://www.nature.com/articles/s41534-022-00558-8",
+      "sourceUrls": [
+        "https://www.nature.com/articles/s41534-022-00558-8",
+        "https://api.crossref.org/works/10.1038/s41534-022-00558-8"
+      ],
+      "sourceConfidence": "high",
+      "evidence": "Title, journal name, volume, issue, publication year and page/article number independently checked against current publisher-deposited Crossref DOI metadata; chemical subscripts and title spacing normalized for plain Unicode display. Official journal styling is lowercase npj; title has2×N without the spurious space.",
+      "changes": [
+        {
+          "field": "title",
+          "before": "2× N twin-field quantum key distribution network configuration based on polarization, wavelength, and time division multiplexing",
+          "after": "2×N twin-field quantum key distribution network configuration based on polarization, wavelength, and time division multiplexing"
+        },
+        {
+          "field": "journal",
+          "before": "NPJ Quantum Information 8, 48 (2022)",
+          "after": "npj Quantum Information 8, 48 (2022)"
+        }
+      ],
+      "journal": "npj Quantum Information 8, 48 (2022)",
+      "previous": {
+        "title": "2× N twin-field quantum key distribution network configuration based on polarization, wavelength, and time division multiplexing",
+        "journal": "NPJ Quantum Information 8, 48 (2022)",
+        "year": 2022,
+        "doi": "10.1038/s41534-022-00558-8",
+        "url": "https://www.nature.com/articles/s41534-022-00558-8"
+      },
+      "bibliographicCitation": "npj Quantum Information 8, 48 (2022)",
+      "displayCitation": "npj Quantum Information 8, 48 (2022)",
+      "appliedUrl": "https://www.nature.com/articles/s41534-022-00558-8",
+      "appliedChanges": {
+        "title": {
+          "before": "2× N twin-field quantum key distribution network configuration based on polarization, wavelength, and time division multiplexing",
+          "after": "2×N twin-field quantum key distribution network configuration based on polarization, wavelength, and time division multiplexing"
+        },
+        "journal": {
+          "before": "NPJ Quantum Information 8, 48 (2022)",
+          "after": "npj Quantum Information 8, 48 (2022)"
+        }
+      }
+    },
+    {
+      "id": "pub-17",
+      "status": "verified",
+      "title": "Optical read-out of Coulomb staircases in a moiré superlattice via trapped interlayer trions",
+      "journalTitle": "Nature Nanotechnology",
+      "volume": "16",
+      "issue": "11",
+      "pages": "1237–1243",
+      "year": 2021,
+      "doi": "10.1038/s41565-021-00970-9",
+      "url": "https://www.nature.com/articles/s41565-021-00970-9",
+      "sourceUrls": [
+        "https://www.nature.com/articles/s41565-021-00970-9",
+        "https://researchportal.hw.ac.uk/files/51013112/s41565_021_00970_9.pdf"
+      ],
+      "evidence": "Publisher citation_title, citation_journal_title, citation_volume, citation_firstpage and citation_lastpage metadata in cached article HTML agree with published PDF.",
+      "changes": [
+        "Remove stray comma between journal title and volume.",
+        "Complete page range 1237–1243."
+      ],
+      "previous": {
+        "title": "Optical read-out of Coulomb staircases in a moiré superlattice via trapped interlayer trions",
+        "journal": "Nature Nanotechnology , 16, 1237 (2021)",
+        "year": 2021,
+        "doi": "10.1038/s41565-021-00970-9",
+        "url": "https://www.nature.com/articles/s41565-021-00970-9"
+      },
+      "bibliographicCitation": "Nature Nanotechnology 16, 1237–1243 (2021)",
+      "displayCitation": "Nature Nanotechnology 16, 1237–1243 (2021)",
+      "appliedUrl": "https://www.nature.com/articles/s41565-021-00970-9",
+      "appliedChanges": {
+        "journal": {
+          "before": "Nature Nanotechnology , 16, 1237 (2021)",
+          "after": "Nature Nanotechnology 16, 1237–1243 (2021)"
+        }
+      }
+    },
+    {
+      "id": "pub-18",
+      "status": "verified",
+      "title": "Electrically driven strain-induced deterministic single-photon emitters in a van der Waals heterostructure",
+      "journalTitle": "Science Advances",
+      "volume": "7",
+      "issue": "43",
+      "articleNumber": "eabj3176",
+      "year": 2021,
+      "doi": "10.1126/sciadv.abj3176",
+      "url": "https://www.science.org/doi/10.1126/sciadv.abj3176",
+      "sourceUrls": [
+        "https://www.science.org/doi/10.1126/sciadv.abj3176",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8528413/",
+        "https://pubmed.ncbi.nlm.nih.gov/34669464/"
+      ],
+      "evidence": "Publisher-deposited XML in figure-work-middle/PMC8528413.xml article front identifies Science Advances volume7 issue43 and article eabj3176; PubMed final record agrees.",
+      "changes": [
+        "Add missing volume 7; optional issue43.",
+        "Remove stray comma after journal title."
+      ],
+      "previous": {
+        "title": "Electrically driven strain-induced deterministic single-photon emitters in a van der Waals heterostructure",
+        "journal": "Science Advances , eabj3176 (2021)",
+        "year": 2021,
+        "doi": "10.1126/sciadv.abj3176",
+        "url": "https://www.science.org/doi/10.1126/sciadv.abj3176"
+      },
+      "bibliographicCitation": "Science Advances 7, eabj3176 (2021)",
+      "displayCitation": "Science Advances 7, eabj3176 (2021)",
+      "appliedUrl": "https://www.science.org/doi/10.1126/sciadv.abj3176",
+      "appliedChanges": {
+        "journal": {
+          "before": "Science Advances , eabj3176 (2021)",
+          "after": "Science Advances 7, eabj3176 (2021)"
+        }
+      }
+    },
+    {
+      "id": "pub-19",
+      "status": "verified",
+      "title": "Moiré-Trapped Interlayer Trions in a Charge-Tunable WSe₂/MoSe₂ Heterobilayer",
+      "journalTitle": "Physical Review X",
+      "volume": "11",
+      "issue": "3",
+      "articleNumber": "031033",
+      "year": 2021,
+      "doi": "10.1103/PhysRevX.11.031033",
+      "url": "https://journals.aps.org/prx/abstract/10.1103/PhysRevX.11.031033",
+      "sourceUrls": [
+        "https://journals.aps.org/prx/abstract/10.1103/PhysRevX.11.031033",
+        "https://pure.hw.ac.uk/ws/portalfiles/portal/50713363/PhysRevX.11.031033.pdf"
+      ],
+      "evidence": "APS article header and published PDF show exact title with WSe2/MoSe2 as chemical subscripts and citation Phys.Rev.X11,031033(2021).",
+      "changes": [
+        "Remove incorrect space before slash in WSe₂/MoSe₂.",
+        "Match publisher title capitalization; chemical subscripts retained."
+      ],
+      "previous": {
+        "title": "Moiré-trapped interlayer trions in a charge-tunable WSe₂ /MoSe₂ heterobilayer",
+        "journal": "Physical Review X 11, 031033 (2021)",
+        "year": 2021,
+        "doi": "10.1103/PhysRevX.11.031033",
+        "url": "https://journals.aps.org/prx/abstract/10.1103/PhysRevX.11.031033"
+      },
+      "bibliographicCitation": "Physical Review X 11, 031033 (2021)",
+      "displayCitation": "Physical Review X 11, 031033 (2021)",
+      "appliedUrl": "https://journals.aps.org/prx/abstract/10.1103/PhysRevX.11.031033",
+      "appliedChanges": {
+        "title": {
+          "before": "Moiré-trapped interlayer trions in a charge-tunable WSe₂ /MoSe₂ heterobilayer",
+          "after": "Moiré-Trapped Interlayer Trions in a Charge-Tunable WSe₂/MoSe₂ Heterobilayer"
+        }
+      }
+    },
+    {
+      "id": "pub-20",
+      "status": "verified",
+      "title": "Highly sensitive and flexible pressure sensors using position- and dimension-controlled ZnO nanotube arrays grown on graphene films",
+      "journalTitle": "NPG Asia Materials",
+      "volume": "13",
+      "issue": "1",
+      "articleNumber": "57",
+      "year": 2021,
+      "doi": "10.1038/s41427-021-00324-w",
+      "url": "https://www.nature.com/articles/s41427-021-00324-w",
+      "sourceUrls": [
+        "https://www.nature.com/articles/s41427-021-00324-w"
+      ],
+      "evidence": "Complete cached publisher HTML citation metadata gives title, volume13 and article57; article published30July2021.",
+      "changes": [
+        "Correct suspended hyphen spacing: position-and → position- and."
+      ],
+      "previous": {
+        "title": "Highly sensitive and flexible pressure sensors using position-and dimension-controlled ZnO nanotube arrays grown on graphene films",
+        "journal": "NPG Asia Materials 13, 57 (2021)",
+        "year": 2021,
+        "doi": "10.1038/s41427-021-00324-w",
+        "url": "https://www.nature.com/articles/s41427-021-00324-w"
+      },
+      "bibliographicCitation": "NPG Asia Materials 13, 57 (2021)",
+      "displayCitation": "NPG Asia Materials 13, 57 (2021)",
+      "appliedUrl": "https://www.nature.com/articles/s41427-021-00324-w",
+      "appliedChanges": {
+        "title": {
+          "before": "Highly sensitive and flexible pressure sensors using position-and dimension-controlled ZnO nanotube arrays grown on graphene films",
+          "after": "Highly sensitive and flexible pressure sensors using position- and dimension-controlled ZnO nanotube arrays grown on graphene films"
+        }
+      }
+    },
+    {
+      "id": "pub-21",
+      "status": "verified",
+      "title": "Vertical monolithic integration of wide- and narrow-bandgap semiconductor nanostructures on graphene films",
+      "journalTitle": "NPG Asia Materials",
+      "volume": "13",
+      "issue": "1",
+      "articleNumber": "33",
+      "year": 2021,
+      "doi": "10.1038/s41427-021-00301-3",
+      "url": "https://www.nature.com/articles/s41427-021-00301-3",
+      "sourceUrls": [
+        "https://www.nature.com/articles/s41427-021-00301-3"
+      ],
+      "evidence": "Publisher article header and citation metadata agree on volume13 article33, published9April2021.",
+      "changes": [
+        "Correct suspended hyphen spacing: wide-and → wide- and."
+      ],
+      "previous": {
+        "title": "Vertical monolithic integration of wide-and narrow-bandgap semiconductor nanostructures on graphene films",
+        "journal": "NPG Asia Materials 13, 33 (2021)",
+        "year": 2021,
+        "doi": "10.1038/s41427-021-00301-3",
+        "url": "https://www.nature.com/articles/s41427-021-00301-3"
+      },
+      "bibliographicCitation": "NPG Asia Materials 13, 33 (2021)",
+      "displayCitation": "NPG Asia Materials 13, 33 (2021)",
+      "appliedUrl": "https://www.nature.com/articles/s41427-021-00301-3",
+      "appliedChanges": {
+        "title": {
+          "before": "Vertical monolithic integration of wide-and narrow-bandgap semiconductor nanostructures on graphene films",
+          "after": "Vertical monolithic integration of wide- and narrow-bandgap semiconductor nanostructures on graphene films"
+        }
+      }
+    },
+    {
+      "id": "pub-22",
+      "status": "verified",
+      "title": "Intracellular gallium nitride microrod laser",
+      "journalTitle": "NPG Asia Materials",
+      "volume": "13",
+      "issue": "1",
+      "articleNumber": "32",
+      "year": 2021,
+      "doi": "10.1038/s41427-021-00299-8",
+      "url": "https://www.nature.com/articles/s41427-021-00299-8",
+      "sourceUrls": [
+        "https://www.nature.com/articles/s41427-021-00299-8"
+      ],
+      "evidence": "Publisher article header and citation metadata agree on exact title, volume13 article32, published2April2021.",
+      "changes": [],
+      "previous": {
+        "title": "Intracellular gallium nitride microrod laser",
+        "journal": "NPG Asia Materials 13, 32 (2021)",
+        "year": 2021,
+        "doi": "10.1038/s41427-021-00299-8",
+        "url": "https://www.nature.com/articles/s41427-021-00299-8"
+      },
+      "bibliographicCitation": "NPG Asia Materials 13, 32 (2021)",
+      "displayCitation": "NPG Asia Materials 13, 32 (2021)",
+      "appliedUrl": "https://www.nature.com/articles/s41427-021-00299-8",
+      "appliedChanges": {}
+    },
+    {
+      "id": "pub-23",
+      "status": "verified",
+      "title": "Individually addressable, high-density vertical nanotube Schottky diode crossbar array",
+      "journalTitle": "Nano Energy",
+      "volume": "76",
+      "articleNumber": "104955",
+      "year": 2020,
+      "doi": "10.1016/j.nanoen.2020.104955",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2211285520305127",
+      "sourceUrls": [
+        "https://www.sciencedirect.com/science/article/pii/S2211285520305127",
+        "https://api.crossref.org/works/10.1016/j.nanoen.2020.104955"
+      ],
+      "evidence": "Publisher ScienceDirect abstract/header and cached publisher-deposited Crossref record figure-work-middle/pub23-crossref.json identify Nano Energy76,104955(October2020).",
+      "changes": [
+        "Replace DOI redirect with canonical publisher article URL if consistent with site convention."
+      ],
+      "previous": {
+        "title": "Individually addressable, high-density vertical nanotube Schottky diode crossbar array",
+        "journal": "Nano Energy 76, 104955 (2020)",
+        "year": 2020,
+        "doi": "10.1016/j.nanoen.2020.104955",
+        "url": "https://doi.org/10.1016/j.nanoen.2020.104955"
+      },
+      "bibliographicCitation": "Nano Energy 76, 104955 (2020)",
+      "displayCitation": "Nano Energy 76, 104955 (2020)",
+      "appliedUrl": "https://doi.org/10.1016/j.nanoen.2020.104955",
+      "appliedChanges": {}
+    },
+    {
+      "id": "pub-24",
+      "status": "verified",
+      "title": "Highly energy-tunable quantum light from moiré-trapped excitons",
+      "journalTitle": "Science Advances",
+      "volume": "6",
+      "issue": "37",
+      "articleNumber": "eaba8526",
+      "year": 2020,
+      "doi": "10.1126/sciadv.aba8526",
+      "url": "https://www.science.org/doi/10.1126/sciadv.aba8526",
+      "sourceUrls": [
+        "https://www.science.org/doi/10.1126/sciadv.aba8526",
+        "https://pure.hw.ac.uk/ws/files/42124860/eaba8526.full.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7486092/"
+      ],
+      "evidence": "Published Science Advances PDF deposited at Heriot-Watt and publisher-deposited XML PMC7486092.xml confirm exact hyphenated title, volume6 issue37 and article eaba8526.",
+      "changes": [
+        "Restore missing hyphen in moiré-trapped."
+      ],
+      "previous": {
+        "title": "Highly energy-tunable quantum light from moiré trapped excitons",
+        "journal": "Science Advances 6, eaba8526 (2020)",
+        "year": 2020,
+        "doi": "10.1126/sciadv.aba8526",
+        "url": "https://www.science.org/doi/10.1126/sciadv.aba8526"
+      },
+      "bibliographicCitation": "Science Advances 6, eaba8526 (2020)",
+      "displayCitation": "Science Advances 6, eaba8526 (2020)",
+      "appliedUrl": "https://www.science.org/doi/10.1126/sciadv.aba8526",
+      "appliedChanges": {
+        "title": {
+          "before": "Highly energy-tunable quantum light from moiré trapped excitons",
+          "after": "Highly energy-tunable quantum light from moiré-trapped excitons"
+        }
+      }
+    },
+    {
+      "id": "pub-25",
+      "status": "verified",
+      "title": "Spin–layer locking of interlayer excitons trapped in moiré potentials",
+      "journalTitle": "Nature Materials",
+      "volume": "19",
+      "issue": "6",
+      "pages": "630–636",
+      "year": 2020,
+      "doi": "10.1038/s41563-020-0687-7",
+      "url": "https://www.nature.com/articles/s41563-020-0687-7",
+      "sourceUrls": [
+        "https://www.nature.com/articles/s41563-020-0687-7"
+      ],
+      "evidence": "Publisher citation metadata in complete cached article HTML identifies exact title with en dash, volume19 issue6 and first/last pages630/636.",
+      "changes": [
+        "Use publisher's en dash in Spin–layer.",
+        "Complete page range630–636."
+      ],
+      "previous": {
+        "title": "Spin-layer locking of interlayer excitons trapped in moiré potentials",
+        "journal": "Nature Materials 19, 630 (2020)",
+        "year": 2020,
+        "doi": "10.1038/s41563-020-0687-7",
+        "url": "https://www.nature.com/articles/s41563-020-0687-7"
+      },
+      "bibliographicCitation": "Nature Materials 19, 630–636 (2020)",
+      "displayCitation": "Nature Materials 19, 630–636 (2020)",
+      "appliedUrl": "https://www.nature.com/articles/s41563-020-0687-7",
+      "appliedChanges": {
+        "title": {
+          "before": "Spin-layer locking of interlayer excitons trapped in moiré potentials",
+          "after": "Spin–layer locking of interlayer excitons trapped in moiré potentials"
+        },
+        "journal": {
+          "before": "Nature Materials 19, 630 (2020)",
+          "after": "Nature Materials 19, 630–636 (2020)"
+        }
+      }
+    },
+    {
+      "id": "pub-26",
+      "status": "verified",
+      "title": "ZnO nanotube waveguide arrays on graphene films for local optical excitation on biological cells",
+      "journalTitle": "APL Materials",
+      "volume": "5",
+      "issue": "4",
+      "articleNumber": "046106",
+      "year": 2017,
+      "doi": "10.1063/1.4981646",
+      "url": "https://pubs.aip.org/aip/apm/article/5/4/046106/121564/ZnO-nanotube-waveguide-arrays-on-graphene-films",
+      "sourceUrls": [
+        "https://pubs.aip.org/aip/apm/article/5/4/046106/121564/ZnO-nanotube-waveguide-arrays-on-graphene-films",
+        "https://aipp.silverchair-cdn.com/article-minimal/121564"
+      ],
+      "evidence": "AIP article header identifies APL Materials5,046106(2017), DOI10.1063/1.4981646 and Editor’s Pick status. No title correction needed.",
+      "changes": [
+        "Fill missing DOI10.1063/1.4981646.",
+        "Separate Editor’s Pick note from canonical journal citation; do not discard distinction if retained as metadata."
+      ],
+      "distinction": "Editor's Pick",
+      "previous": {
+        "title": "ZnO nanotube waveguide arrays on graphene films for local optical excitation on biological cells",
+        "journal": "APL Materials 5, 046106 (2017) - Selected as an editor’s pick in APL Materials.",
+        "year": 2017,
+        "doi": "",
+        "url": "https://pubs.aip.org/aip/apm/article/5/4/046106/121564/ZnO-nanotube-waveguide-arrays-on-graphene-films"
+      },
+      "bibliographicCitation": "APL Materials 5, 046106 (2017)",
+      "displayCitation": "APL Materials 5, 046106 (2017) — Editor’s Pick",
+      "appliedUrl": "https://pubs.aip.org/aip/apm/article/5/4/046106/121564/ZnO-nanotube-waveguide-arrays-on-graphene-films",
+      "appliedChanges": {
+        "journal": {
+          "before": "APL Materials 5, 046106 (2017) - Selected as an editor’s pick in APL Materials.",
+          "after": "APL Materials 5, 046106 (2017) — Editor’s Pick"
+        },
+        "doi": {
+          "before": "",
+          "after": "10.1063/1.4981646"
+        }
+      }
+    },
+    {
+      "id": "pub-27",
+      "status": "verified",
+      "title": "ZnO nanolasers on graphene films",
+      "journalTitle": "Applied Physics Letters",
+      "volume": "108",
+      "issue": "26",
+      "articleNumber": "263102",
+      "year": 2016,
+      "doi": "10.1063/1.4954798",
+      "url": "https://pubs.aip.org/aip/apl/article/108/26/263102/30764/ZnO-nanolasers-on-graphene-films",
+      "sourceUrls": [
+        "https://pubs.aip.org/aip/apl/article/108/26/263102/30764/ZnO-nanolasers-on-graphene-films",
+        "https://api.crossref.org/works/10.1063/1.4954798"
+      ],
+      "evidence": "AIP header and live publisher-deposited Crossref metadata both confirm exact title, full journal name, volume108 issue26 and article263102, year2016.",
+      "changes": [
+        "Fill missing DOI10.1063/1.4954798."
+      ],
+      "previous": {
+        "title": "ZnO nanolasers on graphene films",
+        "journal": "Applied Physics Letters 108, 263102 (2016)",
+        "year": 2016,
+        "doi": "",
+        "url": "https://pubs.aip.org/aip/apl/article/108/26/263102/30764/ZnO-nanolasers-on-graphene-films"
+      },
+      "bibliographicCitation": "Applied Physics Letters 108, 263102 (2016)",
+      "displayCitation": "Applied Physics Letters 108, 263102 (2016)",
+      "appliedUrl": "https://pubs.aip.org/aip/apl/article/108/26/263102/30764/ZnO-nanolasers-on-graphene-films",
+      "appliedChanges": {
+        "doi": {
+          "before": "",
+          "after": "10.1063/1.4954798"
+        }
+      }
+    },
+    {
+      "id": "pub-28",
+      "status": "verified",
+      "title": "Flexible GaN Light-Emitting Diodes Using GaN Microdisks Epitaxial Laterally Overgrown on Graphene Dots",
+      "journalTitle": "Advanced Materials",
+      "volume": "28",
+      "issue": "35",
+      "pages": "7688–7694",
+      "year": 2016,
+      "doi": "10.1002/adma.201601894",
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.201601894",
+      "sourceUrls": [
+        "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.201601894",
+        "https://api.crossref.org/works/10.1002/adma.201601894"
+      ],
+      "evidence": "Live Wiley heading and live publisher-deposited Crossref title agree: plural Microdisks and unusual wording Epitaxial Laterally. Wiley issue header gives volume28 issue35 pages7688–7694.",
+      "changes": [
+        "Correct singular microdisk to publisher plural Microdisks.",
+        "Retain Epitaxial Laterally; do not substitute inferred grammatical correction Epitaxially.",
+        "Match publisher capitalization.",
+        "Complete page range7688–7694."
+      ],
+      "previous": {
+        "title": "Flexible GaN light-emitting diodes using GaN microdisk epitaxial laterally overgrown on graphene dots",
+        "journal": "Advanced Materials 28, 7688 (2016)",
+        "year": 2016,
+        "doi": "10.1002/adma.201601894",
+        "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.201601894"
+      },
+      "bibliographicCitation": "Advanced Materials 28, 7688–7694 (2016)",
+      "displayCitation": "Advanced Materials 28, 7688–7694 (2016)",
+      "appliedUrl": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.201601894",
+      "appliedChanges": {
+        "title": {
+          "before": "Flexible GaN light-emitting diodes using GaN microdisk epitaxial laterally overgrown on graphene dots",
+          "after": "Flexible GaN Light-Emitting Diodes Using GaN Microdisks Epitaxial Laterally Overgrown on Graphene Dots"
+        },
+        "journal": {
+          "before": "Advanced Materials 28, 7688 (2016)",
+          "after": "Advanced Materials 28, 7688–7694 (2016)"
+        }
+      }
+    },
+    {
+      "id": "pub-29",
+      "status": "verified",
+      "title": "Real-time device-scale imaging of conducting filament dynamics in resistive switching materials",
+      "journalTitle": "Scientific Reports",
+      "volume": "6",
+      "issue": "1",
+      "articleNumber": "27451",
+      "year": 2016,
+      "doi": "10.1038/srep27451",
+      "url": "https://www.nature.com/articles/srep27451",
+      "sourceUrls": [
+        "https://www.nature.com/articles/srep27451"
+      ],
+      "evidence": "Complete cached publisher article citation metadata agrees on exact title, full journal name, volume6 article27451, publication7June2016.",
+      "changes": [],
+      "previous": {
+        "title": "Real-time device-scale imaging of conducting filament dynamics in resistive switching materials",
+        "journal": "Scientific Reports 6, 27451 (2016)",
+        "year": 2016,
+        "doi": "10.1038/srep27451",
+        "url": "https://www.nature.com/articles/srep27451"
+      },
+      "bibliographicCitation": "Scientific Reports 6, 27451 (2016)",
+      "displayCitation": "Scientific Reports 6, 27451 (2016)",
+      "appliedUrl": "https://www.nature.com/articles/srep27451",
+      "appliedChanges": {}
+    },
+    {
+      "id": "pub-30",
+      "status": "verified",
+      "title": "Distinctive mapping of strain and quantum size effects using depth-resolved photoluminescence in ZnO nanoneedles",
+      "journalTitle": "AIP Advances",
+      "volume": "6",
+      "issue": "4",
+      "articleNumber": "045021",
+      "year": 2016,
+      "doi": "10.1063/1.4948452",
+      "url": "https://pubs.aip.org/aip/adv/article/6/4/045021/21997/Distinctive-mapping-of-strain-and-quantum-size",
+      "sourceUrls": [
+        "https://pubs.aip.org/aip/adv/article/6/4/045021/21997/Distinctive-mapping-of-strain-and-quantum-size",
+        "https://api.crossref.org/works/10.1063/1.4948452"
+      ],
+      "evidence": "AIP publisher page and live publisher-deposited Crossref metadata confirm exact title, AIP Advances6(4), article045021 and DOI10.1063/1.4948452, year2016.",
+      "changes": [
+        "Fill missing DOI10.1063/1.4948452.",
+        "Normalize trailing citation punctuation with remaining entries."
+      ],
+      "previous": {
+        "title": "Distinctive mapping of strain and quantum size effects using depth-resolved photoluminescence in ZnO nanoneedles",
+        "journal": "AIP Advances 6, 045021 (2016).",
+        "year": 2016,
+        "doi": "",
+        "url": "https://pubs.aip.org/aip/adv/article/6/4/045021/21997/Distinctive-mapping-of-strain-and-quantum-size"
+      },
+      "bibliographicCitation": "AIP Advances 6, 045021 (2016)",
+      "displayCitation": "AIP Advances 6, 045021 (2016)",
+      "appliedUrl": "https://pubs.aip.org/aip/adv/article/6/4/045021/21997/Distinctive-mapping-of-strain-and-quantum-size",
+      "appliedChanges": {
+        "journal": {
+          "before": "AIP Advances 6, 045021 (2016).",
+          "after": "AIP Advances 6, 045021 (2016)"
+        },
+        "doi": {
+          "before": "",
+          "after": "10.1063/1.4948452"
+        }
+      }
+    },
+    {
+      "id": "pub-31",
+      "status": "verified",
+      "title": "Microtube Light-Emitting Diode Arrays with Metal Cores",
+      "journalTitle": "ACS Nano",
+      "volume": "10",
+      "issue": "3",
+      "pages": "3114–3120",
+      "year": 2016,
+      "doi": "10.1021/acsnano.5b07905",
+      "url": "https://pubs.acs.org/doi/10.1021/acsnano.5b07905",
+      "sourceUrls": [
+        "https://pubs.acs.org/doi/10.1021/acsnano.5b07905",
+        "https://acs.figshare.com/articles/journal_contribution/Microtube_Light_Emitting_Diode_Arrays_with_Metal_Cores/2118016",
+        "https://pure.korea.ac.kr/en/publications/microtube-light-emitting-diode-arrays-with-metal-cores/"
+      ],
+      "evidence": "Publisher SI title and metadata agree on exact title/DOI. Author institution's final-publication record identifies ACS Nano10(3),3114–3120(2016); main ACS text unavailable and live Crossref request rate limited.",
+      "changes": [
+        "Complete page range3114–3120."
+      ],
+      "previous": {
+        "title": "Microtube Light-Emitting Diode Arrays with Metal Cores",
+        "journal": "ACS Nano 10, 3114 (2016)",
+        "year": 2016,
+        "doi": "10.1021/acsnano.5b07905",
+        "url": "https://pubs.acs.org/doi/10.1021/acsnano.5b07905"
+      },
+      "bibliographicCitation": "ACS Nano 10, 3114–3120 (2016)",
+      "displayCitation": "ACS Nano 10, 3114–3120 (2016)",
+      "appliedUrl": "https://pubs.acs.org/doi/10.1021/acsnano.5b07905",
+      "appliedChanges": {
+        "journal": {
+          "before": "ACS Nano 10, 3114 (2016)",
+          "after": "ACS Nano 10, 3114–3120 (2016)"
+        }
+      }
+    },
+    {
+      "id": "pub-32",
+      "title": "Enhanced Second Harmonic Generation by Coupling to Exciton Ensembles in Ag-coated ZnO Nanorods",
+      "journalTitle": "ACS Photonics",
+      "volume": "2",
+      "issue": "9",
+      "pages": "1314–1319",
+      "year": 2015,
+      "doi": "10.1021/acsphotonics.5b00268",
+      "url": "https://pubs.acs.org/doi/10.1021/acsphotonics.5b00268",
+      "sourceUrls": [
+        "https://api.crossref.org/works/10.1021/acsphotonics.5b00268",
+        "https://acs.figshare.com/articles/journal_contribution/Enhanced_Second_Harmonic_Generation_by_Coupling_to_Exciton_Ensembles_in_Ag_coated_ZnO_Nanorods/2131438"
+      ],
+      "evidence": "Publisher-deposited Crossref record gives the title, ACS Photonics  2(9), pages 1314–1319; ACS supporting information confirms title wording. Preserve publisher's Ag-coated casing.",
+      "changes": [
+        "Restore canonical title capitalization.",
+        "Expand first page1314 to full range1314–1319."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "Enhanced second harmonic generation by coupling to exciton ensembles in Ag-coated ZnO nanorods",
+        "journal": "ACS Photonics 2, 1314 (2015)",
+        "year": 2015,
+        "doi": "10.1021/acsphotonics.5b00268",
+        "url": "https://pubs.acs.org/doi/10.1021/acsphotonics.5b00268"
+      },
+      "bibliographicCitation": "ACS Photonics 2, 1314–1319 (2015)",
+      "displayCitation": "ACS Photonics 2, 1314–1319 (2015)",
+      "appliedUrl": "https://pubs.acs.org/doi/10.1021/acsphotonics.5b00268",
+      "appliedChanges": {
+        "title": {
+          "before": "Enhanced second harmonic generation by coupling to exciton ensembles in Ag-coated ZnO nanorods",
+          "after": "Enhanced Second Harmonic Generation by Coupling to Exciton Ensembles in Ag-coated ZnO Nanorods"
+        },
+        "journal": {
+          "before": "ACS Photonics 2, 1314 (2015)",
+          "after": "ACS Photonics 2, 1314–1319 (2015)"
+        }
+      }
+    },
+    {
+      "id": "pub-33",
+      "title": "Nanoscale Single-Element Color Filters",
+      "journalTitle": "Nano Letters",
+      "volume": "15",
+      "issue": "9",
+      "pages": "5938–5943",
+      "year": 2015,
+      "doi": "10.1021/acs.nanolett.5b02049",
+      "url": "https://pubs.acs.org/doi/10.1021/acs.nanolett.5b02049",
+      "sourceUrls": [
+        "https://api.crossref.org/works/10.1021/acs.nanolett.5b02049",
+        "https://acs.figshare.com/articles/journal_contribution/Nanoscale_Single_Element_Color_Filters/2133220"
+      ],
+      "evidence": "Publisher-deposited Crossref metadata identifies Nano Letters  15(9), 5938–5943 (2015). ACS supporting information matches the article title.",
+      "changes": [
+        "Expand first page5938 to full range5938–5943."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "Nanoscale Single-Element Color Filters",
+        "journal": "Nano Letters 15, 5938 (2015)",
+        "year": 2015,
+        "doi": "10.1021/acs.nanolett.5b02049",
+        "url": "https://pubs.acs.org/doi/10.1021/acs.nanolett.5b02049"
+      },
+      "bibliographicCitation": "Nano Letters 15, 5938–5943 (2015)",
+      "displayCitation": "Nano Letters 15, 5938–5943 (2015)",
+      "appliedUrl": "https://pubs.acs.org/doi/10.1021/acs.nanolett.5b02049",
+      "appliedChanges": {
+        "journal": {
+          "before": "Nano Letters 15, 5938 (2015)",
+          "after": "Nano Letters 15, 5938–5943 (2015)"
+        }
+      }
+    },
+    {
+      "id": "pub-34",
+      "title": "Growth and optical characteristics of high-quality ZnO thin films on graphene layers",
+      "journalTitle": "APL Materials",
+      "volume": "3",
+      "issue": "1",
+      "articleNumber": "016103",
+      "year": 2015,
+      "doi": "10.1063/1.4905488",
+      "url": "https://pubs.aip.org/aip/apm/article/3/1/016103/238344/Growth-and-optical-characteristics-of-high-quality",
+      "sourceUrls": [
+        "https://api.crossref.org/works/10.1063/1.4905488",
+        "https://aipp.silverchair-cdn.com/article-minimal/238344"
+      ],
+      "evidence": "AIP publisher article header and deposited DOI record agree on title, journal, volume 3, article 016103, 2015 and DOI. Preserve high-quality hyphen.",
+      "changes": [
+        "Add missing DOI10.1063/1.4905488.",
+        "Treat016103 as article number, not a page."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "Growth and optical characteristics of high-quality ZnO thin films on graphene layers",
+        "journal": "APL Materials 3, 016103 (2015)",
+        "year": 2015,
+        "doi": "",
+        "url": "https://pubs.aip.org/aip/apm/article/3/1/016103/238344/Growth-and-optical-characteristics-of-high-quality"
+      },
+      "bibliographicCitation": "APL Materials 3, 016103 (2015)",
+      "displayCitation": "APL Materials 3, 016103 (2015)",
+      "appliedUrl": "https://pubs.aip.org/aip/apm/article/3/1/016103/238344/Growth-and-optical-characteristics-of-high-quality",
+      "appliedChanges": {
+        "doi": {
+          "before": "",
+          "after": "10.1063/1.4905488"
+        }
+      }
+    },
+    {
+      "id": "pub-35",
+      "title": "Architectured van der Waals epitaxy of ZnO nanostructures on hexagonal BN",
+      "journalTitle": "NPG Asia Materials",
+      "volume": "6",
+      "issue": "12",
+      "articleNumber": "e145",
+      "year": 2014,
+      "doi": "10.1038/am.2014.108",
+      "url": "https://www.nature.com/articles/am2014108",
+      "sourceUrls": [
+        "https://api.crossref.org/works/10.1038/am.2014.108",
+        "https://www.nature.com/articles/am2014108"
+      ],
+      "evidence": "Nature publisher's title and recommended citation identify NPG Asia Materials 6,e145 (2014). Crossref's repeated e145–e145 represents the article identifier, not a page range.",
+      "changes": [
+        "Add missing DOI10.1038/am.2014.108.",
+        "Preserve 'Architectured' and lower-case 'van der Waals' from actual article title."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "Architectured van der Waals epitaxy of ZnO nanostructures on hexagonal BN",
+        "journal": "NPG Asia Materials 6, e145 (2014)",
+        "year": 2014,
+        "doi": "",
+        "url": "https://www.nature.com/articles/am2014108"
+      },
+      "bibliographicCitation": "NPG Asia Materials 6, e145 (2014)",
+      "displayCitation": "NPG Asia Materials 6, e145 (2014)",
+      "appliedUrl": "https://www.nature.com/articles/am2014108",
+      "appliedChanges": {
+        "doi": {
+          "before": "",
+          "after": "10.1038/am.2014.108"
+        }
+      }
+    },
+    {
+      "id": "pub-36",
+      "title": "Selective excitation of Fabry-Perot or whispering-gallery mode-type lasing in GaN microrods",
+      "journalTitle": "Applied Physics Letters",
+      "volume": "105",
+      "issue": "20",
+      "articleNumber": "201108",
+      "year": 2014,
+      "doi": "10.1063/1.4902373",
+      "url": "https://pubs.aip.org/aip/apl/article/105/20/201108/27587/Selective-excitation-of-Fabry-Perot-or-whispering",
+      "sourceUrls": [
+        "https://pubs.aip.org/aip/apl/article/105/20/201108/27587/Selective-excitation-of-Fabry-Perot-or-whispering",
+        "https://aipp.silverchair-cdn.com/article-minimal/27587"
+      ],
+      "evidence": "AIP publisher page expressly gives this title, Appl.Phys.Lett.105, 201108 (2014), DOI 10.1063/1.4902373. Fabry-Perot is unaccented and hyphenated exactly so in publisher title.",
+      "changes": [
+        "Add missing DOI10.1063/1.4902373.",
+        "Retain actual title wording, including Fabry-Perot, whispering-gallery, mode-type and microrods."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "Selective excitation of Fabry-Perot or whispering-gallery mode-type lasing in GaN microrods",
+        "journal": "Applied Physics Letters 105, 201108 (2014)",
+        "year": 2014,
+        "doi": "",
+        "url": "https://pubs.aip.org/aip/apl/article/105/20/201108/27587/Selective-excitation-of-Fabry-Perot-or-whispering"
+      },
+      "bibliographicCitation": "Applied Physics Letters 105, 201108 (2014)",
+      "displayCitation": "Applied Physics Letters 105, 201108 (2014)",
+      "appliedUrl": "https://pubs.aip.org/aip/apl/article/105/20/201108/27587/Selective-excitation-of-Fabry-Perot-or-whispering",
+      "appliedChanges": {
+        "doi": {
+          "before": "",
+          "after": "10.1063/1.4902373"
+        }
+      }
+    },
+    {
+      "id": "pub-37",
+      "title": "Photoluminescence of excitons and defects in ZnSe-based longitudinal twinning nanowires",
+      "journalTitle": "Journal of Physics D: Applied Physics",
+      "volume": "47",
+      "issue": "48",
+      "articleNumber": "485302",
+      "year": 2014,
+      "doi": "10.1088/0022-3727/47/48/485302",
+      "url": "https://iopscience.iop.org/article/10.1088/0022-3727/47/48/485302",
+      "sourceUrls": [
+        "https://api.crossref.org/works/10.1088/0022-3727/47/48/485302",
+        "https://iopscience.iop.org/article/10.1088/0022-3727/47/48/485302"
+      ],
+      "evidence": "Original IOP publisher HTML and deposited DOI record identify full journal name, 47(48), 485302 (2014). IOP uses 485302 as an article number.",
+      "changes": [
+        "No title correction needed.",
+        "Retain full Journal of Physics D: Applied Physics title; classify485302 as article identifier."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "Photoluminescence of excitons and defects in ZnSe-based longitudinal twinning nanowires",
+        "journal": "Journal of Physics D: Applied Physics 47, 485302 (2014)",
+        "year": 2014,
+        "doi": "10.1088/0022-3727/47/48/485302",
+        "url": "https://iopscience.iop.org/article/10.1088/0022-3727/47/48/485302"
+      },
+      "bibliographicCitation": "Journal of Physics D: Applied Physics 47, 485302 (2014)",
+      "displayCitation": "Journal of Physics D: Applied Physics 47, 485302 (2014)",
+      "appliedUrl": "https://iopscience.iop.org/article/10.1088/0022-3727/47/48/485302",
+      "appliedChanges": {}
+    },
+    {
+      "id": "pub-38",
+      "title": "Twinning effect on photoluminescence spectra of ZnSe nanowires",
+      "journalTitle": "Journal of Applied Physics",
+      "volume": "116",
+      "issue": "17",
+      "articleNumber": "174303",
+      "year": 2014,
+      "doi": "10.1063/1.4900850",
+      "url": "https://pubs.aip.org/aip/jap/article/116/17/174303/281433/Twinning-effect-on-photoluminescence-spectra-of",
+      "sourceUrls": [
+        "https://api.crossref.org/works/10.1063/1.4900850",
+        "https://aipp.silverchair-cdn.com/article-minimal/281433"
+      ],
+      "evidence": "AIP publisher header and DOI deposit agree on Journal of Applied Physics 116(17), 174303 (2014) and exact title.",
+      "changes": [
+        "Add missing DOI10.1063/1.4900850."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "Twinning effect on photoluminescence spectra of ZnSe nanowires",
+        "journal": "Journal of Applied Physics 116, 174303 (2014)",
+        "year": 2014,
+        "doi": "",
+        "url": "https://pubs.aip.org/aip/jap/article/116/17/174303/281433/Twinning-effect-on-photoluminescence-spectra-of"
+      },
+      "bibliographicCitation": "Journal of Applied Physics 116, 174303 (2014)",
+      "displayCitation": "Journal of Applied Physics 116, 174303 (2014)",
+      "appliedUrl": "https://pubs.aip.org/aip/jap/article/116/17/174303/281433/Twinning-effect-on-photoluminescence-spectra-of",
+      "appliedChanges": {
+        "doi": {
+          "before": "",
+          "after": "10.1063/1.4900850"
+        }
+      }
+    },
+    {
+      "id": "pub-39",
+      "title": "Growth and characterizations of GaN micro-rods on graphene films for flexible light emitting diodes",
+      "journalTitle": "APL Materials",
+      "volume": "2",
+      "issue": "9",
+      "articleNumber": "092512",
+      "year": 2014,
+      "doi": "10.1063/1.4894780",
+      "url": "https://pubs.aip.org/aip/apm/article/2/9/092512/150627/Growth-and-characterizations-of-GaN-micro-rods-on",
+      "sourceUrls": [
+        "https://api.crossref.org/works/10.1063/1.4894780",
+        "https://doi.org/10.1063/1.4894780"
+      ],
+      "evidence": "AIP publisher HTML and publisher-deposited record match article 092512,volume 2, 2014. The official title intentionally uses characterizations, micro-rods and unhyphenated light emitting; do not silently grammar-edit it. Crossref uppercase APL MATERIALS normalized to the publisher's journal styling APL Materials.",
+      "changes": [
+        "No article-title wording correction needed; preserve official hyphens.",
+        "Retain journal name APL Materials and leading zero in092512."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "Growth and characterizations of GaN micro-rods on graphene films for flexible light emitting diodes",
+        "journal": "APL Materials 2, 092512 (2014)",
+        "year": 2014,
+        "doi": "10.1063/1.4894780",
+        "url": "https://doi.org/10.1063/1.4894780"
+      },
+      "bibliographicCitation": "APL Materials 2, 092512 (2014)",
+      "displayCitation": "APL Materials 2, 092512 (2014)",
+      "appliedUrl": "https://doi.org/10.1063/1.4894780",
+      "appliedChanges": {}
+    },
+    {
+      "id": "pub-40",
+      "title": "Stimulated Emission Features of Bound Excitons in ZnO Nanotubes",
+      "journalTitle": "Journal of Nanoscience and Nanotechnology",
+      "volume": "14",
+      "issue": "7",
+      "pages": "5293–5296",
+      "year": 2014,
+      "doi": "10.1166/jnn.2014.8303",
+      "url": "https://doi.org/10.1166/jnn.2014.8303",
+      "sourceUrls": [
+        "https://doi.org/10.1166/jnn.2014.8303",
+        "https://pubmed.ncbi.nlm.nih.gov/24758019/"
+      ],
+      "evidence": "Publisher Ingenta article listing gives the title, Journal of Nanoscience and Nanotechnology 14(7),pp 5293–5296,July 2014. PubMed independently confirms DOI and abbreviated 5293–6 range.",
+      "changes": [
+        "Add missing DOI10.1166/jnn.2014.8303.",
+        "Expand5293 to5293–5296 and remove stray comma before year.",
+        "Use DOI article link instead of PubMed abstract link."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "Stimulated Emission Features of Bound Excitons in ZnO Nanotubes",
+        "journal": "Journal of Nanoscience and Nanotechnology 14, 5293, (2014)",
+        "year": 2014,
+        "doi": "",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24758019/"
+      },
+      "bibliographicCitation": "Journal of Nanoscience and Nanotechnology 14, 5293–5296 (2014)",
+      "displayCitation": "Journal of Nanoscience and Nanotechnology 14, 5293–5296 (2014)",
+      "appliedUrl": "https://doi.org/10.1166/jnn.2014.8303",
+      "appliedChanges": {
+        "journal": {
+          "before": "Journal of Nanoscience and Nanotechnology 14, 5293, (2014)",
+          "after": "Journal of Nanoscience and Nanotechnology 14, 5293–5296 (2014)"
+        },
+        "doi": {
+          "before": "",
+          "after": "10.1166/jnn.2014.8303"
+        },
+        "url": {
+          "before": "https://pubmed.ncbi.nlm.nih.gov/24758019/",
+          "after": "https://doi.org/10.1166/jnn.2014.8303"
+        }
+      }
+    },
+    {
+      "id": "pub-41",
+      "title": "ZnSe-Based Longitudinal Twinning Nanowires",
+      "journalTitle": "Advanced Engineering Materials",
+      "volume": "16",
+      "issue": "4",
+      "pages": "459–465",
+      "year": 2014,
+      "doi": "10.1002/adem.201300405",
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adem.201300405",
+      "sourceUrls": [
+        "https://api.crossref.org/works/10.1002/adem.201300405",
+        "https://advanced.onlinelibrary.wiley.com/toc/15272648/16/4"
+      ],
+      "evidence": "Wiley issue contents and publisher deposit give ZnSe-Based Longitudinal Twinning Nanowires, 16(4), 459–465 (2014). Typographic Unicode hyphen normalized to ordinary hyphen without changing wording. Title's publisher note mark is not part of bibliographic title.",
+      "changes": [
+        "Restore title capitalization: ZnSe-Based Longitudinal Twinning Nanowires.",
+        "Expand459 to459–465."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "ZnSe‐based longitudinal twinning nanowires",
+        "journal": "Advanced Engineering Materials 16, 459 (2014)",
+        "year": 2014,
+        "doi": "10.1002/adem.201300405",
+        "url": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adem.201300405"
+      },
+      "bibliographicCitation": "Advanced Engineering Materials 16, 459–465 (2014)",
+      "displayCitation": "Advanced Engineering Materials 16, 459–465 (2014)",
+      "appliedUrl": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adem.201300405",
+      "appliedChanges": {
+        "title": {
+          "before": "ZnSe‐based longitudinal twinning nanowires",
+          "after": "ZnSe-Based Longitudinal Twinning Nanowires"
+        },
+        "journal": {
+          "before": "Advanced Engineering Materials 16, 459 (2014)",
+          "after": "Advanced Engineering Materials 16, 459–465 (2014)"
+        }
+      }
+    },
+    {
+      "id": "pub-42",
+      "title": "Epitaxial GaN Microdisk Lasers Grown on Graphene Microdots",
+      "journalTitle": "Nano Letters",
+      "volume": "13",
+      "issue": "6",
+      "pages": "2782–2785",
+      "year": 2013,
+      "doi": "10.1021/nl401011x",
+      "url": "https://pubs.acs.org/doi/10.1021/nl401011x",
+      "sourceUrls": [
+        "https://api.crossref.org/works/10.1021/nl401011x",
+        "https://acs.figshare.com/articles/journal_contribution/Epitaxial_GaN_Microdisk_Lasers_Grown_on_Graphene_Microdots/2406304"
+      ],
+      "evidence": "ACS DOI deposit provides canonical title, Nano Letters 13(6), 2782–2785 (2013). Original ACS supporting information matches title wording.",
+      "changes": [
+        "Expand2782 to2782–2785.",
+        "Remove isolated trailing period only as part of consistent citation formatting."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "Epitaxial GaN Microdisk Lasers Grown on Graphene Microdots",
+        "journal": "Nano Letters 13, 2782 (2013).",
+        "year": 2013,
+        "doi": "10.1021/nl401011x",
+        "url": "https://pubs.acs.org/doi/10.1021/nl401011x"
+      },
+      "bibliographicCitation": "Nano Letters 13, 2782–2785 (2013)",
+      "displayCitation": "Nano Letters 13, 2782–2785 (2013)",
+      "appliedUrl": "https://pubs.acs.org/doi/10.1021/nl401011x",
+      "appliedChanges": {
+        "journal": {
+          "before": "Nano Letters 13, 2782 (2013).",
+          "after": "Nano Letters 13, 2782–2785 (2013)"
+        }
+      }
+    },
+    {
+      "id": "pub-43",
+      "title": "High-quality GaN films grown on chemical vapor-deposited graphene films",
+      "journalTitle": "NPG Asia Materials",
+      "volume": "4",
+      "issue": "9",
+      "articleNumber": "e24",
+      "year": 2012,
+      "doi": "10.1038/am.2012.45",
+      "url": "https://www.nature.com/articles/am201245",
+      "sourceUrls": [
+        "https://api.crossref.org/works/10.1038/am.2012.45",
+        "https://www.nature.com/articles/am201245"
+      ],
+      "evidence": "Nature publisher citation metadata and DOI deposit agree on exact title and NPG Asia Materials 4,e24 (2012). Crossref e24–e24 should display once as article identifier.",
+      "changes": [
+        "Add missing DOI10.1038/am.2012.45.",
+        "Preserve high-quality and vapor-deposited from publisher title."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "High-quality GaN films grown on chemical vapor-deposited graphene films",
+        "journal": "NPG Asia Materials 4, e24 (2012)",
+        "year": 2012,
+        "doi": "",
+        "url": "https://www.nature.com/articles/am201245"
+      },
+      "bibliographicCitation": "NPG Asia Materials 4, e24 (2012)",
+      "displayCitation": "NPG Asia Materials 4, e24 (2012)",
+      "appliedUrl": "https://www.nature.com/articles/am201245",
+      "appliedChanges": {
+        "doi": {
+          "before": "",
+          "after": "10.1038/am.2012.45"
+        }
+      }
+    },
+    {
+      "id": "pub-44",
+      "title": "Position- and Morphology-Controlled ZnO Nanostructures Grown on Graphene Layers",
+      "journalTitle": "Advanced Materials",
+      "volume": "24",
+      "issue": "41",
+      "pages": "5565–5569",
+      "year": 2012,
+      "doi": "10.1002/adma.201201966",
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.201201966",
+      "sourceUrls": [
+        "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.201201966",
+        "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adma.201201966"
+      ],
+      "evidence": "Wiley article header gives the canonical title and volume 24,issue 41,pp 5565–5569; published 2012. This DOI is the research article, not cover material.",
+      "changes": [
+        "Expand5565 to5565–5569.",
+        "Preserve dangling Position- hyphen; official title wording."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "Position- and Morphology-Controlled ZnO Nanostructures Grown on Graphene Layers",
+        "journal": "Advanced Materials 24, 5565 (2012)",
+        "year": 2012,
+        "doi": "10.1002/adma.201201966",
+        "url": "https://doi.org/10.1002/adma.201201966"
+      },
+      "bibliographicCitation": "Advanced Materials 24, 5565–5569 (2012)",
+      "displayCitation": "Advanced Materials 24, 5565–5569 (2012)",
+      "appliedUrl": "https://doi.org/10.1002/adma.201201966",
+      "appliedChanges": {
+        "journal": {
+          "before": "Advanced Materials 24, 5565 (2012)",
+          "after": "Advanced Materials 24, 5565–5569 (2012)"
+        }
+      }
+    },
+    {
+      "id": "pub-45",
+      "title": "Tunable Catalytic Alloying Eliminates Stacking Faults in Compound Semiconductor Nanowires",
+      "journalTitle": "Nano Letters",
+      "volume": "12",
+      "issue": "2",
+      "pages": "855–860",
+      "year": 2012,
+      "doi": "10.1021/nl203900q",
+      "url": "https://pubs.acs.org/doi/10.1021/nl203900q",
+      "sourceUrls": [
+        "https://api.crossref.org/works/10.1021/nl203900q",
+        "https://acs.figshare.com/articles/journal_contribution/Tunable_Catalytic_Alloying_Eliminates_Stacking_Faults_in_Compound_Semiconductor_Nanowires/2552050"
+      ],
+      "evidence": "ACS publisher-deposited record confirms exact title, Nano Letters 12(2), 855–860 (2012). Main title has Stacking Faults without a hyphen, even though supporting information heading differs.",
+      "changes": [
+        "Expand855 to855–860.",
+        "Retain publisher main title without inserting a Stacking-Faults hyphen."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "Tunable Catalytic Alloying Eliminates Stacking Faults in Compound Semiconductor Nanowires",
+        "journal": "Nano Letters 12, 855 (2012)",
+        "year": 2012,
+        "doi": "10.1021/nl203900q",
+        "url": "https://pubs.acs.org/doi/10.1021/nl203900q"
+      },
+      "bibliographicCitation": "Nano Letters 12, 855–860 (2012)",
+      "displayCitation": "Nano Letters 12, 855–860 (2012)",
+      "appliedUrl": "https://pubs.acs.org/doi/10.1021/nl203900q",
+      "appliedChanges": {
+        "journal": {
+          "before": "Nano Letters 12, 855 (2012)",
+          "after": "Nano Letters 12, 855–860 (2012)"
+        }
+      }
+    },
+    {
+      "id": "pub-46",
+      "title": "GaN/ZnO Nanotube Heterostructure Light-Emitting Diodes Fabricated on Si",
+      "journalTitle": "IEEE Journal of Selected Topics in Quantum Electronics",
+      "volume": "17",
+      "issue": "4",
+      "pages": "966–970",
+      "year": 2011,
+      "doi": "10.1109/JSTQE.2010.2062493",
+      "url": "https://ieeexplore.ieee.org/document/5579990",
+      "sourceUrls": [
+        "https://api.crossref.org/works/10.1109/JSTQE.2010.2062493",
+        "https://ieeexplore.ieee.org/document/5579990",
+        "https://sites.google.com/view/leegroupinsnu/publications/research-articles",
+        "https://pure.korea.ac.kr/en/publications/ganzno-nanotube-heterostructure-light-emitting-diodes-fabricated-/"
+      ],
+      "evidence": "IEEE's Crossref deposit assigns volume 17,issue 4,pp 966–970 to July 2011; coauthor-maintained lab list also cites 2011. The early-online publication was September 20, 2010 (institutional record quotes IEEE's original bibliographic note), explaining the prior 2010 value and DOI string. Use bibliographic issue year 2011 alongside volume/pages.",
+      "onlinePublicationDate": "2010-09-20",
+      "citationYearNote": "2010 is the early-online date; the paginated volume17(4) issue is2011. Use2011 for this site's standard volume/page citation.",
+      "changes": [
+        "Correct bibliographic citation year2010→2011, retaining the early-online note in audit evidence.",
+        "Add missing DOI10.1109/JSTQE.2010.2062493.",
+        "Expand966 to966–970."
+      ],
+      "status": "verified",
+      "previous": {
+        "title": "GaN/ZnO Nanotube Heterostructure Light-Emitting Diodes Fabricated on Si",
+        "journal": "IEEE Journal of Selected Topics in Quantum Electronics 17, 966 (2010)",
+        "year": 2010,
+        "doi": "",
+        "url": "https://ieeexplore.ieee.org/document/5579990"
+      },
+      "bibliographicCitation": "IEEE Journal of Selected Topics in Quantum Electronics 17, 966–970 (2011)",
+      "displayCitation": "IEEE Journal of Selected Topics in Quantum Electronics 17, 966–970 (2011)",
+      "appliedUrl": "https://ieeexplore.ieee.org/document/5579990",
+      "appliedChanges": {
+        "journal": {
+          "before": "IEEE Journal of Selected Topics in Quantum Electronics 17, 966 (2010)",
+          "after": "IEEE Journal of Selected Topics in Quantum Electronics 17, 966–970 (2011)"
+        },
+        "year": {
+          "before": 2010,
+          "after": 2011
+        },
+        "doi": {
+          "before": "",
+          "after": "10.1109/JSTQE.2010.2062493"
+        }
+      }
+    }
+  ]
+}
