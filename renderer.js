@@ -51,7 +51,9 @@ function publicationAuthors(p) {
  const labAuthors=new Set(Array.isArray(p.labAuthors)?p.labAuthors:[]);
  return authors.split(/(,\s*|;\s*|\band\s+)/).map(part=>{
    const [,leading,name,markers,trailing]=part.match(/^(\s*)(.*?)([*†‡]*)(\s*)$/s);
-   return labAuthors.has(name)?`${e(leading)}<strong class="lab-author">${e(name)}</strong>${e(markers+trailing)}`:e(part);
+   const author=labAuthors.has(name)?`<strong class="lab-author">${e(name)}</strong>`:e(name);
+   const roles=[markers.includes('†')?'Equal contribution':'',markers.includes('*')?'Corresponding author':''].filter(Boolean).join('; ');
+   return `${e(leading)}${author}${markers?`<sup class="author-markers"${roles?` aria-label="${e(roles)}" title="${e(roles)}"`:''}>${e(markers)}</sup>`:''}${e(trailing)}`;
  }).join('');
 }
 function pubEntry(p,number,compact=false) {
@@ -190,7 +192,7 @@ function publicationsPage(data) {
  pubs.forEach((paper,index)=>groups.get(publicationYearGroup(paper.year,periods)).push(pubEntry(paper,pubs.length-index)));
  const groupedPubs=[...groups].map(([year,entries])=>`<section class="publication-year-group" data-publication-year="${e(year)}" aria-labelledby="publication-year-${e(year)}"><h2 class="publication-year-title" id="publication-year-${e(year)}">${e(publicationYearLabel(year))}</h2>${entries.join('')}</section>`).join('');
  const viewer=`<dialog id="publication-viewer" class="publication-viewer" aria-labelledby="publication-figure-title"><div class="figure-viewer-heading"><h2 id="publication-figure-title"></h2><button class="figure-viewer-close" type="button" aria-label="Close figure">×</button></div><p class="figure-viewer-label"></p><img class="figure-viewer-image" alt=""><a class="figure-viewer-source" target="_blank" rel="noopener noreferrer">Figure source ↗</a></dialog>`;
- return `<main id="main" class="container page-layout interior">${pageIntro('Publications','')}${underReview}<section class="archive"><div class="archive-tools"><label class="search-field"><span>Search</span><input id="publication-search" type="search" placeholder="title, author, journal or DOI" autocomplete="off"></label><label class="year-field"><span>Year</span><select id="publication-year"><option value="all">All years</option>${years.map(y=>`<option value="${e(y)}">${e(publicationYearLabel(y))}</option>`).join('')}</select></label><span id="result-count" role="status">${pubs.length} publications</span></div><div class="publication-list" id="publication-results">${groupedPubs}</div><p id="no-results" hidden>No publications match your search. Try a different keyword or year.</p></section>${viewer}</main>`;
+ return `<main id="main" class="container page-layout interior">${pageIntro('Publications','')}<p class="author-legend"><span>† Equal contribution</span><span>* Corresponding author</span></p>${underReview}<section class="archive"><div class="archive-tools"><label class="search-field"><span>Search</span><input id="publication-search" type="search" placeholder="title, author, journal or DOI" autocomplete="off"></label><label class="year-field"><span>Year</span><select id="publication-year"><option value="all">All years</option>${years.map(y=>`<option value="${e(y)}">${e(publicationYearLabel(y))}</option>`).join('')}</select></label><span id="result-count" role="status">${pubs.length} publications</span></div><div class="publication-list" id="publication-results">${groupedPubs}</div><p id="no-results" hidden>No publications match your search. Try a different keyword or year.</p></section>${viewer}</main>`;
 }
 
 function highlightNavigation(current) {
