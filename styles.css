@@ -114,9 +114,9 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 .under-review>h2{font-size:24px;font-weight:550;margin-bottom:12px}
 .under-review-entry{padding:12px 0}
 .under-review-entry+.under-review-entry{border-top:1px solid var(--line);margin-top:8px;padding-top:20px}
-.archive-tools{display:flex;align-items:flex-end;gap:20px;margin-bottom:14px}
+.archive-tools{display:grid;grid-template-columns:minmax(0,1fr) 132px 104px 124px;align-items:end;column-gap:20px;margin-bottom:14px}
 .publication-filters{margin-bottom:20px}
-.publication-filters>summary{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;width:fit-content;max-width:100%;min-height:44px;padding:6px 0;color:var(--muted);font-size:16px;line-height:1.5;list-style:none;cursor:pointer}
+.publication-filters>summary{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;width:100%;max-width:100%;min-height:44px;padding:6px 0;color:var(--muted);font-size:16px;line-height:1.5;list-style:none;cursor:pointer}
 .publication-filters>summary::-webkit-details-marker{display:none}
 .publication-filters>summary:hover{color:var(--navy)}
 .filter-toggle-icon{display:inline-flex;align-items:center;justify-content:center;width:18px;font-size:22px;line-height:1}
@@ -130,12 +130,27 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 #no-results{margin-top:20px;font-size:16px}
 #no-results .text-action{margin-left:6px}
 .archive-tools label{display:flex;flex-direction:column;gap:8px;font-size:16px;color:var(--muted)}
-.search-field{flex:1;max-width:1000px}
+.search-field{grid-column:1;grid-row:1;min-width:0}
+.year-field{grid-column:2;grid-row:1;min-width:0}
+#publication-filter-reset{grid-column:3;grid-row:1;justify-self:start;white-space:nowrap}
 .archive-tools input,.archive-tools select{font-size:17px;line-height:1.5;padding:10px 13px;height:50px;min-height:50px;border:1px solid #9ba3ae;border-radius:5px;background:#fff;color:var(--ink);min-width:0}
 .archive-tools select{min-width:120px}
 #publication-results{display:grid;gap:38px}
 .publication-year-title{font-size:24px;color:var(--navy);padding-block:12px 11px;border-bottom:1px solid var(--line)}
-#result-count{font-size:14px;color:var(--muted);margin:0 0 12px auto;white-space:nowrap}
+#result-count{grid-column:4;grid-row:1;justify-self:end;font-size:14px;color:var(--muted);margin-bottom:12px;white-space:nowrap;font-variant-numeric:tabular-nums}
+@media(max-width:800px){
+ .archive-tools{grid-template-columns:minmax(0,1fr) 112px;gap:14px 12px}
+ .search-field{grid-column:1/-1;grid-row:1}
+ .year-field{grid-column:1;grid-row:2;max-width:156px}
+ .archive-tools select{padding-inline:10px}
+ #publication-filter-reset{grid-column:2;grid-row:2;justify-self:end;align-self:end}
+ #result-count{grid-column:2;grid-row:2;align-self:start;margin:0;line-height:28px}
+}
+@media(max-width:360px){
+ .publication-filters>summary{min-height:54px;flex-wrap:nowrap}
+ .publication-filters>summary>span:first-child,.filter-toggle-icon{flex-shrink:0}
+ .filter-state{min-width:0;white-space:normal}
+}
 .news-categories{display:flex;flex-wrap:wrap;gap:28px;margin-bottom:8px}
 .news-categories a{display:inline-flex;align-items:center;min-height:44px;padding:6px 0 8px;font-size:16px;font-weight:450;line-height:1.5;color:var(--muted);text-decoration:none;border-bottom:1px solid transparent}
 .news-categories a:hover{color:var(--navy)}
@@ -203,8 +218,6 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
  .people-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:29px 20px}
  .biography{font-size:16px}
  .biography p{font-size:16px}
- .archive-tools{flex-wrap:wrap;gap:14px 18px}
- .search-field{flex-basis:100%;max-width:none}
  .archive-tools input,.archive-tools select{font-size:18px}
  #result-count{font-size:14px}
  .news-categories{gap:24px}
