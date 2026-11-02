@@ -1,10 +1,12 @@
 import {readFile,writeFile,mkdir,cp} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {render,pages,escapeHTML,pageTitle,postFileName,findPost} from '../renderer.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const data=JSON.parse(await readFile(path.join(root,'content/site.json'),'utf8'));
-const template=await readFile(path.join(root,'template.html'),'utf8');
+const stylesheetVersion=createHash('sha256').update(await readFile(path.join(root,'styles.css'))).digest('hex').slice(0,12);
+const template=(await readFile(path.join(root,'template.html'),'utf8')).replace('href="styles.css"',`href="styles.css?v=${stylesheetVersion}"`);
 const output=path.join(root,'dist');
 await mkdir(output,{recursive:true});
 const allPages=[...pages,...data.news.map(n=>'post-'+n.id)];
