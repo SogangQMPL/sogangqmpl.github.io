@@ -6,7 +6,12 @@ import {render,pages,escapeHTML,pageTitle,postFileName,findPost} from '../render
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const data=JSON.parse(await readFile(path.join(root,'content/site.json'),'utf8'));
 const stylesheetVersion=createHash('sha256').update(await readFile(path.join(root,'styles.css'))).digest('hex').slice(0,12);
-const template=(await readFile(path.join(root,'template.html'),'utf8')).replace('href="styles.css"',`href="styles.css?v=${stylesheetVersion}"`);
+const rendererVersion=createHash('sha256').update(await readFile(path.join(root,'renderer.js'))).digest('hex').slice(0,12);
+const appSource=(await readFile(path.join(root,'app.js'),'utf8')).replaceAll("'./renderer.js'",`'./renderer.js?v=${rendererVersion}'`);
+const appVersion=createHash('sha256').update(appSource).update(await readFile(path.join(root,'content/site.json'))).digest('hex').slice(0,12);
+const template=(await readFile(path.join(root,'template.html'),'utf8'))
+ .replace('href="styles.css"',`href="styles.css?v=${stylesheetVersion}"`)
+ .replace('src="app.js"',`src="app.js?v=${appVersion}"`);
 const output=path.join(root,'dist');
 await mkdir(output,{recursive:true});
 const allPages=[...pages,...data.news.map(n=>'post-'+n.id)];
@@ -23,6 +28,7 @@ for(const post of data.news){
  }
 }
 for(const item of ['styles.css','app.js','renderer.js','assets','content','admin']) await cp(path.join(root,item),path.join(output,item),{recursive:true});
+await writeFile(path.join(output,'app.js'),appSource);
 const guide=await readFile(path.join(root,'관리안내.md'),'utf8');
 const inline=s=>escapeHTML(s).replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/`([^`]+)`/g,'<code>$1</code>');
 let list='',guideHTML='';

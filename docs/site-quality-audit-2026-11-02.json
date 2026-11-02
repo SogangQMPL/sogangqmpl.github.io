@@ -1,0 +1,105 @@
+{
+  "reviewDate": "2026-11-02",
+  "scope": "Desktop and mobile visual hierarchy, navigation, accessibility and image delivery.",
+  "changes": [
+    {
+      "area": "Publication typography",
+      "result": "Separate journal names from authors and citation details with restrained weight and contrast; all 46 citation strings preserved."
+    },
+    {
+      "area": "Publication filters",
+      "result": "Active result/year summary and clear actions remain discoverable when controls are collapsed; accent-free, multi-keyword and formula/DOI search verified."
+    },
+    {
+      "area": "Page initialization",
+      "result": "Public filtering uses the rendered records without a separate data request; application and preview modules use content-versioned URLs."
+    },
+    {
+      "area": "Image dialogs",
+      "result": "True-backdrop closing, background scroll locking, keyboard focus return/cycling and stable image dimensions."
+    },
+    {
+      "area": "Archive navigation",
+      "result": "Returning from a post restores the originating category and entry position, including after reload."
+    },
+    {
+      "area": "Semantics and consistency",
+      "result": "One current submenu entry, ordered person headings, Korean language tags, concise image descriptions and 44px mobile email targets."
+    },
+    {
+      "area": "Photo delivery",
+      "result": "Six display variants retain full-size originals and orientation/profile handling.",
+      "photos": [
+        {
+          "original": "assets/posts/bk21-four-1st-workshop.jpg",
+          "display": "assets/posts/bk21-four-1st-workshop-display.webp",
+          "width": 1050,
+          "height": 1400,
+          "originalBytes": 605535,
+          "displayBytes": 249528
+        },
+        {
+          "original": "assets/posts/bk21-four-2nd-oral.jpg",
+          "display": "assets/posts/bk21-four-2nd-oral-display.webp",
+          "width": 1600,
+          "height": 1200,
+          "originalBytes": 1233815,
+          "displayBytes": 83168
+        },
+        {
+          "original": "assets/posts/ceqmf-3rd-seongwon-gim-oral.jpg",
+          "display": "assets/posts/ceqmf-3rd-seongwon-gim-oral-display.webp",
+          "width": 1600,
+          "height": 1200,
+          "originalBytes": 1463729,
+          "displayBytes": 62278
+        },
+        {
+          "original": "assets/posts/ceqmf-2nd-yongju-jeong-oral.jpg",
+          "display": "assets/posts/ceqmf-2nd-yongju-jeong-oral-display.webp",
+          "width": 1496,
+          "height": 1496,
+          "originalBytes": 461194,
+          "displayBytes": 103590
+        },
+        {
+          "original": "assets/posts/ceqmf-2nd-seongwon-gim-poster.jpg",
+          "display": "assets/posts/ceqmf-2nd-seongwon-gim-poster-display.webp",
+          "width": 1200,
+          "height": 1600,
+          "originalBytes": 3273933,
+          "displayBytes": 197392
+        },
+        {
+          "original": "assets/posts/applied-physics-academy-4th.png",
+          "display": "assets/posts/applied-physics-academy-4th-display.webp",
+          "width": 804,
+          "height": 450,
+          "originalBytes": 823745,
+          "displayBytes": 69960
+        }
+      ],
+      "totalOriginalBytes": 7861951,
+      "totalDisplayBytes": 765916,
+      "reductionPercent": 90.3
+    }
+  ],
+  "validation": {
+    "layoutCases": 44,
+    "widths": [
+      320,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "horizontalOverflow": 0,
+    "offscreenContent": 0,
+    "footerGaps": 0,
+    "headingLevelSkips": 0,
+    "duplicateCurrentMenuEntries": 0,
+    "citationStringsPreserved": 46,
+    "publicationFigureDimensionsVerified": 45,
+    "protectedContent": "Original photo bytes, research descriptions, paper titles/authors/citations/DOIs, roster, dates and post text preserved."
+  }
+}
