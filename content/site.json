@@ -13,14 +13,14 @@
     "eyebrow": "",
     "title": "Quantum\nMaterials & Photonics\nLab",
     "image": "assets/lab-overview.webp",
-    "imageAlt": "Triangular array of patterned structures, the original Wix homepage research image.",
+    "imageAlt": "Triangular array of patterned structures.",
     "line": "Department of Physics, Sogang University",
     "description": "We study excitons and quantum light in low-dimensional materials and develop photonic and semiconductor devices."
   },
   "research": [
     {
       "id": "quantum-information",
-      "title": "Quantum information",
+      "title": "Quantum Information",
       "summary": "Quantum light sources and photon-pair generation in two-dimensional materials.",
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/research",
       "sourcePaperIds": [
@@ -788,7 +788,7 @@
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
       "image": "assets/publications/pub-14-figure1.jpg",
-      "imageAlt": "Figure 1. (a) Top view of SEM image of tapered ZnO NRs. The dashed area corresponds to the spatial scanning ranges in figures 2 (d), (e). (b) Side-view transmission electron microscopy (TEM) images of tapered ZnO NRs from z = 0 nm to 1200 nm. I and II represent differently tapered regions of the ZnO NRs with boundary positions of z I ≡ 7 nm and z II ≡ 200 nm, respectively. III is the range with a constant diameter, interfacing sapphire substrate at z III . Close-up images of (c) the tip side from z = 0 to z = 80 nm, (d) pillar with a constant diameter, and (e) interface between the ZnO NRs and sapphire substrate.",
+      "imageAlt": "Top-view scanning electron micrograph of tapered ZnO nanorods, Figure 1a.",
       "imageLabel": "Figure 1",
       "imageSource": "https://iopscience.iop.org/article/10.1088/1361-6528/ac8bd9#nanoac8bd9f1",
       "imageWidth": 350,
@@ -815,7 +815,7 @@
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
       "image": "assets/publications/pub-15-figure1.jpg",
-      "imageAlt": "Fig. 1. (Color online) IGZO TFT with embedded AlO x layer. (a) Schematic of the structure of the AlO x -embedded IGZO TFT. (b) Photograph of the fabricated device. (c) and (d) Electrical characteristics of the device: (c) transfer and (d) output curves.",
+      "imageAlt": "IGZO thin-film transistor structure with an embedded AlOₓ layer, Figure 1a.",
       "imageLabel": "Figure 1",
       "imageSource": "https://iopscience.iop.org/article/10.35848/1882-0786/ac7032#apexac7032f1",
       "imageWidth": 525,
@@ -1092,7 +1092,7 @@
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
       "image": "assets/publications/pub-26-fig1.jpg",
-      "imageAlt": "FIG. 1. Fabrication process for ZnO nanotube waveguide arrays. (a) Schematic illustrations of the fabrication of ZnO nanotube waveguide arrays on graphene films. ((b)–(d)) FESEM images of ZnO nanotubes grown on CVD graphene films after vertical growth (b), after lateral growth (c), and after polyimide coating and oxygen plasma ashing (d). FESEM images were obtained at a tilt angle of 30°. ",
+      "imageAlt": "Transferred ZnO nanotube waveguide array from the fabrication schematic, Figure 1a.",
       "imageLabel": "Figure 1",
       "imageSource": "https://aipp.silverchair-cdn.com/article-minimal/121564",
       "imageWidth": 520,
@@ -1944,13 +1944,13 @@
       "url": "https://baahyyjuu.wixsite.com/hyeonjun/highlights",
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/highlights",
       "image": "assets/posts/activity-1-1-display.webp",
-      "imageAlt": "2026년 봄맞이 난지캠핑장 연구실 워크숍",
+      "imageAlt": "Group photograph beside the Nanji Campground entrance sign.",
       "summary": "",
       "content": [
         {
           "type": "image",
           "src": "assets/posts/activity-1-1-display.webp",
-          "alt": "2026년 봄맞이 난지캠핑장 연구실 워크숍",
+          "alt": "Group photograph beside the Nanji Campground entrance sign.",
           "width": 1600,
           "height": 1200,
           "fullSrc": "assets/posts/activity-1-1.jpg"
@@ -1970,14 +1970,14 @@
         {
           "type": "image",
           "src": "assets/posts/activity-2-1-display.webp",
-          "alt": "2025년 2월 졸업식",
+          "alt": "Group photograph outside a campus building, with several people wearing graduation gowns.",
           "width": 1600,
           "height": 1199,
           "fullSrc": "assets/posts/activity-2-1.jpg"
         }
       ],
       "image": "assets/posts/activity-2-1-display.webp",
-      "imageAlt": "2025년 2월 졸업식"
+      "imageAlt": "Group photograph outside a campus building, with several people wearing graduation gowns."
     },
     {
       "id": "news-2024-bk21-four-1st-workshop",
@@ -1987,13 +1987,13 @@
       "body": "Seongwon Gim and Yongju Jeong presented posters at the 1st BK21 FOUR Physics Workshop.",
       "url": "",
       "source": "User-provided lab update, 2026-11-01",
-      "image": "assets/posts/bk21-four-1st-workshop.jpg",
+      "image": "assets/posts/bk21-four-1st-workshop-display.webp",
       "imageAlt": "Poster presentation at the BK21 FOUR 1st Workshop.",
       "summary": "Seongwon Gim and Yongju Jeong presented posters at the 1st BK21 FOUR Physics Workshop.",
       "content": [
         {
           "type": "image",
-          "src": "assets/posts/bk21-four-1st-workshop.jpg",
+          "src": "assets/posts/bk21-four-1st-workshop-display.webp",
           "fullSrc": "assets/posts/bk21-four-1st-workshop.jpg",
           "alt": "Poster presentation at the BK21 FOUR 1st Workshop.",
           "width": 1050,
@@ -2013,18 +2013,18 @@
       "body": "Seongwon Gim delivered an oral presentation on “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers” at the 2nd BK21 FOUR Physics Workshop.",
       "url": "",
       "source": "User-provided lab update, 2026-11-01; presentation title from existing ICAMD 2025 record (news-12), as confirmed by the user.",
-      "image": "assets/posts/bk21-four-2nd-oral.jpg",
+      "image": "assets/posts/bk21-four-2nd-oral-display.webp",
       "imageAlt": "Oral presentation at the BK21 FOUR 2nd Workshop.",
       "summary": "Seongwon Gim delivered an oral presentation on “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers” at the 2nd BK21 FOUR Physics Workshop.",
       "content": [
         {
           "type": "image",
-          "src": "assets/posts/bk21-four-2nd-oral.jpg",
+          "src": "assets/posts/bk21-four-2nd-oral-display.webp",
           "fullSrc": "assets/posts/bk21-four-2nd-oral.jpg",
           "alt": "Oral presentation at the BK21 FOUR 2nd Workshop.",
           "caption": "BK21 FOUR 2nd Workshop — Oral presentation.",
-          "width": 3603,
-          "height": 2702
+          "width": 1600,
+          "height": 1200
         },
         {
           "type": "paragraph",
@@ -2044,12 +2044,12 @@
       "content": [
         {
           "type": "image",
-          "src": "assets/posts/ceqmf-3rd-seongwon-gim-oral.jpg",
+          "src": "assets/posts/ceqmf-3rd-seongwon-gim-oral-display.webp",
           "fullSrc": "assets/posts/ceqmf-3rd-seongwon-gim-oral.jpg",
           "alt": "Seongwon Gim delivering an oral presentation at the 3rd Workshop on Functional Quantum Matter.",
           "caption": "Seongwon Gim — Oral presentation.",
-          "width": 4000,
-          "height": 3000
+          "width": 1600,
+          "height": 1200
         },
         {
           "type": "paragraph",
@@ -2060,7 +2060,7 @@
           "text": "Hyunjun Jo also attended the workshop."
         }
       ],
-      "image": "assets/posts/ceqmf-3rd-seongwon-gim-oral.jpg",
+      "image": "assets/posts/ceqmf-3rd-seongwon-gim-oral-display.webp",
       "imageAlt": "Seongwon Gim delivering an oral presentation at the 3rd Workshop on Functional Quantum Matter."
     },
     {
@@ -2075,7 +2075,7 @@
       "content": [
         {
           "type": "image",
-          "src": "assets/posts/ceqmf-2nd-yongju-jeong-oral.jpg",
+          "src": "assets/posts/ceqmf-2nd-yongju-jeong-oral-display.webp",
           "fullSrc": "assets/posts/ceqmf-2nd-yongju-jeong-oral.jpg",
           "alt": "Yongju Jeong delivering an oral presentation at the 2nd Workshop on Functional Quantum Matter.",
           "caption": "Yongju Jeong — Oral presentation.",
@@ -2088,19 +2088,19 @@
         },
         {
           "type": "image",
-          "src": "assets/posts/ceqmf-2nd-seongwon-gim-poster.jpg",
+          "src": "assets/posts/ceqmf-2nd-seongwon-gim-poster-display.webp",
           "fullSrc": "assets/posts/ceqmf-2nd-seongwon-gim-poster.jpg",
           "alt": "Seongwon Gim presenting a poster at the 2nd Workshop on Functional Quantum Matter.",
           "caption": "Seongwon Gim — Poster presentation.",
-          "width": 3000,
-          "height": 4000
+          "width": 1200,
+          "height": 1600
         },
         {
           "type": "paragraph",
           "text": "Seongwon Gim presented a poster at the workshop."
         }
       ],
-      "image": "assets/posts/ceqmf-2nd-yongju-jeong-oral.jpg",
+      "image": "assets/posts/ceqmf-2nd-yongju-jeong-oral-display.webp",
       "imageAlt": "Yongju Jeong delivering an oral presentation at the 2nd Workshop on Functional Quantum Matter."
     },
     {
@@ -2115,7 +2115,7 @@
       "content": [
         {
           "type": "image",
-          "src": "assets/posts/applied-physics-academy-4th.png",
+          "src": "assets/posts/applied-physics-academy-4th-display.webp",
           "fullSrc": "assets/posts/applied-physics-academy-4th.png",
           "alt": "Group photo from the 4th Applied Physics Academy.",
           "width": 804,
@@ -2126,7 +2126,7 @@
           "text": "Hyunjun Jo attended the 4th Applied Physics Academy (응용물리아카데미)."
         }
       ],
-      "image": "assets/posts/applied-physics-academy-4th.png",
+      "image": "assets/posts/applied-physics-academy-4th-display.webp",
       "imageAlt": "Group photo from the 4th Applied Physics Academy."
     }
   ],
