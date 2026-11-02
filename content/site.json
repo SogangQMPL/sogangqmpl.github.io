@@ -638,21 +638,21 @@
       "url": "https://www.nature.com/articles/s41427-025-00594-8",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-08-figure1.png",
-      "imageAlt": "Fig. 1: In-situ ELOG using SRO BN masks.",
+      "image": "assets/publications/pub-08-figure1-original.webp",
+      "imageAlt": "Laterally overgrown GaN structure above a short-range ordered BN mask, Figure 1a. The external process arrow is excluded from the thumbnail.",
       "imageLabel": "Figure 1",
       "imageSource": "https://www.nature.com/articles/s41427-025-00594-8/figures/1",
-      "imageWidth": 685,
-      "imageHeight": 649,
+      "imageWidth": 1750,
+      "imageHeight": 1660,
       "labAuthors": [
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.64,
-        "y": 0.035,
-        "width": 0.36,
-        "height": 0.265,
-        "label": "GaN overgrowth structure (Figure 1a)"
+        "x": 0.7354285714285714,
+        "y": 0.045180722891566265,
+        "width": 0.26457142857142857,
+        "height": 0.25903614457831325,
+        "label": "GaN overgrowth structure without the external process arrow (Figure 1a)"
       }
     },
     {
@@ -686,15 +686,22 @@
       "url": "https://www.nature.com/articles/s41467-024-48476-x",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-10-figure1.png",
-      "imageAlt": "Fig. 1: Intralayer and interlayer excitons in a terraced 2L/3L 2H-MoSe 2 sample.",
+      "image": "assets/publications/pub-10-figure1-original.webp",
+      "imageAlt": "Dual-gated terraced bilayer/trilayer 2H-MoSe2 device and intralayer/interlayer exciton configurations, Figure 1a.",
       "imageLabel": "Figure 1",
       "imageSource": "https://www.nature.com/articles/s41467-024-48476-x/figures/1",
-      "imageWidth": 685,
-      "imageHeight": 238,
+      "imageWidth": 1503,
+      "imageHeight": 524,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.54,
+        "height": 0.94,
+        "label": "Dual-gated 2L/3L 2H-MoSe2 device schematic (Figure 1a)"
+      }
     },
     {
       "id": "pub-11",
@@ -753,15 +760,22 @@
       "url": "https://www.nature.com/articles/s41699-022-00358-w",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-13-figure1.png",
-      "imageAlt": "Fig. 1: Device structure.",
-      "imageLabel": "Figure 1",
-      "imageSource": "https://www.nature.com/articles/s41699-022-00358-w/figures/1",
-      "imageWidth": 685,
-      "imageHeight": 201,
+      "image": "assets/publications/pub-13-figure2-original.png",
+      "imageAlt": "Gate-dependent derivative reflectance map of MoSe2/WSe2 exciton-polarons, Figure 2a.",
+      "imageLabel": "Figure 2",
+      "imageSource": "https://www.nature.com/articles/s41699-022-00358-w/figures/2",
+      "imageWidth": 1745,
+      "imageHeight": 1732,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.375,
+        "height": 0.486,
+        "label": "Gate-dependent exciton-polaron reflectance (Figure 2a)"
+      }
     },
     {
       "id": "pub-14",
@@ -827,12 +841,12 @@
       "url": "https://www.nature.com/articles/s41534-022-00558-8",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-16-figure1.png",
-      "imageAlt": "Fig. 1: 2 × N plug-and-play (PnP) twin-field quantum key distribution (TF-QKD) network scheme.",
-      "imageLabel": "Figure 1",
-      "imageSource": "https://www.nature.com/articles/s41534-022-00558-8/figures/1",
-      "imageWidth": 685,
-      "imageHeight": 349,
+      "image": "assets/publications/pub-16-figure2-original.webp",
+      "imageAlt": "Polarization-controlled optical connections between the Alice servers and Bob clients in the twin-field quantum key distribution network, Figure 2.",
+      "imageLabel": "Figure 2",
+      "imageSource": "https://www.nature.com/articles/s41534-022-00558-8/figures/2",
+      "imageWidth": 1351,
+      "imageHeight": 1168,
       "labAuthors": [
         "Hyeonjun Baek"
       ]
