@@ -1,0 +1,149 @@
+{
+  "verifiedAt": "2026-11-01",
+  "method": "Reopened all five public Wix detail pages and the overview; compared live text, source figures, current summary and DETAIL content.",
+  "findings": "Earlier editorial summaries omitted substantive concepts, objectives and applications. The previous verification file contained abbreviated editorial prose rather than a full transcription.",
+  "restoration": "Visible summaries and focus terms retain key objectives. DETAIL paragraphs cover mechanisms, controls and applications; all eleven source figures are available in their original page order.",
+  "scope": "Content restoration only; no new publication links or completed experimental results are asserted. Absolute promotional or historical novelty claims are not repeated as current facts.",
+  "figuresAudit": "docs/Research-그림-재검증.json",
+  "topics": [
+    {
+      "id": "quantum-light-sources",
+      "title": "Quantum light sources",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/quantum-light-sources",
+      "restoredConcepts": [
+        "Nonclassical photon statistics",
+        "Quantum interference and entanglement",
+        "Quantum communication and computing",
+        "New-source identification and characterization",
+        "Quantum dots, NV centers and strong 2D light–matter interactions"
+      ],
+      "updatedFields": [
+        "summary",
+        "description",
+        "focus",
+        "detailImages"
+      ],
+      "sourceFigureCount": 1,
+      "previousDescription": "We study localized emitters and nonclassical light in two-dimensional materials. Moire confinement and nanostructures provide ways to control their emission and optical coupling.",
+      "paperIdsUnchanged": [
+        "pub-25",
+        "pub-24",
+        "pub-19",
+        "pub-17",
+        "pub-03",
+        "pub-02"
+      ]
+    },
+    {
+      "id": "spdc",
+      "title": "SPDC in 2D materials",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/%EB%B3%B5%EC%A0%9C-interlayer-excitons",
+      "restoredConcepts": [
+        "Entangled photons",
+        "Strong nonlinearity of 2D materials",
+        "Twist-angle engineering of quantum light sources"
+      ],
+      "updatedFields": [
+        "summary",
+        "description",
+        "focus",
+        "detailImages"
+      ],
+      "sourceFigureCount": 1,
+      "previousDescription": "We investigate photon-pair generation through spontaneous parametric down-conversion in nonlinear two-dimensional materials, including the role of layer stacking and twist angle.",
+      "paperIdsUnchanged": []
+    },
+    {
+      "id": "moire-physics",
+      "title": "Moiré physics",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/moir%C3%A9-physics",
+      "restoredConcepts": [
+        "Periodic in-plane potentials for electrons and holes",
+        "Periodic quantum-emitter arrays",
+        "Bose–Hubbard physics",
+        "Suppressed kinetic energy relative to interactions",
+        "Electric-field, twist-angle and gate-doping control",
+        "Quantum simulation"
+      ],
+      "updatedFields": [
+        "summary",
+        "description",
+        "focus",
+        "detailImages"
+      ],
+      "sourceFigureCount": 4,
+      "previousDescription": "Twist angle and lattice mismatch create periodic potentials in stacked two-dimensional materials. We study localized excitons and field-tunable correlated electronic states.",
+      "paperIdsUnchanged": [
+        "pub-13",
+        "pub-11"
+      ]
+    },
+    {
+      "id": "interlayer-excitons",
+      "title": "Interlayer excitons",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/general-1",
+      "restoredConcepts": [
+        "Hybridized excitons",
+        "Permanent dipoles and Stark control of energy and intensity",
+        "Patterned-electrode trapping and localization",
+        "Solid-state quantum simulation",
+        "Dipolar many-body interactions",
+        "Exciton-polariton and nonlinear-optical applications"
+      ],
+      "updatedFields": [
+        "summary",
+        "description",
+        "focus",
+        "detailImages"
+      ],
+      "sourceFigureCount": 4,
+      "previousDescription": "Electrons and holes in separate layers form excitons whose optical response can be controlled by electric fields. We study dipolar, quadrupolar and symmetric excitonic states.",
+      "paperIdsUnchanged": [
+        "pub-10",
+        "pub-07",
+        "pub-05"
+      ]
+    },
+    {
+      "id": "2d-semiconductor-devices",
+      "title": "2D semiconductor devices",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/%EB%B3%B5%EC%A0%9C-spdc",
+      "restoredConcepts": [
+        "Atomic thickness and device scaling",
+        "Strong gate control",
+        "Dangling-bond-free surfaces and stability",
+        "Flexible stacking and heterostructure design",
+        "Neuromorphic alternatives to von Neumann computing"
+      ],
+      "updatedFields": [
+        "summary",
+        "description",
+        "focus",
+        "detailImages"
+      ],
+      "sourceFigureCount": 1,
+      "previousDescription": "We develop layered semiconductor transistors and study their use in neuromorphic and reservoir-computing devices.",
+      "paperIdsUnchanged": [
+        "pub-09",
+        "pub-01"
+      ]
+    }
+  ],
+  "validation": {
+    "sourcePagesChecked": 5,
+    "sourceFigures": 11,
+    "allFiguresLoadedInBrowser": true,
+    "editorGalleryItems": 11,
+    "uniqueRelatedPapers": 13,
+    "viewportsChecked": [
+      1440,
+      1280,
+      901,
+      601,
+      600,
+      390,
+      320
+    ],
+    "horizontalOverflow": false
+  }
+}

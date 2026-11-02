@@ -1,0 +1,70 @@
+{
+  "verifiedAt": "2026-11-01",
+  "sourcePage": "https://baahyyjuu.wixsite.com/hyeonjun",
+  "heroImage": {
+    "original": {
+      "file": "assets/lab-overview-original.png",
+      "source": "https://static.wixstatic.com/media/631814_71e835bf69874c25a51b799408a6be94~mv2.png",
+      "bytes": 298422,
+      "sha256": "3501d74895bafeb9007c13427d103ec1df88401af9aa5eeb6556ea6262e487dc"
+    },
+    "existingDisplay": {
+      "file": "assets/lab-overview.webp",
+      "source": "Existing locally migrated Wix home image",
+      "bytes": 98846,
+      "sha256": "2d3e893734584070f7371047260519e86095cc6525d7d071920dbb71470d2911"
+    },
+    "width": 513,
+    "height": 529,
+    "notes": "Original PNG and existing WebP both contain the same grayscale triangular periodic structure with transparency. The original has no higher pixel dimensions. Color treatment and faded-edge presentation are Wix display effects, not a different original image. Neither file was recolored or cropped in this audit."
+  },
+  "font": {
+    "file": "assets/fonts/Quicksand.woff2",
+    "source": "https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/quicksand/v24/6xKtdSZaM9iE8KbpRA_hK1QNYuDyPw.woff2",
+    "bytes": 25712,
+    "sha256": "ec971e9e7f1336f7d01797272b72445fbd7f98f40cd6255a44ee7e092fcff81d",
+    "axes": {
+      "wght": {
+        "min": 300,
+        "max": 700
+      }
+    }
+  },
+  "fontLicense": {
+    "file": "assets/fonts/LICENSE-Quicksand.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/quicksand/OFL.txt",
+    "bytes": 4445,
+    "sha256": "14d28541780d90f6577bb7abcc6f005bf6969614294e75c82abb8758a696ad46"
+  },
+  "fontNotes": "Exact Quicksand Latin variable font URL from the live Wix home stylesheet; weight axis 300–700. Wix declares normal 400 and 700 faces pointing to this same file, with italic styling applied to the hero. License obtained from official Google Fonts Quicksand package. No Lulo font downloaded; its Latin-only glyph coverage does not supply the Korean recruitment text.",
+  "liveDisplayMeasurements": {
+    "heroTitle": {
+      "family": "quicksand, sans-serif",
+      "weight": 400,
+      "style": "italic",
+      "sizePx": 50,
+      "lineBreaks": [
+        "Quantum",
+        "Materials & Photonics",
+        "Lab"
+      ]
+    },
+    "recruitment": {
+      "visibleSizePx": 32.9055,
+      "declaredFamily": "lulo-clean-w01-one-bold, sans-serif",
+      "weight": "bold",
+      "note": "Measured visible SVG text, not the hidden accessibility heading. Lulo font unicode-range contains no Hangul; Korean uses the system sans-serif fallback."
+    },
+    "imageFilter": {
+      "saturate": 0,
+      "colorInterpolation": "sRGB",
+      "matrix": "0.9098039215686274 0 0 0 0 0.7568627450980392 0 0 0 0.15294117647058825 0.3803921568627451 0 0 0 0.5294117647058824 0 0 0 1 0"
+    },
+    "currentImplementation": {
+      "largeScreenTitlePx": 60,
+      "recruitmentPcPx": 33,
+      "recruitmentMobilePx": 26,
+      "note": "Responsive title size and stacked mobile layout; existing white background, common side margins and compact footer retained."
+    }
+  }
+}

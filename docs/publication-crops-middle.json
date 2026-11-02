@@ -1,0 +1,194 @@
+{
+  "reviewedAt": "2026-11-01",
+  "scope": "pub-17 through pub-31",
+  "method": "Direct inspection of existing original local publication figures and stored publisher figure descriptions. Display-only CSS cropping; original assets and full-image viewer remain unchanged.",
+  "records": [
+    {
+      "id": "pub-17",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.345,
+        "height": 0.43,
+        "label": "Figure 1a"
+      },
+      "rationale": "Select the complete dual-gated heterobilayer device schematic, rather than the doping-state and Coulomb-staircase panels.",
+      "source": "https://www.nature.com/articles/s41565-021-00970-9/figures/1",
+      "inspectedImage": "assets/publications/pub-17-fig1.png"
+    },
+    {
+      "id": "pub-18",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.59,
+        "height": 0.33,
+        "label": "Figure 1A"
+      },
+      "rationale": "Select the AFM-indented van der Waals device and all material labels; exclude band diagrams, fabrication steps and microscopy.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8528413/#F1",
+      "inspectedImage": "assets/publications/pub-18-fig1.jpg"
+    },
+    {
+      "id": "pub-19",
+      "action": "keep",
+      "imagePreview": null,
+      "rationale": "Already a single coherent Figure 1a: moire lattice and dual-gated heterobilayer cross-section. Retain both components rather than remove the twist context.",
+      "source": "https://pure.hw.ac.uk/ws/portalfiles/portal/50713363/PhysRevX.11.031033.pdf#page=4",
+      "inspectedImage": "assets/publications/pub-19-fig1a.png"
+    },
+    {
+      "id": "pub-20",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0.69,
+        "y": 0.32,
+        "width": 0.31,
+        "height": 0.4,
+        "label": "Figure 1a device cross-section"
+      },
+      "rationale": "Select the final pressure-sensor sample cross-section with electrodes, ZnO nanotube, polyimide and graphene labels, rather than six fabrication stages plus micrographs.",
+      "source": "https://www.nature.com/articles/s41427-021-00324-w/figures/1",
+      "inspectedImage": "assets/publications/pub-20-fig1.png"
+    },
+    {
+      "id": "pub-21",
+      "action": "keep",
+      "imagePreview": null,
+      "rationale": "Retain the coherent horizontal fabrication schematic; there are no unrelated plots or microscopy panels.",
+      "source": "https://www.nature.com/articles/s41427-021-00301-3/figures/1",
+      "inspectedImage": "assets/publications/pub-21-fig1.png"
+    },
+    {
+      "id": "pub-22",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0.58,
+        "y": 0.445,
+        "width": 0.42,
+        "height": 0.3,
+        "label": "Figure 1a intracellular lasing setup"
+      },
+      "rationale": "Select the complete objective-lens and HeLa-cell/GaN-microrod laser-measurement illustration, omitting growth/dispersion steps, microscopy and the separate panel heading. The sample and measurement geometry remain intact.",
+      "source": "https://www.nature.com/articles/s41427-021-00299-8/figures/1",
+      "inspectedImage": "assets/publications/pub-22-fig1.png"
+    },
+    {
+      "id": "pub-23",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.49,
+        "height": 0.56,
+        "label": "Figure 1a"
+      },
+      "rationale": "Refine the existing two-schematic top-row crop to the complete ZnO nanotube-array sample in panel a, retaining the nanotube, SiO2-mask and graphene-layer labels without adjacent panel fragments or SEM images.",
+      "source": "https://www.researchgate.net/figure/Fabrication-steps-to-prepare-an-individually-addressable-nanotube-Schottky-diode-array_fig1_342255961",
+      "inspectedImage": "assets/publications/pub-23-original.png"
+    },
+    {
+      "id": "pub-24",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.48,
+        "label": "Figure 1A"
+      },
+      "rationale": "Select the entire horizontal moire-lattice and gated-device schematic in panel A; omit optical microscopy, emission map and PL trace.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7486092/#F1",
+      "inspectedImage": "assets/publications/pub-24-fig1.jpg"
+    },
+    {
+      "id": "pub-25",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.66,
+        "height": 0.35,
+        "label": "Figure 1a"
+      },
+      "rationale": "Select the atomic bilayer and interlayer-exciton schematic in panel a, including atom legend and 180-degree rotation; omit moire map and multiple band/valley diagrams.",
+      "source": "https://www.nature.com/articles/s41563-020-0687-7/figures/1",
+      "inspectedImage": "assets/publications/pub-25-fig1.png"
+    },
+    {
+      "id": "pub-26",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0.73,
+        "y": 0.335,
+        "width": 0.27,
+        "height": 0.33,
+        "label": "Figure 1a transferred waveguide array"
+      },
+      "rationale": "Select the final transferred nanotube waveguide-array schematic, keeping the Transfer heading and complete substrate/array; omit five intermediate steps and microscopy.",
+      "source": "https://aipp.silverchair-cdn.com/article-minimal/121564",
+      "inspectedImage": "assets/publications/pub-26-fig1.jpg"
+    },
+    {
+      "id": "pub-27",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.335,
+        "label": "Figure 1a"
+      },
+      "rationale": "Keep the previously selected two-stage nanotube-growth schematic but tighten its bottom edge so the next b/c microscopy panel labels no longer enter the thumbnail.",
+      "source": "https://doi.org/10.1063/1.4954798",
+      "inspectedImage": "assets/publications/pub-27-original.jpeg"
+    },
+    {
+      "id": "pub-28",
+      "action": "keep",
+      "imagePreview": null,
+      "rationale": "Retain the published graphical abstract: one representative nanowall-array SEM with its device inset. It is already a coherent representative image.",
+      "source": "https://doi.org/10.1002/adma.201601894",
+      "inspectedImage": "assets/publications/pub-28-original.jpg"
+    },
+    {
+      "id": "pub-29",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0.715,
+        "y": 0,
+        "width": 0.285,
+        "height": 1,
+        "label": "Figure 1e"
+      },
+      "rationale": "Select the complete real-time microscope/camera and electrically contacted device setup. This is more representative of device-scale imaging than the four fabrication panels.",
+      "source": "https://www.nature.com/articles/srep27451/figures/1",
+      "inspectedImage": "assets/publications/pub-29-fig1.jpg"
+    },
+    {
+      "id": "pub-30",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0.06,
+        "y": 0,
+        "width": 0.87,
+        "height": 0.465,
+        "label": "Figure 1a"
+      },
+      "rationale": "Select the representative SEM of tapered ZnO nanoneedles, retaining its 300-nm scale bar; omit the three repetitive angle-dependent optical-geometry panels.",
+      "source": "https://aipp.silverchair-cdn.com/article-minimal/21997",
+      "inspectedImage": "assets/publications/pub-30-fig1.jpg"
+    },
+    {
+      "id": "pub-31",
+      "action": "keep",
+      "imagePreview": null,
+      "rationale": "Retain the published horizontal graphical abstract: fabrication flow and a large microtube LED device cross-section are already balanced and legible.",
+      "source": "https://doi.org/10.1021/acsnano.5b07905",
+      "inspectedImage": "assets/publications/pub-31-original.png"
+    }
+  ],
+  "uncertainties": []
+}

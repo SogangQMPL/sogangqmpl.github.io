@@ -1,0 +1,39 @@
+{
+  "id": "pub-40",
+  "title": "Stimulated Emission Features of Bound Excitons in ZnO Nanotubes",
+  "doi": "10.1166/jnn.2014.8303",
+  "checkedAt": "2026-11-01",
+  "status": "No verified source figure obtained by this agent",
+  "checks": [
+    {
+      "source": "https://pubmed.ncbi.nlm.nih.gov/24758019/",
+      "result": "Exact title, six authors, journal 14(7),5293–5296 and DOI confirmed. Abstract only; no paper figures."
+    },
+    {
+      "source": "https://doi.org/10.1166/jnn.2014.8303",
+      "result": "Official Ingenta destination; script request received 403 browser-check HTML. Search index exposes abstract and purchase entry, not figure image."
+    },
+    {
+      "source": "https://ai-s.gist.ac.kr/Journals",
+      "result": "Current corresponding-author lab has exact journal entry with all six authors and correct citation. Its public journal entry contains bibliography and publisher link only; no thumbnail or attached PDF."
+    },
+    {
+      "source": "https://scholar.gist.ac.kr/handle/local/23470",
+      "result": "Same-author 2012 precursor conference entry. Repository explicitly reports no related files. Not substituted for the journal paper."
+    },
+    {
+      "source": "https://scholar.gist.ac.kr/handle/local/23967",
+      "result": "Same-author 2011 precursor conference entry. Repository explicitly reports no related files. Not substituted for the journal paper."
+    },
+    {
+      "source": "https://s-space.snu.ac.kr/bitstream/10371/129546/1/000000136049.pdf",
+      "result": "Hyeonjun Baek official dissertation candidate. Script request returned JavaScript challenge rather than PDF. Challenge was not solved or bypassed."
+    }
+  ],
+  "outcome": "No figure fabricated, no unrelated paper image substituted. Existing normal institutional-browser access may still yield the source paper.",
+  "finalBrowserVerification": {
+    "source": "https://www.ingentaconnect.com/content/asp/jnn/2014/00000014/00000007/art00078",
+    "result": "Exact title, all six authors and DOI verified in the normal Sogang University institutional session. Publisher exposes abstract and Buy Article only. No figures, PDF link or supplementary data available in this session. No purchase or access bypass attempted.",
+    "requiredInput": "Author copy of the paper PDF or an original schematic from this exact publication."
+  }
+}

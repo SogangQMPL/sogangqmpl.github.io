@@ -1,0 +1,176 @@
+{
+  "reviewDate": "2026-11-01",
+  "range": "pub-01–pub-16",
+  "reviewMethod": "All16 local originals inspected in diagnostic contact sheet;01,02,06,07,08,11,13,14,15 also expanded individually. Crops checked in a second diagnostic sheet. No deliverable raster images altered. Source URLs and captions taken from existing verified local publication metadata.",
+  "records": [
+    {
+      "id": "pub-01",
+      "action": "crop",
+      "image": "assets/publications/pub-01-fig1.jpg",
+      "source": "https://onlinelibrary.wiley.com/doi/full/10.1002/sstr.70581#sstr70581-fig-0001",
+      "rationale": "Refine the existing panel-a crop to the complete MoS2 transistor device, removing empty margins and all microscopy/electrical plots. Material labels and substrate remain intact.",
+      "imagePreview": {
+        "x": 0.07,
+        "y": 0,
+        "width": 0.39,
+        "height": 0.315,
+        "label": "Device schematic (Figure 1a)"
+      }
+    },
+    {
+      "id": "pub-02",
+      "action": "keep",
+      "image": "assets/publications/pub-02-figure1.png",
+      "source": "https://www.nature.com/articles/s41699-026-00701-5",
+      "rationale": "Keep the existing panel-a preview. It contains the full twisted heterobilayer, twist-angle annotation and material legend, and already excludes spectra.",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.61,
+        "height": 0.4,
+        "label": "Figure 1a"
+      }
+    },
+    {
+      "id": "pub-03",
+      "action": "keep",
+      "image": "assets/publications/pub-03-original.png",
+      "source": "https://doi.org/10.1021/acsanm.6c01123",
+      "rationale": "Keep the published graphical abstract: nanopillar/emitter structure, waveguide schematic and SEM form a clear horizontal composition."
+    },
+    {
+      "id": "pub-04",
+      "action": "keep",
+      "image": "assets/publications/pub-04-original.png",
+      "source": "https://doi.org/10.1021/acs.analchem.5c07495",
+      "rationale": "Keep the published graphical abstract with the graphene THz metasurface at its center. Its graphs are intentionally integrated into the visual abstract."
+    },
+    {
+      "id": "pub-05",
+      "action": "keep",
+      "image": "assets/publications/pub-05-original.png",
+      "source": "https://doi.org/10.1021/acsphotonics.5c02169",
+      "rationale": "Keep the published graphical abstract. The two stacking-dependent emission maps are paired with small physical schematics as one designed visual summary."
+    },
+    {
+      "id": "pub-06",
+      "action": "crop",
+      "image": "assets/publications/pub-06-figure1.jpg",
+      "source": "https://pubs.aip.org/aip/jap/article/137/24/244301/3350695",
+      "rationale": "Select the complete top fabrication schematic (panel a), excluding the lower SEM panels. Keeping the whole strip avoids upscaling a single stage whose current source is only about127px wide.",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.47,
+        "label": "Nanotube laser fabrication schematic (Figure 1a)"
+      }
+    },
+    {
+      "id": "pub-07",
+      "action": "crop",
+      "image": "assets/publications/pub-07-figure1.png",
+      "source": "https://arxiv.org/html/2503.19883v1#S0.F1",
+      "rationale": "Select the full left gated-bilayer/exciton structure within panel a; retain both gates, full layered sample and exciton motifs while excluding plots and the separate stacking inset. The crop ends before the auxiliary field arrow, without cutting the device.",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.725,
+        "height": 0.37,
+        "label": "Gated bilayer and exciton schematic (Figure 1a)"
+      }
+    },
+    {
+      "id": "pub-08",
+      "action": "crop",
+      "image": "assets/publications/pub-08-figure1.png",
+      "source": "https://www.nature.com/articles/s41427-025-00594-8/figures/1",
+      "rationale": "Select the final overgrown GaN structure in panel a plus the complete incoming process arrow. The key final sample and growth-species annotations remain visible; the broad process headings, microscopy and spectroscopy panels are excluded.",
+      "imagePreview": {
+        "x": 0.64,
+        "y": 0.035,
+        "width": 0.36,
+        "height": 0.265,
+        "label": "GaN overgrowth structure (Figure 1a)"
+      }
+    },
+    {
+      "id": "pub-09",
+      "action": "keep",
+      "image": "assets/publications/pub-09-graphical-abstract.jpg",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12242375/",
+      "rationale": "Keep the published visual abstract: MoTe2 synaptic device and recognition-network concept are already a single coherent representative image."
+    },
+    {
+      "id": "pub-10",
+      "action": "keep",
+      "image": "assets/publications/pub-10-figure1.png",
+      "source": "https://www.nature.com/articles/s41467-024-48476-x/figures/1",
+      "rationale": "Keep the wide existing schematic. Its device cross-section and interlayer-exciton configurations form one connected physical overview rather than a dense data grid."
+    },
+    {
+      "id": "pub-11",
+      "action": "crop",
+      "image": "assets/publications/pub-11-figure1.png",
+      "source": "https://www.nature.com/articles/s41567-024-02385-4/figures/1",
+      "rationale": "Select panel d, the gated heterotrilayer device cross-section. It conveys the physical sample and layer arrangement without the four surrounding spectral/band panels. All gate, layer and angle annotations are retained.",
+      "imagePreview": {
+        "x": 0.343,
+        "y": 0.53,
+        "width": 0.3,
+        "height": 0.37,
+        "label": "Moiré device schematic (Figure 1d)"
+      }
+    },
+    {
+      "id": "pub-12",
+      "action": "keep",
+      "image": "assets/publications/pub-12-original.png",
+      "source": "https://doi.org/10.1021/acs.cgd.2c00959",
+      "rationale": "Keep the wide graphical abstract: the grazing-incidence X-ray geometry, detector and diffraction map are already organized as one connected experimental schematic."
+    },
+    {
+      "id": "pub-13",
+      "action": "keep",
+      "image": "assets/publications/pub-13-figure1.png",
+      "source": "https://www.nature.com/articles/s41699-022-00358-w/figures/1",
+      "rationale": "Keep the wide schematic overview: device cross-section, moire-lattice illustration and band configuration are clear related schematics, with no dense measurement grid."
+    },
+    {
+      "id": "pub-14",
+      "action": "crop",
+      "image": "assets/publications/pub-14-figure1.jpg",
+      "source": "https://iopscience.iop.org/article/10.1088/1361-6528/ac8bd9#nanoac8bd9f1",
+      "rationale": "Select the complete top-view SEM in panel a including its200nm scale bar. There is no device schematic in this Figure1; the actual nanorod-array image best represents the sample and avoids the five-panel microscopy collage.",
+      "imagePreview": {
+        "x": 0.2,
+        "y": 0,
+        "width": 0.61,
+        "height": 0.41,
+        "label": "Top-view SEM of ZnO nanorods (Figure 1a)"
+      },
+      "resolutionNote": "Original is350x457; selected sample panel is approximately214x187. Suitable near220px thumbnail width; no synthetic enhancement used."
+    },
+    {
+      "id": "pub-15",
+      "action": "crop",
+      "image": "assets/publications/pub-15-figure1.jpg",
+      "source": "https://iopscience.iop.org/article/10.35848/1882-0786/ac7032#apexac7032f1",
+      "rationale": "Select panel a, the complete AlOx-embedded IGZO TFT cross-section with layer labels. Exclude the device photograph and electrical data panels.",
+      "imagePreview": {
+        "x": 0.015,
+        "y": 0.035,
+        "width": 0.59,
+        "height": 0.35,
+        "label": "IGZO transistor structure (Figure 1a)"
+      }
+    },
+    {
+      "id": "pub-16",
+      "action": "keep",
+      "image": "assets/publications/pub-16-figure1.png",
+      "source": "https://www.nature.com/articles/s41534-022-00558-8/figures/1",
+      "rationale": "Keep the unified optical-network schematic. Its branching2xN topology is the core result; cutting out one branch would lose the representative network configuration."
+    }
+  ]
+}

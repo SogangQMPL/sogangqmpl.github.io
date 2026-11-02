@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Moiré emitters and nanodot–waveguide coupling</title>
+  <desc id="desc">Two conceptual quantum-light sources. A localized electron–hole pair occupies one site of a periodic moiré potential in a two-dimensional bilayer and emits a photon. A semiconductor nanodot on a waveguide couples its emission into the guided optical mode. These are schematic mechanisms, not experimental data.</desc>
+  <defs>
+    <marker id="photon-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto">
+      <path d="M1 1 9 5 1 9" fill="none" stroke="#315f8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="#fff"/>
+  <g stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- A periodic moiré potential on a two-layer material. -->
+    <path d="M35 224 116 155 291 197 210 266Z" fill="#edf3f8" stroke="#315f8c"/>
+    <path d="M35 207 116 138 291 180 210 249Z" fill="#eff7f5" stroke="#26736f"/>
+    <g fill="none" stroke="#26736f">
+      <ellipse cx="127" cy="167" rx="22" ry="11" transform="rotate(13 127 167)"/>
+      <ellipse cx="179" cy="180" rx="22" ry="11" transform="rotate(13 179 180)"/>
+      <ellipse cx="232" cy="192" rx="22" ry="11" transform="rotate(13 232 192)"/>
+      <ellipse cx="116" cy="204" rx="22" ry="11" transform="rotate(13 116 204)"/>
+      <ellipse cx="178" cy="219" rx="22" ry="11" transform="rotate(13 178 219)"/>
+    </g>
+    <circle cx="171" cy="178" r="7" fill="#315f8c" stroke="#315f8c"/>
+    <circle cx="187" cy="182" r="7" fill="#fff" stroke="#6b5793"/>
+    <path d="M183 161C188 147 208 155 209 139S231 131 232 115 254 107 255 91L269 73" fill="none" stroke="#315f8c" marker-end="url(#photon-arrow)"/>
+    <!-- A nanodot directly above the guided optical mode. -->
+    <path d="M308 296 346 269H568L530 296Z" fill="#edf3f8" stroke="#002e5d"/>
+    <path d="M308 296V319H530V296Z" fill="#edf3f8" stroke="#002e5d"/>
+    <path d="M530 296 568 269V292L530 319Z" fill="#edf3f8" stroke="#002e5d"/>
+    <path d="M376 274 390 264 407 269 393 279Z" fill="#f5f2f9" stroke="#6b5793"/>
+    <path d="M376 274V281L393 286 407 276V269M393 279V286" fill="none" stroke="#6b5793"/>
+    <path d="M410 283C420 270 430 296 440 283S460 270 470 283 490 296 500 283H547" fill="none" stroke="#315f8c" marker-end="url(#photon-arrow)"/>
+  </g>
+</svg>

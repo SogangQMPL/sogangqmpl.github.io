@@ -1,0 +1,144 @@
+{
+  "updatedAt": "2026-11-02",
+  "method": "Use original Wix assets, not attached screenshots. Native-pixel rectangular extraction using System.Drawing.Bitmap.Clone with unchanged dimensions, saved as lossless PNG. No AI redrawing, upscaling or enhancement. Transparent moiré source keeps alpha. Devices uses byte-identical full original.",
+  "primaryImages": [
+    {
+      "topicId": "spdc",
+      "source": "assets/research/quantum-photonics.jpg",
+      "sourceWidth": 3703,
+      "sourceHeight": 1850,
+      "primary": "assets/research/spdc-photon-pair-original-crop.png",
+      "crop": [
+        0,
+        245,
+        1910,
+        1580
+      ],
+      "primaryWidth": 1910,
+      "primaryHeight": 1580,
+      "detailRemainder": {
+        "file": "assets/research/spdc-cavity-original-crop.png",
+        "crop": [
+          2030,
+          0,
+          1673,
+          1850
+        ],
+        "sha256": "1b39d7cb37d5fd7a1d28ec3bf562d48e0b8283a60cb122f0a3cdb0d3dd76683a"
+      },
+      "sourceURL": "https://static.wixstatic.com/media/631814_8f01572b063e4cf8a4e9da329c2f8ab2~mv2.jpg",
+      "sourceSHA256": "8f1693409b5f3ee6a78982ea31fdacd605cd32f4d05cdbcac6ea0fc18e9544ca",
+      "primarySHA256": "e1add380fb8078e46d1136ce12ba06adddf868c91f4040ea5e06bf64ade6917b"
+    },
+    {
+      "topicId": "moire-physics",
+      "source": "assets/research/moire-lattices-original.png",
+      "sourceWidth": 1137,
+      "sourceHeight": 834,
+      "primary": "assets/research/moire-lattices-original-crop.png",
+      "crop": [
+        160,
+        70,
+        880,
+        710
+      ],
+      "primaryWidth": 880,
+      "primaryHeight": 710,
+      "detailRemainder": "Other three original moiré figures retained.",
+      "sourceURL": "https://static.wixstatic.com/media/631814_82bc9d7de49f44348cfb26a38734c7cb~mv2.png",
+      "sourceSHA256": "dc839457a7a302b6d1abf76964bf5ae2d08c0141e9515eb97a8526bb328caaa8",
+      "primarySHA256": "4ffb2dd18e531a4e5b42cc9ece9110b080722e20db018f2acb613c5bac7fed92"
+    },
+    {
+      "topicId": "interlayer-excitons",
+      "source": "assets/research/interlayer-trapping-original.jpg",
+      "sourceWidth": 2544,
+      "sourceHeight": 801,
+      "primary": "assets/research/interlayer-device-original-crop.png",
+      "crop": [
+        0,
+        70,
+        1250,
+        720
+      ],
+      "primaryWidth": 1250,
+      "primaryHeight": 720,
+      "detailRemainder": {
+        "file": "assets/research/interlayer-trap-potential-original-crop.png",
+        "crop": [
+          1315,
+          0,
+          1229,
+          801
+        ],
+        "sha256": "baafc67ec80e3bd5fbec444cdbdf13b447b01cb6dfba39789be55f338a9cdad9"
+      },
+      "sourceURL": "https://static.wixstatic.com/media/631814_3a77341769cf4fd3be73d5f0d74cb92a~mv2.jpg",
+      "sourceSHA256": "a0af7d6887c6904c11fef69671d328142823f75ad7dcf592c085a81655ac28d0",
+      "primarySHA256": "5b6d75b4674c0d4a3242587eced3c263b6a9663d7afe5fe6368c4cdccfb856cb"
+    },
+    {
+      "topicId": "2d-semiconductor-devices",
+      "source": "assets/research/semiconductor-devices-original.png",
+      "sourceWidth": 1672,
+      "sourceHeight": 941,
+      "primary": "assets/research/semiconductor-devices-original.png",
+      "crop": null,
+      "primaryWidth": 1672,
+      "primaryHeight": 941,
+      "detailRemainder": "No duplicate image; textual DETAIL description retained.",
+      "sourceURL": "https://static.wixstatic.com/media/631814_26f3ea52b2004b0283e12b34f2ec1d1d~mv2.png",
+      "sourceSHA256": "21bd035ca8f0578349b381523a9116528d46bec1b481f297c5fd37aa9f8f4d38",
+      "primarySHA256": "21bd035ca8f0578349b381523a9116528d46bec1b481f297c5fd37aa9f8f4d38"
+    }
+  ],
+  "detailPolicy": "Selected panels removed from DETAIL. Other panels of composite SPDC/interlayer originals retained as separate native-resolution crops, so selected panels are not repeated. Explicit empty detailImages suppresses fallback.",
+  "quantumLightSources": "Existing primary schematic retained while actual paper-image candidates are prepared for user selection.",
+  "validation": {
+    "sourceSHA256MatchesOriginalManifest": true,
+    "noResampling": true,
+    "primaryImageCount": 4,
+    "relatedPaperMappingsUnchanged": 13,
+    "detailImageCountAfter": 9,
+    "sameDecoderCropSampling": "System.Drawing original/crop pixels sampled every 13 pixels in both axes: zero mismatches in all four JPEG-derived crops; transparent moiré crop exact.",
+    "desktopViewport": 2133,
+    "mobileViewport": 390,
+    "horizontalOverflow": false,
+    "allFourOriginalImagesLoadedInBrowser": true,
+    "renderedDetailCounts": {
+      "spdc": 1,
+      "moire-physics": 3,
+      "interlayer-excitons": 4,
+      "2d-semiconductor-devices": 0
+    },
+    "independentReview": "passed",
+    "screenshotProof": "../preview/research-original-images.png",
+    "candidateComparison": "../preview/quantum-light-candidates-comparison.png"
+  },
+  "quantumLightCandidates": [
+    {
+      "rank": 1,
+      "title": "1. WSe₂ nanodot–waveguide",
+      "file": "..\\preview\\quantum-light-candidates\\candidate-01-pub03-fig1b-waveguide.png",
+      "nativeWidth": 895,
+      "nativeHeight": 520,
+      "paperURL": "https://pubs.acs.org/doi/10.1021/acsanm.6c01123"
+    },
+    {
+      "rank": 2,
+      "title": "2. Moiré quantum-light device",
+      "file": "..\\preview\\quantum-light-candidates\\candidate-02b-pub24-fig1a-device-only.png",
+      "nativeWidth": 997,
+      "nativeHeight": 420,
+      "paperURL": "https://www.science.org/doi/10.1126/sciadv.aba8526"
+    },
+    {
+      "rank": 3,
+      "title": "3. Moiré-localized excitons",
+      "file": "..\\preview\\quantum-light-candidates\\candidate-03b-pub17-fig1b-only.png",
+      "nativeWidth": 307,
+      "nativeHeight": 350,
+      "paperURL": "https://www.nature.com/articles/s41565-021-00970-9"
+    }
+  ]
+}

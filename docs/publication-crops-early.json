@@ -1,0 +1,160 @@
+{
+  "range": "pub-32 through pub-46",
+  "reviewMethod": "Visually reviewed all 14 available local images, inspected original-resolution detail for multi-panel candidates, and checked the pub-36 publisher abstract for WGM/FP context. Crops are thumbnail viewports only, not modified scientific source images.",
+  "records": [
+    {
+      "id": "pub-32",
+      "source": "https://doi.org/10.1021/acsphotonics.5b00268",
+      "action": "keep",
+      "imagePreview": null,
+      "rationale": "Existing graphical abstract is already coherent and legible as a single composition; retain without cropping."
+    },
+    {
+      "id": "pub-33",
+      "source": "https://doi.org/10.1021/acs.nanolett.5b02049",
+      "action": "keep",
+      "imagePreview": null,
+      "rationale": "Existing graphical abstract is already coherent and legible as a single composition; retain without cropping."
+    },
+    {
+      "id": "pub-34",
+      "source": "https://pubs.aip.org/aip/apm/article/3/1/016103/238344",
+      "action": "keep",
+      "imagePreview": null,
+      "rationale": "Existing full-width fabrication schematic is a coherent three-stage growth process; retaining all stages preserves the process context."
+    },
+    {
+      "id": "pub-35",
+      "source": "https://www.nature.com/articles/am2014108/figures/1",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.6655172413793103,
+        "height": 1,
+        "label": "Growth schematics (Figure 1a, c)"
+      },
+      "rationale": "The original mixes two growth schematics with two SEM panels. Retain the paired pristine/plasma-treated hBN schematics so the two morphologies remain meaningful."
+    },
+    {
+      "id": "pub-36",
+      "source": "https://doi.org/10.1063/1.4902373",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0.6730769230769231,
+        "y": 0.04090909090909091,
+        "width": 0.14423076923076922,
+        "height": 0.31363636363636366,
+        "label": "Quasi-WGM cavity and field schematic (Figure 2b inset)"
+      },
+      "rationale": "Select the published quasi-WGM ray/cavity and electric-field inset, excluding the surrounding plot border. The210px height cap enlarges this75x138px source by about1.52x rather than filling the220px column. Complete original retained; no scientific diagram is redrawn.",
+      "limitation": "Primary AIP article page was checked and exposes only the abstract/purchase view through available retrieval. A focused PDF search found no directly accessible author manuscript. Direct retrieval of publisher image/HTML through the local network is unavailable (DNS failure); no unverified substitute is used.",
+      "preferredFollowup": "If an author PDF or higher-resolution Figure 1/device/SEM source becomes available, select a representative microrod image or the complete FP/WGM geometry schematic."
+    },
+    {
+      "id": "pub-37",
+      "source": "https://iopscience.iop.org/article/10.1088/0022-3727/47/48/485302#d503798f01",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.4988085782366958,
+        "height": 0.568609865470852,
+        "label": "Representative nanowire TEM (Figure 1a)"
+      },
+      "rationale": "Select one representative ZnSe nanowire TEM panel with its twin-plane atomic-resolution inset and scale bar; exclude unrelated histogram and duplicate microscopy panels."
+    },
+    {
+      "id": "pub-38",
+      "source": "https://doi.org/10.1063/1.4900850",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.4673076923076923,
+        "height": 0.4196078431372549,
+        "label": "Twin-plane atomic structure (Figure 3a)"
+      },
+      "rationale": "Select the clear atomic arrangement across ZB/WZ twin planes. The full figure combines this with band offsets and a larger multi-region band model."
+    },
+    {
+      "id": "pub-39",
+      "source": "https://pubs.aip.org/aip/apm/article/2/9/092512/150627",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0.6538461538461539,
+        "y": 0,
+        "width": 0.34615384615384615,
+        "height": 0.26014760147601473,
+        "label": "GaN microrods on graphene (Figure 1a, stage iii)"
+      },
+      "rationale": "Use the completed microrod-on-graphene sample schematic in the growth sequence. It communicates the physical sample more clearly than the full five-panel microscopy/XRD montage."
+    },
+    {
+      "id": "pub-40",
+      "source": null,
+      "action": "missing",
+      "rationale": "No author-supplied/publicly accessible figure is available in the existing verified asset set. Known pub-40 limitation retained; no substitute invented."
+    },
+    {
+      "id": "pub-41",
+      "source": "https://doi.org/10.1002/adem.201300405",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.4895666131621188,
+        "height": 1,
+        "label": "Atomic arrangements and stacking schematic (Figure 4a–c)"
+      },
+      "rationale": "Keep the paired WZ/ZB atom arrangements and stacking model, removing the adjacent temperature-versus-time phase diagram from the small preview."
+    },
+    {
+      "id": "pub-42",
+      "source": "https://doi.org/10.1021/nl401011x",
+      "action": "keep",
+      "imagePreview": null,
+      "rationale": "Existing graphical abstract is already coherent and legible as a single composition; retain without cropping."
+    },
+    {
+      "id": "pub-43",
+      "source": "https://www.nature.com/articles/am201245/figures/4",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0.4899845916795069,
+        "y": 0,
+        "width": 0.5100154083204931,
+        "height": 0.6698564593301436,
+        "label": "GaN LED layer structure (Figure 4a, right)"
+      },
+      "rationale": "Select the labelled LED cross-section on CVD graphene. The original also contains a pixel array and four emission micrographs that reduce the device schematic to a tiny panel."
+    },
+    {
+      "id": "pub-44",
+      "source": "https://doi.org/10.1002/adma.201201966",
+      "action": "keep",
+      "imagePreview": null,
+      "rationale": "Existing graphical abstract is already coherent and legible as a single composition; retain without cropping."
+    },
+    {
+      "id": "pub-45",
+      "source": "https://doi.org/10.1021/nl203900q",
+      "action": "keep",
+      "imagePreview": null,
+      "rationale": "Existing graphical abstract is already coherent and legible as a single composition; retain without cropping."
+    },
+    {
+      "id": "pub-46",
+      "source": "https://ieeexplore.ieee.org/document/5579990",
+      "action": "keep",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.6,
+        "label": "Figure 2a"
+      },
+      "rationale": "Existing thumbnail already isolates the complete top device-growth schematic from Figure 2a and excludes the SEM panel below; retain its crop."
+    }
+  ]
+}

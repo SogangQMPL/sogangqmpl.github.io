@@ -1,0 +1,2233 @@
+{
+  "site": {
+    "title": "Quantum Materials & Photonics Lab",
+    "shortName": "QMP Lab",
+    "group": "H. Baek Research Group",
+    "affiliation": "Department of Physics, Sogang University",
+    "email": "hjbaek@sogang.ac.kr",
+    "address": "35 Baekbeom-ro, Mapo-gu, Seoul 04107, Korea",
+    "description": "We study excitons and quantum light in low-dimensional materials and develop photonic and semiconductor devices.",
+    "repositoryUrl": ""
+  },
+  "hero": {
+    "eyebrow": "",
+    "title": "Quantum\nMaterials & Photonics\nLab",
+    "image": "assets/lab-overview.webp",
+    "imageAlt": "Triangular array of patterned structures, the original Wix homepage research image.",
+    "line": "Department of Physics, Sogang University",
+    "description": "We study excitons and quantum light in low-dimensional materials and develop photonic and semiconductor devices."
+  },
+  "research": [
+    {
+      "id": "quantum-information",
+      "title": "Quantum information",
+      "summary": "Quantum light sources and photon-pair generation in two-dimensional materials.",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/research",
+      "sourcePaperIds": [
+        "pub-25",
+        "pub-24",
+        "pub-19",
+        "pub-17",
+        "pub-03",
+        "pub-02"
+      ],
+      "suggestedImage": "assets/research/quantum-photonics.jpg",
+      "topics": [
+        {
+          "id": "quantum-light-sources",
+          "title": "Quantum light sources",
+          "source": "https://baahyyjuu.wixsite.com/hyeonjun/quantum-light-sources",
+          "description": "At the quantum level, light is described in terms of photons. They can show nonclassical statistics, quantum interference and entanglement, underpinning quantum communication and quantum computing.\n\nQuantum dots can serve as single-photon sources, while nitrogen-vacancy centers provide spin–photon hybrid qubits. Atomically thin two-dimensional materials offer another platform through strong light–matter interactions. We seek and characterize new quantum light sources, including moiré-confined emitters and semiconductor nanostructures with waveguide coupling.",
+          "status": "Published research",
+          "paperIds": [
+            "pub-25",
+            "pub-24",
+            "pub-19",
+            "pub-17",
+            "pub-03",
+            "pub-02"
+          ],
+          "outcomes": [
+            {
+              "title": "Energy-tunable quantum light from moiré-trapped excitons",
+              "paperIds": [
+                "pub-24"
+              ]
+            },
+            {
+              "title": "WSe₂ nanodots for waveguide coupling",
+              "paperIds": [
+                "pub-03"
+              ]
+            },
+            {
+              "title": "Spin and charge control of moiré-trapped excitons and trions",
+              "paperIds": [
+                "pub-25",
+                "pub-19",
+                "pub-17"
+              ]
+            },
+            {
+              "title": "Photoexcitation of moiré-trapped excitons via chiral phonons",
+              "paperIds": [
+                "pub-02"
+              ]
+            }
+          ],
+          "mappingNote": "All six papers are retained from the original Quantum information related-paper list. The phonon, spin and charge papers support the material platform; do not describe every paper as demonstrating single-photon emission.",
+          "summary": "We identify and characterize quantum light sources for quantum communication and computing, focusing on nonclassical photon properties and two-dimensional materials.",
+          "image": "assets/research/quantum-light-platforms.webp",
+          "imageAlt": "Quantum light sources — conceptual diagram",
+          "schematic": "assets/research/topic-quantum-light.svg",
+          "schematicAlt": "A moiré-localized emitter and a WSe₂ nanodot coupled to an optical waveguide.",
+          "focus": [
+            "Single-photon sources",
+            "Moiré emitters",
+            "WSe₂ nanodots",
+            "Superradiance"
+          ],
+          "detailImages": [
+            {
+              "src": "assets/research/quantum-light-platforms.webp",
+              "fullSrc": "assets/research/quantum-light-platforms.webp",
+              "alt": "Quantum dots, nitrogen-vacancy centres and atomically thin 2D materials as quantum-light platforms.",
+              "caption": "Quantum dots, nitrogen-vacancy centres and atomically thin 2D materials as quantum-light platforms.",
+              "width": 1600,
+              "height": 900,
+              "sourceURL": "https://static.wixstatic.com/media/631814_a1970aef6dde44e9a8bb2390469bf594~mv2.png"
+            }
+          ],
+          "schematicWidth": 600,
+          "schematicHeight": 400
+        },
+        {
+          "id": "spdc",
+          "title": "SPDC in 2D materials",
+          "source": "https://baahyyjuu.wixsite.com/hyeonjun/%EB%B3%B5%EC%A0%9C-interlayer-excitons",
+          "description": "Spontaneous parametric down-conversion (SPDC) is a nonlinear optical process used to generate entangled photons. The strong nonlinearity of two-dimensional materials makes them attractive for this process.\n\nAdjusting the twist angle between stacked layers provides a way to engineer their optical response and create new quantum light sources.",
+          "status": "Research direction",
+          "paperIds": [],
+          "outcomes": [],
+          "claimLimit": "The Wix page explicitly discusses entangled photons and twist-angle engineering. Preserve these concepts as research objectives; the page does not document a completed entangled-photon experiment or link a publication.",
+          "summary": "We study SPDC in strongly nonlinear 2D materials to generate entangled photons, using twist-angle control to engineer quantum light sources.",
+          "image": "assets/research/quantum-photonics.jpg",
+          "imageAlt": "SPDC in 2D materials — conceptual diagram",
+          "schematic": "assets/research/spdc-photon-pair-original-crop.png",
+          "schematicAlt": "Photon-pair generation in an atomically thin nonlinear material; cropped from the original Wix illustration.",
+          "focus": [
+            "Spontaneous parametric down-conversion (SPDC)",
+            "Entangled photons"
+          ],
+          "detailImages": [
+            {
+              "src": "assets/research/spdc-cavity-original-crop.png",
+              "fullSrc": "assets/research/spdc-cavity-original-crop.png",
+              "alt": "A 2D nonlinear material in a multilayer cavity, cropped from the original illustration.",
+              "caption": "2D nonlinear material and cavity structure.",
+              "width": 1673,
+              "height": 1850,
+              "sourceURL": "https://static.wixstatic.com/media/631814_8f01572b063e4cf8a4e9da329c2f8ab2~mv2.jpg"
+            }
+          ],
+          "schematicWidth": 1910,
+          "schematicHeight": 1580
+        }
+      ],
+      "additionalDirections": [
+        "Cooperative superradiance",
+        "Exciton-polaritons"
+      ],
+      "image": "assets/research/theme-quantum.svg",
+      "imageAlt": "Quantum information in two-dimensional materials — conceptual schematic",
+      "description": "Quantum light sources and photon-pair generation in two-dimensional materials.",
+      "kicker": "2D MATERIALS",
+      "scope": [
+        "Single-photon sources",
+        "Spontaneous parametric down-conversion (SPDC)",
+        "Superradiance",
+        "Exciton-polaritons"
+      ],
+      "paperIds": [
+        "pub-25",
+        "pub-24",
+        "pub-19",
+        "pub-17",
+        "pub-03",
+        "pub-02"
+      ],
+      "icon": "assets/research/area-quantum.svg"
+    },
+    {
+      "id": "solid-state-physics",
+      "title": "Solid-State Physics",
+      "summary": "Moiré potentials, correlated states and electrically controlled interlayer excitons.",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/research",
+      "sourcePaperIds": [
+        "pub-13",
+        "pub-11",
+        "pub-10",
+        "pub-07",
+        "pub-05"
+      ],
+      "suggestedImage": "assets/research/moire-heterostructure.webp",
+      "topics": [
+        {
+          "id": "moire-physics",
+          "title": "Moiré physics",
+          "source": "https://baahyyjuu.wixsite.com/hyeonjun/moir%C3%A9-physics",
+          "description": "Small lattice mismatches or twist angles produce moiré patterns and periodic in-plane potentials for electrons and holes.\n\nMoiré potentials can trap excitons, which are bound electron–hole pairs, into periodic quantum-emitter arrays. Their quantum-light emission motivates investigations of Bose–Hubbard physics.\n\nBy suppressing carrier kinetic energy relative to interactions, moiré structures support strongly correlated states. Electric fields, twist angle and gate-controlled doping tune this platform for use as quantum simulators.",
+          "status": "Published research",
+          "paperIds": [
+            "pub-13",
+            "pub-11"
+          ],
+          "crossCategoryPaperIds": [
+            "pub-24",
+            "pub-25",
+            "pub-19",
+            "pub-17",
+            "pub-02"
+          ],
+          "outcomes": [
+            {
+              "title": "Exciton-polarons in a correlated moiré superlattice",
+              "paperIds": [
+                "pub-13"
+              ]
+            },
+            {
+              "title": "Field-tunable correlated states in a multi-orbital moiré system",
+              "paperIds": [
+                "pub-11"
+              ]
+            }
+          ],
+          "summary": "We study tunable moiré potentials, exciton arrays and strongly correlated states as platforms for quantum light, Bose–Hubbard physics and quantum simulation.",
+          "image": "assets/research/moire-heterostructure.webp",
+          "imageAlt": "Moiré physics — conceptual diagram",
+          "schematic": "assets/research/moire-lattices-original-crop.png",
+          "schematicAlt": "Two rotated atomic lattices form a moiré pattern, from the original high-resolution illustration.",
+          "focus": [
+            "Hubbard model in moiré lattices",
+            "Ferroelectricity"
+          ],
+          "detailImages": [
+            {
+              "src": "assets/research/moire-heterostructure.webp",
+              "fullSrc": "assets/research/moire-heterostructure.webp",
+              "alt": "Excitons and electrons or holes trapped in moiré potentials.",
+              "caption": "Excitons and electrons or holes trapped in moiré potentials.",
+              "width": 900,
+              "height": 506,
+              "sourceURL": "https://static.wixstatic.com/media/631814_9595ddc8c6f74011a632aed3dee4d463~mv2.png"
+            },
+            {
+              "src": "assets/research/moire-excitons.webp",
+              "fullSrc": "assets/research/moire-excitons.webp",
+              "alt": "Emission from an array of excitons localized in a moiré potential.",
+              "caption": "Emission from an array of excitons localized in a moiré potential.",
+              "width": 800,
+              "height": 540,
+              "sourceURL": "https://static.wixstatic.com/media/631814_116a0dc841134f41b130c2dad5e187d4~mv2.png"
+            },
+            {
+              "src": "assets/research/moire-correlated-states.webp",
+              "fullSrc": "assets/research/moire-correlated-states-original.png",
+              "alt": "Mott insulating state, Hubbard Hamiltonian and density-of-states diagrams.",
+              "caption": "Mott insulating state, Hubbard Hamiltonian and density-of-states diagrams.",
+              "width": 1600,
+              "height": 900,
+              "sourceURL": "https://static.wixstatic.com/media/631814_5147130ec0c1422486b938078cb381c6~mv2.png"
+            }
+          ],
+          "schematicWidth": 880,
+          "schematicHeight": 710
+        },
+        {
+          "id": "interlayer-excitons",
+          "title": "Interlayer excitons",
+          "source": "https://baahyyjuu.wixsite.com/hyeonjun/general-1",
+          "description": "An interlayer exciton binds an electron and a hole in separate layers of a stacked 2D structure. Coupling between layers supports dipolar, hybridized, quadrupolar and symmetric configurations.\n\nPermanent electric dipoles make dipolar interlayer excitons responsive to electric fields. The Stark effect allows control of their energy and emission intensity.\n\nNanoscale patterned electrodes can trap and localize excitons. Combining spatial confinement with electrical tuning offers a route to solid-state quantum simulators for complex condensed-matter systems.\n\nAligned dipoles enable strong exciton–exciton interactions. These many-body interactions motivate exciton-polariton and nonlinear-optical applications in optoelectronic and quantum devices.",
+          "status": "Published research",
+          "paperIds": [
+            "pub-10",
+            "pub-07",
+            "pub-05"
+          ],
+          "suggestedImage": "assets/research/interlayer-excitons.webp",
+          "outcomes": [
+            {
+              "title": "Tunable ground- and excited-state excitonic dipoles",
+              "paperIds": [
+                "pub-10"
+              ]
+            },
+            {
+              "title": "Quadrupolar and dipolar excitons in bilayer MoSe₂",
+              "paperIds": [
+                "pub-07"
+              ]
+            },
+            {
+              "title": "Symmetric interlayer trions in MoS₂ bilayers",
+              "paperIds": [
+                "pub-05"
+              ]
+            }
+          ],
+          "claimLimit": "Retain the original discussion of hybridized states, Stark tuning, patterned-electrode trapping, quantum simulators and exciton-polariton applications. The applications are research directions rather than claims of completed simulator or polariton devices from the linked papers.",
+          "summary": "We study dipolar, hybridized, quadrupolar and symmetric interlayer excitons, using electric fields and patterned electrodes to control their optical response and confinement.",
+          "image": "assets/research/interlayer-excitons.webp",
+          "imageAlt": "Interlayer excitons — conceptual diagram",
+          "schematic": "assets/research/interlayer-device-original-crop.png",
+          "schematicAlt": "Graphite-gated WS₂/WSe₂ heterostructure with an interlayer exciton and hBN, from the original illustration.",
+          "focus": [
+            "Excitonic states & interlayer trions",
+            "Stark control & trapping",
+            "Exciton-polaritons"
+          ],
+          "detailImages": [
+            {
+              "src": "assets/research/interlayer-excitons.webp",
+              "fullSrc": "assets/research/interlayer-exciton-states-original.jpg",
+              "alt": "Intralayer and interlayer excitons, coupled-layer excitonic states and interlayer trions.",
+              "caption": "Intralayer and interlayer excitons, coupled-layer excitonic states and interlayer trions.",
+              "width": 900,
+              "height": 145,
+              "sourceURL": "https://static.wixstatic.com/media/631814_c5abe2ef9c594649828ec01f86bb8b08~mv2.jpg"
+            },
+            {
+              "src": "assets/research/interlayer-electric-field.webp",
+              "fullSrc": "assets/research/interlayer-electric-field-original.jpg",
+              "alt": "Photoluminescence intensity plotted against photon energy and gate bias.",
+              "caption": "Photoluminescence intensity plotted against photon energy and gate bias.",
+              "width": 1584,
+              "height": 1222,
+              "sourceURL": "https://static.wixstatic.com/media/631814_85d74f9dbeab4dc3bb0faf4fb7aa2b76~mv2.jpg"
+            },
+            {
+              "src": "assets/research/interlayer-trap-potential-original-crop.png",
+              "fullSrc": "assets/research/interlayer-trap-potential-original-crop.png",
+              "alt": "Localized excitons and their emitted light in a patterned trapping potential, cropped from the original illustration.",
+              "caption": "Exciton confinement in a patterned potential.",
+              "width": 1229,
+              "height": 801,
+              "sourceURL": "https://static.wixstatic.com/media/631814_3a77341769cf4fd3be73d5f0d74cb92a~mv2.jpg"
+            },
+            {
+              "src": "assets/research/interlayer-polariton.webp",
+              "fullSrc": "assets/research/interlayer-polariton-original.jpg",
+              "alt": "Cavity, localized excitons and on-site exciton repulsion in a conceptual interaction diagram.",
+              "caption": "Cavity, localized excitons and on-site exciton repulsion in a conceptual interaction diagram.",
+              "width": 1227,
+              "height": 904,
+              "sourceURL": "https://static.wixstatic.com/media/631814_2aa8a65a12834328913adfdbd4a44027~mv2.jpg"
+            }
+          ],
+          "schematicWidth": 1250,
+          "schematicHeight": 720
+        }
+      ],
+      "additionalDirections": [
+        "Ferroelectricity in two-dimensional materials"
+      ],
+      "image": "assets/research/theme-solid-state.svg",
+      "imageAlt": "Solid-State Physics in two-dimensional materials — conceptual schematic",
+      "description": "Moiré potentials, correlated states and electrically controlled interlayer excitons.",
+      "kicker": "2D MATERIALS",
+      "scope": [
+        "Hubbard model in moiré lattices",
+        "Ferroelectricity"
+      ],
+      "paperIds": [
+        "pub-13",
+        "pub-11",
+        "pub-10",
+        "pub-07",
+        "pub-05"
+      ],
+      "icon": "assets/research/area-solid-state.svg"
+    },
+    {
+      "id": "semiconductor-devices",
+      "title": "Semiconductor Devices",
+      "summary": "Two-dimensional semiconductor transistors and neuromorphic optoelectronic devices.",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/research",
+      "sourcePaperIds": [
+        "pub-09"
+      ],
+      "suggestedImage": "assets/research/semiconductor-devices.webp",
+      "imageNote": "The original Wix detail-page image filename identifies a ChatGPT-generated conceptual illustration. It is not a measurement image. A new labelled vector schematic may be clearer.",
+      "topics": [
+        {
+          "id": "2d-semiconductor-devices",
+          "title": "2D semiconductor devices",
+          "source": "https://baahyyjuu.wixsite.com/hyeonjun/%EB%B3%B5%EC%A0%9C-spdc",
+          "description": "Atomically thin 2D semiconductors offer channels with strong gate control as devices are scaled down. Dangling-bond-free surfaces help reduce unwanted surface effects and improve device stability.\n\nDifferent 2D materials can be stacked in many combinations, enabling flexible heterostructure design and testing. We investigate these platforms for neuromorphic architectures beyond conventional von Neumann computing, including synaptic transistors and physical reservoir computing.",
+          "status": "Published research",
+          "paperIds": [
+            "pub-09",
+            "pub-01"
+          ],
+          "originalPaperIds": [
+            "pub-09"
+          ],
+          "additionalPaperIds": [
+            "pub-01"
+          ],
+          "outcomes": [
+            {
+              "title": "MoTe₂ synaptic transistors for physical reservoir computing",
+              "paperIds": [
+                "pub-09"
+              ]
+            },
+            {
+              "title": "Photoresponsive MoS₂ transistors for wavelength-dependent reservoir computing",
+              "paperIds": [
+                "pub-01"
+              ]
+            }
+          ],
+          "mappingNote": "pub-09 is the original overview link. pub-01 is a newer related paper already present in the lab Publication archive and is marked as an addition rather than an original overview link.",
+          "summary": "We develop atomically thin 2D transistors with strong gate control, using flexible material stacking for neuromorphic devices and physical reservoir computing.",
+          "image": "assets/research/semiconductor-devices.webp",
+          "imageAlt": "2D semiconductor devices — conceptual diagram",
+          "schematic": "assets/research/semiconductor-devices-original.png",
+          "schematicAlt": "Layered 2D semiconductor device and neuromorphic electronics, using the original high-resolution illustration.",
+          "focus": [
+            "Field-effect transistors",
+            "Neuromorphic devices",
+            "Light-emitting devices",
+            "Photodetectors"
+          ],
+          "detailImages": [],
+          "schematicWidth": 1672,
+          "schematicHeight": 941
+        }
+      ],
+      "additionalDirections": [
+        "Field-effect transistors",
+        "Neuromorphic devices",
+        "Light-emitting devices",
+        "Photodetectors"
+      ],
+      "image": "assets/research/theme-devices.svg",
+      "imageAlt": "Semiconductor Devices in two-dimensional materials — conceptual schematic",
+      "description": "Two-dimensional transistors and neuromorphic optoelectronic devices.",
+      "kicker": "2D MATERIALS",
+      "scope": [
+        "Field-effect transistors",
+        "Neuromorphic devices",
+        "Light-emitting devices",
+        "Photodetectors"
+      ],
+      "paperIds": [
+        "pub-09",
+        "pub-01"
+      ],
+      "icon": "assets/research/area-devices.svg"
+    }
+  ],
+  "publicationYearGroups": [
+    {
+      "from": 2010,
+      "to": 2017
+    }
+  ],
+  "underReview": [
+    {
+      "id": "under-review-inse-tmd-stark-tuning",
+      "title": "Thickness- and Material-Dependent Band Alignment Switching in InSe/TMD Heterostructures",
+      "authors": "Yongju Jeong, Dianne Lee, Kenji Watanabe, Takashi Taniguchi, and Hyeonjun Baek*",
+      "labAuthors": [
+        "Yongju Jeong",
+        "Dianne Lee",
+        "Hyeonjun Baek"
+      ],
+      "url": "",
+      "authorAliases": {
+        "Dianne Lee": "person-6"
+      }
+    }
+  ],
+  "publications": [
+    {
+      "id": "pub-01",
+      "title": "Photoresponsive MoS₂-Based Artificial Synaptic Transistor for Wavelength-Dependent Physical Reservoir Computing",
+      "authors": "M. Park, W. S. Oh, Geonho Lee, Seongwon Gim, J.-P. So, J. Lee, Hyeonjun Baek, and H. Oh",
+      "journal": "Small Structures 7, e70581 (2026).",
+      "year": 2026,
+      "doi": "10.1002/sstr.70581",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/sstr.70581",
+      "featured": true,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-01-fig1.jpg",
+      "imageAlt": "Device structure and electrical characterization of the back-gated MoS2 synaptic transistor. Panel a is the device schematic.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://onlinelibrary.wiley.com/doi/full/10.1002/sstr.70581#sstr70581-fig-0001",
+      "imageWidth": 907,
+      "imageHeight": 1032,
+      "imagePreview": {
+        "x": 0.07,
+        "y": 0,
+        "width": 0.39,
+        "height": 0.315,
+        "label": "Device schematic (Figure 1a)"
+      },
+      "labAuthors": [
+        "Geonho Lee",
+        "Seongwon Gim",
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-02",
+      "title": "Photoexcitation of moiré-trapped interlayer excitons via chiral phonons",
+      "authors": "A. Borel, T. V. Ivanova, J. Cervantes-Villanueva, P. Thor, Hyeonjun Baek, T. Taniguchi, K. Watanabe, A. Molina-Sánchez, B. D. Gerardot, and M. Brotons-Gisbert",
+      "journal": "npj 2D Materials and Applications (2026)",
+      "year": 2026,
+      "doi": "10.1038/s41699-026-00701-5",
+      "url": "https://www.nature.com/articles/s41699-026-00701-5",
+      "featured": true,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "notes": "Original Wix uses 0, 00 placeholders. Publisher citation checked 2026-11-01 lists year and DOI without volume/article number; omitted placeholder.",
+      "image": "assets/publications/pub-02-figure1.png",
+      "imageAlt": "Moiré-trapped interlayer excitons in a twisted 2H-MoSe2/WSe2 heterostructure: layer structure and exciton configuration.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://www.nature.com/articles/s41699-026-00701-5",
+      "imageWidth": 1064,
+      "imageHeight": 1065,
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.61,
+        "height": 0.4,
+        "label": "Figure 1a"
+      },
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-03",
+      "title": "WSe₂ Nanodots on Dielectric Nanopillars for Efficient Waveguide Coupling of Localized Emitters",
+      "authors": "Seongwon Gim, M. Jung, S. Cha, K. Watanabe, T. Taniguchi, and Hyeonjun Baek",
+      "journal": "ACS Applied Nano Materials 9, 9471-9477 (2026)",
+      "year": 2026,
+      "doi": "10.1021/acsanm.6c01123",
+      "url": "https://pubs.acs.org/doi/10.1021/acsanm.6c01123",
+      "featured": true,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-03-original.png",
+      "imageAlt": "Localized WSe2 nanodot emitters on dielectric nanopillars coupled to an optical waveguide.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://doi.org/10.1021/acsanm.6c01123",
+      "imageWidth": 520,
+      "imageHeight": 322,
+      "labAuthors": [
+        "Seongwon Gim",
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-04",
+      "title": "Interfacial Interaction Monitoring and Constitutional Isomer Discrimination Using a Graphene-Integrated Terahertz Metasurface",
+      "authors": "T. Kim, J. Park, Seongwon Gim, H. Lee, W. Lee, Hyeonjun Baek, and M. Seo",
+      "journal": "Analytical Chemistry 98, 8340 (2026)",
+      "year": 2026,
+      "doi": "10.1021/acs.analchem.5c07495",
+      "url": "https://pubs.acs.org/doi/full/10.1021/acs.analchem.5c07495",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-04-original.png",
+      "imageAlt": "Graphene-integrated terahertz metasurface for interfacial sensing and isomer discrimination.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://doi.org/10.1021/acs.analchem.5c07495",
+      "imageWidth": 520,
+      "imageHeight": 325,
+      "labAuthors": [
+        "Seongwon Gim",
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-05",
+      "title": "Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers",
+      "authors": "Seongwon Gim, Hyunjun Jo, S. Kim, S. M. Yang, K. Watanabe, T. Taniguchi, and Hyeonjun Baek",
+      "journal": "ACS Photonics 12, 6957 (2025)",
+      "year": 2025,
+      "doi": "10.1021/acsphotonics.5c02169",
+      "url": "https://pubs.acs.org/doi/10.1021/acsphotonics.5c02169",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-05-original.png",
+      "imageAlt": "Symmetric interlayer trions in 3R- and 2H-stacked molybdenum disulfide bilayers.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://doi.org/10.1021/acsphotonics.5c02169",
+      "imageWidth": 520,
+      "imageHeight": 258,
+      "labAuthors": [
+        "Seongwon Gim",
+        "Hyunjun Jo",
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-06",
+      "title": "Wavelength-tunable Zn 1− x Mg x O nanotube lasers on graphene films",
+      "authors": "Hyeonjun Baek, J. B. Park, H. Oh, and G.-C. Yi",
+      "journal": "Journal of Applied Physics 137, 244301 (2025)",
+      "year": 2025,
+      "doi": "",
+      "url": "https://pubs.aip.org/aip/jap/article/137/24/244301/3350695/Wavelength-tunable-Zn1-xMgxO-nanotube-lasers-on",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-06-figure1.jpg",
+      "imageAlt": "Figure 1: ZnMgO nanotube laser fabrication and structural characterization.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://pubs.aip.org/aip/jap/article/137/24/244301/3350695",
+      "imageWidth": 520,
+      "imageHeight": 275,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.47,
+        "label": "Nanotube laser fabrication schematic (Figure 1a)"
+      }
+    },
+    {
+      "id": "pub-07",
+      "title": "Quadrupolar and Dipolar Excitons in Bilayer 2H-MoSe₂",
+      "authors": "S. Feng, A. J. Campbell, B. M. Francis, Hyeonjun Baek, T. Taniguchi, K. Watanabe, I. C. Gerber, B. D. Gerardot, and M. Brotons-Gisbert",
+      "journal": "Physical Review Letters 134 , 166901 (2025)",
+      "year": 2025,
+      "doi": "10.1103/PhysRevLett.134.166901",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.166901",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-07-figure1.png",
+      "imageAlt": "Dipolar and quadrupolar excitons in a dual-gated bilayer 2H-MoSe2 device.",
+      "imageLabel": "Figure 1 (author manuscript)",
+      "imageSource": "https://arxiv.org/html/2503.19883v1#S0.F1",
+      "imageWidth": 876,
+      "imageHeight": 981,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.725,
+        "height": 0.37,
+        "label": "Gated bilayer and exciton schematic (Figure 1a)"
+      }
+    },
+    {
+      "id": "pub-08",
+      "title": "In-situ fabrication of GaN/short-range ordered BN heterostructure light-emitting diodes",
+      "authors": "H. Kim, A. T. D. Nguyen, B. Kim, H. Jo, I. Rahmatulloh, H. Yoo, H. Oh, A. Ahmed, Hyeonjun Baek, and K. Chung",
+      "journal": "NPG Asia Materials 17, 13 (2025)",
+      "year": 2025,
+      "doi": "10.1038/s41427-025-00594-8",
+      "url": "https://www.nature.com/articles/s41427-025-00594-8",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-08-figure1.png",
+      "imageAlt": "Fig. 1: In-situ ELOG using SRO BN masks.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://www.nature.com/articles/s41427-025-00594-8/figures/1",
+      "imageWidth": 685,
+      "imageHeight": 649,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0.64,
+        "y": 0.035,
+        "width": 0.36,
+        "height": 0.265,
+        "label": "GaN overgrowth structure (Figure 1a)"
+      }
+    },
+    {
+      "id": "pub-09",
+      "title": "MoTe 2 synaptic transistor and its application to physical reservoir computing",
+      "authors": "W. S. Oh, Seongwon Gim, H. Jeong, Hyeonjun Baek, and H. Oh",
+      "journal": "RSC Advances 15, 24031 (2025)",
+      "year": 2025,
+      "doi": "",
+      "url": "https://pubs.rsc.org/ra/article/15/29/24031/906612/MoTe2-synaptic-transistor-and-its-application-to",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-09-graphical-abstract.jpg",
+      "imageAlt": "Graphical abstract of a MoTe2 synaptic transistor for physical reservoir computing and handwritten-digit recognition.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12242375/",
+      "imageWidth": 603,
+      "imageHeight": 473,
+      "labAuthors": [
+        "Seongwon Gim",
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-10",
+      "title": "Highly tunable ground and excited state excitonic dipoles in multilayer 2H-MoSe₂",
+      "authors": "S. Feng, A. J. Campbell, M. Brotons-Gisbert, D. Andrés-Penares, Hyeonjun Baek, T. Taniguchi, K. Watanabe, B. Urbaszek, I. C. Gerber, and B.D. Gerardot",
+      "journal": "Nature Communications 15, 4377 (2024)",
+      "year": 2024,
+      "doi": "10.1038/s41467-024-48476-x",
+      "url": "https://www.nature.com/articles/s41467-024-48476-x",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-10-figure1.png",
+      "imageAlt": "Fig. 1: Intralayer and interlayer excitons in a terraced 2L/3L 2H-MoSe 2 sample.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://www.nature.com/articles/s41467-024-48476-x/figures/1",
+      "imageWidth": 685,
+      "imageHeight": 238,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-11",
+      "title": "The interplay of field-tunable strongly correlated states in a multi-orbital moiré system",
+      "authors": "A. Campbell, V. Vitale, M. Brotons-Gisbert, Hyeonjun Baek, A. Borel, T. Ivanova, T. Taniguchi, K. Watanabe, J. Lischner, and B. D. Gerardot",
+      "journal": "Nature Physics , 20, 589 (2024)",
+      "year": 2024,
+      "doi": "10.1038/s41567-024-02385-4",
+      "url": "https://www.nature.com/articles/s41567-024-02385-4",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-11-figure1.png",
+      "imageAlt": "Fig. 1: Layer and valley properties of excitons and holes in a moiré HTL device.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://www.nature.com/articles/s41567-024-02385-4/figures/1",
+      "imageWidth": 685,
+      "imageHeight": 487,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0.343,
+        "y": 0.53,
+        "width": 0.3,
+        "height": 0.37,
+        "label": "Moiré device schematic (Figure 1d)"
+      }
+    },
+    {
+      "id": "pub-12",
+      "title": "Initial Growth Behavior in Catalyst-Free-Grown Vertical ZnO Nanorods on c-A l 2 O 3 , as Observed Using Synchrotron Radiation X-ray Scattering",
+      "authors": "H. Oh, Y. J. Hong, G.-C. Yi, Hyeonjun Baek, D. R. Lee, H. H. Lee",
+      "journal": "Crystal Growth & Design 23, 1434 (2023)",
+      "year": 2023,
+      "doi": "10.1021/acs.cgd.2c00959",
+      "url": "https://pubs.acs.org/doi/10.1021/acs.cgd.2c00959",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-12-original.png",
+      "imageAlt": "Catalyst-free zinc oxide nanorod growth monitored with synchrotron X-ray scattering.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://doi.org/10.1021/acs.cgd.2c00959",
+      "imageWidth": 520,
+      "imageHeight": 179,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-13",
+      "title": "Exciton-polarons in the presence of strongly correlated electronic states in a MoSe₂ /WSe₂ moiré superlattice",
+      "authors": "A. Campbell, M. Brotons-Gisbert, Hyeonjun Baek, V. Vitale, T. Taniguchi, K. Watanabe, J. Lischner, and B. D. Gerardot",
+      "journal": "npj 2D Materials and Applications 6, 79 (2022)",
+      "year": 2022,
+      "doi": "10.1038/s41699-022-00358-w",
+      "url": "https://www.nature.com/articles/s41699-022-00358-w",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-13-figure1.png",
+      "imageAlt": "Fig. 1: Device structure.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://www.nature.com/articles/s41699-022-00358-w/figures/1",
+      "imageWidth": 685,
+      "imageHeight": 201,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-14",
+      "title": "Nanoscale mapping of surface strain in tapered nanorods using confocal photoluminescence spectroscopy",
+      "authors": "H. Y. Hwang, Hyeonjun Baek, G.-C. Yi, and Y. D. Jho",
+      "journal": "Nanotechnology 33, 485703 (2022)",
+      "year": 2022,
+      "doi": "10.1088/1361-6528/ac8bd9",
+      "url": "https://iopscience.iop.org/article/10.1088/1361-6528/ac8bd9",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-14-figure1.jpg",
+      "imageAlt": "Figure 1. (a) Top view of SEM image of tapered ZnO NRs. The dashed area corresponds to the spatial scanning ranges in figures 2 (d), (e). (b) Side-view transmission electron microscopy (TEM) images of tapered ZnO NRs from z = 0 nm to 1200 nm. I and II represent differently tapered regions of the ZnO NRs with boundary positions of z I ≡ 7 nm and z II ≡ 200 nm, respectively. III is the range with a constant diameter, interfacing sapphire substrate at z III . Close-up images of (c) the tip side from z = 0 to z = 80 nm, (d) pillar with a constant diameter, and (e) interface between the ZnO NRs and sapphire substrate.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://iopscience.iop.org/article/10.1088/1361-6528/ac8bd9#nanoac8bd9f1",
+      "imageWidth": 350,
+      "imageHeight": 457,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0.2,
+        "y": 0,
+        "width": 0.61,
+        "height": 0.41,
+        "label": "Top-view SEM of ZnO nanorods (Figure 1a)"
+      }
+    },
+    {
+      "id": "pub-15",
+      "title": "IGZO synaptic thin-film transistors with embedded AlOx charge-trapping layers",
+      "authors": "Y. Lee, H. Jo, K. Kim, H. Yoo, Hyeonjun Baek, D. R. Lee, and H. Oh",
+      "journal": "Applied Physics Express 15, 6 (2022)",
+      "year": 2022,
+      "doi": "10.35848/1882-0786/ac7032",
+      "url": "https://iopscience.iop.org/article/10.35848/1882-0786/ac7032",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-15-figure1.jpg",
+      "imageAlt": "Fig. 1. (Color online) IGZO TFT with embedded AlO x layer. (a) Schematic of the structure of the AlO x -embedded IGZO TFT. (b) Photograph of the fabricated device. (c) and (d) Electrical characteristics of the device: (c) transfer and (d) output curves.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://iopscience.iop.org/article/10.35848/1882-0786/ac7032#apexac7032f1",
+      "imageWidth": 525,
+      "imageHeight": 399,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0.015,
+        "y": 0.035,
+        "width": 0.59,
+        "height": 0.35,
+        "label": "IGZO transistor structure (Figure 1a)"
+      }
+    },
+    {
+      "id": "pub-16",
+      "title": "2× N twin-field quantum key distribution network configuration based on polarization, wavelength, and time division multiplexing",
+      "authors": "C. H. Park, M. K. Woo, B. K. Park, Y.-S. Kim, Hyeonjun Baek, S.-W. Lee, H.-T. Lim, S.-W. Jeon, H. Jung, S. Kim, and S.-W. Han",
+      "journal": "NPJ Quantum Information 8, 48 (2022)",
+      "year": 2022,
+      "doi": "10.1038/s41534-022-00558-8",
+      "url": "https://www.nature.com/articles/s41534-022-00558-8",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-16-figure1.png",
+      "imageAlt": "Fig. 1: 2 × N plug-and-play (PnP) twin-field quantum key distribution (TF-QKD) network scheme.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://www.nature.com/articles/s41534-022-00558-8/figures/1",
+      "imageWidth": 685,
+      "imageHeight": 349,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-17",
+      "title": "Optical read-out of Coulomb staircases in a moiré superlattice via trapped interlayer trions",
+      "authors": "Hyeonjun Baek, M. Brotons-Gisbert, A. Campbell, Valerio Vitale, Johannes Lischner, K. Watanabe, T. Taniguchi, and B. D. Gerardot",
+      "journal": "Nature Nanotechnology , 16, 1237 (2021)",
+      "year": 2021,
+      "doi": "10.1038/s41565-021-00970-9",
+      "url": "https://www.nature.com/articles/s41565-021-00970-9",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-17-fig1.png",
+      "imageAlt": "Fig. 1: Schematic illustration of moiré lattice doping.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://www.nature.com/articles/s41565-021-00970-9/figures/1",
+      "imageWidth": 685,
+      "imageHeight": 464,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.345,
+        "height": 0.43,
+        "label": "Figure 1a"
+      }
+    },
+    {
+      "id": "pub-18",
+      "title": "Electrically driven strain-induced deterministic single-photon emitters in a van der Waals heterostructure",
+      "authors": "J.-P. So, H.-R. Kim, Hyeonjun Baek, K.-Y. Jeong, H.-C. Lee, W. Huh, Y. S. Kim, K. Watanabe, T. Taniguchi, J. Kim, C.-H. Lee, H.-G. Park",
+      "journal": "Science Advances , eabj3176 (2021)",
+      "year": 2021,
+      "doi": "10.1126/sciadv.abj3176",
+      "url": "https://www.science.org/doi/10.1126/sciadv.abj3176",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-18-fig1.jpg",
+      "imageAlt": "Electrically driven single-photon emitter formed by AFM indentation.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8528413/#F1",
+      "imageWidth": 700,
+      "imageHeight": 687,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.59,
+        "height": 0.33,
+        "label": "Figure 1A"
+      }
+    },
+    {
+      "id": "pub-19",
+      "title": "Moiré-trapped interlayer trions in a charge-tunable WSe₂ /MoSe₂ heterobilayer",
+      "authors": "M. Brotons-Gisbert, Hyeonjun Baek, A. Campbell, K. Watanabe, T. Taniguchi, and B. D. Gerardot",
+      "journal": "Physical Review X 11, 031033 (2021)",
+      "year": 2021,
+      "doi": "10.1103/PhysRevX.11.031033",
+      "url": "https://journals.aps.org/prx/abstract/10.1103/PhysRevX.11.031033",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-19-fig1a.png",
+      "imageAlt": "Dual-gated WSe₂/MoSe₂ heterobilayer and moiré lattice schematic",
+      "imageLabel": "Figure 1a",
+      "imageSource": "https://pure.hw.ac.uk/ws/portalfiles/portal/50713363/PhysRevX.11.031033.pdf#page=4",
+      "imageWidth": 628,
+      "imageHeight": 740,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-20",
+      "title": "Highly sensitive and flexible pressure sensors using position-and dimension-controlled ZnO nanotube arrays grown on graphene films",
+      "authors": "J. B. Park, M. S. Song, R. Ghosh, R. K. Saroj, Y. Hwang, Y. Tchoe, H. Oh, Hyeonjun Baek, Y. Lim, B. Kim, S.-W. Kim, and G.-C. Yi",
+      "journal": "NPG Asia Materials 13, 57 (2021)",
+      "year": 2021,
+      "doi": "10.1038/s41427-021-00324-w",
+      "url": "https://www.nature.com/articles/s41427-021-00324-w",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-20-fig1.png",
+      "imageAlt": "Fig. 1: Fabrication of ZnO nanotube-based pressure sensors.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://www.nature.com/articles/s41427-021-00324-w/figures/1",
+      "imageWidth": 685,
+      "imageHeight": 602,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0.69,
+        "y": 0.32,
+        "width": 0.31,
+        "height": 0.4,
+        "label": "Figure 1a device cross-section"
+      }
+    },
+    {
+      "id": "pub-21",
+      "title": "Vertical monolithic integration of wide-and narrow-bandgap semiconductor nanostructures on graphene films",
+      "authors": "Y. Tchoe, J. Jo, H. Kim, H. Kim, Hyeonjun Baek, K. Lee, D. Yoo, W. J. Choi, M. Kim, and G.-C. Yi",
+      "journal": "NPG Asia Materials 13, 33 (2021)",
+      "year": 2021,
+      "doi": "10.1038/s41427-021-00301-3",
+      "url": "https://www.nature.com/articles/s41427-021-00301-3",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-21-fig1.png",
+      "imageAlt": "Fig. 1: Schematic diagram of the fabrication processes of indium arsenide (InAs) nanorod/graphene layers/zinc oxide (ZnO) nanotube hybrid nanostructures.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://www.nature.com/articles/s41427-021-00301-3/figures/1",
+      "imageWidth": 685,
+      "imageHeight": 225,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-22",
+      "title": "Intracellular gallium nitride microrod laser",
+      "authors": "M. S. Song, Hyeonjun Baek, K. Lee, D. Yoo, K. Chung, J. Lee, H. Moon, B. H. Lee, H. Y. Park, and G.-C. Yi",
+      "journal": "NPG Asia Materials 13, 32 (2021)",
+      "year": 2021,
+      "doi": "10.1038/s41427-021-00299-8",
+      "url": "https://www.nature.com/articles/s41427-021-00299-8",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-22-fig1.png",
+      "imageAlt": "Fig. 1: Schematic diagram of the procedure for intracellular laser experiments.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://www.nature.com/articles/s41427-021-00299-8/figures/1",
+      "imageWidth": 685,
+      "imageHeight": 980,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0.58,
+        "y": 0.445,
+        "width": 0.42,
+        "height": 0.3,
+        "label": "Figure 1a intracellular lasing setup"
+      }
+    },
+    {
+      "id": "pub-23",
+      "title": "Individually addressable, high-density vertical nanotube Schottky diode crossbar array",
+      "authors": "Y. Tchoe, M. Song, H. Kim, Hyeonjun Baek, J. Y. Park, H. Oh, K. Lee, K. Chung, J. K. Hyun, and G.-C. Yi",
+      "journal": "Nano Energy 76, 104955 (2020)",
+      "year": 2020,
+      "doi": "10.1016/j.nanoen.2020.104955",
+      "url": "https://doi.org/10.1016/j.nanoen.2020.104955",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "notes": "Corrected original volume and article number using publisher-registered Crossref metadata.",
+      "image": "assets/publications/pub-23-original.png",
+      "imageAlt": "Fabrication schematic and SEM images of the individually addressable nanotube Schottky-diode crossbar array.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://www.researchgate.net/figure/Fabrication-steps-to-prepare-an-individually-addressable-nanotube-Schottky-diode-array_fig1_342255961",
+      "imageWidth": 850,
+      "imageHeight": 640,
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.49,
+        "height": 0.56,
+        "label": "Figure 1a"
+      },
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-24",
+      "title": "Highly energy-tunable quantum light from moiré trapped excitons",
+      "authors": "Hyeonjun Baek*, M. Brotons-Gisbert*, Z. X. Koong, A. Campbell, M. Rambach, K. Watanabe, T. Taniguchi, and B. D. Gerardot",
+      "journal": "Science Advances 6, eaba8526 (2020) (*equal contribution)",
+      "year": 2020,
+      "doi": "10.1126/sciadv.aba8526",
+      "url": "https://www.science.org/doi/10.1126/sciadv.aba8526",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-24-fig1.jpg",
+      "imageAlt": "MoSe2/WSe2 moiré heterobilayer.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7486092/#F1",
+      "imageWidth": 440,
+      "imageHeight": 260,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.48,
+        "label": "Figure 1A"
+      }
+    },
+    {
+      "id": "pub-25",
+      "title": "Spin-layer locking of interlayer excitons trapped in moiré potentials",
+      "authors": "M. Brotons-Gisbert*, Hyeonjun Baek*, A. Molina-Sánchez, A. Campbell, D. Scerri, D. White, K. Watanabe, T. Taniguchi, C. Bonato, and B. D. Gerardot",
+      "journal": "Nature Materials 19, 630 (2020) (*equal contribution)",
+      "year": 2020,
+      "doi": "10.1038/s41563-020-0687-7",
+      "url": "https://www.nature.com/articles/s41563-020-0687-7",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-25-fig1.png",
+      "imageAlt": "Fig. 1: Spin–layer locking of moiré-trapped IXs in a van der Waals heterostructure.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://www.nature.com/articles/s41563-020-0687-7/figures/1",
+      "imageWidth": 685,
+      "imageHeight": 526,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.66,
+        "height": 0.35,
+        "label": "Figure 1a"
+      }
+    },
+    {
+      "id": "pub-26",
+      "title": "ZnO nanotube waveguide arrays on graphene films for local optical excitation on biological cells",
+      "authors": "Hyeonjun Baek, H. Kwak, M. S. Song, G. E. Ha, J. Park, Y. Tchoe, J. K. Hyun, H. Y. Park, E. Cheong, and G.-C. Yi",
+      "journal": "APL Materials 5, 046106 (2017) - Selected as an editor’s pick in APL Materials.",
+      "year": 2017,
+      "doi": "",
+      "url": "https://pubs.aip.org/aip/apm/article/5/4/046106/121564/ZnO-nanotube-waveguide-arrays-on-graphene-films",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-26-fig1.jpg",
+      "imageAlt": "FIG. 1. Fabrication process for ZnO nanotube waveguide arrays. (a) Schematic illustrations of the fabrication of ZnO nanotube waveguide arrays on graphene films. ((b)–(d)) FESEM images of ZnO nanotubes grown on CVD graphene films after vertical growth (b), after lateral growth (c), and after polyimide coating and oxygen plasma ashing (d). FESEM images were obtained at a tilt angle of 30°. ",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://aipp.silverchair-cdn.com/article-minimal/121564",
+      "imageWidth": 520,
+      "imageHeight": 443,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0.73,
+        "y": 0.335,
+        "width": 0.27,
+        "height": 0.33,
+        "label": "Figure 1a transferred waveguide array"
+      }
+    },
+    {
+      "id": "pub-27",
+      "title": "ZnO nanolasers on graphene films",
+      "authors": "Hyeonjun Baek, J. B. Park, J. Park, J. K. Hyun, H. Yoon, H. Oh, and J. Yoon",
+      "journal": "Applied Physics Letters 108, 263102 (2016)",
+      "year": 2016,
+      "doi": "",
+      "url": "https://pubs.aip.org/aip/apl/article/108/26/263102/30764/ZnO-nanolasers-on-graphene-films",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-27-original.jpeg",
+      "imageAlt": "Schematic and microscopy images of zinc oxide nanotube nanolasers grown on graphene films.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://doi.org/10.1063/1.4954798",
+      "imageWidth": 520,
+      "imageHeight": 811,
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.335,
+        "label": "Figure 1a"
+      },
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-28",
+      "title": "Flexible GaN light-emitting diodes using GaN microdisk epitaxial laterally overgrown on graphene dots",
+      "authors": "K. Chung, H. Yoo, J. K. Hyun, H. Oh. Y. Tchoe, K. Lee, Hyeonjun Baek, M. Kim, and G-C. Yi",
+      "journal": "Advanced Materials 28, 7688 (2016)",
+      "year": 2016,
+      "doi": "10.1002/adma.201601894",
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.201601894",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-28-original.jpg",
+      "imageAlt": "Flexible GaN microdisk light-emitting diode architecture grown on graphene dots.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://doi.org/10.1002/adma.201601894",
+      "imageWidth": 433,
+      "imageHeight": 400,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-29",
+      "title": "Real-time device-scale imaging of conducting filament dynamics in resistive switching materials",
+      "authors": "K. Lee, Y. Tchoe, H. Yoon, Hyeonjun Baek, K. Chung, S. Lee, C. Yoon, B. H. Park, and G.-C. Yi",
+      "journal": "Scientific Reports 6, 27451 (2016)",
+      "year": 2016,
+      "doi": "10.1038/srep27451",
+      "url": "https://www.nature.com/articles/srep27451",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-29-fig1.jpg",
+      "imageAlt": "Figure 1: Schematics of device fabrication process and measurement set-up.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://www.nature.com/articles/srep27451/figures/1",
+      "imageWidth": 685,
+      "imageHeight": 321,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0.715,
+        "y": 0,
+        "width": 0.285,
+        "height": 1,
+        "label": "Figure 1e"
+      }
+    },
+    {
+      "id": "pub-30",
+      "title": "Distinctive mapping of strain and quantum size effects using depth-resolved photoluminescence in ZnO nanoneedles",
+      "authors": "H.-Y. Hwang, Hyeonjun Baek, G.-C. Yi, H.-C. Kim, and Y.-D. Jho",
+      "journal": "AIP Advances 6, 045021 (2016).",
+      "year": 2016,
+      "doi": "",
+      "url": "https://pubs.aip.org/aip/adv/article/6/4/045021/21997/Distinctive-mapping-of-strain-and-quantum-size",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-30-fig1.jpg",
+      "imageAlt": "FIG. 1. (a) SEM image of ZnO NNs. The experimental geometry of depth-resolved photoluminescence (PL) with excitation angle θ of (b) 0∘, (c) 35∘, and (d) 85∘ in ZnO NNs. ",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://aipp.silverchair-cdn.com/article-minimal/21997",
+      "imageWidth": 520,
+      "imageHeight": 430,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0.06,
+        "y": 0,
+        "width": 0.87,
+        "height": 0.465,
+        "label": "Figure 1a"
+      }
+    },
+    {
+      "id": "pub-31",
+      "title": "Microtube Light-Emitting Diode Arrays with Metal Cores",
+      "authors": "Y. Tchoe, C.-H. Lee, J. B. Park, Hyeonjun Baek, K. Chung, J. Jo, M. Kim, and G.-C. Yi",
+      "journal": "ACS Nano 10, 3114 (2016)",
+      "year": 2016,
+      "doi": "10.1021/acsnano.5b07905",
+      "url": "https://pubs.acs.org/doi/10.1021/acsnano.5b07905",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-31-original.png",
+      "imageAlt": "Metal-cored microtube light-emitting diode structure.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://doi.org/10.1021/acsnano.5b07905",
+      "imageWidth": 520,
+      "imageHeight": 256,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-32",
+      "title": "Enhanced second harmonic generation by coupling to exciton ensembles in Ag-coated ZnO nanorods",
+      "authors": "J. K. Hyun, T. Kang, Hyeonjun Baek, H. Oh, D.-S. Kim, and G.-C Yi",
+      "journal": "ACS Photonics 2, 1314 (2015)",
+      "year": 2015,
+      "doi": "10.1021/acsphotonics.5b00268",
+      "url": "https://pubs.acs.org/doi/10.1021/acsphotonics.5b00268",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-32-original.png",
+      "imageAlt": "Silver-coated ZnO nanorod structure for enhanced second harmonic generation.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://doi.org/10.1021/acsphotonics.5b00268",
+      "imageWidth": 520,
+      "imageHeight": 218,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-33",
+      "title": "Nanoscale Single-Element Color Filters",
+      "authors": "J. K. Hyun, T. Kang, Hyeonjun Baek, D.-S. Kim, and G.-C Yi",
+      "journal": "Nano Letters 15, 5938 (2015)",
+      "year": 2015,
+      "doi": "10.1021/acs.nanolett.5b02049",
+      "url": "https://pubs.acs.org/doi/10.1021/acs.nanolett.5b02049",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-33-original.png",
+      "imageAlt": "Single-element nanoscale color filter formed by a ZnO nanorod enclosed by silver layers.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://doi.org/10.1021/acs.nanolett.5b02049",
+      "imageWidth": 520,
+      "imageHeight": 354,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-34",
+      "title": "Growth and optical characteristics of high-quality ZnO thin films on graphene layers",
+      "authors": "S. I. Park, Y. Tchoe, Hyeonjun Baek, J. Heo, J. K. Hyun, J. Jo, M. Kim, N.-J. Kim, and G.-C. Yi",
+      "journal": "APL Materials 3, 016103 (2015)",
+      "year": 2015,
+      "doi": "",
+      "url": "https://pubs.aip.org/aip/apm/article/3/1/016103/238344/Growth-and-optical-characteristics-of-high-quality",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-34.jpg",
+      "imageAlt": "Growth process for high-quality ZnO thin films on graphene layers.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://pubs.aip.org/aip/apm/article/3/1/016103/238344",
+      "imageWidth": 520,
+      "imageHeight": 341,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-35",
+      "title": "Architectured van der Waals epitaxy of ZnO nanostructures on hexagonal BN",
+      "authors": "H. Oh, Y. J. Hong, K.-S. Kim, S. Yoon, Hyeonjun Baek, S.-H. Kang, Y.-K. Kwon, M. Kim, and G.-C. Yi",
+      "journal": "NPG Asia Materials 6, e145 (2014)",
+      "year": 2014,
+      "doi": "",
+      "url": "https://www.nature.com/articles/am2014108",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-35.jpg",
+      "imageAlt": "Schematic fabrication sequence and electron microscopy of morphology-controlled ZnO/hBN epitaxy.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://www.nature.com/articles/am2014108/figures/1",
+      "imageWidth": 580,
+      "imageHeight": 328,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.6655172413793103,
+        "height": 1,
+        "label": "Growth schematics (Figure 1a, c)"
+      }
+    },
+    {
+      "id": "pub-36",
+      "title": "Selective excitation of Fabry-Perot or whispering-gallery mode-type lasing in GaN microrods",
+      "authors": "Hyeonjun Baek, J. K Hyun, K. Chung, H. Oh, and G.-C. Yi",
+      "journal": "Applied Physics Letters 105, 201108 (2014)",
+      "year": 2014,
+      "doi": "",
+      "url": "https://pubs.aip.org/aip/apl/article/105/20/201108/27587/Selective-excitation-of-Fabry-Perot-or-whispering",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-36-original.jpeg",
+      "imageAlt": "Whispering-gallery-mode lasing in GaN microrods, including the light-ray and field-profile inset.",
+      "imageLabel": "Figure 2",
+      "imageSource": "https://doi.org/10.1063/1.4902373",
+      "imageWidth": 520,
+      "imageHeight": 440,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0.6730769230769231,
+        "y": 0.04090909090909091,
+        "width": 0.14423076923076922,
+        "height": 0.31363636363636366,
+        "label": "Quasi-WGM cavity and field schematic (Figure 2b inset)"
+      }
+    },
+    {
+      "id": "pub-37",
+      "title": "Photoluminescence of excitons and defects in ZnSe-based longitudinal twinning nanowires",
+      "authors": "J. Xu, C. Wang, A. Lu, B. Wu, X. Chen, H. Oh, Hyeonjun Baek, G.-C. Yi, and L. Ouyang",
+      "journal": "Journal of Physics D: Applied Physics 47, 485302 (2014)",
+      "year": 2014,
+      "doi": "10.1088/0022-3727/47/48/485302",
+      "url": "https://iopscience.iop.org/article/10.1088/0022-3727/47/48/485302",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-37.jpg",
+      "imageAlt": "Electron microscopy of the ZnSe-based longitudinal twinning nanowires studied in the paper.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://iopscience.iop.org/article/10.1088/0022-3727/47/48/485302#d503798f01",
+      "imageWidth": 1259,
+      "imageHeight": 1115,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.4988085782366958,
+        "height": 0.568609865470852,
+        "label": "Representative nanowire TEM (Figure 1a)"
+      }
+    },
+    {
+      "id": "pub-38",
+      "title": "Twinning effect on photoluminescence spectra of ZnSe nanowires",
+      "authors": "J. Xu, C. Wang, B. Wu, X. Xu, X. Chen, H. Oh, Hyeonjun Baek, and G.-C. Yi",
+      "journal": "Journal of Applied Physics 116, 174303 (2014)",
+      "year": 2014,
+      "doi": "",
+      "url": "https://pubs.aip.org/aip/jap/article/116/17/174303/281433/Twinning-effect-on-photoluminescence-spectra-of",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-38-original.jpeg",
+      "imageAlt": "Twin-plane crystal structure, zinc-blende and wurtzite bandgaps, and the band model of ZnSe twinning nanowires.",
+      "imageLabel": "Figure 3",
+      "imageSource": "https://doi.org/10.1063/1.4900850",
+      "imageWidth": 520,
+      "imageHeight": 510,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.4673076923076923,
+        "height": 0.4196078431372549,
+        "label": "Twin-plane atomic structure (Figure 3a)"
+      }
+    },
+    {
+      "id": "pub-39",
+      "title": "Growth and characterizations of GaN micro-rods on graphene films for flexible light emitting diodes",
+      "authors": "K. Chung, Hyeonjun Baek, Y. Tchoe, H. Oh, H. Yoo, M. Kim, and G.-C. Yi",
+      "journal": "APL Materials 2, 092512 (2014)",
+      "year": 2014,
+      "doi": "10.1063/1.4894780",
+      "url": "https://doi.org/10.1063/1.4894780",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "notes": "Corrected original article number using the AIP publisher page.",
+      "image": "assets/publications/pub-39.jpg",
+      "imageAlt": "Graphene transfer, GaN buffer growth and vertical microrod growth process.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://pubs.aip.org/aip/apm/article/2/9/092512/150627",
+      "imageWidth": 520,
+      "imageHeight": 542,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0.6538461538461539,
+        "y": 0,
+        "width": 0.34615384615384615,
+        "height": 0.26014760147601473,
+        "label": "GaN microrods on graphene (Figure 1a, stage iii)"
+      }
+    },
+    {
+      "id": "pub-40",
+      "title": "Stimulated Emission Features of Bound Excitons in ZnO Nanotubes",
+      "authors": "D. M. Kim, Y.-H. Cho, H. Jeong, Hyeonjun Baek, G.-C. Yi, and Y. D. Jho",
+      "journal": "Journal of Nanoscience and Nanotechnology 14, 5293, (2014)",
+      "year": 2014,
+      "doi": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24758019/",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-41",
+      "title": "ZnSe‐based longitudinal twinning nanowires",
+      "authors": "J. Xu, A. Lu, C. Wang, R. Zou, X. Liu, X. Wu, Y. Wang, S. Li, L. Sun, X. Chen, H. Oh, Hyeonjun Baek, G.‐C. Yi, and J. Chu",
+      "journal": "Advanced Engineering Materials 16, 459 (2014)",
+      "year": 2014,
+      "doi": "10.1002/adem.201300405",
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adem.201300405",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-41-original.jpg",
+      "imageAlt": "Wurtzite and zinc-blende atomic arrangements and the growth model for ZnSe longitudinal twinning nanowires.",
+      "imageLabel": "Figure 4",
+      "imageSource": "https://doi.org/10.1002/adem.201300405",
+      "imageWidth": 623,
+      "imageHeight": 238,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.4895666131621188,
+        "height": 1,
+        "label": "Atomic arrangements and stacking schematic (Figure 4a–c)"
+      }
+    },
+    {
+      "id": "pub-42",
+      "title": "Epitaxial GaN Microdisk Lasers Grown on Graphene Microdots",
+      "authors": "Hyeonjun Baek, C.-H. Lee, K. Chung, and G.-C. Yi",
+      "journal": "Nano Letters 13, 2782 (2013).",
+      "year": 2013,
+      "doi": "10.1021/nl401011x",
+      "url": "https://pubs.acs.org/doi/10.1021/nl401011x",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-42-original.png",
+      "imageAlt": "GaN microdisk laser architecture grown on graphene microdots.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://doi.org/10.1021/nl401011x",
+      "imageWidth": 520,
+      "imageHeight": 242,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-43",
+      "title": "High-quality GaN films grown on chemical vapor-deposited graphene films",
+      "authors": "K. Chung, S. I. Park, Hyeonjun Baek, J.-S. Chung, and G.-C. Yi",
+      "journal": "NPG Asia Materials 4, e24 (2012)",
+      "year": 2012,
+      "doi": "",
+      "url": "https://www.nature.com/articles/am201245",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-43.jpg",
+      "imageAlt": "GaN LED pixel structure on CVD graphene and visible electroluminescence.",
+      "imageLabel": "Figure 4",
+      "imageSource": "https://www.nature.com/articles/am201245/figures/4",
+      "imageWidth": 649,
+      "imageHeight": 418,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ],
+      "imagePreview": {
+        "x": 0.4899845916795069,
+        "y": 0,
+        "width": 0.5100154083204931,
+        "height": 0.6698564593301436,
+        "label": "GaN LED layer structure (Figure 4a, right)"
+      }
+    },
+    {
+      "id": "pub-44",
+      "title": "Position- and Morphology-Controlled ZnO Nanostructures Grown on Graphene Layers",
+      "authors": "Y.-J. Kim, H. Yoo, C.-H. Lee, J. B. Park, Hyeonjun Baek, M. Kim, and G.-C. Yi",
+      "journal": "Advanced Materials 24, 5565 (2012)",
+      "year": 2012,
+      "doi": "10.1002/adma.201201966",
+      "url": "https://doi.org/10.1002/adma.201201966",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-44-original.jpg",
+      "imageAlt": "Position- and morphology-controlled zinc oxide nanostructures on graphene layers.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://doi.org/10.1002/adma.201201966",
+      "imageWidth": 312,
+      "imageHeight": 156,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-45",
+      "title": "Tunable Catalytic Alloying Eliminates Stacking Faults in Compound Semiconductor Nanowires",
+      "authors": "H. Heo, K. Kang, D. Lee, L.-H. Jin, Hyeonjun Baek, I. Hwang, M. Kim, H.-S. Lee, B.-J. Lee, G.-C. Yi, Y.-H. Cho, and M.-H. Jo",
+      "journal": "Nano Letters 12, 855 (2012)",
+      "year": 2012,
+      "doi": "10.1021/nl203900q",
+      "url": "https://pubs.acs.org/doi/10.1021/nl203900q",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-45-original.png",
+      "imageAlt": "Catalyst alloy composition controlling stacking faults during compound-semiconductor nanowire growth.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://doi.org/10.1021/nl203900q",
+      "imageWidth": 520,
+      "imageHeight": 219,
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    },
+    {
+      "id": "pub-46",
+      "title": "GaN/ZnO Nanotube Heterostructure Light-Emitting Diodes Fabricated on Si",
+      "authors": "C.-H. Lee, Y. J. Hong, Y.-J. Kim, J. Yoo, Hyeonjun Baek, S.-R. Jeon, S.-J. Le, and G.-C. Yi",
+      "journal": "IEEE Journal of Selected Topics in Quantum Electronics 17, 966 (2010)",
+      "year": 2010,
+      "doi": "",
+      "url": "https://ieeexplore.ieee.org/document/5579990",
+      "featured": false,
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "image": "assets/publications/pub-46-fig2.gif",
+      "imageAlt": "Fabrication schematic and SEM image of GaN-based micro-LED arrays on silicon.",
+      "imageLabel": "Figure 2",
+      "imageSource": "https://ieeexplore.ieee.org/document/5579990",
+      "imageWidth": 820,
+      "imageHeight": 800,
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.6,
+        "label": "Figure 2a"
+      },
+      "labAuthors": [
+        "Hyeonjun Baek"
+      ]
+    }
+  ],
+  "news": [
+    {
+      "id": "news-2026-glamp-junha-park-award",
+      "date": "2026-10-27",
+      "category": "Awards",
+      "title": "G-LAMP Undergraduate Research Program (Spring 2026): Award Received — Junha Park",
+      "body": "Junha Park, an undergraduate researcher, received an award at the G-LAMP Undergraduate Research Program final presentation for Spring 2026.\n\nCongratulations on this well-deserved achievement.",
+      "summary": "Junha Park, an undergraduate researcher, received an award at the G-LAMP Undergraduate Research Program final presentation for Spring 2026.",
+      "url": "",
+      "source": "User-provided lab update, 2026-11-01",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/news-2026-glamp-junha-park-award-display.webp",
+          "alt": "Group photograph at the G-LAMP undergraduate research award ceremony on October 27, 2026.",
+          "width": 1600,
+          "height": 1200,
+          "fullSrc": "assets/posts/news-2026-glamp-junha-park-award-original.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "Junha Park, an undergraduate researcher, received an award at the G-LAMP Undergraduate Research Program final presentation for Spring 2026."
+        },
+        {
+          "type": "paragraph",
+          "text": "Congratulations on this well-deserved achievement."
+        }
+      ],
+      "image": "assets/posts/news-2026-glamp-junha-park-award-display.webp",
+      "imageAlt": "Group photograph at the G-LAMP undergraduate research award ceremony on October 27, 2026."
+    },
+    {
+      "id": "news-2026-kps-yongju-jeong-oral-award",
+      "date": "2026-10-22",
+      "category": "Awards",
+      "title": "2026 KPS Fall: Oral Presentation Award — Yongju Jeong",
+      "body": "Yongju Jeong received an Oral Presentation Award at the 2026 KPS Fall Meeting.\n\nCongratulations on this well-deserved achievement.",
+      "summary": "Yongju Jeong received an Oral Presentation Award at the 2026 KPS Fall Meeting.",
+      "url": "",
+      "source": "User-provided lab update, 2026-11-01",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/news-2026-kps-yongju-jeong-oral-award-display.webp",
+          "alt": "Yongju Jeong presenting at the 2026 KPS Fall Meeting.",
+          "width": 1600,
+          "height": 1200,
+          "fullSrc": "assets/posts/news-2026-kps-yongju-jeong-oral-award-original.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "Yongju Jeong received an Oral Presentation Award at the 2026 KPS Fall Meeting."
+        },
+        {
+          "type": "paragraph",
+          "text": "Congratulations on this well-deserved achievement."
+        }
+      ],
+      "image": "assets/posts/news-2026-kps-yongju-jeong-oral-award-display.webp",
+      "imageAlt": "Yongju Jeong presenting at the 2026 KPS Fall Meeting."
+    },
+    {
+      "id": "news-2026-kps-taegyu-jang-poster-award",
+      "date": "2026-10-21",
+      "category": "Awards",
+      "title": "2026 KPS Fall: Poster Presentation Award — Taegyu Jang",
+      "body": "Taegyu Jang received a Poster Presentation Award at the 2026 KPS Fall Meeting.\n\nCongratulations on this well-deserved achievement.",
+      "summary": "Taegyu Jang received a Poster Presentation Award at the 2026 KPS Fall Meeting.",
+      "url": "",
+      "source": "User-provided lab update, 2026-11-01",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/news-2026-kps-taegyu-jang-poster-award-display.webp",
+          "alt": "Taegyu Jang's poster with an Outstanding Poster Presentation Awards ribbon at the 2026 KPS Fall Meeting.",
+          "width": 1200,
+          "height": 1600,
+          "fullSrc": "assets/posts/news-2026-kps-taegyu-jang-poster-award-original.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "Taegyu Jang received a Poster Presentation Award at the 2026 KPS Fall Meeting."
+        },
+        {
+          "type": "paragraph",
+          "text": "Congratulations on this well-deserved achievement."
+        }
+      ],
+      "image": "assets/posts/news-2026-kps-taegyu-jang-poster-award-display.webp",
+      "imageAlt": "Taegyu Jang's poster with an Outstanding Poster Presentation Awards ribbon at the 2026 KPS Fall Meeting."
+    },
+    {
+      "id": "news-2026-kps-seongwon-gim-poster",
+      "date": "2026-10-21",
+      "category": "Conferences",
+      "title": "2026 KPS Fall: Oral & Poster Presentations",
+      "body": "Seongwon Gim, Hyunjun Jo and Taegyu Jang presented posters, and Yongju Jeong delivered an oral presentation at the 2026 KPS Fall Meeting.\n\nJihyun Lee also attended the meeting.",
+      "summary": "Seongwon Gim, Hyunjun Jo and Taegyu Jang presented posters, and Yongju Jeong delivered an oral presentation at the 2026 KPS Fall Meeting.\n\nJihyun Lee also attended the meeting.",
+      "url": "",
+      "source": "User-provided lab update, 2026-11-01",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Seongwon Gim, Hyunjun Jo and Taegyu Jang presented posters, and Yongju Jeong delivered an oral presentation at the 2026 KPS Fall Meeting."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jihyun Lee also attended the meeting."
+        }
+      ],
+      "image": "",
+      "imageAlt": "",
+      "aliases": [
+        "news-2026-kps-hyunjun-jo-poster"
+      ]
+    },
+    {
+      "id": "news-08",
+      "date": "2026-08-03",
+      "category": "Awards",
+      "title": "BK21 FOUR 4th Workshop: Outstanding Poster Award — Yongju Jeong",
+      "body": "Yongju Jeong received the Outstanding Poster Award at the 4th BK21 FOUR Physics Workshop in 2026.\n\nCongratulations on this well-deserved achievement.",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/post/bk21-four-4th-workshop-outstanding-poster-award",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/post/bk21-four-4th-workshop-outstanding-poster-award",
+      "image": "assets/posts/news-08-1-display.webp",
+      "imageAlt": "BK21 FOUR 4th Workshop: Outstanding Poster Award",
+      "summary": "Yongju Jeong received the Outstanding Poster Award at the 4th BK21 FOUR Physics Workshop in 2026.",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/news-08-1-display.webp",
+          "alt": "BK21 FOUR 4th Workshop: Outstanding Poster Award",
+          "width": 1600,
+          "height": 1200,
+          "fullSrc": "assets/posts/news-08-1.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "Yongju Jeong received the Outstanding Poster Award at the 4th BK21 FOUR Physics Workshop in 2026.",
+          "children": [
+            {
+              "text": "Yongju Jeong received the Outstanding Poster Award at the 4th BK21 FOUR Physics Workshop in 2026."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Congratulations on this well-deserved achievement.",
+          "children": [
+            {
+              "text": "Congratulations on this well-deserved achievement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "news-2026-bk21-four-4th-workshop",
+      "date": "2026-08-03",
+      "category": "Conferences",
+      "title": "BK21 FOUR 4th Workshop: Poster Presentations",
+      "body": "Seongwon Gim, Yongju Jeong, Hyunjun Jo and Taegyu Jang presented posters at the 4th BK21 FOUR Physics Workshop.\n\nAll other lab members also attended the workshop.",
+      "summary": "Seongwon Gim, Yongju Jeong, Hyunjun Jo and Taegyu Jang presented posters at the 4th BK21 FOUR Physics Workshop.\n\nAll other lab members also attended the workshop.",
+      "url": "",
+      "source": "User-provided lab update, 2026-11-01; event date from existing BK21 FOUR 4th Workshop record (news-08).",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Seongwon Gim, Yongju Jeong, Hyunjun Jo and Taegyu Jang presented posters at the 4th BK21 FOUR Physics Workshop."
+        },
+        {
+          "type": "paragraph",
+          "text": "All other lab members also attended the workshop."
+        }
+      ],
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "id": "news-09",
+      "date": "2026-03-24",
+      "category": "Awards",
+      "title": "G-LAMP Undergraduate Research Program (Fall 2025): Award Received — Jihyun Lee",
+      "body": "Jihyun Lee, currently a master's student, received an award at the G-LAMP Undergraduate Research Program final presentation for Fall 2025 in recognition of outstanding research performance. Congratulations on this well-deserved achievement.",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/post/g-lamp-undergraduate-research-program-fall-2025-award-received",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/post/g-lamp-undergraduate-research-program-fall-2025-award-received",
+      "summary": "Jihyun Lee, currently a master's student, received an award at the G-LAMP Undergraduate Research Program final presentation for Fall 2025 in recognition of outstanding research performance. Congratulations on this well-deserved achievement.",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/news-09-1-display.webp",
+          "alt": "G-LAMP Undergraduate Research Program (Fall 2025): Award Received",
+          "width": 1600,
+          "height": 1199,
+          "fullSrc": "assets/posts/news-09-1.png"
+        },
+        {
+          "type": "paragraph",
+          "text": "Jihyun Lee, currently a master's student, received an award at the G-LAMP Undergraduate Research Program final presentation for Fall 2025 in recognition of outstanding research performance. Congratulations on this well-deserved achievement.",
+          "children": [
+            {
+              "text": "Jihyun Lee, currently a master's student, received an award at the G-LAMP Undergraduate Research Program final presentation for Fall 2025 in recognition of outstanding research performance. Congratulations on this well-deserved achievement."
+            }
+          ]
+        }
+      ],
+      "image": "assets/posts/news-09-1-display.webp",
+      "imageAlt": "G-LAMP Undergraduate Research Program (Fall 2025): Award Received"
+    },
+    {
+      "id": "news-10",
+      "date": "2026-02-05",
+      "category": "Conferences",
+      "title": "BK21 FOUR 3rd Workshop: Oral & Poster Presentations",
+      "body": "All lab members attended the 3rd BK21 FOUR Physics Workshop.\n\nYongju Jeong delivered an oral presentation on “Stark Shift and Band Alignment Transition in Multilayer InSe/Bilayer TMD Heterostructures.” Seongwon Gim presented a poster at the workshop.",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/post/bk21-four-3rd-workshop-oral-presentation",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/post/bk21-four-3rd-workshop-oral-presentation",
+      "summary": "All lab members attended the 3rd BK21 FOUR Physics Workshop.\n\nYongju Jeong delivered an oral presentation on “Stark Shift and Band Alignment Transition in Multilayer InSe/Bilayer TMD Heterostructures.” Seongwon Gim presented a poster at the workshop.",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/news-10-1-display.webp",
+          "alt": "BK21 FOUR 3rd Workshop.",
+          "width": 1600,
+          "height": 1200,
+          "fullSrc": "assets/posts/news-10-1.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "All lab members attended the 3rd BK21 FOUR Physics Workshop."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yongju Jeong delivered an oral presentation on “Stark Shift and Band Alignment Transition in Multilayer InSe/Bilayer TMD Heterostructures.” Seongwon Gim presented a poster at the workshop."
+        }
+      ],
+      "image": "assets/posts/news-10-1-display.webp",
+      "imageAlt": "BK21 FOUR 3rd Workshop."
+    },
+    {
+      "id": "news-11",
+      "date": "2026-02-05",
+      "category": "Awards",
+      "title": "BK21 FOUR 3rd Workshop: Awards Received — Seongwon Gim",
+      "body": "Seongwon Gim was honored with both the Best Paper Award and the Most Papers Award for outstanding research contributions. Congratulations on this well-deserved achievement.",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/post/bk21-four-3rd-workshop-awards-received",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/post/bk21-four-3rd-workshop-awards-received",
+      "summary": "Seongwon Gim was honored with both the Best Paper Award and the Most Papers Award for outstanding research contributions. Congratulations on this well-deserved achievement.",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/news-11-1-display.webp",
+          "alt": "BK21 FOUR 3rd Workshop: Awards Received",
+          "width": 1600,
+          "height": 1200,
+          "fullSrc": "assets/posts/news-11-1.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "Seongwon Gim was honored with both the Best Paper Award and the Most Papers Award for outstanding research contributions. Congratulations on this well-deserved achievement.",
+          "children": [
+            {
+              "text": "Seongwon Gim was honored with both the Best Paper Award and the Most Papers Award for outstanding research contributions. Congratulations on this well-deserved achievement."
+            }
+          ]
+        }
+      ],
+      "image": "assets/posts/news-11-1-display.webp",
+      "imageAlt": "BK21 FOUR 3rd Workshop: Awards Received"
+    },
+    {
+      "id": "news-12",
+      "date": "2025-12-08",
+      "category": "Conferences",
+      "title": "ICAMD 2025: Poster Presentation",
+      "body": "Seongwon Gim presented a poster titled “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers” at ICAMD 2025.\n\nYongju Jeong and Taegyu Jang also attended the conference.",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/post/icamd-2025-poster-presentation",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/post/icamd-2025-poster-presentation",
+      "summary": "Seongwon Gim presented a poster titled “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers” at ICAMD 2025.\n\nYongju Jeong and Taegyu Jang also attended the conference.",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/news-12-1-display.webp",
+          "alt": "ICAMD 2025: Poster Presentation",
+          "width": 795,
+          "height": 439,
+          "fullSrc": "assets/posts/news-12-1.png"
+        },
+        {
+          "type": "paragraph",
+          "text": "Seongwon Gim presented a poster titled “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers” at ICAMD 2025."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yongju Jeong and Taegyu Jang also attended the conference."
+        }
+      ],
+      "image": "assets/posts/news-12-1-display.webp",
+      "imageAlt": "ICAMD 2025: Poster Presentation"
+    },
+    {
+      "id": "news-13",
+      "date": "2024-10-23",
+      "category": "Conferences",
+      "title": "2024 KPS Fall: Poster Presentations",
+      "body": "Seongwon Gim and Yongju Jeong presented posters at the 2024 KPS Fall Meeting. Hyunjun Jo also attended the meeting.",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/post/2024-kps-fall-poster-presentation-1",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/post/2024-kps-fall-poster-presentation-1",
+      "summary": "Seongwon Gim and Yongju Jeong presented posters at the 2024 KPS Fall Meeting. Hyunjun Jo also attended the meeting.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Seongwon Gim and Yongju Jeong presented posters at the 2024 KPS Fall Meeting. Hyunjun Jo also attended the meeting."
+        },
+        {
+          "type": "heading",
+          "text": "Poster presentations"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Seongwon Gim: WSe₂/SiN nanopillars for enhanced coupling efficiency with in-plane waveguide",
+            "Yongju Jeong: Trapped interlayer exciton arrays in WS₂/WSe₂ heterostructures using patterned graphite electrodes"
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/posts/news-13-1-display.webp",
+          "alt": "Seongwon Gim presenting a poster at the 2024 KPS Fall Meeting.",
+          "width": 1118,
+          "height": 688,
+          "fullSrc": "assets/posts/news-13-1.png",
+          "caption": "Seongwon Gim — 2024 KPS Fall poster presentation."
+        },
+        {
+          "type": "image",
+          "src": "assets/posts/news-14-1-display.webp",
+          "alt": "Yongju Jeong presenting a poster at the 2024 KPS Fall Meeting.",
+          "width": 1200,
+          "height": 1600,
+          "fullSrc": "assets/posts/news-14-1.jpg",
+          "caption": "Yongju Jeong — 2024 KPS Fall poster presentation."
+        }
+      ],
+      "image": "assets/posts/news-13-1-display.webp",
+      "imageAlt": "Seongwon Gim presenting a poster at the 2024 KPS Fall Meeting.",
+      "aliases": [
+        "news-14"
+      ],
+      "mergedSources": [
+        "https://baahyyjuu.wixsite.com/hyeonjun/post/2024-kps-fall-poster-presentation-1",
+        "https://baahyyjuu.wixsite.com/hyeonjun/post/2024-kps-fall-poster-presentation"
+      ]
+    },
+    {
+      "id": "activity-1",
+      "date": "2026-04-21",
+      "category": "Activities",
+      "title": "2026년 봄맞이 난지캠핑장 연구실 워크숍",
+      "body": "",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/highlights",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/highlights",
+      "image": "assets/posts/activity-1-1-display.webp",
+      "imageAlt": "2026년 봄맞이 난지캠핑장 연구실 워크숍",
+      "summary": "",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/activity-1-1-display.webp",
+          "alt": "2026년 봄맞이 난지캠핑장 연구실 워크숍",
+          "width": 1600,
+          "height": 1200,
+          "fullSrc": "assets/posts/activity-1-1.jpg"
+        }
+      ]
+    },
+    {
+      "id": "activity-2",
+      "date": "2025-02-21",
+      "category": "Activities",
+      "title": "2025년 2월 졸업식",
+      "body": "",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/highlights",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/highlights",
+      "summary": "",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/activity-2-1-display.webp",
+          "alt": "2025년 2월 졸업식",
+          "width": 1600,
+          "height": 1199,
+          "fullSrc": "assets/posts/activity-2-1.jpg"
+        }
+      ],
+      "image": "assets/posts/activity-2-1-display.webp",
+      "imageAlt": "2025년 2월 졸업식"
+    },
+    {
+      "id": "news-2024-bk21-four-1st-workshop",
+      "date": "2024-07-22",
+      "category": "Conferences",
+      "title": "BK21 FOUR 1st Workshop: Poster Presentations",
+      "body": "Seongwon Gim and Yongju Jeong presented posters at the 1st BK21 FOUR Physics Workshop.",
+      "url": "",
+      "source": "User-provided lab update, 2026-11-01",
+      "image": "assets/posts/bk21-four-1st-workshop.jpg",
+      "imageAlt": "Poster presentation at the BK21 FOUR 1st Workshop.",
+      "summary": "Seongwon Gim and Yongju Jeong presented posters at the 1st BK21 FOUR Physics Workshop.",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/bk21-four-1st-workshop.jpg",
+          "fullSrc": "assets/posts/bk21-four-1st-workshop.jpg",
+          "alt": "Poster presentation at the BK21 FOUR 1st Workshop.",
+          "width": 1050,
+          "height": 1400
+        },
+        {
+          "type": "paragraph",
+          "text": "Seongwon Gim and Yongju Jeong presented posters at the 1st BK21 FOUR Physics Workshop."
+        }
+      ]
+    },
+    {
+      "id": "news-2025-bk21-four-2nd-workshop",
+      "date": "2025-08-22",
+      "category": "Conferences",
+      "title": "BK21 FOUR 2nd Workshop: Oral Presentation",
+      "body": "Seongwon Gim delivered an oral presentation on “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers” at the 2nd BK21 FOUR Physics Workshop.",
+      "url": "",
+      "source": "User-provided lab update, 2026-11-01; presentation title from existing ICAMD 2025 record (news-12), as confirmed by the user.",
+      "image": "assets/posts/bk21-four-2nd-oral.jpg",
+      "imageAlt": "Oral presentation at the BK21 FOUR 2nd Workshop.",
+      "summary": "Seongwon Gim delivered an oral presentation on “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers” at the 2nd BK21 FOUR Physics Workshop.",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/bk21-four-2nd-oral.jpg",
+          "fullSrc": "assets/posts/bk21-four-2nd-oral.jpg",
+          "alt": "Oral presentation at the BK21 FOUR 2nd Workshop.",
+          "caption": "BK21 FOUR 2nd Workshop — Oral presentation.",
+          "width": 3603,
+          "height": 2702
+        },
+        {
+          "type": "paragraph",
+          "text": "Seongwon Gim delivered an oral presentation on “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers” at the 2nd BK21 FOUR Physics Workshop."
+        }
+      ]
+    },
+    {
+      "id": "news-2026-ceqmf-3rd-workshop",
+      "date": "2026-01-26",
+      "category": "Conferences",
+      "title": "3rd Workshop on Functional Quantum Matter: Oral Presentation",
+      "body": "Seongwon Gim delivered an oral presentation on “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers” at the 3rd Workshop on Functional Quantum Matter (CeQMF) in Muju.\n\nHyunjun Jo also attended the workshop.",
+      "summary": "Seongwon Gim delivered an oral presentation on “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers” at the 3rd Workshop on Functional Quantum Matter (CeQMF) in Muju.\n\nHyunjun Jo also attended the workshop.",
+      "url": "",
+      "source": "User-provided lab update, 2026-11-01",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/ceqmf-3rd-seongwon-gim-oral.jpg",
+          "fullSrc": "assets/posts/ceqmf-3rd-seongwon-gim-oral.jpg",
+          "alt": "Seongwon Gim delivering an oral presentation at the 3rd Workshop on Functional Quantum Matter.",
+          "caption": "Seongwon Gim — Oral presentation.",
+          "width": 4000,
+          "height": 3000
+        },
+        {
+          "type": "paragraph",
+          "text": "Seongwon Gim delivered an oral presentation on “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers” at the 3rd Workshop on Functional Quantum Matter (CeQMF) in Muju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hyunjun Jo also attended the workshop."
+        }
+      ],
+      "image": "assets/posts/ceqmf-3rd-seongwon-gim-oral.jpg",
+      "imageAlt": "Seongwon Gim delivering an oral presentation at the 3rd Workshop on Functional Quantum Matter."
+    },
+    {
+      "id": "news-2025-ceqmf-2nd-workshop",
+      "date": "2025-02-10",
+      "category": "Conferences",
+      "title": "2nd Workshop on Functional Quantum Matter: Oral & Poster Presentations",
+      "body": "Yongju Jeong delivered an oral presentation on “Electrostatic trapping of interlayer exciton arrays in WS₂/WSe₂ heterostructures using patterned graphite electrodes” at the 2nd Workshop on Functional Quantum Matter (CeQMF).\n\nSeongwon Gim presented a poster at the workshop.",
+      "summary": "Yongju Jeong delivered an oral presentation on “Electrostatic trapping of interlayer exciton arrays in WS₂/WSe₂ heterostructures using patterned graphite electrodes” at the 2nd Workshop on Functional Quantum Matter (CeQMF).\n\nSeongwon Gim presented a poster at the workshop.",
+      "url": "",
+      "source": "User-provided lab update, 2026-11-01",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/ceqmf-2nd-yongju-jeong-oral.jpg",
+          "fullSrc": "assets/posts/ceqmf-2nd-yongju-jeong-oral.jpg",
+          "alt": "Yongju Jeong delivering an oral presentation at the 2nd Workshop on Functional Quantum Matter.",
+          "caption": "Yongju Jeong — Oral presentation.",
+          "width": 1496,
+          "height": 1496
+        },
+        {
+          "type": "paragraph",
+          "text": "Yongju Jeong delivered an oral presentation on “Electrostatic trapping of interlayer exciton arrays in WS₂/WSe₂ heterostructures using patterned graphite electrodes” at the 2nd Workshop on Functional Quantum Matter (CeQMF)."
+        },
+        {
+          "type": "image",
+          "src": "assets/posts/ceqmf-2nd-seongwon-gim-poster.jpg",
+          "fullSrc": "assets/posts/ceqmf-2nd-seongwon-gim-poster.jpg",
+          "alt": "Seongwon Gim presenting a poster at the 2nd Workshop on Functional Quantum Matter.",
+          "caption": "Seongwon Gim — Poster presentation.",
+          "width": 3000,
+          "height": 4000
+        },
+        {
+          "type": "paragraph",
+          "text": "Seongwon Gim presented a poster at the workshop."
+        }
+      ],
+      "image": "assets/posts/ceqmf-2nd-yongju-jeong-oral.jpg",
+      "imageAlt": "Yongju Jeong delivering an oral presentation at the 2nd Workshop on Functional Quantum Matter."
+    },
+    {
+      "id": "news-2025-applied-physics-academy",
+      "date": "2025-02-10",
+      "category": "Conferences",
+      "title": "4th Applied Physics Academy: Attendance",
+      "body": "Hyunjun Jo attended the 4th Applied Physics Academy (응용물리아카데미).",
+      "summary": "Hyunjun Jo attended the 4th Applied Physics Academy (응용물리아카데미).",
+      "url": "",
+      "source": "User-provided lab update, 2026-11-01",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/applied-physics-academy-4th.png",
+          "fullSrc": "assets/posts/applied-physics-academy-4th.png",
+          "alt": "Group photo from the 4th Applied Physics Academy.",
+          "width": 804,
+          "height": 450
+        },
+        {
+          "type": "paragraph",
+          "text": "Hyunjun Jo attended the 4th Applied Physics Academy (응용물리아카데미)."
+        }
+      ],
+      "image": "assets/posts/applied-physics-academy-4th.png",
+      "imageAlt": "Group photo from the 4th Applied Physics Academy."
+    }
+  ],
+  "people": [
+    {
+      "id": "person-1",
+      "name": "Hyeonjun Baek",
+      "role": "Principal Investigator",
+      "description": "Professional Experiences\n2022.03 - present: Assistant professor, Sogang University\n2020.12 - 2022.02: Senior researcher, Korea Institute of Science and Technology (KIST)\n2020.09 - 2020.12: Research professor, Korea University\n2018.08 - 2020.08: Research Associate, Heriot-Watt University\n2016.09 - 2018.07: Senior engineer, Samsung electronics\nEducation\n2008.03 - 2016.08: Ph. D., Department of Physics and Astronomy, Seoul National University, Seoul, Korea\n2004.03 - 2008.02: B.S., Department of Physics and Astronomy, Seoul National University, Seoul, Korea",
+      "email": "hjbaek@sogang.ac.kr",
+      "image": "assets/people/hyeonjun-baek.webp",
+      "url": "",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/professor"
+    },
+    {
+      "id": "person-2",
+      "name": "Seongwon Gim",
+      "role": "PhD student",
+      "description": "삼성디스플레이 산학장학생",
+      "email": "kh8147@naver.com",
+      "image": "assets/people/seongwon-gim.webp",
+      "url": "",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students"
+    },
+    {
+      "id": "person-3",
+      "name": "Yongju Jeong",
+      "role": "PhD student",
+      "description": "",
+      "email": "yjjeong@sogang.ac.kr",
+      "image": "assets/people/yongju-jeong.webp",
+      "url": "",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students"
+    },
+    {
+      "id": "person-4",
+      "name": "Hyunjun Jo",
+      "role": "PhD student",
+      "description": "",
+      "email": "jhjray@naver.com",
+      "image": "assets/people/hyunjun-jo.webp",
+      "url": "",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students"
+    },
+    {
+      "id": "person-5",
+      "name": "Geonho Lee",
+      "role": "Master’s student",
+      "description": "삼성전자 산학장학생",
+      "email": "dlrjsgh@sogang.ac.kr",
+      "image": "assets/people/geonho-lee.webp",
+      "url": "",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students"
+    },
+    {
+      "id": "person-7",
+      "name": "Taegyu Jang",
+      "role": "Master’s student",
+      "description": "",
+      "email": "tgjang@sogang.ac.kr",
+      "image": "assets/people/taegyu-jang.webp",
+      "url": "",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students"
+    },
+    {
+      "id": "person-8",
+      "name": "Hansoo Chae",
+      "role": "Master’s student",
+      "description": "",
+      "email": "hanschae@naver.com",
+      "image": "assets/people/hansoo-chae.webp",
+      "url": "",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students"
+    },
+    {
+      "id": "person-6",
+      "name": "Jihyun Lee",
+      "role": "Master’s student",
+      "description": "",
+      "email": "jihlee@sogang.ac.kr",
+      "image": "assets/people/jihyun-lee.webp",
+      "url": "",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students"
+    }
+  ],
+  "join": {
+    "title": "대학원생·학부연구생 모집",
+    "description": "참여 문의는 이메일로 보내주세요."
+  },
+  "provenance": {
+    "auditedAt": "2026-11-01",
+    "source": [
+      "https://baahyyjuu.wixsite.com/hyeonjun",
+      "https://baahyyjuu.wixsite.com/hyeonjun/publication",
+      "https://baahyyjuu.wixsite.com/hyeonjun/member",
+      "https://baahyyjuu.wixsite.com/hyeonjun/students",
+      "https://baahyyjuu.wixsite.com/hyeonjun/blog",
+      "https://baahyyjuu.wixsite.com/hyeonjun/highlights",
+      "https://baahyyjuu.wixsite.com/hyeonjun/research",
+      "https://baahyyjuu.wixsite.com/hyeonjun/moir%C3%A9-physics",
+      "https://baahyyjuu.wixsite.com/hyeonjun/general-1",
+      "https://baahyyjuu.wixsite.com/hyeonjun/%EB%B3%B5%EC%A0%9C-interlayer-excitons",
+      "https://baahyyjuu.wixsite.com/hyeonjun/%EB%B3%B5%EC%A0%9C-spdc",
+      "https://baahyyjuu.wixsite.com/hyeonjun/quantum-light-sources"
+    ],
+    "notes": [
+      "Publication archive includes the PI’s earlier research career; not all works originated at Sogang University.",
+      "People are migrated from the public Wix roster; confirm current membership before public launch.",
+      "Research descriptions are condensed editorial drafts based on the original site."
+    ]
+  },
+  "announcement": {
+    "enabled": true,
+    "title": "대학원생 및 학부연구 참여생 모집합니다.",
+    "body": "hjbaek@sogang.ac.kr",
+    "url": "join.html"
+  }
+}

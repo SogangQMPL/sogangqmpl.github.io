@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" width="420" height="300" role="img" aria-labelledby="title desc">
+<title id="title">Quantum light sources</title>
+<desc id="desc">Conceptual diagrams of a localized two-dimensional emitter producing a single photon and a pump producing a photon pair through SPDC; not experimental data.</desc>
+<defs>
+ <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#002e5d"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#7860bb"/></marker>
+</defs>
+<g font-family="Inter,Arial,sans-serif" fill="#002e5d">
+ <text x="26" y="43" font-size="17" font-weight="500">Single photons</text>
+ <text x="245" y="43" font-size="17" font-weight="500">Photon pairs</text>
+ <g fill="none" stroke="#bdc8d5" stroke-width="1.4">
+  <path d="M26 209L65 183H184L145 209ZM26 218L65 192H184L145 218Z"/>
+  <path d="M239 209L278 183H397L358 209ZM239 218L278 192H397L358 218Z"/>
+ </g>
+ <g fill="#7860bb" opacity=".7">
+  <circle cx="65" cy="193" r="3"/><circle cx="91" cy="193" r="3"/><circle cx="117" cy="193" r="3"/><circle cx="143" cy="193" r="3"/>
+  <circle cx="51" cy="203" r="3"/><circle cx="77" cy="203" r="3"/><circle cx="103" cy="203" r="3"/><circle cx="129" cy="203" r="3"/>
+  <circle cx="278" cy="193" r="3"/><circle cx="304" cy="193" r="3"/><circle cx="330" cy="193" r="3"/><circle cx="356" cy="193" r="3"/>
+  <circle cx="264" cy="203" r="3"/><circle cx="290" cy="203" r="3"/><circle cx="316" cy="203" r="3"/><circle cx="342" cy="203" r="3"/>
+ </g>
+ <circle cx="106" cy="190" r="8"/>
+ <path d="M106 173C94 163 118 155 106 145S94 127 106 117S118 99 106 90" fill="none" stroke="#002e5d" stroke-width="2.7" marker-end="url(#a)"/>
+ <path d="M318 74V175" stroke="#8c97a4" stroke-width="2.2" marker-end="url(#a)"/>
+ <circle cx="318" cy="190" r="4"/>
+ <path d="M313 180C301 169 301 156 289 151S278 135 265 124" fill="none" stroke="#002e5d" stroke-width="2.5" marker-end="url(#a)"/>
+ <path d="M323 180C335 169 335 156 347 151S358 135 371 124" fill="none" stroke="#7860bb" stroke-width="2.5" marker-end="url(#b)"/>
+ <text x="330" y="100" font-size="14" fill="#68717d">pump</text>
+ <text x="106" y="256" text-anchor="middle" font-size="15">Localized emitter</text>
+ <text x="318" y="256" text-anchor="middle" font-size="15">SPDC</text>
+</g>
+</svg>

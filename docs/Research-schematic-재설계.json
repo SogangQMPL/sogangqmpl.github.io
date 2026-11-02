@@ -1,0 +1,122 @@
+{
+  "updatedAt": "2026-11-01",
+  "method": "Simplified native SVGs: one or two core scenes per topic, no visible prose, labels, equations, legends or panel headings. Shared 600 × 400 canvas, clean line work and existing cool area palette.",
+  "scientificReferences": [
+    "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.166901",
+    "https://doi.org/10.1021/acsphotonics.5c02169",
+    "https://pubs.rsc.org/en/content/articlelanding/2025/ra/d5ra02010g",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12242375/",
+    "https://doi.org/10.1103/PhysRevA.60.R773"
+  ],
+  "notes": [
+    "Diagrams intentionally select core mechanisms rather than reproduce every concept in the research text.",
+    "Full right-hand summaries, focus terms, DETAIL prose and eleven original figures remain unchanged.",
+    "All thirteen related-paper mappings and bibliographic metadata remain unchanged.",
+    "Accessible SVG titles/descriptions and image alt text identify the selected mechanisms.",
+    "No experimental data, performance numbers or completed-device claims added. SPDC pair generation does not by itself establish entanglement."
+  ],
+  "diagrams": [
+    {
+      "id": "quantum-light-sources",
+      "file": "assets/research/topic-quantum-light.svg",
+      "width": 600,
+      "height": 400,
+      "visibleTextElements": 0,
+      "coreScenes": 2,
+      "mechanisms": [
+        "Moiré-localized emitter with photon emission",
+        "Nanodot coupling into a waveguide"
+      ],
+      "alt": "A moiré-localized emitter and a WSe₂ nanodot coupled to an optical waveguide.",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/quantum-light-sources",
+      "sourceFigureCount": 1,
+      "sha256": "c99d0e3f4c26222ba17b1edbc31f53f499127437d863e2643b65da15730d5a63"
+    },
+    {
+      "id": "spdc",
+      "file": "assets/research/topic-spdc.svg",
+      "width": 600,
+      "height": 400,
+      "visibleTextElements": 0,
+      "coreScenes": 1,
+      "mechanisms": [
+        "One incident pump and two outgoing photon modes in rotated 2D layers"
+      ],
+      "alt": "An incoming pump photon is converted into two outgoing photons in a twisted 2D material stack.",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/%EB%B3%B5%EC%A0%9C-interlayer-excitons",
+      "sourceFigureCount": 1,
+      "sha256": "481cad4975fb89c31b7f93cb2dd79ed2b63287c8332c825087c578f0431f1e96"
+    },
+    {
+      "id": "moire-physics",
+      "file": "assets/research/topic-moire.svg",
+      "width": 600,
+      "height": 400,
+      "visibleTextElements": 0,
+      "coreScenes": 2,
+      "mechanisms": [
+        "Relative layer twist",
+        "Periodic potential with localized electrons"
+      ],
+      "alt": "Twisted layers form a moiré pattern, alongside a periodic potential with localized particles.",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/moir%C3%A9-physics",
+      "sourceFigureCount": 4,
+      "sha256": "619ef62bc8e78d519e1bef2017d15b419f09120a47a925998f532d8bb155e6ae"
+    },
+    {
+      "id": "interlayer-excitons",
+      "file": "assets/research/topic-interlayer.svg",
+      "width": 600,
+      "height": 400,
+      "visibleTextElements": 0,
+      "coreScenes": 1,
+      "mechanisms": [
+        "Electron and hole in separate layers",
+        "Patterned electrodes and electric-field control in the same structure"
+      ],
+      "alt": "An electron and a hole in separate 2D layers, with gates providing electrical control and confinement.",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/general-1",
+      "sourceFigureCount": 4,
+      "sha256": "e7ee525c8b0439d7735c53b6c4eb2dab6512b737d2d82b185229462851ce05b3"
+    },
+    {
+      "id": "2d-semiconductor-devices",
+      "file": "assets/research/topic-devices.svg",
+      "width": 600,
+      "height": 400,
+      "visibleTextElements": 0,
+      "coreScenes": 1,
+      "mechanisms": [
+        "One source–channel–drain transistor over an insulating dielectric and back gate",
+        "Incident light and a gate field as controls in the same device"
+      ],
+      "alt": "A light-sensitive 2D transistor with source and drain contacts, an insulating dielectric and a back gate.",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/%EB%B3%B5%EC%A0%9C-spdc",
+      "sourceFigureCount": 1,
+      "sha256": "9c07ec253cfd47c50593076c2584dc640f23f6edf4f9451ae694d904d5ab0de5"
+    }
+  ],
+  "validation": {
+    "diagramCount": 5,
+    "zeroVisibleText": true,
+    "independentPhysicsAndGeometryReview": "passed",
+    "browserVisualReview": "passed after final one-arrow device refinement; five images loaded in the comparison gallery, actual page checked on desktop and mobile",
+    "experimentalDataInvented": false,
+    "relatedPaperMappingsUnchanged": 13,
+    "detailFiguresRetained": 11,
+    "viewportsChecked": [
+      2133,
+      433,
+      320
+    ],
+    "allFiveImagesLoadedInBrowser": true,
+    "horizontalOverflow": false,
+    "pcDiagramWidth": 420,
+    "pcDiagramHeight": 280,
+    "tabletMobileFlow": "image then text",
+    "smallestMobileDiagramWidth": 263.33,
+    "visibleTextElementsBefore": 118,
+    "visibleTextElementsAfter": 0
+  },
+  "status": "Historical SVG simplification record. Four primary images replaced with original Wix figure panels on 2026-11-02; see Research-대표그림-원본교체.json."
+}

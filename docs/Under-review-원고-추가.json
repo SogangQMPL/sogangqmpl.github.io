@@ -1,0 +1,20 @@
+{
+  "addedAt": "2026-11-01",
+  "source": "User-provided title, author list, under-review status and identity clarification.",
+  "manuscriptId": "under-review-inse-tmd-stark-tuning",
+  "title": "Giant Stark Tuning and Band Alignment Switching of Γ-Valley Interlayer Excitons in InSe/TMD Heterostructures",
+  "originalAuthorLine": "Yongju Jeong,1 Dianne Lee,1 Kenji Watanabe,2 Takashi Taniguchi,3 and Hyeonjun Baek,1,*",
+  "authorIdentity": {
+    "Dianne Lee": {
+      "personId": "person-6",
+      "labRosterName": "Jihyun Lee",
+      "confirmedBy": "User"
+    }
+  },
+  "notes": [
+    "Author order and manuscript author name Dianne Lee retained. Lab authors bold and underlined, including Dianne Lee.",
+    "Affiliation indices are preserved in this source record and omitted from the visible bibliography to match the existing lab list. Corresponding-author star retained. No affiliation institutions inferred.",
+    "No journal, publication year, DOI, manuscript figure or public link supplied; none invented.",
+    "Separate optional underReview data array; published archive remains 46 papers and existing year/search filters retain their scope."
+  ]
+}

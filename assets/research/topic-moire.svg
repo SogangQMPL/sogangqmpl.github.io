@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" role="img" aria-labelledby="title desc">
+  <title id="title">Moiré confinement</title>
+  <desc id="desc">Two sparsely drawn lattices overlap at a small relative twist. An arrow connects the twisted layers to a periodic potential with three localized electrons. The geometry and occupancy are conceptual.</desc>
+  <rect width="600" height="400" fill="#fff"/>
+  <g stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M39 176 160 99 278 179 157 256Z" fill="#edf3f8" stroke="#315f8c"/>
+    <g fill="none" stroke="#315f8c">
+      <path d="M69 196 190 119M98 216 219 139M128 236 249 159"/>
+      <path d="M69 157 187 237M100 137 218 217M130 118 248 198"/>
+    </g>
+    <path d="M47 146 184 105 270 217 133 258Z" fill="none" stroke="#26736f"/>
+    <g fill="none" stroke="#26736f">
+      <path d="M69 174 206 133M90 202 227 161M112 230 249 189"/>
+      <path d="M81 136 167 248M116 126 202 238M150 115 236 227"/>
+    </g>
+    <path d="M139 70C171 50 209 58 231 81M218 79 231 81 229 68" fill="none" stroke="#002e5d"/>
+    <path d="M290 193H321M312 184 321 193 312 202" fill="none" stroke="#002e5d"/>
+    <path d="M338 162C353 162 351 260 371 260S390 162 409 162 429 260 448 260 467 162 486 162 506 260 525 260 544 162 560 162" fill="none" stroke="#26736f"/>
+    <g fill="#002e5d" stroke="none">
+      <circle cx="371" cy="239" r="14"/>
+      <circle cx="448" cy="239" r="14"/>
+      <circle cx="525" cy="239" r="14"/>
+    </g>
+    <path d="M365 239H377M442 239H454M519 239H531" fill="none" stroke="#fff"/>
+  </g>
+</svg>

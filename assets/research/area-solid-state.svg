@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" role="img" aria-labelledby="title desc">
+  <title id="title">Solid-state physics</title>
+  <desc id="desc">A wireframe cube with dashed hidden edges, redrawn from the research map as a conceptual research-area icon.</desc>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 12L65 24L40 36L15 24Z" fill="#eff7f5"/>
+    <path d="M15 24L40 36V68L15 56Z" fill="#eff7f5" fill-opacity=".6"/>
+    <path d="M40 36L65 24V56L40 68Z" fill="#eff7f5" fill-opacity=".3"/>
+    <path d="M40 12V44M15 56L40 44L65 56" fill="none" stroke="#93b3ae" stroke-width="1.8" stroke-dasharray="3 4"/>
+    <path d="M40 12L65 24V56L40 68L15 56V24ZM15 24L40 36L65 24M40 36V68" fill="none" stroke="#26736f" stroke-width="2.4"/>
+  </g>
+</svg>

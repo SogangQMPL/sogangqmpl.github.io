@@ -1,0 +1,407 @@
+{
+  "verifiedAt": "2026-11-01",
+  "overviewSource": "https://baahyyjuu.wixsite.com/hyeonjun/research",
+  "classificationNote": "The three category names and category-level related-paper lists follow the Wix Research overview. Each of the five existing detail pages is assigned to one primary category. Moire physics and interlayer excitons also contribute to quantum-light research; paper overlap is legitimate.",
+  "categories": [
+    {
+      "id": "quantum-information",
+      "title": "Quantum information",
+      "summary": "Quantum light sources and photon-pair generation in two-dimensional materials.",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/research",
+      "sourcePaperIds": [
+        "pub-25",
+        "pub-24",
+        "pub-19",
+        "pub-17",
+        "pub-03",
+        "pub-02"
+      ],
+      "suggestedImage": "assets/research/quantum-photonics.jpg",
+      "topics": [
+        {
+          "id": "quantum-light-sources",
+          "title": "Quantum light sources",
+          "source": "https://baahyyjuu.wixsite.com/hyeonjun/quantum-light-sources",
+          "description": "We study localized emitters and nonclassical light in two-dimensional materials. Moire confinement and nanostructures provide ways to control their emission and optical coupling.",
+          "status": "Published research",
+          "paperIds": [
+            "pub-25",
+            "pub-24",
+            "pub-19",
+            "pub-17",
+            "pub-03",
+            "pub-02"
+          ],
+          "outcomes": [
+            {
+              "title": "Energy-tunable quantum light from moire-trapped excitons",
+              "paperIds": [
+                "pub-24"
+              ]
+            },
+            {
+              "title": "WSe2 nanodots for waveguide coupling",
+              "paperIds": [
+                "pub-03"
+              ]
+            },
+            {
+              "title": "Spin and charge control of moire-trapped excitons and trions",
+              "paperIds": [
+                "pub-25",
+                "pub-19",
+                "pub-17"
+              ]
+            },
+            {
+              "title": "Photoexcitation of moire-trapped excitons via chiral phonons",
+              "paperIds": [
+                "pub-02"
+              ]
+            }
+          ],
+          "mappingNote": "All six papers are retained from the original Quantum information related-paper list. The phonon, spin and charge papers support the material platform; do not describe every paper as demonstrating single-photon emission.",
+          "summary": "We study localized emitters and nonclassical light in two-dimensional materials. Moire confinement and nanostructures provide ways to control their emission and optical coupling.",
+          "image": "assets/research/quantum-light-platforms.webp",
+          "imageAlt": "Quantum light sources — conceptual diagram"
+        },
+        {
+          "id": "spdc",
+          "title": "SPDC in 2D materials",
+          "source": "https://baahyyjuu.wixsite.com/hyeonjun/%EB%B3%B5%EC%A0%9C-interlayer-excitons",
+          "description": "We investigate photon-pair generation through spontaneous parametric down-conversion in nonlinear two-dimensional materials, including the role of layer stacking and twist angle.",
+          "status": "Research direction",
+          "paperIds": [],
+          "outcomes": [],
+          "claimLimit": "The Wix SPDC detail page contains a conceptual diagram and research description, but no linked publication. Do not invent a demonstrated entangled-photon result or attach unrelated group papers as SPDC evidence.",
+          "summary": "We investigate photon-pair generation through spontaneous parametric down-conversion in nonlinear two-dimensional materials, including the role of layer stacking and twist angle.",
+          "image": "assets/research/quantum-photonics.jpg",
+          "imageAlt": "SPDC in 2D materials — conceptual diagram"
+        }
+      ],
+      "additionalDirections": [
+        "Cooperative superradiance",
+        "Exciton-polaritons"
+      ]
+    },
+    {
+      "id": "solid-state-physics",
+      "title": "Solid-State Physics",
+      "summary": "Moiré potentials, correlated states and electrically controlled interlayer excitons.",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/research",
+      "sourcePaperIds": [
+        "pub-13",
+        "pub-11",
+        "pub-10",
+        "pub-07",
+        "pub-05"
+      ],
+      "suggestedImage": "assets/research/moire-heterostructure.webp",
+      "topics": [
+        {
+          "id": "moire-physics",
+          "title": "Moiré physics",
+          "source": "https://baahyyjuu.wixsite.com/hyeonjun/moir%C3%A9-physics",
+          "description": "Twist angle and lattice mismatch create periodic potentials in stacked two-dimensional materials. We study localized excitons and field-tunable correlated electronic states.",
+          "status": "Published research",
+          "paperIds": [
+            "pub-13",
+            "pub-11"
+          ],
+          "crossCategoryPaperIds": [
+            "pub-24",
+            "pub-25",
+            "pub-19",
+            "pub-17",
+            "pub-02"
+          ],
+          "outcomes": [
+            {
+              "title": "Exciton-polarons in a correlated moire superlattice",
+              "paperIds": [
+                "pub-13"
+              ]
+            },
+            {
+              "title": "Field-tunable correlated states in a multi-orbital moire system",
+              "paperIds": [
+                "pub-11"
+              ]
+            }
+          ],
+          "summary": "Twist angle and lattice mismatch create periodic potentials in stacked two-dimensional materials. We study localized excitons and field-tunable correlated electronic states.",
+          "image": "assets/research/moire-heterostructure.webp",
+          "imageAlt": "Moiré physics — conceptual diagram"
+        },
+        {
+          "id": "interlayer-excitons",
+          "title": "Interlayer excitons",
+          "source": "https://baahyyjuu.wixsite.com/hyeonjun/general-1",
+          "description": "Electrons and holes in separate layers form excitons whose optical response can be controlled by electric fields. We study dipolar, quadrupolar and symmetric excitonic states.",
+          "status": "Published research",
+          "paperIds": [
+            "pub-10",
+            "pub-07",
+            "pub-05"
+          ],
+          "suggestedImage": "assets/research/interlayer-excitons.webp",
+          "outcomes": [
+            {
+              "title": "Tunable ground- and excited-state excitonic dipoles",
+              "paperIds": [
+                "pub-10"
+              ]
+            },
+            {
+              "title": "Quadrupolar and dipolar excitons in bilayer MoSe2",
+              "paperIds": [
+                "pub-07"
+              ]
+            },
+            {
+              "title": "Symmetric interlayer trions in MoS2 bilayers",
+              "paperIds": [
+                "pub-05"
+              ]
+            }
+          ],
+          "claimLimit": "Spatial trapping as a quantum simulator and exciton-polariton devices are presented as applications/directions on the original detail page. Do not claim a completed simulator or polariton device from these three papers.",
+          "summary": "Electrons and holes in separate layers form excitons whose optical response can be controlled by electric fields. We study dipolar, quadrupolar and symmetric excitonic states.",
+          "image": "assets/research/interlayer-excitons.webp",
+          "imageAlt": "Interlayer excitons — conceptual diagram"
+        }
+      ],
+      "additionalDirections": [
+        "Ferroelectricity in two-dimensional materials"
+      ]
+    },
+    {
+      "id": "semiconductor-devices",
+      "title": "Semiconductor Devices",
+      "summary": "Two-dimensional transistors and neuromorphic optoelectronic devices.",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/research",
+      "sourcePaperIds": [
+        "pub-09"
+      ],
+      "suggestedImage": "assets/research/semiconductor-devices.webp",
+      "imageNote": "The original Wix detail-page image filename identifies a ChatGPT-generated conceptual illustration. It is not a measurement image. A new labelled vector schematic may be clearer.",
+      "topics": [
+        {
+          "id": "2d-semiconductor-devices",
+          "title": "2D semiconductor devices",
+          "source": "https://baahyyjuu.wixsite.com/hyeonjun/%EB%B3%B5%EC%A0%9C-spdc",
+          "description": "We develop layered semiconductor transistors and study their use in neuromorphic and reservoir-computing devices.",
+          "status": "Published research",
+          "paperIds": [
+            "pub-09",
+            "pub-01"
+          ],
+          "originalPaperIds": [
+            "pub-09"
+          ],
+          "additionalPaperIds": [
+            "pub-01"
+          ],
+          "outcomes": [
+            {
+              "title": "MoTe2 synaptic transistors for physical reservoir computing",
+              "paperIds": [
+                "pub-09"
+              ]
+            },
+            {
+              "title": "Photoresponsive MoS2 transistors for wavelength-dependent reservoir computing",
+              "paperIds": [
+                "pub-01"
+              ]
+            }
+          ],
+          "mappingNote": "pub-09 is the original overview link. pub-01 is a newer related paper already present in the lab Publication archive and is marked as an addition rather than an original overview link.",
+          "summary": "We develop layered semiconductor transistors and study their use in neuromorphic and reservoir-computing devices.",
+          "image": "assets/research/semiconductor-devices.webp",
+          "imageAlt": "2D semiconductor devices — conceptual diagram"
+        }
+      ],
+      "additionalDirections": [
+        "Field-effect transistors",
+        "Neuromorphic devices",
+        "Light-emitting devices",
+        "Photodetectors"
+      ]
+    }
+  ],
+  "imageReferences": {
+    "https://baahyyjuu.wixsite.com/hyeonjun/research": [
+      {
+        "alt": "ChatGPT Image 2026년 8월 8일 오후 10_02_30.png",
+        "url": "https://static.wixstatic.com/media/631814_d9dce2a0fd8e4eadb32b0ee8a83a35f5~mv2.png"
+      }
+    ],
+    "https://baahyyjuu.wixsite.com/hyeonjun/moir%C3%A9-physics": [
+      {
+        "alt": "2.png",
+        "url": "https://static.wixstatic.com/media/631814_82bc9d7de49f44348cfb26a38734c7cb~mv2.png"
+      },
+      {
+        "alt": "1.png",
+        "url": "https://static.wixstatic.com/media/631814_9595ddc8c6f74011a632aed3dee4d463~mv2.png"
+      },
+      {
+        "alt": "moire13.png",
+        "url": "https://static.wixstatic.com/media/631814_116a0dc841134f41b130c2dad5e187d4~mv2.png"
+      },
+      {
+        "alt": "1.png",
+        "url": "https://static.wixstatic.com/media/631814_5147130ec0c1422486b938078cb381c6~mv2.png"
+      }
+    ],
+    "https://baahyyjuu.wixsite.com/hyeonjun/general-1": [
+      {
+        "alt": "그림2.jpg",
+        "url": "https://static.wixstatic.com/media/631814_c5abe2ef9c594649828ec01f86bb8b08~mv2.jpg"
+      },
+      {
+        "alt": "그림3.jpg",
+        "url": "https://static.wixstatic.com/media/631814_85d74f9dbeab4dc3bb0faf4fb7aa2b76~mv2.jpg"
+      },
+      {
+        "alt": "그림4.jpg",
+        "url": "https://static.wixstatic.com/media/631814_3a77341769cf4fd3be73d5f0d74cb92a~mv2.jpg"
+      },
+      {
+        "alt": "그림5.jpg",
+        "url": "https://static.wixstatic.com/media/631814_2aa8a65a12834328913adfdbd4a44027~mv2.jpg"
+      }
+    ],
+    "https://baahyyjuu.wixsite.com/hyeonjun/%EB%B3%B5%EC%A0%9C-interlayer-excitons": [
+      {
+        "alt": "그림6.jpg",
+        "url": "https://static.wixstatic.com/media/631814_8f01572b063e4cf8a4e9da329c2f8ab2~mv2.jpg"
+      }
+    ],
+    "https://baahyyjuu.wixsite.com/hyeonjun/%EB%B3%B5%EC%A0%9C-spdc": [
+      {
+        "alt": "ChatGPT Image 2026년 8월 9일 오후 09_15_45.png",
+        "url": "https://static.wixstatic.com/media/631814_26f3ea52b2004b0283e12b34f2ec1d1d~mv2.png"
+      }
+    ],
+    "https://baahyyjuu.wixsite.com/hyeonjun/quantum-light-sources": [
+      {
+        "alt": "2.png",
+        "url": "https://static.wixstatic.com/media/631814_a1970aef6dde44e9a8bb2390469bf594~mv2.png"
+      }
+    ]
+  },
+  "originalRelatedPaperLinks": [
+    {
+      "category": "Quantum information",
+      "links": [
+        {
+          "paperId": "pub-25",
+          "title": "Spin-layer locking of interlayer excitons trapped in moiré potentials",
+          "journal": "Nature Materials 19, 630 (2020) (*equal contribution)",
+          "url": "https://www.nature.com/articles/s41563-020-0687-7",
+          "doi": "10.1038/s41563-020-0687-7"
+        },
+        {
+          "paperId": "pub-24",
+          "title": "Highly energy-tunable quantum light from moiré trapped excitons",
+          "journal": "Science Advances 6, eaba8526 (2020) (*equal contribution)",
+          "url": "https://www.science.org/doi/10.1126/sciadv.aba8526",
+          "doi": "10.1126/sciadv.aba8526"
+        },
+        {
+          "paperId": "pub-19",
+          "title": "Moiré-trapped interlayer trions in a charge-tunable WSe₂ /MoSe₂ heterobilayer",
+          "journal": "Physical Review X 11, 031033 (2021)",
+          "url": "https://journals.aps.org/prx/abstract/10.1103/PhysRevX.11.031033",
+          "doi": "10.1103/PhysRevX.11.031033"
+        },
+        {
+          "paperId": "pub-17",
+          "title": "Optical read-out of Coulomb staircases in a moiré superlattice via trapped interlayer trions",
+          "journal": "Nature Nanotechnology , 16, 1237 (2021)",
+          "url": "https://www.nature.com/articles/s41565-021-00970-9",
+          "doi": "10.1038/s41565-021-00970-9"
+        },
+        {
+          "paperId": "pub-03",
+          "title": "WSe₂ Nanodots on Dielectric Nanopillars for Efficient Waveguide Coupling of Localized Emitters",
+          "journal": "ACS Applied Nano Materials 9, 9471-9477 (2026)",
+          "url": "https://pubs.acs.org/doi/10.1021/acsanm.6c01123",
+          "doi": "10.1021/acsanm.6c01123"
+        },
+        {
+          "paperId": "pub-02",
+          "title": "Photoexcitation of moiré-trapped interlayer excitons via chiral phonons",
+          "journal": "npj 2D Materials and Applications (2026)",
+          "url": "https://www.nature.com/articles/s41699-026-00701-5",
+          "doi": "10.1038/s41699-026-00701-5"
+        }
+      ]
+    },
+    {
+      "category": "Solid-State Physics",
+      "links": [
+        {
+          "paperId": "pub-13",
+          "title": "Exciton-polarons in the presence of strongly correlated electronic states in a MoSe₂ /WSe₂ moiré superlattice",
+          "journal": "npj 2D Materials and Applications 6, 79 (2022)",
+          "url": "https://www.nature.com/articles/s41699-022-00358-w",
+          "doi": "10.1038/s41699-022-00358-w"
+        },
+        {
+          "paperId": "pub-11",
+          "title": "The interplay of field-tunable strongly correlated states in a multi-orbital moiré system",
+          "journal": "Nature Physics , 20, 589 (2024)",
+          "url": "https://www.nature.com/articles/s41567-024-02385-4",
+          "doi": "10.1038/s41567-024-02385-4"
+        },
+        {
+          "paperId": "pub-10",
+          "title": "Highly tunable ground and excited state excitonic dipoles in multilayer 2H-MoSe₂",
+          "journal": "Nature Communications 15, 4377 (2024)",
+          "url": "https://www.nature.com/articles/s41467-024-48476-x",
+          "doi": "10.1038/s41467-024-48476-x"
+        },
+        {
+          "paperId": "pub-07",
+          "title": "Quadrupolar and Dipolar Excitons in Bilayer 2H-MoSe₂",
+          "journal": "Physical Review Letters 134 , 166901 (2025)",
+          "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.166901",
+          "doi": "10.1103/PhysRevLett.134.166901"
+        },
+        {
+          "paperId": "pub-05",
+          "title": "Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers",
+          "journal": "ACS Photonics 12, 6957 (2025)",
+          "url": "https://pubs.acs.org/doi/10.1021/acsphotonics.5c02169",
+          "doi": "10.1021/acsphotonics.5c02169"
+        }
+      ]
+    },
+    {
+      "category": "Semiconductor Devices",
+      "links": [
+        {
+          "paperId": "pub-09",
+          "title": "MoTe 2 synaptic transistor and its application to physical reservoir computing",
+          "journal": "RSC Advances 15, 24031 (2025)",
+          "url": "https://pubs.rsc.org/ra/article/15/29/24031/906612/MoTe2-synaptic-transistor-and-its-application-to",
+          "doi": ""
+        }
+      ]
+    }
+  ],
+  "verificationNotes": [
+    "All six public Wix pages were re-opened on 2026-11-01.",
+    "The five detail pages do not contain explicit Related papers lists. The twelve original related-paper links are on the three-category overview.",
+    "The recommended subtopic-paper mappings are editorial organization using the original grouping and the publication titles. They are not a claim that the old Wix menu already used this hierarchy.",
+    "The original npj 2026 placeholder 0,00 is omitted in the current site bibliography in favor of the publisher-confirmed year and DOI.",
+    "Original RSC Advances link is retained even though the site record lacks a DOI; use the source URL rather than fabricate one.",
+    "Retain prior-appointment context for the publication archive; these works span the PI career, not only the present Sogang group.",
+    "additionalDirections preserves overview interests that do not have separate menu pages. Treat them as directions, not demonstrated outcomes or extra detail pages."
+  ],
+  "latestDescriptionAudit": "docs/Research-설명-재검증.json",
+  "descriptionNote": "The topic prose in this file is an earlier abbreviated editorial version, not a verbatim source transcription. The later re-audit restores concepts and figures that this summary omitted."
+}

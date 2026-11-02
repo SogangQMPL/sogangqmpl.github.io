@@ -1,0 +1,419 @@
+{
+  "updatedAt": "2026-11-01",
+  "source": "User-provided consolidation and attendee updates.",
+  "rule": "One Conferences post per event; individual award announcements remain separate Awards posts.",
+  "counts": {
+    "conferencesBefore": 6,
+    "conferencesAfter": 4,
+    "awardsUnchanged": 6
+  },
+  "notes": [
+    "Poster presenters and additional attendees are distinguished; no additional presentations or awards are inferred.",
+    "BK21 FOUR 3rd Workshop retains all-member attendance and now restores Yongju Jeong's original oral-presentation statement and talk title, per the latest user request. The original photograph is retained.",
+    "Both 2024 KPS photographs and poster titles are retained. A missing space in heterostructures using is corrected.",
+    "The two superseded local addresses redirect to their merged event posts.",
+    "Existing dates are retained; no new event date or attendance is inferred for the award-only BK21 FOUR 4th Workshop record."
+  ],
+  "redirects": {
+    "news-2026-kps-hyunjun-jo-poster": "news-2026-kps-seongwon-gim-poster",
+    "news-14": "news-13"
+  },
+  "originalConferencePosts": [
+    {
+      "id": "news-2026-kps-seongwon-gim-poster",
+      "date": "2026-10-21",
+      "category": "Conferences",
+      "title": "2026 KPS Fall: Poster Presentation — Seongwon Gim",
+      "body": "Seongwon Gim presented a poster at the 2026 KPS Fall Meeting.",
+      "summary": "Seongwon Gim presented a poster at the 2026 KPS Fall Meeting.",
+      "url": "",
+      "source": "User-provided lab update, 2026-11-01",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Seongwon Gim presented a poster at the 2026 KPS Fall Meeting."
+        }
+      ],
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "id": "news-2026-kps-hyunjun-jo-poster",
+      "date": "2026-10-21",
+      "category": "Conferences",
+      "title": "2026 KPS Fall: Poster Presentation — Hyunjun Jo",
+      "body": "Hyunjun Jo presented a poster at the 2026 KPS Fall Meeting.",
+      "summary": "Hyunjun Jo presented a poster at the 2026 KPS Fall Meeting.",
+      "url": "",
+      "source": "User-provided lab update, 2026-11-01",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Hyunjun Jo presented a poster at the 2026 KPS Fall Meeting."
+        }
+      ],
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "id": "news-10",
+      "date": "2026-02-05",
+      "category": "Conferences",
+      "title": "BK21 FOUR 3rd Workshop: Oral Presentation — Yongju Jeong",
+      "body": "Yongju Jeong delivered a oral presentation on “Stark Shift and Band Alignment Transition in Multilayer InSe/Bilayer TMD Heterostructures.”",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/post/bk21-four-3rd-workshop-oral-presentation",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/post/bk21-four-3rd-workshop-oral-presentation",
+      "summary": "Yongju Jeong delivered a oral presentation on “Stark Shift and Band Alignment Transition in Multilayer InSe/Bilayer TMD Heterostructures.”",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/news-10-1-display.webp",
+          "alt": "BK21 FOUR 3rd Workshop: Oral Presentation",
+          "width": 1600,
+          "height": 1200,
+          "fullSrc": "assets/posts/news-10-1.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "Yongju Jeong delivered a oral presentation on “Stark Shift and Band Alignment Transition in Multilayer InSe/Bilayer TMD Heterostructures.”",
+          "children": [
+            {
+              "text": "Yongju Jeong delivered a oral presentation on “Stark Shift and Band Alignment Transition in Multilayer InSe/Bilayer TMD Heterostructures.”"
+            }
+          ]
+        }
+      ],
+      "image": "assets/posts/news-10-1-display.webp",
+      "imageAlt": "BK21 FOUR 3rd Workshop: Oral Presentation"
+    },
+    {
+      "id": "news-12",
+      "date": "2025-12-08",
+      "category": "Conferences",
+      "title": "ICAMD 2025: Poster Presentation — Seongwon Gim",
+      "body": "Seongwon Gim delivered a poster presentation titled “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers.” ",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/post/icamd-2025-poster-presentation",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/post/icamd-2025-poster-presentation",
+      "summary": "Seongwon Gim delivered a poster presentation titled “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers.” ",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/news-12-1-display.webp",
+          "alt": "ICAMD 2025: Poster Presentation",
+          "width": 795,
+          "height": 439,
+          "fullSrc": "assets/posts/news-12-1.png"
+        },
+        {
+          "type": "paragraph",
+          "text": "Seongwon Gim delivered a poster presentation titled “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers.” ",
+          "children": [
+            {
+              "text": "Seongwon Gim delivered a poster presentation titled “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers.” "
+            }
+          ]
+        }
+      ],
+      "image": "assets/posts/news-12-1-display.webp",
+      "imageAlt": "ICAMD 2025: Poster Presentation"
+    },
+    {
+      "id": "news-13",
+      "date": "2024-10-23",
+      "category": "Conferences",
+      "title": "2024 KPS Fall: Poster Presentation — Seongwon Gim",
+      "body": "Seongwon Gim delivered a poster presentation titled “WSe₂/SiN nanopillars for enhanced coupling efficiency with in-plane waveguide”.",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/post/2024-kps-fall-poster-presentation-1",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/post/2024-kps-fall-poster-presentation-1",
+      "summary": "Seongwon Gim delivered a poster presentation titled “WSe₂/SiN nanopillars for enhanced coupling efficiency with in-plane waveguide”.",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/news-13-1-display.webp",
+          "alt": "2024 KPS Fall: Poster Presentation",
+          "width": 1118,
+          "height": 688,
+          "fullSrc": "assets/posts/news-13-1.png"
+        },
+        {
+          "type": "paragraph",
+          "text": "Seongwon Gim delivered a poster presentation titled “WSe₂/SiN nanopillars for enhanced coupling efficiency with in-plane waveguide”.",
+          "children": [
+            {
+              "text": "Seongwon Gim delivered a poster presentation titled “WSe₂/SiN nanopillars for enhanced coupling efficiency with in-plane waveguide”."
+            }
+          ]
+        }
+      ],
+      "image": "assets/posts/news-13-1-display.webp",
+      "imageAlt": "2024 KPS Fall: Poster Presentation"
+    },
+    {
+      "id": "news-14",
+      "date": "2024-10-23",
+      "category": "Conferences",
+      "title": "2024 KPS Fall: Poster Presentation — Yongju Jeong",
+      "body": "Yongju Jeong delivered a poster presentation titled “Trapped interlayer exciton arrays in WS₂/WSe₂ heterostructuresusing patterned graphite electrodes.”",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/post/2024-kps-fall-poster-presentation",
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/post/2024-kps-fall-poster-presentation",
+      "summary": "Yongju Jeong delivered a poster presentation titled “Trapped interlayer exciton arrays in WS₂/WSe₂ heterostructuresusing patterned graphite electrodes.”",
+      "content": [
+        {
+          "type": "image",
+          "src": "assets/posts/news-14-1-display.webp",
+          "alt": "2024 KPS Fall: Poster Presentation",
+          "width": 1200,
+          "height": 1600,
+          "fullSrc": "assets/posts/news-14-1.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "Yongju Jeong delivered a poster presentation titled “Trapped interlayer exciton arrays in WS₂/WSe₂ heterostructuresusing patterned graphite electrodes.”",
+          "children": [
+            {
+              "text": "Yongju Jeong delivered a poster presentation titled “Trapped interlayer exciton arrays in WS₂/WSe₂ heterostructuresusing patterned graphite electrodes.”"
+            }
+          ]
+        }
+      ],
+      "image": "assets/posts/news-14-1-display.webp",
+      "imageAlt": "2024 KPS Fall: Poster Presentation"
+    }
+  ],
+  "currentTitlePolicy": {
+    "Awards": "Keep recipient names after the title.",
+    "Conferences": "Event name followed by confirmed presentation format (Poster, Oral, or both); individual names remain in the body."
+  },
+  "latestFormatUpdate": {
+    "updatedAt": "2026-11-01",
+    "titles": {
+      "news-2026-kps-seongwon-gim-poster": "2026 KPS Fall: Oral & Poster Presentations",
+      "news-10": "BK21 FOUR 3rd Workshop: Oral & Poster Presentations",
+      "news-12": "ICAMD 2025: Poster Presentation",
+      "news-13": "2024 KPS Fall: Poster Presentations"
+    },
+    "restoredBK21OralStatement": "Yongju Jeong delivered an oral presentation on “Stark Shift and Band Alignment Transition in Multilayer InSe/Bilayer TMD Heterostructures.”",
+    "kps2026Evidence": {
+      "Oral": "news-2026-kps-yongju-jeong-oral-award",
+      "Poster": [
+        "news-2026-kps-seongwon-gim-poster",
+        "news-2026-kps-hyunjun-jo-poster (merged alias)",
+        "news-2026-kps-taegyu-jang-poster-award"
+      ]
+    },
+    "notes": "No new presentation title inferred for 2026 KPS. Individual awards remain separate; existing event dates, photographs and aliases are preserved."
+  },
+  "bk21FourthWorkshopAddition": {
+    "updatedAt": "2026-11-01",
+    "postId": "news-2026-bk21-four-4th-workshop",
+    "title": "BK21 FOUR 4th Workshop: Poster Presentations",
+    "date": "2026-08-03",
+    "dateSource": "Existing same-event Awards post news-08; retained as the event record date.",
+    "presenters": [
+      "Seongwon Gim",
+      "Yongju Jeong",
+      "Hyunjun Jo",
+      "Taegyu Jang"
+    ],
+    "presentationFormat": "Poster",
+    "attendance": "All other lab members also attended the workshop.",
+    "source": "User request, 2026-11-01",
+    "notes": "One separate Conferences post added. Existing Outstanding Poster Award post and its photograph remain unchanged. No presentation titles or new photos invented."
+  },
+  "bk21ThirdPosterUpdate": {
+    "updatedAt": "2026-11-01",
+    "postId": "news-10",
+    "title": "BK21 FOUR 3rd Workshop: Oral & Poster Presentations",
+    "presentations": {
+      "Oral": [
+        "Yongju Jeong"
+      ],
+      "Poster": [
+        "Seongwon Gim"
+      ]
+    },
+    "source": "User request, 2026-11-01",
+    "notes": "Existing Yongju Jeong oral talk title, all-member attendance, date and original photograph retained; Seongwon Gim poster presentation added. Awards remain separate."
+  },
+  "bk21FirstSecondWorkshopAdditions": {
+    "updatedAt": "2026-11-01",
+    "records": [
+      {
+        "postId": "news-2024-bk21-four-1st-workshop",
+        "date": "2024-07-22",
+        "title": "BK21 FOUR 1st Workshop: Poster Presentations",
+        "statement": "Seongwon Gim and Yongju Jeong presented posters at the 1st BK21 FOUR Physics Workshop."
+      },
+      {
+        "postId": "news-2025-bk21-four-2nd-workshop",
+        "date": "2025-08-22",
+        "title": "BK21 FOUR 2nd Workshop: Oral Presentation",
+        "statement": "Seongwon Gim delivered an oral presentation on “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers” at the 2nd BK21 FOUR Physics Workshop."
+      }
+    ],
+    "source": "User request, 2026-11-01",
+    "secondWorkshopTopicSource": {
+      "postId": "news-12",
+      "title": "Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers",
+      "confirmedBy": "User states the oral topic was the same as the ICAMD poster."
+    },
+    "notes": "Dates and presentation roles supplied by user. No unknown first-workshop topics, extra attendance, awards or event photos added. Existing records unchanged."
+  },
+  "ceqmfAndAcademyAdditions": {
+    "updatedAt": "2026-11-01",
+    "records": [
+      {
+        "postId": "news-2026-ceqmf-3rd-workshop",
+        "date": "2026-01-26",
+        "title": "3rd Workshop on Functional Quantum Matter: Oral Presentation",
+        "statement": "Seongwon Gim delivered an oral presentation on “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers” at the 3rd Workshop on Functional Quantum Matter (CeQMF) in Muju.\n\nHyunjun Jo also attended the workshop."
+      },
+      {
+        "postId": "news-2025-ceqmf-2nd-workshop",
+        "date": "2025-02-10",
+        "title": "2nd Workshop on Functional Quantum Matter: Oral & Poster Presentations",
+        "statement": "Yongju Jeong delivered an oral presentation on “Electrostatic trapping of interlayer exciton arrays in WS₂/WSe₂ heterostructures using patterned graphite electrodes” at the 2nd Workshop on Functional Quantum Matter (CeQMF).\n\nSeongwon Gim presented a poster at the workshop."
+      },
+      {
+        "postId": "news-2025-applied-physics-academy",
+        "date": "2025-02-10",
+        "title": "4th Applied Physics Academy: Attendance",
+        "statement": "Hyunjun Jo attended the 4th Applied Physics Academy (응용물리아카데미)."
+      }
+    ],
+    "source": "User request, 2026-11-01",
+    "thirdWorkshopTopicSource": {
+      "postId": "news-12",
+      "title": "Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers",
+      "confirmedBy": "User states the oral topic was the same as the ICAMD poster."
+    },
+    "secondWorkshopTopicSource": "User-provided title, preserved with chemical subscripts for WS₂/WSe₂.",
+    "notes": "User-specified attendance recorded separately from presentation roles. No event photos, awards, extra attendees or additional presentation titles inferred.",
+    "officialEventSources": [
+      {
+        "url": "https://swb.skku.edu/ceqmf/notice.do?articleNo=61818&mode=view",
+        "event": "3rd Workshop on Functional Quantum Matter",
+        "dates": "2026-01-26 to 2026-01-27",
+        "place": "Muju"
+      },
+      {
+        "url": "https://swb.skku.edu/ceqmf/notice.do?articleNo=61818&attachNo=58601&mode=download",
+        "evidence": "Official program lists Seongwon Gim oral presentation on Symmetric interlayer trions in 3R- and 2H-stacked MoS₂ bilayers."
+      },
+      {
+        "url": "https://ceqmf.skku.edu/ceqmf/notice.do?articleNo=53426&mode=view",
+        "event": "2nd Workshop on Functional Quantum Matter",
+        "dates": "2025-02-10 to 2025-02-11",
+        "place": "Muju"
+      },
+      {
+        "url": "https://ap.kps.or.kr/03web04.php",
+        "event": "4th Applied Physics Academy (제4회 응용물리 아카데미)",
+        "dates": "2025-02-10 to 2025-02-12",
+        "notes": "Official event name confirmed; no in-person location claim added for attendee because event was hybrid."
+      }
+    ],
+    "datePolicy": "Post dates use the event start dates provided by the user. No claim made that attendance covered every day."
+  },
+  "ceqmfSecondWorkshopPosterCorrection": {
+    "updatedAt": "2026-11-02",
+    "postId": "news-2025-ceqmf-2nd-workshop",
+    "source": "User correction",
+    "presentations": {
+      "Oral": [
+        "Yongju Jeong"
+      ],
+      "Poster": [
+        "Seongwon Gim"
+      ]
+    },
+    "notes": "Added Seongwon Gim poster presentation, replacing attendance-only wording. Existing Yongju Jeong oral topic and event date retained; no poster title inferred."
+  },
+  "firstWorkshopAndAcademyPhotos": {
+    "updatedAt": "2026-11-02",
+    "source": "User attachments",
+    "method": "Byte-identical copies of the two supplied originals; no crop, regeneration or resize. Same files used for list thumbnails and full-size detail photos.",
+    "photos": [
+      {
+        "id": "news-2024-bk21-four-1st-workshop",
+        "file": "assets/posts/bk21-four-1st-workshop.jpg",
+        "name": "BK21 FOUR 1st Workshop Poster Presentations.jpg",
+        "alt": "Poster presentation at the BK21 FOUR 1st Workshop.",
+        "width": 1050,
+        "height": 1400,
+        "sha256": "0fc629710bbd0c589e114d325b9e8ba353b917e2c50134fbb4251bb000d8d558"
+      },
+      {
+        "id": "news-2025-applied-physics-academy",
+        "file": "assets/posts/applied-physics-academy-4th.png",
+        "name": "4th applied physics academy 사진.png",
+        "alt": "Group photo from the 4th Applied Physics Academy.",
+        "width": 804,
+        "height": 450,
+        "sha256": "2ddefac3c3ba2bc92d10e2413d2694fa500dc2c101d46c9f29666b1d97432c35"
+      }
+    ],
+    "notes": "Existing titles, dates, presenters, attendee statements and photo-free posts unchanged."
+  },
+  "ceqmfWorkshopPhotos": {
+    "updatedAt": "2026-11-02",
+    "source": "User attachments; presenter identities supplied by filenames.",
+    "method": "Byte-identical original copies, no crop, rotation or resize. Poster retains EXIF orientation6; HTML dimensions reflect its upright3000x4000display.",
+    "photos": [
+      {
+        "postId": "news-2026-ceqmf-3rd-workshop",
+        "file": "assets/posts/ceqmf-3rd-seongwon-gim-oral.jpg",
+        "originalName": "3차 무주 김성원 발표.jpg",
+        "alt": "Seongwon Gim delivering an oral presentation at the 3rd Workshop on Functional Quantum Matter.",
+        "caption": "Seongwon Gim — Oral presentation.",
+        "width": 4000,
+        "height": 3000,
+        "rawWidth": 4000,
+        "rawHeight": 3000,
+        "orientation": 1,
+        "sha256": "b3ae14947e936a305e04ac72086b1040f2266c88e377695e6313833cc2be78d0"
+      },
+      {
+        "postId": "news-2025-ceqmf-2nd-workshop",
+        "file": "assets/posts/ceqmf-2nd-yongju-jeong-oral.jpg",
+        "originalName": "2차 무주 정용주 오랄 발표.jpg",
+        "alt": "Yongju Jeong delivering an oral presentation at the 2nd Workshop on Functional Quantum Matter.",
+        "caption": "Yongju Jeong — Oral presentation.",
+        "width": 1496,
+        "height": 1496,
+        "rawWidth": 1496,
+        "rawHeight": 1496,
+        "orientation": 1,
+        "sha256": "6373a461924269addc5163e18e8f531c0bea201acdd5e544b2dca41b96321197"
+      },
+      {
+        "postId": "news-2025-ceqmf-2nd-workshop",
+        "file": "assets/posts/ceqmf-2nd-seongwon-gim-poster.jpg",
+        "originalName": "2차 무주 김성원 포스터.jpg",
+        "alt": "Seongwon Gim presenting a poster at the 2nd Workshop on Functional Quantum Matter.",
+        "caption": "Seongwon Gim — Poster presentation.",
+        "width": 3000,
+        "height": 4000,
+        "rawWidth": 4000,
+        "rawHeight": 3000,
+        "orientation": 6,
+        "sha256": "af51e8964dadcf08afa6a550219304763b1cc8c1c8ef3bca41521f876372eeed"
+      }
+    ],
+    "layout": "3rd: Gim oral photo plus existing text. 2nd: Jeong oral photo/text, then Gim poster photo/text; Jeong oral photo is list thumbnail.",
+    "notes": "Existing titles, dates, presentation topics and attendee statements retained."
+  },
+  "bk21SecondWorkshopPhoto": {
+    "updatedAt": "2026-11-02",
+    "postId": "news-2025-bk21-four-2nd-workshop",
+    "originalName": "bk21 four 2nd oral.jpg",
+    "file": "assets/posts/bk21-four-2nd-oral.jpg",
+    "width": 3603,
+    "height": 2702,
+    "sha256": "7e11665fd0e11b847f100d5df7a8478467fb6a56bedccdd5df8128089ba6ea1e",
+    "method": "Byte-identical original attachment. Used for list thumbnail and detail photo; no crop, resize or regeneration.",
+    "notes": "Existing date, title and presentation topic retained.",
+    "effectiveOrientation": 1,
+    "exifOrientationTagPresent": false
+  }
+}

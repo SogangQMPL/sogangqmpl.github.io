@@ -1,0 +1,469 @@
+{
+  "updatedAt": "2026-11-01",
+  "method": "Expand only author tokens already identified as lab members in each paper labAuthors. Preserve coauthor tokens, author order and contribution markers. Full names follow the lab roster; Dianne Lee remains the explicitly supplied manuscript author name.",
+  "knownAbbreviations": {
+    "H. Baek": "Hyeonjun Baek",
+    "H. Beak": "Hyeonjun Baek",
+    "S. Gim": "Seongwon Gim",
+    "H. Jo": "Hyunjun Jo",
+    "G. Lee": "Geonho Lee"
+  },
+  "publications": [
+    {
+      "id": "pub-01",
+      "source": "https://onlinelibrary.wiley.com/doi/10.1002/sstr.70581",
+      "originalAuthors": "M. Park, W. S. Oh, G. Lee, S. Gim, J.-P. So, J. Lee, H. Baek, and H. Oh",
+      "displayAuthors": "M. Park, W. S. Oh, Geonho Lee, Seongwon Gim, J.-P. So, J. Lee, Hyeonjun Baek, and H. Oh",
+      "expandedNames": {
+        "G. Lee": "Geonho Lee",
+        "S. Gim": "Seongwon Gim",
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-02",
+      "source": "https://www.nature.com/articles/s41699-026-00701-5",
+      "originalAuthors": "A. Borel, T. V. Ivanova, J. Cervantes-Villanueva, P. Thor, H. Baek, T. Taniguchi, K. Watanabe, A. Molina-Sánchez, B. D. Gerardot, and M. Brotons-Gisbert",
+      "displayAuthors": "A. Borel, T. V. Ivanova, J. Cervantes-Villanueva, P. Thor, Hyeonjun Baek, T. Taniguchi, K. Watanabe, A. Molina-Sánchez, B. D. Gerardot, and M. Brotons-Gisbert",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-03",
+      "source": "https://pubs.acs.org/doi/10.1021/acsanm.6c01123",
+      "originalAuthors": "S. Gim, M. Jung, S. Cha, K. Watanabe, T. Taniguchi, and H. Baek",
+      "displayAuthors": "Seongwon Gim, M. Jung, S. Cha, K. Watanabe, T. Taniguchi, and Hyeonjun Baek",
+      "expandedNames": {
+        "S. Gim": "Seongwon Gim",
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-04",
+      "source": "https://pubs.acs.org/doi/full/10.1021/acs.analchem.5c07495",
+      "originalAuthors": "T. Kim, J. Park, S. Gim, H. Lee, W. Lee, H. Baek, and M. Seo",
+      "displayAuthors": "T. Kim, J. Park, Seongwon Gim, H. Lee, W. Lee, Hyeonjun Baek, and M. Seo",
+      "expandedNames": {
+        "S. Gim": "Seongwon Gim",
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-05",
+      "source": "https://pubs.acs.org/doi/10.1021/acsphotonics.5c02169",
+      "originalAuthors": "S. Gim, H. Jo, S. Kim, S. M. Yang, K. Watanabe, T. Taniguchi, and H. Baek",
+      "displayAuthors": "Seongwon Gim, Hyunjun Jo, S. Kim, S. M. Yang, K. Watanabe, T. Taniguchi, and Hyeonjun Baek",
+      "expandedNames": {
+        "S. Gim": "Seongwon Gim",
+        "H. Jo": "Hyunjun Jo",
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-06",
+      "source": "https://pubs.aip.org/aip/jap/article/137/24/244301/3350695/Wavelength-tunable-Zn1-xMgxO-nanotube-lasers-on",
+      "originalAuthors": "H. Baek, J. B. Park, H. Oh, and G.-C. Yi",
+      "displayAuthors": "Hyeonjun Baek, J. B. Park, H. Oh, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-07",
+      "source": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.166901",
+      "originalAuthors": "S. Feng, A. J. Campbell, B. M. Francis, H. Baek, T. Taniguchi, K. Watanabe, I. C. Gerber, B. D. Gerardot, and M. Brotons-Gisbert",
+      "displayAuthors": "S. Feng, A. J. Campbell, B. M. Francis, Hyeonjun Baek, T. Taniguchi, K. Watanabe, I. C. Gerber, B. D. Gerardot, and M. Brotons-Gisbert",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-08",
+      "source": "https://www.nature.com/articles/s41427-025-00594-8",
+      "originalAuthors": "H. Kim, A. T. D. Nguyen, B. Kim, H. Jo, I. Rahmatulloh, H. Yoo, H. Oh, A. Ahmed, H. Beak, and K. Chung",
+      "displayAuthors": "H. Kim, A. T. D. Nguyen, B. Kim, H. Jo, I. Rahmatulloh, H. Yoo, H. Oh, A. Ahmed, Hyeonjun Baek, and K. Chung",
+      "expandedNames": {
+        "H. Beak": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-09",
+      "source": "https://pubs.rsc.org/ra/article/15/29/24031/906612/MoTe2-synaptic-transistor-and-its-application-to",
+      "originalAuthors": "W. S. Oh, S. Gim, H. Jeong, H. Baek, and H. Oh",
+      "displayAuthors": "W. S. Oh, Seongwon Gim, H. Jeong, Hyeonjun Baek, and H. Oh",
+      "expandedNames": {
+        "S. Gim": "Seongwon Gim",
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-10",
+      "source": "https://www.nature.com/articles/s41467-024-48476-x",
+      "originalAuthors": "S. Feng, A. J. Campbell, M. Brotons-Gisbert, D. Andrés-Penares, H. Baek, T. Taniguchi, K. Watanabe, B. Urbaszek, I. C. Gerber, and B.D. Gerardot",
+      "displayAuthors": "S. Feng, A. J. Campbell, M. Brotons-Gisbert, D. Andrés-Penares, Hyeonjun Baek, T. Taniguchi, K. Watanabe, B. Urbaszek, I. C. Gerber, and B.D. Gerardot",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-11",
+      "source": "https://www.nature.com/articles/s41567-024-02385-4",
+      "originalAuthors": "A. Campbell, V. Vitale, M. Brotons-Gisbert, H. Baek, A. Borel, T. Ivanova, T. Taniguchi, K. Watanabe, J. Lischner, and B. D. Gerardot",
+      "displayAuthors": "A. Campbell, V. Vitale, M. Brotons-Gisbert, Hyeonjun Baek, A. Borel, T. Ivanova, T. Taniguchi, K. Watanabe, J. Lischner, and B. D. Gerardot",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-12",
+      "source": "https://pubs.acs.org/doi/10.1021/acs.cgd.2c00959",
+      "originalAuthors": "H. Oh, Y. J. Hong, G.-C. Yi, H. Baek, D. R. Lee, H. H. Lee",
+      "displayAuthors": "H. Oh, Y. J. Hong, G.-C. Yi, Hyeonjun Baek, D. R. Lee, H. H. Lee",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-13",
+      "source": "https://www.nature.com/articles/s41699-022-00358-w",
+      "originalAuthors": "A. Campbell, M. Brotons-Gisbert, H. Baek, V. Vitale, T. Taniguchi, K. Watanabe, J. Lischner, and B. D. Gerardot",
+      "displayAuthors": "A. Campbell, M. Brotons-Gisbert, Hyeonjun Baek, V. Vitale, T. Taniguchi, K. Watanabe, J. Lischner, and B. D. Gerardot",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-14",
+      "source": "https://iopscience.iop.org/article/10.1088/1361-6528/ac8bd9",
+      "originalAuthors": "H. Y. Hwang, H. Baek, G.-C. Yi, and Y. D. Jho",
+      "displayAuthors": "H. Y. Hwang, Hyeonjun Baek, G.-C. Yi, and Y. D. Jho",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-15",
+      "source": "https://iopscience.iop.org/article/10.35848/1882-0786/ac7032",
+      "originalAuthors": "Y. Lee, H. Jo, K. Kim, H. Yoo, H. Baek, D. R. Lee, and H. Oh",
+      "displayAuthors": "Y. Lee, H. Jo, K. Kim, H. Yoo, Hyeonjun Baek, D. R. Lee, and H. Oh",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-16",
+      "source": "https://www.nature.com/articles/s41534-022-00558-8",
+      "originalAuthors": "C. H. Park, M. K. Woo, B. K. Park, Y.-S. Kim, H. Baek, S.-W. Lee, H.-T. Lim, S.-W. Jeon, H. Jung, S. Kim, and S.-W. Han",
+      "displayAuthors": "C. H. Park, M. K. Woo, B. K. Park, Y.-S. Kim, Hyeonjun Baek, S.-W. Lee, H.-T. Lim, S.-W. Jeon, H. Jung, S. Kim, and S.-W. Han",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-17",
+      "source": "https://www.nature.com/articles/s41565-021-00970-9",
+      "originalAuthors": "H. Baek, M. Brotons-Gisbert, A. Campbell, Valerio Vitale, Johannes Lischner, K. Watanabe, T. Taniguchi, and B. D. Gerardot",
+      "displayAuthors": "Hyeonjun Baek, M. Brotons-Gisbert, A. Campbell, Valerio Vitale, Johannes Lischner, K. Watanabe, T. Taniguchi, and B. D. Gerardot",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-18",
+      "source": "https://www.science.org/doi/10.1126/sciadv.abj3176",
+      "originalAuthors": "J.-P. So, H.-R. Kim, H. Baek, K.-Y. Jeong, H.-C. Lee, W. Huh, Y. S. Kim, K. Watanabe, T. Taniguchi, J. Kim, C.-H. Lee, H.-G. Park",
+      "displayAuthors": "J.-P. So, H.-R. Kim, Hyeonjun Baek, K.-Y. Jeong, H.-C. Lee, W. Huh, Y. S. Kim, K. Watanabe, T. Taniguchi, J. Kim, C.-H. Lee, H.-G. Park",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-19",
+      "source": "https://journals.aps.org/prx/abstract/10.1103/PhysRevX.11.031033",
+      "originalAuthors": "M. Brotons-Gisbert, H. Baek, A. Campbell, K. Watanabe, T. Taniguchi, and B. D. Gerardot",
+      "displayAuthors": "M. Brotons-Gisbert, Hyeonjun Baek, A. Campbell, K. Watanabe, T. Taniguchi, and B. D. Gerardot",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-20",
+      "source": "https://www.nature.com/articles/s41427-021-00324-w",
+      "originalAuthors": "J. B. Park, M. S. Song, R. Ghosh, R. K. Saroj, Y. Hwang, Y. Tchoe, H. Oh, H. Baek, Y. Lim, B. Kim, S.-W. Kim, and G.-C. Yi",
+      "displayAuthors": "J. B. Park, M. S. Song, R. Ghosh, R. K. Saroj, Y. Hwang, Y. Tchoe, H. Oh, Hyeonjun Baek, Y. Lim, B. Kim, S.-W. Kim, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-21",
+      "source": "https://www.nature.com/articles/s41427-021-00301-3",
+      "originalAuthors": "Y. Tchoe, J. Jo, H. Kim, H. Kim, H. Baek, K. Lee, D. Yoo, W. J. Choi, M. Kim, and G.-C. Yi",
+      "displayAuthors": "Y. Tchoe, J. Jo, H. Kim, H. Kim, Hyeonjun Baek, K. Lee, D. Yoo, W. J. Choi, M. Kim, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-22",
+      "source": "https://www.nature.com/articles/s41427-021-00299-8",
+      "originalAuthors": "M. S. Song, H. Baek, K. Lee, D. Yoo, K. Chung, J. Lee, H. Moon, B. H. Lee, H. Y. Park, and G.-C. Yi",
+      "displayAuthors": "M. S. Song, Hyeonjun Baek, K. Lee, D. Yoo, K. Chung, J. Lee, H. Moon, B. H. Lee, H. Y. Park, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-23",
+      "source": "https://doi.org/10.1016/j.nanoen.2020.104955",
+      "originalAuthors": "Y. Tchoe, M. Song, H. Kim, H. Baek, J. Y. Park, H. Oh, K. Lee, K. Chung, J. K. Hyun, and G.-C. Yi",
+      "displayAuthors": "Y. Tchoe, M. Song, H. Kim, Hyeonjun Baek, J. Y. Park, H. Oh, K. Lee, K. Chung, J. K. Hyun, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-24",
+      "source": "https://www.science.org/doi/10.1126/sciadv.aba8526",
+      "originalAuthors": "H. Baek*, M. Brotons-Gisbert*, Z. X. Koong, A. Campbell, M. Rambach, K. Watanabe, T. Taniguchi, and B. D. Gerardot",
+      "displayAuthors": "Hyeonjun Baek*, M. Brotons-Gisbert*, Z. X. Koong, A. Campbell, M. Rambach, K. Watanabe, T. Taniguchi, and B. D. Gerardot",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-25",
+      "source": "https://www.nature.com/articles/s41563-020-0687-7",
+      "originalAuthors": "M. Brotons-Gisbert*, H. Baek*, A. Molina-Sánchez, A. Campbell, D. Scerri, D. White, K. Watanabe, T. Taniguchi, C. Bonato, and B. D. Gerardot",
+      "displayAuthors": "M. Brotons-Gisbert*, Hyeonjun Baek*, A. Molina-Sánchez, A. Campbell, D. Scerri, D. White, K. Watanabe, T. Taniguchi, C. Bonato, and B. D. Gerardot",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-26",
+      "source": "https://pubs.aip.org/aip/apm/article/5/4/046106/121564/ZnO-nanotube-waveguide-arrays-on-graphene-films",
+      "originalAuthors": "H. Baek, H. Kwak, M. S. Song, G. E. Ha, J. Park, Y. Tchoe, J. K. Hyun, H. Y. Park, E. Cheong, and G.-C. Yi",
+      "displayAuthors": "Hyeonjun Baek, H. Kwak, M. S. Song, G. E. Ha, J. Park, Y. Tchoe, J. K. Hyun, H. Y. Park, E. Cheong, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-27",
+      "source": "https://pubs.aip.org/aip/apl/article/108/26/263102/30764/ZnO-nanolasers-on-graphene-films",
+      "originalAuthors": "H. Baek, J. B. Park, J. Park, J. K. Hyun, H. Yoon, H. Oh, and J. Yoon",
+      "displayAuthors": "Hyeonjun Baek, J. B. Park, J. Park, J. K. Hyun, H. Yoon, H. Oh, and J. Yoon",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-28",
+      "source": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.201601894",
+      "originalAuthors": "K. Chung, H. Yoo, J. K. Hyun, H. Oh. Y. Tchoe, K. Lee, H. Baek, M. Kim, and G-C. Yi",
+      "displayAuthors": "K. Chung, H. Yoo, J. K. Hyun, H. Oh. Y. Tchoe, K. Lee, Hyeonjun Baek, M. Kim, and G-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-29",
+      "source": "https://www.nature.com/articles/srep27451",
+      "originalAuthors": "K. Lee, Y. Tchoe, H. Yoon, H. Baek, K. Chung, S. Lee, C. Yoon, B. H. Park, and G.-C. Yi",
+      "displayAuthors": "K. Lee, Y. Tchoe, H. Yoon, Hyeonjun Baek, K. Chung, S. Lee, C. Yoon, B. H. Park, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-30",
+      "source": "https://pubs.aip.org/aip/adv/article/6/4/045021/21997/Distinctive-mapping-of-strain-and-quantum-size",
+      "originalAuthors": "H.-Y. Hwang, H. Baek, G.-C. Yi, H.-C. Kim, and Y.-D. Jho",
+      "displayAuthors": "H.-Y. Hwang, Hyeonjun Baek, G.-C. Yi, H.-C. Kim, and Y.-D. Jho",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-31",
+      "source": "https://pubs.acs.org/doi/10.1021/acsnano.5b07905",
+      "originalAuthors": "Y. Tchoe, C.-H. Lee, J. B. Park, H. Baek, K. Chung, J. Jo, M. Kim, and G.-C. Yi",
+      "displayAuthors": "Y. Tchoe, C.-H. Lee, J. B. Park, Hyeonjun Baek, K. Chung, J. Jo, M. Kim, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-32",
+      "source": "https://pubs.acs.org/doi/10.1021/acsphotonics.5b00268",
+      "originalAuthors": "J. K. Hyun, T. Kang, H. Baek, H. Oh, D.-S. Kim, and G.-C Yi",
+      "displayAuthors": "J. K. Hyun, T. Kang, Hyeonjun Baek, H. Oh, D.-S. Kim, and G.-C Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-33",
+      "source": "https://pubs.acs.org/doi/10.1021/acs.nanolett.5b02049",
+      "originalAuthors": "J. K. Hyun, T. Kang, H. Baek, D.-S. Kim, and G.-C Yi",
+      "displayAuthors": "J. K. Hyun, T. Kang, Hyeonjun Baek, D.-S. Kim, and G.-C Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-34",
+      "source": "https://pubs.aip.org/aip/apm/article/3/1/016103/238344/Growth-and-optical-characteristics-of-high-quality",
+      "originalAuthors": "S. I. Park, Y. Tchoe, H. Baek, J. Heo, J. K. Hyun, J. Jo, M. Kim, N.-J. Kim, and G.-C. Yi",
+      "displayAuthors": "S. I. Park, Y. Tchoe, Hyeonjun Baek, J. Heo, J. K. Hyun, J. Jo, M. Kim, N.-J. Kim, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-35",
+      "source": "https://www.nature.com/articles/am2014108",
+      "originalAuthors": "H. Oh, Y. J. Hong, K.-S. Kim, S. Yoon, H. Baek, S.-H. Kang, Y.-K. Kwon, M. Kim, and G.-C. Yi",
+      "displayAuthors": "H. Oh, Y. J. Hong, K.-S. Kim, S. Yoon, Hyeonjun Baek, S.-H. Kang, Y.-K. Kwon, M. Kim, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-36",
+      "source": "https://pubs.aip.org/aip/apl/article/105/20/201108/27587/Selective-excitation-of-Fabry-Perot-or-whispering",
+      "originalAuthors": "H. Baek, J. K Hyun, K. Chung, H. Oh, and G.-C. Yi",
+      "displayAuthors": "Hyeonjun Baek, J. K Hyun, K. Chung, H. Oh, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-37",
+      "source": "https://iopscience.iop.org/article/10.1088/0022-3727/47/48/485302",
+      "originalAuthors": "J. Xu, C. Wang, A. Lu, B. Wu, X. Chen, H. Oh, H. Baek, G.-C. Yi, and L. Ouyang",
+      "displayAuthors": "J. Xu, C. Wang, A. Lu, B. Wu, X. Chen, H. Oh, Hyeonjun Baek, G.-C. Yi, and L. Ouyang",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-38",
+      "source": "https://pubs.aip.org/aip/jap/article/116/17/174303/281433/Twinning-effect-on-photoluminescence-spectra-of",
+      "originalAuthors": "J. Xu, C. Wang, B. Wu, X. Xu, X. Chen, H. Oh, H. Baek, and G.-C. Yi",
+      "displayAuthors": "J. Xu, C. Wang, B. Wu, X. Xu, X. Chen, H. Oh, Hyeonjun Baek, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-39",
+      "source": "https://doi.org/10.1063/1.4894780",
+      "originalAuthors": "K. Chung, H. Beak, Y. Tchoe, H. Oh, H. Yoo, M. Kim, and G.-C. Yi",
+      "displayAuthors": "K. Chung, Hyeonjun Baek, Y. Tchoe, H. Oh, H. Yoo, M. Kim, and G.-C. Yi",
+      "expandedNames": {
+        "H. Beak": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-40",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/24758019/",
+      "originalAuthors": "D. M. Kim, Y.-H. Cho, H. Jeong, H. Baek, G.-C. Yi, and Y. D. Jho",
+      "displayAuthors": "D. M. Kim, Y.-H. Cho, H. Jeong, Hyeonjun Baek, G.-C. Yi, and Y. D. Jho",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-41",
+      "source": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adem.201300405",
+      "originalAuthors": "J. Xu, A. Lu, C. Wang, R. Zou, X. Liu, X. Wu, Y. Wang, S. Li, L. Sun, X. Chen, H. Oh, H. Baek, G.‐C. Yi, and J. Chu",
+      "displayAuthors": "J. Xu, A. Lu, C. Wang, R. Zou, X. Liu, X. Wu, Y. Wang, S. Li, L. Sun, X. Chen, H. Oh, Hyeonjun Baek, G.‐C. Yi, and J. Chu",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-42",
+      "source": "https://pubs.acs.org/doi/10.1021/nl401011x",
+      "originalAuthors": "H. Baek, C.-H. Lee, K. Chung, and G.-C. Yi",
+      "displayAuthors": "Hyeonjun Baek, C.-H. Lee, K. Chung, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-43",
+      "source": "https://www.nature.com/articles/am201245",
+      "originalAuthors": "K. Chung, S. I. Park, H. Baek, J.-S. Chung, and G.-C. Yi",
+      "displayAuthors": "K. Chung, S. I. Park, Hyeonjun Baek, J.-S. Chung, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-44",
+      "source": "https://doi.org/10.1002/adma.201201966",
+      "originalAuthors": "Y.-J. Kim, H. Yoo, C.-H. Lee, J. B. Park, H. Baek, M. Kim, and G.-C. Yi",
+      "displayAuthors": "Y.-J. Kim, H. Yoo, C.-H. Lee, J. B. Park, Hyeonjun Baek, M. Kim, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-45",
+      "source": "https://pubs.acs.org/doi/10.1021/nl203900q",
+      "originalAuthors": "H. Heo, K. Kang, D. Lee, L.-H. Jin, H. Baek, I. Hwang, M. Kim, H.-S. Lee, B.-J. Lee, G.-C. Yi, Y.-H. Cho, and M.-H. Jo",
+      "displayAuthors": "H. Heo, K. Kang, D. Lee, L.-H. Jin, Hyeonjun Baek, I. Hwang, M. Kim, H.-S. Lee, B.-J. Lee, G.-C. Yi, Y.-H. Cho, and M.-H. Jo",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    },
+    {
+      "id": "pub-46",
+      "source": "https://ieeexplore.ieee.org/document/5579990",
+      "originalAuthors": "C.-H. Lee, Y. J. Hong, Y.-J. Kim, J. Yoo, H. Baek, S.-R. Jeon, S.-J. Le, and G.-C. Yi",
+      "displayAuthors": "C.-H. Lee, Y. J. Hong, Y.-J. Kim, J. Yoo, Hyeonjun Baek, S.-R. Jeon, S.-J. Le, and G.-C. Yi",
+      "expandedNames": {
+        "H. Baek": "Hyeonjun Baek"
+      }
+    }
+  ],
+  "underReview": "Already full names; unchanged.",
+  "identityChecks": [
+    {
+      "paperId": "pub-01",
+      "initials": "J. Lee",
+      "identity": "Jaegoo Lee",
+      "action": "External coauthor: keep original token.",
+      "source": "https://onlinelibrary.wiley.com/doi/abs/10.1002/sstr.70581"
+    },
+    {
+      "paperId": "pub-08",
+      "initials": "H. Jo",
+      "identity": "Hyerin Jo",
+      "action": "External coauthor: keep original token.",
+      "source": "https://www.nature.com/articles/s41427-025-00594-8.pdf"
+    },
+    {
+      "paperId": "pub-15",
+      "initials": "H. Jo",
+      "identity": "Hyerin Jo",
+      "action": "External coauthor: keep original token.",
+      "source": "https://scholarworks.sogang.ac.kr/item/706fb5a2-08db-402c-a5ad-d43b328a4e9f"
+    },
+    {
+      "paperId": "pub-08",
+      "initials": "H. Beak",
+      "publishedFullName": "Hyeonjun Beak",
+      "displayFullName": "Hyeonjun Baek",
+      "evidence": "Publisher Sogang Physics affiliation and inclusion on PI lab publication list; lab roster spelling used for website display. No official publisher correction claimed.",
+      "sources": [
+        "https://www.nature.com/articles/s41427-025-00594-8.pdf",
+        "https://baahyyjuu.wixsite.com/hyeonjun/publication"
+      ]
+    }
+  ]
+}

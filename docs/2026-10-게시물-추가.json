@@ -1,0 +1,103 @@
+{
+  "addedAt": "2026-11-01",
+  "source": "User-provided event dates, names and three photographs.",
+  "notes": [
+    "Original JPEG files copied byte-for-byte. Display WebP files preserve content and aspect ratio; EXIF orientation applied.",
+    "No award rank or presentation title added.",
+    "The original Seongwon Gim and Hyunjun Jo poster announcements are now merged into one photo-free 2026 KPS Fall Conferences event post; see latestConferenceUpdate. This file retains the original import record.",
+    "Award body format follows existing posts news-08, news-09 and news-11: photograph followed by award statement and the existing congratulatory sentence. All News titles now end with an em dash and the relevant person's name, per the latest user request.",
+    "Spring 2026 for the G-LAMP program follows the photograph banner identifying the first semester of 2026. The event date remains October 27, 2026."
+  ],
+  "posts": [
+    {
+      "id": "news-2026-glamp-junha-park-award",
+      "date": "2026-10-27",
+      "category": "Awards",
+      "title": "G-LAMP Undergraduate Research Program (Spring 2026): Award Received — Junha Park",
+      "sourceFilename": "JUNHA PARK GLAMP AWARD.jpg",
+      "originalFile": "assets/posts/news-2026-glamp-junha-park-award-original.jpg",
+      "displayFile": "assets/posts/news-2026-glamp-junha-park-award-display.webp",
+      "originalSHA256": "4d0493db8254a7ecd1faf9d253a4af45782cc04fd4352c61dd255eda3ca6b2af",
+      "originalBytes": 3542603,
+      "displayBytes": 180236,
+      "encodedSize": [
+        4000,
+        3000
+      ],
+      "orientedSize": [
+        4000,
+        3000
+      ],
+      "exifOrientation": 1,
+      "displaySize": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "id": "news-2026-kps-yongju-jeong-oral-award",
+      "date": "2026-10-22",
+      "category": "Awards",
+      "title": "2026 KPS Fall: Oral Presentation Award — Yongju Jeong",
+      "sourceFilename": "Yongju Jeong KPS Oral AWARD.jpg",
+      "originalFile": "assets/posts/news-2026-kps-yongju-jeong-oral-award-original.jpg",
+      "displayFile": "assets/posts/news-2026-kps-yongju-jeong-oral-award-display.webp",
+      "originalSHA256": "abb999979f733fce44dce2a5cb5acaa8405c2679f94700aa0fc138124549d99b",
+      "originalBytes": 3322226,
+      "displayBytes": 144808,
+      "encodedSize": [
+        4000,
+        3000
+      ],
+      "orientedSize": [
+        4000,
+        3000
+      ],
+      "exifOrientation": 1,
+      "displaySize": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "id": "news-2026-kps-taegyu-jang-poster-award",
+      "date": "2026-10-21",
+      "category": "Awards",
+      "title": "2026 KPS Fall: Poster Presentation Award — Taegyu Jang",
+      "sourceFilename": "TAEGYU JANG KPS POSTER AWARD.jpg",
+      "originalFile": "assets/posts/news-2026-kps-taegyu-jang-poster-award-original.jpg",
+      "displayFile": "assets/posts/news-2026-kps-taegyu-jang-poster-award-display.webp",
+      "originalSHA256": "a7c2f6b95eead4031fc25b609adc385ffce1dfbe676c75904e80dc26aa2b9ca8",
+      "originalBytes": 4621133,
+      "displayBytes": 552926,
+      "encodedSize": [
+        4000,
+        3000
+      ],
+      "orientedSize": [
+        3000,
+        4000
+      ],
+      "exifOrientation": 6,
+      "displaySize": [
+        1200,
+        1600
+      ]
+    },
+    {
+      "id": "news-2026-kps-seongwon-gim-poster",
+      "date": "2026-10-21",
+      "category": "Conferences",
+      "title": "2026 KPS Fall: Poster Presentation — Seongwon Gim",
+      "imageStatus": "No photograph provided; text-only post."
+    },
+    {
+      "id": "news-2026-kps-hyunjun-jo-poster",
+      "date": "2026-10-21",
+      "category": "Conferences",
+      "title": "2026 KPS Fall: Poster Presentation — Hyunjun Jo",
+      "imageStatus": "No photograph provided; text-only post."
+    }
+  ],
+  "latestConferenceUpdate": "docs/Conference-행사별-통합.json"
+}

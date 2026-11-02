@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" role="img" aria-labelledby="title desc">
+  <title id="title">Electrical control of an interlayer exciton</title>
+  <desc id="desc">One electron in the upper atomically thin layer binds to one hole in the lower layer. Three patterned electrode pads below the bilayer and a downward electric-field arrow represent electrical tuning and confinement. The device geometry is conceptual.</desc>
+  <rect width="600" height="400" fill="#fff"/>
+  <g stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round">
+    <g fill="#f5f2f9" stroke="#6b5793">
+      <path d="M112 326 173 307 217 331 156 350Z"/>
+      <path d="M238 326 299 307 343 331 282 350Z"/>
+      <path d="M364 326 425 307 469 331 408 350Z"/>
+    </g>
+    <path d="M63 231 337 142 514 231 240 320Z" fill="#eff7f5" stroke="#26736f"/>
+    <path d="M63 155 337 66 514 155 240 244Z" fill="#edf3f8" stroke="#315f8c"/>
+    <path d="M294 190V232" fill="none" stroke="#002e5d" stroke-dasharray="5 7"/>
+    <circle cx="294" cy="172" r="18" fill="#002e5d" stroke="#002e5d"/>
+    <circle cx="294" cy="250" r="18" fill="#26736f" stroke="#26736f"/>
+    <path d="M286 172H302M286 250H302M294 242V258" fill="none" stroke="#fff"/>
+    <path d="M550 125V278M541 268 550 278 559 268" fill="none" stroke="#002e5d"/>
+  </g>
+</svg>

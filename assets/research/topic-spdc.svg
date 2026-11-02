@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Photon-pair generation in a twisted two-dimensional stack</title>
+  <desc id="desc">Conceptual spontaneous parametric down-conversion. An incoming pump wave reaches two nonlinear material layers with different in-plane orientations and splits into two lower-frequency outgoing photon waves. The rotated sheet edges and lattice directions indicate relative layer twist. Pair generation is the illustrated mechanism; the image does not establish entanglement or report a completed experiment.</desc>
+  <defs>
+    <marker id="pump-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M1 1 9 5 1 9" fill="none" stroke="#315f8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="signal-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M1 1 9 5 1 9" fill="none" stroke="#26736f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="idler-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M1 1 9 5 1 9" fill="none" stroke="#6b5793" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <rect width="600" height="400" fill="#fff"/>
+  <g stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- The two sheets have visibly different in-plane lattice directions. -->
+    <path d="M181 231 293 151 412 222 300 302Z" fill="#edf3f8" stroke="#315f8c"/>
+    <g fill="none" stroke="#315f8c">
+      <path d="M211 249 323 169M240 266 352 186M270 284 382 204"/>
+      <path d="M209 211 328 282M237 191 356 262M265 171 384 242"/>
+    </g>
+    <path d="M193 174 347 154 393 246 239 266Z" fill="#f5f2f9" stroke="#6b5793"/>
+    <g fill="none" stroke="#6b5793">
+      <path d="M205 197 359 177M216 220 370 200M228 243 382 223"/>
+      <path d="M232 169 278 261M270 164 316 256M309 159 355 251"/>
+    </g>
+    <!-- Shorter pump wavelength; two longer-wavelength outputs. -->
+    <path d="M30 216C37 204 44 228 51 216S65 204 72 216 86 228 93 216 107 204 114 216 128 228 135 216 149 204 156 216 170 228 177 216H294" fill="none" stroke="#315f8c" stroke-width="3" marker-end="url(#pump-arrow)"/>
+    <circle cx="307" cy="216" r="6" fill="#002e5d" stroke="#002e5d"/>
+    <path d="M0 0H22C34-14 46 14 58 0S82-14 94 0 118 14 130 0 154-14 166 0 190 14 202 0H266" transform="translate(315 209) rotate(-30)" fill="none" stroke="#26736f" stroke-width="3" marker-end="url(#signal-arrow)"/>
+    <path d="M0 0H22C34-14 46 14 58 0S82-14 94 0 118 14 130 0 154-14 166 0 190 14 202 0H266" transform="translate(315 223) rotate(26)" fill="none" stroke="#6b5793" stroke-width="3" marker-end="url(#idler-arrow)"/>
+  </g>
+</svg>
