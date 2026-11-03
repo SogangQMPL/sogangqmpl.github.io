@@ -1,5 +1,7 @@
 @font-face{font-family:Inter;src:url('assets/fonts/InterVariable.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}
 @font-face{font-family:Quicksand;src:url('assets/fonts/Quicksand.woff2') format('woff2');font-style:normal;font-weight:300 700;font-display:swap}
+@font-face{font-family:WixLuloClean;src:url('assets/fonts/Wix-LuloClean-Bold.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:WixAvenirLight;src:url('assets/fonts/Wix-Avenir-Light.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
 @font-face{font-family:Pretendard;src:url('assets/fonts/Pretendard-Regular.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
 @font-face{font-family:Pretendard;src:url('assets/fonts/Pretendard-SemiBold.woff2') format('woff2');font-style:normal;font-weight:600;font-display:swap}
 :root{--paper:#fff;--ink:#28303b;--muted:#68717d;--group-gray:#757575;--navy:#002e5d;--purple:#7860bb;--purple-text:#68469f;--line:#e6e8ed;--sans:Inter,Pretendard,system-ui,sans-serif;--page-width:1280px;--page-gutter:40px;--layout-gap:32px}
@@ -261,11 +263,11 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 .home-hero-figure img{width:100%;height:auto;filter:url(#home-lattice-tint)}
 .home-hero-figure:after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 24px 16px #fff;pointer-events:none}
 .announcement{padding:0 0 var(--layout-gap);border-bottom:1px solid var(--line);text-align:center}
-.announcement h2{font-family:Arial,"Malgun Gothic",sans-serif;font-size:33px;font-weight:700;line-height:1.5;letter-spacing:0;word-break:keep-all;overflow-wrap:break-word;color:var(--purple)}
+.announcement h2{font-family:WixLuloClean,sans-serif;font-size:32.9055px;font-weight:700;line-height:1.5;letter-spacing:0;word-break:keep-all;overflow-wrap:break-word;color:var(--purple)}
 .announcement h2 a{color:inherit;text-decoration:none}
 .announcement h2 a:hover{text-decoration:underline}
-.announcement-body{margin-top:5px;font-size:16px;color:var(--muted);line-height:1.8}
-.announcement-body a{font-size:16px;color:var(--muted);text-decoration:none}
+.announcement-body{margin-top:5px;font-family:WixAvenirLight,sans-serif;font-size:16px;font-weight:400;color:#000;line-height:1.3}
+.announcement-body a{font-size:inherit;color:inherit;text-decoration:none}
 .site-footer{padding:18px 0;background:var(--navy)}
 .footer-inner{max-width:var(--page-width);display:flex;flex-direction:column;align-items:flex-start;gap:4px}
 .footer-affiliation{font-size:14px;font-weight:550;line-height:1.65}
