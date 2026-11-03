@@ -61,7 +61,7 @@ node scripts/serve.mjs
 - **Solid-State Physics:** Moiré physics, Interlayer excitons
 - **Semiconductor Devices:** 2D semiconductor devices
 
-각 하위 주제는 대표 그림, 설명과 Related papers로 구성합니다. 자세한 설명과 추가 그림은 **DETAIL**을 눌러 펼칩니다. 관련 논문 13편은 각 하위 주제에만 연결하며, SPDC에는 확인하지 못한 게재 실적을 임의로 연결하지 않았습니다.
+각 하위 주제는 대표 그림, 설명과 Related papers로 구성합니다. **Research details**를 펼치면 Wix 세부 페이지의 내용을 소제목·본문·관련 그림으로 묶어 읽을 수 있습니다. 관련 논문 13편은 각 하위 주제에만 연결하며, SPDC에는 확인하지 못한 게재 실적을 임의로 연결하지 않았습니다.
 
 대표 그림 4개는 Wix 원본 또는 원본에서 잘라낸 그림입니다. Quantum light sources는 실제 논문 그림 후보 선택 전까지 기존 SVG 개념도를 유지합니다. 출처와 교체 기록은 [Research 원문 검증](docs/Research-원문검증.json), [대표 그림 원본 교체 기록](docs/Research-대표그림-원본교체.json), [연구 그림 설명](docs/연구그림-설명.md), [이미지 출처](docs/이미지-출처.md)에 있습니다.
 
