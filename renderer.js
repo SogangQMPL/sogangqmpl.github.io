@@ -82,12 +82,17 @@ function highlightExcerpt(n) {
  const text=(n.content||[]).filter(block=>['paragraph','quote'].includes(block.type)).map(block=>Array.isArray(block.children)?block.children.map(run=>String(run.text||'')).join(''):String(block.text||'')).map(value=>value.trim()).filter(Boolean);
  return (n.excerpt?.trim()?n.excerpt.split(/\n+/):text.length?text:String(n.summary||n.body||'').split(/\n+/)).map(value=>value.trim()).filter(Boolean).slice(0,2);
 }
+function highlightProse(text,n) {
+ if(n.category!=='Awards')return e(text);
+ const block=!n.excerpt?.trim()&&(n.content||[]).find(block=>['paragraph','quote'].includes(block.type)&&(Array.isArray(block.children)?block.children.map(run=>String(run.text||'')).join(''):String(block.text||'')).trim()===text);
+ if(block&&Array.isArray(block.children))return postInline({children:block.children.map(({text,bold,italic})=>({text,bold,italic}))});
+ return e(text).replace(/\*\*([^*\n]+)\*\*/g,'<strong>$1</strong>').replaceAll('\n','<br>');
+}
 function highlightEntry(n) {
  const firstPhoto=(n.content||[]).find(block=>block.type==='image'),image=safeURL(n.image)||safeURL(firstPhoto?.src);
  const size=image===safeURL(firstPhoto?.src)&&firstPhoto?.width&&firstPhoto?.height?` width="${Number(firstPhoto.width)}" height="${Number(firstPhoto.height)}"`:'';
  const excerpt=highlightExcerpt(n);
- const facts=n.category==='Awards'&&Array.isArray(n.facts)?n.facts.filter(f=>typeof f?.label==='string'&&typeof f.value==='string'&&f.label.trim()&&f.value.trim()):[];
- const details=facts.length?`<dl class="highlight-facts">${facts.map(f=>`<div${f.label==='Recipient'?' class="fact-recipient"':f.label==='Award'?' class="fact-award"':''}><dt${language(f.label)}>${e(f.label)}</dt><dd${language(f.value)}>${e(f.value)}</dd></div>`).join('')}</dl>`:excerpt.length?`<div class="highlight-excerpt">${excerpt.map(text=>`<p${language(text)}>${e(text)}</p>`).join('')}</div>`:'';
+ const details=excerpt.length?`<div class="highlight-excerpt">${excerpt.map(text=>`<p${language(text)}>${highlightProse(text,n)}</p>`).join('')}</div>`:'';
  const meta=`<time id="${e(n.id)}-date" datetime="${e(n.date)}">${e(date(n.date))}</time>`;
  return `<article class="news-entry highlight-entry${image?' has-image':''}" id="${e(n.id)}" data-category="${e(n.category)}"><a class="highlight-link" href="${e(postFileName(n))}" aria-labelledby="${e(n.id)}-title" aria-describedby="${e(n.id)}-date">${image?`<figure class="highlight-image"><img src="${e(image)}" alt="${e(n.imageAlt||firstPhoto?.alt||n.title)}" loading="lazy"${size}></figure>`:''}<div class="highlight-copy"><h2 id="${e(n.id)}-title"${language(n.title)}>${e(n.title)}</h2>${n.category==='Activities'?meta:`<div class="highlight-meta"><span class="highlight-category">${e(n.category)}</span>${meta}</div>`}${details}</div></a></article>`;
 }
