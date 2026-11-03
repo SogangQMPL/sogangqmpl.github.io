@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile,access} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {render,pages,safeURL,postFileName,escapeHTML,sortedPublications} from '../renderer.js';
+import {render,pages,safeURL,postFileName,escapeHTML,sortedPublications,publicationTitle} from '../renderer.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const data=JSON.parse(await readFile(path.join(root,'content/site.json'),'utf8'));
 for(const key of ['site','hero','join']) assert(data[key]&&typeof data[key]==='object',`Missing ${key}`);
@@ -26,6 +26,7 @@ for(const key of ['research','publications','news','people',...(data.underReview
    for(const [name,personId] of Object.entries(item.authorAliases||{}))assert(item.authors.includes(name)&&data.people.some(person=>person.id===personId),`Invalid manuscript author alias: ${item.id}`);
   }
   if(key==='publications')assert(Number.isInteger(Number(item.year))&&Number(item.year)>=1900,`Invalid year: ${item.id}`);
+  if(['publications','underReview'].includes(key)&&item.titleSegments!==undefined)assert(Array.isArray(item.titleSegments)&&item.titleSegments.every(run=>run&&typeof run.text==='string'&&(run.italic===undefined||typeof run.italic==='boolean')),`Invalid title formatting: ${item.id}`);
   if(key==='publications'&&item.image){
    assert(item.imageAlt&&item.imageLabel,`Publication figure description missing: ${item.id}`);
    assert(safeURL(item.imageSource),`Publication figure source missing: ${item.id}`);
@@ -100,6 +101,13 @@ for(const post of data.news){
  assert(!render(data,'post-'+post.id).includes('href="https://baahyyjuu.wixsite.com/'),`Post navigates to Wix: ${post.id}`);
 }
 assert(!safeURL('javascript:alert(1)'));assert(!safeURL('assets/../../secret'));
+const formattedTitle={title:'Bilayer 2H-MoSe₂',titleSegments:[{text:'Bilayer 2'},{text:'H',italic:true},{text:'-MoSe₂'}]};
+assert.equal(publicationTitle(formattedTitle),'Bilayer 2<em>H</em>-MoSe₂','Only the verified polytype letter is italic; chemical subscripts stay intact');
+assert.equal(publicationTitle({...formattedTitle,title:'A changed title'}),'A changed title','Stale formatting must never substitute or hide an edited title');
+assert.equal(publicationTitle(formattedTitle,'Research result'),'Research result','Research outcome labels keep their independent wording');
+assert.equal(publicationTitle({title:'<img src=x>',titleSegments:[{text:'<img src=x>',italic:true}]}),'<em>&lt;img src=x&gt;</em>','Formatted title text must be escaped');
+const styled=structuredClone(data);styled.publications[0].title=formattedTitle.title;styled.publications[0].titleSegments=formattedTitle.titleSegments;styled.publications[0].featured=true;
+for(const page of ['publications','index'])assert(render(styled,page).includes('Bilayer 2<em>H</em>-MoSe₂'),`${page}: title formatting must be shared`);
 const injected=structuredClone(data);injected.people[0].name='<img src=x onerror=alert(1)>';assert(!render(injected,'people').includes('<img src=x'));
 injected.news[0].content=[{type:'paragraph',children:[{text:'<script>alert(1)</script>',url:'javascript:alert(1)'}]}];
 const injectedPost=render(injected,'post-'+injected.news[0].id);assert(!injectedPost.includes('<script>alert'));assert(!injectedPost.includes('href="javascript:'));
