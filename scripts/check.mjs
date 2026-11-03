@@ -32,6 +32,12 @@ for(const key of ['research','publications','news','people',...(data.underReview
    assert(safeURL(item.imageSource),`Publication figure source missing: ${item.id}`);
    if(item.imageWidth||item.imageHeight)assert(Number(item.imageWidth)>0&&Number(item.imageHeight)>0,`Invalid figure size: ${item.id}`);
   }
+  if(key==='people'&&item.imageDisplay){
+   const display=item.imageDisplay;
+   assert(safeURL(display.source)&&/^assets\/people\/display\/[a-z0-9-]+$/.test(display.base),'Invalid portrait display source');
+   assert(Array.isArray(display.widths)&&display.widths.length>0&&display.widths.length<=32&&display.widths.every((w,i)=>Number.isInteger(w)&&w>=32&&w<=1024&&(!i||w>display.widths[i-1])),'Invalid portrait display widths');
+   for(const width of display.widths)await access(path.join(root,`${display.base}-${width}.webp`));
+  }
   if(key==='news'){
    if(item.excerpt!==undefined)assert(typeof item.excerpt==='string',`Invalid post excerpt: ${item.id}`);
    if(item.facts!==undefined)assert(Array.isArray(item.facts)&&item.facts.every(f=>f&&typeof f.label==='string'&&typeof f.value==='string'),`Invalid news facts: ${item.id}`);
@@ -109,6 +115,17 @@ assert.equal(publicationTitle({title:'<img src=x>',titleSegments:[{text:'<img sr
 const styled=structuredClone(data);styled.publications[0].title=formattedTitle.title;styled.publications[0].titleSegments=formattedTitle.titleSegments;styled.publications[0].featured=true;
 for(const page of ['publications','index'])assert(render(styled,page).includes('Bilayer 2<em>H</em>-MoSe₂'),`${page}: title formatting must be shared`);
 const injected=structuredClone(data);injected.people[0].name='<img src=x onerror=alert(1)>';assert(!render(injected,'people').includes('<img src=x'));
+const portraitReplacement=structuredClone(data);
+for(const [index,page] of [[0,'people'],[1,'students']]){
+ const person=portraitReplacement.people[index],base=person.imageDisplay?.base;
+ if(base){
+  assert(render(portraitReplacement,page).includes(`${base}-`),'Current portrait should use antialiased display sources');
+  person.image='https://example.com/replacement-portrait.jpg';
+  const html=render(portraitReplacement,page);
+  assert(html.includes('src="https://example.com/replacement-portrait.jpg"'),'An edited portrait must display its replacement');
+  assert(!html.includes(`${base}-`),'Stale portrait derivatives must not override an edited photo');
+ }
+}
 injected.news[0].content=[{type:'paragraph',children:[{text:'<script>alert(1)</script>',url:'javascript:alert(1)'}]}];
 const injectedPost=render(injected,'post-'+injected.news[0].id);assert(!injectedPost.includes('<script>alert'));assert(!injectedPost.includes('href="javascript:'));
 console.log(`Content integrity passed: ${data.publications.length} publications, ${data.people.length} people, ${pages.length} pages + ${data.news.length} posts. Local images, post routes and safe rendering verified.`);

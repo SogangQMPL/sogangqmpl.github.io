@@ -1,0 +1,1153 @@
+{
+  "sourceRoster": "docs/원본자료.json#people",
+  "generator": "scripts/prepare-portraits.cjs",
+  "recipe": {
+    "source": "Recorded Wix originals; fully decoded before extraction and resizing",
+    "crop": "4:5 object-fit:cover; horizontal center; vertical 25%; source coordinates rounded to nearest pixel",
+    "color": "EXIF orientation applied; sRGB output",
+    "resize": "One Lanczos3 reduction from the cropped original; no enlargement",
+    "outputHeight": "round(width * 5 / 4)",
+    "encoding": {
+      "format": "webp",
+      "lossless": true,
+      "effort": 6
+    },
+    "imageAdjustments": "None: no blur, masks, sharpening, face edits, or generative processing"
+  },
+  "requestedWidths": {
+    "students": [
+      112,
+      120,
+      128,
+      140,
+      150,
+      160,
+      168,
+      180,
+      192,
+      224,
+      240,
+      256,
+      336,
+      360,
+      384
+    ],
+    "professor": [
+      140,
+      160,
+      175,
+      200,
+      210,
+      240,
+      280,
+      320
+    ]
+  },
+  "tools": {
+    "sharp": "0.35.5",
+    "libvips": "8.18.7",
+    "webp": "1.6.0"
+  },
+  "summary": {
+    "portraits": 8,
+    "variants": 108,
+    "sourceBytes": 11595981,
+    "outputBytes": 6088642
+  },
+  "portraits": [
+    {
+      "name": "Hyeonjun Baek",
+      "slug": "hyeonjun-baek",
+      "role": "Principal Investigator",
+      "source": {
+        "url": "https://static.wixstatic.com/media/631814_e10e6836c7054d7a8c0400a965904d25~mv2.jpg",
+        "recordedIn": "docs/원본자료.json",
+        "cacheFile": "../portrait-work/originals/hyeonjun-baek.jpg",
+        "bytes": 121407,
+        "sha256": "11e092930f8b6f2b076a190d8c9edff2dac2bcdf372cb8d9f59590a6f39a147c",
+        "width": 354,
+        "height": 472,
+        "format": "jpeg",
+        "orientation": 1
+      },
+      "crop": {
+        "left": 0,
+        "top": 7,
+        "width": 354,
+        "height": 443
+      },
+      "widths": [
+        140,
+        160,
+        175,
+        200,
+        210,
+        240,
+        280,
+        320
+      ],
+      "omittedWidthsAboveNativeResolution": [],
+      "totalVariantBytes": 428960,
+      "variants": [
+        {
+          "path": "assets/people/display/hyeonjun-baek-140.webp",
+          "width": 140,
+          "height": 175,
+          "bytes": 21544,
+          "sha256": "362802748f82911085a9d1c192c2b8b9ce7f0389bdbdb91caed5fdd526b201e5"
+        },
+        {
+          "path": "assets/people/display/hyeonjun-baek-160.webp",
+          "width": 160,
+          "height": 200,
+          "bytes": 28016,
+          "sha256": "c83316b5f6bab99d313d76e414b971cd375fab31c515aa9392563fb04089cbb3"
+        },
+        {
+          "path": "assets/people/display/hyeonjun-baek-175.webp",
+          "width": 175,
+          "height": 219,
+          "bytes": 33596,
+          "sha256": "06727b9c3b58d4d6c329c395c7e6f02b80f50cf29d163b1a729c730a8db2f35a"
+        },
+        {
+          "path": "assets/people/display/hyeonjun-baek-200.webp",
+          "width": 200,
+          "height": 250,
+          "bytes": 43546,
+          "sha256": "1ba00b82c06f74ae1b3f239786216c0842c750aacc8db47b8b5759f3e51e203a"
+        },
+        {
+          "path": "assets/people/display/hyeonjun-baek-210.webp",
+          "width": 210,
+          "height": 263,
+          "bytes": 47774,
+          "sha256": "f6b681b95959d72e9274ad7b8225a0bc5cc9517578112f7ca74ab423cdd1a1b8"
+        },
+        {
+          "path": "assets/people/display/hyeonjun-baek-240.webp",
+          "width": 240,
+          "height": 300,
+          "bytes": 62242,
+          "sha256": "e228ea325f42080af9640677cb7e5306d2cfe8d50fe0716e55f8b29103222240"
+        },
+        {
+          "path": "assets/people/display/hyeonjun-baek-280.webp",
+          "width": 280,
+          "height": 350,
+          "bytes": 84088,
+          "sha256": "6cf7cf8f86cd88a10d51f2594a07b45e177a4c25d48b4fb6f1fc9b35f0e40dfa"
+        },
+        {
+          "path": "assets/people/display/hyeonjun-baek-320.webp",
+          "width": 320,
+          "height": 400,
+          "bytes": 108154,
+          "sha256": "dfe950562ec82eff08c8b99daed0606fb9a3606c793281790b6dc253f49b398a"
+        }
+      ]
+    },
+    {
+      "name": "Seongwon Gim",
+      "slug": "seongwon-gim",
+      "role": "PhD student",
+      "source": {
+        "url": "https://static.wixstatic.com/media/631814_82e4f8f4d0454d6d971a722a5ac52d0a~mv2.jpg",
+        "recordedIn": "docs/원본자료.json",
+        "cacheFile": "../portrait-work/originals/seongwon-gim.jpg",
+        "bytes": 51308,
+        "sha256": "838b10ddcb46d370ffbc9009623439771ff70fe2054eee305b00403dd8c2999e",
+        "width": 417,
+        "height": 532,
+        "format": "jpeg",
+        "orientation": 1
+      },
+      "crop": {
+        "left": 0,
+        "top": 3,
+        "width": 417,
+        "height": 521
+      },
+      "widths": [
+        112,
+        120,
+        128,
+        140,
+        150,
+        160,
+        168,
+        180,
+        192,
+        224,
+        240,
+        256,
+        336,
+        360,
+        384
+      ],
+      "omittedWidthsAboveNativeResolution": [],
+      "totalVariantBytes": 679326,
+      "variants": [
+        {
+          "path": "assets/people/display/seongwon-gim-112.webp",
+          "width": 112,
+          "height": 140,
+          "bytes": 13814,
+          "sha256": "ea1fea484e4bc136874d950eac13e78485adeb21559f4103306932e402ce01b3"
+        },
+        {
+          "path": "assets/people/display/seongwon-gim-120.webp",
+          "width": 120,
+          "height": 150,
+          "bytes": 15558,
+          "sha256": "72096b18cd3386910a64715176960aade6390d4d773d7d58cc6b598619c9e163"
+        },
+        {
+          "path": "assets/people/display/seongwon-gim-128.webp",
+          "width": 128,
+          "height": 160,
+          "bytes": 17292,
+          "sha256": "b40f3540a99b7d74fb591191510bb4eba7d04550e84cd023204fb4c6c0c23ec1"
+        },
+        {
+          "path": "assets/people/display/seongwon-gim-140.webp",
+          "width": 140,
+          "height": 175,
+          "bytes": 20082,
+          "sha256": "d16a6f1ec23180b2a3c749200187b7ff8757e94fb266862ba5f2ed2b86673520"
+        },
+        {
+          "path": "assets/people/display/seongwon-gim-150.webp",
+          "width": 150,
+          "height": 188,
+          "bytes": 22726,
+          "sha256": "c4f46b0ecb6f4c5434f84b8c481b3aff252a7087bc2a2cfc39e822dfe828b644"
+        },
+        {
+          "path": "assets/people/display/seongwon-gim-160.webp",
+          "width": 160,
+          "height": 200,
+          "bytes": 25216,
+          "sha256": "58ff114c7319649161943ef4d5eeb3081d76cce8b90c4a993121b5dc63b47e9b"
+        },
+        {
+          "path": "assets/people/display/seongwon-gim-168.webp",
+          "width": 168,
+          "height": 210,
+          "bytes": 27574,
+          "sha256": "8b738a14179f4061110c14fe5cff4de41980e468f1d319ac3cde8e07c0c980b5"
+        },
+        {
+          "path": "assets/people/display/seongwon-gim-180.webp",
+          "width": 180,
+          "height": 225,
+          "bytes": 31086,
+          "sha256": "ba732882323889999683e08d3eabae966cdbb1e7d8fe3931a6cb96f83ad7b45f"
+        },
+        {
+          "path": "assets/people/display/seongwon-gim-192.webp",
+          "width": 192,
+          "height": 240,
+          "bytes": 34566,
+          "sha256": "7f8233cd74141a3c4dda127e6860bb78bf6674c66932e9080530443f9afd42d9"
+        },
+        {
+          "path": "assets/people/display/seongwon-gim-224.webp",
+          "width": 224,
+          "height": 280,
+          "bytes": 45278,
+          "sha256": "3f6714a188f4ca11672a0a449ba93c7a4c69920bd2703fe087ad66ee80c9e75b"
+        },
+        {
+          "path": "assets/people/display/seongwon-gim-240.webp",
+          "width": 240,
+          "height": 300,
+          "bytes": 51188,
+          "sha256": "25a6f3ca60e565b0a2ac342c7d8e43b0eecde17821764efd186242b3f5ac1aa5"
+        },
+        {
+          "path": "assets/people/display/seongwon-gim-256.webp",
+          "width": 256,
+          "height": 320,
+          "bytes": 57560,
+          "sha256": "00571f7b1be10ec0f28a3b09d2591c335dac9702dd07155a726883701309cec7"
+        },
+        {
+          "path": "assets/people/display/seongwon-gim-336.webp",
+          "width": 336,
+          "height": 420,
+          "bytes": 93426,
+          "sha256": "841865e4cdaae8d8fa0332b20ea4a1db3b9799fbede6f861a28ac37df1cc11a7"
+        },
+        {
+          "path": "assets/people/display/seongwon-gim-360.webp",
+          "width": 360,
+          "height": 450,
+          "bytes": 105410,
+          "sha256": "6fe850704a31084e53e2f5e5b0abb476bc4e3896ee37ffabf2c555854025e6e4"
+        },
+        {
+          "path": "assets/people/display/seongwon-gim-384.webp",
+          "width": 384,
+          "height": 480,
+          "bytes": 118550,
+          "sha256": "8fe7a10013a5f247f6021aeb7f4e06ca76d482c7a9fe64b233260eaadf3d99f4"
+        }
+      ]
+    },
+    {
+      "name": "Yongju Jeong",
+      "slug": "yongju-jeong",
+      "role": "PhD student",
+      "source": {
+        "url": "https://static.wixstatic.com/media/631814_c434e82605564a64ba433f903c7326d8~mv2.jpg",
+        "recordedIn": "docs/원본자료.json",
+        "cacheFile": "../portrait-work/originals/yongju-jeong.jpg",
+        "bytes": 1031265,
+        "sha256": "f6e970ae2fce445ea8ec2f302fa15a6a45997e2010f2b3f1b4b43a47213dafee",
+        "width": 1666,
+        "height": 2141,
+        "format": "jpeg",
+        "orientation": 1
+      },
+      "crop": {
+        "left": 0,
+        "top": 15,
+        "width": 1666,
+        "height": 2083
+      },
+      "widths": [
+        112,
+        120,
+        128,
+        140,
+        150,
+        160,
+        168,
+        180,
+        192,
+        224,
+        240,
+        256,
+        336,
+        360,
+        384
+      ],
+      "omittedWidthsAboveNativeResolution": [],
+      "totalVariantBytes": 869250,
+      "variants": [
+        {
+          "path": "assets/people/display/yongju-jeong-112.webp",
+          "width": 112,
+          "height": 140,
+          "bytes": 16108,
+          "sha256": "ea1b1de5a92fbf02a7fae974791967f66515097848047a86af0043d81becf3f1"
+        },
+        {
+          "path": "assets/people/display/yongju-jeong-120.webp",
+          "width": 120,
+          "height": 150,
+          "bytes": 18124,
+          "sha256": "a9b76acc24eea2e806c1a2819cb0c2daba80b8cc813e48ef4629df34e01dab17"
+        },
+        {
+          "path": "assets/people/display/yongju-jeong-128.webp",
+          "width": 128,
+          "height": 160,
+          "bytes": 20272,
+          "sha256": "e988f039f0783d7e11f37afc84660257bbc56f007fa8551589efe190a4051779"
+        },
+        {
+          "path": "assets/people/display/yongju-jeong-140.webp",
+          "width": 140,
+          "height": 175,
+          "bytes": 23948,
+          "sha256": "f365d5e04b86cf8a4e134f02d144ad7feb39a6ce26558622e2f310eb35875dde"
+        },
+        {
+          "path": "assets/people/display/yongju-jeong-150.webp",
+          "width": 150,
+          "height": 188,
+          "bytes": 27234,
+          "sha256": "925a11f407742f57038787592dc1bdb7bddefe0e8be680c15e331676ae2cd939"
+        },
+        {
+          "path": "assets/people/display/yongju-jeong-160.webp",
+          "width": 160,
+          "height": 200,
+          "bytes": 30606,
+          "sha256": "0e9f38e5b3886351b9e99c8d6f176d6772bc2064aa494d794c1140802ef10113"
+        },
+        {
+          "path": "assets/people/display/yongju-jeong-168.webp",
+          "width": 168,
+          "height": 210,
+          "bytes": 33580,
+          "sha256": "cb3190e184c93e8594dba185ee22f7b564d30d43a6c2d8fadd6460a00a088c15"
+        },
+        {
+          "path": "assets/people/display/yongju-jeong-180.webp",
+          "width": 180,
+          "height": 225,
+          "bytes": 38434,
+          "sha256": "368db72cf9cca0e8f0e7894acc39a2a1ac388d348687b36f77cdf201aa2c490a"
+        },
+        {
+          "path": "assets/people/display/yongju-jeong-192.webp",
+          "width": 192,
+          "height": 240,
+          "bytes": 42728,
+          "sha256": "904afd8798674473b3ef4be515b125bfca4139a07e1eae73ceda16a4a4c7c92d"
+        },
+        {
+          "path": "assets/people/display/yongju-jeong-224.webp",
+          "width": 224,
+          "height": 280,
+          "bytes": 57024,
+          "sha256": "ea712636baf245672cdd82dda231d456f9af2a36fcfd3a917b910a051a937ff9"
+        },
+        {
+          "path": "assets/people/display/yongju-jeong-240.webp",
+          "width": 240,
+          "height": 300,
+          "bytes": 65296,
+          "sha256": "36888c116d9af4e2cc9a7f2da55b1d46fd0fc72302262633b94ba140b47542a3"
+        },
+        {
+          "path": "assets/people/display/yongju-jeong-256.webp",
+          "width": 256,
+          "height": 320,
+          "bytes": 73922,
+          "sha256": "d26b8dc14f15cf39c5e823821ad4cfcd7ba4bd1bfab72852c94276a322463585"
+        },
+        {
+          "path": "assets/people/display/yongju-jeong-336.webp",
+          "width": 336,
+          "height": 420,
+          "bytes": 123586,
+          "sha256": "6add25405b310719937f29005991ba3fb9db59a3461d4dbbea4d4b2bed08ee73"
+        },
+        {
+          "path": "assets/people/display/yongju-jeong-360.webp",
+          "width": 360,
+          "height": 450,
+          "bytes": 140284,
+          "sha256": "04898623656c75a455b7aa3ae6585eccf89eb1c3de2652dedca236fd36cc2059"
+        },
+        {
+          "path": "assets/people/display/yongju-jeong-384.webp",
+          "width": 384,
+          "height": 480,
+          "bytes": 158104,
+          "sha256": "726d37d75d82c369bd806518efec0299be92b88af17a402ce30d9306f33f24fd"
+        }
+      ]
+    },
+    {
+      "name": "Hyunjun Jo",
+      "slug": "hyunjun-jo",
+      "role": "PhD student",
+      "source": {
+        "url": "https://static.wixstatic.com/media/dabba9_2991e66ead7b4625b60c41e326388102~mv2.png",
+        "recordedIn": "docs/원본자료.json",
+        "cacheFile": "../portrait-work/originals/hyunjun-jo.png",
+        "bytes": 1893647,
+        "sha256": "1d73c38483f935a26990e7466a1b29042b1facd6430d590270e73c4f7cb39617",
+        "width": 1086,
+        "height": 1448,
+        "format": "png",
+        "orientation": 1
+      },
+      "crop": {
+        "left": 0,
+        "top": 23,
+        "width": 1086,
+        "height": 1358
+      },
+      "widths": [
+        112,
+        120,
+        128,
+        140,
+        150,
+        160,
+        168,
+        180,
+        192,
+        224,
+        240,
+        256,
+        336,
+        360,
+        384
+      ],
+      "omittedWidthsAboveNativeResolution": [],
+      "totalVariantBytes": 814578,
+      "variants": [
+        {
+          "path": "assets/people/display/hyunjun-jo-112.webp",
+          "width": 112,
+          "height": 140,
+          "bytes": 14636,
+          "sha256": "0d68d593fe2e8fcdd7ea8e8a33c9967a46cb1f0488cb20563573fe2aae427ca3"
+        },
+        {
+          "path": "assets/people/display/hyunjun-jo-120.webp",
+          "width": 120,
+          "height": 150,
+          "bytes": 16570,
+          "sha256": "252f86b81cbf6f2ea342511a6666b50fac120a795e62d20c8d983f679828e740"
+        },
+        {
+          "path": "assets/people/display/hyunjun-jo-128.webp",
+          "width": 128,
+          "height": 160,
+          "bytes": 18722,
+          "sha256": "085a4715ead5aeb942674959b63dbabbc9050059ef549fab6cb8cac71ce52550"
+        },
+        {
+          "path": "assets/people/display/hyunjun-jo-140.webp",
+          "width": 140,
+          "height": 175,
+          "bytes": 21968,
+          "sha256": "7623360aa594d18e46c70bd4a245cf3254ce587bfe6409886ba4dc24691b6935"
+        },
+        {
+          "path": "assets/people/display/hyunjun-jo-150.webp",
+          "width": 150,
+          "height": 188,
+          "bytes": 24942,
+          "sha256": "2a2ef76803a88763045e024fe296edd4ecaf6290fa80e527edf73c195fd197a2"
+        },
+        {
+          "path": "assets/people/display/hyunjun-jo-160.webp",
+          "width": 160,
+          "height": 200,
+          "bytes": 27922,
+          "sha256": "ef8a9c78993f6040a20f5e447060f0fa351e13b94e449dcf08d75883ab6c4dcd"
+        },
+        {
+          "path": "assets/people/display/hyunjun-jo-168.webp",
+          "width": 168,
+          "height": 210,
+          "bytes": 30752,
+          "sha256": "f6e0d7076a34217ebfb46f86abceba44ed76bc1450f1d658f71844a2072fdfa8"
+        },
+        {
+          "path": "assets/people/display/hyunjun-jo-180.webp",
+          "width": 180,
+          "height": 225,
+          "bytes": 35052,
+          "sha256": "55cd175244e31e5b57f58dedc011c4677acc4ca76864694c701adbcb4f1af7b1"
+        },
+        {
+          "path": "assets/people/display/hyunjun-jo-192.webp",
+          "width": 192,
+          "height": 240,
+          "bytes": 39112,
+          "sha256": "dd6d61ad264cad95fb3ef863ee2f5b5ee7af1067a97c83a066634f471853bc34"
+        },
+        {
+          "path": "assets/people/display/hyunjun-jo-224.webp",
+          "width": 224,
+          "height": 280,
+          "bytes": 52940,
+          "sha256": "1a183e4dda9a119ff9e1d10317e4e519eb15121dd7ef354414170816d3d4bf63"
+        },
+        {
+          "path": "assets/people/display/hyunjun-jo-240.webp",
+          "width": 240,
+          "height": 300,
+          "bytes": 60408,
+          "sha256": "b8086fdeff8248a135dd1cb812c20fdd9add8b9304920d6e21966bc7d5a8180f"
+        },
+        {
+          "path": "assets/people/display/hyunjun-jo-256.webp",
+          "width": 256,
+          "height": 320,
+          "bytes": 68432,
+          "sha256": "f4c53eeeb607b4d32a7165a5457c26ed7e0e4593220edf916ab1255b9e07c14c"
+        },
+        {
+          "path": "assets/people/display/hyunjun-jo-336.webp",
+          "width": 336,
+          "height": 420,
+          "bytes": 115906,
+          "sha256": "c3f2cf8a00fa29224e498eb9428953f3b9acc7fd024ddd99248e9523cc7af6e9"
+        },
+        {
+          "path": "assets/people/display/hyunjun-jo-360.webp",
+          "width": 360,
+          "height": 450,
+          "bytes": 133208,
+          "sha256": "5a03a6bdd3ab0f8d53817a6ef9f0d5d3c29fef81ff21eae2da53d0ae73470d8a"
+        },
+        {
+          "path": "assets/people/display/hyunjun-jo-384.webp",
+          "width": 384,
+          "height": 480,
+          "bytes": 154008,
+          "sha256": "b646494e8c76c8db057281524195efac73d267b08d154593ab26af0f84607294"
+        }
+      ]
+    },
+    {
+      "name": "Geonho Lee",
+      "slug": "geonho-lee",
+      "role": "Master’s student",
+      "source": {
+        "url": "https://static.wixstatic.com/media/631814_656cb64f0ff8424da482cfa84b8c50e6~mv2.jpg",
+        "recordedIn": "docs/원본자료.json",
+        "cacheFile": "../portrait-work/originals/geonho-lee.jpg",
+        "bytes": 7168,
+        "sha256": "86963c857c821eac2a599a03ad00b096bd8688341e6c544fa624afa78077db96",
+        "width": 225,
+        "height": 300,
+        "format": "jpeg",
+        "orientation": 1
+      },
+      "crop": {
+        "left": 0,
+        "top": 5,
+        "width": 225,
+        "height": 281
+      },
+      "widths": [
+        112,
+        120,
+        128,
+        140,
+        150,
+        160,
+        168,
+        180,
+        192,
+        224
+      ],
+      "omittedWidthsAboveNativeResolution": [
+        240,
+        256,
+        336,
+        360,
+        384
+      ],
+      "totalVariantBytes": 167842,
+      "variants": [
+        {
+          "path": "assets/people/display/geonho-lee-112.webp",
+          "width": 112,
+          "height": 140,
+          "bytes": 9506,
+          "sha256": "61a5e7a52f9117aa214a4d62605ea3dbf10c54724ab87553df8ee9ff889e49e6"
+        },
+        {
+          "path": "assets/people/display/geonho-lee-120.webp",
+          "width": 120,
+          "height": 150,
+          "bytes": 10592,
+          "sha256": "b6bfaa1671a8e5e491d344f831eb9a088fa06891e6f2422a3bebbb5b8b3c82ec"
+        },
+        {
+          "path": "assets/people/display/geonho-lee-128.webp",
+          "width": 128,
+          "height": 160,
+          "bytes": 11696,
+          "sha256": "2a52ff1dc2bc54ead8a7ad999e11b8cdb6b4c94e7c6c017d776afabd9bd3f556"
+        },
+        {
+          "path": "assets/people/display/geonho-lee-140.webp",
+          "width": 140,
+          "height": 175,
+          "bytes": 13496,
+          "sha256": "4bbbd5deb6388703f4199d22e044c40498a9616949e610c942299af53837c396"
+        },
+        {
+          "path": "assets/people/display/geonho-lee-150.webp",
+          "width": 150,
+          "height": 188,
+          "bytes": 15038,
+          "sha256": "7eef01391b58f51f633baa055c0fd7d2a7a78795cbd0e84e1c70991e92739dcf"
+        },
+        {
+          "path": "assets/people/display/geonho-lee-160.webp",
+          "width": 160,
+          "height": 200,
+          "bytes": 16860,
+          "sha256": "7b38ddf6d4199b0244a8f0183414999203c52423d8e358bf3276da8357ce8389"
+        },
+        {
+          "path": "assets/people/display/geonho-lee-168.webp",
+          "width": 168,
+          "height": 210,
+          "bytes": 18176,
+          "sha256": "b510b50330abc5cd921ab30705c67fc37b1a20f9d99963f467a6d80315bcb48c"
+        },
+        {
+          "path": "assets/people/display/geonho-lee-180.webp",
+          "width": 180,
+          "height": 225,
+          "bytes": 20370,
+          "sha256": "c9ec8a427f179ad3647ad5bbb5423c9349496dd88363b4540425ff8fe58aebb0"
+        },
+        {
+          "path": "assets/people/display/geonho-lee-192.webp",
+          "width": 192,
+          "height": 240,
+          "bytes": 22832,
+          "sha256": "1197124867688849cfaa9c1a71756bdcc0c0c708a4a540ae86261817c77aa33b"
+        },
+        {
+          "path": "assets/people/display/geonho-lee-224.webp",
+          "width": 224,
+          "height": 280,
+          "bytes": 29276,
+          "sha256": "80a55b7db442ec1b536bf6872561d355a973b87a96bb493682537af620394442"
+        }
+      ]
+    },
+    {
+      "name": "Jihyun Lee",
+      "slug": "jihyun-lee",
+      "role": "Master’s student",
+      "source": {
+        "url": "https://static.wixstatic.com/media/dabba9_bb79b476a577454f9b146477ee763620~mv2.jpg",
+        "recordedIn": "docs/원본자료.json",
+        "cacheFile": "../portrait-work/originals/jihyun-lee.jpg",
+        "bytes": 150713,
+        "sha256": "edc5042306e80b29d4f47975dce26420d0d93d58e7cdfd1fad47b871464e3c76",
+        "width": 413,
+        "height": 531,
+        "format": "jpeg",
+        "orientation": 1
+      },
+      "crop": {
+        "left": 0,
+        "top": 4,
+        "width": 413,
+        "height": 516
+      },
+      "widths": [
+        112,
+        120,
+        128,
+        140,
+        150,
+        160,
+        168,
+        180,
+        192,
+        224,
+        240,
+        256,
+        336,
+        360,
+        384
+      ],
+      "omittedWidthsAboveNativeResolution": [],
+      "totalVariantBytes": 876754,
+      "variants": [
+        {
+          "path": "assets/people/display/jihyun-lee-112.webp",
+          "width": 112,
+          "height": 140,
+          "bytes": 15756,
+          "sha256": "12bc90904fa2f91f05b971f4af9d159ebd892bf1a0479f5e1bc1a35a0404ac18"
+        },
+        {
+          "path": "assets/people/display/jihyun-lee-120.webp",
+          "width": 120,
+          "height": 150,
+          "bytes": 17880,
+          "sha256": "e3cf4ec90d9dcc416be43350820ebe9605a8fd6d56265a1da75a9213c24bad0a"
+        },
+        {
+          "path": "assets/people/display/jihyun-lee-128.webp",
+          "width": 128,
+          "height": 160,
+          "bytes": 20122,
+          "sha256": "cc6b919c122e867f8398d1d1af905e10f4949c614eff526fa7797e6436a5b46f"
+        },
+        {
+          "path": "assets/people/display/jihyun-lee-140.webp",
+          "width": 140,
+          "height": 175,
+          "bytes": 23746,
+          "sha256": "32221b1371bda5d2901f16e95d4f4ea553dfee4802e9791123e9fe262b585155"
+        },
+        {
+          "path": "assets/people/display/jihyun-lee-150.webp",
+          "width": 150,
+          "height": 188,
+          "bytes": 27142,
+          "sha256": "f6d60b16b00798a11eeeb4bcbf95a949e19985b8f71e23671d2c15e0e09eb8ff"
+        },
+        {
+          "path": "assets/people/display/jihyun-lee-160.webp",
+          "width": 160,
+          "height": 200,
+          "bytes": 30680,
+          "sha256": "a8ece494be0f7177c567de4f61aa588d2cfd488f38aeb60c53a20f4d9952c782"
+        },
+        {
+          "path": "assets/people/display/jihyun-lee-168.webp",
+          "width": 168,
+          "height": 210,
+          "bytes": 33632,
+          "sha256": "6bfd88675b7cfe18cfdfa82f81d43d471baf160a5ebe59433ad785de60a94a59"
+        },
+        {
+          "path": "assets/people/display/jihyun-lee-180.webp",
+          "width": 180,
+          "height": 225,
+          "bytes": 38704,
+          "sha256": "4f6be4360b8d902ec4b16ba1b8522af7a2a3b3593ed3cab523060473f1e6ea92"
+        },
+        {
+          "path": "assets/people/display/jihyun-lee-192.webp",
+          "width": 192,
+          "height": 240,
+          "bytes": 43204,
+          "sha256": "164af8a3aded3f70875037ebeaac1a8b6b516326b35e17fa0f22e6d89b5420e6"
+        },
+        {
+          "path": "assets/people/display/jihyun-lee-224.webp",
+          "width": 224,
+          "height": 280,
+          "bytes": 58186,
+          "sha256": "f1152a298544c53412bf041e02bcaa226663d0941731046644e5acb7e3e5bd0c"
+        },
+        {
+          "path": "assets/people/display/jihyun-lee-240.webp",
+          "width": 240,
+          "height": 300,
+          "bytes": 66492,
+          "sha256": "e497e57d2dd686da843022ea39f536d809b59b93f83084030a813ba283838de1"
+        },
+        {
+          "path": "assets/people/display/jihyun-lee-256.webp",
+          "width": 256,
+          "height": 320,
+          "bytes": 75038,
+          "sha256": "413804f36988ce7f45383c20c72f4d6f3423c978dc8959a25eff2442c3f2440b"
+        },
+        {
+          "path": "assets/people/display/jihyun-lee-336.webp",
+          "width": 336,
+          "height": 420,
+          "bytes": 124794,
+          "sha256": "69b8694aee49de326e7c3d7c5675c4a251f40e40bcae213bd0ec3683d5b74348"
+        },
+        {
+          "path": "assets/people/display/jihyun-lee-360.webp",
+          "width": 360,
+          "height": 450,
+          "bytes": 141250,
+          "sha256": "0dd057e7002d2c3fbc4b187752d69ef1140f46bf96adf00bd82a4ba8c89c74e9"
+        },
+        {
+          "path": "assets/people/display/jihyun-lee-384.webp",
+          "width": 384,
+          "height": 480,
+          "bytes": 160128,
+          "sha256": "25304b4c198c13d874a882061b46d4d4a92d9e78c8068915d694672d8bdb6415"
+        }
+      ]
+    },
+    {
+      "name": "Taegyu Jang",
+      "slug": "taegyu-jang",
+      "role": "Master’s student",
+      "source": {
+        "url": "https://static.wixstatic.com/media/631814_55d3b40c039743fc8d3b661965b9f5fb~mv2.png",
+        "recordedIn": "docs/원본자료.json",
+        "cacheFile": "../portrait-work/originals/taegyu-jang.png",
+        "bytes": 7515155,
+        "sha256": "1b8ce8825a4ee9e0d6c844c45bc263827bd3dbb28e262177f412bae8b35742b9",
+        "width": 2997,
+        "height": 3996,
+        "format": "png",
+        "orientation": 1
+      },
+      "crop": {
+        "left": 0,
+        "top": 63,
+        "width": 2997,
+        "height": 3746
+      },
+      "widths": [
+        112,
+        120,
+        128,
+        140,
+        150,
+        160,
+        168,
+        180,
+        192,
+        224,
+        240,
+        256,
+        336,
+        360,
+        384
+      ],
+      "omittedWidthsAboveNativeResolution": [],
+      "totalVariantBytes": 568716,
+      "variants": [
+        {
+          "path": "assets/people/display/taegyu-jang-112.webp",
+          "width": 112,
+          "height": 140,
+          "bytes": 10852,
+          "sha256": "4e1b4e073216fb8a8cd51717e44a881103f3553de6e52134146e74628acf2386"
+        },
+        {
+          "path": "assets/people/display/taegyu-jang-120.webp",
+          "width": 120,
+          "height": 150,
+          "bytes": 12166,
+          "sha256": "85e65c199c421217a0bdb738bba1ab52f43145aa7869a9dbb7005ce1e373b740"
+        },
+        {
+          "path": "assets/people/display/taegyu-jang-128.webp",
+          "width": 128,
+          "height": 160,
+          "bytes": 13586,
+          "sha256": "23d9b557c22c3e2ca335e154dff5a5db1575e6c78098f9babe2e41608c813724"
+        },
+        {
+          "path": "assets/people/display/taegyu-jang-140.webp",
+          "width": 140,
+          "height": 175,
+          "bytes": 15806,
+          "sha256": "dc2bd34676417f10c5628edabaf6d6d30fcf5e9e8a1f3a8c5354d8ce7a4ed688"
+        },
+        {
+          "path": "assets/people/display/taegyu-jang-150.webp",
+          "width": 150,
+          "height": 188,
+          "bytes": 17962,
+          "sha256": "94cdcc39cd538e1efe4def33f25bfedbe21138b9c3045d1ef2a1380159c32b87"
+        },
+        {
+          "path": "assets/people/display/taegyu-jang-160.webp",
+          "width": 160,
+          "height": 200,
+          "bytes": 20054,
+          "sha256": "bada487fea06a23774416924fbdbdae7ea0d40482ad9aa0f61719ffe87bfb420"
+        },
+        {
+          "path": "assets/people/display/taegyu-jang-168.webp",
+          "width": 168,
+          "height": 210,
+          "bytes": 21894,
+          "sha256": "7cc8d120a7faff2f49ff5e33a69c7e7ec53077264e6b687546bc15448f491cea"
+        },
+        {
+          "path": "assets/people/display/taegyu-jang-180.webp",
+          "width": 180,
+          "height": 225,
+          "bytes": 24996,
+          "sha256": "15efe4ca9aa6c267d3e6a9f1176fd0c2062bee388b97351942f8ae13a5984920"
+        },
+        {
+          "path": "assets/people/display/taegyu-jang-192.webp",
+          "width": 192,
+          "height": 240,
+          "bytes": 27616,
+          "sha256": "0750c99657d3ddc19b6b250fedb8bc21eb60fdf9866f91b6948509c310797758"
+        },
+        {
+          "path": "assets/people/display/taegyu-jang-224.webp",
+          "width": 224,
+          "height": 280,
+          "bytes": 36744,
+          "sha256": "a93a10ebc1fad302901feef611abc4ab99e29e77c106ce7363261ac87a2334c7"
+        },
+        {
+          "path": "assets/people/display/taegyu-jang-240.webp",
+          "width": 240,
+          "height": 300,
+          "bytes": 41874,
+          "sha256": "7d523551394d642c70da6b5b5223153b5728bc783a726052a05e60ccfed933b7"
+        },
+        {
+          "path": "assets/people/display/taegyu-jang-256.webp",
+          "width": 256,
+          "height": 320,
+          "bytes": 47202,
+          "sha256": "d7e94b029a93ca07a1421a7d71a30a075c719aa8530589c5ddcbdae6c0c4b1a6"
+        },
+        {
+          "path": "assets/people/display/taegyu-jang-336.webp",
+          "width": 336,
+          "height": 420,
+          "bytes": 80236,
+          "sha256": "5b754bc2da716d9f27ac3803000a67b3bbc374c03b62ec0d03f8243c7f65a4bb"
+        },
+        {
+          "path": "assets/people/display/taegyu-jang-360.webp",
+          "width": 360,
+          "height": 450,
+          "bytes": 92270,
+          "sha256": "3bf51582be65a0dbc025df42dee802ec4266a72abe6cb6de6e10240a7c64a299"
+        },
+        {
+          "path": "assets/people/display/taegyu-jang-384.webp",
+          "width": 384,
+          "height": 480,
+          "bytes": 105458,
+          "sha256": "4f10eadec7c9ad81728b1aa15c48d8e9f7412eedc57a9ea363efdb219dea8ee3"
+        }
+      ]
+    },
+    {
+      "name": "Hansoo Chae",
+      "slug": "hansoo-chae",
+      "role": "Master’s student",
+      "source": {
+        "url": "https://static.wixstatic.com/media/631814_cb71d5d2f0e042939b8fde91e24fd5ed~mv2.jpg",
+        "recordedIn": "docs/원본자료.json",
+        "cacheFile": "../portrait-work/originals/hansoo-chae.jpg",
+        "bytes": 825318,
+        "sha256": "ae591b8bc0422c382572fb04ca80e1f70776356badbc8d26f6bb94806f8390a3",
+        "width": 1632,
+        "height": 1906,
+        "format": "jpeg",
+        "orientation": 1
+      },
+      "crop": {
+        "left": 54,
+        "top": 0,
+        "width": 1525,
+        "height": 1906
+      },
+      "widths": [
+        112,
+        120,
+        128,
+        140,
+        150,
+        160,
+        168,
+        180,
+        192,
+        224,
+        240,
+        256,
+        336,
+        360,
+        384
+      ],
+      "omittedWidthsAboveNativeResolution": [],
+      "totalVariantBytes": 1683216,
+      "variants": [
+        {
+          "path": "assets/people/display/hansoo-chae-112.webp",
+          "width": 112,
+          "height": 140,
+          "bytes": 30014,
+          "sha256": "6a43a13f484ae3d93a09a529c0459bc8e9dafd75ada938528c5fb720aebe7ae3"
+        },
+        {
+          "path": "assets/people/display/hansoo-chae-120.webp",
+          "width": 120,
+          "height": 150,
+          "bytes": 34182,
+          "sha256": "0cdda996d5cd48aeec38c727736937f42ef5c07262a2ab50be99c20cc3360401"
+        },
+        {
+          "path": "assets/people/display/hansoo-chae-128.webp",
+          "width": 128,
+          "height": 160,
+          "bytes": 38632,
+          "sha256": "95d6ba3dd6ba15f9abd675b0d0966618e926b325fdb09f4c69e71d6fe0354ebc"
+        },
+        {
+          "path": "assets/people/display/hansoo-chae-140.webp",
+          "width": 140,
+          "height": 175,
+          "bytes": 45748,
+          "sha256": "7fd8e8197fd217c07216129b37b6292dba2c60f7fbfcb9ac9913d0dc8964a4fa"
+        },
+        {
+          "path": "assets/people/display/hansoo-chae-150.webp",
+          "width": 150,
+          "height": 188,
+          "bytes": 52372,
+          "sha256": "2474c729b6b76e5e819b3ec6c3f0851fe81ee076b1db8bbd9fe460df7bd2b353"
+        },
+        {
+          "path": "assets/people/display/hansoo-chae-160.webp",
+          "width": 160,
+          "height": 200,
+          "bytes": 59352,
+          "sha256": "df07e75813ef3d09f256040c7e462a4dc63de4af4baef54431e9f76b66a77f54"
+        },
+        {
+          "path": "assets/people/display/hansoo-chae-168.webp",
+          "width": 168,
+          "height": 210,
+          "bytes": 64970,
+          "sha256": "a22da02390dd50ff6ee64135000c9ee52b5d77560fa701f05270461c9f4a672c"
+        },
+        {
+          "path": "assets/people/display/hansoo-chae-180.webp",
+          "width": 180,
+          "height": 225,
+          "bytes": 74414,
+          "sha256": "bde252962df6e449002010e6a5833a706030d239bc78a806f0e651b2c83e3174"
+        },
+        {
+          "path": "assets/people/display/hansoo-chae-192.webp",
+          "width": 192,
+          "height": 240,
+          "bytes": 83552,
+          "sha256": "d0f10b936a54f60d68c07215d3face19877d892e8b9c7d7a2862992b8efc2657"
+        },
+        {
+          "path": "assets/people/display/hansoo-chae-224.webp",
+          "width": 224,
+          "height": 280,
+          "bytes": 112166,
+          "sha256": "c53764dbb6d72b7f0cc74676d7cfe30eaf99e41ec952f284cb2111dab0fd5cb1"
+        },
+        {
+          "path": "assets/people/display/hansoo-chae-240.webp",
+          "width": 240,
+          "height": 300,
+          "bytes": 127526,
+          "sha256": "ab7817347c3326e3415a5de4fe8a7a0a41cdb1087aaf92e1e537db439237eb40"
+        },
+        {
+          "path": "assets/people/display/hansoo-chae-256.webp",
+          "width": 256,
+          "height": 320,
+          "bytes": 144948,
+          "sha256": "ce54305ea896638c9723bab42970619f06fd9b57c4d5c0e00e4bb60ad00622a0"
+        },
+        {
+          "path": "assets/people/display/hansoo-chae-336.webp",
+          "width": 336,
+          "height": 420,
+          "bytes": 238872,
+          "sha256": "efa5a0c5660bbe48fda0d646405c7ce5b9db045aa61781a5f520ce8147095315"
+        },
+        {
+          "path": "assets/people/display/hansoo-chae-360.webp",
+          "width": 360,
+          "height": 450,
+          "bytes": 270152,
+          "sha256": "70a6c887dbaf9d6810e6d84f67962991ef95bdf8f8419944e34ea0845d56a452"
+        },
+        {
+          "path": "assets/people/display/hansoo-chae-384.webp",
+          "width": 384,
+          "height": 480,
+          "bytes": 306316,
+          "sha256": "e4d94a254ea6af3c495870bcab07634c1b66e8ff3fd3e0fd4836764042e2be72"
+        }
+      ]
+    }
+  ]
+}
