@@ -218,7 +218,7 @@ function activitiesPage(data) {
 function joinPage(data) {
  return `<main id="main" tabindex="-1" class="container page-layout interior">${pageIntro('Join Us','')}
    <section class="join-copy"><h2 lang="ko">${e(data.join.title)}</h2><p lang="ko">${e(data.join.description)}</p><p>${mail(data.site.email)}</p></section>
-   <section class="contact-details"><h2>Contact</h2><p>Hyeonjun Baek</p><p>${e(data.site.affiliation)}</p>${data.join.office?`<p>Office: ${e(data.join.office)}</p>`:''}${data.join.laboratory?`<p>Laboratory: ${e(data.join.laboratory)}</p>`:''}<p>${e(data.site.address)}</p></section>
+   <section class="contact-details"><h2>Contact</h2><p>Hyeonjun Baek</p><p>${e(data.site.affiliation)}</p><p>${e(data.site.address)}</p>${data.join.office?`<p>Office: ${e(data.join.office)}</p>`:''}${data.join.laboratory?`<p>Laboratory: ${e(data.join.laboratory)}</p>`:''}</section>
  </main>`;
 }
 export function render(data, page='index') {
