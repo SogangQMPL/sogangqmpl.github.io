@@ -274,25 +274,12 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 .footer-inner .footer-email{font-size:13px;line-height:1.65}
 .footer-inner .copyright{font-size:13px;margin:0;color:#d7e0eb;white-space:nowrap}
 /* Three themes, five topics, linked results */
-.theme-index,.research-group{--area-color:var(--navy);--area-tint:#f4f6f9;--area-line:#cbd6e2}
+.research-group{--area-color:var(--navy);--area-tint:#f4f6f9;--area-line:#cbd6e2}
 [data-area="quantum-information"]{--area-color:#315f8c;--area-tint:#f2f6fb;--area-line:#c9d9ea}
 [data-area="solid-state-physics"]{--area-color:#26736f;--area-tint:#eff7f5;--area-line:#c4ddd8}
 [data-area="semiconductor-devices"]{--area-color:#6b5793;--area-tint:#f5f2f9;--area-line:#d8cfe7}
-.research-themes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line);margin-bottom:var(--layout-gap)}
-.theme-index{display:flex;flex-direction:column;min-width:0;padding:18px 21px 20px;border-top:3px solid var(--area-color);border-left:1px solid var(--line);background:var(--area-tint)}
-.theme-index:first-child{border-left:0}
-.theme-index>a{display:grid;grid-template-columns:56px minmax(0,1fr);align-items:center;gap:12px;color:var(--area-color);text-decoration:none}
 .area-icon{width:64px;height:64px;flex-shrink:0}
-.theme-index .area-icon{width:56px;height:56px}
-.theme-index-title{min-width:0}
 .theme-number{display:block;font-size:14px;font-weight:500;line-height:1.6;color:var(--area-color);font-variant-numeric:tabular-nums}
-.theme-index strong{display:block;font-size:18px;font-weight:600;line-height:1.5;letter-spacing:-.018em}
-.theme-index ul{list-style:none;padding:0;margin:14px 0 0;min-height:74px}
-.theme-index li{margin-top:4px;line-height:1.65}
-.theme-index li a{display:grid;grid-template-columns:28px minmax(0,1fr);align-items:baseline;gap:8px;min-height:32px;padding-block:3px;font-size:16px;color:#505e70;text-decoration:none}
-.index-topic-number{font-size:14px;color:var(--area-color);font-variant-numeric:tabular-nums}
-.theme-index a:hover{text-decoration:underline}
-@media(min-width:901px) and (max-width:1100px){.theme-index>a{min-height:77px}}
 .research-group{padding:0 0 40px;border-top:3px solid var(--area-color);scroll-margin-top:24px}
 .research-group+.research-group{margin-top:18px}
 .theme-content{min-width:0;margin-top:28px}
@@ -405,11 +392,6 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
  #main-nav .nav-item>a{font-size:18px;min-height:40px}
  .nav-dropdown,.nav-item:hover .nav-dropdown,.nav-item:focus-within .nav-dropdown{position:static;display:flex;flex-direction:row;gap:25px;padding:0 0 9px 15px;border:0;min-width:0}
  #main-nav .nav-dropdown a{font-size:16px;min-height:32px}
- .research-themes{grid-template-columns:1fr}
- .theme-index{border-left:0;padding:16px 20px}
- .theme-index strong{font-size:19px}
- .theme-index ul{margin-top:12px;min-height:0}
- .theme-index li{margin:0}
  .research-group{padding-bottom:32px}
  .theme-heading h2{font-size:30px}
 }
@@ -424,11 +406,6 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
  .footer-contact{gap:3px 14px}
  .footer-inner .footer-address{flex-basis:100%;font-size:12px;line-height:1.65}
  .footer-inner .footer-email,.footer-inner .copyright{font-size:12px}
- .theme-index{padding:16px}
- .theme-index>a{grid-template-columns:48px minmax(0,1fr)}
- .theme-index .area-icon{width:48px;height:48px}
- .theme-index strong{font-size:18px}
- .theme-index li a{font-size:16px}
  .theme-heading{grid-template-columns:48px minmax(0,1fr);gap:0 12px;padding:18px 16px}
  .theme-heading>.area-icon{width:48px;height:48px}
  .theme-heading h2{font-size:27px}
@@ -578,8 +555,6 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
  .member-navigation a{min-height:44px}
  .member-navigation a[aria-current=page]:after{bottom:-5px}
  .topic-layout{margin-left:0}
- .theme-index li a{min-height:44px;padding-block:7px;line-height:1.6}
- .theme-index ul{margin-top:8px}
  .theme-title{min-width:0}
  .theme-heading h2{overflow-wrap:break-word}
  .result-list a{display:block;min-height:44px;padding-block:5px;line-height:1.6}
