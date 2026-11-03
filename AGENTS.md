@@ -13,6 +13,8 @@
 - Clone the canonical repository, rather than creating a new website or repository. If a clone is already present, reuse it.
 - Use Node.js 22 or later for local work; the current CI uses Node 22. Normal site checks and builds need no external npm packages.
 - Codex login, a browser's GitHub login, and Git push authentication are separate. Verify the intended GitHub identity and repository write access before promising publication. A public clone working does not prove push access.
+- Reuse working Git credentials first. If they are unavailable but an approved browser-control tool is connected to a browser signed into `SogangQMPL` on github.com, authorized publication can use GitHub's normal web file-upload/commit/PR UI. This publishes through the browser session; it does not configure command-line Git authentication. Preserve file paths and verify the uploaded source against the reviewed local changes.
+- A Google sign-in alone does not establish a GitHub session. An already-linked Google identity can be used in GitHub's ordinary sign-in flow; verify the resulting GitHub account. Follow tool approval requirements and involve the operator only for required permissions, verification, or browser connection steps. Do not extract browser cookies or tokens to manufacture Git credentials.
 - Let the operator complete a normal GitHub login if required. Keep passwords, access tokens, authentication caches, and OAuth secrets out of chat, repository files, and handoff archives.
 - Read `Codex-시작요청.txt` for the operator-facing setup and editing prompts.
 
