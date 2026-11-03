@@ -184,19 +184,19 @@
     },
     {
       "id": "pub-02",
-      "image": "assets/publications/pub-02-figure2-cd.png",
+      "image": "assets/publications/pub-02-figure2-cd-no-border.png",
       "imageAlt": "Figure 2(c,d): photoluminescence excitation spectra and excitation-energy offsets of moiré-trapped interlayer excitons.",
       "imageLabel": "Figure 2(c,d)",
       "imageSource": "https://www.nature.com/articles/s41699-026-00701-5",
       "imageSourceURL": "https://www.nature.com/articles/s41699-026-00701-5_reference.pdf",
       "width": 1090,
       "height": 776,
-      "verificationNote": "Official accepted manuscript, Figure 2(c,d) extracted from embedded JP2 on PDF page 14; Figure 2 caption on PDF page 12 verified. Cropped at native resolution, without resampling or redrawing; all axes, annotations, data and original red inset frame preserved. Visually compared with the requested reference.",
-      "sha256": "66e904fde354917695fa71ff87366699164252314f787f60ffb599988e77585c",
+      "verificationNote": "Official accepted manuscript, Figure 2(c,d), PDF page 14 with caption on page 12. Native-resolution 1090 x 776 crop retained. Only the outer red frame bands were replaced with white; every pixel outside the documented bands is identical to the original crop, including all scientific data, axes and annotations. No crop, resampling or scientific redrawing.",
+      "sha256": "c405684efda590ce92e57d26dc76de49bcf590e8ce417d3342873e6f4504ade2",
       "verifiedVisually": true,
       "visuallyVerified": true,
-      "bytes": 492646,
-      "thumbnailSelectionNote": "Use the requested Figure 2(c,d) panels instead of Figure 1a. The thumbnail and enlarged view show the same complete crop.",
+      "bytes": 471674,
+      "thumbnailSelectionNote": "The thumbnail and enlarged view use the same border-free Figure 2(c,d) crop.",
       "title": "Photoexcitation of moiré-trapped interlayer excitons via chiral phonons",
       "doi": "10.1038/s41699-026-00701-5",
       "manifest": "docs/publication-figures-root.json",
@@ -214,7 +214,38 @@
       ],
       "sourcePDFSHA256": "390db8e7de7f885ee7a74d0c49ec0876d2a5b57ff6632ad278d16f218d9e714b",
       "license": "CC BY 4.0, as stated in the accepted manuscript.",
-      "updatedAt": "2026-11-03"
+      "updatedAt": "2026-11-03",
+      "frameRemovalBandsPixels": [
+        [
+          2,
+          0,
+          1083,
+          7
+        ],
+        [
+          2,
+          764,
+          1083,
+          773
+        ],
+        [
+          2,
+          0,
+          11,
+          773
+        ],
+        [
+          1075,
+          0,
+          1083,
+          773
+        ]
+      ],
+      "originalCropImage": "assets/publications/pub-02-figure2-cd.png",
+      "originalCropSHA256": "66e904fde354917695fa71ff87366699164252314f787f60ffb599988e77585c",
+      "changedFramePixels": 30165,
+      "imageEditTool": "Built-in image_gen edit for frame removal; final scientific content restored from the original crop outside the four perimeter bands and pixel-verified.",
+      "imageEditPrompt": "Use case: precise-object-edit. Edit target: the supplied original scientific figure, currently 1090x776 pixels. Remove ONLY the thin pure-red rectangular border at the outer perimeter. Replace the red frame and its antialiased red fringe with the same pure white background. This is a precise frame removal, not a recreation of the chart. Keep the original dimensions, composition and all interior source pixels unchanged. Especially preserve both panels (c) and (d), every black/green/orange measurement point and error bar, all curves, axis labels, superscripts/subscripts, gray/magenta shaded regions and the rightmost subscript T. Do not redraw, reinterpret, simplify, improve typography, crop or resample any scientific content. Output the exact original figure with only its outer red frame removed."
     },
     {
       "id": "pub-03",
