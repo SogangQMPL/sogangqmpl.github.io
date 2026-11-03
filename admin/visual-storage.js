@@ -1,6 +1,7 @@
 // Nothing is opened, saved, or decoded until an exported function is called.
 export const STORAGE_LIMITS = Object.freeze({ imageBytes: 8 * 1024 * 1024, totalImageBytes: 10 * 1024 * 1024, inputBytes: 32 * 1024 * 1024, jsonBytes: 5 * 1024 * 1024, longestEdge: 2000, imageCount: 50 });
 const DATABASE = 'qmp-visual-editor', STORE = 'drafts', DRAFT_KEY = 'current';
+let writeQueue = Promise.resolve();
 const TYPES = new Set(['image/png', 'image/jpeg', 'image/webp', 'image/gif']);
 const SECRET_KEY = /^(?:token|githubToken|accessToken|access_token|refreshToken|refresh_token|clientSecret|client_secret|privateKey|authorization|password|credentials?)$/i;
 const SHA = /^[a-f0-9]{40}$/i;
@@ -87,9 +88,18 @@ async function transaction(mode, operation) {
     });
   } finally { database.close(); }
 }
-export async function loadLocalDraft() { const value = await transaction('readonly', store => store.get(DRAFT_KEY)); return value === undefined ? null : normalizedDraft(value); }
-export async function saveLocalDraft(value) { const draft = normalizedDraft(value); await transaction('readwrite', store => store.put(draft, DRAFT_KEY)); return draft; }
-export async function clearLocalDraft() { await transaction('readwrite', store => store.delete(DRAFT_KEY)); return true; }
+function queueWrite(operation) {
+  const pending = writeQueue.then(operation);
+  // A failed save belongs to its caller; subsequent saves/clears still run.
+  writeQueue = pending.then(() => undefined, () => undefined);
+  return pending;
+}
+export async function loadLocalDraft() { await writeQueue; const value = await transaction('readonly', store => store.get(DRAFT_KEY)); return value === undefined ? null : normalizedDraft(value); }
+export async function saveLocalDraft(value) {
+  const draft = normalizedDraft(value);
+  return queueWrite(async () => { await transaction('readwrite', store => store.put(draft, DRAFT_KEY)); return draft; });
+}
+export async function clearLocalDraft() { return queueWrite(async () => { await transaction('readwrite', store => store.delete(DRAFT_KEY)); return true; }); }
 
 function imageType(buffer) {
   const bytes = new Uint8Array(buffer, 0, Math.min(buffer.byteLength, 16));
