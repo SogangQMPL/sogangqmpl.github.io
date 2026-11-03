@@ -266,7 +266,7 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 .announcement h2 a:hover{text-decoration:underline}
 .announcement-body{margin-top:5px;font-size:16px;color:var(--muted);line-height:1.8}
 .announcement-body a{font-size:16px;color:var(--muted);text-decoration:none}
-.site-footer{padding:18px 0;background:#002e5d}
+.site-footer{padding:18px 0;background:var(--navy)}
 .footer-inner{max-width:var(--page-width);display:flex;flex-direction:column;align-items:flex-start;gap:4px}
 .footer-affiliation{font-size:14px;font-weight:550;line-height:1.65}
 .footer-contact{display:flex;flex-wrap:wrap;align-items:baseline;gap:3px 18px}
