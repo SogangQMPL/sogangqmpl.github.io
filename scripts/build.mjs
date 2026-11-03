@@ -29,8 +29,11 @@ for(const post of data.news){
 }
 for(const item of ['styles.css','app.js','renderer.js','assets','content','admin']) await cp(path.join(root,item),path.join(output,item),{recursive:true});
 await writeFile(path.join(output,'app.js'),appSource);
+const adminEditorVersion=createHash('sha256').update(await readFile(path.join(root,'admin/editor.js'))).digest('hex').slice(0,12);
+const adminStyleVersion=createHash('sha256').update(await readFile(path.join(root,'admin/editor.css'))).digest('hex').slice(0,12);
+await writeFile(path.join(output,'admin/index.html'),(await readFile(path.join(root,'admin/index.html'),'utf8')).replace('src="editor.js"',`src="editor.js?v=${adminEditorVersion}"`).replace('href="editor.css"',`href="editor.css?v=${adminStyleVersion}"`));
 const guide=await readFile(path.join(root,'관리안내.md'),'utf8');
-const inline=s=>escapeHTML(s).replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/`([^`]+)`/g,'<code>$1</code>');
+const inline=s=>escapeHTML(s).replace(/\[([^\]]+)\]\((https:\/\/[^\s)]+)\)/g,'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>').replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/`([^`]+)`/g,'<code>$1</code>');
 let list='',guideHTML='';
 for(const line of guide.split(/\r?\n/)){
  const heading=line.match(/^(#{1,3}) (.*)/),ordered=line.match(/^\d+\. (.*)/),bullet=line.match(/^- (.*)/);
