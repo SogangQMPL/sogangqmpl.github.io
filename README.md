@@ -9,17 +9,24 @@
 
 ## 평소 수정하기
 
-교수님과 새 담당자는 [간편 관리 안내](https://sogangqmpl.github.io/admin/guide.html)부터 보세요. 공용 GitHub 계정 **SogangQMPL**을 사용하며, 편집기에서 파일 업로드와 게시 상태 화면을 바로 열 수 있습니다. 항목별 설명과 기술 설정은 [상세 관리 안내](docs/상세관리안내.md)에 있습니다.
+교수님과 새 담당자는 [간편 관리 안내](https://sogangqmpl.github.io/admin/guide.html)부터 보세요. 공용 GitHub 계정 **SogangQMPL**을 연결해 화면에서 수정하고 바로 게시할 수 있습니다. 항목별 설명과 기술 설정은 [상세 관리 안내](docs/상세관리안내.md)에 있습니다.
 
-1. 홈페이지 주소 뒤에 `/admin/`을 붙여 한국어 편집기를 엽니다.
-2. 공지, 연구 주제·관련 논문, 구성원, 소식 등을 수정하고 미리보기로 확인합니다.
-3. 편집기에서 `site.json`을 다운로드합니다.
-4. GitHub 저장소의 `content/site.json`을 내려받은 파일로 교체하고 `main` 브랜치에 Commit합니다.
-5. **Actions → Publish lab website**가 완료되면 홈페이지에서 변경 내용을 확인합니다.
+1. [화면 편집기](https://sogang-qmpl-editor.qmplqmpl-ai.chatgpt.site/)를 엽니다.
+2. 공지, 연구 주제·관련 논문, 구성원, 소식 등을 화면에서 수정하고 PC·모바일 미리보기로 확인합니다.
+3. **GitHub 연결**에서 공용 계정 **SogangQMPL**로 로그인하고 **게시하기**를 누릅니다.
+4. **게시 완료**와 실제 홈페이지의 변경 내용을 확인합니다.
 
-**초안 저장과 다운로드는 게시가 아닙니다.** 초안은 현재 브라우저에 저장되며, GitHub에 반영한 뒤 Pages 배포가 완료되어야 공개됩니다. 편집기에는 비밀번호나 GitHub 토큰을 입력하지 않습니다. 자세한 절차는 [관리안내.md](관리안내.md)를 따르세요.
+**초안 저장과 다운로드는 게시가 아닙니다.** 초안은 현재 브라우저에 저장되며, GitHub에 반영한 뒤 Pages 배포가 완료되어야 공개됩니다. GitHub 로그인은 연결 화면에서 진행하며 편집기에 비밀번호나 토큰을 붙여 넣지 않습니다. 자세한 절차는 [관리안내.md](관리안내.md)를 따르세요. 기존 `/admin/` 입력 도구에서는 JSON을 내려받아 직접 업로드할 수도 있습니다.
 
 내용은 `content/site.json`, 화면 구성은 `renderer.js`, 디자인은 `styles.css`에 있습니다. 기존 데이터의 알 수 없는 필드는 편집기에서 보존합니다.
+
+## 다른 사람에게 Codex 작업 넘기기
+
+새 담당자에게 **이 저장소 주소**, **GitHub 게시용 로그인 방법**, [복사할 시작 요청문](Codex-시작요청.txt)을 전달하세요. 새 담당자는 자신의 Codex에서 작업 폴더를 연 뒤 요청문을 붙여 넣으면 됩니다. 처음 한 번은 그 컴퓨터의 GitHub 게시 인증을 완료해야 합니다.
+
+Codex용 프로젝트 구조·디자인 규칙·검사·배포 절차는 [AGENTS.md](AGENTS.md)에 있습니다. 이후에는 “수정 내용”을 말하고 “검사 후 게시까지 완료해줘”라고 요청하면 됩니다. `main` 반영 후 **Publish lab website**가 자동 배포합니다. Codex에서 로컬 프로젝트의 Git 변경 확인·커밋·push·PR 작업을 지원하는 방식은 [공식 OpenAI 문서](https://learn.chatgpt.com/docs/environments/local-environment)에 나와 있습니다.
+
+사이트를 Codex로 수정·게시하는 데 필요한 소스는 이 저장소에 있습니다. [화면 편집기](https://sogang-qmpl-editor.qmplqmpl-ai.chatgpt.site/)의 서버 운영은 별도입니다. 편집기의 코드·스타일까지 함께 고치려면 `qmp-editor-host` 소스와 기존 Sites 호스팅 권한이 추가로 필요하며, 이 GitHub 저장소 권한만으로 자동 이전되지 않습니다. 데이터만 고치는 경우 편집기는 최신 GitHub 자료를 읽습니다.
 
 ## 먼저 보기
 
