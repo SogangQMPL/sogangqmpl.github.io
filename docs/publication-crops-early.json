@@ -41,15 +41,16 @@
       "source": "https://doi.org/10.1063/1.4902373",
       "action": "crop",
       "imagePreview": {
-        "x": 0.6730769230769231,
-        "y": 0.04090909090909091,
-        "width": 0.14423076923076922,
-        "height": 0.31363636363636366,
-        "label": "Quasi-WGM cavity and field schematic (Figure 2b inset)"
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.4953664700926706,
+        "label": "Excitation-position-dependent lasing spectra and microrod geometry (Figure 4a)"
       },
-      "rationale": "Select the published quasi-WGM ray/cavity and electric-field inset, excluding the surrounding plot border. The210px height cap enlarges this75x138px source by about1.52x rather than filling the220px column. Complete original retained; no scientific diagram is redrawn.",
+      "rationale": "Use the complete main panel Figure 4a (700 × 588 source pixels), showing excitation-position-dependent FP/WGM spectra and beam/microrod diagrams. Replaces the tiny 75 × 138 Figure 2b inset. CSS thumbnail crop only; the original 700 × 1187 publisher figure is retained unchanged for full-size viewing.",
       "limitation": "Primary AIP article page was checked and exposes only the abstract/purchase view through available retrieval. A focused PDF search found no directly accessible author manuscript. Direct retrieval of publisher image/HTML through the local network is unavailable (DNS failure); no unverified substitute is used.",
-      "preferredFollowup": "If an author PDF or higher-resolution Figure 1/device/SEM source becomes available, select a representative microrod image or the complete FP/WGM geometry schematic."
+      "preferredFollowup": "If an author PDF or higher-resolution Figure 1/device/SEM source becomes available, select a representative microrod image or the complete FP/WGM geometry schematic.",
+      "image": "assets/publications/pub-36-figure4-original.jpeg"
     },
     {
       "id": "pub-37",
