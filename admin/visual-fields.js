@@ -249,7 +249,11 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
   }
 
   function richField(spec, target) {
-    const block = getAt(data, spec.path);
+    const isTitle = spec.type === 'publication-title', value = getAt(data, spec.path);
+    const segmentsPath = spec.segmentsPath || spec.path.replace(/\/title$/, '/titleSegments');
+    const storedSegments = isTitle ? getAt(data, segmentsPath) : undefined;
+    const validSegments = isTitle && Array.isArray(storedSegments) && storedSegments.every(segment => segment && typeof segment.text === 'string' && (segment.italic === undefined || typeof segment.italic === 'boolean')) && storedSegments.map(segment => segment.text).join('') === value;
+    const block = isTitle && typeof value === 'string' ? {type:'paragraph', text:value, ...(validSegments ? {children:storedSegments.map(segment => ({text:segment.text, ...(segment.italic ? {italic:true} : {})}))} : {})} : value;
     if (!block || typeof block !== 'object') { message('본문을 다시 선택해 주세요.', true); return; }
     if (block.type === 'list') {
       const text = (block.items || []).map(plainText).join('\n'), {wrapper, label} = fieldWrapper({...spec, hint: '한 줄에 한 항목을 입력하세요.'}, target), input = element(doc, 'textarea'); input.rows = 6; input.value = text; label.append(input);
@@ -266,8 +270,8 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
       input.addEventListener('input', saveList); input.addEventListener('change', saveList); ordered.addEventListener('change', saveList); applyButton(wrapper, saveList);
       return;
     }
-    const {wrapper} = fieldWrapper({...spec, hint: '글자를 선택한 뒤 굵게·기울임·링크를 적용하세요.'}, target), toolbar = element(doc, 'div', undefined, 'rich-toolbar'), editor = element(doc, 'div', undefined, 'rich-editor');
-    editor.contentEditable = 'true'; editor.setAttribute('role', 'textbox'); editor.setAttribute('aria-multiline', 'true'); editor.setAttribute('aria-label', spec.label || '본문'); editor.spellcheck = false;
+    const {wrapper} = fieldWrapper({...spec, hint: isTitle ? '기울일 글자만 선택한 뒤 기울임을 누르세요. 제목 내용과 서식을 함께 저장합니다.' : '글자를 선택한 뒤 굵게·기울임·링크를 적용하세요.'}, target), toolbar = element(doc, 'div', undefined, 'rich-toolbar'), editor = element(doc, 'div', undefined, 'rich-editor');
+    editor.contentEditable = 'true'; editor.setAttribute('role', 'textbox'); editor.setAttribute('aria-multiline', isTitle ? 'false' : 'true'); editor.setAttribute('aria-label', spec.label || '본문'); editor.spellcheck = false;
     function appendText(parent, text) { String(text).split('\n').forEach((line, index) => { if (index) parent.append(doc.createElement('br')); parent.append(doc.createTextNode(line)); }); }
     for (const run of Array.isArray(block.children) ? block.children : [{text: block.text || ''}]) {
       let parent = editor;
@@ -281,11 +285,11 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
     for (const event of ['keyup', 'mouseup', 'input']) editor.addEventListener(event, () => { rememberRange(); if (event === 'input') { dirty = true; void saveRich(); } });
     function restoreRange() { editor.focus(); if (savedRange) { const current = doc.getSelection(); current.removeAllRanges(); current.addRange(savedRange); } }
     function toolbarButton(text, action) { const button = element(doc, 'button', text); button.type = 'button'; button.addEventListener('pointerdown', (event) => { rememberRange(); event.preventDefault(); }); button.addEventListener('click', action); toolbar.append(button); return button; }
-    toolbarButton('굵게', () => { restoreRange(); doc.execCommand('bold'); dirty = true; rememberRange(); void saveRich(); });
+    if (!isTitle) toolbarButton('굵게', () => { restoreRange(); doc.execCommand('bold'); dirty = true; rememberRange(); void saveRich(); });
     toolbarButton('기울임', () => { restoreRange(); doc.execCommand('italic'); dirty = true; rememberRange(); void saveRich(); });
     const links = element(doc, 'div', undefined, 'rich-link-controls'); links.hidden = true;
     const linkInput = element(doc, 'input'); linkInput.type = 'url'; linkInput.placeholder = 'https://…'; linkInput.setAttribute('aria-label', '연결할 웹 주소');
-    toolbarButton('링크', () => {
+    if (!isTitle) toolbarButton('링크', () => {
       rememberRange(); links.hidden = !links.hidden;
       if (!links.hidden) {
         const node = savedRange?.commonAncestorContainer, anchor = (node?.nodeType === 1 ? node : node?.parentElement)?.closest?.('a');
@@ -302,15 +306,18 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
       dirty = true; rememberRange(); links.hidden = true; void saveRich();
     });
     clearLink.addEventListener('click', () => { restoreRange(); doc.execCommand('unlink'); dirty = true; rememberRange(); links.hidden = true; void saveRich(); });
-    editor.addEventListener('paste', (event) => { event.preventDefault(); doc.execCommand('insertText', false, event.clipboardData?.getData('text/plain') || ''); dirty = true; void saveRich(); });
+    if (isTitle) editor.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || ((event.ctrlKey || event.metaKey) && ['b', 'k'].includes(event.key.toLowerCase()))) event.preventDefault();
+    });
+    editor.addEventListener('paste', (event) => { event.preventDefault(); const text = event.clipboardData?.getData('text/plain') || ''; doc.execCommand('insertText', false, isTitle ? text.replace(/[\r\n]+/g, ' ') : text); dirty = true; void saveRich(); });
     editor.addEventListener('drop', (event) => { event.preventDefault(); message('사진은 사진 항목에서 파일을 선택해 주세요.'); });
-    wrapper.append(toolbar, links, editor);
+    if (isTitle) wrapper.append(toolbar, editor); else wrapper.append(toolbar, links, editor);
     function serializedRuns() {
       const runs = [];
       const append = (text, marks = {}) => {
         if (!text) return;
-        const run = {text, ...(marks.bold ? {bold: true} : {}), ...(marks.italic ? {italic: true} : {}), ...(marks.url ? {url: marks.url} : {})}, previous = runs.at(-1);
-        if (previous && previous.bold === run.bold && previous.italic === run.italic && previous.url === run.url) previous.text += text; else runs.push(run);
+        const run = {text: isTitle ? text.replace(/[\r\n]+/g, ' ') : text, ...(!isTitle && marks.bold ? {bold: true} : {}), ...(marks.italic ? {italic: true} : {}), ...(!isTitle && marks.url ? {url: marks.url} : {})}, previous = runs.at(-1);
+        if (previous && previous.bold === run.bold && previous.italic === run.italic && previous.url === run.url) previous.text += run.text; else runs.push(run);
       };
       function visit(node, marks = {}) {
         if (node.nodeType === 3) { append(node.nodeValue || '', marks); return; }
@@ -336,11 +343,22 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
     async function saveRich() {
       if (!dirty) return;
       const runs = serializedRuns(), text = runs.map((run) => run.text).join(''), children = runs.some((run) => run.bold || run.italic || run.url) ? runs : undefined, current = getAt(data, spec.path);
+      if (isTitle) {
+        const segments = runs.some(run => run.italic) ? runs : undefined;
+        if (current === text && JSON.stringify(getAt(data, segmentsPath)) === JSON.stringify(segments)) { dirty = false; return; }
+        const ok = await commit(draft => {
+          setAt(draft, spec.path, text);
+          if (segments) setAt(draft, segmentsPath, segments); else removeAt(draft, segmentsPath);
+        }, '논문 제목 수정', {preserveInspector:true, coalesceKey:spec.path});
+        if (ok) dirty = false;
+        return;
+      }
       if (current.text === text && JSON.stringify(current.children) === JSON.stringify(children)) { dirty = false; return; }
       const ok = await commit((draft) => { const actual = getAt(draft, spec.path); actual.text = text; if (children) actual.children = children; else delete actual.children; syncPostText(draft, spec.path); }, '본문 수정', {preserveInspector:true, coalesceKey:spec.path});
       if (ok) dirty = false;
     }
     applyButton(wrapper, saveRich);
+    if (isTitle && spec.urlPath && spec.urlPath !== spec.path) basicField({path:spec.urlPath, type:'url', label:'연결 주소 (선택)'}, wrapper);
   }
 
   function imageSelection(path, label = '본문 사진') {
@@ -464,7 +482,7 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
     } else if (parts[0] === 'people') {
       add('name', '이름'); add('role', '직위 · 과정', 'text', {options: [{value:'Principal Investigator',label:'교수'},{value:'PhD student',label:'박사과정'},{value:'Master’s student',label:'석사과정'},{value:'Undergraduate researcher',label:'학부연구생'},{value:'Postdoctoral researcher',label:'박사후연구원'},{value:'Alumni',label:'졸업생'}]}); add('email', '이메일', 'email'); add('description', '소개 · 경력 · 학력', 'multiline'); image('image', '인물 사진'); add('url', '개인 홈페이지 (선택)', 'url');
     } else if (['publications', 'underReview'].includes(parts[0])) {
-      add('title', '논문 제목'); add('authors', '저자', 'multiline', {hint:'원고 순서대로 입력하세요. 공동 기여 †, 교신저자 *는 이름 뒤에 붙입니다.'}); add('labAuthors', '강조할 연구실 저자', 'list', {hint:'저자 목록과 같은 이름을 한 줄에 한 명씩 입력하세요. †와 *는 제외합니다.'});
+      add('title', '논문 제목', 'publication-title', {segmentsPath:base+'/titleSegments'}); add('authors', '저자', 'multiline', {hint:'원고 순서대로 입력하세요. 공동 기여 †, 교신저자 *는 이름 뒤에 붙입니다.'}); add('labAuthors', '강조할 연구실 저자', 'list', {hint:'저자 목록과 같은 이름을 한 줄에 한 명씩 입력하세요. †와 *는 제외합니다.'});
       if (parts[0] === 'publications') { add('journal', '학술지 · 권 · 페이지'); add('year', '연도', 'number', {min:1900,max:2100}); add('doi', 'DOI (선택)'); image('image', '논문 대표 그림', {altPath:base+'/imageAlt',widthPath:base+'/imageWidth',heightPath:base+'/imageHeight',cropPath:base+'/imagePreview',sourcePath:base+'/imageSource',imageLabelPath:base+'/imageLabel'}); add('featured', '홈 대표 논문에 표시', 'boolean'); }
       add('url', '논문 · 원고 링크 (선택)', 'url');
     } else if (parts[0] === 'news') {
@@ -489,7 +507,7 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
       const value = getAt(data, spec.path);
       imageField(value && typeof value === 'object' && 'src' in value ? {...imageSelection(spec.path, spec.label), ...spec, path:spec.path + '/src'} : spec, target);
     }
-    else if (spec.type === 'richtext') richField(spec, target);
+    else if (spec.type === 'richtext' || spec.type === 'publication-title') richField(spec, target);
     else if (spec.type === 'relation') relationField(spec, target);
     else if (spec.type === 'record') recordFields(spec, target);
     else basicField(spec, target);

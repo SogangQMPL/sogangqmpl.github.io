@@ -86,6 +86,9 @@ export function validateSiteData(value) {
     for (const item of list) {
       identity(item, key === 'people' ? 'name' : 'title');
       strings(item, ['title', 'name', 'authors', 'journal', 'date', 'category', 'role', 'description', 'summary', 'excerpt', 'body', 'image', 'imageAlt', 'icon', 'url'], '항목');
+      if (['publications', 'underReview'].includes(key) && item.titleSegments !== undefined) {
+        if (!Array.isArray(item.titleSegments) || item.titleSegments.length > 1000 || item.titleSegments.some(run => !object(run) || typeof run.text !== 'string' || (run.italic !== undefined && typeof run.italic !== 'boolean'))) invalid('논문 제목의 기울임꼴 서식을 확인하세요.');
+      }
       links(item, ['image', 'icon', 'url', 'imageSource'], '항목');
       if (item.labAuthors !== undefined) stringList(item.labAuthors, '연구실 저자');
       if (key === 'publications' && (!Number.isInteger(Number(item.year)) || Number(item.year) < 1900 || Number(item.year) > 2100)) invalid('논문 출판 연도를 확인하세요.');
