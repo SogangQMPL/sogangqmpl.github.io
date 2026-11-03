@@ -16,12 +16,12 @@
       ['title', '연구실 정식 명칭', 'text', true], ['shortName', '짧은 이름'],
       ['group', '그룹명'], ['affiliation', '소속'], ['email', '대표 이메일', 'email'],
       ['address', '주소', 'text', true], ['description', '연구실 한 문단 소개', 'textarea', true],
-      ['repositoryUrl', 'GitHub 저장소 주소', 'url', true, '저장소를 만든 후 https://github.com/소유자/저장소 형식으로 입력하세요.']
+      ['repositoryUrl', 'GitHub 저장소 주소', 'url', true, '홈페이지 소스가 보관된 GitHub 저장소입니다.']
     ],
     announcement: [ ['enabled', '홈 상단 공지 표시', 'checkbox', true], ['title', '공지 제목', 'text', true], ['body', '공지 내용', 'textarea', true], ['url', '공지 링크', 'noticeurl', true, '예: join.html 또는 https://로 시작하는 주소. 링크가 필요 없으면 비워 두세요.'] ],
     hero: [ ['title', '메인 랩 이름', 'textarea', true, '줄바꿈한 모양대로 큰 제목에 표시됩니다. 예: Quantum / Materials & Photonics / Lab을 세 줄로 입력하세요.'], ['image', '메인 대표 그림', 'image', true, '랩 이름 오른쪽에 표시할 그림입니다. 현재 Wix 원본 assets/lab-overview.webp를 사용합니다.'], ['imageAlt', '대표 그림 설명', 'text', true, '그림이 보이지 않을 때 읽을 수 있는 설명입니다.'] ],
-    join: [ ['title', '모집 제목', 'text', true], ['description', '모집 안내', 'textarea', true] ],
-    news: [ ['date', '날짜', 'text', false, '예: 2026-10-15 또는 2026-10'], ['category', '분류', 'text', false, '예: Awards, Conferences, Activities'], ['title', '게시물 제목', 'text', true, 'Awards는 제목 뒤에 수상자 이름을 붙이고, Conferences는 행사명 뒤에 Poster/Oral Presentation 등 확인된 발표 형식을 붙입니다. 개인 이름과 발표 내용·참석자는 본문에 적어 주세요.'], ['excerpt', '목록 소개 (선택)', 'textarea', true, '비워 두면 게시물 본문 앞부분을 최대 두 문단 자동으로 표시합니다. 목록에 별도 소개를 쓰려면 입력하세요.'], ['body', '이전 본문 (보관)', 'textarea', true, '본문 블록이 없는 이전 게시물에서 사용합니다. 새 게시물의 본문과 사진은 아래 게시물 내용에서 입력하세요.'], ['url', 'Wix 원문 · 출처 주소', 'url', true, '이 주소는 원문 기록용입니다. 방문자는 이 홈페이지 안의 게시물에서 내용을 읽습니다.'], ['image', '목록 대표 사진 주소', 'image', true, 'assets/posts/파일명.jpg 또는 https:// 이미지 주소. 본문 사진은 아래 사진 블록에서 관리합니다.'], ['imageAlt', '대표 사진 설명', 'text', true, '사진에 담긴 활동이나 연구 내용을 짧게 설명해 주세요.'] ],
+    join: [ ['title', '모집 제목', 'text', true], ['description', '모집 안내', 'textarea', true], ['office', '교수실'], ['laboratory', '실험실'] ],
+    news: [ ['date', '날짜', 'text', false, '예: 2026-10-15 또는 2026-10'], ['category', '분류', 'category'], ['title', '게시물 제목', 'text', true, 'Awards는 제목 뒤에 수상자 이름을 붙이고, Conferences는 행사명 뒤에 Poster/Oral Presentation 등 확인된 발표 형식을 붙입니다. 개인 이름과 발표 내용·참석자는 본문에 적어 주세요.'], ['excerpt', '목록 소개 (선택)', 'textarea', true, '비워 두면 게시물 본문 앞부분을 최대 두 문단 자동으로 표시합니다. 목록에 별도 소개를 쓰려면 입력하세요.'], ['body', '이전 본문 (보관)', 'textarea', true, '본문 블록이 없는 이전 게시물에서 사용합니다. 새 게시물의 본문과 사진은 아래 게시물 내용에서 입력하세요.'], ['url', 'Wix 원문 · 출처 주소', 'url', true, '이 주소는 원문 기록용입니다. 방문자는 이 홈페이지 안의 게시물에서 내용을 읽습니다.'], ['image', '목록 대표 사진 주소', 'image', true, 'assets/posts/파일명.jpg 또는 https:// 이미지 주소. 본문 사진은 아래 사진 블록에서 관리합니다.'], ['imageAlt', '대표 사진 설명', 'text', true, '사진에 담긴 활동이나 연구 내용을 짧게 설명해 주세요.'] ],
     publications: [ ['title', '논문 제목', 'text', true], ['authors', '저자', 'textarea', true, '저자 순서대로 쉼표로 구분하세요. 교수님·연구실 구성원은 풀네임으로 작성합니다. 원문에서 확인한 공동 기여 저자는 †, 교신저자는 *를 이름 뒤에 붙이세요. 예: Seongwon Gim†, Hyeonjun Baek*.'], ['labAuthors', '연구실 저자 (굵게·밑줄)', 'ids', true, '이 논문의 교수님·연구실 구성원 이름을 저자 목록과 같은 풀네임으로 쉼표로 구분하세요. 예: Seongwon Gim, Hyeonjun Baek. 공동 기여·교신저자 기호 †와 *는 제외합니다. 이니셜이 같은 외부 연구자는 이름을 임의로 바꾸지 마세요.'], ['journal', '학술지 · 권 · 페이지', 'text', true], ['year', '출판 연도', 'number'], ['doi', 'DOI', 'text', false, '예: 10.1038/… (없으면 비워 두세요)'], ['url', '논문 링크', 'url', true], ['image', '논문 대표 그림', 'image', true, '예: assets/publications/pub-01.jpg. 해당 논문의 visual abstract 또는 구조 그림을 사용합니다.'], ['imageAlt', '그림 설명', 'text', true], ['imageLabel', '그림 이름', 'text', false, '확대창과 출처 기록에 사용하는 이름입니다. 예: Graphical abstract, Figure 1. 목록의 그림 아래에는 표시하지 않습니다.'], ['imageSource', '그림 출처 페이지', 'url', true, '출판사의 해당 논문 또는 그림 페이지 https:// 주소를 입력합니다.'], ['featured', '홈 화면의 대표 논문에 표시', 'checkbox', true] ],
     underReview: [ ['title', '논문 제목', 'text', true], ['authors', '저자', 'textarea', true, '원고에 표기한 이름과 순서를 쉼표로 구분해 입력하세요. 공동 기여는 †, 교신저자는 *를 이름 뒤에 붙이세요. 원고에 확인된 표시만 입력합니다.'], ['labAuthors', '연구실 저자 (굵게·밑줄)', 'ids', true, '저자 목록과 같은 이름으로 입력하세요. 예: Yongju Jeong, Dianne Lee, Hyeonjun Baek. †와 *는 제외합니다. Dianne Lee는 이지현 학생의 원고 표기 이름입니다.'], ['url', '원고 링크 (선택)', 'url', true, '공개 원고나 preprint가 있을 때만 https:// 주소를 입력하세요. 링크가 없으면 비워 둡니다.'] ],
     people: [ ['name', '이름'], ['role', '직위 · 과정', 'role', false, '교수님 분류는 Principal Investigator 값으로 연결됩니다. 기존의 다른 역할도 보존됩니다.'], ['description', '소개', 'textarea', true], ['email', '이메일', 'email'], ['image', '사진 주소', 'image', true, 'assets/파일명.jpg 또는 https:// 이미지 주소. 실제 파일 업로드는 GitHub에서 별도로 해주세요.'], ['url', '개인 홈페이지 링크', 'url', true] ],
@@ -120,7 +120,7 @@
     const [key, label, kind = 'text', wide = false, hint] = definition;
     const field = node('div', undefined, 'field' + (wide ? ' wide' : ''));
     const id = 'field-' + (++inputSequence);
-    const input = document.createElement(['textarea','ids'].includes(kind) ? 'textarea' : kind === 'role' ? 'select' : 'input');
+    const input = document.createElement(['textarea','ids'].includes(kind) ? 'textarea' : ['role','category'].includes(kind) ? 'select' : 'input');
     input.id = id;
     input.dataset.field = key;
     const originalArray = kind === 'ids' || Array.isArray(owner[key]);
@@ -135,6 +135,11 @@
         if (owner[key] && !roles.some(([value]) => value === owner[key])) roles.push([owner[key], owner[key] + ' (기존 값)']);
         roles.forEach(([value, label]) => { const option = node('option', label); option.value = value; input.append(option); });
       }
+      if (kind === 'category') {
+        const categories = [['', '분류를 선택하세요'], ['Awards', 'Awards · 수상'], ['Conferences', 'Conferences · 학회'], ['Activities', 'Activities · 연구실 활동']];
+        if (owner[key] && !categories.some(([value]) => value === owner[key])) categories.push([owner[key], owner[key] + ' (기존 값)']);
+        categories.forEach(([value, label]) => { const option = node('option', label); option.value = value; input.append(option); });
+      }
       if (kind === 'number') { input.min = '1900'; input.max = '2100'; input.step = '1'; }
       if (kind === 'url' || kind === 'image' || kind === 'noticeurl') input.inputMode = 'url';
       input.value = Array.isArray(owner[key]) ? owner[key].join(', ') : owner[key] == null ? '' : String(owner[key]);
@@ -145,7 +150,7 @@
     if (hint) { const small = node('small', hint); small.id = id + '-hint'; input.setAttribute('aria-describedby', small.id); field.append(small); }
     let editStarted = false;
     input.addEventListener('focus', () => { editStarted = false; });
-    input.addEventListener(kind === 'checkbox' ? 'change' : 'input', () => {
+    input.addEventListener(['checkbox','category'].includes(kind) ? 'change' : 'input', () => {
       if (!editStarted) { remember(); editStarted = true; }
       let value = kind === 'checkbox' ? input.checked : kind === 'number' && input.value !== '' ? Number(input.value) : input.value;
       if (originalArray) value = input.value.split(kind === 'ids' ? /[,\n]+/ : ',').map((part) => part.trim()).filter(Boolean);
@@ -527,7 +532,7 @@
     if (!validate()) return;
     const blob = new Blob([JSON.stringify(data, null, 2) + '\n'], { type: 'application/json;charset=utf-8' });
     const url = URL.createObjectURL(blob); const link = node('a'); link.href = url; link.download = 'site.json'; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
-    unsaved = false; status('다운로드를 요청했습니다. 받은 site.json을 GitHub의 content/site.json에 덮어 올리고 Commit해야 게시됩니다.');
+    unsaved = false; status('받은 site.json을 위의 “GitHub에 파일 올리기”에서 업로드하고 Commit changes를 누르세요.');
   });
   $('undo').addEventListener('click', () => { if (!history.length) return; data = history.pop(); $('undo').disabled = !history.length; changed(); render(); status('직전 수정을 되돌렸습니다. 초안을 다시 저장해 주세요.'); });
   $('restore-draft').addEventListener('click', () => {

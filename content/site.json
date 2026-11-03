@@ -7,7 +7,7 @@
     "email": "hjbaek@sogang.ac.kr",
     "address": "35 Baekbeom-ro, Mapo-gu, Seoul 04107, Korea",
     "description": "We study excitons and quantum light in low-dimensional materials and develop photonic and semiconductor devices.",
-    "repositoryUrl": ""
+    "repositoryUrl": "https://github.com/SogangQMPL/sogangqmpl.github.io"
   },
   "hero": {
     "eyebrow": "",
@@ -2277,7 +2277,9 @@
   ],
   "join": {
     "title": "대학원생·학부연구생 모집",
-    "description": "참여 문의는 이메일로 보내주세요."
+    "description": "참여 문의는 이메일로 보내주세요.",
+    "office": "R1021",
+    "laboratory": "R303"
   },
   "provenance": {
     "auditedAt": "2026-11-01",
