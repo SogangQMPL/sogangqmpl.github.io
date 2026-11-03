@@ -641,6 +641,25 @@
         "Seongwon Gim",
         "Hyunjun Jo",
         "Hyeonjun Baek"
+      ],
+      "titleSegments": [
+        {
+          "text": "Symmetric Interlayer Trions in 3"
+        },
+        {
+          "text": "R",
+          "italic": true
+        },
+        {
+          "text": "- and 2"
+        },
+        {
+          "text": "H",
+          "italic": true
+        },
+        {
+          "text": "-Stacked MoS₂ Bilayers"
+        }
       ]
     },
     {
@@ -695,7 +714,19 @@
         "width": 0.725,
         "height": 0.37,
         "label": "Gated bilayer and exciton schematic (Figure 1a)"
-      }
+      },
+      "titleSegments": [
+        {
+          "text": "Quadrupolar and Dipolar Excitons in Bilayer 2"
+        },
+        {
+          "text": "H",
+          "italic": true
+        },
+        {
+          "text": "-MoSe₂"
+        }
+      ]
     },
     {
       "id": "pub-08",
@@ -918,6 +949,18 @@
       "imageHeight": 1168,
       "labAuthors": [
         "Hyeonjun Baek"
+      ],
+      "titleSegments": [
+        {
+          "text": "2×"
+        },
+        {
+          "text": "N",
+          "italic": true
+        },
+        {
+          "text": " twin-field quantum key distribution network configuration based on polarization, wavelength, and time division multiplexing"
+        }
       ]
     },
     {
