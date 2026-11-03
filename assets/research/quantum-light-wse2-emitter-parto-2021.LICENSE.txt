@@ -1,0 +1,24 @@
+Quantum light sources research illustration
+
+Source: Kamyar Parto, Shaimaa I. Azzam, Kaustav Banerjee and Galan Moody.
+Defect and strain engineering of monolayer WSe2 enables site-controlled single-photon emission up to 150 K.
+Nature Communications 12, 3585 (2021). Figure 1b.
+Article: https://doi.org/10.1038/s41467-021-23709-5
+Figure: https://www.nature.com/articles/s41467-021-23709-5/figures/1
+Original image: https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-021-23709-5/MediaObjects/41467_2021_23709_Fig1_HTML.png
+
+Copyright: The Author(s) 2021.
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+Adaptation: rectangular native-pixel crop (x=60, y=460, width=820, height=453)
+from the original 1000 x 913 PNG. No redrawing, retouching or upscaling.
+The upper band diagram and most labels are omitted to keep the material illustration clear.
+
+Scope: externally sourced illustration of a strain- and defect-engineered WSe2
+single-photon emitter; not a measured result or publication of Sogang QMPL.
+Existing lab research descriptions and related-paper mappings are unchanged.
+Selected: 2026-11-03.
+
+Original PNG SHA256: 3310a5ff089a63bf4bf8c2ffff63bb0a1070e4cdbdd1a0bee260299a8d62e250
+Cropped PNG SHA256: 12c231d5ad0ad56b732db2b799392786391e99db5c5f0fc56eb0d049019406a1
