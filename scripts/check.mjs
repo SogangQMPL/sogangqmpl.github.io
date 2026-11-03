@@ -70,15 +70,21 @@ for(const category of data.research){
   assert(topic.title,`Missing topic title: ${topic.id}`);
   for(const id of topic.paperIds||[])assert(publicationIds.has(id),`Unknown topic paper: ${id}`);
   if(topic.image){assert(safeURL(topic.image),`Unsafe topic image: ${topic.id}`);if(topic.image.startsWith('assets/'))await access(path.join(root,topic.image));}
-  if(topic.detailImages!==undefined){
-   assert(Array.isArray(topic.detailImages),`Invalid detail images: ${topic.id}`);
-   for(const image of topic.detailImages){
+  if(topic.detailImages!==undefined)assert(Array.isArray(topic.detailImages),`Invalid detail images: ${topic.id}`);
+  if(topic.detailSections!==undefined){
+   assert(Array.isArray(topic.detailSections),`Invalid research detail sections: ${topic.id}`);
+   for(const section of topic.detailSections){
+    assert(section&&typeof section.title==='string'&&typeof section.body==='string'&&Array.isArray(section.images),`Invalid research detail section: ${topic.id}`);
+    assert(section.body.trim()||section.images.length,`Empty research detail section: ${topic.id}`);
+   }
+  }
+  const detailFigures=[...(topic.detailImages||[]),...(topic.detailSections||[]).flatMap(section=>section.images)];
+  for(const image of detailFigures){
     assert(image&&safeURL(image.src),`Unsafe detail image: ${topic.id}`);
     if(image.src.startsWith('assets/'))await access(path.join(root,image.src));
     if(image.fullSrc){assert(safeURL(image.fullSrc),`Unsafe original detail image: ${topic.id}`);if(image.fullSrc.startsWith('assets/'))await access(path.join(root,image.fullSrc));}
     assert(typeof image.alt==='string'&&image.alt.trim(),`Missing detail image description: ${topic.id}`);
     if(image.width||image.height)assert(Number(image.width)>0&&Number(image.height)>0,`Invalid detail image size: ${topic.id}`);
-   }
   }
   if(topic.schematic){assert(safeURL(topic.schematic),`Unsafe schematic: ${topic.id}`);if(topic.schematic.startsWith('assets/'))await access(path.join(root,topic.schematic));assert(topic.schematicAlt,`Schematic description missing: ${topic.id}`);}
   if(topic.schematicWidth||topic.schematicHeight)assert(Number(topic.schematicWidth)>0&&Number(topic.schematicHeight)>0,`Invalid schematic size: ${topic.id}`);
