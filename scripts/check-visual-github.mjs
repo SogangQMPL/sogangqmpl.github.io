@@ -170,6 +170,16 @@ await check('image encoding, formats, and all size boundaries are enforced', asy
   const eightMB = png(8 * 1024 * 1024);
   await expectCode('VALIDATION', () => publish(github(), { assets: ['a', 'b', 'c', 'd'].map(name => ({ path: `assets/uploads/${name}.png`, base64: eightMB })) }));
 });
+await check('publication title styling is validated and preserved without accepting HTML', async () => {
+  const data = fixture(); data.publications[0].title = '2H material'; data.publications[0].titleSegments = [{text:'2'},{text:'H',italic:true},{text:' material'}];
+  const mock = github({data}); await publish(mock, {data});
+  const saved = JSON.parse(mock.state.trees[0].tree.find(entry=>entry.path==='content/site.json').content);
+  assert.deepEqual(saved.publications[0].titleSegments, data.publications[0].titleSegments);
+  for (const segments of ['<i>H</i>', [{text:'H',italic:'yes'}], [{text:null}], Array.from({length:1001},()=>({text:'x'}))]) {
+    const invalid = fixture(); invalid.publications[0].titleSegments = segments;
+    await expectCode('VALIDATION', () => publish(github(), {data:invalid}));
+  }
+});
 await check('full content validation catches routes, unsafe URLs, and broken associations', async () => {
   const changes = [
     data => { delete data.research; }, data => { data.people[0].id = data.news[0].id; }, data => { data.news[0].date = '2026-02-30'; },
