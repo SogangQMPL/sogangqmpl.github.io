@@ -1438,21 +1438,21 @@
       "url": "https://pubs.aip.org/aip/apl/article/105/20/201108/27587/Selective-excitation-of-Fabry-Perot-or-whispering",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-36-original.jpeg",
-      "imageAlt": "Whispering-gallery-mode lasing in GaN microrods, including the light-ray and field-profile inset.",
-      "imageLabel": "Figure 2",
+      "image": "assets/publications/pub-36-figure4-original.jpeg",
+      "imageAlt": "Fabry–Perot and whispering-gallery lasing spectra with diagrams showing laser excitation at the center and edge of a GaN microrod.",
+      "imageLabel": "Figure 4(a)",
       "imageSource": "https://doi.org/10.1063/1.4902373",
-      "imageWidth": 520,
-      "imageHeight": 440,
+      "imageWidth": 700,
+      "imageHeight": 1187,
       "labAuthors": [
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.6730769230769231,
-        "y": 0.04090909090909091,
-        "width": 0.14423076923076922,
-        "height": 0.31363636363636366,
-        "label": "Quasi-WGM cavity and field schematic (Figure 2b inset)"
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.4953664700926706,
+        "label": "Excitation-position-dependent lasing spectra and microrod geometry (Figure 4a)"
       }
     },
     {
