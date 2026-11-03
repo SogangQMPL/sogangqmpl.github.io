@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="qmp-backend" content="none">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://sogangqmpl.github.io; img-src 'self' https: data: blob:; font-src 'self' https://sogangqmpl.github.io data:; connect-src 'self' https://api.github.com; frame-src 'self' blob:; object-src 'none'; base-uri 'self' https://sogangqmpl.github.io; form-action 'self'">
+  <title>홈페이지 화면 편집 · Sogang QMPL</title>
+  <link rel="stylesheet" href="visual.css">
+  <script type="module" src="visual.js"></script>
+</head>
+<body>
+  <a class="skip" href="#canvas-region">미리보기로 건너뛰기</a>
+  <header class="editor-topbar">
+    <a class="editor-brand" href="https://sogangqmpl.github.io/" target="_blank" rel="noopener noreferrer"><b>QMPL</b><span>홈페이지 편집<small>Sogang University</small></span></a>
+    <div class="save-state"><span id="draft-indicator" aria-hidden="true"></span><span id="draft-state">불러오는 중…</span></div>
+    <div class="history-controls"><button id="undo" title="되돌리기 · Ctrl+Z" disabled>↶ <span>되돌리기</span></button><button id="redo" title="다시 실행 · Ctrl+Shift+Z" disabled>↷ <span>다시 실행</span></button></div>
+    <div class="top-actions"><button id="help-button">사용 방법</button><button id="connection-button">GitHub 연결</button><button id="publish-button" class="primary" disabled>게시하기</button></div>
+  </header>
+  <div class="editor-toolbar">
+    <div class="mode-switch" role="group" aria-label="편집 모드"><button id="edit-mode" aria-pressed="true">편집</button><button id="preview-mode" aria-pressed="false">미리보기</button></div>
+    <div class="viewport-switch" role="group" aria-label="화면 크기"><button id="desktop-mode" aria-pressed="true">PC</button><button id="mobile-mode" aria-pressed="false">모바일</button></div>
+    <span id="page-name">Home</span>
+    <button id="revisions-button">게시 이력</button><button id="backup-button">백업</button><label class="button file-label">불러오기<input id="import-file" type="file" accept="application/json,.json"></label>
+  </div>
+  <div id="draft-banner" class="draft-banner" hidden><span>이 브라우저에 이어서 편집할 초안이 있습니다.</span><button id="resume-draft">초안 이어서 편집</button><button id="dismiss-draft">현재 홈페이지로 시작</button></div>
+  <div id="editor-message" class="editor-message" role="status" aria-live="polite">홈페이지를 불러오고 있습니다.</div>
+  <main class="editor-workspace">
+    <aside class="page-sidebar" aria-label="페이지와 내용">
+      <div class="sidebar-tabs"><button id="pages-tab" aria-pressed="true">페이지</button><button id="design-tab" aria-pressed="false">디자인</button></div>
+      <div id="page-panel"><nav id="pages" aria-label="편집할 페이지"></nav><section class="content-panel"><div class="content-panel-heading"><h2 id="content-heading">페이지 내용</h2><button id="add-item" class="add-button" hidden>+ 추가</button></div><div id="item-list"></div></section></div>
+      <div id="design-panel" hidden></div>
+      <div class="sidebar-bottom"><a href="guide.html" target="_blank" rel="noopener noreferrer">자세한 관리 안내 ↗</a><span>그림·글을 클릭해 수정하세요.</span></div>
+    </aside>
+    <section id="canvas-region" class="canvas-region" aria-label="실제 홈페이지 미리보기" tabindex="-1"><div class="canvas-heading"><span id="canvas-hint">글과 사진을 클릭하면 오른쪽에서 수정할 수 있습니다.</span><button id="clear-selection" hidden>선택 해제</button></div><div class="canvas-scroll"><div id="canvas-frame" class="canvas-frame"><iframe id="site-preview" title="편집 중인 홈페이지" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe></div></div></section>
+    <aside class="inspector" aria-label="선택한 내용 편집"><div class="inspector-heading"><h2 id="selection-title">내용 수정</h2><button id="inspector-close" aria-label="편집 패널 닫기">×</button></div><div id="inspector"><div class="inspector-empty"><span aria-hidden="true">↖</span><h3>수정할 내용을 선택하세요</h3><p>왼쪽 화면의 글이나 사진을 누르면<br>이곳에서 바로 바꿀 수 있습니다.</p><p>짧은 글은 화면에서 두 번 눌러<br>직접 수정할 수도 있습니다.</p></div></div><div id="item-actions" hidden><button id="move-up">↑ 위로</button><button id="move-down">↓ 아래로</button><button id="delete-item" class="danger">삭제</button></div></aside>
+  </main>
+  <dialog id="connection-dialog" aria-labelledby="connection-title"><form method="dialog" class="dialog-heading"><h2 id="connection-title">GitHub 연결</h2><button aria-label="닫기">×</button></form><div id="connection-content"></div></dialog>
+  <dialog id="help-dialog" aria-labelledby="help-title"><form method="dialog" class="dialog-heading"><h2 id="help-title">세 단계로 수정하기</h2><button aria-label="닫기">×</button></form><ol class="help-steps"><li><b>화면에서 선택</b><p>수정할 페이지를 고른 뒤 글이나 사진을 누르세요.</p></li><li><b>수정하고 확인</b><p>오른쪽에서 글을 고치거나 사진을 올리세요. 미리보기와 모바일 화면도 확인하세요.</p></li><li><b>게시하기</b><p>GitHub를 연결하고 게시하기를 누르면 홈페이지에 반영됩니다. 배포가 끝나면 완료 표시가 나옵니다.</p></li></ol><p class="dialog-note">편집 초안은 이 브라우저에 저장됩니다. 다른 사람에게 보이게 하려면 게시하기를 눌러 주세요.</p></dialog>
+  <dialog id="revisions-dialog" aria-labelledby="revisions-title"><form method="dialog" class="dialog-heading"><h2 id="revisions-title">게시 이력</h2><button aria-label="닫기">×</button></form><p class="dialog-note">이전 내용을 불러와 확인한 뒤 다시 게시할 수 있습니다.</p><div id="revision-list"></div></dialog>
+  <dialog id="publish-dialog" aria-labelledby="publish-title"><form method="dialog" class="dialog-heading"><h2 id="publish-title">변경 내용을 게시할까요?</h2><button aria-label="닫기">×</button></form><div id="publish-review"></div><label class="dialog-field">변경 메모<input id="publish-message" maxlength="200" placeholder="예: 11월 학회 소식 추가"></label><p class="dialog-note">지금 보이는 홈페이지 내용과 새 사진을 함께 게시합니다.</p><div class="dialog-actions"><button id="cancel-publish">취소</button><button id="confirm-publish" class="primary">게시하기</button></div></dialog>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title"><h2 id="confirm-title">내용을 삭제할까요?</h2><p id="confirm-description"></p><div class="dialog-actions"><button id="confirm-cancel">취소</button><button id="confirm-accept" class="danger">삭제</button></div></dialog>
+</body>
+</html>
