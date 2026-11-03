@@ -568,7 +568,7 @@
       "featured": true,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
       "notes": "Original Wix uses 0, 00 placeholders. Publisher citation checked 2026-11-01 lists year and DOI without volume/article number; omitted placeholder.",
-      "image": "assets/publications/pub-02-figure2-cd.png",
+      "image": "assets/publications/pub-02-figure2-cd-no-border.png",
       "imageAlt": "Figure 2(c,d): photoluminescence excitation spectra and excitation-energy offsets of moiré-trapped interlayer excitons.",
       "imageLabel": "Figure 2(c,d)",
       "imageSource": "https://www.nature.com/articles/s41699-026-00701-5",
