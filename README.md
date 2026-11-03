@@ -72,7 +72,7 @@ node scripts/serve.mjs
 
 각 하위 주제는 대표 그림, 설명과 Related papers로 구성합니다. **Research details**를 펼치면 Wix 세부 페이지의 내용을 소제목·본문·관련 그림으로 묶어 읽을 수 있습니다. 관련 논문 13편은 각 하위 주제에만 연결하며, SPDC에는 확인하지 못한 게재 실적을 임의로 연결하지 않았습니다.
 
-SPDC·Moiré physics·Interlayer excitons·2D semiconductor devices의 대표 그림은 Wix 원본 또는 원본에서 잘라낸 그림입니다. Quantum light sources는 Parto et al., Nature Communications 12, 3585 (2021)의 Figure 1b를 원본 픽셀로 잘라 사용합니다. 외부 연구의 개념 그림이며 자체 실적으로 추가하지 않았습니다. 그림 아래에 논문·CC BY 4.0·크롭 여부를 표시하고, [그림 출처와 라이선스](assets/research/quantum-light-wse2-emitter-parto-2021.LICENSE.txt)를 함께 보관합니다. 출처와 교체 기록은 [Research 원문 검증](docs/Research-원문검증.json), [대표 그림 원본 교체 기록](docs/Research-대표그림-원본교체.json), [연구 그림 설명](docs/연구그림-설명.md), [이미지 출처](docs/이미지-출처.md)에 있습니다.
+SPDC·Moiré physics·Interlayer excitons·2D semiconductor devices의 대표 그림은 Wix 원본 또는 원본에서 잘라낸 그림입니다. Quantum light sources는 SPDC 그림의 원자층·색감을 참고해 새로 생성한 개념 그림입니다. 2D 원자층의 국소 광원에서 단일 광자가 방출되는 모습을 표현하며, 실측 자료나 특정 소자의 구현 결과가 아닙니다. [그림 제작 기록](assets/research/quantum-light-2d-single-photon-original.SOURCE.txt)에 생성 방식·프롬프트·해시를 보관합니다. 이전 Parto 논문 그림과 라이선스는 교체 이력으로 남깁니다. 출처와 교체 기록은 [Research 원문 검증](docs/Research-원문검증.json), [대표 그림 원본 교체 기록](docs/Research-대표그림-원본교체.json), [연구 그림 설명](docs/연구그림-설명.md), [이미지 출처](docs/이미지-출처.md)에 있습니다.
 
 ## 논문 목록
 
