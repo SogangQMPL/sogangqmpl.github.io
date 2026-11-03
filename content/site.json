@@ -1549,7 +1549,20 @@
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "image": "assets/publications/pub-40-figure1-original.png",
+      "imageAlt": "SEM image of the vertically aligned ZnO nanotube array in Sample A, with a 3 µm scale bar and an inset showing the 20 nm scale bar at the tube wall.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://doi.org/10.1166/jnn.2014.8303",
+      "imageWidth": 946,
+      "imageHeight": 469,
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.49682875264270615,
+        "height": 1,
+        "label": "Sample A ZnO nanotube array (Figure 1a)"
+      }
     },
     {
       "id": "pub-41",
