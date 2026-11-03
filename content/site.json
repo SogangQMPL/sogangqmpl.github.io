@@ -79,16 +79,16 @@
           "summary": "We identify and characterize quantum light sources for quantum communication and computing, focusing on nonclassical photon properties and two-dimensional materials.",
           "image": "assets/research/quantum-light-platforms.webp",
           "imageAlt": "Quantum light sources — conceptual diagram",
-          "schematic": "assets/research/topic-quantum-light.svg",
-          "schematicAlt": "A moiré-localized emitter and a WSe₂ nanodot coupled to an optical waveguide.",
+          "schematic": "assets/research/quantum-light-wse2-emitter-parto-2021.png",
+          "schematicAlt": "WSe₂ monolayer strained over a silica nanopillar to form a localized single-photon emitter; an illustrative crop from Parto et al. (2021).",
           "focus": [
             "Single-photon sources",
             "Moiré emitters",
             "WSe₂ nanodots",
             "Superradiance"
           ],
-          "schematicWidth": 600,
-          "schematicHeight": 400,
+          "schematicWidth": 820,
+          "schematicHeight": 453,
           "detailSections": [
             {
               "title": "Quantum properties of light",
@@ -110,7 +110,15 @@
                 }
               ]
             }
-          ]
+          ],
+          "schematicCredit": {
+            "source": "assets/research/quantum-light-wse2-emitter-parto-2021.png",
+            "text": "Parto et al. (2021)",
+            "url": "https://doi.org/10.1038/s41467-021-23709-5",
+            "license": "CC BY 4.0",
+            "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+            "note": "Fig. 1b, cropped"
+          }
         },
         {
           "id": "spdc",
