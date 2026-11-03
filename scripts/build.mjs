@@ -1,4 +1,4 @@
-import {readFile,writeFile,mkdir,cp} from 'node:fs/promises';
+import {readFile,writeFile,mkdir,cp,unlink} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -28,6 +28,14 @@ for(const post of data.news){
  }
 }
 for(const item of ['styles.css','app.js','renderer.js','assets','content','admin']) await cp(path.join(root,item),path.join(output,item),{recursive:true});
+const buildSHA=String(process.env.GITHUB_SHA||'').trim().toLowerCase();
+const revisionPath=path.join(output,'content/revision.json');
+if(/^[a-f0-9]{40}$/.test(buildSHA)){
+ const contentSha256=createHash('sha256').update(await readFile(path.join(output,'content/site.json'))).digest('hex');
+ await writeFile(revisionPath,JSON.stringify({version:1,sha:buildSHA,contentSha256})+'\n');
+}else{
+ try{await unlink(revisionPath);}catch(error){if(error.code!=='ENOENT')throw error;}
+}
 await writeFile(path.join(output,'app.js'),appSource);
 const adminEditorVersion=createHash('sha256').update(await readFile(path.join(root,'admin/editor.js'))).digest('hex').slice(0,12);
 const adminStyleVersion=createHash('sha256').update(await readFile(path.join(root,'admin/editor.css'))).digest('hex').slice(0,12);
