@@ -241,9 +241,9 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 .site-header{border-bottom:0}
 .site-header .container{max-width:var(--page-width)}
 .header-inner{min-height:122px;gap:68px;flex-wrap:nowrap}
-.brand{font-family:var(--sans);font-size:20px;font-weight:550;letter-spacing:-.012em;line-height:1.6;text-align:center;min-width:230px;white-space:normal;color:#757575;padding-block:4px;overflow:visible}
+.brand{font-family:Quicksand,var(--sans);font-size:20px;font-weight:700;letter-spacing:normal;line-height:1.6;text-align:center;min-width:230px;white-space:normal;color:#757575;padding-block:4px;overflow:visible}
 .brand span,.brand small{display:block}
-.brand small{font-size:20px;font-weight:550;margin-top:1px;line-height:1.6}
+.brand small{font-size:20px;font-weight:inherit;margin-top:1px;line-height:1.6}
 #main-nav{display:flex;gap:48px;align-items:center;justify-content:flex-end;flex:1;padding:0}
 #main-nav .nav-item{position:relative}
 #main-nav .nav-item>a{font-family:Quicksand,var(--sans);font-size:18px;font-weight:700;color:#0d0d0d;letter-spacing:normal;line-height:1.65;white-space:nowrap;min-height:44px;padding:4px 0;overflow:visible}
