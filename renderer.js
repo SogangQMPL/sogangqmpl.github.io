@@ -90,6 +90,11 @@ function publicationCitation(value) {
  const name=at<0?text:text.slice(0,at),details=at<0?'':text.slice(at);
  return `<span class="journal-name">${e(name)}</span>${details?`<span class="citation-details">${e(details)}</span>`:''}`;
 }
+export function publicationTitle(paper, displayTitle = paper.title) {
+ const title=String(displayTitle||''),segments=paper.titleSegments;
+ if(title!==paper.title||!Array.isArray(segments)||!segments.length||segments.some(run=>!run||typeof run.text!=='string'||(run.italic!==undefined&&typeof run.italic!=='boolean'))||segments.map(run=>run.text).join('')!==title)return e(title);
+ return segments.map(run=>run.italic?`<em>${e(run.text)}</em>`:e(run.text)).join('');
+}
 function pubEntry(p,number,compact=false,edit) {
  const path=edit.path('publications',p);
  const image=!compact&&safeURL(p.image),label=p.imageLabel||'Research figure';
@@ -100,7 +105,7 @@ function pubEntry(p,number,compact=false,edit) {
  return `<article class="publication${compact?' publication-short':' publication-illustrated'+(image?' has-figure':'')}" data-year="${e(p.year)}" data-search="${e([p.title,p.authors,p.journal,p.doi].join(' '))}"${edit.item(path,'논문')}>
    ${compact?'':`<span class="pub-index">${number}.</span>`}
    ${figure}
-   <div class="pub-content"><h3${edit(path+'/title','text','논문 제목',{urlPath:path+'/url',doiPath:path+'/doi'})}>${external(p.url||(p.doi?'https://doi.org/'+p.doi:''),e(p.title))}</h3>
+   <div class="pub-content"><h3${edit(path+'/title','publication-title','논문 제목',{segmentsPath:path+'/titleSegments',urlPath:path+'/url',doiPath:path+'/doi'})}>${external(p.url||(p.doi?'https://doi.org/'+p.doi:''),publicationTitle(p))}</h3>
    <p class="authors"${edit(path+'/authors','multiline','논문 저자',{labAuthorsPath:path+'/labAuthors'})}>${publicationAuthors(p)}</p>
    <p class="pub-journal"${edit(path+'/journal','text','학술지 · 권 · 페이지')}>${publicationCitation(p.journal)}</p></div>
  </article>`;
@@ -220,7 +225,7 @@ function researchPage(data,page,edit) {
    return `<article class="research-topic" id="${e(t.id)}"${edit.item(path,'하위 연구 주제')}><header class="topic-heading"><span class="topic-number" aria-hidden="true">${groupIndex+1}.${topicIndex+1}</span><h3${edit(path+'/title','text','하위 연구 주제명')}>${e(t.title)}</h3></header>
      <div class="topic-layout${schematic?'':' topic-text-only'}">${schematic?`<figure class="topic-schematic"><a href="${e(schematic)}" target="_blank" rel="noopener noreferrer" aria-label="Open schematic — ${e(t.title)} (opens in a new tab)"><img src="${e(schematic)}" alt="${e(t.schematicAlt||t.imageAlt||t.title)}"${schematicSize} loading="lazy"${edit(path+(safeURL(t.schematic)?'/schematic':'/image'),'image','연구 주제 도식',{altPath:path+(safeURL(t.schematic)?'/schematicAlt':'/imageAlt'),...(safeURL(t.schematic)?{widthPath:path+'/schematicWidth',heightPath:path+'/schematicHeight'}:{})})}></a></figure>`:''}
      <div class="topic-body">${t.focus?.length?`<ul class="topic-focus" aria-label="Research focus"${edit(path+'/focus','list','연구 초점')}>${t.focus.map(f=>`<li>${e(f)}</li>`).join('')}</ul>`:''}${summary?`<p class="topic-summary"${edit(path+(t.summary?'/summary':'/description'),'multiline','연구 주제 소개')}>${e(summary)}</p>`:''}
-     ${papers.length?`<div class="topic-evidence"><p class="result-label"${edit(path+'/paperIds','relation','관련 논문 연결',{collection:'/publications'})}>Related papers</p><ul class="result-list">${papers.map(paper=>{const paperPath=edit.path('publications',paper),outcomeIndex=(t.outcomes||[]).findLastIndex(outcome=>outcome.paperIds?.length===1&&outcome.paperIds[0]===paper.id),titlePath=outcomeIndex>=0?path+'/outcomes/'+outcomeIndex+'/title':paperPath+'/title';return `<li data-paper-id="${e(paper.id)}">${external(paper.url||(paper.doi?'https://doi.org/'+paper.doi:''),e(shortTitles.get(paper.id)||paper.title),'',edit(titlePath,'text',outcomeIndex>=0?'관련 논문 표시 제목':'논문 제목',{urlPath:paperPath+'/url'}))}<span class="result-citation"${edit(paperPath+(paper.journal?'/journal':'/year'),paper.journal?'text':'number','논문 서지 정보')}>${publicationCitation(paper.journal||paper.year)}</span></li>`;}).join('')}</ul></div>`:''}
+     ${papers.length?`<div class="topic-evidence"><p class="result-label"${edit(path+'/paperIds','relation','관련 논문 연결',{collection:'/publications'})}>Related papers</p><ul class="result-list">${papers.map(paper=>{const paperPath=edit.path('publications',paper),outcomeIndex=(t.outcomes||[]).findLastIndex(outcome=>outcome.paperIds?.length===1&&outcome.paperIds[0]===paper.id),titlePath=outcomeIndex>=0?path+'/outcomes/'+outcomeIndex+'/title':paperPath+'/title';return `<li data-paper-id="${e(paper.id)}">${external(paper.url||(paper.doi?'https://doi.org/'+paper.doi:''),publicationTitle(paper,shortTitles.get(paper.id)||paper.title),'',edit(titlePath,outcomeIndex>=0?'text':'publication-title',outcomeIndex>=0?'관련 논문 표시 제목':'논문 제목',{urlPath:paperPath+'/url',segmentsPath:paperPath+'/titleSegments'}))}<span class="result-citation"${edit(paperPath+(paper.journal?'/journal':'/year'),paper.journal?'text':'number','논문 서지 정보')}>${publicationCitation(paper.journal||paper.year)}</span></li>`;}).join('')}</ul></div>`:''}
      </div></div>${detailContent?`<details class="topic-more"><summary aria-label="Research details — ${e(t.title)}"><span class="topic-more-label">Research details</span><span class="topic-more-icon" aria-hidden="true"></span></summary><div class="topic-more-content"${edit.collection(path+'/detailSections','연구 상세 설명')}>${detailContent}</div></details>`:''}
    </article>`;
  };
@@ -251,7 +256,7 @@ function studentsPage(data,page,edit) {
  return `<main id="main" tabindex="-1" class="container page-layout interior">${pageIntro('Students','')}${memberNavigation('students')}<section class="students-list"${edit.collection('/people','학생')}>${members.map(p=>personCard(p,false,edit)).join('')}</section></main>`;
 }
 function publicationsPage(data,page,edit) {
- const underReview=data.underReview?.length?`<section class="under-review" aria-labelledby="under-review-heading"${edit.collection('/underReview','심사 중 논문')}><h2 id="under-review-heading">Under review</h2>${data.underReview.map(p=>{const path=edit.path('underReview',p);return `<article class="under-review-entry" data-manuscript-id="${e(p.id)}"${edit.item(path,'심사 중 논문')}><div class="pub-content"><h3${edit(path+'/title','text','원고 제목',{urlPath:path+'/url'})}>${safeURL(p.url)?external(p.url,e(p.title)):e(p.title)}</h3><p class="authors"${edit(path+'/authors','multiline','원고 저자',{labAuthorsPath:path+'/labAuthors'})}>${publicationAuthors(p)}</p></div></article>`;}).join('')}</section>`:'';
+ const underReview=data.underReview?.length?`<section class="under-review" aria-labelledby="under-review-heading"${edit.collection('/underReview','심사 중 논문')}><h2 id="under-review-heading">Under review</h2>${data.underReview.map(p=>{const path=edit.path('underReview',p);return `<article class="under-review-entry" data-manuscript-id="${e(p.id)}"${edit.item(path,'심사 중 논문')}><div class="pub-content"><h3${edit(path+'/title','publication-title','원고 제목',{segmentsPath:path+'/titleSegments',urlPath:path+'/url'})}>${safeURL(p.url)?external(p.url,publicationTitle(p)):publicationTitle(p)}</h3><p class="authors"${edit(path+'/authors','multiline','원고 저자',{labAuthorsPath:path+'/labAuthors'})}>${publicationAuthors(p)}</p></div></article>`;}).join('')}</section>`:'';
  const pubs=sortedPublications(data), periods=data.publicationYearGroups||[], years=[...new Set(pubs.map(p=>publicationYearGroup(p.year,periods)))];
  const groups=new Map(years.map(year=>[year,[]]));
  pubs.forEach(paper=>groups.get(publicationYearGroup(paper.year,periods)).push(paper));
