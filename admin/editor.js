@@ -21,7 +21,7 @@
     announcement: [ ['enabled', '홈 상단 공지 표시', 'checkbox', true], ['title', '공지 제목', 'text', true], ['body', '공지 내용', 'textarea', true], ['url', '공지 링크', 'noticeurl', true, '예: join.html 또는 https://로 시작하는 주소. 링크가 필요 없으면 비워 두세요.'] ],
     hero: [ ['title', '메인 랩 이름', 'textarea', true, '줄바꿈한 모양대로 큰 제목에 표시됩니다. 예: Quantum / Materials & Photonics / Lab을 세 줄로 입력하세요.'], ['image', '메인 대표 그림', 'image', true, '랩 이름 오른쪽에 표시할 그림입니다. 현재 Wix 원본 assets/lab-overview.webp를 사용합니다.'], ['imageAlt', '대표 그림 설명', 'text', true, '그림이 보이지 않을 때 읽을 수 있는 설명입니다.'] ],
     join: [ ['title', '모집 제목', 'text', true], ['description', '모집 안내', 'textarea', true], ['office', '교수실'], ['laboratory', '실험실'] ],
-    news: [ ['date', '날짜', 'text', false, '예: 2026-10-15 또는 2026-10'], ['category', '분류', 'category'], ['title', '게시물 제목', 'text', true, 'Awards는 제목 뒤에 수상자 이름을 붙이고, Conferences는 행사명 뒤에 Poster/Oral Presentation 등 확인된 발표 형식을 붙입니다. 개인 이름과 발표 내용·참석자는 본문에 적어 주세요.'], ['excerpt', '목록 소개 (선택)', 'textarea', true, '비워 두면 게시물 본문 앞부분을 최대 두 문단 자동으로 표시합니다. 목록에 별도 소개를 쓰려면 입력하세요.'], ['body', '이전 본문 (보관)', 'textarea', true, '본문 블록이 없는 이전 게시물에서 사용합니다. 새 게시물의 본문과 사진은 아래 게시물 내용에서 입력하세요.'], ['url', 'Wix 원문 · 출처 주소', 'url', true, '이 주소는 원문 기록용입니다. 방문자는 이 홈페이지 안의 게시물에서 내용을 읽습니다.'], ['image', '목록 대표 사진 주소', 'image', true, 'assets/posts/파일명.jpg 또는 https:// 이미지 주소. 본문 사진은 아래 사진 블록에서 관리합니다.'], ['imageAlt', '대표 사진 설명', 'text', true, '사진에 담긴 활동이나 연구 내용을 짧게 설명해 주세요.'] ],
+    news: [ ['date', '날짜', 'text', false, '예: 2026-10-15 또는 2026-10'], ['category', '분류', 'category'], ['title', '게시물 제목', 'text', true, 'Awards는 제목 뒤에 수상자 이름을 붙이고, Conferences는 행사명 뒤에 Poster/Oral Presentation 등 확인된 발표 형식을 붙입니다. 개인 이름과 발표 내용·참석자는 본문에 적어 주세요.'], ['excerpt', '목록 소개 (선택)', 'textarea', true, '비워 두면 본문 앞부분을 최대 두 문단 표시합니다. Awards는 문장으로 쓰고 **이름**, **상 이름**을 강조하세요. 줄바꿈과 빈 줄로 내용을 나눌 수 있습니다.'], ['body', '이전 본문 (보관)', 'textarea', true, '본문 블록이 없는 이전 게시물에서 사용합니다. 새 게시물의 본문과 사진은 아래 게시물 내용에서 입력하세요.'], ['url', 'Wix 원문 · 출처 주소', 'url', true, '이 주소는 원문 기록용입니다. 방문자는 이 홈페이지 안의 게시물에서 내용을 읽습니다.'], ['image', '목록 대표 사진 주소', 'image', true, 'assets/posts/파일명.jpg 또는 https:// 이미지 주소. 본문 사진은 아래 사진 블록에서 관리합니다.'], ['imageAlt', '대표 사진 설명', 'text', true, '사진에 담긴 활동이나 연구 내용을 짧게 설명해 주세요.'] ],
     publications: [ ['title', '논문 제목', 'text', true], ['authors', '저자', 'textarea', true, '저자 순서대로 쉼표로 구분하세요. 교수님·연구실 구성원은 풀네임으로 작성합니다. 원문에서 확인한 공동 기여 저자는 †, 교신저자는 *를 이름 뒤에 붙이세요. 예: Seongwon Gim†, Hyeonjun Baek*.'], ['labAuthors', '연구실 저자 (굵게·밑줄)', 'ids', true, '이 논문의 교수님·연구실 구성원 이름을 저자 목록과 같은 풀네임으로 쉼표로 구분하세요. 예: Seongwon Gim, Hyeonjun Baek. 공동 기여·교신저자 기호 †와 *는 제외합니다. 이니셜이 같은 외부 연구자는 이름을 임의로 바꾸지 마세요.'], ['journal', '학술지 · 권 · 페이지', 'text', true], ['year', '출판 연도', 'number'], ['doi', 'DOI', 'text', false, '예: 10.1038/… (없으면 비워 두세요)'], ['url', '논문 링크', 'url', true], ['image', '논문 대표 그림', 'image', true, '예: assets/publications/pub-01.jpg. 해당 논문의 visual abstract 또는 구조 그림을 사용합니다.'], ['imageAlt', '그림 설명', 'text', true], ['imageLabel', '그림 이름', 'text', false, '확대창과 출처 기록에 사용하는 이름입니다. 예: Graphical abstract, Figure 1. 목록의 그림 아래에는 표시하지 않습니다.'], ['imageSource', '그림 출처 페이지', 'url', true, '출판사의 해당 논문 또는 그림 페이지 https:// 주소를 입력합니다.'], ['featured', '홈 화면의 대표 논문에 표시', 'checkbox', true] ],
     underReview: [ ['title', '논문 제목', 'text', true], ['authors', '저자', 'textarea', true, '원고에 표기한 이름과 순서를 쉼표로 구분해 입력하세요. 공동 기여는 †, 교신저자는 *를 이름 뒤에 붙이세요. 원고에 확인된 표시만 입력합니다.'], ['labAuthors', '연구실 저자 (굵게·밑줄)', 'ids', true, '저자 목록과 같은 이름으로 입력하세요. 예: Yongju Jeong, Dianne Lee, Hyeonjun Baek. †와 *는 제외합니다. Dianne Lee는 이지현 학생의 원고 표기 이름입니다.'], ['url', '원고 링크 (선택)', 'url', true, '공개 원고나 preprint가 있을 때만 https:// 주소를 입력하세요. 링크가 없으면 비워 둡니다.'] ],
     people: [ ['name', '이름'], ['role', '직위 · 과정', 'role', false, '교수님 분류는 Principal Investigator 값으로 연결됩니다. 기존의 다른 역할도 보존됩니다.'], ['description', '소개', 'textarea', true], ['email', '이메일', 'email'], ['image', '사진 주소', 'image', true, 'assets/파일명.jpg 또는 https:// 이미지 주소. 실제 파일 업로드는 GitHub에서 별도로 해주세요.'], ['url', '개인 홈페이지 링크', 'url', true] ],
@@ -104,7 +104,7 @@
     });
     value.news.forEach((post) => {
       if (post.excerpt !== undefined && typeof post.excerpt !== 'string') throw new Error('목록 소개는 글자로 입력해야 합니다.');
-      if (post.facts !== undefined && (!Array.isArray(post.facts) || post.facts.some((fact) => !fact || typeof fact !== 'object' || Array.isArray(fact) || typeof fact.label !== 'string' || typeof fact.value !== 'string'))) throw new Error('수상 소식 핵심 정보는 글자로 된 label과 value를 담은 목록이어야 합니다.');
+      if (post.facts !== undefined && (!Array.isArray(post.facts) || post.facts.some((fact) => !fact || typeof fact !== 'object' || Array.isArray(fact) || typeof fact.label !== 'string' || typeof fact.value !== 'string'))) throw new Error('보관된 수상 정보는 글자로 된 label과 value를 담은 목록이어야 합니다.');
       if (post.content !== undefined && (!Array.isArray(post.content) || post.content.some((block) => !block || typeof block !== 'object' || Array.isArray(block)))) throw new Error('게시물 content는 문단·사진 블록 목록이어야 합니다.');
       (post.content || []).forEach((block) => {
         if (block.children !== undefined && (!Array.isArray(block.children) || block.children.some((run) => !run || typeof run !== 'object' || Array.isArray(run)))) throw new Error('게시물 문단의 children은 글자·링크 목록이어야 합니다.');
@@ -357,6 +357,25 @@
     if (Array.isArray(value.children)) return value.children.map(blockText).join('');
     return String(value.text || '');
   }
+  function boldEditorText(block) {
+    if (!Array.isArray(block.children)) return String(block.text || '');
+    return block.children.map((run) => { const text = blockText(run); return run.bold && text ? '**' + text + '**' : text; }).join('');
+  }
+  function updateBoldText(block, value) {
+    const runs = []; const pattern = /\*\*([\s\S]+?)\*\*/g;
+    let end = 0; let match;
+    while ((match = pattern.exec(value))) {
+      if (match.index > end) runs.push({ text: value.slice(end, match.index) });
+      runs.push({ text: match[1], bold: true }); end = pattern.lastIndex;
+    }
+    if (end < value.length) runs.push({ text: value.slice(end) });
+    block.text = runs.map((run) => run.text).join('');
+    if (runs.some((run) => run.bold)) block.children = runs;
+    else delete block.children;
+  }
+  function hasAdditionalFormatting(value) {
+    return Boolean(value && typeof value === 'object' && (value.italic || value.url || (value.children || []).some(hasAdditionalFormatting)));
+  }
   function openPost(index, blockIndex) {
     const entry = $('editor').querySelector('details[data-entry-index="' + index + '"]');
     if (!entry) return;
@@ -365,32 +384,9 @@
     if (block) block.open = true;
     (block || entry).querySelector('input,textarea,select')?.focus();
   }
-  function isAwardPost(post) {
-    return String(post.category || '').trim().toLowerCase() === 'awards';
-  }
-  function renderPostFacts(post) {
-    const wrapper = node('details', undefined, 'entry');
-    wrapper.hidden = !isAwardPost(post);
-    wrapper.append(node('summary', '수상 소식 핵심 정보'));
-    const body = node('div', undefined, 'entry-body');
-    body.append(node('p', 'Awards 목록에 표시할 수상자·상명·행사를 입력하세요. 비워 둔 항목은 표시하지 않습니다.', 'panel-note'));
-    const group = node('div', undefined, 'fields');
-    const definitions = [['Recipient', '수상자 (Recipient)'], ['Award', '상명 (Award)'], ['Event', '행사 (Event)']];
-    const labels = definitions.map(([label]) => label);
-    const edit = Object.fromEntries(definitions.map(([label]) => [label, (post.facts || []).find((fact) => fact.label === label)?.value || '']));
-    const updateFacts = () => {
-      const facts = definitions.map(([label]) => ({ label, value: edit[label].trim() })).filter((fact) => fact.value);
-      const extraFacts = (post.facts || []).filter((fact) => !labels.includes(fact.label));
-      if (facts.length || extraFacts.length) post.facts = [...facts, ...extraFacts];
-      else delete post.facts;
-    };
-    definitions.forEach(([label, title]) => renderField(edit, [label, title, 'text', true], group, null, updateFacts));
-    body.append(group); wrapper.append(body);
-    return wrapper;
-  }
   function renderPostContent(post, postIndex, target) {
     const wrapper = node('section', undefined, 'post-content-editor');
-    wrapper.append(node('h3', '게시물 내용', 'group-heading'), node('p', '문단과 사진을 표시할 순서대로 추가하세요. 기존 원문의 강조·링크는 해당 문단을 수정하기 전까지 보존됩니다.', 'panel-note'));
+    wrapper.append(node('h3', '게시물 내용', 'group-heading'), node('p', '문단과 사진을 순서대로 추가하세요. Awards도 수상자·상명·행사를 문장으로 쓰고, **이름**, **상 이름**처럼 굵게 표시하세요.', 'panel-note'));
     const addControls = node('div', undefined, 'block-add-controls');
     const type = node('select'); type.id = 'block-type-' + postIndex;
     const typeLabel = node('label', '추가할 내용'); typeLabel.htmlFor = type.id;
@@ -422,8 +418,9 @@
         renderField(edit, ['text', '목록 항목', 'textarea', true, '한 줄에 한 항목을 입력하세요. 이 목록을 수정하면 항목 안의 강조와 링크는 일반 글자로 바뀝니다.'], group, null, () => { block.items = edit.text.split(/\n/).map((item) => item.trim()).filter(Boolean); updateTitle(); });
         renderField(block, ['ordered', '번호가 있는 목록', 'checkbox', true], group);
       } else if (['paragraph', 'heading', 'quote'].includes(block.type)) {
-        const edit = { text: blockText(block) };
-        renderField(edit, ['text', blockLabels[block.type] + ' 내용', 'textarea', true, block.children?.length ? '이 문단을 수정하면 원문의 강조와 문장 안 링크는 일반 글자로 바뀝니다.' : undefined], group, null, () => { block.text = edit.text; delete block.children; updateTitle(); });
+        const edit = { text: boldEditorText(block) };
+        const hint = '**문구**처럼 별표 두 개로 감싸면 굵게 표시합니다. 줄바꿈과 빈 줄로 내용을 나누세요.' + (hasAdditionalFormatting(block) ? ' 이 내용을 수정하면 기존 기울임과 문장 안 링크는 일반 글자로 바뀝니다.' : '');
+        renderField(edit, ['text', blockLabels[block.type] + ' 내용', 'textarea', true, hint], group, null, () => { updateBoldText(block, edit.text); updateTitle(); });
       } else {
         group.append(node('p', '이 내용은 원문 형식을 보존해 저장합니다. 수정이 필요하면 새 문단이나 사진을 추가해 대체하세요.', 'panel-note'));
       }
@@ -475,13 +472,12 @@
     entries.forEach((item, index) => {
       const entry = node('details', undefined, 'entry'); entry.dataset.entryIndex = String(index);
       const summary = node('summary'); const text = node('div', undefined, 'entry-title'); const meta = node('div', undefined, 'entry-meta');
-      let factsGroup = null;
-      const updateTitle = () => { text.replaceChildren(document.createTextNode(item.title || item.name || '제목 없는 새 항목'), meta); meta.textContent = [item.date || item.year || '', item.category || item.role || ''].filter(Boolean).join(' · '); if (factsGroup) factsGroup.hidden = !isAwardPost(item); };
+      const updateTitle = () => { text.replaceChildren(document.createTextNode(item.title || item.name || '제목 없는 새 항목'), meta); meta.textContent = [item.date || item.year || '', item.category || item.role || ''].filter(Boolean).join(' · '); };
       updateTitle(); summary.append(text); entry.append(summary);
       const body = node('div', undefined, 'entry-body'); const group = node('div', undefined, 'fields');
       fields[current].forEach((field) => renderField(item, field, group, updateTitle)); body.append(group);
       if (current === 'research') renderTopics(item, index, body);
-      if (current === 'news') { factsGroup = renderPostFacts(item); body.append(factsGroup); renderPostContent(item, index, body); }
+      if (current === 'news') renderPostContent(item, index, body);
       const actions = node('div', undefined, 'entry-actions');
       [['↑ 위로', -1], ['↓ 아래로', 1]].forEach(([label, direction]) => {
         const button = node('button', label); button.type = 'button'; button.disabled = index + direction < 0 || index + direction >= entries.length;
