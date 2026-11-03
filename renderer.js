@@ -151,7 +151,7 @@ function researchPage(data) {
   const src=safeURL(image.src);if(!src)return '';
   const fullSrc=safeURL(image.fullSrc)||src;
   const size=Number(image.width)>0&&Number(image.height)>0?` width="${Number(image.width)}" height="${Number(image.height)}"`:'';
-  return `<figure class="research-original-figure"><a href="${e(fullSrc)}" target="_blank" rel="noopener noreferrer" aria-label="Open image — ${e(image.caption||image.alt||'Research diagram')} (opens in a new tab)"><img src="${e(src)}" alt="${e(image.alt||'')}"${size} loading="lazy"></a>${image.caption?`<figcaption>${e(image.caption)}</figcaption>`:''}</figure>`;
+  return `<figure class="research-original-figure"><a href="${e(fullSrc)}" target="_blank" rel="noopener noreferrer" aria-label="Open image — ${e(image.caption||image.alt||'Research diagram')} (opens in a new tab)"><img src="${e(src)}" alt="${e(image.alt||'')}"${size} loading="lazy"></a>${image.caption?`<figcaption${language(image.caption)}>${e(image.caption)}</figcaption>`:''}</figure>`;
  };
  const papersFor=ids=>[...new Set(ids||[])].map(id=>lookup.get(id)).filter(Boolean).sort((a,b)=>Number(b.year)-Number(a.year));
  const topic=(t,groupIndex,topicIndex)=>{
@@ -161,11 +161,17 @@ function researchPage(data) {
    const schematic=safeURL(t.schematic)||safeURL(t.image);
    const schematicSize=Number(t.schematicWidth)>0&&Number(t.schematicHeight)>0?` width="${Number(t.schematicWidth)}" height="${Number(t.schematicHeight)}"`:'';
    const detailImages=Array.isArray(t.detailImages)?t.detailImages:(t.image?[{src:t.image,alt:t.imageAlt||t.title}]:[]);
+   const sections=Array.isArray(t.detailSections)?t.detailSections.filter(section=>section&&(section.title?.trim()||section.body?.trim()||section.images?.length)):null;
+   const detailContent=sections?sections.map((section,index)=>{
+    const images=Array.isArray(section.images)?section.images:[],wide=images.some(image=>Number(image.width)/Number(image.height)>2.4),heading=section.title?.trim()||'';
+    const titleID=`${t.id}-detail-${index+1}`;
+    return `<section class="research-detail-section${images.length?' has-detail-figures':''}${wide?' wide-detail-figure':''}"${heading?` aria-labelledby="${e(titleID)}"`:''}><div class="research-detail-copy">${heading?`<h4 id="${e(titleID)}"${language(heading)}>${e(heading)}</h4>`:''}${paragraphs(section.body)}</div>${images.length?`<div class="research-detail-media">${images.map(originalFigure).join('')}</div>`:''}</section>`;
+   }).join(''):paragraphs(description)+detailImages.map(originalFigure).join('');
    return `<article class="research-topic" id="${e(t.id)}"><header class="topic-heading"><span class="topic-number" aria-hidden="true">${groupIndex+1}.${topicIndex+1}</span><h3>${e(t.title)}</h3></header>
      <div class="topic-layout${schematic?'':' topic-text-only'}">${schematic?`<figure class="topic-schematic"><a href="${e(schematic)}" target="_blank" rel="noopener noreferrer" aria-label="Open schematic — ${e(t.title)} (opens in a new tab)"><img src="${e(schematic)}" alt="${e(t.schematicAlt||t.imageAlt||t.title)}"${schematicSize} loading="lazy"></a></figure>`:''}
      <div class="topic-body">${t.focus?.length?`<ul class="topic-focus" aria-label="Research focus">${t.focus.map(f=>`<li>${e(f)}</li>`).join('')}</ul>`:''}${summary?`<p class="topic-summary">${e(summary)}</p>`:''}
      ${papers.length?`<div class="topic-evidence"><p class="result-label">Related papers</p><ul class="result-list">${papers.map(paper=>`<li data-paper-id="${e(paper.id)}">${external(paper.url||(paper.doi?'https://doi.org/'+paper.doi:''),e(shortTitles.get(paper.id)||paper.title))}<span class="result-citation">${publicationCitation(paper.journal||paper.year)}</span></li>`).join('')}</ul></div>`:''}
-     ${description||detailImages.length?`<details class="topic-more"><summary aria-label="DETAIL — ${e(t.title)}"><span class="topic-more-label">DETAIL</span><span class="topic-more-icon" aria-hidden="true"></span></summary><div class="topic-more-content">${paragraphs(description)}${detailImages.map(originalFigure).join('')}</div></details>`:''}</div></div>
+     </div></div>${detailContent?`<details class="topic-more"><summary aria-label="Research details — ${e(t.title)}"><span class="topic-more-label">Research details</span><span class="topic-more-icon" aria-hidden="true"></span></summary><div class="topic-more-content">${detailContent}</div></details>`:''}
    </article>`;
  };
  return `<main id="main" tabindex="-1" class="container page-layout research-page">${pageIntro('Research','')}

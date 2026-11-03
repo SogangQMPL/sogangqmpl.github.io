@@ -26,7 +26,7 @@
     underReview: [ ['title', '논문 제목', 'text', true], ['authors', '저자', 'textarea', true, '원고에 표기한 이름과 순서를 쉼표로 구분해 입력하세요. 공동 기여는 †, 교신저자는 *를 이름 뒤에 붙이세요. 원고에 확인된 표시만 입력합니다.'], ['labAuthors', '연구실 저자 (굵게·밑줄)', 'ids', true, '저자 목록과 같은 이름으로 입력하세요. 예: Yongju Jeong, Dianne Lee, Hyeonjun Baek. †와 *는 제외합니다. Dianne Lee는 이지현 학생의 원고 표기 이름입니다.'], ['url', '원고 링크 (선택)', 'url', true, '공개 원고나 preprint가 있을 때만 https:// 주소를 입력하세요. 링크가 없으면 비워 둡니다.'] ],
     people: [ ['name', '이름'], ['role', '직위 · 과정', 'role', false, '교수님 분류는 Principal Investigator 값으로 연결됩니다. 기존의 다른 역할도 보존됩니다.'], ['description', '소개', 'textarea', true], ['email', '이메일', 'email'], ['image', '사진 주소', 'image', true, 'assets/파일명.jpg 또는 https:// 이미지 주소. 실제 파일 업로드는 GitHub에서 별도로 해주세요.'], ['url', '개인 홈페이지 링크', 'url', true] ],
     research: [ ['title', '연구 분야명', 'text', true], ['icon', '분야 아이콘', 'image', true, '상단 목차와 분야 제목에 함께 표시합니다. 예: assets/research/area-quantum.svg'], ['kicker', '작은 제목'], ['summary', '짧은 소개', 'textarea', true], ['description', '자세한 소개', 'textarea', true], ['image', '분야 개념도 (Research map)', 'image', true, '하단 Research map을 펼쳤을 때 표시하는 분야 그림입니다. assets/파일명.svg 또는 https:// 이미지 주소를 입력하세요.'], ['imageAlt', '그림 설명', 'text', true, '그림이 보이지 않을 때 읽을 수 있는 설명입니다.'], ['paperIds', '원본 분야별 논문 ID (보관)', 'ids', true, '원본 분야 연결 기록입니다. 공개 화면의 논문 목록은 아래 각 하위 주제의 관련 논문 ID에서 관리하세요.'] ],
-    topic: [ ['title', '하위 주제명', 'text', true], ['summary', '짧은 소개', 'textarea', true, '기본 화면에 표시하는 한 문장입니다. 연구 목표와 방법만 간결하게 입력하세요.'], ['focus', '연구 초점', 'ids', true, '세부 주제의 설명 위에 표시할 연구 항목을 쉼표로 구분하세요. Single-photon sources·SPDC 등 기존 10개 항목을 유지하고 일반적인 방법론 키워드는 줄여 주세요.'], ['schematic', '기본 schematic', 'image', true, '세부 주제에서 항상 보이는 도식입니다. 예: assets/research/topic-moire.svg'], ['schematicAlt', 'Schematic 설명', 'text', true, '그림의 물리적 개념을 짧게 설명해 주세요.'], ['description', '자세한 설명', 'textarea', true, 'DETAIL을 펼쳤을 때 표시합니다.'], ['image', '원본 자료 그림', 'image', true, 'DETAIL 그림 목록이 없는 기존 항목에서만 사용합니다. 아래 목록을 모두 지우면 DETAIL에 그림을 표시하지 않습니다. 여러 그림은 아래 목록에서 관리하세요.'], ['imageAlt', '그림 설명', 'text', true], ['paperIds', '관련 논문 ID', 'ids', true, '이 세부 주제의 Related papers에 표시합니다. 예: pub-02, pub-03. 관련 게재 논문이 없으면 비워 두세요.'], ['status', '연구 상태', 'text', false, '진행 중은 Research direction, 관련 논문이 있으면 Published research를 사용하세요. 기존 값을 확인하고 수정하세요.'], ['source', '원문 출처', 'url', true] ]
+    topic: [ ['title', '하위 주제명', 'text', true], ['summary', '짧은 소개', 'textarea', true, '기본 화면에 표시하는 한 문장입니다. 연구 목표와 방법만 간결하게 입력하세요.'], ['focus', '연구 초점', 'ids', true, '세부 주제의 설명 위에 표시할 연구 항목을 쉼표로 구분하세요. Single-photon sources·SPDC 등 기존 10개 항목을 유지하고 일반적인 방법론 키워드는 줄여 주세요.'], ['schematic', '기본 schematic', 'image', true, '세부 주제에서 항상 보이는 도식입니다. 예: assets/research/topic-moire.svg'], ['schematicAlt', 'Schematic 설명', 'text', true, '그림의 물리적 개념을 짧게 설명해 주세요.'], ['description', '상세 설명', 'textarea', true, '연구 상세 내용을 펼쳤을 때 표시합니다.'], ['image', '원본 자료 그림', 'image', true, '상세 그림 목록이 없는 이전 형식에서 사용합니다. 아래 목록을 모두 지우면 상세 그림을 표시하지 않습니다. 여러 그림은 아래 목록에서 관리하세요.'], ['imageAlt', '그림 설명', 'text', true], ['paperIds', '관련 논문 ID', 'ids', true, '이 세부 주제의 Related papers에 표시합니다. 예: pub-02, pub-03. 관련 게재 논문이 없으면 비워 두세요.'], ['status', '연구 상태', 'text', false, '진행 중은 Research direction, 관련 논문이 있으면 Published research를 사용하세요. 기존 값을 확인하고 수정하세요.'], ['source', '원문 출처', 'url', true] ]
   };
   let data = null;
   let current = 'basic';
@@ -77,6 +77,13 @@
       if (paper.authors !== undefined && typeof paper.authors !== 'string') throw new Error('심사 중 논문의 저자는 쉼표로 구분한 글자로 입력해야 합니다.');
       if (paper.authorAliases !== undefined && (!paper.authorAliases || typeof paper.authorAliases !== 'object' || Array.isArray(paper.authorAliases) || Object.values(paper.authorAliases).some((alias) => typeof alias !== 'string'))) throw new Error('심사 중 논문의 저자 별칭은 이름과 식별자를 연결한 객체여야 합니다.');
     });
+    function researchImageShape(images) {
+      if (!Array.isArray(images) || images.some((image) => !image || typeof image !== 'object' || Array.isArray(image))) throw new Error('상세 그림은 그림 항목을 담은 목록이어야 합니다.');
+      images.forEach((image) => {
+        if (['src', 'fullSrc', 'alt', 'caption', 'sourceURL', 'source'].some((field) => image[field] !== undefined && typeof image[field] !== 'string')) throw new Error('상세 그림의 주소와 설명은 글자로 입력해야 합니다.');
+        if (['width', 'height'].some((field) => image[field] !== undefined && (typeof image[field] !== 'number' || !Number.isFinite(image[field]) || image[field] <= 0))) throw new Error('상세 그림의 가로·세로 크기는 0보다 큰 숫자여야 합니다.');
+      });
+    }
     value.research.forEach((category) => {
       if (category.paperIds !== undefined && !Array.isArray(category.paperIds)) throw new Error('연구 주제의 paperIds는 논문 ID 목록이어야 합니다.');
       if (category.topics !== undefined && (!Array.isArray(category.topics) || category.topics.some((topic) => !topic || typeof topic !== 'object' || Array.isArray(topic)))) throw new Error('연구 주제의 topics는 하위 주제 목록이어야 합니다.');
@@ -85,10 +92,14 @@
         ids.add(topic.id);
         if (topic.paperIds !== undefined && !Array.isArray(topic.paperIds)) throw new Error('하위 주제의 paperIds는 논문 ID 목록이어야 합니다.');
         if (topic.focus !== undefined && (!Array.isArray(topic.focus) || topic.focus.some((label) => typeof label !== 'string'))) throw new Error('연구 초점은 짧은 키워드 목록이어야 합니다.');
-        if (topic.detailImages !== undefined && (!Array.isArray(topic.detailImages) || topic.detailImages.some((image) => !image || typeof image !== 'object' || Array.isArray(image)))) throw new Error('DETAIL 그림은 그림 항목을 담은 목록이어야 합니다.');
-        (topic.detailImages || []).forEach((image) => {
-          if (['src', 'fullSrc', 'alt', 'caption'].some((field) => image[field] !== undefined && typeof image[field] !== 'string')) throw new Error('DETAIL 그림의 주소와 설명은 글자로 입력해야 합니다.');
-        });
+        if (topic.detailImages !== undefined) researchImageShape(topic.detailImages);
+        if (topic.detailSections !== undefined) {
+          if (!Array.isArray(topic.detailSections) || topic.detailSections.some((section) => !section || typeof section !== 'object' || Array.isArray(section))) throw new Error('상세 설명은 제목·본문·그림을 담은 설명 목록이어야 합니다.');
+          topic.detailSections.forEach((section) => {
+            if (typeof section.title !== 'string' || typeof section.body !== 'string') throw new Error('상세 설명의 제목과 본문은 글자로 입력해야 합니다.');
+            researchImageShape(section.images);
+          });
+        }
       });
     });
     value.news.forEach((post) => {
@@ -183,31 +194,40 @@
     const topic = topicIndex === undefined ? null : category.querySelector('details[data-topic-index="' + topicIndex + '"]');
     if (topic) topic.open = true;
     (topic || category).querySelector('input,textarea,select')?.focus();
+    return topic || category;
   }
   const researchImageFields = [
     ['src', '그림 파일 주소', 'image', true, 'assets/research/파일명.webp 또는 https:// 이미지 주소를 입력하세요. 파일 업로드는 GitHub에서 따로 진행합니다.'],
     ['fullSrc', '고해상도 원본 주소 (선택)', 'image', true, '별도 원본 파일이 있으면 입력하세요. 비워 두면 위 그림 파일을 확대합니다.'],
     ['alt', '그림 설명', 'text', true, '그림이 보이지 않을 때도 내용을 이해할 수 있도록 설명해 주세요.'],
-    ['caption', '그림 아래 설명 (선택)', 'textarea', true]
+    ['caption', '그림 아래 설명 (선택)', 'textarea', true],
+    ['sourceURL', '자료 출처 주소 (선택)', 'url', true, '원본 자료를 확인할 수 있는 https:// 주소를 입력하세요.']
   ];
-  function openResearchImage(categoryIndex, topicIndex, imageIndex) {
-    openResearch(categoryIndex, topicIndex);
-    const topic = $('editor').querySelector('details[data-entry-index="' + categoryIndex + '"] details[data-topic-index="' + topicIndex + '"]');
-    const entry = topic?.querySelector('details[data-research-image-index="' + imageIndex + '"]');
+  function openResearchSection(categoryIndex, topicIndex, sectionIndex) {
+    const topic = openResearch(categoryIndex, topicIndex);
+    const section = topic?.querySelector('details[data-detail-section-index="' + sectionIndex + '"]');
+    if (section) { section.open = true; section.querySelector('input,textarea')?.focus(); }
+    return section || topic;
+  }
+  function openResearchImage(categoryIndex, topicIndex, imageIndex, sectionIndex) {
+    const container = sectionIndex === undefined ? openResearch(categoryIndex, topicIndex) : openResearchSection(categoryIndex, topicIndex, sectionIndex);
+    const entry = container?.querySelector('details[data-research-image-index="' + imageIndex + '"]');
     if (entry) { entry.open = true; entry.querySelector('input,textarea')?.focus(); }
   }
-  function renderResearchImages(topic, categoryIndex, topicIndex, target) {
+  function renderResearchImages(owner, categoryIndex, topicIndex, target, sectionIndex) {
+    const imagesKey = sectionIndex === undefined ? 'detailImages' : 'images';
     const wrapper = node('section', undefined, 'post-content-editor');
-    wrapper.append(node('h4', 'DETAIL 그림', 'group-heading'), node('p', '그림을 원문 순서대로 추가하세요. 이 목록이 있으면 위의 원본 자료 그림 대신 목록의 그림들이 DETAIL에 표시됩니다. 목록이 비면 기본 원본 그림을 사용합니다.', 'panel-note'));
-    const add = node('button', '+ DETAIL 그림 추가'); add.type = 'button';
+    wrapper.append(node('h4', '상세 그림', 'group-heading'), node('p', sectionIndex === undefined ? '그림을 표시할 순서대로 추가하세요. 이 목록이 있으면 원본 자료 그림 대신 사용하며, 목록을 비우면 상세 그림을 표시하지 않습니다.' : '이 설명에 해당하는 그림을 표시할 순서대로 추가하세요.', 'panel-note'));
+    const add = node('button', '+ 상세 그림 추가'); add.type = 'button';
     add.addEventListener('click', () => {
       remember();
-      if (!topic.detailImages) topic.detailImages = [];
-      topic.detailImages.push({ src: '', alt: '', caption: '' });
-      changed(); render(); openResearchImage(categoryIndex, topicIndex, topic.detailImages.length - 1);
+      if (!owner[imagesKey]) owner[imagesKey] = [];
+      owner[imagesKey].push({ src: '', alt: '', caption: '' });
+      changed(); render(); openResearchImage(categoryIndex, topicIndex, owner[imagesKey].length - 1, sectionIndex);
     });
     wrapper.append(add);
-    (topic.detailImages || []).forEach((image, imageIndex) => {
+    const images = owner[imagesKey] || [];
+    images.forEach((image, imageIndex) => {
       const entry = node('details', undefined, 'entry content-block'); entry.dataset.researchImageIndex = String(imageIndex);
       const summary = node('summary'); const title = node('div', undefined, 'entry-title');
       const updateTitle = () => { title.textContent = (imageIndex + 1) + '. ' + String(image.caption || image.alt || image.src || '그림 주소를 입력하세요').slice(0, 90); };
@@ -224,7 +244,7 @@
       researchImageFields.forEach((field) => renderField(image, field, group, null, (key, value) => {
         if (key === 'src' && value !== previousSrc) {
           ['width', 'height', 'source', 'sourceURL', 'fullSrc'].forEach((metadata) => delete image[metadata]);
-          const fullSrcInput = group.querySelector('[data-field="fullSrc"]'); if (fullSrcInput) fullSrcInput.value = '';
+          ['fullSrc', 'sourceURL'].forEach((field) => { const input = group.querySelector('[data-field="' + field + '"]'); if (input) input.value = ''; });
           previousSrc = value;
         }
         updateTitle(); updateImage();
@@ -232,14 +252,60 @@
       updateImage(); body.append(preview, group);
       const actions = node('div', undefined, 'entry-actions');
       [['↑ 위로', -1], ['↓ 아래로', 1]].forEach(([label, direction]) => {
-        const button = node('button', label); button.type = 'button'; button.disabled = imageIndex + direction < 0 || imageIndex + direction >= topic.detailImages.length;
-        button.setAttribute('aria-label', 'DETAIL 그림 ' + (imageIndex + 1) + ' ' + label);
-        button.addEventListener('click', () => { remember(); [topic.detailImages[imageIndex], topic.detailImages[imageIndex + direction]] = [topic.detailImages[imageIndex + direction], topic.detailImages[imageIndex]]; changed(); render(); openResearchImage(categoryIndex, topicIndex, imageIndex + direction); });
+        const button = node('button', label); button.type = 'button'; button.disabled = imageIndex + direction < 0 || imageIndex + direction >= images.length;
+        button.setAttribute('aria-label', '상세 그림 ' + (imageIndex + 1) + ' ' + label);
+        button.addEventListener('click', () => { remember(); [images[imageIndex], images[imageIndex + direction]] = [images[imageIndex + direction], images[imageIndex]]; changed(); render(); openResearchImage(categoryIndex, topicIndex, imageIndex + direction, sectionIndex); });
         actions.append(button);
       });
       const remove = node('button', '그림 삭제', 'danger'); remove.type = 'button';
-      remove.addEventListener('click', () => { remember(); topic.detailImages.splice(imageIndex, 1); changed(); render(); openResearch(categoryIndex, topicIndex); status('DETAIL 그림을 삭제했습니다. 되돌리기로 복구할 수 있습니다.'); });
+      remove.addEventListener('click', () => {
+        remember(); images.splice(imageIndex, 1); changed(); render();
+        if (images.length) openResearchImage(categoryIndex, topicIndex, Math.min(imageIndex, images.length - 1), sectionIndex);
+        else if (sectionIndex !== undefined) openResearchSection(categoryIndex, topicIndex, sectionIndex);
+        else openResearch(categoryIndex, topicIndex);
+        status('상세 그림을 삭제했습니다. 되돌리기로 복구할 수 있습니다.');
+      });
       actions.append(remove); body.append(actions); entry.append(body); wrapper.append(entry);
+    });
+    target.append(wrapper);
+  }
+  function topicFields(topic) {
+    return Array.isArray(topic.detailSections) ? fields.topic.filter(([key]) => !['description', 'image', 'imageAlt'].includes(key)) : fields.topic;
+  }
+  function renderResearchSections(topic, categoryIndex, topicIndex, target) {
+    const wrapper = node('section', undefined, 'post-content-editor');
+    wrapper.append(node('h4', '상세 설명', 'group-heading'), node('p', '설명별로 제목·본문·그림을 묶어 입력하세요. 도입 설명은 제목을 비워 둘 수 있습니다.', 'panel-note'));
+    const add = node('button', '+ 상세 설명 추가'); add.type = 'button';
+    add.addEventListener('click', () => {
+      remember(); topic.detailSections.push({ title: '', body: '', images: [] });
+      changed(); render(); openResearchSection(categoryIndex, topicIndex, topic.detailSections.length - 1);
+    });
+    wrapper.append(add);
+    topic.detailSections.forEach((section, sectionIndex) => {
+      const entry = node('details', undefined, 'entry content-block'); entry.dataset.detailSectionIndex = String(sectionIndex);
+      const summary = node('summary'); const title = node('div', undefined, 'entry-title');
+      const updateTitle = () => { title.textContent = (sectionIndex + 1) + '. ' + String(section.title.trim() || section.body.trim() || '새 상세 설명').slice(0, 90); };
+      updateTitle(); summary.append(title); entry.append(summary);
+      const body = node('div', undefined, 'entry-body'); const group = node('div', undefined, 'fields');
+      [['title', '설명 제목 (선택)', 'text', true], ['body', '설명 본문', 'textarea', true, '빈 줄로 문단을 나눌 수 있습니다.']].forEach((field) => renderField(section, field, group, null, updateTitle));
+      body.append(group); renderResearchImages(section, categoryIndex, topicIndex, body, sectionIndex);
+      const actions = node('div', undefined, 'entry-actions');
+      [['↑ 위로', -1], ['↓ 아래로', 1]].forEach(([label, direction]) => {
+        const button = node('button', label); button.type = 'button'; button.disabled = sectionIndex + direction < 0 || sectionIndex + direction >= topic.detailSections.length;
+        button.setAttribute('aria-label', '상세 설명 ' + (sectionIndex + 1) + ' ' + label);
+        button.addEventListener('click', () => {
+          remember(); [topic.detailSections[sectionIndex], topic.detailSections[sectionIndex + direction]] = [topic.detailSections[sectionIndex + direction], topic.detailSections[sectionIndex]];
+          changed(); render(); openResearchSection(categoryIndex, topicIndex, sectionIndex + direction);
+        }); actions.append(button);
+      });
+      const remove = node('button', '설명 삭제', 'danger'); remove.type = 'button';
+      remove.addEventListener('click', () => {
+        remember(); topic.detailSections.splice(sectionIndex, 1); changed(); render();
+        if (topic.detailSections.length) openResearchSection(categoryIndex, topicIndex, Math.min(sectionIndex, topic.detailSections.length - 1));
+        else openResearch(categoryIndex, topicIndex);
+        status('상세 설명을 삭제했습니다. 되돌리기로 복구할 수 있습니다.');
+      }); actions.append(remove);
+      body.append(actions); entry.append(body); wrapper.append(entry);
     });
     target.append(wrapper);
   }
@@ -250,8 +316,8 @@
     add.addEventListener('click', () => {
       remember();
       if (!category.topics) category.topics = [];
-      const topic = { id: 'topic-' + (typeof crypto.randomUUID === 'function' ? crypto.randomUUID() : Date.now().toString(36)) };
-      fields.topic.forEach(([key,,kind]) => topic[key] = kind === 'ids' ? [] : '');
+      const topic = { id: 'topic-' + (typeof crypto.randomUUID === 'function' ? crypto.randomUUID() : Date.now().toString(36)), detailSections: [] };
+      topicFields(topic).forEach(([key,,kind]) => topic[key] = kind === 'ids' ? [] : '');
       category.topics.unshift(topic); changed(); render(); openResearch(categoryIndex, 0);
     });
     wrapper.append(add);
@@ -262,8 +328,9 @@
       const update = () => { title.textContent = topic.title || '제목 없는 하위 주제'; };
       update(); summary.append(title); entry.append(summary);
       const body = node('div', undefined, 'entry-body'); const group = node('div', undefined, 'fields');
-      fields.topic.forEach((field) => renderField(topic, field, group, update)); body.append(group);
-      renderResearchImages(topic, categoryIndex, topicIndex, body);
+      topicFields(topic).forEach((field) => renderField(topic, field, group, update)); body.append(group);
+      if (Array.isArray(topic.detailSections)) renderResearchSections(topic, categoryIndex, topicIndex, body);
+      else renderResearchImages(topic, categoryIndex, topicIndex, body);
       const actions = node('div', undefined, 'entry-actions');
       [['↑ 위로', -1], ['↓ 아래로', 1]].forEach(([label, direction]) => {
         const button = node('button', label); button.type = 'button';
@@ -475,13 +542,19 @@
         if (key === 'research') (item.topics || []).forEach((topic, topicIndex) => {
           const topicContext = { key: 'research', index, topicIndex };
           if (!String(topic.title || '').trim()) errors.push({ ...topicContext, field: 'title', message: '하위 주제명을 입력하거나 빈 하위 주제를 삭제해 주세요.' });
-          checkFields(topic, fields.topic, topicContext);
-          (topic.detailImages || []).forEach((image, imageIndex) => {
-            const imageContext = { ...topicContext, imageIndex };
+          checkFields(topic, topicFields(topic), topicContext);
+          const checkImages = (images, context) => images.forEach((image, imageIndex) => {
+            const imageContext = { ...context, imageIndex };
             checkFields(image, researchImageFields, imageContext);
-            if (!String(image.src || '').trim()) errors.push({ ...imageContext, field: 'src', message: 'DETAIL 그림 파일 주소를 입력하거나 빈 그림 항목을 삭제하세요.' });
-            if (!String(image.alt || '').trim()) errors.push({ ...imageContext, field: 'alt', message: 'DETAIL 그림 설명을 입력하세요.' });
+            if (!String(image.src || '').trim()) errors.push({ ...imageContext, field: 'src', message: '상세 그림 파일 주소를 입력하거나 빈 그림 항목을 삭제하세요.' });
+            if (!String(image.alt || '').trim()) errors.push({ ...imageContext, field: 'alt', message: '상세 그림 설명을 입력하세요.' });
           });
+          if (Array.isArray(topic.detailSections)) topic.detailSections.forEach((section, sectionIndex) => {
+            const sectionContext = { ...topicContext, sectionIndex };
+            if (!section.body.trim() && !section.images.length) errors.push({ ...sectionContext, field: 'body', message: '상세 설명의 본문을 입력하거나 그림을 추가하세요. 빈 설명은 삭제할 수 있습니다.' });
+            checkImages(section.images, sectionContext);
+          });
+          else checkImages(topic.detailImages || [], topicContext);
         });
         if (key === 'news') (item.content || []).forEach((block, blockIndex) => {
           const blockContext = { key: 'news', index, blockIndex };
@@ -503,6 +576,10 @@
         target.open = true;
         if (error.topicIndex !== undefined) {
           target = target.querySelector('details[data-topic-index="' + error.topicIndex + '"]');
+          if (target) target.open = true;
+        }
+        if (error.sectionIndex !== undefined) {
+          target = target?.querySelector('details[data-detail-section-index="' + error.sectionIndex + '"]');
           if (target) target.open = true;
         }
         if (error.blockIndex !== undefined) {

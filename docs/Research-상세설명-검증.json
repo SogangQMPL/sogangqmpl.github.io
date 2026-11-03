@@ -1,0 +1,197 @@
+{
+  "reviewDate": "2026-11-03",
+  "scope": "Five current Wix Research detail pages compared against the local structured detail content.",
+  "disclosureLabel": "Research details",
+  "sourceCoverage": [
+    {
+      "topic": "Quantum light sources",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/quantum-light-sources",
+      "sections": [
+        {
+          "heading": "Quantum properties of light",
+          "figures": []
+        },
+        {
+          "heading": "Quantum-light platforms",
+          "figures": [
+            {
+              "display": "assets/research/quantum-light-platforms.webp",
+              "original": "assets/research/quantum-light-platforms.webp",
+              "sourceURL": "https://static.wixstatic.com/media/631814_a1970aef6dde44e9a8bb2390469bf594~mv2.png"
+            }
+          ]
+        }
+      ],
+      "relatedPaperIds": [
+        "pub-25",
+        "pub-24",
+        "pub-19",
+        "pub-17",
+        "pub-03",
+        "pub-02"
+      ]
+    },
+    {
+      "topic": "SPDC in 2D materials",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/%EB%B3%B5%EC%A0%9C-interlayer-excitons",
+      "sections": [
+        {
+          "heading": "Entangled-photon generation",
+          "figures": []
+        },
+        {
+          "heading": "Twist-angle engineering",
+          "figures": [
+            {
+              "display": "assets/research/spdc-cavity-original-crop.png",
+              "original": "assets/research/spdc-cavity-original-crop.png",
+              "sourceURL": "https://static.wixstatic.com/media/631814_8f01572b063e4cf8a4e9da329c2f8ab2~mv2.jpg"
+            }
+          ]
+        }
+      ],
+      "relatedPaperIds": []
+    },
+    {
+      "topic": "Moiré physics",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/moir%C3%A9-physics",
+      "sections": [
+        {
+          "heading": "Moiré patterns in 2D materials",
+          "figures": [
+            {
+              "display": "assets/research/moire-heterostructure.webp",
+              "original": "assets/research/moire-heterostructure.webp",
+              "sourceURL": "https://static.wixstatic.com/media/631814_9595ddc8c6f74011a632aed3dee4d463~mv2.png"
+            }
+          ]
+        },
+        {
+          "heading": "Moiré-trapped excitons",
+          "figures": [
+            {
+              "display": "assets/research/moire-excitons.webp",
+              "original": "assets/research/moire-excitons.webp",
+              "sourceURL": "https://static.wixstatic.com/media/631814_116a0dc841134f41b130c2dad5e187d4~mv2.png"
+            }
+          ]
+        },
+        {
+          "heading": "Strongly correlated states in moiré heterostructures",
+          "figures": [
+            {
+              "display": "assets/research/moire-correlated-states.webp",
+              "original": "assets/research/moire-correlated-states-original.png",
+              "sourceURL": "https://static.wixstatic.com/media/631814_5147130ec0c1422486b938078cb381c6~mv2.png"
+            }
+          ]
+        }
+      ],
+      "relatedPaperIds": [
+        "pub-13",
+        "pub-11"
+      ]
+    },
+    {
+      "topic": "Interlayer excitons",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/general-1",
+      "sections": [
+        {
+          "heading": "Introduction",
+          "figures": []
+        },
+        {
+          "heading": "Exciton configurations",
+          "figures": [
+            {
+              "display": "assets/research/interlayer-excitons.webp",
+              "original": "assets/research/interlayer-exciton-states-original.jpg",
+              "sourceURL": "https://static.wixstatic.com/media/631814_c5abe2ef9c594649828ec01f86bb8b08~mv2.jpg"
+            }
+          ]
+        },
+        {
+          "heading": "Electric-field control",
+          "figures": [
+            {
+              "display": "assets/research/interlayer-electric-field.webp",
+              "original": "assets/research/interlayer-electric-field-original.jpg",
+              "sourceURL": "https://static.wixstatic.com/media/631814_85d74f9dbeab4dc3bb0faf4fb7aa2b76~mv2.jpg"
+            }
+          ]
+        },
+        {
+          "heading": "Quantum simulator applications",
+          "figures": [
+            {
+              "display": "assets/research/interlayer-trap-potential-original-crop.png",
+              "original": "assets/research/interlayer-trap-potential-original-crop.png",
+              "sourceURL": "https://static.wixstatic.com/media/631814_3a77341769cf4fd3be73d5f0d74cb92a~mv2.jpg"
+            }
+          ]
+        },
+        {
+          "heading": "Exciton-polariton applications",
+          "figures": [
+            {
+              "display": "assets/research/interlayer-polariton.webp",
+              "original": "assets/research/interlayer-polariton-original.jpg",
+              "sourceURL": "https://static.wixstatic.com/media/631814_2aa8a65a12834328913adfdbd4a44027~mv2.jpg"
+            }
+          ]
+        }
+      ],
+      "relatedPaperIds": [
+        "pub-10",
+        "pub-07",
+        "pub-05"
+      ]
+    },
+    {
+      "topic": "2D semiconductor devices",
+      "url": "https://baahyyjuu.wixsite.com/hyeonjun/%EB%B3%B5%EC%A0%9C-spdc",
+      "sections": [
+        {
+          "heading": "Atomically thin channels",
+          "figures": []
+        },
+        {
+          "heading": "Neuromorphic platforms",
+          "figures": []
+        }
+      ],
+      "relatedPaperIds": [
+        "pub-09",
+        "pub-01"
+      ]
+    }
+  ],
+  "editorialRules": [
+    "Preserve all scientific mechanisms and research aims from the Wix pages.",
+    "Use concise subsection headings and pair each illustration with the relevant explanation.",
+    "Describe quantum simulators and polariton applications as research routes, not completed demonstrations.",
+    "Qualify permanent electric dipoles as dipolar interlayer excitons.",
+    "Keep original left representative illustrations out of the expanded detail to avoid duplication."
+  ],
+  "preservation": {
+    "topics": 5,
+    "sections": 14,
+    "detailFigures": 9,
+    "distinctDetailSourceURLs": 9,
+    "nonResearchDataUnchanged": true,
+    "primarySchematicsSummariesFocusAndPapersUnchanged": true,
+    "originalFigureFilesAndMetadataRetained": true
+  },
+  "validation": {
+    "contentCheck": "passed",
+    "build": "passed",
+    "browserWidths": [
+      320,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "expandedAndCollapsedLayouts": "passed"
+  }
+}
