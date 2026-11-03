@@ -2402,7 +2402,21 @@
       "email": "hjbaek@sogang.ac.kr",
       "image": "assets/people/hyeonjun-baek.webp",
       "url": "",
-      "source": "https://baahyyjuu.wixsite.com/hyeonjun/professor"
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/professor",
+      "imageDisplay": {
+        "source": "assets/people/hyeonjun-baek.webp",
+        "base": "assets/people/display/hyeonjun-baek",
+        "widths": [
+          140,
+          160,
+          175,
+          200,
+          210,
+          240,
+          280,
+          320
+        ]
+      }
     },
     {
       "id": "person-2",
@@ -2412,7 +2426,28 @@
       "email": "kh8147@naver.com",
       "image": "assets/people/seongwon-gim.webp",
       "url": "",
-      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students"
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students",
+      "imageDisplay": {
+        "source": "assets/people/seongwon-gim.webp",
+        "base": "assets/people/display/seongwon-gim",
+        "widths": [
+          112,
+          120,
+          128,
+          140,
+          150,
+          160,
+          168,
+          180,
+          192,
+          224,
+          240,
+          256,
+          336,
+          360,
+          384
+        ]
+      }
     },
     {
       "id": "person-3",
@@ -2422,7 +2457,28 @@
       "email": "yjjeong@sogang.ac.kr",
       "image": "assets/people/yongju-jeong.webp",
       "url": "",
-      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students"
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students",
+      "imageDisplay": {
+        "source": "assets/people/yongju-jeong.webp",
+        "base": "assets/people/display/yongju-jeong",
+        "widths": [
+          112,
+          120,
+          128,
+          140,
+          150,
+          160,
+          168,
+          180,
+          192,
+          224,
+          240,
+          256,
+          336,
+          360,
+          384
+        ]
+      }
     },
     {
       "id": "person-4",
@@ -2432,7 +2488,28 @@
       "email": "jhjray@naver.com",
       "image": "assets/people/hyunjun-jo.webp",
       "url": "",
-      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students"
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students",
+      "imageDisplay": {
+        "source": "assets/people/hyunjun-jo.webp",
+        "base": "assets/people/display/hyunjun-jo",
+        "widths": [
+          112,
+          120,
+          128,
+          140,
+          150,
+          160,
+          168,
+          180,
+          192,
+          224,
+          240,
+          256,
+          336,
+          360,
+          384
+        ]
+      }
     },
     {
       "id": "person-5",
@@ -2442,7 +2519,23 @@
       "email": "dlrjsgh@sogang.ac.kr",
       "image": "assets/people/geonho-lee.webp",
       "url": "",
-      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students"
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students",
+      "imageDisplay": {
+        "source": "assets/people/geonho-lee.webp",
+        "base": "assets/people/display/geonho-lee",
+        "widths": [
+          112,
+          120,
+          128,
+          140,
+          150,
+          160,
+          168,
+          180,
+          192,
+          224
+        ]
+      }
     },
     {
       "id": "person-7",
@@ -2452,7 +2545,28 @@
       "email": "tgjang@sogang.ac.kr",
       "image": "assets/people/taegyu-jang.webp",
       "url": "",
-      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students"
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students",
+      "imageDisplay": {
+        "source": "assets/people/taegyu-jang.webp",
+        "base": "assets/people/display/taegyu-jang",
+        "widths": [
+          112,
+          120,
+          128,
+          140,
+          150,
+          160,
+          168,
+          180,
+          192,
+          224,
+          240,
+          256,
+          336,
+          360,
+          384
+        ]
+      }
     },
     {
       "id": "person-8",
@@ -2462,7 +2576,28 @@
       "email": "hanschae@naver.com",
       "image": "assets/people/hansoo-chae.webp",
       "url": "",
-      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students"
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students",
+      "imageDisplay": {
+        "source": "assets/people/hansoo-chae.webp",
+        "base": "assets/people/display/hansoo-chae",
+        "widths": [
+          112,
+          120,
+          128,
+          140,
+          150,
+          160,
+          168,
+          180,
+          192,
+          224,
+          240,
+          256,
+          336,
+          360,
+          384
+        ]
+      }
     },
     {
       "id": "person-6",
@@ -2472,7 +2607,28 @@
       "email": "jihlee@sogang.ac.kr",
       "image": "assets/people/jihyun-lee.webp",
       "url": "",
-      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students"
+      "source": "https://baahyyjuu.wixsite.com/hyeonjun/students",
+      "imageDisplay": {
+        "source": "assets/people/jihyun-lee.webp",
+        "base": "assets/people/display/jihyun-lee",
+        "widths": [
+          112,
+          120,
+          128,
+          140,
+          150,
+          160,
+          168,
+          180,
+          192,
+          224,
+          240,
+          256,
+          336,
+          360,
+          384
+        ]
+      }
     }
   ],
   "join": {
