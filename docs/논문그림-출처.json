@@ -8,10 +8,8 @@
   ],
   "precedence": "recent < middle < early < root; later records override earlier ones",
   "publicationCount": 46,
-  "imageCount": 45,
-  "missingIds": [
-    "pub-40"
-  ],
+  "imageCount": 46,
+  "missingIds": [],
   "correctedDOIIds": [],
   "overrides": [
     {
@@ -1047,6 +1045,51 @@
       "thumbnailSelectionNote": "Use the completed microrod-on-graphene sample schematic in the growth sequence. It communicates the physical sample more clearly than the full five-panel microscopy/XRD montage.",
       "title": "Growth and characterizations of GaN micro-rods on graphene films for flexible light emitting diodes",
       "doi": "10.1063/1.4894780",
+      "manifest": "docs/publication-figures-root.json"
+    },
+    {
+      "id": "pub-40",
+      "image": "assets/publications/pub-40-figure1-original.png",
+      "imageAlt": "SEM image of the vertically aligned ZnO nanotube array in Sample A, with a 3 µm scale bar and an inset showing the 20 nm scale bar at the tube wall.",
+      "imageLabel": "Figure 1",
+      "imageSource": "https://doi.org/10.1166/jnn.2014.8303",
+      "imageSourceURL": "https://doi.org/10.1166/jnn.2014.8303",
+      "sourceKind": "User-supplied original article PDF",
+      "sourcePDFName": "kim2014.pdf",
+      "sourcePDFPage": 2,
+      "sourcePrintedPage": 5294,
+      "sourcePDFSHA256": "8a1a544451996b7d2b0f2c6319be70329103df21d953839b5cee99b0024e83b8",
+      "width": 946,
+      "height": 469,
+      "bytes": 467804,
+      "sha256": "ff2d253593c73564b62a87b8fcbf91b85d5f6f1690b28db8146282c755c18acb",
+      "verificationNote": "Exact title and DOI matched on page 1 of the supplied article. Figure 1 on page 2 (printed page 5294) rendered at 300 dpi. Includes the original vector panel labels, scale bars, and insets, which are absent from the embedded bitmap alone. PDF page text and delivery watermark are outside the figure crop. Scientific pixels are not retouched.",
+      "extraction": {
+        "renderer": "Poppler pdftoppm",
+        "dpi": 300,
+        "page": 2,
+        "cropPixels": {
+          "x": 368,
+          "y": 398,
+          "width": 946,
+          "height": 469
+        },
+        "embeddedFigureSize": [
+          944,
+          467
+        ]
+      },
+      "visuallyVerified": true,
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.49682875264270615,
+        "height": 1,
+        "label": "Sample A ZnO nanotube array (Figure 1a)"
+      },
+      "thumbnailSelectionNote": "Show only the clear ordered Sample A nanotube array (Figure 1a), retaining its 3 µm scale bar and 20 nm wall-detail inset. The complete two-panel Figure 1 remains available on opening the image.",
+      "title": "Stimulated Emission Features of Bound Excitons in ZnO Nanotubes",
+      "doi": "10.1166/jnn.2014.8303",
       "manifest": "docs/publication-figures-root.json"
     },
     {

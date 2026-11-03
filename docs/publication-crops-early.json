@@ -93,9 +93,16 @@
     },
     {
       "id": "pub-40",
-      "source": null,
-      "action": "missing",
-      "rationale": "No author-supplied/publicly accessible figure is available in the existing verified asset set. Known pub-40 limitation retained; no substitute invented."
+      "source": "https://doi.org/10.1166/jnn.2014.8303",
+      "action": "crop",
+      "imagePreview": {
+        "x": 0,
+        "y": 0,
+        "width": 0.49682875264270615,
+        "height": 1,
+        "label": "Sample A ZnO nanotube array (Figure 1a)"
+      },
+      "rationale": "Use the complete Sample A ZnO nanotube array panel in Figure 1a, preserving its 3 µm scale bar and inset with a 20 nm scale bar. The thumbnail uses the left 470 pixels of the 946 × 469 full Figure 1 crop; the enlarged view retains both original panels."
     },
     {
       "id": "pub-41",

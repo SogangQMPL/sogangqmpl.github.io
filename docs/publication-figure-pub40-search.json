@@ -3,7 +3,7 @@
   "title": "Stimulated Emission Features of Bound Excitons in ZnO Nanotubes",
   "doi": "10.1166/jnn.2014.8303",
   "checkedAt": "2026-11-01",
-  "status": "No verified source figure obtained by this agent",
+  "status": "Resolved from the user-supplied original paper PDF on 2026-11-03",
   "checks": [
     {
       "source": "https://pubmed.ncbi.nlm.nih.gov/24758019/",
@@ -30,10 +30,23 @@
       "result": "Hyeonjun Baek official dissertation candidate. Script request returned JavaScript challenge rather than PDF. Challenge was not solved or bypassed."
     }
   ],
-  "outcome": "No figure fabricated, no unrelated paper image substituted. Existing normal institutional-browser access may still yield the source paper.",
+  "outcome": "Resolved: the user supplied kim2014.pdf, matching the exact paper title and DOI. Figure 1 from PDF page 2 (printed page 5294) supplies the full original figure and the Figure 1a thumbnail.",
   "finalBrowserVerification": {
     "source": "https://www.ingentaconnect.com/content/asp/jnn/2014/00000014/00000007/art00078",
     "result": "Exact title, all six authors and DOI verified in the normal Sogang University institutional session. Publisher exposes abstract and Buy Article only. No figures, PDF link or supplementary data available in this session. No purchase or access bypass attempted.",
     "requiredInput": "Author copy of the paper PDF or an original schematic from this exact publication."
+  },
+  "resolution": {
+    "resolvedAt": "2026-11-03",
+    "source": "User-supplied kim2014.pdf",
+    "identityVerification": "The exact title and DOI 10.1166/jnn.2014.8303 match on PDF page 1.",
+    "sourcePDFPage": 2,
+    "printedPage": 5294,
+    "figure": "Figure 1",
+    "extraction": "Full Figure 1 crop rendered at 300 dpi, 946 × 469 pixels, including the original vector scale bars.",
+    "thumbnail": "Figure 1a: Sample A ZnO nanotube array, preserving the 3 µm scale bar and inset with a 20 nm scale bar.",
+    "verificationStatus": "Source identity, content checks and build verified. Chrome PC and 390 px mobile previews verified the single-panel thumbnail and full original figure dialog. GitHub Pages run 54 completed successfully and the public publication page was visually verified.",
+    "publicationCommit": "b438f8899a69fc179e1e07be0c7054212fb0a8ce",
+    "deploymentRun": "https://github.com/SogangQMPL/sogangqmpl.github.io/actions/runs/41613786544"
   }
 }
