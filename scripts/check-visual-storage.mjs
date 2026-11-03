@@ -20,7 +20,7 @@ const rasterBytes = (size, mime = 'image/png') => { const value = Buffer.alloc(s
 const asset = (path = 'assets/uploads/photo.png', value = HEADER['image/png'], mime = 'image/png') => ({ path, base64: value.toString('base64'), width: 640, height: 480, mime, previewURL: 'blob:never-store-this-url' });
 const draft = () => ({ data: { site: { title: '' }, news: [{ title: '', content: [] }], extra: { preserve: ['unfinished', 'new shape'] } }, baseHead: 'a'.repeat(40), assets: [asset()], updatedAt: '2026-11-03T00:00:00.000Z' });
 function memoryIndexedDB() {
-  const state = { values: new Map(), opens: 0, reads: 0, writes: 0, closes: 0, stores: new Set(), quota: false };
+  const state = { values: new Map(), opens: 0, reads: 0, writes: 0, closes: 0, stores: new Set(), quota: false, holdWrites: false, delayedWrites: [], failNextWrite: false };
   const database = {
     objectStoreNames: { contains: name => state.stores.has(name) },
     createObjectStore(name) { assert.equal(name, 'drafts'); state.stores.add(name); },
@@ -30,13 +30,14 @@ function memoryIndexedDB() {
       const transaction = {};
       transaction.objectStore = () => Object.fromEntries(['get', 'put', 'delete'].map(method => [method, (...arguments_) => {
         const request = {};
-        queueMicrotask(() => {
-          if (method !== 'get' && state.quota) { transaction.onabort?.(); return; }
+        const complete = () => {
+          if (method !== 'get' && (state.quota || state.failNextWrite)) { state.failNextWrite = false; transaction.onabort?.(); return; }
           if (method === 'get') { state.reads++; request.result = structuredClone(state.values.get(arguments_[0])); }
           if (method === 'put') { assert.equal(mode, 'readwrite'); state.writes++; state.values.set(arguments_[1], structuredClone(arguments_[0])); request.result = arguments_[1]; }
           if (method === 'delete') { assert.equal(mode, 'readwrite'); state.writes++; state.values.delete(arguments_[0]); }
           transaction.oncomplete?.();
-        });
+        };
+        queueMicrotask(() => { if (method !== 'get' && state.holdWrites) state.delayedWrites.push(complete); else complete(); });
         return request;
       }]));
       return transaction;
@@ -81,6 +82,29 @@ try {
     const previous = structuredClone(memory.state.values.get('current')); memory.state.quota = true;
     await errorCode('STORAGE_UNAVAILABLE', () => saveLocalDraft({ ...draft(), data: { replace: true } })); memory.state.quota = false;
     assert.deepEqual(memory.state.values.get('current'), previous);
+  });
+  await check('a delayed old save finishes before a later clear, and reads wait for both', async () => {
+    await saveLocalDraft(draft()); memory.state.holdWrites = true;
+    const oldSave = saveLocalDraft({ ...draft(), data: { old: 'in-flight edit' } });
+    const clear = clearLocalDraft(); const reads = memory.state.reads; const loading = loadLocalDraft();
+    await new Promise(resolve => setImmediate(resolve));
+    assert.equal(memory.state.delayedWrites.length, 1, 'Only the first write may reach IndexedDB');
+    assert.equal(memory.state.reads, reads, 'Reads must wait until the queued clear finishes');
+    memory.state.holdWrites = false; memory.state.delayedWrites.shift()();
+    await oldSave; await clear; assert.equal(await loading, null); assert.equal(memory.state.values.has('current'), false, 'Late old saves must not resurrect a cleared draft');
+  });
+  await check('a failed delayed save does not poison queued clears, later saves, or reads', async () => {
+    await saveLocalDraft(draft()); memory.state.holdWrites = true; memory.state.failNextWrite = true;
+    const failed = saveLocalDraft({ ...draft(), data: { discarded: 'will fail' } });
+    const rejected = errorCode('STORAGE_UNAVAILABLE', () => failed);
+    const clear = clearLocalDraft(); const input = { ...draft(), data: { recovery: { value: 'new edit' } } };
+    const recovery = saveLocalDraft(input); const loading = loadLocalDraft(); input.data.recovery.value = 'caller changed later';
+    await new Promise(resolve => setImmediate(resolve)); assert.equal(memory.state.delayedWrites.length, 1);
+    memory.state.holdWrites = false; memory.state.delayedWrites.shift()();
+    await rejected; await clear; await recovery;
+    assert.deepEqual((await loading).data, { recovery: { value: 'new edit' } }, 'Queued saves must copy their data at call time');
+    await clearLocalDraft(); assert.equal(await loadLocalDraft(), null);
+    await saveLocalDraft(draft());
   });
   await check('credentials are refused without opening or altering IndexedDB', async () => {
     const previous = structuredClone(memory.state.values.get('current')); const opens = memory.state.opens;
