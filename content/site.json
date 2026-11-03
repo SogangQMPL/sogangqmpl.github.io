@@ -568,19 +568,12 @@
       "featured": true,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
       "notes": "Original Wix uses 0, 00 placeholders. Publisher citation checked 2026-11-01 lists year and DOI without volume/article number; omitted placeholder.",
-      "image": "assets/publications/pub-02-figure1.png",
-      "imageAlt": "Moiré-trapped interlayer excitons in a twisted 2H-MoSe2/WSe2 heterostructure: layer structure and exciton configuration.",
-      "imageLabel": "Figure 1",
+      "image": "assets/publications/pub-02-figure2-cd.png",
+      "imageAlt": "Figure 2(c,d): photoluminescence excitation spectra and excitation-energy offsets of moiré-trapped interlayer excitons.",
+      "imageLabel": "Figure 2(c,d)",
       "imageSource": "https://www.nature.com/articles/s41699-026-00701-5",
-      "imageWidth": 1064,
-      "imageHeight": 1065,
-      "imagePreview": {
-        "x": 0,
-        "y": 0,
-        "width": 0.61,
-        "height": 0.4,
-        "label": "Figure 1a"
-      },
+      "imageWidth": 1090,
+      "imageHeight": 776,
       "labAuthors": [
         "Hyeonjun Baek"
       ]

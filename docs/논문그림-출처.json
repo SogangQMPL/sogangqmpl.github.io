@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T12:01:43.083520+00:00",
+  "updatedAt": "2026-11-03",
   "sourceManifests": [
     "docs/publication-figures-recent.json",
     "docs/publication-figures-middle.json",
@@ -184,29 +184,37 @@
     },
     {
       "id": "pub-02",
-      "image": "assets/publications/pub-02-figure1.png",
-      "imageAlt": "Moiré-trapped interlayer excitons in a twisted 2H-MoSe2/WSe2 heterostructure: layer structure and exciton configuration.",
-      "imageLabel": "Figure 1",
+      "image": "assets/publications/pub-02-figure2-cd.png",
+      "imageAlt": "Figure 2(c,d): photoluminescence excitation spectra and excitation-energy offsets of moiré-trapped interlayer excitons.",
+      "imageLabel": "Figure 2(c,d)",
       "imageSource": "https://www.nature.com/articles/s41699-026-00701-5",
       "imageSourceURL": "https://www.nature.com/articles/s41699-026-00701-5_reference.pdf",
-      "width": 1064,
-      "height": 1065,
-      "verificationNote": "Official accepted manuscript, Figure1 image extracted losslessly from PDF page13; Fig1 caption on page12 matched; JP2 converted losslessly to browser-compatible PNG without cropping. Parent visually checked Figure 1: thumbnail shows the original MoSe2/WSe2 device schematic in panel a via CSS; full original figure remains available on zoom.",
-      "sha256": "991a944effd617f627ec68cb029dc3045bed70eba753b27b245d1be17778aaff",
+      "width": 1090,
+      "height": 776,
+      "verificationNote": "Official accepted manuscript, Figure 2(c,d) extracted from embedded JP2 on PDF page 14; Figure 2 caption on PDF page 12 verified. Cropped at native resolution, without resampling or redrawing; all axes, annotations, data and original red inset frame preserved. Visually compared with the requested reference.",
+      "sha256": "66e904fde354917695fa71ff87366699164252314f787f60ffb599988e77585c",
       "verifiedVisually": true,
-      "imagePreview": {
-        "x": 0,
-        "y": 0,
-        "width": 0.61,
-        "height": 0.4,
-        "label": "Figure 1a"
-      },
       "visuallyVerified": true,
-      "bytes": 596355,
-      "thumbnailSelectionNote": "Keep the existing panel-a preview. It contains the full twisted heterobilayer, twist-angle annotation and material legend, and already excludes spectra.",
+      "bytes": 492646,
+      "thumbnailSelectionNote": "Use the requested Figure 2(c,d) panels instead of Figure 1a. The thumbnail and enlarged view show the same complete crop.",
       "title": "Photoexcitation of moiré-trapped interlayer excitons via chiral phonons",
       "doi": "10.1038/s41699-026-00701-5",
-      "manifest": "docs/publication-figures-root.json"
+      "manifest": "docs/publication-figures-root.json",
+      "sourcePDFPage": 14,
+      "sourceCaptionPDFPage": 12,
+      "sourceImageDimensions": [
+        2265,
+        1595
+      ],
+      "cropPixels": [
+        890,
+        704,
+        1980,
+        1480
+      ],
+      "sourcePDFSHA256": "390db8e7de7f885ee7a74d0c49ec0876d2a5b57ff6632ad278d16f218d9e714b",
+      "license": "CC BY 4.0, as stated in the accepted manuscript.",
+      "updatedAt": "2026-11-03"
     },
     {
       "id": "pub-03",
