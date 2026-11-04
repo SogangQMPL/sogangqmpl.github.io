@@ -22,7 +22,7 @@ const publicationYearLabel=group=>group.replace(/^(\d{4})-(\d{4})$/,'$1–$2');
 export const postFileName = item => `post-${item.id}.html`;
 export const findPost = (data,page) => page.startsWith('post-') ? data.news.find(n=>n.id===page.slice(5)) : undefined;
 export function pageTitle(data,page) {
- const post=findPost(data,page),labels={people:'Professor',students:'Students',activities:'Activities',join:'Join Us'};
+ const post=findPost(data,page),labels={people:'Professor',students:'Students',activities:'Activities',join:'Join Us','404':'404 · Page not found'};
  return (page==='index'?'':(post?.title||labels[page]||page[0].toUpperCase()+page.slice(1))+' | ')+data.site.title;
 }
 export function appearanceCSS(data) {
@@ -73,7 +73,8 @@ function editContext(data, enabled = false) {
 
 function header(data,page,edit) {
  const member=['people','students'].includes(page),highlights=['news','activities'].includes(page)||page.startsWith('post-');
- const link=(id,label,state=page===id?' aria-current="page"':'')=>`<a href="${id}.html"${state}>${label}</a>`;
+ const prefix=page==='404'?'/':'';
+ const link=(id,label,state=page===id?' aria-current="page"':'')=>`<a href="${prefix}${id}.html"${state}>${label}</a>`;
  const group=(mobile,id,label,active,first,children)=>mobile
   ?`<div class="nav-item"><span class="nav-group-label${active?' section-current':''}" id="mobile-nav-${id}">${label}</span><div class="nav-dropdown" role="group" aria-labelledby="mobile-nav-${id}">${children}</div></div>`
   :`<div class="nav-item has-submenu">${link(first,label,active?' class="section-current"':'')}<button type="button" class="nav-submenu-toggle" aria-label="${label} submenu" aria-expanded="false" aria-controls="nav-${id}"></button><div class="nav-dropdown" id="nav-${id}">${children}</div></div>`;
@@ -83,7 +84,7 @@ function header(data,page,edit) {
      <div class="nav-item">${link('research','Research')}</div>
      ${group(mobile,'highlights','Highlights',highlights,'news',link('news','News')+link('activities','Activities'))}`;
  return `<header class="site-header"><div class="container header-inner">
-   <a class="brand" href="index.html" aria-label="${e(data.site.title)} — Home"><span${edit('/site/group','text','연구 그룹명')}>${e(data.site.group)}</span><small>@ Sogang Univ.</small></a>
+   <a class="brand" href="${prefix}index.html" aria-label="${e(data.site.title)} — Home"><span${edit('/site/group','text','연구 그룹명')}>${e(data.site.group)}</span><small>@ Sogang Univ.</small></a>
    <button class="menu-toggle" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="mobile-navigation"><span class="menu-label">Menu</span><span class="menu-icon" aria-hidden="true">☰</span></button>
    <nav id="main-nav" aria-label="Main navigation">${navigation(false)}</nav>
  </div><dialog id="mobile-navigation" class="mobile-menu" aria-labelledby="mobile-menu-title"><div class="mobile-menu-heading"><h2 id="mobile-menu-title">Menu</h2><button class="mobile-menu-close" type="button" aria-label="Close menu" autofocus><span aria-hidden="true">×</span></button></div><nav class="mobile-menu-links" aria-label="Mobile navigation">${navigation(true)}</nav></dialog></header>`;
@@ -211,10 +212,14 @@ function postPage(data,page,edit) {
 }
 
 
+function homeHeroFigure(image, alt, attributes='') {
+ return image?`<figure class="home-hero-figure"><svg class="home-image-filter" width="0" height="0" aria-hidden="true" focusable="false"><defs><filter id="home-lattice-tint" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="0"/><feColorMatrix type="matrix" values="0.9098039215686274 0 0 0 0 0.7568627450980392 0 0 0 0.15294117647058825 0.3803921568627451 0 0 0 0.5294117647058824 0 0 0 1 0"/></filter></defs></svg><img src="${e(image)}" alt="${e(alt||'')}" width="513" height="529" fetchpriority="high"${attributes}></figure>`:'';
+}
+
 function home(data,page,edit) {
  const chosen=sortedPublications(data).filter(p=>p.featured),selected=(chosen.length?chosen:sortedPublications(data)).slice(0,3);
  const hero=data.hero||{},heroImage=safeURL(hero.image);
- const intro=`<section class="home-hero${heroImage?'':' home-hero-text-only'}" aria-labelledby="home-lab-name"${edit.item('/hero','홈 소개')}><h1 id="home-lab-name" class="home-hero-title"${edit(hero.title?'/hero/title':'/site/title','multiline','홈 연구실 이름')}>${e(hero.title||data.site.title)}</h1>${heroImage?`<figure class="home-hero-figure"><svg class="home-image-filter" width="0" height="0" aria-hidden="true" focusable="false"><defs><filter id="home-lattice-tint" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="0"/><feColorMatrix type="matrix" values="0.9098039215686274 0 0 0 0 0.7568627450980392 0 0 0 0.15294117647058825 0.3803921568627451 0 0 0 0.5294117647058824 0 0 0 1 0"/></filter></defs></svg><img src="${e(heroImage)}" alt="${e(hero.imageAlt||'')}" width="513" height="529" fetchpriority="high"${edit('/hero/image','image','홈 연구 그림',{altPath:'/hero/imageAlt'})}></figure>`:''}</section>`;
+ const intro=`<section class="home-hero${heroImage?'':' home-hero-text-only'}" aria-labelledby="home-lab-name"${edit.item('/hero','홈 소개')}><h1 id="home-lab-name" class="home-hero-title"${edit(hero.title?'/hero/title':'/site/title','multiline','홈 연구실 이름')}>${e(hero.title||data.site.title)}</h1>${homeHeroFigure(heroImage,hero.imageAlt,edit('/hero/image','image','홈 연구 그림',{altPath:'/hero/imageAlt'}))}</section>`;
  const notice=data.announcement||{enabled:true,title:data.join.title,body:data.site.email,url:'join.html'};
  const href=/^https:\/\//i.test(notice.url||'')?safeURL(notice.url):/^[a-z-]+\.html(?:#[\w-]+)?$/.test(notice.url||'')?notice.url:'';
  const announcementBody=!notice.body?'':notice.body.trim()===data.site.email
@@ -224,6 +229,21 @@ function home(data,page,edit) {
  return `<main id="main" tabindex="-1" class="container page-layout home">${intro}${announcement}
    <section class="home-news home-section">${sectionTitle('News','news.html','More news')}<div class="news-list"${edit.collection('/news','소식')}>${sortedNews(data).filter(n=>n.category!=='Activities').slice(0,3).map(n=>newsEntry(n,edit)).join('')}</div></section>
    <section class="home-publications home-section">${sectionTitle('Publications','publications.html','More papers')}<div class="publication-list"${edit.collection('/publications','논문')}>${selected.map((p,i)=>pubEntry(p,i,true,edit)).join('')}</div></section>
+ </main>`;
+}
+function notFoundPage(data) {
+ const hero=data.hero||{};
+ const image=safeURL(hero.image).replace(/^(?:\.\/)?assets\//,'/assets/');
+ return `<main id="main" tabindex="-1" class="container page-layout not-found">
+   <section class="home-hero${image?'':' home-hero-text-only'}" aria-labelledby="not-found-title">
+     <div>
+       <p class="not-found-code">404</p>
+       <h1 id="not-found-title" class="home-hero-title">Page not found</h1>
+       <p class="not-found-description">The page may have moved or the address may be incorrect.</p>
+       <a class="not-found-home" href="/"><span aria-hidden="true">←</span> Back to Home</a>
+     </div>
+     ${homeHeroFigure(image,hero.imageAlt)}
+   </section>
  </main>`;
 }
 const pageIntro = (title, description) => `<header class="page-intro"><h1>${title}</h1>${description?`<p>${e(description)}</p>`:''}</header>`;
@@ -341,7 +361,7 @@ function joinPage(data,page,edit) {
 export function render(data, page='index', options={}) {
  const edit=editContext(data,Boolean(options.editable));
  const appearance=appearanceCSS(data);
- const content={index:home,research:researchPage,people:peoplePage,students:studentsPage,publications:publicationsPage,news:newsPage,activities:activitiesPage,join:joinPage};
+ const content={index:home,research:researchPage,people:peoplePage,students:studentsPage,publications:publicationsPage,news:newsPage,activities:activitiesPage,join:joinPage,'404':notFoundPage};
  const showViewer=page==='publications'||page==='research'||page.startsWith('post-');
  return (appearance?`<style data-site-appearance>${appearance}</style>`:'')+header(data,page,edit)+(page.startsWith('post-')?postPage(data,page,edit):(content[page]||home)(data,page,edit))+footer(data,edit)+(showViewer?figureViewer:'');
 }

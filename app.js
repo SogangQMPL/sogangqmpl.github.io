@@ -1,4 +1,4 @@
-const params=new URLSearchParams(location.search),preview=params.get('preview')==='1';
+const params=new URLSearchParams(location.search),preview=document.body.dataset.page!=='404'&&params.get('preview')==='1';
 const page=preview&&params.get('post')?'post-'+params.get('post'):(document.body.dataset.page || 'index');
 const mobileNavigation=matchMedia('(max-width:900px)');
 const openedDesktopSubmenu=()=>document.querySelector('#main-nav .nav-submenu-toggle[aria-expanded="true"]');
