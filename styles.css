@@ -343,6 +343,11 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 .research-detail-media img{max-height:500px}
 .wide-detail-figure .research-detail-media{max-width:100%}
 .wide-detail-figure .research-detail-media img{max-height:none}
+@media(width > 900px){
+ .research-detail-section.detail-figure-left{grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:36px}
+ .detail-figure-left>.research-detail-copy{grid-area:1/2}
+ .detail-figure-left>.research-detail-media{grid-area:1/1}
+}
 @media(max-width:900px){.research-detail-section.has-detail-figures{grid-template-columns:minmax(0,1fr);gap:20px}.research-detail-media{max-width:760px;width:100%}.research-detail-copy h4{font-size:19px}}
 @media(max-width:800px){.topic-more{margin-left:0}.research-detail-section{padding-block:22px}}
 .research-original-figure>a{display:block;cursor:zoom-in}
