@@ -64,7 +64,7 @@ document.addEventListener('focusout',event=>{
 document.addEventListener('click',event=>{
  const submenuToggle=event.target.closest('#main-nav .nav-submenu-toggle'),current=openedDesktopSubmenu();
  if(submenuToggle){
-  setDesktopSubmenu(submenuToggle===current&&submenuToggle!==hoveredDesktopSubmenu?null:submenuToggle);
+  setDesktopSubmenu(submenuToggle===current?null:submenuToggle);
   return;
  }
  if(current&&!current.parentElement.contains(event.target))setDesktopSubmenu();
@@ -91,7 +91,7 @@ document.addEventListener('keydown',event=>{
  if(event.key!=='Tab')return;
  const dialog=document.querySelector('dialog:modal');
  if(!dialog)return;
- const controls=[...dialog.querySelectorAll('a[href],button:not([disabled])')].filter(control=>control.getClientRects().length);
+ const controls=[...dialog.querySelectorAll('a[href],button:not([disabled]),[tabindex="0"]')].filter(control=>control.getClientRects().length);
  const first=controls[0],last=controls.at(-1),outside=!dialog.contains(document.activeElement);
  if(event.shiftKey&&(document.activeElement===first||outside)){event.preventDefault();last?.focus();}
  else if(!event.shiftKey&&(document.activeElement===last||outside)){event.preventDefault();first?.focus();}
@@ -151,29 +151,36 @@ function connect() {
  }
  const search=document.getElementById('publication-search'), year=document.getElementById('publication-year');
  const publicationSearchText=value=>String(value).normalize('NFKD').replace(/\p{M}/gu,'').replace(/[‐‑‒–—−]/g,'-').toLowerCase();
- const articleURL=value=>value.replace(/\.pdf$|\/(?:full|abstract|epdf|pdf)$/,'');
- const publicationURLKey=value=>{
-  if(!/^(?:https?:\/\/|www\.)\S+$/i.test(value||''))return '';
+ const copiedForms=value=>{
+  const cleaned=value.replace(/^(?:doi:\s*)?[\s“‘"'(<\[]*/i,'');
+  return [...new Set([cleaned,cleaned.replace(/[.,;:!?\])>”’"']+$/u,'')])].filter(Boolean);
+ };
+ const publicationURL=value=>{
+  if(!/^(?:https?:\/\/|(?:[a-z0-9-]+\.)+[a-z]{2,}\/)[^\s]+$/i.test(value||''))return null;
   try{
-   const url=new URL(/^www\./i.test(value)?'https://'+value:value);
-   return publicationSearchText(url.hostname.replace(/^www\./i,'')+decodeURIComponent(url.pathname).replace(/\/+$/,''));
-  }catch{return '';}
+   const url=new URL(/^https?:\/\//i.test(value)?value:'https://'+value);
+   const host=url.hostname.replace(/^www\./i,'');
+   const path=publicationSearchText(decodeURIComponent(url.pathname).replace(/\/+$/,''));
+   const articlePath=path.replace(/(\/articles\/[^/]+)\/(?:figures|tables)\/\d+$/,'$1').replace(/\.pdf$|\/(?:full|abstract|epdf|pdf)$/,'');
+   return {source:host+path+url.search+url.hash,article:host+articlePath,doi:path.match(/\/(10\.\d{4,9}\/.+)$/)?.[1]||''};
+  }catch{return null;}
  };
  function filterPublications(){
   if(!search||!year)return;
   if(!year.value)year.value='all';
-  const raw=search.value.trim(), pastedURL=publicationURLKey(raw), selected=year.value;
-  const linkedDOI=pastedURL.match(/\/(10\.\d{4,9}\/.+)$/)?.[1];
-  const doiVariants=linkedDOI?[linkedDOI,articleURL(linkedDOI)]:[];
+  const raw=search.value.trim(), selected=year.value, copied=copiedForms(raw);
+  const pastedURLs=copied.map(publicationURL).filter(Boolean);
+  const pastedDOIs=copied.filter(value=>/^10\.\d{4,9}\/\S+$/i.test(value)).map(publicationSearchText);
   const terms=publicationSearchText(raw.replace(/^doi:\s*/i,'')).split(/\s+/).filter(Boolean);
   const articles=[...document.querySelectorAll('#publication-results .publication')];
   let count=0;
   articles.forEach(article=>{
    const text=publicationSearchText(article.dataset.search||article.textContent);
    const group=article.closest('.publication-year-group')?.dataset.publicationYear||article.dataset.year;
-   const matches=pastedURL
-    ?articleURL(pastedURL)===articleURL(publicationURLKey(article.dataset.publicationUrl))||doiVariants.some(doi=>text.split(/\s+/).includes(doi))
-    :terms.every(term=>text.includes(term));
+   const doi=publicationSearchText(article.dataset.publicationDoi||'');
+   const matches=pastedURLs.length
+    ?pastedURLs.some(url=>url.article===publicationURL(article.dataset.publicationUrl)?.article||url.source===publicationURL(article.dataset.publicationFigureSource)?.source||(doi&&url.doi&&(url.doi===doi||url.doi.replace(/\.pdf$/,'')===doi)))
+    :pastedDOIs.includes(doi)||terms.every(term=>text.includes(term));
    const visible=matches&&(selected==='all'||group===selected);
    article.hidden=!visible;if(visible) count++;
   });
@@ -204,29 +211,81 @@ function connect() {
  }
  const viewer=document.getElementById('image-viewer');
  if(viewer&&typeof viewer.showModal==='function') {
-  let figureTrigger;
+  let figureTrigger,crop,mode,fitWidth=0;
   const close=viewer.querySelector('.figure-viewer-close'),image=viewer.querySelector('img');
   const source=viewer.querySelector('.figure-viewer-source'),original=viewer.querySelector('.figure-viewer-original');
+  const label=viewer.querySelector('.figure-viewer-label'),modes=viewer.querySelector('.figure-viewer-modes');
+  const viewport=viewer.querySelector('.figure-viewer-viewport'),frame=viewer.querySelector('.figure-viewer-frame');
+  const zoom=viewer.querySelector('.figure-viewer-zoom'),fit=viewer.querySelector('.figure-viewer-fit');
+  const setFrame=()=>{
+   const {figureWidth,figureHeight}=figureTrigger.dataset;
+   const width=image.naturalWidth||Number(figureWidth),height=image.naturalHeight||Number(figureHeight);
+   frame.hidden=!(width&&height);
+   if(frame.hidden)return;
+   const panel=mode==='panel'?crop:null;
+   const visibleWidth=width*(panel?.width||1),visibleHeight=height*(panel?.height||1);
+   frame.style.setProperty('--figure-ratio',visibleWidth/visibleHeight);
+   frame.style.setProperty('--figure-natural-width',`${visibleWidth}px`);
+   frame.style.setProperty('--figure-image-width',panel?`${100/panel.width}%`:'100%');
+   frame.style.setProperty('--figure-image-left',panel?`${-100*panel.x/panel.width}%`:'0');
+   frame.style.setProperty('--figure-image-top',panel?`${-100*panel.y/panel.height}%`:'0');
+  };
+  const resetZoom=()=>{
+   fitWidth=0;
+   frame.style.removeProperty('--figure-zoom-width');
+   viewport.removeAttribute('tabindex');
+   viewport.scrollTo(0,0);
+   zoom.setAttribute('aria-disabled',String(frame.hidden));
+  };
+  const setMode=value=>{
+   mode=value;
+   const {figureTitle,figureLabel,figureOriginalAlt}=figureTrigger.dataset;
+   const thumbnailAlt=figureTrigger.querySelector('img').alt;
+   label.textContent=mode==='panel'?(crop.label||'Selected panel'):figureLabel;
+   label.hidden=!label.textContent;
+   image.alt=mode==='panel'?(thumbnailAlt||`Selected panel from ${figureTitle}`):(figureOriginalAlt||thumbnailAlt||figureTitle);
+   modes.querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.figureMode===mode)));
+   setFrame();
+   resetZoom();
+  };
+  modes.addEventListener('click',event=>{
+   const value=event.target.dataset.figureMode;
+   if(value&&value!==mode)setMode(value);
+  });
+  zoom.addEventListener('click',()=>{
+   if(zoom.getAttribute('aria-disabled')==='true')return;
+   const current=frame.getBoundingClientRect();
+   fitWidth||=current.width;
+   if(!fitWidth)return;
+   const width=Math.min(current.width*1.5,fitWidth*6);
+   const centerX=(viewport.scrollLeft+viewport.clientWidth/2-frame.offsetLeft)/current.width;
+   const centerY=(viewport.scrollTop+viewport.clientHeight/2-frame.offsetTop)/current.height;
+   frame.style.setProperty('--figure-zoom-width',`${width}px`);
+   viewport.tabIndex=0;
+   viewport.scrollTo(frame.offsetLeft+centerX*width-viewport.clientWidth/2,frame.offsetTop+centerY*frame.offsetHeight-viewport.clientHeight/2);
+   zoom.setAttribute('aria-disabled',String(width>=fitWidth*6));
+  });
+  fit.addEventListener('click',resetZoom);
+  image.addEventListener('load',()=>{
+   if(!viewer.open)return;
+   setFrame();
+   if(!fitWidth)resetZoom();
+  });
   document.querySelectorAll('[data-figure-image]').forEach(link=>link.addEventListener('click',event=>{
    if(event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
    event.preventDefault();figureTrigger=link;
    viewer.querySelector('h2').textContent=link.dataset.figureTitle;
-   const label=viewer.querySelector('.figure-viewer-label');
-   label.textContent=link.dataset.figureLabel;
-   label.hidden=!link.dataset.figureLabel;
-   const {figureWidth,figureHeight,figureSource,figureImage}=link.dataset;
-   if(figureWidth&&figureHeight){
-    image.setAttribute('width',figureWidth);
-    image.setAttribute('height',figureHeight);
-   }else{image.removeAttribute('width');image.removeAttribute('height');}
+   const {figureSource,figureImage,figureCrop}=link.dataset;
+   crop=JSON.parse(figureCrop||'null');
    const thumbnail=link.querySelector('img');
    const imageURL=link.href.startsWith('blob:')?link.href:thumbnail.src.startsWith('blob:')?thumbnail.src:figureImage;
-   image.alt=thumbnail.alt;
    image.src=imageURL;
    original.href=imageURL;
    source.hidden=!figureSource;
    if(figureSource)source.href=figureSource;
    else source.removeAttribute('href');
+   modes.hidden=!crop;
+   setMode(crop?'panel':'full');
    viewer.showModal();viewer.scrollTop=0;close.focus({preventScroll:true});
   }));
   close.addEventListener('click',()=>viewer.close());
