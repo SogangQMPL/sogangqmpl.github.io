@@ -2,7 +2,7 @@ import {readFile,writeFile,mkdir,cp,unlink} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {render,pages,escapeHTML,pageTitle,postFileName,findPost} from '../renderer.js';
+import {render,pages,escapeHTML,pageTitle,postFileName,findPost,safeURL} from '../renderer.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const data=JSON.parse(await readFile(path.join(root,'content/site.json'),'utf8'));
 const stylesheetVersion=createHash('sha256').update(await readFile(path.join(root,'styles.css'))).digest('hex').slice(0,12);
@@ -13,12 +13,28 @@ const template=(await readFile(path.join(root,'template.html'),'utf8'))
  .replace('href="styles.css"',`href="styles.css?v=${stylesheetVersion}"`)
  .replace('src="app.js"',`src="app.js?v=${appVersion}"`);
 const output=path.join(root,'dist');
+const siteURL='https://sogangqmpl.github.io/';
 await mkdir(output,{recursive:true});
 const allPages=[...pages,...data.news.map(n=>'post-'+n.id)];
 for(const page of allPages){
  const title=pageTitle(data,page),post=findPost(data,page),description=post?(post.body||post.summary||post.title):data.site.description;
  let html=template.replaceAll('%%TITLE%%',escapeHTML(title)).replaceAll('%%DESCRIPTION%%',escapeHTML(description)).replaceAll('%%PAGE%%',page).replace('%%CONTENT%%',render(data,page));
- if(post)html=html.replace('property="og:type" content="website"','property="og:type" content="article"');
+ if(post){
+  const canonical=new URL(postFileName(post),siteURL).href;
+  const photos=(post.content||[]).filter(block=>block.type==='image'&&safeURL(block.src));
+  const cover=safeURL(post.image)||safeURL(photos[0]?.src);
+  const photo=photos.find(block=>block.src===cover);
+  const share=post.shareImage?.source===cover&&safeURL(post.shareImage.src)?post.shareImage:null;
+  const tags=[`<meta property="og:type" content="article">`,`<meta property="og:url" content="${escapeHTML(canonical)}">`,`<link rel="canonical" href="${escapeHTML(canonical)}">`];
+  if(cover){
+   tags.push(`<meta property="og:image" content="${escapeHTML(new URL(share?.src||cover,siteURL).href)}">`);
+   tags.push(`<meta property="og:image:alt" content="${escapeHTML(post.imageAlt||photo?.alt||post.title)}">`);
+   if(share&&Number.isInteger(share.width)&&Number.isInteger(share.height)){
+    tags.push(`<meta property="og:image:width" content="${share.width}">`,`<meta property="og:image:height" content="${share.height}">`);
+   }
+  }
+  html=html.replace('<meta property="og:type" content="website">',tags.join('\n  '));
+ }
  await writeFile(path.join(output,post?postFileName(post):page+'.html'),html);
 }
 for(const post of data.news){
@@ -54,5 +70,5 @@ for(const line of guide.split(/\r?\n/)){
 if(list)guideHTML+=`</${list}>`;
 await writeFile(path.join(output,'admin/guide.html'),`<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>홈페이지 관리 안내 | QMP Lab</title><style>body{font:16px/1.9 system-ui,sans-serif;max-width:830px;margin:40px auto;padding:24px;color:#222222;background:#ffffff}h1,h2,h3{line-height:1.45}h2{margin-top:48px;border-top:1px solid #d9d9d9;padding-top:28px}li{margin-block:13px}a{color:#002e5d}code{background:#eeeeee;padding:2px 5px;overflow-wrap:anywhere}p,li{overflow-wrap:anywhere}</style><a href="./">← 편집기로 돌아가기</a>${guideHTML}</html>`);
 await writeFile(path.join(output,'.nojekyll'),'');
-await writeFile(path.join(output,'404.html'),`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Page not found | QMP Lab</title><style>body{font:18px/1.8 system-ui;max-width:650px;margin:12vh auto;padding:24px;color:#222222;background:#ffffff}a{color:#002e5d}</style><h1>We couldn’t find that page.</h1><p>The page may have moved. Use your browser’s Back button to return to the previous page.</p><p>QMP Lab · Sogang University</p></html>`);
+await writeFile(path.join(output,'404.html'),`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Page not found | QMP Lab</title><style>body{font:18px/1.8 system-ui;max-width:650px;margin:12vh auto;padding:24px;color:#222222;background:#ffffff}a{color:#002e5d}</style><h1>We couldn’t find that page.</h1><p>The page may have moved. <a href="/">Back to Home</a></p><p>QMP Lab · Sogang University</p></html>`);
 console.log(`Built ${pages.length} pages + ${data.news.length} posts, editor and assets → ${output}`);
