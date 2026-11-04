@@ -93,14 +93,15 @@
             {
               "title": "Quantum properties of light",
               "body": "In the quantum regime, light is described as photons whose behavior differs from classical electromagnetic waves. Nonclassical photon statistics, quantum interference and entanglement make these photons building blocks for quantum communication and computing.",
-              "imageLeft": true,
               "images": [
                 {
-                  "src": "assets/research/quantum-light-interference.webp",
-                  "alt": "Two indistinguishable photons enter a beam splitter through separate inputs and exit together through one output.",
-                  "caption": "Two-photon interference at a beam splitter.",
-                  "width": 1536,
-                  "height": 1024
+                  "src": "assets/uploads/chen-hong-chen-2022-hom-fig1.webp",
+                  "fullSrc": "https://www.frontiersin.org/journals/physics/articles/10.3389/fphy.2022.892519/full#F1",
+                  "alt": "Four panels show a two-photon beam-splitter setup, interference pathways, photon wave-packet overlap, and the Hong–Ou–Mandel coincidence dip.",
+                  "caption": "Hong–Ou–Mandel interference. Fig. 1, Chen, Hong and Chen, Frontiers in Physics 10, 892519 (2022). © 2022 Chen, Hong and Chen, CC BY 4.0.",
+                  "width": 1748,
+                  "height": 964,
+                  "sourceURL": "https://doi.org/10.3389/fphy.2022.892519"
                 }
               ]
             },
