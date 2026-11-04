@@ -1544,7 +1544,22 @@
       "imageHeight": 823,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-23-graphical-abstract-reviewed.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-23-thumb-320.webp",
+            "width": 320,
+            "height": 119
+          },
+          {
+            "src": "assets/uploads/pub-23-thumb-720.webp",
+            "width": 720,
+            "height": 268
+          }
+        ]
+      }
     },
     {
       "id": "pub-24",
@@ -1571,6 +1586,27 @@
         "width": 0.5044035228182546,
         "height": 0.9815157116451017,
         "label": "Figure 3(a)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-24-fig3-reviewed.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-24-thumb-320.webp",
+            "width": 320,
+            "height": 270
+          },
+          {
+            "src": "assets/uploads/pub-24-thumb-630.webp",
+            "width": 630,
+            "height": 531
+          }
+        ],
+        "crop": [
+          0.0024019215372297837,
+          0.012939001848428836,
+          0.5044035228182546,
+          0.9815157116451017
+        ]
       }
     },
     {
@@ -1598,6 +1634,27 @@
         "width": 0.66,
         "height": 0.35,
         "label": "Figure 1a"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-25-fig1.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-25-thumb-320.webp",
+            "width": 320,
+            "height": 130
+          },
+          {
+            "src": "assets/uploads/pub-25-thumb-452.webp",
+            "width": 452,
+            "height": 184
+          }
+        ],
+        "crop": [
+          0,
+          0,
+          0.66,
+          0.35
+        ]
       }
     },
     {
@@ -1625,6 +1682,22 @@
         "width": 0.325,
         "height": 0.34085778781038373,
         "label": "Figure 1(b)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-26-fig1-reviewed.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-26-thumb-169.webp",
+            "width": 169,
+            "height": 151
+          }
+        ],
+        "crop": [
+          0,
+          0.6591422121896162,
+          0.325,
+          0.34085778781038373
+        ]
       }
     },
     {
@@ -1652,7 +1725,28 @@
       },
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-27-original.jpeg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-27-thumb-320.webp",
+            "width": 320,
+            "height": 167
+          },
+          {
+            "src": "assets/uploads/pub-27-thumb-520.webp",
+            "width": 520,
+            "height": 272
+          }
+        ],
+        "crop": [
+          0,
+          0,
+          1,
+          0.335
+        ]
+      }
     },
     {
       "id": "pub-28",
@@ -1672,7 +1766,22 @@
       "imageHeight": 400,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-28-original.jpg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-28-thumb-320.webp",
+            "width": 320,
+            "height": 296
+          },
+          {
+            "src": "assets/uploads/pub-28-thumb-433.webp",
+            "width": 433,
+            "height": 400
+          }
+        ]
+      }
     },
     {
       "id": "pub-29",
@@ -1692,7 +1801,22 @@
       "imageHeight": 762,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-29-fig5-reviewed.jpg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-29-thumb-320.webp",
+            "width": 320,
+            "height": 350
+          },
+          {
+            "src": "assets/uploads/pub-29-thumb-697.webp",
+            "width": 697,
+            "height": 762
+          }
+        ]
+      }
     },
     {
       "id": "pub-30",
@@ -1719,6 +1843,22 @@
         "width": 0.5307692307692308,
         "height": 1,
         "label": "Figure 4(b)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-30-fig4-reviewed.jpg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-30-thumb-276.webp",
+            "width": 276,
+            "height": 266
+          }
+        ],
+        "crop": [
+          0.46923076923076923,
+          0,
+          0.5307692307692308,
+          1
+        ]
       }
     },
     {
@@ -1739,7 +1879,22 @@
       "imageHeight": 256,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-31-original.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-31-thumb-320.webp",
+            "width": 320,
+            "height": 158
+          },
+          {
+            "src": "assets/uploads/pub-31-thumb-520.webp",
+            "width": 520,
+            "height": 256
+          }
+        ]
+      }
     },
     {
       "id": "pub-32",
@@ -1759,7 +1914,22 @@
       "imageHeight": 218,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-32-original.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-32-thumb-320.webp",
+            "width": 320,
+            "height": 134
+          },
+          {
+            "src": "assets/uploads/pub-32-thumb-520.webp",
+            "width": 520,
+            "height": 218
+          }
+        ]
+      }
     },
     {
       "id": "pub-33",
@@ -1779,7 +1949,22 @@
       "imageHeight": 354,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-33-original.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-33-thumb-320.webp",
+            "width": 320,
+            "height": 218
+          },
+          {
+            "src": "assets/uploads/pub-33-thumb-520.webp",
+            "width": 520,
+            "height": 354
+          }
+        ]
+      }
     },
     {
       "id": "pub-34",
@@ -1806,6 +1991,27 @@
         "width": 1,
         "height": 0.5069444444444444,
         "label": "Figure 2(a)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-34-fig2-reviewed.jpg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-34-thumb-320.webp",
+            "width": 320,
+            "height": 135
+          },
+          {
+            "src": "assets/uploads/pub-34-thumb-520.webp",
+            "width": 520,
+            "height": 219
+          }
+        ],
+        "crop": [
+          0,
+          0,
+          1,
+          0.5069444444444444
+        ]
       }
     },
     {
@@ -1833,6 +2039,22 @@
         "width": 0.32413793103448274,
         "height": 0.49390243902439024,
         "label": "Figure 1(d)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-35.jpg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-35-thumb-188.webp",
+            "width": 188,
+            "height": 162
+          }
+        ],
+        "crop": [
+          0.6758620689655173,
+          0.5060975609756098,
+          0.32413793103448274,
+          0.49390243902439024
+        ]
       }
     },
     {
@@ -1860,6 +2082,27 @@
         "width": 1,
         "height": 0.4953664700926706,
         "label": "Excitation-position-dependent lasing spectra and microrod geometry (Figure 4a)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-36-figure4-original.jpeg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-36-thumb-320.webp",
+            "width": 320,
+            "height": 269
+          },
+          {
+            "src": "assets/uploads/pub-36-thumb-700.webp",
+            "width": 700,
+            "height": 588
+          }
+        ],
+        "crop": [
+          0,
+          0,
+          1,
+          0.4953664700926706
+        ]
       }
     },
     {
@@ -1887,6 +2130,27 @@
         "width": 0.4988085782366958,
         "height": 0.568609865470852,
         "label": "Representative nanowire TEM (Figure 1a)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-37.jpg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-37-thumb-320.webp",
+            "width": 320,
+            "height": 323
+          },
+          {
+            "src": "assets/uploads/pub-37-thumb-628.webp",
+            "width": 628,
+            "height": 634
+          }
+        ],
+        "crop": [
+          0,
+          0,
+          0.4988085782366958,
+          0.568609865470852
+        ]
       }
     },
     {
@@ -1914,6 +2178,22 @@
         "width": 0.4673076923076923,
         "height": 0.4196078431372549,
         "label": "Twin-plane atomic structure (Figure 3a)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-38-original.jpeg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-38-thumb-243.webp",
+            "width": 243,
+            "height": 214
+          }
+        ],
+        "crop": [
+          0,
+          0,
+          0.4673076923076923,
+          0.4196078431372549
+        ]
       }
     },
     {
@@ -1942,6 +2222,27 @@
         "width": 0.6615384615384615,
         "height": 0.3617021276595745,
         "label": "Figure 3(a)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-39-fig3-reviewed.jpg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-39-thumb-320.webp",
+            "width": 320,
+            "height": 206
+          },
+          {
+            "src": "assets/uploads/pub-39-thumb-344.webp",
+            "width": 344,
+            "height": 221
+          }
+        ],
+        "crop": [
+          0,
+          0,
+          0.6615384615384615,
+          0.3617021276595745
+        ]
       }
     },
     {
@@ -1969,6 +2270,27 @@
         "width": 0.49682875264270615,
         "height": 1,
         "label": "Sample A ZnO nanotube array (Figure 1a)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-40-figure1-original.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-40-thumb-320.webp",
+            "width": 320,
+            "height": 319
+          },
+          {
+            "src": "assets/uploads/pub-40-thumb-470.webp",
+            "width": 470,
+            "height": 469
+          }
+        ],
+        "crop": [
+          0,
+          0,
+          0.49682875264270615,
+          1
+        ]
       }
     },
     {
@@ -1989,7 +2311,22 @@
       "imageHeight": 567,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-41-graphical-abstract-reviewed.jpg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-41-thumb-320.webp",
+            "width": 320,
+            "height": 291
+          },
+          {
+            "src": "assets/uploads/pub-41-thumb-623.webp",
+            "width": 623,
+            "height": 567
+          }
+        ]
+      }
     },
     {
       "id": "pub-42",
@@ -2009,7 +2346,22 @@
       "imageHeight": 242,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-42-original.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-42-thumb-320.webp",
+            "width": 320,
+            "height": 149
+          },
+          {
+            "src": "assets/uploads/pub-42-thumb-520.webp",
+            "width": 520,
+            "height": 242
+          }
+        ]
+      }
     },
     {
       "id": "pub-43",
@@ -2036,6 +2388,27 @@
         "width": 0.5100154083204931,
         "height": 0.6698564593301436,
         "label": "GaN LED layer structure (Figure 4a, right)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-43.jpg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-43-thumb-320.webp",
+            "width": 320,
+            "height": 271
+          },
+          {
+            "src": "assets/uploads/pub-43-thumb-331.webp",
+            "width": 331,
+            "height": 280
+          }
+        ],
+        "crop": [
+          0.4899845916795069,
+          0,
+          0.5100154083204931,
+          0.6698564593301436
+        ]
       }
     },
     {
@@ -2056,7 +2429,17 @@
       "imageHeight": 156,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-44-original.jpg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-44-thumb-312.webp",
+            "width": 312,
+            "height": 156
+          }
+        ]
+      }
     },
     {
       "id": "pub-45",
