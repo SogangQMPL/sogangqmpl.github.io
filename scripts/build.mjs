@@ -14,10 +14,23 @@ const template=(await readFile(path.join(root,'template.html'),'utf8'))
  .replace('%%ROOT%%app.js',`%%ROOT%%app.js?v=${appVersion}`);
 const output=path.join(root,'dist');
 const siteURL='https://sogangqmpl.github.io/';
+const pageDescriptions={
+ research:'Explore quantum information, solid-state physics and semiconductor devices based on two-dimensional materials at Sogang QMPL.',
+ people:'Meet Hyeonjun Baek, assistant professor of physics at Sogang University, and see his professional experience and education.',
+ students:'Meet the students of the Quantum Materials & Photonics Lab at Sogang University.',
+ publications:'Browse papers from the H. Baek Research Group on excitons, quantum light, photonics and semiconductor devices.',
+ news:'Read the latest awards and conference presentations from the Quantum Materials & Photonics Lab.',
+ activities:'See photos and updates from activities at the Quantum Materials & Photonics Lab.',
+ join:'Find recruitment information and contact details for graduate students and undergraduate researchers at Sogang QMPL.',
+};
+const heroImage=safeURL(data.hero?.image);
+const shareCard=!heroImage||heroImage==='assets/lab-overview.webp';
+const pageShareImage=shareCard?'assets/lab-share.jpg':heroImage;
+const pageShareAlt=shareCard?'Quantum Materials & Photonics Lab, Sogang University, beside the lab’s triangular lattice image.':data.hero?.imageAlt||data.site.title;
 await mkdir(output,{recursive:true});
 const allPages=[...pages,...data.news.map(n=>'post-'+n.id),'404'];
 for(const page of allPages){
- const notFound=page==='404',title=pageTitle(data,page),post=findPost(data,page),description=post?(post.body||post.summary||post.title):notFound?'Page not found.':data.site.description;
+ const notFound=page==='404',title=pageTitle(data,page),post=findPost(data,page),description=post?(post.body||post.summary||post.title):notFound?'Page not found.':pageDescriptions[page]||data.site.description;
  let html=template.replaceAll('%%ROOT%%',notFound?'/':'').replaceAll('%%TITLE%%',escapeHTML(title)).replaceAll('%%DESCRIPTION%%',escapeHTML(description)).replaceAll('%%PAGE%%',page).replace('%%CONTENT%%',render(data,page));
  if(notFound)html=html.replace('  <title>','  <meta name="robots" content="noindex">\n  <title>');
  if(post){
@@ -34,6 +47,13 @@ for(const page of allPages){
     tags.push(`<meta property="og:image:width" content="${share.width}">`,`<meta property="og:image:height" content="${share.height}">`);
    }
   }
+  html=html.replace('<meta property="og:type" content="website">',tags.join('\n  '));
+ }else if(!notFound){
+  const canonical=new URL(page==='index'?'':page+'.html',siteURL).href;
+  const tags=['<meta property="og:type" content="website">',`<meta property="og:url" content="${escapeHTML(canonical)}">`,`<link rel="canonical" href="${escapeHTML(canonical)}">`,
+   `<meta property="og:image" content="${escapeHTML(new URL(pageShareImage,siteURL).href)}">`,`<meta property="og:image:alt" content="${escapeHTML(pageShareAlt)}">`,
+   '<meta name="twitter:card" content="summary_large_image">'];
+  if(shareCard)tags.push('<meta property="og:image:width" content="1200">','<meta property="og:image:height" content="630">');
   html=html.replace('<meta property="og:type" content="website">',tags.join('\n  '));
  }
  await writeFile(path.join(output,post?postFileName(post):page+'.html'),html);
