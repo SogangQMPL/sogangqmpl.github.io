@@ -605,7 +605,7 @@ html:has(.publication-viewer[open]){overflow:hidden;overscroll-behavior:none}
 @keyframes mobile-menu-enter{from{transform:translateX(100%)}to{transform:translateX(0)}}
 @media(prefers-reduced-motion:reduce){.mobile-menu[open]{animation:none}}
 @media(max-width:360px){
- .site-header .header-inner{flex-wrap:nowrap;column-gap:4px}
+ .nav-disclosures-ready .site-header .header-inner{flex-wrap:nowrap;column-gap:4px}
  .menu-toggle{min-width:62px;gap:4px}
 }
 @media(max-width:800px){
