@@ -44,7 +44,21 @@ export function appearanceCSS(data) {
  }
  return variables.length?`:root{${variables.join(';')}}@media(max-width:600px){:root{--page-gutter:20px;--layout-gap:24px}}`:'';
 }
-const sectionTitle = (title, link, label) => `<div class="section-heading"><h2>${title}</h2>${link ? `<a class="more-link" href="${link}" aria-label="${label}"><span>More</span><span aria-hidden="true">→</span></a>` : ''}</div>`;
+const sectionTitle = (title, link, label) => `<div class="section-heading"><h2>${title}</h2>${link ? `<a class="more-link" href="${link}"><span>${label}</span><span aria-hidden="true">→</span></a>` : ''}</div>`;
+
+function thumbnailImage(display,source,sizes,crop=null) {
+ if(display?.source!==source||!Array.isArray(display.variants)||JSON.stringify(display.crop??null)!==JSON.stringify(crop))return null;
+ const variants=display.variants.filter(v=>safeURL(v?.src).startsWith('assets/')&&Number.isInteger(v.width)&&v.width>0&&Number.isInteger(v.height)&&v.height>0).sort((a,b)=>a.width-b.width);
+ if(!variants.length)return null;
+ const {src,width,height}=variants.at(-1);
+ return {src,width,height,responsive:variants.length>1?` srcset="${e(variants.map(v=>`${v.src} ${v.width}w`).join(', '))}" sizes="${sizes}"`:''};
+}
+const zoomIcon='<span class="figure-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M7.5 10.5h6m-3-3v6"/></svg></span>';
+function zoomLink({image,original=image,title,label='',source='',width,height,cls=''},content) {
+ const dimensions=Number(width)>0&&Number(height)>0?` data-figure-width="${Number(width)}" data-figure-height="${Number(height)}"`:'';
+ return `<a class="figure-trigger${cls?' '+cls:''}" href="${e(original)}" target="_blank" rel="noopener noreferrer" data-figure-image="${e(image)}" data-figure-title="${e(title)}" data-figure-label="${e(label)}" data-figure-source="${e(source)}"${dimensions} aria-label="Enlarge image — ${e(title)}">${content}${zoomIcon}</a>`;
+}
+const figureViewer = `<dialog id="image-viewer" class="publication-viewer" aria-labelledby="figure-viewer-title"><div class="figure-viewer-heading"><h2 id="figure-viewer-title"></h2><button class="figure-viewer-close" type="button" aria-label="Close image">×</button></div><p class="figure-viewer-label"></p><img class="figure-viewer-image" alt=""><div class="figure-viewer-links"><a class="figure-viewer-original" target="_blank" rel="noopener noreferrer">Open original image ↗</a><a class="figure-viewer-source" target="_blank" rel="noopener noreferrer">Figure source ↗</a></div></dialog>`;
 
 function editContext(data, enabled = false) {
  const edit=(path,type,label,descriptor={})=>enabled&&path?` data-edit-path="${e(path)}" data-edit-type="${e(type)}" data-edit-label="${e(label)}" data-edit-descriptor="${e(JSON.stringify({path,type,label,...descriptor}))}"`:'';
@@ -59,17 +73,20 @@ function editContext(data, enabled = false) {
 
 function header(data,page,edit) {
  const member=['people','students'].includes(page),highlights=['news','activities'].includes(page)||page.startsWith('post-');
- const link=(id,label,active=false,section=false)=>`<a href="${id}.html" ${section?(active?'class="section-current"':''):page===id?'aria-current="page"':active?'class="section-current"':''}>${label}</a>`;
- const navigation=()=>`<div class="nav-item">${link('index','Home')}</div>
-     <div class="nav-item has-submenu">${link('people','Member',member,true)}<div class="nav-dropdown">${link('people','Professor')}${link('students','Students')}</div></div>
+ const link=(id,label,state=page===id?' aria-current="page"':'')=>`<a href="${id}.html"${state}>${label}</a>`;
+ const group=(mobile,id,label,active,first,children)=>mobile
+  ?`<div class="nav-item"><span class="nav-group-label${active?' section-current':''}" id="mobile-nav-${id}">${label}</span><div class="nav-dropdown" role="group" aria-labelledby="mobile-nav-${id}">${children}</div></div>`
+  :`<div class="nav-item has-submenu">${link(first,label,active?' class="section-current"':'')}<button type="button" class="nav-submenu-toggle" aria-label="${label} submenu" aria-expanded="false" aria-controls="nav-${id}"></button><div class="nav-dropdown" id="nav-${id}">${children}</div></div>`;
+ const navigation=mobile=>`<div class="nav-item">${link('index','Home')}</div>
+     ${group(mobile,'member','Member',member,'people',link('people','Professor')+link('students','Students'))}
      <div class="nav-item">${link('publications','Publication')}</div>
      <div class="nav-item">${link('research','Research')}</div>
-     <div class="nav-item has-submenu">${link('news','Highlights',highlights,true)}<div class="nav-dropdown">${link('news','News')}${link('activities','Activities')}</div></div>`;
+     ${group(mobile,'highlights','Highlights',highlights,'news',link('news','News')+link('activities','Activities'))}`;
  return `<header class="site-header"><div class="container header-inner">
    <a class="brand" href="index.html" aria-label="${e(data.site.title)} — Home"><span${edit('/site/group','text','연구 그룹명')}>${e(data.site.group)}</span><small>@ Sogang Univ.</small></a>
    <button class="menu-toggle" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="mobile-navigation"><span class="menu-label">Menu</span><span class="menu-icon" aria-hidden="true">☰</span></button>
-   <nav id="main-nav" aria-label="Main navigation">${navigation()}</nav>
- </div><dialog id="mobile-navigation" class="mobile-menu" aria-labelledby="mobile-menu-title"><div class="mobile-menu-heading"><h2 id="mobile-menu-title">Menu</h2><button class="mobile-menu-close" type="button" aria-label="Close menu" autofocus><span aria-hidden="true">×</span></button></div><nav class="mobile-menu-links" aria-label="Mobile navigation">${navigation()}</nav></dialog></header>`;
+   <nav id="main-nav" aria-label="Main navigation">${navigation(false)}</nav>
+ </div><dialog id="mobile-navigation" class="mobile-menu" aria-labelledby="mobile-menu-title"><div class="mobile-menu-heading"><h2 id="mobile-menu-title">Menu</h2><button class="mobile-menu-close" type="button" aria-label="Close menu" autofocus><span aria-hidden="true">×</span></button></div><nav class="mobile-menu-links" aria-label="Mobile navigation">${navigation(true)}</nav></dialog></header>`;
 }
 
 function footer(data,edit) {
@@ -99,15 +116,17 @@ function pubEntry(p,number,compact=false,edit) {
  const path=edit.path('publications',p);
  const image=!compact&&safeURL(p.image),label=p.imageLabel||'Research figure';
  const crop=p.imagePreview,hasCrop=crop&&[crop.x,crop.y,crop.width,crop.height].every(Number.isFinite)&&crop.x>=0&&crop.y>=0&&crop.width>0&&crop.height>0&&crop.x+crop.width<=1&&crop.y+crop.height<=1&&p.imageWidth>0&&p.imageHeight>0;
- const imageHTML=`<img src="${e(image)}" alt="${e(p.imageAlt||label+' from '+p.title)}" loading="lazy"${p.imageWidth&&p.imageHeight?` width="${Number(p.imageWidth)}" height="${Number(p.imageHeight)}"`:''}${hasCrop?` style="position:absolute;max-width:none;max-height:none;width:${100/crop.width}%;height:auto;left:${-100*crop.x/crop.width}%;top:${-100*crop.y/crop.height}%"`:''}${edit(path+'/image','image','논문 그림',{altPath:path+'/imageAlt',widthPath:path+'/imageWidth',heightPath:path+'/imageHeight',cropPath:path+'/imagePreview',sourcePath:path+'/imageSource',imageLabelPath:path+'/imageLabel'})}>`;
- const thumbnail=hasCrop?`<span class="pub-figure-panel" style="--preview-ratio:${p.imageWidth*crop.width/(p.imageHeight*crop.height)};aspect-ratio:var(--preview-ratio)">${imageHTML}</span>`:imageHTML;
- const figure=image?`<figure class="pub-figure"><a class="pub-figure-link" href="${e(image)}" data-publication-figure data-figure-title="${e(p.title)}" data-figure-label="${e(label)}" data-figure-source="${e(safeURL(p.imageSource))}" aria-label="View full-size figure — ${e(p.title)}">${thumbnail}</a></figure>`:'';
- return `<article class="publication${compact?' publication-short':' publication-illustrated'+(image?' has-figure':'')}" data-year="${e(p.year)}" data-search="${e([p.title,p.authors,p.journal,p.doi].join(' '))}"${edit.item(path,'논문')}>
+ const display=image&&thumbnailImage(p.imageThumbnail,image,'(max-width: 600px) min(360px, calc(100vw - 64px)), (max-width: 800px) 180px, 220px',hasCrop?[crop.x,crop.y,crop.width,crop.height]:null);
+ const cropInCSS=hasCrop&&!display, width=display?.width||p.imageWidth,height=display?.height||p.imageHeight;
+ const imageHTML=`<img src="${e(display?.src||image)}"${display?.responsive||''} alt="${e(p.imageAlt||label+' from '+p.title)}" loading="lazy" decoding="async"${width&&height?` width="${Number(width)}" height="${Number(height)}"`:''}${cropInCSS?` style="position:absolute;max-width:none;max-height:none;width:${100/crop.width}%;height:auto;left:${-100*crop.x/crop.width}%;top:${-100*crop.y/crop.height}%"`:''}${edit(path+'/image','image','논문 그림',{altPath:path+'/imageAlt',widthPath:path+'/imageWidth',heightPath:path+'/imageHeight',cropPath:path+'/imagePreview',sourcePath:path+'/imageSource',imageLabelPath:path+'/imageLabel'})}>`;
+ const thumbnail=cropInCSS?`<span class="pub-figure-panel" style="--preview-ratio:${p.imageWidth*crop.width/(p.imageHeight*crop.height)};aspect-ratio:var(--preview-ratio)">${imageHTML}</span>`:imageHTML;
+ const figure=image?`<figure class="pub-figure">${zoomLink({image,title:p.title,label,source:safeURL(p.imageSource),width:p.imageWidth,height:p.imageHeight,cls:'pub-figure-link'},thumbnail)}</figure>`:'';
+ return `<article class="publication${compact?' publication-short':' publication-illustrated'+(image?' has-figure':'')}" data-year="${e(p.year)}" data-search="${e([p.title,p.authors,p.journal,p.doi].join(' '))}" data-publication-url="${e(safeURL(p.url))}"${edit.item(path,'논문')}>
    ${compact?'':`<span class="pub-index">${number}.</span>`}
-   ${figure}
    <div class="pub-content"><h3${edit(path+'/title','publication-title','논문 제목',{segmentsPath:path+'/titleSegments',urlPath:path+'/url',doiPath:path+'/doi'})}>${external(p.url||(p.doi?'https://doi.org/'+p.doi:''),publicationTitle(p))}</h3>
    <p class="authors"${edit(path+'/authors','multiline','논문 저자',{labAuthorsPath:path+'/labAuthors'})}>${publicationAuthors(p)}</p>
    <p class="pub-journal"${edit(path+'/journal','text','학술지 · 권 · 페이지')}>${publicationCitation(p.journal)}</p></div>
+   ${figure}
  </article>`;
 }
 function newsEntry(n,edit) {
@@ -127,7 +146,9 @@ function highlightProse(text,n) {
 function highlightEntry(n,edit) {
  const path=edit.path('news',n),firstPhotoIndex=(n.content||[]).findIndex(block=>block.type==='image');
  const firstPhoto=(n.content||[]).find(block=>block.type==='image'),image=safeURL(n.image)||safeURL(firstPhoto?.src);
- const size=image===safeURL(firstPhoto?.src)&&firstPhoto?.width&&firstPhoto?.height?` width="${Number(firstPhoto.width)}" height="${Number(firstPhoto.height)}"`:'';
+ const display=image&&thumbnailImage(n.imageThumbnail,image,'(max-width: 800px) min(640px, calc(100vw - 48px)), 400px');
+ const dimensions=display||(image===safeURL(firstPhoto?.src)?firstPhoto:null);
+ const size=dimensions?.width&&dimensions?.height?` width="${Number(dimensions.width)}" height="${Number(dimensions.height)}"`:'';
  const excerpt=highlightExcerpt(n);
  const excerptAttributes=text=>{
   if(n.excerpt?.trim())return edit(path+'/excerpt','multiline','목록 소개');
@@ -138,7 +159,8 @@ function highlightEntry(n,edit) {
  const imageDescriptor=safeURL(n.image)?{altPath:path+'/imageAlt'}:{altPath:path+'/content/'+firstPhotoIndex+'/alt',widthPath:path+'/content/'+firstPhotoIndex+'/width',heightPath:path+'/content/'+firstPhotoIndex+'/height',fullSrcPath:path+'/content/'+firstPhotoIndex+'/fullSrc'};
  const details=excerpt.length?`<div class="highlight-excerpt">${excerpt.map(text=>`<p${language(text)}${excerptAttributes(text)}>${highlightProse(text,n)}</p>`).join('')}</div>`:'';
  const meta=`<time id="${e(n.id)}-date" datetime="${e(n.date)}"${edit(path+'/date','date','게시 날짜')}>${e(date(n.date))}</time>`;
- return `<article class="news-entry highlight-entry${image?' has-image':''}" id="${e(n.id)}" data-category="${e(n.category)}"${edit.item(path,n.category==='Activities'?'활동':'소식')}><a class="highlight-link" href="${e(postFileName(n))}" aria-labelledby="${e(n.id)}-title" aria-describedby="${e(n.id)}-date">${image?`<figure class="highlight-image"><img src="${e(image)}" alt="${e(n.imageAlt||firstPhoto?.alt||n.title)}" loading="lazy"${size}${edit(imagePath,'image','목록 대표 사진',imageDescriptor)}></figure>`:''}<div class="highlight-copy"><h2 id="${e(n.id)}-title"${language(n.title)}${edit(path+'/title','text','게시물 제목')}>${e(n.title)}</h2>${n.category==='Activities'?meta:`<div class="highlight-meta"><span class="highlight-category"${edit(path+'/category','text','게시물 분류',{options:['Awards','Conferences','Activities']})}>${e(n.category)}</span>${meta}</div>`}${details}</div></a></article>`;
+ const figure=image?`<figure class="highlight-image"><img src="${e(display?.src||image)}"${display?.responsive||''} alt="${e(n.imageAlt||firstPhoto?.alt||n.title)}" loading="lazy" decoding="async"${size}${edit(imagePath,'image','목록 대표 사진',imageDescriptor)}></figure>`:'';
+ return `<article class="news-entry highlight-entry${image?' has-image':''}" id="${e(n.id)}" data-category="${e(n.category)}"${edit.item(path,n.category==='Activities'?'활동':'소식')}><a class="highlight-link" href="${e(postFileName(n))}" aria-labelledby="${e(n.id)}-title" aria-describedby="${e(n.id)}-date"><div class="highlight-copy"><h2 id="${e(n.id)}-title"${language(n.title)}${edit(path+'/title','text','게시물 제목')}>${e(n.title)}</h2>${n.category==='Activities'?meta:`<div class="highlight-meta"><span class="highlight-category"${edit(path+'/category','text','게시물 분류',{options:['Awards','Conferences','Activities']})}>${e(n.category)}</span>${meta}</div>`}</div>${figure}${details}</a></article>`;
 }
 
 function postInline(block) {
@@ -151,12 +173,15 @@ function postInline(block) {
   return text;
  }).join('');
 }
-function postBlock(block,edit,path,legacyField='') {
+function postBlock(block,edit,path,legacyField='',coverThumbnail) {
  if(block.type==='image'){
   const src=safeURL(block.src);if(!src)return '';const fullSrc=safeURL(block.fullSrc)||src;
   const size=Number(block.width)>0&&Number(block.height)>0?` width="${Number(block.width)}" height="${Number(block.height)}"`:'';
   const imagePath=legacyField?path+'/image':path+'/src',descriptor=legacyField?{altPath:path+'/imageAlt'}:{altPath:path+'/alt',widthPath:path+'/width',heightPath:path+'/height',fullSrcPath:path+'/fullSrc'};
-  return `<figure class="post-photo"${legacyField?'':edit.item(path,'본문 사진')}><a href="${e(fullSrc)}" target="_blank" rel="noopener noreferrer" aria-label="${e(block.alt||'Photo')} — View full-size photo (opens in a new tab)"><img src="${e(src)}" alt="${e(block.alt||'')}"${size} loading="lazy"${edit(imagePath,'image','본문 사진',descriptor)}></a>${block.caption?`<figcaption${language(block.caption)}${edit(path+'/caption','text','사진 아래 설명')}>${e(block.caption)}</figcaption>`:''}</figure>`;
+  const photo=`<img src="${e(src)}" alt="${e(block.alt||'')}"${size} loading="lazy" decoding="async"${edit(imagePath,'image','본문 사진',descriptor)}>`;
+  const cover=thumbnailImage(coverThumbnail,src,'(max-width: 600px) calc(100vw - 48px), calc(100vw - 56px)');
+  const responsivePhoto=cover?.responsive?`<picture><source media="(max-width: 800px)"${cover.responsive}>${photo}</picture>`:photo;
+  return `<figure class="post-photo"${legacyField?'':edit.item(path,'본문 사진')}>${zoomLink({image:fullSrc,title:block.alt||'Photo',label:block.caption,width:fullSrc===src?block.width:undefined,height:fullSrc===src?block.height:undefined},responsivePhoto)}${block.caption?`<figcaption${language(block.caption)}${edit(path+'/caption','text','사진 아래 설명')}>${e(block.caption)}</figcaption>`:''}</figure>`;
  }
  const lang=language(block.text||(block.children||[]).map(run=>run.text).join(' '));
  const attributes=edit(legacyField?path+'/'+legacyField:path,legacyField?'multiline':'richtext',block.type==='heading'?'본문 소제목':block.type==='quote'?'인용문':block.type==='list'?'본문 목록':'게시물 본문')+(legacyField?'':edit.item(path,'본문 내용'));
@@ -173,11 +198,16 @@ function postPage(data,page,edit) {
  if(!post)return `<main id="main" tabindex="-1" class="container page-layout post-page">${pageIntro('Post not found','This post may have been removed from the draft.')}<a href="news.html">Back to News</a></main>`;
  const activity=post.category==='Activities',archive=activity?'activities':'news',label=activity?'Activities':'News';
  const path=edit.path('news',post),hasContent=Boolean(post.content?.length);
- const siblings=sortedNews(data).filter(n=>(n.category==='Activities')===activity),index=siblings.findIndex(n=>n.id===post.id);
- const older=siblings[index+1],newer=siblings[index-1];
+ const siblings=sortedNews(data).filter(n=>(n.category==='Activities')===activity);
  const blocks=post.content?.length?post.content:[{type:'paragraph',text:post.body||post.summary},...(post.image?[{type:'image',src:post.image,alt:post.imageAlt||post.title}]:[])];
- const adjacent=(item,direction)=>item?`<a class="post-${direction.toLowerCase()}" href="${e(postFileName(item))}"><span>${direction}</span>${e(item.title)}</a>`:`<span></span>`;
- return `<main id="main" tabindex="-1" class="container page-layout post-page"><a class="post-back" href="${archive}.html">← ${label}</a><article class="post"${edit.item(path,'게시물')}><header class="post-header"><p class="post-category"${edit(path+'/category','text','게시물 분류',{options:['Awards','Conferences','Activities']})}>${e(post.category)}</p><h1${language(post.title)}${edit(path+'/title','text','게시물 제목')}>${e(post.title)}</h1><time datetime="${e(post.date)}"${edit(path+'/date','date','게시 날짜')}>${e(date(post.date))}</time></header><div class="post-body"${edit.collection(path+'/content','게시물 내용')}>${blocks.map((block,index)=>postBlock(block,edit,hasContent?path+'/content/'+index:path,hasContent?'':post.body?'body':'summary')).join('')}</div></article><nav class="post-navigation" aria-label="More ${label.toLowerCase()} posts">${adjacent(older,'Previous')}${adjacent(newer,'Next')}</nav><a class="post-back post-back-bottom" href="${archive}.html">All ${label.toLowerCase()}</a></main>`;
+ const adjacent=(item,side,label)=>item?`<a class="post-${side}" href="${e(postFileName(item))}"><span>${label}</span>${e(item.title)}</a>`:'<span></span>';
+ const navigation=(items,filtered=false)=>{
+  const index=items.findIndex(n=>n.id===post.id),older=items[index+1],newer=items[index-1];
+  if(!older&&!newer)return '';
+  return `<nav class="post-navigation" aria-label="More ${e((filtered?post.category:label).toLowerCase())} posts"${filtered?' data-filtered-posts hidden':''}>${adjacent(older,'previous','Older post')}${adjacent(newer,'next','Newer post')}</nav>`;
+ };
+ const body=blocks.map((block,index)=>postBlock(block,edit,hasContent?path+'/content/'+index:path,hasContent?'':post.body?'body':'summary',post.imageThumbnail)).join('');
+ return `<main id="main" tabindex="-1" class="container page-layout post-page" data-post-category="${e(post.category)}"><a class="post-back" href="${archive}.html">← ${label}</a><article class="post"${edit.item(path,'게시물')}><header class="post-header"><p class="post-category"${edit(path+'/category','text','게시물 분류',{options:['Awards','Conferences','Activities']})}>${e(post.category)}</p><h1${language(post.title)}${edit(path+'/title','text','게시물 제목')}>${e(post.title)}</h1><time datetime="${e(post.date)}"${edit(path+'/date','date','게시 날짜')}>${e(date(post.date))}</time></header><div class="post-body"${edit.collection(path+'/content','게시물 내용')}>${body}</div></article>${navigation(siblings)}${activity?'':navigation(siblings.filter(n=>n.category===post.category),true)}<a class="post-back post-back-bottom" href="${archive}.html">All ${label.toLowerCase()}</a></main>`;
 }
 
 
@@ -193,7 +223,7 @@ function home(data,page,edit) {
  const announcement=notice.enabled?`<section class="announcement" aria-label="Announcement"${edit.item('/announcement','홈 공지')}><h2${language(notice.title)}${edit('/announcement/title','text','홈 공지 제목',{urlPath:'/announcement/url'})}>${href?`<a href="${e(href)}">${e(notice.title)}</a>`:e(notice.title)}</h2>${announcementBody}</section>`:'';
  return `<main id="main" tabindex="-1" class="container page-layout home">${intro}${announcement}
    <section class="home-news home-section">${sectionTitle('News','news.html','More news')}<div class="news-list"${edit.collection('/news','소식')}>${sortedNews(data).filter(n=>n.category!=='Activities').slice(0,3).map(n=>newsEntry(n,edit)).join('')}</div></section>
-   <section class="home-publications home-section">${sectionTitle('Publications','publications.html','More publications')}<div class="publication-list"${edit.collection('/publications','논문')}>${selected.map((p,i)=>pubEntry(p,i,true,edit)).join('')}</div></section>
+   <section class="home-publications home-section">${sectionTitle('Publications','publications.html','More papers')}<div class="publication-list"${edit.collection('/publications','논문')}>${selected.map((p,i)=>pubEntry(p,i,true,edit)).join('')}</div></section>
  </main>`;
 }
 const pageIntro = (title, description) => `<header class="page-intro"><h1>${title}</h1>${description?`<p>${e(description)}</p>`:''}</header>`;
@@ -207,7 +237,10 @@ function researchPage(data,page,edit) {
   const fullSrc=safeURL(image.fullSrc)||src;
   const size=Number(image.width)>0&&Number(image.height)>0?` width="${Number(image.width)}" height="${Number(image.height)}"`:'';
   const imagePath=legacy?path+'/image':path+'/src',descriptor=legacy?{altPath:path+'/imageAlt'}:{altPath:path+'/alt',widthPath:path+'/width',heightPath:path+'/height',fullSrcPath:path+'/fullSrc',sourcePath:path+'/sourceURL'};
-  return `<figure class="research-original-figure"${legacy?'':edit.item(path,'상세 연구 그림')}><a href="${e(fullSrc)}" target="_blank" rel="noopener noreferrer" aria-label="Open image — ${e(image.caption||image.alt||'Research diagram')} (opens in a new tab)"><img src="${e(src)}" alt="${e(image.alt||'')}"${size} loading="lazy"${edit(imagePath,'image','상세 연구 그림',descriptor)}></a>${image.caption?`<figcaption${language(image.caption)}${edit(path+'/caption','text','연구 그림 설명')}>${e(image.caption)}</figcaption>`:''}</figure>`;
+  const imageURL=fullSrc.startsWith('assets/')||/\.(?:webp|png|jpe?g|gif|svg)(?:[?#]|$)/i.test(fullSrc)?fullSrc:src;
+  const source=fullSrc!==imageURL?fullSrc:safeURL(image.sourceURL);
+  const figure=`<img src="${e(src)}" alt="${e(image.alt||'')}"${size} loading="lazy" decoding="async"${edit(imagePath,'image','상세 연구 그림',descriptor)}>`;
+  return `<figure class="research-original-figure"${legacy?'':edit.item(path,'상세 연구 그림')}>${zoomLink({image:imageURL,original:fullSrc,title:image.alt||'Research diagram',label:image.caption,source,width:imageURL===src?image.width:undefined,height:imageURL===src?image.height:undefined},figure)}${image.caption?`<figcaption${language(image.caption)}${edit(path+'/caption','text','연구 그림 설명')}>${e(image.caption)}</figcaption>`:''}</figure>`;
  };
  const papersFor=ids=>[...new Set(ids||[])].map(id=>lookup.get(id)).filter(Boolean).sort((a,b)=>Number(b.year)-Number(a.year));
  const topic=(t,groupIndex,topicIndex)=>{
@@ -216,8 +249,11 @@ function researchPage(data,page,edit) {
    const shortTitles=new Map((t.outcomes||[]).filter(o=>o.paperIds?.length===1).map(o=>[o.paperIds[0],o.title]));
    const summary=t.summary||t.description,description=t.description&&t.description!==summary?t.description:'';
    const schematic=safeURL(t.schematic)||safeURL(t.image);
-   const schematicSize=Number(t.schematicWidth)>0&&Number(t.schematicHeight)>0?` width="${Number(t.schematicWidth)}" height="${Number(t.schematicHeight)}"`:'';
+   const display=schematic&&thumbnailImage(t.schematicThumbnail,schematic,'(max-width: 600px) calc(100vw - 48px), (max-width: 1100px) 520px, 420px');
+   const width=display?.width||t.schematicWidth,height=display?.height||t.schematicHeight;
+   const schematicSize=Number(width)>0&&Number(height)>0?` width="${Number(width)}" height="${Number(height)}"`:'';
    const credit=t.schematicCredit,creditHTML=credit?.source===schematic&&credit?.text?`<figcaption class="topic-figure-credit">Image: ${external(credit.url,e(credit.text))}${credit.license?` · ${external(credit.licenseURL,e(credit.license))}`:''}${credit.note?` · ${e(credit.note)}`:''}</figcaption>`:'';
+   const schematicHTML=schematic?`<img src="${e(display?.src||schematic)}"${display?.responsive||''} alt="${e(t.schematicAlt||t.imageAlt||t.title)}"${schematicSize} loading="lazy" decoding="async"${edit(path+(safeURL(t.schematic)?'/schematic':'/image'),'image','연구 주제 도식',{altPath:path+(safeURL(t.schematic)?'/schematicAlt':'/imageAlt'),...(safeURL(t.schematic)?{widthPath:path+'/schematicWidth',heightPath:path+'/schematicHeight'}:{})})}>`:'';
    const detailImages=Array.isArray(t.detailImages)?t.detailImages:(t.image?[{src:t.image,alt:t.imageAlt||t.title}]:[]);
    const sections=Array.isArray(t.detailSections)?t.detailSections.filter(section=>section&&(section.title?.trim()||section.body?.trim()||section.images?.length)):null;
    const detailContent=sections?sections.map((section,index)=>{
@@ -228,15 +264,15 @@ function researchPage(data,page,edit) {
     return `<section class="research-detail-section${images.length?' has-detail-figures':''}${wide?' wide-detail-figure':''}${imageLeft?' detail-figure-left':''}"${heading?` aria-labelledby="${e(titleID)}"`:''}${edit.item(sectionPath,'연구 상세 설명')}><div class="research-detail-copy">${heading?`<h4 id="${e(titleID)}"${language(heading)}${edit(sectionPath+'/title','text','상세 설명 제목')}>${e(heading)}</h4>`:''}${edit.paragraphs(section.body,sectionPath+'/body','연구 상세 내용')}</div>${images.length?`<div class="research-detail-media"${edit.collection(sectionPath+'/images','상세 연구 그림')}>${images.map((image,imageIndex)=>originalFigure(image,sectionPath+'/images/'+imageIndex)).join('')}</div>`:''}</section>`;
    }).join(''):edit.paragraphs(description,path+'/description','연구 상세 내용')+detailImages.map((image,index)=>originalFigure(image,Array.isArray(t.detailImages)?path+'/detailImages/'+index:path,!Array.isArray(t.detailImages))).join('');
    return `<article class="research-topic" id="${e(t.id)}"${edit.item(path,'하위 연구 주제')}><header class="topic-heading"><span class="topic-number" aria-hidden="true">${groupIndex+1}.${topicIndex+1}</span><h3${edit(path+'/title','text','하위 연구 주제명')}>${e(t.title)}</h3></header>
-     <div class="topic-layout${schematic?'':' topic-text-only'}">${schematic?`<figure class="topic-schematic"><a href="${e(schematic)}" target="_blank" rel="noopener noreferrer" aria-label="Open schematic — ${e(t.title)} (opens in a new tab)"><img src="${e(schematic)}" alt="${e(t.schematicAlt||t.imageAlt||t.title)}"${schematicSize} loading="lazy"${edit(path+(safeURL(t.schematic)?'/schematic':'/image'),'image','연구 주제 도식',{altPath:path+(safeURL(t.schematic)?'/schematicAlt':'/imageAlt'),...(safeURL(t.schematic)?{widthPath:path+'/schematicWidth',heightPath:path+'/schematicHeight'}:{})})}></a>${creditHTML}</figure>`:''}
-     <div class="topic-body">${t.focus?.length?`<ul class="topic-focus" aria-label="Research focus"${edit(path+'/focus','list','연구 초점')}>${t.focus.map(f=>`<li>${e(f)}</li>`).join('')}</ul>`:''}${summary?`<p class="topic-summary"${edit(path+(t.summary?'/summary':'/description'),'multiline','연구 주제 소개')}>${e(summary)}</p>`:''}
+     <div class="topic-layout${schematic?'':' topic-text-only'}"><div class="topic-body">${summary?`<p class="topic-summary"${edit(path+(t.summary?'/summary':'/description'),'multiline','연구 주제 소개')}>${e(summary)}</p>`:''}${t.focus?.length?`<ul class="topic-focus" aria-label="Research focus"${edit(path+'/focus','list','연구 초점')}>${t.focus.map(f=>`<li>${e(f)}</li>`).join('')}</ul>`:''}</div>
+     ${schematic?`<figure class="topic-schematic">${zoomLink({image:schematic,title:t.title,source:safeURL(credit?.url),width:t.schematicWidth,height:t.schematicHeight},schematicHTML)}${creditHTML}</figure>`:''}</div>
+     ${detailContent?`<details class="topic-more"><summary aria-label="Research details — ${e(t.title)}"><span class="topic-more-label">Research details</span><span class="topic-more-icon" aria-hidden="true"></span></summary><div class="topic-more-content"${edit.collection(path+'/detailSections','연구 상세 설명')}>${detailContent}</div></details>`:''}
      ${papers.length?`<div class="topic-evidence"><p class="result-label"${edit(path+'/paperIds','relation','관련 논문 연결',{collection:'/publications'})}>Related papers</p><ul class="result-list">${papers.map(paper=>{const paperPath=edit.path('publications',paper),outcomeIndex=(t.outcomes||[]).findLastIndex(outcome=>outcome.paperIds?.length===1&&outcome.paperIds[0]===paper.id),titlePath=outcomeIndex>=0?path+'/outcomes/'+outcomeIndex+'/title':paperPath+'/title';return `<li data-paper-id="${e(paper.id)}">${external(paper.url||(paper.doi?'https://doi.org/'+paper.doi:''),publicationTitle(paper,shortTitles.get(paper.id)||paper.title),'',edit(titlePath,outcomeIndex>=0?'text':'publication-title',outcomeIndex>=0?'관련 논문 표시 제목':'논문 제목',{urlPath:paperPath+'/url',segmentsPath:paperPath+'/titleSegments'}))}<span class="result-citation"${edit(paperPath+(paper.journal?'/journal':'/year'),paper.journal?'text':'number','논문 서지 정보')}>${publicationCitation(paper.journal||paper.year)}</span></li>`;}).join('')}</ul></div>`:''}
-     </div></div>${detailContent?`<details class="topic-more"><summary aria-label="Research details — ${e(t.title)}"><span class="topic-more-label">Research details</span><span class="topic-more-icon" aria-hidden="true"></span></summary><div class="topic-more-content"${edit.collection(path+'/detailSections','연구 상세 설명')}>${detailContent}</div></details>`:''}
    </article>`;
  };
  return `<main id="main" tabindex="-1" class="container page-layout research-page">${pageIntro('Research','')}
    <div class="research-groups"${edit.collection('/research','연구 분야')}>${data.research.map((r,i)=>{const path=edit.path('research',r);return `<section class="research-group" data-area="${e(r.id)}" id="${e(r.id)}" aria-labelledby="${e(r.id)}-title"${edit.item(path,'연구 분야')}><header class="theme-heading">${areaIcon(r)}<div class="theme-title"><span class="theme-number" aria-hidden="true">0${i+1}</span><h2 id="${e(r.id)}-title"${edit(path+'/title','text','연구 분야명')}>${e(r.title)}</h2></div><p${edit(path+'/summary','multiline','연구 분야 소개')}>${e(r.summary)}</p></header><div class="theme-content"><div class="research-topics"${edit.collection(path+'/topics','하위 연구 주제')}>${(r.topics||[]).map((t,j)=>topic(t,i,j)).join('')}</div></div></section>`;}).join('')}</div>
-   <details class="original-research-map"><summary>Research map</summary><a href="assets/research/original-overview.webp" target="_blank" rel="noopener noreferrer" aria-label="Open research map (opens in a new tab)"><img src="assets/research/original-overview.webp" alt="Two-dimensional materials supporting quantum information, solid-state physics and semiconductor devices" loading="lazy" width="1500" height="844"></a><div class="theme-map-diagrams">${data.research.filter(r=>safeURL(r.image)).map(r=>{const path=edit.path('research',r);return `<figure><img src="${e(safeURL(r.image))}" alt="${e(r.imageAlt||r.title)}" width="420" height="300" loading="lazy"${edit(path+'/image','image','분야 개념도',{altPath:path+'/imageAlt'})}><figcaption${edit(path+'/title','text','연구 분야명')}>${e(r.title)}</figcaption></figure>`;}).join('')}</div></details>
+   <details class="original-research-map"><summary>Research map</summary>${zoomLink({image:'assets/research/original-overview.webp',title:'Research map',width:1500,height:844},'<img src="assets/research/original-overview.webp" alt="Two-dimensional materials supporting quantum information, solid-state physics and semiconductor devices" loading="lazy" width="1500" height="844">')}<div class="theme-map-diagrams">${data.research.filter(r=>safeURL(r.image)).map(r=>{const path=edit.path('research',r),image=safeURL(r.image);return `<figure>${zoomLink({image,title:r.title},`<img src="${e(image)}" alt="${e(r.imageAlt||r.title)}" width="420" height="300" loading="lazy"${edit(path+'/image','image','분야 개념도',{altPath:path+'/imageAlt'})}>`)}<figcaption${edit(path+'/title','text','연구 분야명')}>${e(r.title)}</figcaption></figure>`;}).join('')}</div></details>
  </main>`;
 }
 
@@ -255,8 +291,9 @@ function personCard(p,professor=false,edit) {
  const widths=validDisplay&&Array.isArray(display.widths)?[...new Set(display.widths.filter(w=>Number.isInteger(w)&&w>=32&&w<=1024))].sort((a,b)=>a-b):[];
  const defaultWidth=widths.find(w=>w>=(professor?200:150))||widths.at(-1);
  const image=defaultWidth?`${display.base}-${defaultWidth}.webp`:safeURL(p.image,'assets/portrait.svg');
- const responsive=widths.length?` srcset="${e(widths.map(w=>`${display.base}-${w}.webp ${w}w`).join(', '))}" sizes="${professor?'(max-width: 600px) 140px, 160px':'(max-width: 600px) 112px, (max-width: 760px) 128px, 120px'}"`:'';
- return `<article class="person-card ${professor?'professor-card':'student-card'}"${edit.item(path,professor?'교수':'학생')}><img src="${e(image)}"${responsive} alt="${e(p.name)}" loading="lazy" decoding="async" width="${professor?160:120}" height="${professor?200:150}"${edit(path+'/image','image','구성원 사진')}><div class="person-info"><h2${edit(path+'/name','text','이름')}>${e(p.name)}</h2>${professor?'':`<p class="person-role"${edit(path+'/role','text','직위 · 과정')}>${e(p.role)}</p>`}${professor?`<p${edit(path+'/email','email','이메일')}>${mail(p.email)}</p>${p.description?`<div class="biography"${edit(path+'/description','multiline','경력 · 학력')}>${biographyContent(p.description)}</div>`:''}`:`${p.description?edit.paragraphs(p.description,path+'/description','구성원 소개'):''}${mail(p.email,undefined,edit(path+'/email','email','이메일'))}`}${p.url?external(p.url,'Personal website','person-profile',edit(path+'/url','url','개인 홈페이지 주소')):''}</div></article>`;
+ const responsive=widths.length?` srcset="${e(widths.map(w=>`${display.base}-${w}.webp ${w}w`).join(', '))}" sizes="${professor?'(max-width: 360px) 96px, (max-width: 600px) 120px, 160px':'(max-width: 600px) 112px, (max-width: 760px) 128px, 120px'}"`:'';
+ const biography=professor&&p.description?`<div class="biography"${edit(path+'/description','multiline','경력 · 학력')}>${biographyContent(p.description)}</div>`:'';
+ return `<article class="person-card ${professor?'professor-card':'student-card'}"${edit.item(path,professor?'교수':'학생')}><img src="${e(image)}"${responsive} alt="${e(p.name)}" loading="lazy" decoding="async" width="${professor?160:120}" height="${professor?200:150}"${edit(path+'/image','image','구성원 사진')}><div class="person-info"><h2${edit(path+'/name','text','이름')}>${e(p.name)}</h2>${professor?`<p${edit(path+'/email','email','이메일')}>${mail(p.email)}</p>`:`<p class="person-role"${edit(path+'/role','text','직위 · 과정')}>${e(p.role)}</p>${p.description?edit.paragraphs(p.description,path+'/description','구성원 소개'):''}${mail(p.email,undefined,edit(path+'/email','email','이메일'))}`}${p.url?external(p.url,'Personal website','person-profile',edit(path+'/url','url','개인 홈페이지 주소')):''}</div>${biography}</article>`;
 }
 function peoplePage(data,page,edit) {
  return `<main id="main" tabindex="-1" class="container page-layout interior">${pageIntro('Professor','')}${memberNavigation('people')}<section class="professors"${edit.collection('/people','교수')}>${data.people.filter(isPI).map(p=>personCard(p,true,edit)).join('')}</section></main>`;
@@ -271,8 +308,17 @@ function publicationsPage(data,page,edit) {
  const groups=new Map(years.map(year=>[year,[]]));
  pubs.forEach(paper=>groups.get(publicationYearGroup(paper.year,periods)).push(paper));
  const groupedPubs=[...groups].map(([year,papers])=>`<section class="publication-year-group" data-publication-year="${e(year)}" aria-labelledby="publication-year-${e(year)}"><h2 class="publication-year-title" id="publication-year-${e(year)}">${e(publicationYearLabel(year))}</h2>${papers.map((paper,index)=>pubEntry(paper,papers.length-index,false,edit)).join('')}</section>`).join('');
- const viewer=`<dialog id="publication-viewer" class="publication-viewer" aria-labelledby="publication-figure-title"><div class="figure-viewer-heading"><h2 id="publication-figure-title"></h2><button class="figure-viewer-close" type="button" aria-label="Close figure">×</button></div><p class="figure-viewer-label"></p><img class="figure-viewer-image" alt=""><a class="figure-viewer-source" target="_blank" rel="noopener noreferrer">Figure source ↗</a></dialog>`;
- return `<main id="main" tabindex="-1" class="container page-layout interior">${pageIntro('Publications','')}${underReview}<section class="archive"><details class="publication-filters"><summary><span>Search &amp; filter</span><span class="filter-toggle-icon" aria-hidden="true"></span><span id="publication-filter-state" class="filter-state" hidden></span></summary><div class="archive-tools"><label class="search-field"><span>Search</span><input id="publication-search" type="search" spellcheck="false" autocapitalize="none" aria-controls="publication-results" placeholder="title, author, journal or DOI" autocomplete="off"></label><label class="year-field"><span>Year</span><select id="publication-year" aria-controls="publication-results"><option value="all">All years</option>${years.map(y=>`<option value="${e(y)}">${e(publicationYearLabel(y))}</option>`).join('')}</select></label><button id="publication-filter-reset" class="text-action" type="button" data-clear-publication-filters hidden>Clear filters</button><span id="result-count" role="status">${pubs.length} publications</span></div></details><div class="publication-list" id="publication-results"${edit.collection('/publications','논문')}>${groupedPubs}</div><p id="no-results" hidden>No publications match your search. <button class="text-action" type="button" data-clear-publication-filters>Clear filters</button></p></section>${viewer}</main>`;
+ return `<main id="main" tabindex="-1" class="container page-layout interior">${pageIntro('Publications','')}${underReview}<section class="archive">
+  <div class="publication-filter-controls">
+   <details class="publication-filters">
+    <summary><span>Search published papers</span><span class="filter-toggle-icon" aria-hidden="true"></span><span id="publication-filter-state" class="filter-state" hidden><span id="publication-filter-query"></span><span id="publication-filter-count"></span></span></summary>
+    <div class="archive-tools"><label class="search-field"><span>Search</span><input id="publication-search" type="search" spellcheck="false" autocapitalize="none" aria-controls="publication-results" placeholder="Title, author, journal, DOI or link" autocomplete="off"></label><label class="year-field"><span>Year</span><select id="publication-year" aria-controls="publication-results"><option value="all">All years</option>${years.map(y=>`<option value="${e(y)}">${e(publicationYearLabel(y))}</option>`).join('')}</select></label><button id="publication-filter-reset" class="text-action" type="button" data-clear-publication-filters hidden>Clear filters</button><span id="result-count" role="status">${pubs.length} publications</span></div>
+   </details>
+   <button id="publication-filter-clear" class="text-action" type="button" data-clear-publication-filters aria-label="Clear publication filters" hidden>Clear</button>
+  </div>
+  <div class="publication-list" id="publication-results"${edit.collection('/publications','논문')}>${groupedPubs}</div>
+  <p id="no-results" hidden>No published papers match your search. <button class="text-action" type="button" data-clear-publication-filters>Clear filters</button></p>
+ </section></main>`;
 }
 
 function highlightNavigation(current) {
@@ -296,5 +342,6 @@ export function render(data, page='index', options={}) {
  const edit=editContext(data,Boolean(options.editable));
  const appearance=appearanceCSS(data);
  const content={index:home,research:researchPage,people:peoplePage,students:studentsPage,publications:publicationsPage,news:newsPage,activities:activitiesPage,join:joinPage};
- return (appearance?`<style data-site-appearance>${appearance}</style>`:'')+header(data,page,edit)+(page.startsWith('post-')?postPage(data,page,edit):(content[page]||home)(data,page,edit))+footer(data,edit);
+ const showViewer=page==='publications'||page==='research'||page.startsWith('post-');
+ return (appearance?`<style data-site-appearance>${appearance}</style>`:'')+header(data,page,edit)+(page.startsWith('post-')?postPage(data,page,edit):(content[page]||home)(data,page,edit))+footer(data,edit)+(showViewer?figureViewer:'');
 }
