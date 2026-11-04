@@ -10,15 +10,16 @@ const rendererVersion=createHash('sha256').update(await readFile(path.join(root,
 const appSource=(await readFile(path.join(root,'app.js'),'utf8')).replaceAll("'./renderer.js'",`'./renderer.js?v=${rendererVersion}'`);
 const appVersion=createHash('sha256').update(appSource).update(await readFile(path.join(root,'content/site.json'))).digest('hex').slice(0,12);
 const template=(await readFile(path.join(root,'template.html'),'utf8'))
- .replace('href="styles.css"',`href="styles.css?v=${stylesheetVersion}"`)
- .replace('src="app.js"',`src="app.js?v=${appVersion}"`);
+ .replace('%%ROOT%%styles.css',`%%ROOT%%styles.css?v=${stylesheetVersion}`)
+ .replace('%%ROOT%%app.js',`%%ROOT%%app.js?v=${appVersion}`);
 const output=path.join(root,'dist');
 const siteURL='https://sogangqmpl.github.io/';
 await mkdir(output,{recursive:true});
-const allPages=[...pages,...data.news.map(n=>'post-'+n.id)];
+const allPages=[...pages,...data.news.map(n=>'post-'+n.id),'404'];
 for(const page of allPages){
- const title=pageTitle(data,page),post=findPost(data,page),description=post?(post.body||post.summary||post.title):data.site.description;
- let html=template.replaceAll('%%TITLE%%',escapeHTML(title)).replaceAll('%%DESCRIPTION%%',escapeHTML(description)).replaceAll('%%PAGE%%',page).replace('%%CONTENT%%',render(data,page));
+ const notFound=page==='404',title=pageTitle(data,page),post=findPost(data,page),description=post?(post.body||post.summary||post.title):notFound?'Page not found.':data.site.description;
+ let html=template.replaceAll('%%ROOT%%',notFound?'/':'').replaceAll('%%TITLE%%',escapeHTML(title)).replaceAll('%%DESCRIPTION%%',escapeHTML(description)).replaceAll('%%PAGE%%',page).replace('%%CONTENT%%',render(data,page));
+ if(notFound)html=html.replace('  <title>','  <meta name="robots" content="noindex">\n  <title>');
  if(post){
   const canonical=new URL(postFileName(post),siteURL).href;
   const photos=(post.content||[]).filter(block=>block.type==='image'&&safeURL(block.src));
@@ -70,5 +71,4 @@ for(const line of guide.split(/\r?\n/)){
 if(list)guideHTML+=`</${list}>`;
 await writeFile(path.join(output,'admin/guide.html'),`<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>홈페이지 관리 안내 | QMP Lab</title><style>body{font:16px/1.9 system-ui,sans-serif;max-width:830px;margin:40px auto;padding:24px;color:#222222;background:#ffffff}h1,h2,h3{line-height:1.45}h2{margin-top:48px;border-top:1px solid #d9d9d9;padding-top:28px}li{margin-block:13px}a{color:#002e5d}code{background:#eeeeee;padding:2px 5px;overflow-wrap:anywhere}p,li{overflow-wrap:anywhere}</style><a href="./">← 편집기로 돌아가기</a>${guideHTML}</html>`);
 await writeFile(path.join(output,'.nojekyll'),'');
-await cp(path.join(root,'scripts/not-found.html'),path.join(output,'404.html'));
 console.log(`Built ${pages.length} pages + ${data.news.length} posts, editor and assets → ${output}`);
