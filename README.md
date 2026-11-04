@@ -72,7 +72,7 @@ node scripts/serve.mjs
 
 각 하위 주제는 대표 그림, 설명과 Related papers로 구성합니다. **Research details**를 펼치면 Wix 세부 페이지의 내용을 소제목·본문·관련 그림으로 묶어 읽을 수 있습니다. 관련 논문 13편은 각 하위 주제에만 연결하며, SPDC에는 확인하지 못한 게재 실적을 임의로 연결하지 않았습니다.
 
-SPDC·Moiré physics·Interlayer excitons·2D semiconductor devices의 대표 그림은 Wix 원본 또는 원본에서 잘라낸 그림입니다. Quantum light sources는 SPDC 그림의 원자층·색감을 참고해 새로 생성한 개념 그림입니다. 2D 원자층의 국소 광원에서 단일 광자가 방출되는 모습을 표현하며, 실측 자료나 특정 소자의 구현 결과가 아닙니다. [그림 제작 기록](assets/research/quantum-light-2d-single-photon-original.SOURCE.txt)에 생성 방식·프롬프트·해시를 보관합니다. 이전 Parto 논문 그림과 라이선스는 교체 이력으로 남깁니다. 출처와 교체 기록은 [Research 원문 검증](docs/Research-원문검증.json), [대표 그림 원본 교체 기록](docs/Research-대표그림-원본교체.json), [연구 그림 설명](docs/연구그림-설명.md), [이미지 출처](docs/이미지-출처.md)에 있습니다.
+SPDC·Moiré physics·Interlayer excitons·2D semiconductor devices의 대표 그림은 Wix 원본 또는 원본에서 잘라낸 그림입니다. Quantum light sources의 [대표 그림](assets/research/quantum-light-wse2-1h-emitter.svg)은 [Fang 등의 결정 구조](https://doi.org/10.1103/PhysRevB.92.205108)를 바탕으로 1H-WSe₂ 단일층을 직접 그린 것입니다. 국소화된 양자점형 광원에서 원자층에 수직으로 향하는 빛은 개념적으로 표시했습니다. 좌표와 출처는 SVG 메타데이터와 [연구 그림 설명](docs/연구그림-설명.md)에 기록했습니다. 이전 대표 그림과 출처 기록은 교체 이력으로 남깁니다.
 
 ## 논문 목록
 
