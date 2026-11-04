@@ -271,6 +271,11 @@ html:not(.nav-disclosures-ready) #main-nav .nav-item:is(:hover,:focus-within) .n
 .home-image-filter{position:absolute;pointer-events:none}
 .home-hero-figure img{width:100%;height:auto;filter:url(#home-lattice-tint)}
 .home-hero-figure:after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 24px 16px #fff;pointer-events:none}
+.not-found{display:flex;align-items:center}
+.not-found .home-hero{width:100%}
+.not-found-code{color:var(--purple-text);font-family:Quicksand,var(--sans);font-size:23px;font-weight:700}
+.not-found-description{margin-top:12px;color:var(--muted)}
+.not-found-home{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:10px}
 .announcement{padding:0 0 var(--layout-gap);border-bottom:1px solid var(--line);text-align:center}
 .announcement h2{font-family:WixLuloClean,sans-serif;font-size:32.9055px;font-weight:700;line-height:1.5;letter-spacing:0;word-break:keep-all;overflow-wrap:break-word;color:var(--purple)}
 .announcement h2 a{color:inherit;text-decoration:none}
