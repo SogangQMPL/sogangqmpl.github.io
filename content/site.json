@@ -93,7 +93,16 @@
             {
               "title": "Quantum properties of light",
               "body": "In the quantum regime, light is described as photons whose behavior differs from classical electromagnetic waves. Nonclassical photon statistics, quantum interference and entanglement make these photons building blocks for quantum communication and computing.",
-              "images": []
+              "imageLeft": true,
+              "images": [
+                {
+                  "src": "assets/research/quantum-light-interference.webp",
+                  "alt": "Two indistinguishable photons enter a beam splitter through separate inputs and exit together through one output.",
+                  "caption": "Two-photon interference at a beam splitter.",
+                  "width": 1536,
+                  "height": 1024
+                }
+              ]
             },
             {
               "title": "Quantum-light platforms",
@@ -328,13 +337,8 @@
           "schematicHeight": 720,
           "detailSections": [
             {
-              "title": "",
-              "body": "Interlayer excitons are bound electron–hole pairs in stacked 2D materials, with the electron and hole in separate layers.",
-              "images": []
-            },
-            {
               "title": "Exciton configurations",
-              "body": "Layer interactions support dipolar, hybridized, quadrupolar and symmetric excitonic configurations, providing a platform for optical physics.",
+              "body": "Interlayer excitons are bound electron–hole pairs in stacked 2D materials, with the electron and hole in separate layers.\n\nLayer interactions support dipolar, hybridized, quadrupolar and symmetric excitonic configurations, providing a platform for optical physics.",
               "images": [
                 {
                   "src": "assets/research/interlayer-excitons.webp",
@@ -473,12 +477,30 @@
             {
               "title": "Atomically thin channels",
               "body": "As semiconductor devices scale down, atomically thin 2D channels allow strong gate control. Their dangling-bond-free surfaces can reduce unwanted surface effects and help maintain device stability.",
-              "images": []
+              "imageLeft": true,
+              "images": [
+                {
+                  "src": "assets/research/atomically-thin-channel.webp",
+                  "alt": "An atomically thin channel spans the source and drain contacts below a top gate and its dielectric.",
+                  "caption": "Gate control of an atomically thin channel.",
+                  "width": 1665,
+                  "height": 945
+                }
+              ]
             },
             {
               "title": "Neuromorphic platforms",
               "body": "AI workloads motivate neuromorphic alternatives to conventional von Neumann architectures. Different 2D materials can be stacked in many combinations, providing flexible heterostructures for designing and testing electronic devices. Our related work explores synaptic transistors and physical reservoir computing.",
-              "images": []
+              "imageLeft": true,
+              "images": [
+                {
+                  "src": "assets/research/neuromorphic-synaptic-transistor.webp",
+                  "alt": "Optical pulses illuminate a layered synaptic transistor, producing a response that fades over time.",
+                  "caption": "Optical input and fading response in a synaptic transistor.",
+                  "width": 1672,
+                  "height": 941
+                }
+              ]
             }
           ]
         }
@@ -675,8 +697,8 @@
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": 0,
+        "y": 0,
         "width": 0.46285714285714286,
         "height": 0.9516616314199395,
         "label": "Figure 4(a)"
@@ -714,7 +736,7 @@
         }
       ],
       "imagePreview": {
-        "x": 0.0,
+        "x": 0,
         "y": 0.39755351681957185,
         "width": 0.5057077625570776,
         "height": 0.6024464831804281,
@@ -890,7 +912,7 @@
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.0,
+        "x": 0,
         "y": 0.7099056603773585,
         "width": 0.509,
         "height": 0.29009433962264153,
@@ -976,9 +998,9 @@
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.0,
+        "x": 0,
         "y": 0.45098039215686275,
-        "width": 1.0,
+        "width": 1,
         "height": 0.5490196078431373,
         "label": "Figure 1(e)"
       }
@@ -1084,9 +1106,9 @@
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.0,
-        "y": 0.0,
-        "width": 1.0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
         "height": 0.4497816593886463,
         "label": "Figure 2(a)"
       }
@@ -1213,7 +1235,7 @@
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.0,
+        "x": 0,
         "y": 0.6591422121896162,
         "width": 0.325,
         "height": 0.34085778781038373,
@@ -1308,9 +1330,9 @@
       ],
       "imagePreview": {
         "x": 0.46923076923076923,
-        "y": 0.0,
+        "y": 0,
         "width": 0.5307692307692308,
-        "height": 1.0,
+        "height": 1,
         "label": "Figure 4(b)"
       }
     },
@@ -1394,9 +1416,9 @@
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.0,
-        "y": 0.0,
-        "width": 1.0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
         "height": 0.5069444444444444,
         "label": "Figure 2(a)"
       }
@@ -1530,8 +1552,8 @@
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": 0,
+        "y": 0,
         "width": 0.6615384615384615,
         "height": 0.3617021276595745,
         "label": "Figure 3(a)"
