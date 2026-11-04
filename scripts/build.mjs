@@ -70,5 +70,5 @@ for(const line of guide.split(/\r?\n/)){
 if(list)guideHTML+=`</${list}>`;
 await writeFile(path.join(output,'admin/guide.html'),`<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>홈페이지 관리 안내 | QMP Lab</title><style>body{font:16px/1.9 system-ui,sans-serif;max-width:830px;margin:40px auto;padding:24px;color:#222222;background:#ffffff}h1,h2,h3{line-height:1.45}h2{margin-top:48px;border-top:1px solid #d9d9d9;padding-top:28px}li{margin-block:13px}a{color:#002e5d}code{background:#eeeeee;padding:2px 5px;overflow-wrap:anywhere}p,li{overflow-wrap:anywhere}</style><a href="./">← 편집기로 돌아가기</a>${guideHTML}</html>`);
 await writeFile(path.join(output,'.nojekyll'),'');
-await writeFile(path.join(output,'404.html'),`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Page not found | QMP Lab</title><style>body{font:18px/1.8 system-ui;max-width:650px;margin:12vh auto;padding:24px;color:#222222;background:#ffffff}a{color:#002e5d}</style><h1>We couldn’t find that page.</h1><p>The page may have moved. <a href="/">Back to Home</a></p><p>QMP Lab · Sogang University</p></html>`);
+await cp(path.join(root,'scripts/not-found.html'),path.join(output,'404.html'));
 console.log(`Built ${pages.length} pages + ${data.news.length} posts, editor and assets → ${output}`);
