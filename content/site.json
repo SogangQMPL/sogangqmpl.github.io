@@ -539,19 +539,12 @@
       "url": "https://onlinelibrary.wiley.com/doi/10.1002/sstr.70581",
       "featured": true,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-01-fig1.jpg",
-      "imageAlt": "Device structure and electrical characterization of the back-gated MoS2 synaptic transistor. Panel a is the device schematic.",
-      "imageLabel": "Figure 1",
-      "imageSource": "https://onlinelibrary.wiley.com/doi/full/10.1002/sstr.70581#sstr70581-fig-0001",
-      "imageWidth": 907,
-      "imageHeight": 1032,
-      "imagePreview": {
-        "x": 0.07,
-        "y": 0,
-        "width": 0.39,
-        "height": 0.315,
-        "label": "Device schematic (Figure 1a)"
-      },
+      "image": "assets/publications/pub-01-graphical-abstract-reviewed.jpg",
+      "imageAlt": "MoS₂ synaptic transistor and wavelength-dependent physical reservoir computing.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://onlinelibrary.wiley.com/toc/26884062/2026/7/8?page=2",
+      "imageWidth": 433,
+      "imageHeight": 374,
       "labAuthors": [
         "Geonho Lee",
         "Seongwon Gim",
@@ -672,21 +665,21 @@
       "url": "https://pubs.aip.org/aip/jap/article/137/24/244301/3350695/Wavelength-tunable-Zn1-xMgxO-nanotube-lasers-on",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-06-figure1.jpg",
-      "imageAlt": "Figure 1: ZnMgO nanotube laser fabrication and structural characterization.",
-      "imageLabel": "Figure 1",
-      "imageSource": "https://pubs.aip.org/aip/jap/article/137/24/244301/3350695",
-      "imageWidth": 520,
-      "imageHeight": 275,
+      "image": "assets/publications/pub-06-fig4-reviewed.jpeg",
+      "imageAlt": "Nanotube end-face reflection model and five guided modes for a silver or air interface.",
+      "imageLabel": "Figure 4",
+      "imageSource": "https://pubs.aip.org/aip/jap/article/137/24/244301/3350695/Wavelength-tunable-Zn1-xMgxO-nanotube-lasers-on",
+      "imageWidth": 700,
+      "imageHeight": 331,
       "labAuthors": [
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0,
-        "y": 0,
-        "width": 1,
-        "height": 0.47,
-        "label": "Nanotube laser fabrication schematic (Figure 1a)"
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.46285714285714286,
+        "height": 0.9516616314199395,
+        "label": "Figure 4(a)"
       }
     },
     {
@@ -700,7 +693,7 @@
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
       "image": "assets/publications/pub-07-figure1.png",
-      "imageAlt": "Dipolar and quadrupolar excitons in a dual-gated bilayer 2H-MoSe2 device.",
+      "imageAlt": "Electric-field-dependent reflectance contrast of excitons in bilayer 2H-MoSe₂.",
       "imageLabel": "Figure 1 (author manuscript)",
       "imageSource": "https://arxiv.org/html/2503.19883v1#S0.F1",
       "imageWidth": 876,
@@ -708,13 +701,6 @@
       "labAuthors": [
         "Hyeonjun Baek"
       ],
-      "imagePreview": {
-        "x": 0,
-        "y": 0,
-        "width": 0.725,
-        "height": 0.37,
-        "label": "Gated bilayer and exciton schematic (Figure 1a)"
-      },
       "titleSegments": [
         {
           "text": "Quadrupolar and Dipolar Excitons in Bilayer 2"
@@ -726,7 +712,14 @@
         {
           "text": "-MoSe₂"
         }
-      ]
+      ],
+      "imagePreview": {
+        "x": 0.0,
+        "y": 0.39755351681957185,
+        "width": 0.5057077625570776,
+        "height": 0.6024464831804281,
+        "label": "Figure 1(b)"
+      }
     },
     {
       "id": "pub-08",
@@ -813,21 +806,21 @@
       "url": "https://www.nature.com/articles/s41567-024-02385-4",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-11-figure1.png",
-      "imageAlt": "Fig. 1: Layer and valley properties of excitons and holes in a moiré HTL device.",
-      "imageLabel": "Figure 1",
-      "imageSource": "https://www.nature.com/articles/s41567-024-02385-4/figures/1",
-      "imageWidth": 685,
-      "imageHeight": 487,
+      "image": "assets/publications/pub-11-fig4-reviewed.png",
+      "imageAlt": "Experimental reflectance map showing electric-field-dependent hole transfer between Γ and K moiré orbitals.",
+      "imageLabel": "Figure 4",
+      "imageSource": "https://www.nature.com/articles/s41567-024-02385-4/figures/4",
+      "imageWidth": 1583,
+      "imageHeight": 1185,
       "labAuthors": [
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.343,
-        "y": 0.53,
-        "width": 0.3,
-        "height": 0.37,
-        "label": "Moiré device schematic (Figure 1d)"
+        "x": 0.7340492735312697,
+        "y": 0.002531645569620253,
+        "width": 0.2640555906506633,
+        "height": 0.47763713080168774,
+        "label": "Figure 4(c)"
       }
     },
     {
@@ -887,21 +880,21 @@
       "url": "https://iopscience.iop.org/article/10.1088/1361-6528/ac8bd9",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-14-figure1.jpg",
-      "imageAlt": "Top-view scanning electron micrograph of tapered ZnO nanorods, Figure 1a.",
-      "imageLabel": "Figure 1",
-      "imageSource": "https://iopscience.iop.org/article/10.1088/1361-6528/ac8bd9#nanoac8bd9f1",
-      "imageWidth": 350,
-      "imageHeight": 457,
+      "image": "assets/publications/pub-14-fig5-reviewed.png",
+      "imageAlt": "Temperature-dependent surface strain and thermal expansion near a tapered nanorod tip.",
+      "imageLabel": "Figure 5",
+      "imageSource": "https://iopscience.iop.org/article/10.1088/1361-6528/ac8bd9#nanoac8bd9f5",
+      "imageWidth": 1000,
+      "imageHeight": 1272,
       "labAuthors": [
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.2,
-        "y": 0,
-        "width": 0.61,
-        "height": 0.41,
-        "label": "Top-view SEM of ZnO nanorods (Figure 1a)"
+        "x": 0.0,
+        "y": 0.7099056603773585,
+        "width": 0.509,
+        "height": 0.29009433962264153,
+        "label": "Figure 5(d)"
       }
     },
     {
@@ -973,21 +966,21 @@
       "url": "https://www.nature.com/articles/s41565-021-00970-9",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-17-fig1.png",
-      "imageAlt": "Fig. 1: Schematic illustration of moiré lattice doping.",
+      "image": "assets/publications/pub-17-fig1-reviewed.png",
+      "imageAlt": "Coulomb staircase schematic linking interlayer-trion photon energy to electron density.",
       "imageLabel": "Figure 1",
       "imageSource": "https://www.nature.com/articles/s41565-021-00970-9/figures/1",
-      "imageWidth": 685,
-      "imageHeight": 464,
+      "imageWidth": 1504,
+      "imageHeight": 1020,
       "labAuthors": [
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0,
-        "y": 0,
-        "width": 0.345,
-        "height": 0.43,
-        "label": "Figure 1a"
+        "x": 0.0,
+        "y": 0.45098039215686275,
+        "width": 1.0,
+        "height": 0.5490196078431373,
+        "label": "Figure 1(e)"
       }
     },
     {
@@ -1027,15 +1020,22 @@
       "url": "https://journals.aps.org/prx/abstract/10.1103/PhysRevX.11.031033",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-19-fig1a.png",
-      "imageAlt": "Dual-gated WSe₂/MoSe₂ heterobilayer and moiré lattice schematic",
-      "imageLabel": "Figure 1a",
-      "imageSource": "https://pure.hw.ac.uk/ws/portalfiles/portal/50713363/PhysRevX.11.031033.pdf#page=4",
-      "imageWidth": 628,
-      "imageHeight": 740,
+      "image": "assets/publications/pub-19-fig4-reviewed.png",
+      "imageAlt": "Photoluminescence spectrum with fitted interlayer-trion contributions.",
+      "imageLabel": "Figure 4",
+      "imageSource": "https://pure.hw.ac.uk/ws/portalfiles/portal/50713363/PhysRevX.11.031033.pdf#page=9",
+      "imageWidth": 1538,
+      "imageHeight": 1105,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imagePreview": {
+        "x": 0.33224967490247076,
+        "y": 0.014479638009049774,
+        "width": 0.3016905071521456,
+        "height": 0.5257918552036199,
+        "label": "Figure 4(b)"
+      }
     },
     {
       "id": "pub-20",
@@ -1047,21 +1047,21 @@
       "url": "https://www.nature.com/articles/s41427-021-00324-w",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-20-fig1.png",
-      "imageAlt": "Fig. 1: Fabrication of ZnO nanotube-based pressure sensors.",
+      "image": "assets/publications/pub-20-fig1-reviewed.png",
+      "imageAlt": "Field-emission scanning electron micrograph of position-controlled ZnO nanotube arrays on graphene.",
       "imageLabel": "Figure 1",
       "imageSource": "https://www.nature.com/articles/s41427-021-00324-w/figures/1",
-      "imageWidth": 685,
-      "imageHeight": 602,
+      "imageWidth": 1322,
+      "imageHeight": 1162,
       "labAuthors": [
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.69,
-        "y": 0.32,
-        "width": 0.31,
-        "height": 0.4,
-        "label": "Figure 1a device cross-section"
+        "x": 0.09909228441754916,
+        "y": 0.729776247848537,
+        "width": 0.2367624810892587,
+        "height": 0.270223752151463,
+        "label": "Figure 1(b)"
       }
     },
     {
@@ -1074,15 +1074,22 @@
       "url": "https://www.nature.com/articles/s41427-021-00301-3",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-21-fig1.png",
-      "imageAlt": "Fig. 1: Schematic diagram of the fabrication processes of indium arsenide (InAs) nanorod/graphene layers/zinc oxide (ZnO) nanotube hybrid nanostructures.",
-      "imageLabel": "Figure 1",
-      "imageSource": "https://www.nature.com/articles/s41427-021-00301-3/figures/1",
+      "image": "assets/publications/pub-21-fig2-reviewed.png",
+      "imageAlt": "Cross-sectional field-emission scanning electron micrograph of vertically integrated ZnO and InAs nanostructures on graphene.",
+      "imageLabel": "Figure 2",
+      "imageSource": "https://www.nature.com/articles/s41427-021-00301-3/figures/2",
       "imageWidth": 685,
-      "imageHeight": 225,
+      "imageHeight": 687,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imagePreview": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1.0,
+        "height": 0.4497816593886463,
+        "label": "Figure 2(a)"
+      }
     },
     {
       "id": "pub-22",
@@ -1122,19 +1129,12 @@
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
       "notes": "Corrected original volume and article number using publisher-registered Crossref metadata.",
-      "image": "assets/publications/pub-23-original.png",
-      "imageAlt": "Fabrication schematic and SEM images of the individually addressable nanotube Schottky-diode crossbar array.",
-      "imageLabel": "Figure 1",
-      "imageSource": "https://www.researchgate.net/figure/Fabrication-steps-to-prepare-an-individually-addressable-nanotube-Schottky-diode-array_fig1_342255961",
-      "imageWidth": 850,
-      "imageHeight": 640,
-      "imagePreview": {
-        "x": 0,
-        "y": 0,
-        "width": 0.49,
-        "height": 0.56,
-        "label": "Figure 1a"
-      },
+      "image": "assets/publications/pub-23-graphical-abstract-reviewed.png",
+      "imageAlt": "ZnO nanotube Schottky-diode crossbar schematic and electron micrograph of the array.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://www.sciencedirect.com/science/article/pii/S2211285520305127",
+      "imageWidth": 2213,
+      "imageHeight": 823,
       "labAuthors": [
         "Hyeonjun Baek"
       ]
@@ -1149,21 +1149,21 @@
       "url": "https://www.science.org/doi/10.1126/sciadv.aba8526",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-24-fig1.jpg",
-      "imageAlt": "MoSe2/WSe2 moiré heterobilayer.",
-      "imageLabel": "Figure 1",
-      "imageSource": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7486092/#F1",
-      "imageWidth": 440,
-      "imageHeight": 260,
+      "image": "assets/publications/pub-24-fig3-reviewed.png",
+      "imageAlt": "Gate-dependent photoluminescence spectra of moiré-trapped interlayer excitons.",
+      "imageLabel": "Figure 3",
+      "imageSource": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7486092/#F3",
+      "imageWidth": 1249,
+      "imageHeight": 541,
       "labAuthors": [
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0,
-        "y": 0,
-        "width": 1,
-        "height": 0.48,
-        "label": "Figure 1A"
+        "x": 0.0024019215372297837,
+        "y": 0.012939001848428836,
+        "width": 0.5044035228182546,
+        "height": 0.9815157116451017,
+        "label": "Figure 3(a)"
       }
     },
     {
@@ -1203,21 +1203,21 @@
       "url": "https://pubs.aip.org/aip/apm/article/5/4/046106/121564/ZnO-nanotube-waveguide-arrays-on-graphene-films",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-26-fig1.jpg",
-      "imageAlt": "Transferred ZnO nanotube waveguide array from the fabrication schematic, Figure 1a.",
+      "image": "assets/publications/pub-26-fig1-reviewed.png",
+      "imageAlt": "Field-emission scanning electron micrograph of ZnO nanotube waveguides grown on graphene.",
       "imageLabel": "Figure 1",
-      "imageSource": "https://aipp.silverchair-cdn.com/article-minimal/121564",
+      "imageSource": "https://pubs.aip.org/aip/apm/view-large/figure/60803692/046106_1_f1.jpg",
       "imageWidth": 520,
       "imageHeight": 443,
       "labAuthors": [
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.73,
-        "y": 0.335,
-        "width": 0.27,
-        "height": 0.33,
-        "label": "Figure 1a transferred waveguide array"
+        "x": 0.0,
+        "y": 0.6591422121896162,
+        "width": 0.325,
+        "height": 0.34085778781038373,
+        "label": "Figure 1(b)"
       }
     },
     {
@@ -1277,22 +1277,15 @@
       "url": "https://www.nature.com/articles/srep27451",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-29-fig1.jpg",
-      "imageAlt": "Figure 1: Schematics of device fabrication process and measurement set-up.",
-      "imageLabel": "Figure 1",
-      "imageSource": "https://www.nature.com/articles/srep27451/figures/1",
-      "imageWidth": 685,
-      "imageHeight": 321,
+      "image": "assets/publications/pub-29-fig5-reviewed.jpg",
+      "imageAlt": "Switching voltage over 50 cycles and electroluminescence images of conducting filaments.",
+      "imageLabel": "Figure 5",
+      "imageSource": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4895219/#f5",
+      "imageWidth": 697,
+      "imageHeight": 762,
       "labAuthors": [
         "Hyeonjun Baek"
-      ],
-      "imagePreview": {
-        "x": 0.715,
-        "y": 0,
-        "width": 0.285,
-        "height": 1,
-        "label": "Figure 1e"
-      }
+      ]
     },
     {
       "id": "pub-30",
@@ -1304,21 +1297,21 @@
       "url": "https://pubs.aip.org/aip/adv/article/6/4/045021/21997/Distinctive-mapping-of-strain-and-quantum-size",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-30-fig1.jpg",
-      "imageAlt": "FIG. 1. (a) SEM image of ZnO NNs. The experimental geometry of depth-resolved photoluminescence (PL) with excitation angle θ of (b) 0∘, (c) 35∘, and (d) 85∘ in ZnO NNs. ",
-      "imageLabel": "Figure 1",
+      "image": "assets/publications/pub-30-fig4-reviewed.jpg",
+      "imageAlt": "Depth-dependent fast and slow photoluminescence decay times.",
+      "imageLabel": "Figure 4",
       "imageSource": "https://aipp.silverchair-cdn.com/article-minimal/21997",
       "imageWidth": 520,
-      "imageHeight": 430,
+      "imageHeight": 266,
       "labAuthors": [
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.06,
-        "y": 0,
-        "width": 0.87,
-        "height": 0.465,
-        "label": "Figure 1a"
+        "x": 0.46923076923076923,
+        "y": 0.0,
+        "width": 0.5307692307692308,
+        "height": 1.0,
+        "label": "Figure 4(b)"
       }
     },
     {
@@ -1391,15 +1384,22 @@
       "url": "https://pubs.aip.org/aip/apm/article/3/1/016103/238344/Growth-and-optical-characteristics-of-high-quality",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-34.jpg",
-      "imageAlt": "Growth process for high-quality ZnO thin films on graphene layers.",
-      "imageLabel": "Figure 1",
-      "imageSource": "https://pubs.aip.org/aip/apm/article/3/1/016103/238344",
+      "image": "assets/publications/pub-34-fig2-reviewed.jpg",
+      "imageAlt": "Scanning electron micrographs comparing ZnO films grown under three conditions.",
+      "imageLabel": "Figure 2",
+      "imageSource": "https://aipp.silverchair-cdn.com/article-minimal/238344",
       "imageWidth": 520,
-      "imageHeight": 341,
+      "imageHeight": 432,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imagePreview": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1.0,
+        "height": 0.5069444444444444,
+        "label": "Figure 2(a)"
+      }
     },
     {
       "id": "pub-35",
@@ -1412,7 +1412,7 @@
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
       "image": "assets/publications/pub-35.jpg",
-      "imageAlt": "Schematic fabrication sequence and electron microscopy of morphology-controlled ZnO/hBN epitaxy.",
+      "imageAlt": "Scanning electron micrograph of a ZnO nanowall network grown on plasma-treated hBN.",
       "imageLabel": "Figure 1",
       "imageSource": "https://www.nature.com/articles/am2014108/figures/1",
       "imageWidth": 580,
@@ -1421,11 +1421,11 @@
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0,
-        "y": 0,
-        "width": 0.6655172413793103,
-        "height": 1,
-        "label": "Growth schematics (Figure 1a, c)"
+        "x": 0.6758620689655173,
+        "y": 0.5060975609756098,
+        "width": 0.32413793103448274,
+        "height": 0.49390243902439024,
+        "label": "Figure 1(d)"
       }
     },
     {
@@ -1520,21 +1520,21 @@
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
       "notes": "Corrected original article number using the AIP publisher page.",
-      "image": "assets/publications/pub-39.jpg",
-      "imageAlt": "Graphene transfer, GaN buffer growth and vertical microrod growth process.",
-      "imageLabel": "Figure 1",
-      "imageSource": "https://pubs.aip.org/aip/apm/article/2/9/092512/150627",
+      "image": "assets/publications/pub-39-fig3-reviewed.jpg",
+      "imageAlt": "Field-emission scanning electron micrograph of completed coaxial GaN microrod LEDs.",
+      "imageLabel": "Figure 3",
+      "imageSource": "https://aipp.silverchair-cdn.com/article-minimal/150627",
       "imageWidth": 520,
-      "imageHeight": 542,
+      "imageHeight": 611,
       "labAuthors": [
         "Hyeonjun Baek"
       ],
       "imagePreview": {
-        "x": 0.6538461538461539,
-        "y": 0,
-        "width": 0.34615384615384615,
-        "height": 0.26014760147601473,
-        "label": "GaN microrods on graphene (Figure 1a, stage iii)"
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.6615384615384615,
+        "height": 0.3617021276595745,
+        "label": "Figure 3(a)"
       }
     },
     {
@@ -1574,22 +1574,15 @@
       "url": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adem.201300405",
       "featured": false,
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/publication",
-      "image": "assets/publications/pub-41-original.jpg",
-      "imageAlt": "Wurtzite and zinc-blende atomic arrangements and the growth model for ZnSe longitudinal twinning nanowires.",
-      "imageLabel": "Figure 4",
-      "imageSource": "https://doi.org/10.1002/adem.201300405",
+      "image": "assets/publications/pub-41-graphical-abstract-reviewed.jpg",
+      "imageAlt": "Temperature-driven WZ and ZB phase evolution and transmission electron microscopy of ZnSe twinning nanowires.",
+      "imageLabel": "Graphical abstract",
+      "imageSource": "https://advanced.onlinelibrary.wiley.com/toc/15272648/16/4",
       "imageWidth": 623,
-      "imageHeight": 238,
+      "imageHeight": 567,
       "labAuthors": [
         "Hyeonjun Baek"
-      ],
-      "imagePreview": {
-        "x": 0,
-        "y": 0,
-        "width": 0.4895666131621188,
-        "height": 1,
-        "label": "Atomic arrangements and stacking schematic (Figure 4a–c)"
-      }
+      ]
     },
     {
       "id": "pub-42",
