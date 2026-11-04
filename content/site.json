@@ -158,7 +158,22 @@
                   "caption": "2D nonlinear material and cavity structure.",
                   "width": 1673,
                   "height": 1850,
-                  "sourceURL": "https://static.wixstatic.com/media/631814_8f01572b063e4cf8a4e9da329c2f8ab2~mv2.jpg"
+                  "sourceURL": "https://static.wixstatic.com/media/631814_8f01572b063e4cf8a4e9da329c2f8ab2~mv2.jpg",
+                  "imageThumbnail": {
+                    "source": "assets/research/spdc-cavity-original-crop.png",
+                    "variants": [
+                      {
+                        "src": "assets/uploads/spdc-cavity-detail-480.webp",
+                        "width": 480,
+                        "height": 531
+                      },
+                      {
+                        "src": "assets/uploads/spdc-cavity-detail-960.webp",
+                        "width": 960,
+                        "height": 1062
+                      }
+                    ]
+                  }
                 }
               ]
             }
@@ -286,7 +301,22 @@
                   "caption": "Emission from an array of excitons localized in a moiré potential.",
                   "width": 800,
                   "height": 540,
-                  "sourceURL": "https://static.wixstatic.com/media/631814_116a0dc841134f41b130c2dad5e187d4~mv2.png"
+                  "sourceURL": "https://static.wixstatic.com/media/631814_116a0dc841134f41b130c2dad5e187d4~mv2.png",
+                  "imageThumbnail": {
+                    "source": "assets/research/moire-excitons.webp",
+                    "variants": [
+                      {
+                        "src": "assets/uploads/moire-excitons-detail-480.webp",
+                        "width": 480,
+                        "height": 324
+                      },
+                      {
+                        "src": "assets/uploads/moire-excitons-detail-800.webp",
+                        "width": 800,
+                        "height": 540
+                      }
+                    ]
+                  }
                 }
               ]
             },
@@ -408,7 +438,22 @@
                   "caption": "Exciton confinement in a patterned potential.",
                   "width": 1229,
                   "height": 801,
-                  "sourceURL": "https://static.wixstatic.com/media/631814_3a77341769cf4fd3be73d5f0d74cb92a~mv2.jpg"
+                  "sourceURL": "https://static.wixstatic.com/media/631814_3a77341769cf4fd3be73d5f0d74cb92a~mv2.jpg",
+                  "imageThumbnail": {
+                    "source": "assets/research/interlayer-trap-potential-original-crop.png",
+                    "variants": [
+                      {
+                        "src": "assets/uploads/interlayer-trap-potential-detail-480.webp",
+                        "width": 480,
+                        "height": 313
+                      },
+                      {
+                        "src": "assets/uploads/interlayer-trap-potential-detail-960.webp",
+                        "width": 960,
+                        "height": 626
+                      }
+                    ]
+                  }
                 }
               ]
             },
