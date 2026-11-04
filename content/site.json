@@ -593,7 +593,22 @@
       "imageHeight": 776,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-02-figure2-cd-no-border.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-02-thumb-320.webp",
+            "width": 320,
+            "height": 228
+          },
+          {
+            "src": "assets/uploads/pub-02-thumb-720.webp",
+            "width": 720,
+            "height": 513
+          }
+        ]
+      }
     },
     {
       "id": "pub-03",
@@ -614,7 +629,22 @@
       "labAuthors": [
         "Seongwon Gim",
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-03-original.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-03-thumb-320.webp",
+            "width": 320,
+            "height": 198
+          },
+          {
+            "src": "assets/uploads/pub-03-thumb-520.webp",
+            "width": 520,
+            "height": 322
+          }
+        ]
+      }
     },
     {
       "id": "pub-04",
@@ -635,7 +665,22 @@
       "labAuthors": [
         "Seongwon Gim",
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-04-original.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-04-thumb-320.webp",
+            "width": 320,
+            "height": 200
+          },
+          {
+            "src": "assets/uploads/pub-04-thumb-520.webp",
+            "width": 520,
+            "height": 325
+          }
+        ]
+      }
     },
     {
       "id": "pub-05",
@@ -676,7 +721,22 @@
         {
           "text": "-Stacked MoS₂ Bilayers"
         }
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-05-original.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-05-thumb-320.webp",
+            "width": 320,
+            "height": 159
+          },
+          {
+            "src": "assets/uploads/pub-05-thumb-520.webp",
+            "width": 520,
+            "height": 258
+          }
+        ]
+      }
     },
     {
       "id": "pub-06",
@@ -703,6 +763,27 @@
         "width": 0.46285714285714286,
         "height": 0.9516616314199395,
         "label": "Figure 4(a)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-06-fig4-reviewed.jpeg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-06-thumb-320.webp",
+            "width": 320,
+            "height": 311
+          },
+          {
+            "src": "assets/uploads/pub-06-thumb-324.webp",
+            "width": 324,
+            "height": 315
+          }
+        ],
+        "crop": [
+          0,
+          0,
+          0.46285714285714286,
+          0.9516616314199395
+        ]
       }
     },
     {
@@ -742,6 +823,27 @@
         "width": 0.5057077625570776,
         "height": 0.6024464831804281,
         "label": "Figure 1(b)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-07-figure1.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-07-thumb-320.webp",
+            "width": 320,
+            "height": 427
+          },
+          {
+            "src": "assets/uploads/pub-07-thumb-443.webp",
+            "width": 443,
+            "height": 591
+          }
+        ],
+        "crop": [
+          0,
+          0.39755351681957185,
+          0.5057077625570776,
+          0.6024464831804281
+        ]
       }
     },
     {
@@ -769,6 +871,27 @@
         "width": 0.26457142857142857,
         "height": 0.25903614457831325,
         "label": "GaN overgrowth structure without the external process arrow (Figure 1a)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-08-figure1-original.webp",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-08-thumb-320.webp",
+            "width": 320,
+            "height": 297
+          },
+          {
+            "src": "assets/uploads/pub-08-thumb-463.webp",
+            "width": 463,
+            "height": 430
+          }
+        ],
+        "crop": [
+          0.7354285714285714,
+          0.045180722891566265,
+          0.26457142857142857,
+          0.25903614457831325
+        ]
       }
     },
     {
@@ -790,7 +913,22 @@
       "labAuthors": [
         "Seongwon Gim",
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-09-graphical-abstract.jpg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-09-thumb-320.webp",
+            "width": 320,
+            "height": 251
+          },
+          {
+            "src": "assets/uploads/pub-09-thumb-603.webp",
+            "width": 603,
+            "height": 473
+          }
+        ]
+      }
     },
     {
       "id": "pub-10",
@@ -817,6 +955,27 @@
         "width": 0.54,
         "height": 0.94,
         "label": "Dual-gated 2L/3L 2H-MoSe2 device schematic (Figure 1a)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-10-figure1-original.webp",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-10-thumb-320.webp",
+            "width": 320,
+            "height": 194
+          },
+          {
+            "src": "assets/uploads/pub-10-thumb-720.webp",
+            "width": 720,
+            "height": 437
+          }
+        ],
+        "crop": [
+          0,
+          0,
+          0.54,
+          0.94
+        ]
       }
     },
     {
@@ -844,6 +1003,27 @@
         "width": 0.2640555906506633,
         "height": 0.47763713080168774,
         "label": "Figure 4(c)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-11-fig4-reviewed.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-11-thumb-320.webp",
+            "width": 320,
+            "height": 433
+          },
+          {
+            "src": "assets/uploads/pub-11-thumb-418.webp",
+            "width": 418,
+            "height": 566
+          }
+        ],
+        "crop": [
+          0.7340492735312697,
+          0.002531645569620253,
+          0.2640555906506633,
+          0.47763713080168774
+        ]
       }
     },
     {
@@ -864,7 +1044,22 @@
       "imageHeight": 179,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-12-original.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-12-thumb-320.webp",
+            "width": 320,
+            "height": 110
+          },
+          {
+            "src": "assets/uploads/pub-12-thumb-520.webp",
+            "width": 520,
+            "height": 179
+          }
+        ]
+      }
     },
     {
       "id": "pub-13",
@@ -891,6 +1086,27 @@
         "width": 0.375,
         "height": 0.486,
         "label": "Gate-dependent exciton-polaron reflectance (Figure 2a)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-13-figure2-original.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-13-thumb-320.webp",
+            "width": 320,
+            "height": 412
+          },
+          {
+            "src": "assets/uploads/pub-13-thumb-654.webp",
+            "width": 654,
+            "height": 842
+          }
+        ],
+        "crop": [
+          0,
+          0,
+          0.375,
+          0.486
+        ]
       }
     },
     {
@@ -918,6 +1134,27 @@
         "width": 0.509,
         "height": 0.29009433962264153,
         "label": "Figure 5(d)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-14-fig5-reviewed.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-14-thumb-320.webp",
+            "width": 320,
+            "height": 232
+          },
+          {
+            "src": "assets/uploads/pub-14-thumb-509.webp",
+            "width": 509,
+            "height": 369
+          }
+        ],
+        "crop": [
+          0,
+          0.7099056603773585,
+          0.509,
+          0.29009433962264153
+        ]
       }
     },
     {
@@ -945,6 +1182,22 @@
         "width": 0.59,
         "height": 0.35,
         "label": "IGZO transistor structure (Figure 1a)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-15-figure1.jpg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-15-thumb-310.webp",
+            "width": 310,
+            "height": 140
+          }
+        ],
+        "crop": [
+          0.015,
+          0.035,
+          0.59,
+          0.35
+        ]
       }
     },
     {
@@ -977,7 +1230,22 @@
         {
           "text": " twin-field quantum key distribution network configuration based on polarization, wavelength, and time division multiplexing"
         }
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-16-figure2-original.webp",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-16-thumb-320.webp",
+            "width": 320,
+            "height": 277
+          },
+          {
+            "src": "assets/uploads/pub-16-thumb-720.webp",
+            "width": 720,
+            "height": 622
+          }
+        ]
+      }
     },
     {
       "id": "pub-17",
@@ -1004,6 +1272,27 @@
         "width": 1,
         "height": 0.5490196078431373,
         "label": "Figure 1(e)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-17-fig1-reviewed.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-17-thumb-320.webp",
+            "width": 320,
+            "height": 119
+          },
+          {
+            "src": "assets/uploads/pub-17-thumb-720.webp",
+            "width": 720,
+            "height": 268
+          }
+        ],
+        "crop": [
+          0,
+          0.45098039215686275,
+          1,
+          0.5490196078431373
+        ]
       }
     },
     {
@@ -1031,6 +1320,27 @@
         "width": 0.59,
         "height": 0.33,
         "label": "Figure 1A"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-18-fig1.jpg",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-18-thumb-320.webp",
+            "width": 320,
+            "height": 176
+          },
+          {
+            "src": "assets/uploads/pub-18-thumb-413.webp",
+            "width": 413,
+            "height": 227
+          }
+        ],
+        "crop": [
+          0,
+          0,
+          0.59,
+          0.33
+        ]
       }
     },
     {
@@ -1058,6 +1368,27 @@
         "width": 0.3016905071521456,
         "height": 0.5257918552036199,
         "label": "Figure 4(b)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-19-fig4-reviewed.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-19-thumb-320.webp",
+            "width": 320,
+            "height": 401
+          },
+          {
+            "src": "assets/uploads/pub-19-thumb-464.webp",
+            "width": 464,
+            "height": 581
+          }
+        ],
+        "crop": [
+          0.33224967490247076,
+          0.014479638009049774,
+          0.3016905071521456,
+          0.5257918552036199
+        ]
       }
     },
     {
@@ -1085,6 +1416,22 @@
         "width": 0.2367624810892587,
         "height": 0.270223752151463,
         "label": "Figure 1(b)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-20-fig1-reviewed.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-20-thumb-313.webp",
+            "width": 313,
+            "height": 314
+          }
+        ],
+        "crop": [
+          0.09909228441754916,
+          0.729776247848537,
+          0.2367624810892587,
+          0.270223752151463
+        ]
       }
     },
     {
@@ -1112,6 +1459,27 @@
         "width": 1,
         "height": 0.4497816593886463,
         "label": "Figure 2(a)"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-21-fig2-reviewed.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-21-thumb-320.webp",
+            "width": 320,
+            "height": 144
+          },
+          {
+            "src": "assets/uploads/pub-21-thumb-685.webp",
+            "width": 685,
+            "height": 309
+          }
+        ],
+        "crop": [
+          0,
+          0,
+          1,
+          0.4497816593886463
+        ]
       }
     },
     {
@@ -1139,6 +1507,22 @@
         "width": 0.42,
         "height": 0.3,
         "label": "Figure 1a intracellular lasing setup"
+      },
+      "imageThumbnail": {
+        "source": "assets/publications/pub-22-fig1.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-22-thumb-288.webp",
+            "width": 288,
+            "height": 294
+          }
+        ],
+        "crop": [
+          0.58,
+          0.445,
+          0.42,
+          0.3
+        ]
       }
     },
     {
@@ -1925,13 +2309,13 @@
       "url": "https://baahyyjuu.wixsite.com/hyeonjun/post/bk21-four-4th-workshop-outstanding-poster-award",
       "source": "https://baahyyjuu.wixsite.com/hyeonjun/post/bk21-four-4th-workshop-outstanding-poster-award",
       "image": "assets/posts/news-08-1-display.webp",
-      "imageAlt": "BK21 FOUR 4th Workshop: Outstanding Poster Award",
+      "imageAlt": "Two people hold an open award certificate at the front of a Sogang University classroom.",
       "summary": "Yongju Jeong received the Outstanding Poster Award\nat the 4th BK21 FOUR Physics Workshop in 2026.",
       "content": [
         {
           "type": "image",
           "src": "assets/posts/news-08-1-display.webp",
-          "alt": "BK21 FOUR 4th Workshop: Outstanding Poster Award",
+          "alt": "Two people hold an open award certificate at the front of a Sogang University classroom.",
           "width": 1600,
           "height": 1200,
           "fullSrc": "assets/posts/news-08-1.jpg"
@@ -2007,7 +2391,7 @@
         {
           "type": "image",
           "src": "assets/posts/news-09-1-display.webp",
-          "alt": "G-LAMP Undergraduate Research Program (Fall 2025): Award Received",
+          "alt": "An award recipient accepts a red certificate folder beneath the G-LAMP research presentation banner.",
           "width": 1600,
           "height": 1199,
           "fullSrc": "assets/posts/news-09-1.png"
@@ -2034,7 +2418,7 @@
         }
       ],
       "image": "assets/posts/news-09-1-display.webp",
-      "imageAlt": "G-LAMP Undergraduate Research Program (Fall 2025): Award Received",
+      "imageAlt": "An award recipient accepts a red certificate folder beneath the G-LAMP research presentation banner.",
       "facts": [
         {
           "label": "Recipient",
@@ -2063,7 +2447,7 @@
         {
           "type": "image",
           "src": "assets/posts/news-10-1-display.webp",
-          "alt": "BK21 FOUR 3rd Workshop.",
+          "alt": "A speaker at a lectern presents slides on InSe/TMD band alignment to the workshop audience.",
           "width": 1600,
           "height": 1200,
           "fullSrc": "assets/posts/news-10-1.jpg"
@@ -2078,7 +2462,7 @@
         }
       ],
       "image": "assets/posts/news-10-1-display.webp",
-      "imageAlt": "BK21 FOUR 3rd Workshop."
+      "imageAlt": "A speaker at a lectern presents slides on InSe/TMD band alignment to the workshop audience."
     },
     {
       "id": "news-11",
@@ -2093,7 +2477,7 @@
         {
           "type": "image",
           "src": "assets/posts/news-11-1-display.webp",
-          "alt": "BK21 FOUR 3rd Workshop: Awards Received",
+          "alt": "An award recipient holds a red Sogang University certificate folder in front of the projected workshop schedule.",
           "width": 1600,
           "height": 1200,
           "fullSrc": "assets/posts/news-11-1.jpg"
@@ -2127,7 +2511,7 @@
         }
       ],
       "image": "assets/posts/news-11-1-display.webp",
-      "imageAlt": "BK21 FOUR 3rd Workshop: Awards Received",
+      "imageAlt": "An award recipient holds a red Sogang University certificate folder in front of the projected workshop schedule.",
       "facts": [
         {
           "label": "Recipient",
@@ -2156,7 +2540,7 @@
         {
           "type": "image",
           "src": "assets/posts/news-12-1-display.webp",
-          "alt": "ICAMD 2025: Poster Presentation",
+          "alt": "Poster with layer schematics and photoluminescence plots for symmetric interlayer trions in stacked MoS₂.",
           "width": 795,
           "height": 439,
           "fullSrc": "assets/posts/news-12-1.png"
@@ -2171,7 +2555,7 @@
         }
       ],
       "image": "assets/posts/news-12-1-display.webp",
-      "imageAlt": "ICAMD 2025: Poster Presentation"
+      "imageAlt": "Poster with layer schematics and photoluminescence plots for symmetric interlayer trions in stacked MoS₂."
     },
     {
       "id": "news-13",
