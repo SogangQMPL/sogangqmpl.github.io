@@ -79,16 +79,16 @@
           "summary": "We identify and characterize quantum light sources for quantum communication and computing, focusing on nonclassical photon properties and two-dimensional materials.",
           "image": "assets/research/quantum-light-platforms.webp",
           "imageAlt": "Quantum light sources — conceptual diagram",
-          "schematic": "assets/research/quantum-light-2d-single-photon-original.png",
-          "schematicAlt": "Conceptual illustration of a localized quantum-light emitter in an atomically thin 2D material, with one outgoing photon wavepacket.",
+          "schematic": "assets/research/quantum-light-wse2-1h-emitter.svg",
+          "schematicAlt": "Ball-and-stick model of a trigonal-prismatic 1H-WSe₂ monolayer, with light drawn normal to the layer from a localized quantum-dot-like emitter.",
           "focus": [
             "Single-photon sources",
             "Moiré emitters",
             "WSe₂ nanodots",
             "Superradiance"
           ],
-          "schematicWidth": 1448,
-          "schematicHeight": 1086,
+          "schematicWidth": 1440,
+          "schematicHeight": 1080,
           "detailSections": [
             {
               "title": "Quantum properties of light",
