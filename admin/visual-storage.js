@@ -149,7 +149,33 @@ function uploadPath(mime) {
   const extension = { 'image/webp': 'webp', 'image/png': 'png', 'image/jpeg': 'jpg', 'image/gif': 'gif' }[mime];
   return `assets/uploads/${stamp}-${id}.${extension}`;
 }
-export async function stageImage(file) {
+async function resizedImage(decoded, width, height, type) {
+  const drawing = canvas(width, height);
+  const context = drawing.getContext('2d', { alpha: true });
+  if (!context) fail('IMAGE', '사진 크기를 조절할 수 없습니다.');
+  context.imageSmoothingEnabled = true;
+  context.imageSmoothingQuality = 'high';
+  context.drawImage(decoded.source, 0, 0, width, height);
+  let output = await encodeImage(drawing, type);
+  if (type === 'image/png' && output.size > STORAGE_LIMITS.imageBytes) output = await encodeImage(drawing, 'image/webp');
+  return output;
+}
+
+async function publicationThumbnails(decoded) {
+  const variants = [];
+  for (const limit of [320, 720]) {
+    const scale = Math.min(1, limit / decoded.width, (limit * 1.5) / decoded.height);
+    const width = Math.max(1, Math.round(decoded.width * scale));
+    const height = Math.max(1, Math.round(decoded.height * scale));
+    if (variants.some(variant => variant.width === width)) continue;
+    const blob = await resizedImage(decoded, width, height, 'image/webp');
+    if (!blob.size || blob.size > STORAGE_LIMITS.imageBytes) fail('LIMIT', '표시용 썸네일이 너무 큽니다. 더 작은 그림을 선택하세요.');
+    variants.push({path: uploadPath(blob.type), width, height, mime: blob.type, base64: await base64(blob)});
+  }
+  return variants;
+}
+
+export async function stageImage(file, {publicationFigure = false} = {}) {
   if (!file || typeof file.arrayBuffer !== 'function' || !Number.isFinite(file.size) || file.size < 1) fail('IMAGE', '업로드할 사진 파일을 선택하세요.');
   if (file.size > STORAGE_LIMITS.inputBytes) fail('LIMIT', '원본 사진은 32MB 이하여야 합니다.');
   let buffer;
@@ -158,24 +184,22 @@ export async function stageImage(file) {
   if (buffer.byteLength > STORAGE_LIMITS.inputBytes) fail('LIMIT', '원본 사진은 32MB 이하여야 합니다.');
   const mime = imageType(buffer);
   if (mime === 'image/gif' && buffer.byteLength > STORAGE_LIMITS.imageBytes) fail('LIMIT', '움직이는 GIF는 원본을 보존하므로 8MB 이하 파일을 선택하세요.');
+  if (publicationFigure && buffer.byteLength > STORAGE_LIMITS.imageBytes) fail('LIMIT', '논문 그림 원본은 8MB 이하 파일을 선택하세요.');
   const original = new Blob([buffer], { type: mime });
   const decoded = await decodeImage(original);
   try {
     if (!Number.isInteger(decoded.width) || !Number.isInteger(decoded.height) || decoded.width < 1 || decoded.height < 1) fail('IMAGE', '사진의 가로·세로 크기를 확인할 수 없습니다.');
     let output = original, width = decoded.width, height = decoded.height;
-    if (mime !== 'image/gif') {
+    if (mime !== 'image/gif' && !publicationFigure) {
       const scale = Math.min(1, STORAGE_LIMITS.longestEdge / Math.max(width, height));
       width = Math.max(1, Math.round(width * scale)); height = Math.max(1, Math.round(height * scale));
-      const drawing = canvas(width, height); const context = drawing.getContext('2d', { alpha: true });
-      if (!context) fail('IMAGE', '사진 크기를 조절할 수 없습니다.');
-      context.imageSmoothingEnabled = true; context.imageSmoothingQuality = 'high'; context.drawImage(decoded.source, 0, 0, width, height);
-      output = await encodeImage(drawing, mime === 'image/png' ? 'image/png' : 'image/webp');
-      if (mime === 'image/png' && output.size > STORAGE_LIMITS.imageBytes) output = await encodeImage(drawing, 'image/webp');
+      output = await resizedImage(decoded, width, height, mime === 'image/png' ? 'image/png' : 'image/webp');
     }
     if (!output.size || output.size > STORAGE_LIMITS.imageBytes) fail('LIMIT', '변환한 사진이 8MB를 넘습니다. 더 작은 사진을 선택하세요.');
     const encoded = await base64(output); const path = uploadPath(output.type);
+    const variants = publicationFigure ? await publicationThumbnails(decoded) : null;
     if (typeof URL.createObjectURL !== 'function') fail('IMAGE', '사진 미리보기를 만들 수 없습니다.');
-    return { path, width, height, base64: encoded, mime: output.type, previewURL: URL.createObjectURL(output) };
+    return { path, width, height, base64: encoded, mime: output.type, previewURL: URL.createObjectURL(output), ...(variants ? {variants} : {}) };
   } catch (error) { if (error instanceof DraftStorageError) throw error; fail('IMAGE', '사진을 변환하지 못했습니다. 다른 사진으로 다시 시도하세요.'); }
   finally { decoded.close(); }
 }

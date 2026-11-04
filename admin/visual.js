@@ -1,7 +1,7 @@
 import {render,pageTitle,postFileName} from '../renderer.js';
 import * as github from './visual-github.js';
 import {renderInspector,getAt,setAt} from './visual-fields.js';
-import {loadLocalDraft,saveLocalDraft,clearLocalDraft,stageImage as prepareImage} from './visual-storage.js';
+import {loadLocalDraft,saveLocalDraft,clearLocalDraft,stageImage as prepareImage,STORAGE_LIMITS} from './visual-storage.js';
 
 const $=id=>document.getElementById(id),clone=value=>structuredClone(value);
 const SITE='https://sogangqmpl.github.io/';
@@ -12,17 +12,38 @@ const assetURLs=new Map();
 let lastChangeKey='',lastChangeTime=0;
 const rootPrefix=new URL('../',import.meta.url).href;
 const hostPrefix=new URL('./',import.meta.url).href;
-const DRAFT_LIMIT=10*1024*1024;
 function node(tag,text,cls){const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(cls)el.className=cls;return el;}
 function message(text,error=false){$('editor-message').textContent=text;$('editor-message').classList.toggle('error',error);}
-function activeAssets(){const used=JSON.stringify(data);return assets.filter(asset=>used.includes(JSON.stringify(asset.path)));}
+function activeAssets(content=data, files=assets){const used=JSON.stringify(content);return files.filter(asset=>used.includes(JSON.stringify(asset.path)));}
 function sameContent(left,right){if(left===right)return true;if(!left||!right||typeof left!=='object'||typeof right!=='object')return false;if(Array.isArray(left)||Array.isArray(right)){if(!Array.isArray(left)||!Array.isArray(right)||left.length!==right.length)return false;for(let i=0;i<left.length;i++)if(!sameContent(left[i],right[i]))return false;return true;}const keys=Object.keys(left);return keys.length===Object.keys(right).length&&keys.every(key=>Object.hasOwn(right,key)&&sameContent(left[key],right[key]));}
 function dirty(){return Boolean(data&&baseData&&!sameContent(data,baseData));}
 function setDraftState(text,state=''){$('draft-state').textContent=text;$('draft-indicator').dataset.state=state;}
 function controls(){document.querySelector('.editor-workspace').inert=Boolean(draftDecision||publishing);$('backup-button').disabled=draftDecision||!data;$('revisions-button').disabled=draftDecision||publishing;$('import-file').disabled=draftDecision||publishing;const changed=Boolean(dirty());$('undo').disabled=!undoStack.length||publishing;$('redo').disabled=!redoStack.length||publishing;$('publish-button').disabled=draftDecision||!data||publishing||!changed;$('connection-button').disabled=draftDecision||publishing;$('publish-button').textContent=publishing?'게시 중…':'게시하기';$('connection-button').textContent=connected?'GitHub 연결됨':'GitHub 연결';$('connection-button').classList.toggle('connected',connected);}
 function snapshot(){return {data:clone(data),assets:assets.map(a=>({...a})),page};}
 function restoreSnapshot(value){lastChangeKey='';data=value.data;assets=value.assets;page=value.page;selection=null;renderAll();scheduleSave();}
-function change(mutator,label='내용 수정',options={}){if(publishing)throw new Error('게시가 끝난 뒤 수정해 주세요.');const next=clone(data);mutator(next);const now=Date.now();if(!options.coalesceKey||options.coalesceKey!==lastChangeKey||now-lastChangeTime>1200){undoStack.push(snapshot());if(undoStack.length>40)undoStack.shift();}lastChangeKey=options.coalesceKey||'';lastChangeTime=now;redoStack=[];for(const key of Object.keys(data))delete data[key];Object.assign(data,next);setDraftState('초안 저장 중…','dirty');renderAll(options);scheduleSave();message(label+' · 미리보기에서 확인하세요.');}
+function change(mutator,label='내용 수정',options={}){
+ if(publishing)throw new Error('게시가 끝난 뒤 수정해 주세요.');
+ const next=clone(data);
+ mutator(next);
+ const nextAssets=options.stagedAssets?.length ? [...assets,...options.stagedAssets] : assets;
+ if(nextAssets!==assets){
+  const used=activeAssets(next,nextAssets);
+  const bytes=used.reduce((sum,{base64})=>sum+base64.length/4*3-(base64.endsWith('==')?2:base64.endsWith('=')?1:0),0);
+  if(used.length>STORAGE_LIMITS.imageCount||bytes>STORAGE_LIMITS.totalImageBytes)throw new Error('새 그림과 썸네일이 초안 저장 한도(총 10MB 또는 50개 파일)를 넘었습니다. 더 작은 파일을 선택하세요.');
+ }
+ const now=Date.now();
+ if(!options.coalesceKey||options.coalesceKey!==lastChangeKey||now-lastChangeTime>1200){undoStack.push(snapshot());if(undoStack.length>40)undoStack.shift();}
+ lastChangeKey=options.coalesceKey||'';
+ lastChangeTime=now;
+ redoStack=[];
+ for(const key of Object.keys(data))delete data[key];
+ Object.assign(data,next);
+ assets=nextAssets;
+ setDraftState('초안 저장 중…','dirty');
+ renderAll(options);
+ scheduleSave();
+ message(label+' · 미리보기에서 확인하세요.');
+}
 function scheduleSave(){
  if(!data||draftDecision)return;
  clearTimeout(draftTimer);draftTimer=undefined;
@@ -57,14 +78,31 @@ function renderItems(){const key=collection(),list=$('item-list');list.replaceCh
  if(key==='publications'){const b=node('button','+ 심사 중 논문 추가','list-item');b.addEventListener('click',()=>addRecord('underReview'));list.append(b);for(const [i,item] of (data.underReview||[]).entries()){const b=node('button','심사 중 · '+item.title,'list-item sub-item');b.addEventListener('click',()=>select({path:`/underReview/${i}`,type:'record',label:'심사 중 논문'}));list.append(b);}}
  if(key==='research'){const b=node('button','+ 세부 연구 주제 추가','list-item');b.addEventListener('click',()=>{const area=selection?.path?.match(/^\/research\/(\d+)/)?.[1]||'0';addRecord('topic',Number(area));});list.append(b);}}
 function renderAll(options={}){if(!data)return;renderPages();renderItems();renderFrame();if(!options.preserveInspector){if(selection)select(selection);else select(null);}controls();}
-function frameHTML(){let html=render(data,page,{editable:true});for(const asset of assets){const url=urlFor(asset);html=html.replaceAll('src="'+asset.path+'"','src="'+url+'"').replaceAll('href="'+asset.path+'"','href="'+url+'"');}return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="${SITE}"><link rel="stylesheet" href="${new URL('../styles.css',import.meta.url).href}"><style>html{scrollbar-gutter:stable}body{min-height:100vh}.editing [data-edit-path]{cursor:pointer}.editing [data-edit-path]:hover{outline:2px dashed #5d8ac2;outline-offset:4px}.editing .editor-selected{outline:2px solid #2764a3!important;outline-offset:5px}.editing [contenteditable=true]{cursor:text;outline:2px solid #2764a3;background:#fff;min-width:1em}*{scroll-margin-top:30px}</style></head><body class="${mode==='edit'?'editing':''}" data-page="${page}"><div id="preview-notice" hidden></div><div id="site-shell">${html}</div><script type="module" src="${new URL('../app.js',import.meta.url).href}"></script></body></html>`;}
+function frameHTML(){
+ let html=render(data,page,{editable:true});
+ const staged=new Map(activeAssets().map(asset=>[asset.path,urlFor(asset)]));
+ for(const [path,url] of staged){
+  html=html.replaceAll('src="'+path+'"','src="'+url+'"').replaceAll('href="'+path+'"','href="'+url+'"');
+ }
+ html=html.replace(/\bsrcset="([^"]+)"/g,(_match,srcset)=>{
+  const entries=srcset.split(', ').map(entry=>entry.replace(/^assets\/uploads\/\S+/,path=>staged.get(path)||path));
+  return `srcset="${entries.join(', ')}"`;
+ });
+ return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="${SITE}"><link rel="stylesheet" href="${new URL('../styles.css',import.meta.url).href}"><style>html{scrollbar-gutter:stable}body{min-height:100vh}.editing [data-edit-path]{cursor:pointer}.editing [data-edit-path]:hover{outline:2px dashed #5d8ac2;outline-offset:4px}.editing .editor-selected{outline:2px solid #2764a3!important;outline-offset:5px}.editing [contenteditable=true]{cursor:text;outline:2px solid #2764a3;background:#fff;min-width:1em}*{scroll-margin-top:30px}</style></head><body class="${mode==='edit'?'editing':''}" data-page="${page}"><div id="preview-notice" hidden></div><div id="site-shell">${html}</div><script type="module" src="${new URL('../app.js',import.meta.url).href}"></script></body></html>`;
+}
 function renderFrame(){clearTimeout(frameTimer);const sequence=++frameSequence;frameTimer=setTimeout(()=>{const frame=$('site-preview');let scrollY=0;try{if(frame.dataset.page===page)scrollY=frame.contentWindow.scrollY||0;}catch{}frame.dataset.page=page;frame.onload=()=>{if(sequence!==frameSequence)return;const doc=frame.contentDocument;doc.addEventListener('click',frameClick,true);doc.addEventListener('dblclick',inlineEdit,true);highlightSelection();if(scrollY)frame.contentWindow.scrollTo(0,scrollY);};frame.srcdoc=frameHTML();},100);}
 function localPage(href){try{const url=new URL(href,SITE);if(url.origin!==new URL(SITE).origin)return null;const file=url.pathname.split('/').at(-1);if(ROUTES.some(([id])=>file===id+'.html'))return file.slice(0,-5);if(/^post-[a-z0-9_-]+\.html$/i.test(file))return file.slice(0,-5);return null;}catch{return null;}}
-function frameClick(event){if(event.target.closest('summary'))return;const category=event.target.closest('a[data-category]');if(category){event.preventDefault();event.stopImmediatePropagation();const value=category.dataset.category,doc=category.ownerDocument;let count=0;doc.querySelectorAll('#news-results>article[data-category]').forEach(el=>{el.hidden=value!=='all'&&el.dataset.category!==value;if(!el.hidden)count++;});doc.querySelectorAll('a[data-category]').forEach(el=>{if(el.dataset.category===value)el.setAttribute('aria-current','true');else el.removeAttribute('aria-current');});const status=doc.getElementById('news-count');if(status)status.textContent=count+' news items';return;}if(inlineEditing&&event.target.isContentEditable)return;const field=event.target.closest('[data-edit-path]');if(mode==='edit'&&field){event.preventDefault();event.stopImmediatePropagation();select(descriptor(field));return;}const link=event.target.closest('a[href]');if(link){const target=localPage(link.getAttribute('href'));if(target){event.preventDefault();event.stopImmediatePropagation();navigate(target);return;}if(mode==='edit'){event.preventDefault();event.stopImmediatePropagation();const item=event.target.closest('[data-edit-item]');if(item)select({path:item.dataset.editItem,type:'record',label:'내용 수정'});return;}}
+function frameClick(event){if(event.target.closest('summary'))return;
+ const jump=event.target.closest('.research-jump a[href^="#"]');
+ if(jump){event.preventDefault();jump.ownerDocument.getElementById(jump.hash.slice(1))?.scrollIntoView();return;}
+ const category=event.target.closest('a[data-category]');if(category){event.preventDefault();event.stopImmediatePropagation();const value=category.dataset.category,doc=category.ownerDocument;let count=0;doc.querySelectorAll('#news-results>article[data-category]').forEach(el=>{el.hidden=value!=='all'&&el.dataset.category!==value;if(!el.hidden)count++;});doc.querySelectorAll('a[data-category]').forEach(el=>{if(el.dataset.category===value)el.setAttribute('aria-current','true');else el.removeAttribute('aria-current');});const status=doc.getElementById('news-count');if(status)status.textContent=count+' news items';return;}if(inlineEditing&&event.target.isContentEditable)return;const field=event.target.closest('[data-edit-path]');if(mode==='edit'&&field){event.preventDefault();event.stopImmediatePropagation();select(descriptor(field));return;}const link=event.target.closest('a[href]');if(link){const target=localPage(link.getAttribute('href'));if(target){event.preventDefault();event.stopImmediatePropagation();navigate(target);return;}if(mode==='edit'){event.preventDefault();event.stopImmediatePropagation();const item=event.target.closest('[data-edit-item]');if(item)select({path:item.dataset.editItem,type:'record',label:'내용 수정'});return;}}
  if(mode==='edit'){const item=event.target.closest('[data-edit-item]');if(item){event.preventDefault();select({path:item.dataset.editItem,type:'record',label:'내용 수정'});}}}
 function inlineEdit(event){if(mode!=='edit'||publishing)return;const el=event.target.closest('[data-edit-path]');if(!el||!['text','multiline','email'].includes(el.dataset.editType))return;event.preventDefault();event.stopImmediatePropagation();const d=descriptor(el),original=getAt(data,d.path);inlineEditing=true;el.contentEditable='true';el.addEventListener('paste',ev=>{ev.preventDefault();const plain=ev.clipboardData.getData('text/plain'),selection=el.ownerDocument.getSelection();if(selection?.rangeCount){const range=selection.getRangeAt(0);range.deleteContents();const text=el.ownerDocument.createTextNode(plain);range.insertNode(text);range.setStartAfter(text);range.collapse(true);selection.removeAllRanges();selection.addRange(range);}});el.focus();const range=el.ownerDocument.createRange();range.selectNodeContents(el);const s=el.ownerDocument.getSelection();s.removeAllRanges();s.addRange(range);let cancelled=false;el.addEventListener('keydown',ev=>{if(ev.key==='Escape'){cancelled=true;el.blur();}if(ev.key==='Enter'&&d.type!=='multiline'){ev.preventDefault();el.blur();}},{capture:true});el.addEventListener('blur',()=>{const value=el.innerText.replace(/\r/g,'').trim();inlineEditing=false;el.contentEditable='false';if(!cancelled&&value!==String(original||''))change(draft=>setAt(draft,d.path,value),d.label+' 수정');else renderFrame();},{once:true});}
 function urlFor(asset){if(asset.previewURL)return asset.previewURL;if(assetURLs.has(asset.path))return assetURLs.get(asset.path);const binary=atob(asset.base64),bytes=Uint8Array.from(binary,c=>c.charCodeAt(0)),url=URL.createObjectURL(new Blob([bytes],{type:asset.mime||'image/webp'}));assetURLs.set(asset.path,url);return url;}
-async function stage(file){if(publishing)throw new Error('게시가 끝난 뒤 사진을 추가해 주세요.');message('사진을 불러오고 있습니다…');const asset=await prepareImage(file);const bytes=activeAssets().reduce((n,a)=>n+Math.floor(a.base64.length*3/4),0)+Math.floor(asset.base64.length*3/4);if(bytes>DRAFT_LIMIT){URL.revokeObjectURL(asset.previewURL);throw new Error('새 사진 합계가 10MB를 넘었습니다. 일부 사진을 먼저 게시한 뒤 나머지를 추가해 주세요.');}assets.push(asset);return asset;}
+async function stage(file,options){
+ if(publishing)throw new Error('게시가 끝난 뒤 사진을 추가해 주세요.');
+ return prepareImage(file,options);
+}
 function addRecord(kind=collection(),parent=0){const id=kind+'-'+crypto.randomUUID(),date=new Date().toLocaleDateString('sv-SE');let item;if(kind==='news')item={id,title:'새 게시물',date,category:isActivities()?'Activities':'Conferences',body:'',summary:'',content:[{type:'paragraph',text:'내용을 입력하세요.'}]};else if(kind==='people')item={id,name:'새 구성원',role:page==='people'?'Principal Investigator':'Master’s student',description:'',email:'',image:'',url:''};else if(kind==='publications')item={id,title:'새 논문',authors:'',journal:'',year:new Date().getFullYear(),doi:'',url:'',labAuthors:[],featured:false};else if(kind==='underReview')item={id,title:'새 원고',authors:'',labAuthors:[]};else if(kind==='research')item={id,title:'새 연구 분야',summary:'',topics:[]};else if(kind==='topic')item={id,title:'새 세부 주제',summary:'',focus:[],paperIds:[],detailSections:[]};else return;
  let path;change(draft=>{const arr=kind==='topic'?(draft.research[parent].topics||=([])):(draft[kind]||=([]));arr.push(item);path=kind==='topic'?`/research/${parent}/topics/${arr.length-1}`:`/${kind}/${arr.length-1}`;},'새 항목 추가');if(kind==='news')page='post-'+id;renderAll();select({path,type:'record',label:recordLabel(item)});}
 function itemMove(direction){const path=selectedItemPath();if(!path)return;const parts=path.split('/'),index=Number(parts.pop()),parent=parts.join('/'),other=index+direction;const list=getAt(data,parent);if(other<0||other>=list.length)return;change(draft=>{const a=getAt(draft,parent);[a[index],a[other]]=[a[other],a[index]];},'순서 변경');select({path:parent+'/'+other,type:'record',label:recordLabel(getAt(data,parent+'/'+other))});}
