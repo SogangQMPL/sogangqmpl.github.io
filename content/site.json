@@ -162,7 +162,22 @@
                 }
               ]
             }
-          ]
+          ],
+          "schematicThumbnail": {
+            "source": "assets/research/spdc-photon-pair-original-crop.png",
+            "variants": [
+              {
+                "src": "assets/uploads/spdc-thumb-480.webp",
+                "width": 480,
+                "height": 397
+              },
+              {
+                "src": "assets/uploads/spdc-thumb-960.webp",
+                "width": 960,
+                "height": 794
+              }
+            ]
+          }
         }
       ],
       "additionalDirections": [
@@ -290,7 +305,22 @@
                 }
               ]
             }
-          ]
+          ],
+          "schematicThumbnail": {
+            "source": "assets/research/moire-lattices-original-crop.png",
+            "variants": [
+              {
+                "src": "assets/uploads/moire-physics-thumb-480.webp",
+                "width": 480,
+                "height": 387
+              },
+              {
+                "src": "assets/uploads/moire-physics-thumb-880.webp",
+                "width": 880,
+                "height": 710
+              }
+            ]
+          }
         },
         {
           "id": "interlayer-excitons",
@@ -397,7 +427,22 @@
                 }
               ]
             }
-          ]
+          ],
+          "schematicThumbnail": {
+            "source": "assets/research/interlayer-device-original-crop.png",
+            "variants": [
+              {
+                "src": "assets/uploads/interlayer-excitons-thumb-480.webp",
+                "width": 480,
+                "height": 276
+              },
+              {
+                "src": "assets/uploads/interlayer-excitons-thumb-960.webp",
+                "width": 960,
+                "height": 553
+              }
+            ]
+          }
         }
       ],
       "additionalDirections": [
@@ -503,7 +548,22 @@
                 }
               ]
             }
-          ]
+          ],
+          "schematicThumbnail": {
+            "source": "assets/research/semiconductor-devices-original.png",
+            "variants": [
+              {
+                "src": "assets/uploads/2d-semiconductor-devices-thumb-480.webp",
+                "width": 480,
+                "height": 270
+              },
+              {
+                "src": "assets/uploads/2d-semiconductor-devices-thumb-960.webp",
+                "width": 960,
+                "height": 540
+              }
+            ]
+          }
         }
       ],
       "additionalDirections": [
@@ -2459,7 +2519,22 @@
       "imageHeight": 219,
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-45-original.png",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-45-thumb-320.webp",
+            "width": 320,
+            "height": 135
+          },
+          {
+            "src": "assets/uploads/pub-45-thumb-520.webp",
+            "width": 520,
+            "height": 219
+          }
+        ]
+      }
     },
     {
       "id": "pub-46",
@@ -2486,7 +2561,28 @@
       },
       "labAuthors": [
         "Hyeonjun Baek"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/publications/pub-46-fig2.gif",
+        "variants": [
+          {
+            "src": "assets/uploads/pub-46-thumb-320.webp",
+            "width": 320,
+            "height": 187
+          },
+          {
+            "src": "assets/uploads/pub-46-thumb-720.webp",
+            "width": 720,
+            "height": 421
+          }
+        ],
+        "crop": [
+          0,
+          0,
+          1,
+          0.6
+        ]
+      }
     }
   ],
   "news": [
@@ -2544,7 +2640,28 @@
           "label": "Event",
           "value": "G-LAMP Undergraduate Research Program final presentation (Spring 2026)"
         }
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/posts/news-2026-glamp-junha-park-award-display.webp",
+        "variants": [
+          {
+            "src": "assets/uploads/news-2026-glamp-junha-park-award-thumb-420.webp",
+            "width": 420,
+            "height": 315
+          },
+          {
+            "src": "assets/uploads/news-2026-glamp-junha-park-award-thumb-840.webp",
+            "width": 840,
+            "height": 630
+          }
+        ]
+      },
+      "shareImage": {
+        "source": "assets/posts/news-2026-glamp-junha-park-award-display.webp",
+        "src": "assets/uploads/news-2026-glamp-junha-park-award-share.jpg",
+        "width": 1200,
+        "height": 900
+      }
     },
     {
       "id": "news-2026-kps-yongju-jeong-oral-award",
@@ -2600,7 +2717,13 @@
           "label": "Event",
           "value": "2026 KPS Fall Meeting"
         }
-      ]
+      ],
+      "shareImage": {
+        "source": "assets/posts/news-2026-kps-yongju-jeong-oral-award-display.webp",
+        "src": "assets/uploads/news-2026-kps-yongju-jeong-oral-award-share.jpg",
+        "width": 1200,
+        "height": 900
+      }
     },
     {
       "id": "news-2026-kps-taegyu-jang-poster-award",
@@ -2656,7 +2779,28 @@
           "label": "Event",
           "value": "2026 KPS Fall Meeting"
         }
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/posts/news-2026-kps-taegyu-jang-poster-award-display.webp",
+        "variants": [
+          {
+            "src": "assets/uploads/news-2026-kps-taegyu-jang-poster-award-thumb-420.webp",
+            "width": 420,
+            "height": 560
+          },
+          {
+            "src": "assets/uploads/news-2026-kps-taegyu-jang-poster-award-thumb-840.webp",
+            "width": 840,
+            "height": 1120
+          }
+        ]
+      },
+      "shareImage": {
+        "source": "assets/posts/news-2026-kps-taegyu-jang-poster-award-display.webp",
+        "src": "assets/uploads/news-2026-kps-taegyu-jang-poster-award-share.jpg",
+        "width": 900,
+        "height": 1200
+      }
     },
     {
       "id": "news-2026-kps-seongwon-gim-poster",
@@ -2737,7 +2881,13 @@
           "label": "Event",
           "value": "4th BK21 FOUR Physics Workshop (2026)"
         }
-      ]
+      ],
+      "shareImage": {
+        "source": "assets/posts/news-08-1-display.webp",
+        "src": "assets/uploads/news-08-share.jpg",
+        "width": 1200,
+        "height": 900
+      }
     },
     {
       "id": "news-2026-bk21-four-4th-workshop",
@@ -2815,7 +2965,28 @@
           "label": "Event",
           "value": "G-LAMP Undergraduate Research Program final presentation (Fall 2025)"
         }
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/posts/news-09-1-display.webp",
+        "variants": [
+          {
+            "src": "assets/uploads/news-09-thumb-420.webp",
+            "width": 420,
+            "height": 315
+          },
+          {
+            "src": "assets/uploads/news-09-thumb-840.webp",
+            "width": 840,
+            "height": 629
+          }
+        ]
+      },
+      "shareImage": {
+        "source": "assets/posts/news-09-1-display.webp",
+        "src": "assets/uploads/news-09-share.jpg",
+        "width": 1200,
+        "height": 899
+      }
     },
     {
       "id": "news-10",
@@ -2845,7 +3016,13 @@
         }
       ],
       "image": "assets/posts/news-10-1-display.webp",
-      "imageAlt": "A speaker at a lectern presents slides on InSe/TMD band alignment to the workshop audience."
+      "imageAlt": "A speaker at a lectern presents slides on InSe/TMD band alignment to the workshop audience.",
+      "shareImage": {
+        "source": "assets/posts/news-10-1-display.webp",
+        "src": "assets/uploads/news-10-share.jpg",
+        "width": 1200,
+        "height": 900
+      }
     },
     {
       "id": "news-11",
@@ -2908,7 +3085,13 @@
           "label": "Event",
           "value": "BK21 FOUR 3rd Workshop"
         }
-      ]
+      ],
+      "shareImage": {
+        "source": "assets/posts/news-11-1-display.webp",
+        "src": "assets/uploads/news-11-share.jpg",
+        "width": 1200,
+        "height": 900
+      }
     },
     {
       "id": "news-12",
@@ -2938,7 +3121,13 @@
         }
       ],
       "image": "assets/posts/news-12-1-display.webp",
-      "imageAlt": "Poster with layer schematics and photoluminescence plots for symmetric interlayer trions in stacked MoS₂."
+      "imageAlt": "Poster with layer schematics and photoluminescence plots for symmetric interlayer trions in stacked MoS₂.",
+      "shareImage": {
+        "source": "assets/posts/news-12-1-display.webp",
+        "src": "assets/uploads/news-12-share.jpg",
+        "width": 795,
+        "height": 439
+      }
     },
     {
       "id": "news-13",
@@ -2992,7 +3181,28 @@
       "mergedSources": [
         "https://baahyyjuu.wixsite.com/hyeonjun/post/2024-kps-fall-poster-presentation-1",
         "https://baahyyjuu.wixsite.com/hyeonjun/post/2024-kps-fall-poster-presentation"
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/posts/news-13-1-display.webp",
+        "variants": [
+          {
+            "src": "assets/uploads/news-13-thumb-420.webp",
+            "width": 420,
+            "height": 258
+          },
+          {
+            "src": "assets/uploads/news-13-thumb-840.webp",
+            "width": 840,
+            "height": 517
+          }
+        ]
+      },
+      "shareImage": {
+        "source": "assets/posts/news-13-1-display.webp",
+        "src": "assets/uploads/news-13-share.jpg",
+        "width": 1118,
+        "height": 688
+      }
     },
     {
       "id": "activity-1",
@@ -3014,7 +3224,28 @@
           "height": 1200,
           "fullSrc": "assets/posts/activity-1-1.jpg"
         }
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/posts/activity-1-1-display.webp",
+        "variants": [
+          {
+            "src": "assets/uploads/activity-1-thumb-420.webp",
+            "width": 420,
+            "height": 315
+          },
+          {
+            "src": "assets/uploads/activity-1-thumb-840.webp",
+            "width": 840,
+            "height": 630
+          }
+        ]
+      },
+      "shareImage": {
+        "source": "assets/posts/activity-1-1-display.webp",
+        "src": "assets/uploads/activity-1-share.jpg",
+        "width": 1200,
+        "height": 900
+      }
     },
     {
       "id": "activity-2",
@@ -3036,7 +3267,28 @@
         }
       ],
       "image": "assets/posts/activity-2-1-display.webp",
-      "imageAlt": "Group photograph outside a campus building, with several people wearing graduation gowns."
+      "imageAlt": "Group photograph outside a campus building, with several people wearing graduation gowns.",
+      "imageThumbnail": {
+        "source": "assets/posts/activity-2-1-display.webp",
+        "variants": [
+          {
+            "src": "assets/uploads/activity-2-thumb-420.webp",
+            "width": 420,
+            "height": 315
+          },
+          {
+            "src": "assets/uploads/activity-2-thumb-840.webp",
+            "width": 840,
+            "height": 629
+          }
+        ]
+      },
+      "shareImage": {
+        "source": "assets/posts/activity-2-1-display.webp",
+        "src": "assets/uploads/activity-2-share.jpg",
+        "width": 1200,
+        "height": 899
+      }
     },
     {
       "id": "news-2024-bk21-four-1st-workshop",
@@ -3062,7 +3314,28 @@
           "type": "paragraph",
           "text": "Seongwon Gim and Yongju Jeong presented posters at the 1st BK21 FOUR Physics Workshop."
         }
-      ]
+      ],
+      "imageThumbnail": {
+        "source": "assets/posts/bk21-four-1st-workshop-display.webp",
+        "variants": [
+          {
+            "src": "assets/uploads/news-2024-bk21-four-1st-workshop-thumb-420.webp",
+            "width": 420,
+            "height": 560
+          },
+          {
+            "src": "assets/uploads/news-2024-bk21-four-1st-workshop-thumb-840.webp",
+            "width": 840,
+            "height": 1120
+          }
+        ]
+      },
+      "shareImage": {
+        "source": "assets/posts/bk21-four-1st-workshop-display.webp",
+        "src": "assets/uploads/news-2024-bk21-four-1st-workshop-share.jpg",
+        "width": 900,
+        "height": 1200
+      }
     },
     {
       "id": "news-2025-bk21-four-2nd-workshop",
@@ -3089,7 +3362,13 @@
           "type": "paragraph",
           "text": "Seongwon Gim delivered an oral presentation on “Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers” at the 2nd BK21 FOUR Physics Workshop."
         }
-      ]
+      ],
+      "shareImage": {
+        "source": "assets/posts/bk21-four-2nd-oral-display.webp",
+        "src": "assets/uploads/news-2025-bk21-four-2nd-workshop-share.jpg",
+        "width": 1200,
+        "height": 900
+      }
     },
     {
       "id": "news-2026-ceqmf-3rd-workshop",
@@ -3120,7 +3399,13 @@
         }
       ],
       "image": "assets/posts/ceqmf-3rd-seongwon-gim-oral-display.webp",
-      "imageAlt": "Seongwon Gim delivering an oral presentation at the 3rd Workshop on Functional Quantum Matter."
+      "imageAlt": "Seongwon Gim delivering an oral presentation at the 3rd Workshop on Functional Quantum Matter.",
+      "shareImage": {
+        "source": "assets/posts/ceqmf-3rd-seongwon-gim-oral-display.webp",
+        "src": "assets/uploads/news-2026-ceqmf-3rd-workshop-share.jpg",
+        "width": 1200,
+        "height": 900
+      }
     },
     {
       "id": "news-2025-ceqmf-2nd-workshop",
@@ -3160,7 +3445,13 @@
         }
       ],
       "image": "assets/posts/ceqmf-2nd-yongju-jeong-oral-display.webp",
-      "imageAlt": "Yongju Jeong delivering an oral presentation at the 2nd Workshop on Functional Quantum Matter."
+      "imageAlt": "Yongju Jeong delivering an oral presentation at the 2nd Workshop on Functional Quantum Matter.",
+      "shareImage": {
+        "source": "assets/posts/ceqmf-2nd-yongju-jeong-oral-display.webp",
+        "src": "assets/uploads/news-2025-ceqmf-2nd-workshop-share.jpg",
+        "width": 1200,
+        "height": 1200
+      }
     },
     {
       "id": "news-2025-applied-physics-academy",
@@ -3186,7 +3477,13 @@
         }
       ],
       "image": "assets/posts/applied-physics-academy-4th-display.webp",
-      "imageAlt": "Group photo from the 4th Applied Physics Academy."
+      "imageAlt": "Group photo from the 4th Applied Physics Academy.",
+      "shareImage": {
+        "source": "assets/posts/applied-physics-academy-4th-display.webp",
+        "src": "assets/uploads/news-2025-applied-physics-academy-share.jpg",
+        "width": 804,
+        "height": 450
+      }
     }
   ],
   "people": [
