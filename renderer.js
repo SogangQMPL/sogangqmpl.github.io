@@ -263,10 +263,10 @@ function researchPage(data,page,edit) {
  const lookup=new Map(data.publications.map(p=>[p.id,p]));
  const areaIcon=r=>safeURL(r.icon)?`<img class="area-icon" src="${e(safeURL(r.icon))}" alt="" aria-hidden="true" width="80" height="80"${edit(edit.path('research',r)+'/icon','image','연구 분야 아이콘')}>`:'';
  const shortAreaTitles={'Quantum Information':'Quantum info','Solid-State Physics':'Solid-state','Semiconductor Devices':'Devices'};
- const areaLinks=data.research.map(area=>{
-  const shortTitle=Object.hasOwn(shortAreaTitles,area.title)?shortAreaTitles[area.title]:'';
-  const label=shortTitle?`<span class="research-jump-full">${e(area.title)}</span><span class="research-jump-short">${e(shortTitle)}</span>`:e(area.title);
-  return `<a href="#${e(area.id)}"${shortTitle?` aria-label="${e(area.title)}"`:''}>${label}</a>`;
+ const areaLinks=data.research.map((area,index)=>{
+  const shortTitle=Object.hasOwn(shortAreaTitles,area.title)?shortAreaTitles[area.title]:area.title;
+  const number=String(index+1).padStart(2,'0');
+  return `<a href="#${e(area.id)}" data-area="${e(area.id)}" aria-label="${e(area.title)}"><span class="research-flag-number" aria-hidden="true">${number}</span><span class="research-jump-full">${e(area.title)}</span><span class="research-jump-short">${e(shortTitle)}</span></a>`;
  }).join('');
  const originalFigure=(image,path,legacy=false)=>{
   const src=safeURL(image.src);if(!src)return '';
@@ -308,8 +308,11 @@ function researchPage(data,page,edit) {
      ${papers.length?`<div class="topic-evidence"><p class="result-label"${edit(path+'/paperIds','relation','관련 논문 연결',{collection:'/publications'})}>Related papers</p><ul class="result-list">${papers.map(paper=>{const paperPath=edit.path('publications',paper),outcomeIndex=(t.outcomes||[]).findLastIndex(outcome=>outcome.paperIds?.length===1&&outcome.paperIds[0]===paper.id),titlePath=outcomeIndex>=0?path+'/outcomes/'+outcomeIndex+'/title':paperPath+'/title';return `<li data-paper-id="${e(paper.id)}">${external(paper.url||(paper.doi?'https://doi.org/'+paper.doi:''),publicationTitle(paper,shortTitles.get(paper.id)||paper.title),'',edit(titlePath,outcomeIndex>=0?'text':'publication-title',outcomeIndex>=0?'관련 논문 표시 제목':'논문 제목',{urlPath:paperPath+'/url',segmentsPath:paperPath+'/titleSegments'}))}<span class="result-citation"${edit(paperPath+(paper.journal?'/journal':'/year'),paper.journal?'text':'number','논문 서지 정보')}>${publicationCitation(paper.journal||paper.year)}</span></li>`;}).join('')}</ul></div>`:''}
    </article>`;
  };
- return `<main id="main" tabindex="-1" class="container page-layout research-page"><header class="page-intro"><h1>Research</h1>${areaLinks?`<nav class="research-jump" aria-label="Jump to research area"><span class="research-jump-label" aria-hidden="true">Jump to</span>${areaLinks}</nav>`:''}</header>
+ return `<main id="main" tabindex="-1" class="container page-layout research-page">${pageIntro('Research')}
+   <div class="research-layout">
+   ${areaLinks?`<nav class="research-jump" aria-label="Research areas">${areaLinks}</nav>`:''}
    <div class="research-groups"${edit.collection('/research','연구 분야')}>${data.research.map((r,i)=>{const path=edit.path('research',r);return `<section class="research-group" data-area="${e(r.id)}" id="${e(r.id)}" aria-labelledby="${e(r.id)}-title"${edit.item(path,'연구 분야')}><header class="theme-heading">${areaIcon(r)}<div class="theme-title"><span class="theme-number" aria-hidden="true">0${i+1}</span><h2 id="${e(r.id)}-title"${edit(path+'/title','text','연구 분야명')}>${e(r.title)}</h2></div><p${edit(path+'/summary','multiline','연구 분야 소개')}>${e(r.summary)}</p></header><div class="theme-content"><div class="research-topics"${edit.collection(path+'/topics','하위 연구 주제')}>${(r.topics||[]).map((t,j)=>topic(t,i,j)).join('')}</div></div></section>`;}).join('')}</div>
+   </div>
    <details class="original-research-map"><summary>Research map</summary>${zoomLink({image:'assets/research/original-overview.webp',title:'Research map',width:1500,height:844},'<img src="assets/research/original-overview.webp" alt="Two-dimensional materials supporting quantum information, solid-state physics and semiconductor devices" loading="lazy" width="1500" height="844">')}<div class="theme-map-diagrams">${data.research.filter(r=>safeURL(r.image)).map(r=>{const path=edit.path('research',r),image=safeURL(r.image);return `<figure>${zoomLink({image,title:r.title},`<img src="${e(image)}" alt="${e(r.imageAlt||r.title)}" width="420" height="300" loading="lazy"${edit(path+'/image','image','분야 개념도',{altPath:path+'/imageAlt'})}>`)}<figcaption${edit(path+'/title','text','연구 분야명')}>${e(r.title)}</figcaption></figure>`;}).join('')}</div></details>
  </main>`;
 }
