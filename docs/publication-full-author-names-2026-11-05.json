@@ -1970,9 +1970,9 @@
       "id": "pub-40",
       "doi": "10.1166/jnn.2014.8303",
       "authors": [
-        "D. M. Kim",
-        "Y.-H. Cho",
-        "H. Jeong",
+        "DongMin Kim",
+        "YoungHoon Cho",
+        "Hoonil Jeong",
         "Hyeonjun Baek",
         "Gyu-Chul Yi",
         "Young Dahl Jho"
@@ -1984,25 +1984,36 @@
       ],
       "evidence": [
         "User-provided original kim2014.pdf p1 verifies exact DOI/title and six-author order but byline uses initials. GIST primary related 2012 nanotube conference record lists Dong Min Kim and Young-Hoon Cho, H. with same coauthor initials, but is a different publication.",
-        "GIST faculty authority verifies JHO, Young Dahl. OpenAlex associates H. Jeong with Hoon Jeong, but GIST group also has Hoonill Jeong; do not trust algorithmic identity expansion."
+        "GIST faculty authority verifies JHO, Young Dahl. OpenAlex associates H. Jeong with Hoon Jeong, but GIST group also has Hoonill Jeong; do not trust algorithmic identity expansion.",
+        "The website maintainer confirmed DongMin Kim, YoungHoon Cho and Hoonil Jeong on 2026-11-05. Preserve this capitalization and the original paper author order."
       ],
-      "unresolved": [
-        "D. M. Kim: Dong Min Kim only evidenced in related conference record; exact-paper primary fullname unavailable.",
-        "Y.-H. Cho: Young-Hoon Cho only evidenced in related conference record; exact-paper primary fullname unavailable.",
-        "H. Jeong: full given name unverified; retain initials rather than guess."
-      ],
+      "unresolved": [],
       "before": "D. M. Kim, Y.-H. Cho, H. Jeong, Hyeonjun Baek, G.-C. Yi, and Y. D. Jho",
-      "after": "D. M. Kim, Y.-H. Cho, H. Jeong, Hyeonjun Baek, Gyu-Chul Yi, and Young Dahl Jho",
+      "after": "DongMin Kim, YoungHoon Cho, Hoonil Jeong, Hyeonjun Baek, Gyu-Chul Yi, and Young Dahl Jho",
       "appliedNames": [
-        "D. M. Kim",
-        "Y.-H. Cho",
-        "H. Jeong",
+        "DongMin Kim",
+        "YoungHoon Cho",
+        "Hoonil Jeong",
         "Hyeonjun Baek",
         "Gyu-Chul Yi",
         "Young Dahl Jho"
       ],
       "markersPreserved": true,
-      "authorCount": 6
+      "authorCount": 6,
+      "resolvedInitialOnlyNames": {
+        "confirmedAt": "2026-11-05",
+        "source": "Website maintainer supplied the exact full names and capitalization in this conversation.",
+        "mapping": {
+          "D. M. Kim": "DongMin Kim",
+          "Y.-H. Cho": "YoungHoon Cho",
+          "H. Jeong": "Hoonil Jeong"
+        },
+        "previousUnresolved": [
+          "D. M. Kim: Dong Min Kim only evidenced in related conference record; exact-paper primary fullname unavailable.",
+          "Y.-H. Cho: Young-Hoon Cho only evidenced in related conference record; exact-paper primary fullname unavailable.",
+          "H. Jeong: full given name unverified; retain initials rather than guess."
+        ]
+      }
     },
     {
       "id": "pub-41",
@@ -2229,19 +2240,10 @@
   "summary": {
     "papers": 46,
     "authorOccurrences": 370,
-    "expandedAuthorOccurrences": 312,
-    "unresolved": [
-      {
-        "id": "pub-40",
-        "authors": [
-          "D. M. Kim: Dong Min Kim only evidenced in related conference record; exact-paper primary fullname unavailable.",
-          "Y.-H. Cho: Young-Hoon Cho only evidenced in related conference record; exact-paper primary fullname unavailable.",
-          "H. Jeong: full given name unverified; retain initials rather than guess."
-        ]
-      }
-    ],
-    "completePublishedBylines": 45,
-    "pendingInitialOnlyNames": 3
+    "expandedAuthorOccurrences": 315,
+    "unresolved": [],
+    "completePublishedBylines": 46,
+    "pendingInitialOnlyNames": 0
   },
   "validation": {
     "authorOrder": "Verified per paper against the ordered primary-source byline",
