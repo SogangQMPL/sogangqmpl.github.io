@@ -170,14 +170,16 @@ function connectResearchNavigation(){
   }
   const root=document.documentElement;
   if(rail){
-   // Keep a stable inset, lifting the rail in short windows so all topics can fit.
+   // Anchor to the viewport at its original position, including over the footer.
+   const railWidth=parseFloat(getComputedStyle(layout).getPropertyValue('--research-rail-width'));
+   const left=`${Math.round(layoutBounds.left-railWidth-12)}px`;
+   if(nav.style.getPropertyValue('--research-rail-left')!==left)nav.style.setProperty('--research-rail-left',left);
+   // Lift only to fit short windows; page scrolling must never move the rail.
    const startTop=layoutBounds.top+window.scrollY;
    const navHeight=Math.ceil(Math.max(nav.scrollHeight,nav.getBoundingClientRect().height));
    const top=Math.max(16,Math.min(startTop,root.clientHeight-navHeight-16));
    const inset=`${Math.round(top)}px`;
    if(nav.style.getPropertyValue('--research-rail-top')!==inset)nav.style.setProperty('--research-rail-top',inset);
-   const shift=`${Math.round(top-startTop)}px`;
-   if(nav.style.getPropertyValue('--research-rail-shift')!==shift)nav.style.setProperty('--research-rail-shift',shift);
   }else{
    const offset=`${Math.ceil(nav.getBoundingClientRect().height)}px`;
    if(layout.style.getPropertyValue('--research-jump-offset')!==offset)layout.style.setProperty('--research-jump-offset',offset);
