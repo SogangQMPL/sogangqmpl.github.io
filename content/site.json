@@ -3792,8 +3792,8 @@
     "description": "참여 문의는 이메일로 보내주세요.",
     "office": "R1021",
     "laboratory": "R303",
-    "mailingAddressKo": "우편번호 04107\n서울특별시 마포구 백범로 35\n서강대학교 리치과학관(R관)",
-    "mailingAddressEn": "Ricci Hall (R Building), Sogang University\n35 Baekbeom-ro, Mapo-gu\nSeoul 04107\nRepublic of Korea"
+    "mailingAddressKo": "서울특별시 마포구 백범로 35\n서강대학교 리치과학관(R관) (04107)",
+    "mailingAddressEn": "Ricci Hall (R Building)\n35 Baekbeom-ro, Mapo-gu\nSeoul 04107, Republic of Korea"
   },
   "provenance": {
     "auditedAt": "2026-11-01",
