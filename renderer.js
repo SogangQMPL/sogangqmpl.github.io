@@ -380,7 +380,7 @@ function activitiesPage(data,page,edit) {
  return `<main id="main" tabindex="-1" class="container page-layout interior">${pageIntro('Activities','')}${highlightNavigation('activities')}<section class="news-list activities-list"${edit.collection('/news','활동')}>${items.map(item=>highlightEntry(item,edit)).join('')}</section></main>`;
 }
 function joinPage(data,page,edit) {
- const ricciHallMap='https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x357c98bcfd85c72d%3A0xd41e7652fbe4e84a!2z7ISc6rCV64yA7ZWZ6rWQIOumrOy5mOqzvO2Vmeq0gA!5e0!3m2!1sko!2skr!4v1793846536710!5m2!1sko!2skr';
+ const ricciHallMap='https://maps.google.com/maps?hl=ko&q=37.549814%2C126.9411403&z=16&iwloc=near&output=embed';
  const ricciHallDirections='https://www.google.com/maps/dir/?api=1&destination=Ricci%20Hall%2C%20Sogang%20University&destination_place_id=ChIJLceF_byYfDURSujk-1J2HtQ';
  return `<main id="main" tabindex="-1" class="container page-layout interior">${pageIntro('Join Us','')}
    <section class="join-copy"${edit.item('/join','모집 안내')}><h2 lang="ko"${edit('/join/title','text','모집 제목')}>${e(data.join.title)}</h2><p lang="ko"${edit('/join/description','multiline','모집 안내 내용')}>${e(data.join.description)}</p><p${edit('/site/email','email','대표 이메일')}>${mail(data.site.email)}</p></section>
