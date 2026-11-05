@@ -150,10 +150,14 @@ function connectResearchNavigation(){
  const areas=[...nav.querySelectorAll('a[data-area]')].map(link=>({
   link,
   section:document.getElementById(link.dataset.area),
+  topics:[...link.parentElement.querySelectorAll('a[data-topic]')].map(topicLink=>({
+   link:topicLink,
+   section:document.getElementById(topicLink.dataset.topic),
+  })).filter(topic=>topic.section),
  })).filter(area=>area.section);
  if(!areas.length)return;
 
- let frame=null,currentLink=null;
+ let frame=null,currentLink=null,currentTopicLink=null;
  function updateCurrentArea(){
   frame=null;
   // The flag, its gap to the article, and its focus outline must fit in the actual gutter.
@@ -166,18 +170,38 @@ function connectResearchNavigation(){
   }
   const root=document.documentElement;
   if(rail){
-   // Keep the rail at its unscrolled height, with room for all flags in short windows.
-   const top=Math.max(0,Math.min(layoutBounds.top+window.scrollY,root.clientHeight-nav.offsetHeight-24));
+   // Use a stable inset when subtopics expand, and allow the rail itself to scroll in short windows.
+   const top=Math.max(0,Math.min(layoutBounds.top+window.scrollY,root.clientHeight-160));
    const inset=`${Math.round(top)}px`;
    if(nav.style.getPropertyValue('--research-rail-top')!==inset)nav.style.setProperty('--research-rail-top',inset);
   }
-  const readingLine=rail?60:Math.max(60,nav.getBoundingClientRect().bottom+24);
+  const readingLine=rail?96:Math.max(60,nav.getBoundingClientRect().bottom+24);
   const atBottom=window.scrollY>0&&root.scrollHeight-root.clientHeight-window.scrollY<=2;
   const current=atBottom?areas.at(-1):areas.findLast(area=>area.section.getBoundingClientRect().top<=readingLine)||areas[0];
-  if(current.link===currentLink)return;
-  currentLink?.removeAttribute('aria-current');
-  currentLink=current.link;
-  currentLink.setAttribute('aria-current','location');
+  if(current.link!==currentLink){
+   currentLink?.removeAttribute('aria-current');
+   currentLink=current.link;
+   currentLink.setAttribute('aria-current','location');
+  }
+  for(const area of areas){
+   if(!area.topics.length)continue;
+   const expanded=String(Boolean(rail)&&area===current);
+   if(area.link.getAttribute('aria-expanded')!==expanded)area.link.setAttribute('aria-expanded',expanded);
+  }
+  const topic=rail?(atBottom?current.topics.at(-1):current.topics.findLast(item=>item.section.getBoundingClientRect().top<=readingLine)):null;
+  const topicLink=topic?.link||null;
+  if(topicLink!==currentTopicLink){
+   currentTopicLink?.removeAttribute('aria-current');
+   currentTopicLink=topicLink;
+   currentTopicLink?.setAttribute('aria-current','location');
+  }
+  if(rail&&nav.scrollHeight>nav.clientHeight){
+   const bounds=nav.getBoundingClientRect();
+   let active=currentLink.parentElement.getBoundingClientRect();
+   if(active.height>nav.clientHeight-12)active=(currentTopicLink||currentLink).getBoundingClientRect();
+   if(active.top<bounds.top+6)nav.scrollTop+=active.top-bounds.top-6;
+   else if(active.bottom>bounds.bottom-6)nav.scrollTop+=active.bottom-bounds.bottom+6;
+  }
  }
  function scheduleUpdate(){
   if(frame===null)frame=requestAnimationFrame(updateCurrentArea);
