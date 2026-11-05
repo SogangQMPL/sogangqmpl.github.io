@@ -258,6 +258,12 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 .nav-submenu-toggle::before{content:'';display:block;width:7px;height:7px;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:translateY(-2px) rotate(45deg)}
 .nav-submenu-toggle[aria-expanded=true]::before{transform:translateY(2px) rotate(225deg)}
 .nav-submenu-toggle:hover,.nav-submenu-toggle[aria-expanded=true]{color:var(--navy)}
+/* Keep submenu controls in the existing gap so the menu labels set the spacing. */
+@media(width > 900px){
+ .nav-disclosures-ready #main-nav{--submenu-toggle-width:24px;padding-inline-end:var(--submenu-toggle-width)}
+ #main-nav .nav-submenu-toggle{position:absolute;inset-inline-start:100%;top:50%;transform:translateY(-50%);width:var(--submenu-toggle-width)}
+ #main-nav .nav-submenu-toggle:focus-visible{outline-offset:0}
+}
 .nav-dropdown{display:none;position:absolute;top:100%;left:-17px;z-index:30;min-width:155px;padding:8px 15px;flex-direction:column;background:white;border:1px solid var(--line)}
 .nav-submenu-toggle[aria-expanded=true]+.nav-dropdown,
 html:not(.nav-disclosures-ready) #main-nav .nav-item:is(:hover,:focus-within) .nav-dropdown{display:flex}
