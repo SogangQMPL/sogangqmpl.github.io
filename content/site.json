@@ -703,12 +703,12 @@
         "source": "assets/publications/pub-02-figure2-cd-no-border.png",
         "variants": [
           {
-            "src": "assets/uploads/pub-02-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-02-320.webp",
             "width": 320,
             "height": 228
           },
           {
-            "src": "assets/uploads/pub-02-thumb-720.webp",
+            "src": "assets/publications/clean-thumbnails/pub-02-720.webp",
             "width": 720,
             "height": 513
           }
@@ -873,12 +873,12 @@
         "source": "assets/publications/pub-06-fig4-reviewed.jpeg",
         "variants": [
           {
-            "src": "assets/uploads/pub-06-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-06-320.webp",
             "width": 320,
             "height": 311
           },
           {
-            "src": "assets/uploads/pub-06-thumb-324.webp",
+            "src": "assets/publications/clean-thumbnails/pub-06-324.webp",
             "width": 324,
             "height": 315
           }
@@ -933,12 +933,12 @@
         "source": "assets/publications/pub-07-figure1.png",
         "variants": [
           {
-            "src": "assets/uploads/pub-07-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-07-320.webp",
             "width": 320,
             "height": 427
           },
           {
-            "src": "assets/uploads/pub-07-thumb-443.webp",
+            "src": "assets/publications/clean-thumbnails/pub-07-443.webp",
             "width": 443,
             "height": 591
           }
@@ -1065,12 +1065,12 @@
         "source": "assets/publications/pub-10-figure1-original.webp",
         "variants": [
           {
-            "src": "assets/uploads/pub-10-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-10-320.webp",
             "width": 320,
             "height": 194
           },
           {
-            "src": "assets/uploads/pub-10-thumb-720.webp",
+            "src": "assets/publications/clean-thumbnails/pub-10-720.webp",
             "width": 720,
             "height": 437
           }
@@ -1113,12 +1113,12 @@
         "source": "assets/publications/pub-11-fig4-reviewed.png",
         "variants": [
           {
-            "src": "assets/uploads/pub-11-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-11-320.webp",
             "width": 320,
             "height": 433
           },
           {
-            "src": "assets/uploads/pub-11-thumb-418.webp",
+            "src": "assets/publications/clean-thumbnails/pub-11-418.webp",
             "width": 418,
             "height": 566
           }
@@ -1196,12 +1196,12 @@
         "source": "assets/publications/pub-13-figure2-original.png",
         "variants": [
           {
-            "src": "assets/uploads/pub-13-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-13-320.webp",
             "width": 320,
             "height": 412
           },
           {
-            "src": "assets/uploads/pub-13-thumb-654.webp",
+            "src": "assets/publications/clean-thumbnails/pub-13-654.webp",
             "width": 654,
             "height": 842
           }
@@ -1244,12 +1244,12 @@
         "source": "assets/publications/pub-14-fig5-reviewed.png",
         "variants": [
           {
-            "src": "assets/uploads/pub-14-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-14-320.webp",
             "width": 320,
             "height": 232
           },
           {
-            "src": "assets/uploads/pub-14-thumb-509.webp",
+            "src": "assets/publications/clean-thumbnails/pub-14-509.webp",
             "width": 509,
             "height": 369
           }
@@ -1382,12 +1382,12 @@
         "source": "assets/publications/pub-17-fig1-reviewed.png",
         "variants": [
           {
-            "src": "assets/uploads/pub-17-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-17-320.webp",
             "width": 320,
             "height": 119
           },
           {
-            "src": "assets/uploads/pub-17-thumb-720.webp",
+            "src": "assets/publications/clean-thumbnails/pub-17-720.webp",
             "width": 720,
             "height": 268
           }
@@ -1430,12 +1430,12 @@
         "source": "assets/publications/pub-18-fig1.jpg",
         "variants": [
           {
-            "src": "assets/uploads/pub-18-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-18-320.webp",
             "width": 320,
             "height": 176
           },
           {
-            "src": "assets/uploads/pub-18-thumb-413.webp",
+            "src": "assets/publications/clean-thumbnails/pub-18-413.webp",
             "width": 413,
             "height": 227
           }
@@ -1478,12 +1478,12 @@
         "source": "assets/publications/pub-19-fig4-reviewed.png",
         "variants": [
           {
-            "src": "assets/uploads/pub-19-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-19-320.webp",
             "width": 320,
             "height": 401
           },
           {
-            "src": "assets/uploads/pub-19-thumb-464.webp",
+            "src": "assets/publications/clean-thumbnails/pub-19-464.webp",
             "width": 464,
             "height": 581
           }
@@ -1569,12 +1569,12 @@
         "source": "assets/publications/pub-21-fig2-reviewed.png",
         "variants": [
           {
-            "src": "assets/uploads/pub-21-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-21-320.webp",
             "width": 320,
             "height": 144
           },
           {
-            "src": "assets/uploads/pub-21-thumb-685.webp",
+            "src": "assets/publications/clean-thumbnails/pub-21-685.webp",
             "width": 685,
             "height": 309
           }
@@ -1696,12 +1696,12 @@
         "source": "assets/publications/pub-24-fig3-reviewed.png",
         "variants": [
           {
-            "src": "assets/uploads/pub-24-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-24-320.webp",
             "width": 320,
             "height": 270
           },
           {
-            "src": "assets/uploads/pub-24-thumb-630.webp",
+            "src": "assets/publications/clean-thumbnails/pub-24-630.webp",
             "width": 630,
             "height": 531
           }
@@ -1744,12 +1744,12 @@
         "source": "assets/publications/pub-25-fig1.png",
         "variants": [
           {
-            "src": "assets/uploads/pub-25-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-25-320.webp",
             "width": 320,
             "height": 130
           },
           {
-            "src": "assets/uploads/pub-25-thumb-452.webp",
+            "src": "assets/publications/clean-thumbnails/pub-25-452.webp",
             "width": 452,
             "height": 184
           }
@@ -1792,7 +1792,7 @@
         "source": "assets/publications/pub-26-fig1-reviewed.png",
         "variants": [
           {
-            "src": "assets/uploads/pub-26-thumb-169.webp",
+            "src": "assets/publications/clean-thumbnails/pub-26-169.webp",
             "width": 169,
             "height": 151
           }
@@ -1835,12 +1835,12 @@
         "source": "assets/publications/pub-27-original.jpeg",
         "variants": [
           {
-            "src": "assets/uploads/pub-27-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-27-320.webp",
             "width": 320,
             "height": 167
           },
           {
-            "src": "assets/uploads/pub-27-thumb-520.webp",
+            "src": "assets/publications/clean-thumbnails/pub-27-520.webp",
             "width": 520,
             "height": 272
           }
@@ -1911,12 +1911,12 @@
         "source": "assets/publications/pub-29-fig5-reviewed.jpg",
         "variants": [
           {
-            "src": "assets/uploads/pub-29-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-29-320.webp",
             "width": 320,
             "height": 350
           },
           {
-            "src": "assets/uploads/pub-29-thumb-697.webp",
+            "src": "assets/publications/clean-thumbnails/pub-29-697.webp",
             "width": 697,
             "height": 762
           }
@@ -1953,7 +1953,7 @@
         "source": "assets/publications/pub-30-fig4-reviewed.jpg",
         "variants": [
           {
-            "src": "assets/uploads/pub-30-thumb-276.webp",
+            "src": "assets/publications/clean-thumbnails/pub-30-276.webp",
             "width": 276,
             "height": 266
           }
@@ -2101,12 +2101,12 @@
         "source": "assets/publications/pub-34-fig2-reviewed.jpg",
         "variants": [
           {
-            "src": "assets/uploads/pub-34-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-34-320.webp",
             "width": 320,
             "height": 135
           },
           {
-            "src": "assets/uploads/pub-34-thumb-520.webp",
+            "src": "assets/publications/clean-thumbnails/pub-34-520.webp",
             "width": 520,
             "height": 219
           }
@@ -2149,7 +2149,7 @@
         "source": "assets/publications/pub-35.jpg",
         "variants": [
           {
-            "src": "assets/uploads/pub-35-thumb-188.webp",
+            "src": "assets/publications/clean-thumbnails/pub-35-188.webp",
             "width": 188,
             "height": 162
           }
@@ -2192,12 +2192,12 @@
         "source": "assets/publications/pub-36-figure4-original.jpeg",
         "variants": [
           {
-            "src": "assets/uploads/pub-36-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-36-320.webp",
             "width": 320,
             "height": 269
           },
           {
-            "src": "assets/uploads/pub-36-thumb-700.webp",
+            "src": "assets/publications/clean-thumbnails/pub-36-700.webp",
             "width": 700,
             "height": 588
           }
@@ -2240,12 +2240,12 @@
         "source": "assets/publications/pub-37.jpg",
         "variants": [
           {
-            "src": "assets/uploads/pub-37-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-37-320.webp",
             "width": 320,
             "height": 323
           },
           {
-            "src": "assets/uploads/pub-37-thumb-628.webp",
+            "src": "assets/publications/clean-thumbnails/pub-37-628.webp",
             "width": 628,
             "height": 634
           }
@@ -2288,7 +2288,7 @@
         "source": "assets/publications/pub-38-original.jpeg",
         "variants": [
           {
-            "src": "assets/uploads/pub-38-thumb-243.webp",
+            "src": "assets/publications/clean-thumbnails/pub-38-243.webp",
             "width": 243,
             "height": 214
           }
@@ -2332,12 +2332,12 @@
         "source": "assets/publications/pub-39-fig3-reviewed.jpg",
         "variants": [
           {
-            "src": "assets/uploads/pub-39-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-39-320.webp",
             "width": 320,
             "height": 206
           },
           {
-            "src": "assets/uploads/pub-39-thumb-344.webp",
+            "src": "assets/publications/clean-thumbnails/pub-39-344.webp",
             "width": 344,
             "height": 221
           }
@@ -2380,12 +2380,12 @@
         "source": "assets/publications/pub-40-figure1-original.png",
         "variants": [
           {
-            "src": "assets/uploads/pub-40-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-40-320.webp",
             "width": 320,
             "height": 319
           },
           {
-            "src": "assets/uploads/pub-40-thumb-470.webp",
+            "src": "assets/publications/clean-thumbnails/pub-40-470.webp",
             "width": 470,
             "height": 469
           }
@@ -2611,12 +2611,12 @@
         "source": "assets/publications/pub-46-fig2.gif",
         "variants": [
           {
-            "src": "assets/uploads/pub-46-thumb-320.webp",
+            "src": "assets/publications/clean-thumbnails/pub-46-320.webp",
             "width": 320,
             "height": 187
           },
           {
-            "src": "assets/uploads/pub-46-thumb-720.webp",
+            "src": "assets/publications/clean-thumbnails/pub-46-720.webp",
             "width": 720,
             "height": 421
           }
