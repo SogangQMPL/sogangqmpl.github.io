@@ -660,7 +660,7 @@
     {
       "id": "pub-01",
       "title": "Photoresponsive MoS₂‐Based Artificial Synaptic Transistor for Wavelength‐Dependent Physical Reservoir Computing",
-      "authors": "M. Park†, W. S. Oh†, Geonho Lee†, Seongwon Gim, J.-P. So, J. Lee, Hyeonjun Baek*, and H. Oh*",
+      "authors": "Mingeun Park†, Won Suk Oh†, Geonho Lee†, Seongwon Gim, Jae-Pil So, Jaegoo Lee, Hyeonjun Baek*, and Hongseok Oh*",
       "journal": "Small Structures 7, e70581 (2026)",
       "year": 2026,
       "doi": "10.1002/sstr.70581",
@@ -697,7 +697,7 @@
     {
       "id": "pub-02",
       "title": "Photoexcitation of moiré-trapped interlayer excitons via chiral phonons",
-      "authors": "A. Borel, T. V. Ivanova, J. Cervantes-Villanueva, P. Thor, Hyeonjun Baek, T. Taniguchi, K. Watanabe, A. Molina-Sánchez, B. D. Gerardot, and M. Brotons-Gisbert*",
+      "authors": "Antoine Borel, Tatyana V. Ivanova, Jorge Cervantes-Villanueva, Prokhor Thor, Hyeonjun Baek, Takashi Taniguchi, Kenji Watanabe, Alejandro Molina-Sánchez, Brian D. Gerardot, and Mauro Brotons-Gisbert*",
       "journal": "npj 2D Materials and Applications (2026)",
       "year": 2026,
       "doi": "10.1038/s41699-026-00701-5",
@@ -733,7 +733,7 @@
     {
       "id": "pub-03",
       "title": "WSe₂ Nanodots on Dielectric Nanopillars for Efficient Waveguide Coupling of Localized Emitters",
-      "authors": "Seongwon Gim, M. Jung, S. Cha, K. Watanabe, T. Taniguchi, and Hyeonjun Baek*",
+      "authors": "Seongwon Gim, Min Jung, SeungNam Cha, Kenji Watanabe, Takashi Taniguchi, and Hyeonjun Baek*",
       "journal": "ACS Applied Nano Materials 9, 9471–9477 (2026)",
       "year": 2026,
       "doi": "10.1021/acsanm.6c01123",
@@ -769,7 +769,7 @@
     {
       "id": "pub-04",
       "title": "Interfacial Interaction Monitoring and Constitutional Isomer Discrimination Using a Graphene-Integrated Terahertz Metasurface",
-      "authors": "T. Kim†, J. Park†, Seongwon Gim, H. Lee, W. Lee, Hyeonjun Baek, and M. Seo*",
+      "authors": "Taeyeon Kim†, Jaehun Park†, Seongwon Gim, Haechang Lee, Wonryung Lee, Hyeonjun Baek, and Minah Seo*",
       "journal": "Analytical Chemistry 98, 8340–8348 (2026)",
       "year": 2026,
       "doi": "10.1021/acs.analchem.5c07495",
@@ -805,7 +805,7 @@
     {
       "id": "pub-05",
       "title": "Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers",
-      "authors": "Seongwon Gim, Hyunjun Jo, S. Kim, S. M. Yang, K. Watanabe, T. Taniguchi, and Hyeonjun Baek*",
+      "authors": "Seongwon Gim, Hyunjun Jo, Saea Kim, Sang Mo Yang, Kenji Watanabe, Takashi Taniguchi, and Hyeonjun Baek*",
       "journal": "ACS Photonics 12, 6957–6963 (2025)",
       "year": 2025,
       "doi": "10.1021/acsphotonics.5c02169",
@@ -861,7 +861,7 @@
     {
       "id": "pub-06",
       "title": "Wavelength-tunable Zn₁₋ₓMgₓO nanotube lasers on graphene films",
-      "authors": "Hyeonjun Baek*, J. B. Park, H. Oh, and G.-C. Yi*",
+      "authors": "Hyeonjun Baek*, Jun Beom Park, Hongseok Oh, and Gyu-Chul Yi*",
       "journal": "Journal of Applied Physics 137, 244301 (2025)",
       "year": 2025,
       "doi": "10.1063/5.0266808",
@@ -904,7 +904,7 @@
     {
       "id": "pub-07",
       "title": "Quadrupolar and Dipolar Excitons in Bilayer 2H-MoSe₂",
-      "authors": "S. Feng, A. J. Campbell, B. M. Francis, Hyeonjun Baek, T. Taniguchi, K. Watanabe, I. C. Gerber, B. D. Gerardot*, and M. Brotons-Gisbert*",
+      "authors": "Shun Feng, Aidan J. Campbell, Bibi Mary Francis, Hyeonjun Baek, Takashi Taniguchi, Kenji Watanabe, Iann C. Gerber, Brian D. Gerardot*, and Mauro Brotons-Gisbert*",
       "journal": "Physical Review Letters 134, 166901 (2025)",
       "year": 2025,
       "doi": "10.1103/PhysRevLett.134.166901",
@@ -964,7 +964,7 @@
     {
       "id": "pub-08",
       "title": "In-situ fabrication of GaN/short-range ordered BN heterostructure light-emitting diodes",
-      "authors": "H. Kim†, A. T. D. Nguyen†, B. Kim, H. Jo, I. Rahmatulloh, H. Yoo, H. Oh, A. Ahmed, Hyeonjun Baek, and K. Chung*",
+      "authors": "Heesoo Kim†, Anh Thi Dieu Nguyen†, Beomjun Kim, Hyerin Jo, Imasda Rahmatulloh, Hyobin Yoo, Hongseok Oh, Aziz Ahmed, Hyeonjun Baek, and Kunook Chung*",
       "journal": "NPG Asia Materials 17, 13 (2025)",
       "year": 2025,
       "doi": "10.1038/s41427-025-00594-8",
@@ -1012,7 +1012,7 @@
     {
       "id": "pub-09",
       "title": "MoTe₂ synaptic transistor and its application to physical reservoir computing",
-      "authors": "W. S. Oh†, Seongwon Gim†, H. Jeong, Hyeonjun Baek*, and H. Oh*",
+      "authors": "Won Suk Oh†, Seongwon Gim†, Hyunhak Jeong, Hyeonjun Baek*, and Hongseok Oh*",
       "journal": "RSC Advances 15, 24031–24039 (2025)",
       "year": 2025,
       "doi": "10.1039/D5RA02010G",
@@ -1048,7 +1048,7 @@
     {
       "id": "pub-10",
       "title": "Highly tunable ground and excited state excitonic dipoles in multilayer 2H-MoSe₂",
-      "authors": "S. Feng†, A. J. Campbell†, M. Brotons-Gisbert*, D. Andrés-Penares, Hyeonjun Baek, T. Taniguchi, K. Watanabe, B. Urbaszek, I. C. Gerber, and B.D. Gerardot*",
+      "authors": "Shun Feng†, Aidan J. Campbell†, Mauro Brotons-Gisbert*, Daniel Andres-Penares, Hyeonjun Baek, Takashi Taniguchi, Kenji Watanabe, Bernhard Urbaszek, Iann C. Gerber, and Brian D. Gerardot*",
       "journal": "Nature Communications 15, 4377 (2024)",
       "year": 2024,
       "doi": "10.1038/s41467-024-48476-x",
@@ -1096,7 +1096,7 @@
     {
       "id": "pub-11",
       "title": "The interplay of field-tunable strongly correlated states in a multi-orbital moiré system",
-      "authors": "A. Campbell, V. Vitale, M. Brotons-Gisbert, Hyeonjun Baek, A. Borel, T. Ivanova, T. Taniguchi, K. Watanabe, J. Lischner, and B. D. Gerardot*",
+      "authors": "Aidan J. Campbell, Valerio Vitale, Mauro Brotons-Gisbert, Hyeonjun Baek, Antoine Borel, Tatyana V. Ivanova, Takashi Taniguchi, Kenji Watanabe, Johannes Lischner, and Brian D. Gerardot*",
       "journal": "Nature Physics 20, 589–596 (2024)",
       "year": 2024,
       "doi": "10.1038/s41567-024-02385-4",
@@ -1144,7 +1144,7 @@
     {
       "id": "pub-12",
       "title": "Initial Growth Behavior in Catalyst-Free-Grown Vertical ZnO Nanorods on c-Al₂O₃, as Observed Using Synchrotron Radiation X-ray Scattering",
-      "authors": "H. Oh, Y. J. Hong, G.-C. Yi, Hyeonjun Baek, D. R. Lee, H. H. Lee*",
+      "authors": "Hongseok Oh, Young Joon Hong, Gyu-Chul Yi, Hyeonjun Baek, Dong Ryeol Lee, and Hyun Hwi Lee*",
       "journal": "Crystal Growth & Design 23, 1434–1441 (2023)",
       "year": 2023,
       "doi": "10.1021/acs.cgd.2c00959",
@@ -1179,7 +1179,7 @@
     {
       "id": "pub-13",
       "title": "Exciton-polarons in the presence of strongly correlated electronic states in a MoSe₂/WSe₂ moiré superlattice",
-      "authors": "A. Campbell, M. Brotons-Gisbert, Hyeonjun Baek, V. Vitale, T. Taniguchi, K. Watanabe, J. Lischner, and B. D. Gerardot*",
+      "authors": "Aidan J. Campbell, Mauro Brotons-Gisbert, Hyeonjun Baek, Valerio Vitale, Takashi Taniguchi, Kenji Watanabe, Johannes Lischner, and Brian D. Gerardot*",
       "journal": "npj 2D Materials and Applications 6, 79 (2022)",
       "year": 2022,
       "doi": "10.1038/s41699-022-00358-w",
@@ -1227,7 +1227,7 @@
     {
       "id": "pub-14",
       "title": "Nanoscale mapping of surface strain in tapered nanorods using confocal photoluminescence spectroscopy",
-      "authors": "H. Y. Hwang, Hyeonjun Baek, G.-C. Yi, and Y. D. Jho*",
+      "authors": "Hyeong-Yong Hwang, Hyeonjun Baek, Gyu-Chul Yi, and Young-Dahl Jho*",
       "journal": "Nanotechnology 33, 485703 (2022)",
       "year": 2022,
       "doi": "10.1088/1361-6528/ac8bd9",
@@ -1275,7 +1275,7 @@
     {
       "id": "pub-15",
       "title": "IGZO synaptic thin-film transistors with embedded AlOₓ charge-trapping layers",
-      "authors": "Y. Lee, H. Jo, K. Kim, H. Yoo, Hyeonjun Baek, D. R. Lee, and H. Oh*",
+      "authors": "Yeojin Lee, Hyerin Jo, Kooktae Kim, Hyobin Yoo, Hyeonjun Baek, Dong Ryeol Lee, and Hongseok Oh*",
       "journal": "Applied Physics Express 15, 061005 (2022)",
       "year": 2022,
       "doi": "10.35848/1882-0786/ac7032",
@@ -1318,7 +1318,7 @@
     {
       "id": "pub-16",
       "title": "2×N twin-field quantum key distribution network configuration based on polarization, wavelength, and time division multiplexing",
-      "authors": "C. H. Park, M. K. Woo, B. K. Park, Y.-S. Kim, Hyeonjun Baek, S.-W. Lee, H.-T. Lim, S.-W. Jeon, H. Jung, S. Kim*, and S.-W. Han*",
+      "authors": "Chang Hoon Park, Min Ki Woo, Byung Kwon Park, Yong-Su Kim, Hyeonjun Baek, Seung-Woo Lee, Hyang-Tag Lim, Seung-Woo Jeon, Hojoong Jung, Sangin Kim*, and Sang-Wook Han*",
       "journal": "npj Quantum Information 8, 48 (2022)",
       "year": 2022,
       "doi": "10.1038/s41534-022-00558-8",
@@ -1365,7 +1365,7 @@
     {
       "id": "pub-17",
       "title": "Optical read-out of Coulomb staircases in a moiré superlattice via trapped interlayer trions",
-      "authors": "Hyeonjun Baek*, M. Brotons-Gisbert, A. Campbell, Valerio Vitale, Johannes Lischner, K. Watanabe, T. Taniguchi, and B. D. Gerardot*",
+      "authors": "Hyeonjun Baek*, Mauro Brotons-Gisbert, Aidan Campbell, Valerio Vitale, Johannes Lischner, Kenji Watanabe, Takashi Taniguchi, and Brian D. Gerardot*",
       "journal": "Nature Nanotechnology 16, 1237–1243 (2021)",
       "year": 2021,
       "doi": "10.1038/s41565-021-00970-9",
@@ -1413,7 +1413,7 @@
     {
       "id": "pub-18",
       "title": "Electrically driven strain-induced deterministic single-photon emitters in a van der Waals heterostructure",
-      "authors": "J.-P. So, H.-R. Kim, Hyeonjun Baek, K.-Y. Jeong, H.-C. Lee, W. Huh, Y. S. Kim, K. Watanabe, T. Taniguchi, J. Kim, C.-H. Lee, H.-G. Park*",
+      "authors": "Jae-Pil So, Ha-Reem Kim, Hyeonjun Baek, Kwang-Yong Jeong, Hoo-Cheol Lee, Woong Huh, Yoon Seok Kim, Kenji Watanabe, Takashi Taniguchi, Jungkil Kim, Chul-Ho Lee, and Hong-Gyu Park*",
       "journal": "Science Advances 7, eabj3176 (2021)",
       "year": 2021,
       "doi": "10.1126/sciadv.abj3176",
@@ -1461,7 +1461,7 @@
     {
       "id": "pub-19",
       "title": "Moiré-Trapped Interlayer Trions in a Charge-Tunable WSe₂/MoSe₂ Heterobilayer",
-      "authors": "M. Brotons-Gisbert*, Hyeonjun Baek, A. Campbell, K. Watanabe, T. Taniguchi, and B. D. Gerardot*",
+      "authors": "Mauro Brotons-Gisbert*, Hyeonjun Baek, Aidan Campbell, Kenji Watanabe, Takashi Taniguchi, and Brian D. Gerardot*",
       "journal": "Physical Review X 11, 031033 (2021)",
       "year": 2021,
       "doi": "10.1103/PhysRevX.11.031033",
@@ -1509,7 +1509,7 @@
     {
       "id": "pub-20",
       "title": "Highly sensitive and flexible pressure sensors using position- and dimension-controlled ZnO nanotube arrays grown on graphene films",
-      "authors": "J. B. Park†, M. S. Song†, R. Ghosh*, R. K. Saroj, Y. Hwang, Y. Tchoe, H. Oh, Hyeonjun Baek, Y. Lim, B. Kim, S.-W. Kim, and G.-C. Yi*",
+      "authors": "Jun Beom Park†, Minho S. Song†, Ramesh Ghosh*, Rajendra Kumar Saroj, Yunjae Hwang, Youngbin Tchoe, Hongseok Oh, Hyeonjun Baek, Yoonseo Lim, Bosung Kim, Sang-Woo Kim, and Gyu-Chul Yi*",
       "journal": "NPG Asia Materials 13, 57 (2021)",
       "year": 2021,
       "doi": "10.1038/s41427-021-00324-w",
@@ -1552,7 +1552,7 @@
     {
       "id": "pub-21",
       "title": "Vertical monolithic integration of wide- and narrow-bandgap semiconductor nanostructures on graphene films",
-      "authors": "Y. Tchoe, J. Jo, H. Kim, H. Kim, Hyeonjun Baek, K. Lee, D. Yoo, W. J. Choi, M. Kim, and G.-C. Yi*",
+      "authors": "Youngbin Tchoe, Janghyun Jo, HoSung Kim, Heehun Kim, Hyeonjun Baek, Keundong Lee, Dongha Yoo, Won Jun Choi, Miyoung Kim, and Gyu-Chul Yi*",
       "journal": "NPG Asia Materials 13, 33 (2021)",
       "year": 2021,
       "doi": "10.1038/s41427-021-00301-3",
@@ -1600,7 +1600,7 @@
     {
       "id": "pub-22",
       "title": "Intracellular gallium nitride microrod laser",
-      "authors": "M. S. Song, Hyeonjun Baek, K. Lee, D. Yoo, K. Chung, J. Lee, H. Moon, B. H. Lee, H. Y. Park, and G.-C. Yi*",
+      "authors": "Minho S. Song, Hyeonjun Baek, Keundong Lee, Dongha Yoo, Kunook Chung, Jamin Lee, Hyungseok C. Moon, Byung Hun Lee, Hye Yoon Park, and Gyu-Chul Yi*",
       "journal": "NPG Asia Materials 13, 32 (2021)",
       "year": 2021,
       "doi": "10.1038/s41427-021-00299-8",
@@ -1643,7 +1643,7 @@
     {
       "id": "pub-23",
       "title": "Individually addressable, high-density vertical nanotube Schottky diode crossbar array",
-      "authors": "Y. Tchoe, M. Song, H. Kim, Hyeonjun Baek, J. Y. Park, H. Oh, K. Lee, K. Chung, J. K. Hyun, and G.-C. Yi*",
+      "authors": "Youngbin Tchoe, Minho S. Song, Heehun Kim, Hyeonjun Baek, Joon Young Park, Hongseok Oh, Keundong Lee, Kyungmin Chung, Jerome K. Hyun, and Gyu-Chul Yi*",
       "journal": "Nano Energy 76, 104955 (2020)",
       "year": 2020,
       "doi": "10.1016/j.nanoen.2020.104955",
@@ -1679,7 +1679,7 @@
     {
       "id": "pub-24",
       "title": "Highly energy-tunable quantum light from moiré-trapped excitons",
-      "authors": "Hyeonjun Baek†*, M. Brotons-Gisbert†, Z. X. Koong, A. Campbell, M. Rambach, K. Watanabe, T. Taniguchi, and B. D. Gerardot*",
+      "authors": "Hyeonjun Baek†*, Mauro Brotons-Gisbert†, Zhe Xian Koong, Aidan Campbell, Markus Rambach, Kenji Watanabe, Takashi Taniguchi, and Brian D. Gerardot*",
       "journal": "Science Advances 6, eaba8526 (2020)",
       "year": 2020,
       "doi": "10.1126/sciadv.aba8526",
@@ -1727,7 +1727,7 @@
     {
       "id": "pub-25",
       "title": "Spin–layer locking of interlayer excitons trapped in moiré potentials",
-      "authors": "M. Brotons-Gisbert†*, Hyeonjun Baek†*, A. Molina-Sánchez, A. Campbell, D. Scerri, D. White, K. Watanabe, T. Taniguchi, C. Bonato, and B. D. Gerardot*",
+      "authors": "Mauro Brotons-Gisbert†*, Hyeonjun Baek†*, Alejandro Molina-Sánchez, Aidan Campbell, Eleanor Scerri, Daniel White, Kenji Watanabe, Takashi Taniguchi, Cristian Bonato, and Brian D. Gerardot*",
       "journal": "Nature Materials 19, 630–636 (2020)",
       "year": 2020,
       "doi": "10.1038/s41563-020-0687-7",
@@ -1775,7 +1775,7 @@
     {
       "id": "pub-26",
       "title": "ZnO nanotube waveguide arrays on graphene films for local optical excitation on biological cells",
-      "authors": "Hyeonjun Baek, H. Kwak, M. S. Song, G. E. Ha, J. Park, Y. Tchoe, J. K. Hyun, H. Y. Park, E. Cheong*, and G.-C. Yi*",
+      "authors": "Hyeonjun Baek, Hankyul Kwak, Minho S. Song, Go Eun Ha, Jongwoo Park, Youngbin Tchoe, Jerome K. Hyun, Hye Yoon Park, Eunji Cheong*, and Gyu-Chul Yi*",
       "journal": "APL Materials 5, 046106 (2017) — Editor’s Pick",
       "year": 2017,
       "doi": "10.1063/1.4981646",
@@ -1818,7 +1818,7 @@
     {
       "id": "pub-27",
       "title": "ZnO nanolasers on graphene films",
-      "authors": "Hyeonjun Baek*, J. B. Park, J. Park, J. K. Hyun, H. Yoon, H. Oh, and J. Yoon",
+      "authors": "Hyeonjun Baek*, Jun Beom Park, Jong-woo Park, Jerome K. Hyun, Hosang Yoon, Hongseok Oh, and Jiyoung Yoon",
       "journal": "Applied Physics Letters 108, 263102 (2016)",
       "year": 2016,
       "doi": "10.1063/1.4954798",
@@ -1866,7 +1866,7 @@
     {
       "id": "pub-28",
       "title": "Flexible GaN Light-Emitting Diodes Using GaN Microdisks Epitaxial Laterally Overgrown on Graphene Dots",
-      "authors": "K. Chung, H. Yoo, J. K. Hyun, H. Oh. Y. Tchoe, K. Lee, Hyeonjun Baek, M. Kim, and G-C. Yi*",
+      "authors": "Kunook Chung, Hyobin Yoo, Jerome K. Hyun, Hongseok Oh, Youngbin Tchoe, Keundong Lee, Hyeonjun Baek, Miyoung Kim, and Gyu-Chul Yi*",
       "journal": "Advanced Materials 28, 7688–7694 (2016)",
       "year": 2016,
       "doi": "10.1002/adma.201601894",
@@ -1901,7 +1901,7 @@
     {
       "id": "pub-29",
       "title": "Real-time device-scale imaging of conducting filament dynamics in resistive switching materials",
-      "authors": "K. Lee, Y. Tchoe, H. Yoon, Hyeonjun Baek, K. Chung, S. Lee, C. Yoon, B. H. Park*, and G.-C. Yi*",
+      "authors": "Keundong Lee, Youngbin Tchoe, Hosang Yoon, Hyeonjun Baek, Kunook Chung, Sangik Lee, Chansoo Yoon, Bae Ho Park*, and Gyu-Chul Yi*",
       "journal": "Scientific Reports 6, 27451 (2016)",
       "year": 2016,
       "doi": "10.1038/srep27451",
@@ -1936,7 +1936,7 @@
     {
       "id": "pub-30",
       "title": "Distinctive mapping of strain and quantum size effects using depth-resolved photoluminescence in ZnO nanoneedles",
-      "authors": "H.-Y. Hwang, Hyeonjun Baek, G.-C. Yi, H.-C. Kim, and Y.-D. Jho*",
+      "authors": "Hyeong-Yong Hwang, Hyeonjun Baek, Gyu-Chul Yi, Hyoung-Chan Kim, and Young-Dahl Jho*",
       "journal": "AIP Advances 6, 045021 (2016)",
       "year": 2016,
       "doi": "10.1063/1.4948452",
@@ -1979,7 +1979,7 @@
     {
       "id": "pub-31",
       "title": "Microtube Light-Emitting Diode Arrays with Metal Cores",
-      "authors": "Y. Tchoe, C.-H. Lee, J. B. Park, Hyeonjun Baek, K. Chung, J. Jo, M. Kim, and G.-C. Yi*",
+      "authors": "Youngbin Tchoe, Chul-Ho Lee, Jun Beom Park, Hyeonjun Baek, Kunook Chung, Janghyun Jo, Miyoung Kim, and Gyu-Chul Yi*",
       "journal": "ACS Nano 10, 3114–3120 (2016)",
       "year": 2016,
       "doi": "10.1021/acsnano.5b07905",
@@ -2014,7 +2014,7 @@
     {
       "id": "pub-32",
       "title": "Enhanced Second Harmonic Generation by Coupling to Exciton Ensembles in Ag-coated ZnO Nanorods",
-      "authors": "J. K. Hyun, T. Kang, Hyeonjun Baek, H. Oh, D.-S. Kim, and G.-C Yi*",
+      "authors": "Jerome K. Hyun, Taehee Kang, Hyeonjun Baek, Hongseok Oh, Dai-sik Kim, and Gyu-chul Yi*",
       "journal": "ACS Photonics 2, 1314–1319 (2015)",
       "year": 2015,
       "doi": "10.1021/acsphotonics.5b00268",
@@ -2049,7 +2049,7 @@
     {
       "id": "pub-33",
       "title": "Nanoscale Single-Element Color Filters",
-      "authors": "J. K. Hyun, T. Kang, Hyeonjun Baek, D.-S. Kim, and G.-C Yi*",
+      "authors": "Jerome K. Hyun, Taehee Kang, Hyeonjun Baek, Dai-sik Kim, and Gyu-chul Yi*",
       "journal": "Nano Letters 15, 5938–5943 (2015)",
       "year": 2015,
       "doi": "10.1021/acs.nanolett.5b02049",
@@ -2084,7 +2084,7 @@
     {
       "id": "pub-34",
       "title": "Growth and optical characteristics of high-quality ZnO thin films on graphene layers",
-      "authors": "S. I. Park, Y. Tchoe, Hyeonjun Baek, J. Heo, J. K. Hyun, J. Jo, M. Kim, N.-J. Kim*, and G.-C. Yi*",
+      "authors": "Suk In Park, Youngbin Tchoe, Hyeonjun Baek, Jaehyuk Heo, Jerome K. Hyun, Janghyun Jo, Miyoung Kim, Nam-Jung Kim*, and Gyu-Chul Yi*",
       "journal": "APL Materials 3, 016103 (2015)",
       "year": 2015,
       "doi": "10.1063/1.4905488",
@@ -2132,7 +2132,7 @@
     {
       "id": "pub-35",
       "title": "Architectured van der Waals epitaxy of ZnO nanostructures on hexagonal BN",
-      "authors": "H. Oh†, Y. J. Hong†, K.-S. Kim, S. Yoon, Hyeonjun Baek, S.-H. Kang, Y.-K. Kwon, M. Kim, and G.-C. Yi*",
+      "authors": "Hongseok Oh†, Young Joon Hong†, Kun-Su Kim, Sangmoon Yoon, Hyeonjun Baek, Seoung-Hun Kang, Young-Kyun Kwon, Miyoung Kim, and Gyu-Chul Yi*",
       "journal": "NPG Asia Materials 6, e145 (2014)",
       "year": 2014,
       "doi": "10.1038/am.2014.108",
@@ -2175,7 +2175,7 @@
     {
       "id": "pub-36",
       "title": "Selective excitation of Fabry-Perot or whispering-gallery mode-type lasing in GaN microrods",
-      "authors": "Hyeonjun Baek, J. K Hyun, K. Chung, H. Oh, and G.-C. Yi*",
+      "authors": "Hyeonjun Baek, Jerome K. Hyun, Kunook Chung, Hongseok Oh, and Gyu-Chul Yi*",
       "journal": "Applied Physics Letters 105, 201108 (2014)",
       "year": 2014,
       "doi": "10.1063/1.4902373",
@@ -2223,7 +2223,7 @@
     {
       "id": "pub-37",
       "title": "Photoluminescence of excitons and defects in ZnSe-based longitudinal twinning nanowires",
-      "authors": "J. Xu, C. Wang*, A. Lu*, B. Wu, X. Chen, H. Oh, Hyeonjun Baek, G.-C. Yi, and L. Ouyang",
+      "authors": "Jing Xu, Chunrui Wang*, Aijiang Lu*, Binhe Wu, Xiaoshuang Chen, Hongseok Oh, Hyeonjun Baek, Gyu-Chul Yi, and Lizhi Ouyang",
       "journal": "Journal of Physics D: Applied Physics 47, 485302 (2014)",
       "year": 2014,
       "doi": "10.1088/0022-3727/47/48/485302",
@@ -2271,7 +2271,7 @@
     {
       "id": "pub-38",
       "title": "Twinning effect on photoluminescence spectra of ZnSe nanowires",
-      "authors": "J. Xu, C. Wang*, B. Wu, X. Xu, X. Chen, H. Oh, Hyeonjun Baek, and G.-C. Yi",
+      "authors": "Jing Xu, Chunrui Wang*, Binhe Wu, Xiaofeng Xu, Xiaoshuang Chen, Hongseok Oh, Hyeonjun Baek, and Gyu-Chul Yi",
       "journal": "Journal of Applied Physics 116, 174303 (2014)",
       "year": 2014,
       "doi": "10.1063/1.4900850",
@@ -2314,7 +2314,7 @@
     {
       "id": "pub-39",
       "title": "Growth and characterizations of GaN micro-rods on graphene films for flexible light emitting diodes",
-      "authors": "K. Chung, Hyeonjun Baek, Y. Tchoe, H. Oh, H. Yoo, M. Kim, and G.-C. Yi*",
+      "authors": "Kunook Chung, Hyeonjun Baek, Youngbin Tchoe, Hongseok Oh, Hyobin Yoo, Miyoung Kim, and Gyu-Chul Yi*",
       "journal": "APL Materials 2, 092512 (2014)",
       "year": 2014,
       "doi": "10.1063/1.4894780",
@@ -2363,7 +2363,7 @@
     {
       "id": "pub-40",
       "title": "Stimulated Emission Features of Bound Excitons in ZnO Nanotubes",
-      "authors": "D. M. Kim, Y.-H. Cho, H. Jeong, Hyeonjun Baek, G.-C. Yi, and Y. D. Jho",
+      "authors": "D. M. Kim, Y.-H. Cho, H. Jeong, Hyeonjun Baek, Gyu-Chul Yi, and Young Dahl Jho",
       "journal": "Journal of Nanoscience and Nanotechnology 14, 5293–5296 (2014)",
       "year": 2014,
       "doi": "10.1166/jnn.2014.8303",
@@ -2411,7 +2411,7 @@
     {
       "id": "pub-41",
       "title": "ZnSe-Based Longitudinal Twinning Nanowires",
-      "authors": "J. Xu, A. Lu, C. Wang*, R. Zou, X. Liu, X. Wu, Y. Wang, S. Li, L. Sun*, X. Chen*, H. Oh, Hyeonjun Baek, G.‐C. Yi*, and J. Chu",
+      "authors": "Jing Xu, Aijiang Lu, Chunrui Wang*, Rujia Zou, Xiaoyun Liu, Xing Wu, Yuxi Wang, Sijia Li, Litao Sun*, Xiaoshuang Chen*, Hongseok Oh, Hyeonjun Baek, Gyu-Chul Yi*, and Junhao Chu",
       "journal": "Advanced Engineering Materials 16, 459–465 (2014)",
       "year": 2014,
       "doi": "10.1002/adem.201300405",
@@ -2446,7 +2446,7 @@
     {
       "id": "pub-42",
       "title": "Epitaxial GaN Microdisk Lasers Grown on Graphene Microdots",
-      "authors": "Hyeonjun Baek†, C.-H. Lee†, K. Chung, and G.-C. Yi*",
+      "authors": "Hyeonjun Baek†, Chul-Ho Lee†, Kunook Chung, and Gyu-Chul Yi*",
       "journal": "Nano Letters 13, 2782–2785 (2013)",
       "year": 2013,
       "doi": "10.1021/nl401011x",
@@ -2481,7 +2481,7 @@
     {
       "id": "pub-43",
       "title": "High-quality GaN films grown on chemical vapor-deposited graphene films",
-      "authors": "K. Chung, S. I. Park, Hyeonjun Baek, J.-S. Chung, and G.-C. Yi*",
+      "authors": "Kunook Chung, Suk In Park, Hyeonjun Baek, Jin-Seok Chung, and Gyu-Chul Yi*",
       "journal": "NPG Asia Materials 4, e24 (2012)",
       "year": 2012,
       "doi": "10.1038/am.2012.45",
@@ -2529,7 +2529,7 @@
     {
       "id": "pub-44",
       "title": "Position- and Morphology-Controlled ZnO Nanostructures Grown on Graphene Layers",
-      "authors": "Y.-J. Kim, H. Yoo, C.-H. Lee, J. B. Park, Hyeonjun Baek, M. Kim, and G.-C. Yi*",
+      "authors": "Yong-Jin Kim, Hyobin Yoo, Chul-Ho Lee, Jun Beom Park, Hyeonjun Baek, Miyoung Kim, and Gyu-Chul Yi*",
       "journal": "Advanced Materials 24, 5565–5569 (2012)",
       "year": 2012,
       "doi": "10.1002/adma.201201966",
@@ -2559,7 +2559,7 @@
     {
       "id": "pub-45",
       "title": "Tunable Catalytic Alloying Eliminates Stacking Faults in Compound Semiconductor Nanowires",
-      "authors": "H. Heo†, K. Kang†, D. Lee, L.-H. Jin, Hyeonjun Baek, I. Hwang, M. Kim, H.-S. Lee, B.-J. Lee, G.-C. Yi, Y.-H. Cho, and M.-H. Jo*",
+      "authors": "Hoseok Heo†, Kibum Kang†, Donghun Lee, Li-Hua Jin, Hyeonjun Baek, Inchan Hwang, Miseong Kim, Hyun-Seung Lee, Byeong-Joo Lee, Gyu-Chul Yi, Yong-Hoon Cho, and Moon-Ho Jo*",
       "journal": "Nano Letters 12, 855–860 (2012)",
       "year": 2012,
       "doi": "10.1021/nl203900q",
@@ -2594,7 +2594,7 @@
     {
       "id": "pub-46",
       "title": "GaN/ZnO Nanotube Heterostructure Light-Emitting Diodes Fabricated on Si",
-      "authors": "C.-H. Lee, Y. J. Hong, Y.-J. Kim, J. Yoo, Hyeonjun Baek, S.-R. Jeon, S.-J. Le, and G.-C. Yi*",
+      "authors": "Chul Ho Lee, Young Joon Hong, Yong Jin Kim, Jinkyoung Yoo, Hyeonjun Baek, Seong Ran Jeon, Seung Jae Lee, and Gyu Chul Yi*",
       "journal": "IEEE Journal of Selected Topics in Quantum Electronics 17, 966–970 (2011)",
       "year": 2011,
       "doi": "10.1109/JSTQE.2010.2062493",

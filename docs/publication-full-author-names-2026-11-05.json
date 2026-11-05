@@ -1,0 +1,2253 @@
+{
+  "checkedAt": "2026-11-05",
+  "method": "Use the full given and family names in the exact paper publisher byline/author metadata, original supporting information or author-submitted version. Match each individual paper and author order; do not apply global initial-to-name substitutions. Retain published middle initials rather than inventing expanded middle names. Preserve the existing verified contribution markers and lab-member emphasis.",
+  "records": [
+    {
+      "id": "pub-01",
+      "doi": "10.1002/sstr.70581",
+      "authors": [
+        "Mingeun Park",
+        "Won Suk Oh",
+        "Geonho Lee",
+        "Seongwon Gim",
+        "Jae-Pil So",
+        "Jaegoo Lee",
+        "Hyeonjun Baek",
+        "Hongseok Oh"
+      ],
+      "sources": [
+        "https://onlinelibrary.wiley.com/doi/full/10.1002/sstr.70581"
+      ],
+      "evidence": [
+        {
+          "method": "Wiley publisher page opened live: byline at lines22-106, exact DOI at line196; equal-contribution names at line199. Source returned complete names and order.",
+          "authorOrder": [
+            "Mingeun Park",
+            "Won Suk Oh",
+            "Geonho Lee",
+            "Seongwon Gim",
+            "Jae-Pil So",
+            "Jaegoo Lee",
+            "Hyeonjun Baek",
+            "Hongseok Oh"
+          ],
+          "doiConfirmed": true
+        }
+      ],
+      "unresolved": [],
+      "before": "M. Park†, W. S. Oh†, Geonho Lee†, Seongwon Gim, J.-P. So, J. Lee, Hyeonjun Baek*, and H. Oh*",
+      "after": "Mingeun Park†, Won Suk Oh†, Geonho Lee†, Seongwon Gim, Jae-Pil So, Jaegoo Lee, Hyeonjun Baek*, and Hongseok Oh*",
+      "appliedNames": [
+        "Mingeun Park",
+        "Won Suk Oh",
+        "Geonho Lee",
+        "Seongwon Gim",
+        "Jae-Pil So",
+        "Jaegoo Lee",
+        "Hyeonjun Baek",
+        "Hongseok Oh"
+      ],
+      "markersPreserved": true,
+      "authorCount": 8
+    },
+    {
+      "id": "pub-02",
+      "doi": "10.1038/s41699-026-00701-5",
+      "authors": [
+        "Antoine Borel",
+        "Tatyana V. Ivanova",
+        "Jorge Cervantes-Villanueva",
+        "Prokhor Thor",
+        "Hyeonjun Baek",
+        "Takashi Taniguchi",
+        "Kenji Watanabe",
+        "Alejandro Molina-Sánchez",
+        "Brian D. Gerardot",
+        "Mauro Brotons-Gisbert"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41699-026-00701-5",
+        "https://api.crossref.org/works/10.1038/s41699-026-00701-5"
+      ],
+      "evidence": [
+        {
+          "method": "publisher HTML citation_author meta in source order",
+          "cache": "preview\\figure-source-recent\\pub-02.html",
+          "doiConfirmed": true,
+          "rawAuthorMetadata": [
+            "Borel, Antoine",
+            "Ivanova, Tatyana V.",
+            "Cervantes-Villanueva, Jorge",
+            "Thor, Prokhor",
+            "Baek, Hyeonjun",
+            "Taniguchi, Takashi",
+            "Watanabe, Kenji",
+            "Molina-Sánchez, Alejandro",
+            "Gerardot, Brian D.",
+            "Brotons-Gisbert, Mauro"
+          ]
+        },
+        {
+          "method": "exact-DOI publisher-deposited Crossref corroboration",
+          "cache": "tmp\\publication-full-authors\\crossref\\pub-02.json",
+          "doiConfirmed": true,
+          "authorOrder": [
+            "Antoine Borel",
+            "Tatyana V. Ivanova",
+            "Jorge Cervantes-Villanueva",
+            "Prokhor Thor",
+            "Hyeonjun Baek",
+            "Takashi Taniguchi",
+            "Kenji Watanabe",
+            "Alejandro Molina-Sánchez",
+            "Brian D. Gerardot",
+            "Mauro Brotons-Gisbert"
+          ],
+          "matchesPublisherByline": true
+        },
+        {
+          "note": "Middle initials retained exactly as the publisher full byline (e.g. Brian D., Aidan J., Iann C., Tatyana V.); no unverified expansion of middle names."
+        }
+      ],
+      "unresolved": [],
+      "before": "A. Borel, T. V. Ivanova, J. Cervantes-Villanueva, P. Thor, Hyeonjun Baek, T. Taniguchi, K. Watanabe, A. Molina-Sánchez, B. D. Gerardot, and M. Brotons-Gisbert*",
+      "after": "Antoine Borel, Tatyana V. Ivanova, Jorge Cervantes-Villanueva, Prokhor Thor, Hyeonjun Baek, Takashi Taniguchi, Kenji Watanabe, Alejandro Molina-Sánchez, Brian D. Gerardot, and Mauro Brotons-Gisbert*",
+      "appliedNames": [
+        "Antoine Borel",
+        "Tatyana V. Ivanova",
+        "Jorge Cervantes-Villanueva",
+        "Prokhor Thor",
+        "Hyeonjun Baek",
+        "Takashi Taniguchi",
+        "Kenji Watanabe",
+        "Alejandro Molina-Sánchez",
+        "Brian D. Gerardot",
+        "Mauro Brotons-Gisbert"
+      ],
+      "markersPreserved": true,
+      "authorCount": 10
+    },
+    {
+      "id": "pub-03",
+      "doi": "10.1021/acsanm.6c01123",
+      "authors": [
+        "Seongwon Gim",
+        "Min Jung",
+        "SeungNam Cha",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Hyeonjun Baek"
+      ],
+      "sources": [
+        "https://pubs.acs.org/doi/10.1021/acsanm.6c01123",
+        "https://api.crossref.org/works/10.1021/acsanm.6c01123"
+      ],
+      "evidence": [
+        {
+          "method": "ACS publisher article author-information/byline, live search result for exact DOI.",
+          "authorOrder": [
+            "Seongwon Gim",
+            "Min Jung",
+            "SeungNam Cha",
+            "Kenji Watanabe",
+            "Takashi Taniguchi",
+            "Hyeonjun Baek"
+          ],
+          "doiConfirmed": true
+        },
+        {
+          "method": "exact-DOI publisher-deposited Crossref corroboration",
+          "cache": "tmp\\publication-full-authors\\crossref\\pub-03.json",
+          "doiConfirmed": true,
+          "authorOrder": [
+            "Seongwon Gim",
+            "Min Jung",
+            "SeungNam Cha",
+            "Kenji Watanabe",
+            "Takashi Taniguchi",
+            "Hyeonjun Baek"
+          ],
+          "matchesPublisherByline": true
+        }
+      ],
+      "unresolved": [],
+      "before": "Seongwon Gim, M. Jung, S. Cha, K. Watanabe, T. Taniguchi, and Hyeonjun Baek*",
+      "after": "Seongwon Gim, Min Jung, SeungNam Cha, Kenji Watanabe, Takashi Taniguchi, and Hyeonjun Baek*",
+      "appliedNames": [
+        "Seongwon Gim",
+        "Min Jung",
+        "SeungNam Cha",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Hyeonjun Baek"
+      ],
+      "markersPreserved": true,
+      "authorCount": 6
+    },
+    {
+      "id": "pub-04",
+      "doi": "10.1021/acs.analchem.5c07495",
+      "authors": [
+        "Taeyeon Kim",
+        "Jaehun Park",
+        "Seongwon Gim",
+        "Haechang Lee",
+        "Wonryung Lee",
+        "Hyeonjun Baek",
+        "Minah Seo"
+      ],
+      "sources": [
+        "https://pubs.acs.org/doi/full/10.1021/acs.analchem.5c07495",
+        "https://api.crossref.org/works/10.1021/acs.analchem.5c07495"
+      ],
+      "evidence": [
+        {
+          "method": "ACS publisher article author-information/byline, live search result for exact DOI; first two authors marked equal contribution.",
+          "authorOrder": [
+            "Taeyeon Kim",
+            "Jaehun Park",
+            "Seongwon Gim",
+            "Haechang Lee",
+            "Wonryung Lee",
+            "Hyeonjun Baek",
+            "Minah Seo"
+          ],
+          "doiConfirmed": true
+        },
+        {
+          "method": "exact-DOI publisher-deposited Crossref corroboration",
+          "cache": "tmp\\publication-full-authors\\crossref\\pub-04.json",
+          "doiConfirmed": true,
+          "authorOrder": [
+            "Taeyeon Kim",
+            "Jaehun Park",
+            "Seongwon Gim",
+            "Haechang Lee",
+            "Wonryung Lee",
+            "Hyeonjun Baek",
+            "Minah Seo"
+          ],
+          "matchesPublisherByline": true
+        }
+      ],
+      "unresolved": [],
+      "before": "T. Kim†, J. Park†, Seongwon Gim, H. Lee, W. Lee, Hyeonjun Baek, and M. Seo*",
+      "after": "Taeyeon Kim†, Jaehun Park†, Seongwon Gim, Haechang Lee, Wonryung Lee, Hyeonjun Baek, and Minah Seo*",
+      "appliedNames": [
+        "Taeyeon Kim",
+        "Jaehun Park",
+        "Seongwon Gim",
+        "Haechang Lee",
+        "Wonryung Lee",
+        "Hyeonjun Baek",
+        "Minah Seo"
+      ],
+      "markersPreserved": true,
+      "authorCount": 7
+    },
+    {
+      "id": "pub-05",
+      "doi": "10.1021/acsphotonics.5c02169",
+      "authors": [
+        "Seongwon Gim",
+        "Hyunjun Jo",
+        "Saea Kim",
+        "Sang Mo Yang",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Hyeonjun Baek"
+      ],
+      "sources": [
+        "https://pubs.acs.org/doi/10.1021/acsphotonics.5c02169",
+        "https://api.crossref.org/works/10.1021/acsphotonics.5c02169"
+      ],
+      "evidence": [
+        {
+          "method": "ACS publisher article author-information/byline, live DOI landing-page search result; all seven authors visible in order.",
+          "authorOrder": [
+            "Seongwon Gim",
+            "Hyunjun Jo",
+            "Saea Kim",
+            "Sang Mo Yang",
+            "Kenji Watanabe",
+            "Takashi Taniguchi",
+            "Hyeonjun Baek"
+          ],
+          "doiConfirmed": true
+        },
+        {
+          "method": "exact-DOI publisher-deposited Crossref corroboration",
+          "cache": "tmp\\publication-full-authors\\crossref\\pub-05.json",
+          "doiConfirmed": true,
+          "authorOrder": [
+            "Seongwon Gim",
+            "Hyunjun Jo",
+            "Saea Kim",
+            "Sang Mo Yang",
+            "Kenji Watanabe",
+            "Takashi Taniguchi",
+            "Hyeonjun Baek"
+          ],
+          "matchesPublisherByline": true
+        }
+      ],
+      "unresolved": [],
+      "before": "Seongwon Gim, Hyunjun Jo, S. Kim, S. M. Yang, K. Watanabe, T. Taniguchi, and Hyeonjun Baek*",
+      "after": "Seongwon Gim, Hyunjun Jo, Saea Kim, Sang Mo Yang, Kenji Watanabe, Takashi Taniguchi, and Hyeonjun Baek*",
+      "appliedNames": [
+        "Seongwon Gim",
+        "Hyunjun Jo",
+        "Saea Kim",
+        "Sang Mo Yang",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Hyeonjun Baek"
+      ],
+      "markersPreserved": true,
+      "authorCount": 7
+    },
+    {
+      "id": "pub-06",
+      "doi": "10.1063/5.0266808",
+      "authors": [
+        "Hyeonjun Baek",
+        "Jun Beom Park",
+        "Hongseok Oh",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        "https://pubs.aip.org/aip/jap/article/137/24/244301/3350695/Wavelength-tunable-Zn1-xMgxO-nanotube-lasers-on",
+        "https://api.crossref.org/works/10.1063/5.0266808"
+      ],
+      "evidence": [
+        {
+          "method": "publisher full HTML byline + Author Contributions",
+          "cache": "preview\\figure-source-recent\\pub-06-aip.html",
+          "doiConfirmed": true,
+          "authorOrder": [
+            "Hyeonjun Baek",
+            "Jun Beom Park",
+            "Hongseok Oh",
+            "Gyu-Chul Yi"
+          ],
+          "note": "Author & Article Information displays all four names in this exact order."
+        },
+        {
+          "method": "exact-DOI publisher-deposited Crossref corroboration",
+          "cache": "tmp\\publication-full-authors\\crossref\\pub-06.json",
+          "doiConfirmed": true,
+          "authorOrder": [
+            "Hyeonjun Baek",
+            "Jun Beom Park",
+            "Hongseok Oh",
+            "Gyu-Chul Yi"
+          ],
+          "matchesPublisherByline": true
+        }
+      ],
+      "unresolved": [],
+      "before": "Hyeonjun Baek*, J. B. Park, H. Oh, and G.-C. Yi*",
+      "after": "Hyeonjun Baek*, Jun Beom Park, Hongseok Oh, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Hyeonjun Baek",
+        "Jun Beom Park",
+        "Hongseok Oh",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 4
+    },
+    {
+      "id": "pub-07",
+      "doi": "10.1103/PhysRevLett.134.166901",
+      "authors": [
+        "Shun Feng",
+        "Aidan J. Campbell",
+        "Bibi Mary Francis",
+        "Hyeonjun Baek",
+        "Takashi Taniguchi",
+        "Kenji Watanabe",
+        "Iann C. Gerber",
+        "Brian D. Gerardot",
+        "Mauro Brotons-Gisbert"
+      ],
+      "sources": [
+        "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.166901",
+        "https://arxiv.org/html/2503.19883v1",
+        "https://api.crossref.org/works/10.1103/PhysRevLett.134.166901"
+      ],
+      "evidence": [
+        {
+          "method": "APS publisher abstract page opened live: complete byline at line79, exact DOI at line92. Corroborated by local arXiv author manuscript.",
+          "authorOrder": [
+            "Shun Feng",
+            "Aidan J. Campbell",
+            "Bibi Mary Francis",
+            "Hyeonjun Baek",
+            "Takashi Taniguchi",
+            "Kenji Watanabe",
+            "Iann C. Gerber",
+            "Brian D. Gerardot",
+            "Mauro Brotons-Gisbert"
+          ],
+          "doiConfirmed": true
+        },
+        {
+          "method": "author manuscript corroboration",
+          "cache": "preview/figure-source-recent/pub-07-arxiv.html",
+          "note": "Same complete nine-name byline as APS publisher page."
+        },
+        {
+          "method": "exact-DOI publisher-deposited Crossref corroboration",
+          "cache": "tmp\\publication-full-authors\\crossref\\pub-07.json",
+          "doiConfirmed": true,
+          "authorOrder": [
+            "Shun Feng",
+            "Aidan J. Campbell",
+            "Bibi Mary Francis",
+            "Hyeonjun Baek",
+            "Takashi Taniguchi",
+            "Kenji Watanabe",
+            "Iann C. Gerber",
+            "Brian D. Gerardot",
+            "Mauro Brotons-Gisbert"
+          ],
+          "matchesPublisherByline": true
+        },
+        {
+          "note": "Middle initials retained exactly as the publisher full byline (e.g. Brian D., Aidan J., Iann C., Tatyana V.); no unverified expansion of middle names."
+        }
+      ],
+      "unresolved": [],
+      "before": "S. Feng, A. J. Campbell, B. M. Francis, Hyeonjun Baek, T. Taniguchi, K. Watanabe, I. C. Gerber, B. D. Gerardot*, and M. Brotons-Gisbert*",
+      "after": "Shun Feng, Aidan J. Campbell, Bibi Mary Francis, Hyeonjun Baek, Takashi Taniguchi, Kenji Watanabe, Iann C. Gerber, Brian D. Gerardot*, and Mauro Brotons-Gisbert*",
+      "appliedNames": [
+        "Shun Feng",
+        "Aidan J. Campbell",
+        "Bibi Mary Francis",
+        "Hyeonjun Baek",
+        "Takashi Taniguchi",
+        "Kenji Watanabe",
+        "Iann C. Gerber",
+        "Brian D. Gerardot",
+        "Mauro Brotons-Gisbert"
+      ],
+      "markersPreserved": true,
+      "authorCount": 9
+    },
+    {
+      "id": "pub-08",
+      "doi": "10.1038/s41427-025-00594-8",
+      "authors": [
+        "Heesoo Kim",
+        "Anh Thi Dieu Nguyen",
+        "Beomjun Kim",
+        "Hyerin Jo",
+        "Imasda Rahmatulloh",
+        "Hyobin Yoo",
+        "Hongseok Oh",
+        "Aziz Ahmed",
+        "Hyeonjun Beak",
+        "Kunook Chung"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41427-025-00594-8",
+        "https://api.crossref.org/works/10.1038/s41427-025-00594-8"
+      ],
+      "evidence": [
+        {
+          "method": "publisher HTML citation_author meta in source order",
+          "cache": "preview\\figure-source-recent\\pub-08.html",
+          "doiConfirmed": true,
+          "rawAuthorMetadata": [
+            "Kim, Heesoo",
+            "Nguyen, Anh Thi Dieu",
+            "Kim, Beomjun",
+            "Jo, Hyerin",
+            "Rahmatulloh, Imasda",
+            "Yoo, Hyobin",
+            "Oh, Hongseok",
+            "Ahmed, Aziz",
+            "Beak, Hyeonjun",
+            "Chung, Kunook"
+          ]
+        },
+        {
+          "method": "exact-DOI publisher-deposited Crossref corroboration",
+          "cache": "tmp\\publication-full-authors\\crossref\\pub-08.json",
+          "doiConfirmed": true,
+          "authorOrder": [
+            "Heesoo Kim",
+            "Anh Thi Dieu Nguyen",
+            "Beomjun Kim",
+            "Hyerin Jo",
+            "Imasda Rahmatulloh",
+            "Hyobin Yoo",
+            "Hongseok Oh",
+            "Aziz Ahmed",
+            "Hyeonjun Beak",
+            "Kunook Chung"
+          ],
+          "matchesPublisherByline": true
+        }
+      ],
+      "unresolved": [],
+      "before": "H. Kim†, A. T. D. Nguyen†, B. Kim, H. Jo, I. Rahmatulloh, H. Yoo, H. Oh, A. Ahmed, Hyeonjun Baek, and K. Chung*",
+      "after": "Heesoo Kim†, Anh Thi Dieu Nguyen†, Beomjun Kim, Hyerin Jo, Imasda Rahmatulloh, Hyobin Yoo, Hongseok Oh, Aziz Ahmed, Hyeonjun Baek, and Kunook Chung*",
+      "appliedNames": [
+        "Heesoo Kim",
+        "Anh Thi Dieu Nguyen",
+        "Beomjun Kim",
+        "Hyerin Jo",
+        "Imasda Rahmatulloh",
+        "Hyobin Yoo",
+        "Hongseok Oh",
+        "Aziz Ahmed",
+        "Hyeonjun Baek",
+        "Kunook Chung"
+      ],
+      "markersPreserved": true,
+      "authorCount": 10,
+      "identityOverride": "Retain the established and verified Hyeonjun Baek spelling despite publisher Beak/Back variants.",
+      "resolvedSourceDiscrepancies": [
+        {
+          "type": "publisherSurnameTypo",
+          "authorIndex": 8,
+          "publisherSpelling": "Hyeonjun Beak",
+          "existingVerifiedLabName": "Hyeonjun Baek",
+          "note": "Nature citation_author and publisher-deposited record spell Beak. Existing site uses Baek. Retained the source spelling here for review; do not silently convert canonical verified lab identity to publisher typo."
+        }
+      ]
+    },
+    {
+      "id": "pub-09",
+      "doi": "10.1039/D5RA02010G",
+      "authors": [
+        "Won Suk Oh",
+        "Seongwon Gim",
+        "Hyunhak Jeong",
+        "Hyeonjun Baek",
+        "Hongseok Oh"
+      ],
+      "sources": [
+        "https://pubs.rsc.org/en/content/articlehtml/2025/ra/d5ra02010g",
+        "https://api.crossref.org/works/10.1039/D5RA02010G"
+      ],
+      "evidence": [
+        {
+          "method": "publisher HTML citation_author meta in source order",
+          "cache": "preview\\figure-source-recent\\pub-09-html.html",
+          "doiConfirmed": true,
+          "rawAuthorMetadata": [
+            "Won Suk Oh",
+            "Seongwon Gim",
+            "Hyunhak Jeong",
+            "Hyeonjun Baek",
+            "Hongseok Oh"
+          ]
+        },
+        {
+          "method": "exact-DOI publisher-deposited Crossref corroboration",
+          "cache": "tmp\\publication-full-authors\\crossref\\pub-09.json",
+          "doiConfirmed": true,
+          "authorOrder": [
+            "Won Suk Oh",
+            "Seongwon Gim",
+            "Hyunhak Jeong",
+            "Hyeonjun Baek",
+            "Hongseok Oh"
+          ],
+          "matchesPublisherByline": true
+        }
+      ],
+      "unresolved": [],
+      "before": "W. S. Oh†, Seongwon Gim†, H. Jeong, Hyeonjun Baek*, and H. Oh*",
+      "after": "Won Suk Oh†, Seongwon Gim†, Hyunhak Jeong, Hyeonjun Baek*, and Hongseok Oh*",
+      "appliedNames": [
+        "Won Suk Oh",
+        "Seongwon Gim",
+        "Hyunhak Jeong",
+        "Hyeonjun Baek",
+        "Hongseok Oh"
+      ],
+      "markersPreserved": true,
+      "authorCount": 5
+    },
+    {
+      "id": "pub-10",
+      "doi": "10.1038/s41467-024-48476-x",
+      "authors": [
+        "Shun Feng",
+        "Aidan J. Campbell",
+        "Mauro Brotons-Gisbert",
+        "Daniel Andres-Penares",
+        "Hyeonjun Baek",
+        "Takashi Taniguchi",
+        "Kenji Watanabe",
+        "Bernhard Urbaszek",
+        "Iann C. Gerber",
+        "Brian D. Gerardot"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41467-024-48476-x",
+        "https://api.crossref.org/works/10.1038/s41467-024-48476-x"
+      ],
+      "evidence": [
+        {
+          "method": "publisher HTML citation_author meta in source order",
+          "cache": "preview\\figure-source-recent\\pub-10.html",
+          "doiConfirmed": true,
+          "rawAuthorMetadata": [
+            "Feng, Shun",
+            "Campbell, Aidan J.",
+            "Brotons-Gisbert, Mauro",
+            "Andres-Penares, Daniel",
+            "Baek, Hyeonjun",
+            "Taniguchi, Takashi",
+            "Watanabe, Kenji",
+            "Urbaszek, Bernhard",
+            "Gerber, Iann C.",
+            "Gerardot, Brian D."
+          ]
+        },
+        {
+          "method": "exact-DOI publisher-deposited Crossref corroboration",
+          "cache": "tmp\\publication-full-authors\\crossref\\pub-10.json",
+          "doiConfirmed": true,
+          "authorOrder": [
+            "Shun Feng",
+            "Aidan J. Campbell",
+            "Mauro Brotons-Gisbert",
+            "Daniel Andres-Penares",
+            "Hyeonjun Baek",
+            "Takashi Taniguchi",
+            "Kenji Watanabe",
+            "Bernhard Urbaszek",
+            "Iann C. Gerber",
+            "Brian D. Gerardot"
+          ],
+          "matchesPublisherByline": true
+        },
+        {
+          "note": "Middle initials retained exactly as the publisher full byline (e.g. Brian D., Aidan J., Iann C., Tatyana V.); no unverified expansion of middle names."
+        }
+      ],
+      "unresolved": [],
+      "before": "S. Feng†, A. J. Campbell†, M. Brotons-Gisbert*, D. Andrés-Penares, Hyeonjun Baek, T. Taniguchi, K. Watanabe, B. Urbaszek, I. C. Gerber, and B.D. Gerardot*",
+      "after": "Shun Feng†, Aidan J. Campbell†, Mauro Brotons-Gisbert*, Daniel Andres-Penares, Hyeonjun Baek, Takashi Taniguchi, Kenji Watanabe, Bernhard Urbaszek, Iann C. Gerber, and Brian D. Gerardot*",
+      "appliedNames": [
+        "Shun Feng",
+        "Aidan J. Campbell",
+        "Mauro Brotons-Gisbert",
+        "Daniel Andres-Penares",
+        "Hyeonjun Baek",
+        "Takashi Taniguchi",
+        "Kenji Watanabe",
+        "Bernhard Urbaszek",
+        "Iann C. Gerber",
+        "Brian D. Gerardot"
+      ],
+      "markersPreserved": true,
+      "authorCount": 10
+    },
+    {
+      "id": "pub-11",
+      "doi": "10.1038/s41567-024-02385-4",
+      "authors": [
+        "Aidan J. Campbell",
+        "Valerio Vitale",
+        "Mauro Brotons-Gisbert",
+        "Hyeonjun Baek",
+        "Antoine Borel",
+        "Tatyana V. Ivanova",
+        "Takashi Taniguchi",
+        "Kenji Watanabe",
+        "Johannes Lischner",
+        "Brian D. Gerardot"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41567-024-02385-4",
+        "https://api.crossref.org/works/10.1038/s41567-024-02385-4"
+      ],
+      "evidence": [
+        {
+          "method": "publisher HTML citation_author meta in source order",
+          "cache": "preview\\figure-source-recent\\pub-11.html",
+          "doiConfirmed": true,
+          "rawAuthorMetadata": [
+            "Campbell, Aidan J.",
+            "Vitale, Valerio",
+            "Brotons-Gisbert, Mauro",
+            "Baek, Hyeonjun",
+            "Borel, Antoine",
+            "Ivanova, Tatyana V.",
+            "Taniguchi, Takashi",
+            "Watanabe, Kenji",
+            "Lischner, Johannes",
+            "Gerardot, Brian D."
+          ]
+        },
+        {
+          "method": "exact-DOI publisher-deposited Crossref corroboration",
+          "cache": "tmp\\publication-full-authors\\crossref\\pub-11.json",
+          "doiConfirmed": true,
+          "authorOrder": [
+            "Aidan J. Campbell",
+            "Valerio Vitale",
+            "Mauro Brotons-Gisbert",
+            "Hyeonjun Baek",
+            "Antoine Borel",
+            "Tatyana V. Ivanova",
+            "Takashi Taniguchi",
+            "Kenji Watanabe",
+            "Johannes Lischner",
+            "Brian D. Gerardot"
+          ],
+          "matchesPublisherByline": true
+        },
+        {
+          "note": "Middle initials retained exactly as the publisher full byline (e.g. Brian D., Aidan J., Iann C., Tatyana V.); no unverified expansion of middle names."
+        }
+      ],
+      "unresolved": [],
+      "before": "A. Campbell, V. Vitale, M. Brotons-Gisbert, Hyeonjun Baek, A. Borel, T. Ivanova, T. Taniguchi, K. Watanabe, J. Lischner, and B. D. Gerardot*",
+      "after": "Aidan J. Campbell, Valerio Vitale, Mauro Brotons-Gisbert, Hyeonjun Baek, Antoine Borel, Tatyana V. Ivanova, Takashi Taniguchi, Kenji Watanabe, Johannes Lischner, and Brian D. Gerardot*",
+      "appliedNames": [
+        "Aidan J. Campbell",
+        "Valerio Vitale",
+        "Mauro Brotons-Gisbert",
+        "Hyeonjun Baek",
+        "Antoine Borel",
+        "Tatyana V. Ivanova",
+        "Takashi Taniguchi",
+        "Kenji Watanabe",
+        "Johannes Lischner",
+        "Brian D. Gerardot"
+      ],
+      "markersPreserved": true,
+      "authorCount": 10
+    },
+    {
+      "id": "pub-12",
+      "doi": "10.1021/acs.cgd.2c00959",
+      "authors": [
+        "Hongseok Oh",
+        "Young Joon Hong",
+        "Gyu-Chul Yi",
+        "Hyeonjun Baek",
+        "Dong Ryeol Lee",
+        "Hyun Hwi Lee"
+      ],
+      "sources": [
+        "https://pubs.acs.org/doi/10.1021/acs.cgd.2c00959",
+        "https://api.crossref.org/works/10.1021/acs.cgd.2c00959"
+      ],
+      "evidence": [
+        {
+          "method": "ACS publisher article author-information/byline, live search result for exact DOI; six names visible in order.",
+          "authorOrder": [
+            "Hongseok Oh",
+            "Young Joon Hong",
+            "Gyu-Chul Yi",
+            "Hyeonjun Baek",
+            "Dong Ryeol Lee",
+            "Hyun Hwi Lee"
+          ],
+          "doiConfirmed": true
+        },
+        {
+          "method": "exact-DOI publisher-deposited Crossref corroboration",
+          "cache": "tmp\\publication-full-authors\\crossref\\pub-12.json",
+          "doiConfirmed": true,
+          "authorOrder": [
+            "Hongseok Oh",
+            "Young Joon Hong",
+            "Gyu-Chul Yi",
+            "Hyeonjun Baek",
+            "Dong Ryeol Lee",
+            "Hyun Hwi Lee"
+          ],
+          "matchesPublisherByline": true
+        }
+      ],
+      "unresolved": [],
+      "before": "H. Oh, Y. J. Hong, G.-C. Yi, Hyeonjun Baek, D. R. Lee, H. H. Lee*",
+      "after": "Hongseok Oh, Young Joon Hong, Gyu-Chul Yi, Hyeonjun Baek, Dong Ryeol Lee, and Hyun Hwi Lee*",
+      "appliedNames": [
+        "Hongseok Oh",
+        "Young Joon Hong",
+        "Gyu-Chul Yi",
+        "Hyeonjun Baek",
+        "Dong Ryeol Lee",
+        "Hyun Hwi Lee"
+      ],
+      "markersPreserved": true,
+      "authorCount": 6
+    },
+    {
+      "id": "pub-13",
+      "doi": "10.1038/s41699-022-00358-w",
+      "authors": [
+        "Aidan J. Campbell",
+        "Mauro Brotons-Gisbert",
+        "Hyeonjun Baek",
+        "Valerio Vitale",
+        "Takashi Taniguchi",
+        "Kenji Watanabe",
+        "Johannes Lischner",
+        "Brian D. Gerardot"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41699-022-00358-w",
+        "https://api.crossref.org/works/10.1038/s41699-022-00358-w"
+      ],
+      "evidence": [
+        {
+          "method": "publisher HTML citation_author meta in source order",
+          "cache": "preview\\figure-source-recent\\pub-13.html",
+          "doiConfirmed": true,
+          "rawAuthorMetadata": [
+            "Campbell, Aidan J.",
+            "Brotons-Gisbert, Mauro",
+            "Baek, Hyeonjun",
+            "Vitale, Valerio",
+            "Taniguchi, Takashi",
+            "Watanabe, Kenji",
+            "Lischner, Johannes",
+            "Gerardot, Brian D."
+          ]
+        },
+        {
+          "method": "exact-DOI publisher-deposited Crossref corroboration",
+          "cache": "tmp\\publication-full-authors\\crossref\\pub-13.json",
+          "doiConfirmed": true,
+          "authorOrder": [
+            "Aidan J. Campbell",
+            "Mauro Brotons-Gisbert",
+            "Hyeonjun Baek",
+            "Valerio Vitale",
+            "Takashi Taniguchi",
+            "Kenji Watanabe",
+            "Johannes Lischner",
+            "Brian D. Gerardot"
+          ],
+          "matchesPublisherByline": true
+        },
+        {
+          "note": "Middle initials retained exactly as the publisher full byline (e.g. Brian D., Aidan J., Iann C., Tatyana V.); no unverified expansion of middle names."
+        }
+      ],
+      "unresolved": [],
+      "before": "A. Campbell, M. Brotons-Gisbert, Hyeonjun Baek, V. Vitale, T. Taniguchi, K. Watanabe, J. Lischner, and B. D. Gerardot*",
+      "after": "Aidan J. Campbell, Mauro Brotons-Gisbert, Hyeonjun Baek, Valerio Vitale, Takashi Taniguchi, Kenji Watanabe, Johannes Lischner, and Brian D. Gerardot*",
+      "appliedNames": [
+        "Aidan J. Campbell",
+        "Mauro Brotons-Gisbert",
+        "Hyeonjun Baek",
+        "Valerio Vitale",
+        "Takashi Taniguchi",
+        "Kenji Watanabe",
+        "Johannes Lischner",
+        "Brian D. Gerardot"
+      ],
+      "markersPreserved": true,
+      "authorCount": 8
+    },
+    {
+      "id": "pub-14",
+      "doi": "10.1088/1361-6528/ac8bd9",
+      "authors": [
+        "Hyeong-Yong Hwang",
+        "Hyeonjun Baek",
+        "Gyu-Chul Yi",
+        "Young-Dahl Jho"
+      ],
+      "sources": [
+        "https://iopscience.iop.org/article/10.1088/1361-6528/ac8bd9",
+        "https://api.crossref.org/works/10.1088/1361-6528/ac8bd9"
+      ],
+      "evidence": [
+        {
+          "method": "publisher HTML citation_author meta in source order",
+          "cache": "preview\\figure-source-recent\\pub-14.html",
+          "doiConfirmed": true,
+          "rawAuthorMetadata": [
+            "Hyeong-Yong Hwang",
+            "Hyeonjun Baek",
+            "Gyu-Chul Yi",
+            "Young-Dahl Jho"
+          ]
+        },
+        {
+          "method": "exact-DOI publisher-deposited Crossref corroboration",
+          "cache": "tmp\\publication-full-authors\\crossref\\pub-14.json",
+          "doiConfirmed": true,
+          "authorOrder": [
+            "Hyeong-Yong Hwang",
+            "Hyeonjun Baek",
+            "Gyu-Chul Yi",
+            "Young-Dahl Jho"
+          ],
+          "matchesPublisherByline": true
+        }
+      ],
+      "unresolved": [],
+      "before": "H. Y. Hwang, Hyeonjun Baek, G.-C. Yi, and Y. D. Jho*",
+      "after": "Hyeong-Yong Hwang, Hyeonjun Baek, Gyu-Chul Yi, and Young-Dahl Jho*",
+      "appliedNames": [
+        "Hyeong-Yong Hwang",
+        "Hyeonjun Baek",
+        "Gyu-Chul Yi",
+        "Young-Dahl Jho"
+      ],
+      "markersPreserved": true,
+      "authorCount": 4
+    },
+    {
+      "id": "pub-15",
+      "doi": "10.35848/1882-0786/ac7032",
+      "authors": [
+        "Yeojin Lee",
+        "Hyerin Jo",
+        "Kooktae Kim",
+        "Hyobin Yoo",
+        "Hyeonjun Baek",
+        "Dong Ryeol Lee",
+        "Hongseok Oh"
+      ],
+      "sources": [
+        "https://iopscience.iop.org/article/10.35848/1882-0786/ac7032"
+      ],
+      "evidence": [
+        {
+          "method": "publisher HTML citation_author meta in source order",
+          "cache": "preview\\figure-source-recent\\pub-15.html",
+          "doiConfirmed": true,
+          "rawAuthorMetadata": [
+            "Yeojin Lee",
+            "Hyerin Jo",
+            "Kooktae Kim",
+            "Hyobin Yoo",
+            "Hyeonjun Baek",
+            "Dong Ryeol Lee",
+            "Hongseok Oh"
+          ]
+        }
+      ],
+      "unresolved": [],
+      "before": "Y. Lee, H. Jo, K. Kim, H. Yoo, Hyeonjun Baek, D. R. Lee, and H. Oh*",
+      "after": "Yeojin Lee, Hyerin Jo, Kooktae Kim, Hyobin Yoo, Hyeonjun Baek, Dong Ryeol Lee, and Hongseok Oh*",
+      "appliedNames": [
+        "Yeojin Lee",
+        "Hyerin Jo",
+        "Kooktae Kim",
+        "Hyobin Yoo",
+        "Hyeonjun Baek",
+        "Dong Ryeol Lee",
+        "Hongseok Oh"
+      ],
+      "markersPreserved": true,
+      "authorCount": 7
+    },
+    {
+      "id": "pub-16",
+      "doi": "10.1038/s41534-022-00558-8",
+      "authors": [
+        "Chang Hoon Park",
+        "Min Ki Woo",
+        "Byung Kwon Park",
+        "Yong-Su Kim",
+        "Hyeonjun Baek",
+        "Seung-Woo Lee",
+        "Hyang-Tag Lim",
+        "Seung-Woo Jeon",
+        "Hojoong Jung",
+        "Sangin Kim",
+        "Sang-Wook Han"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41534-022-00558-8"
+      ],
+      "evidence": [
+        {
+          "method": "publisher HTML citation_author meta in source order",
+          "cache": "preview\\figure-source-recent\\pub-16.html",
+          "doiConfirmed": true,
+          "rawAuthorMetadata": [
+            "Park, Chang Hoon",
+            "Woo, Min Ki",
+            "Park, Byung Kwon",
+            "Kim, Yong-Su",
+            "Baek, Hyeonjun",
+            "Lee, Seung-Woo",
+            "Lim, Hyang-Tag",
+            "Jeon, Seung-Woo",
+            "Jung, Hojoong",
+            "Kim, Sangin",
+            "Han, Sang-Wook"
+          ]
+        }
+      ],
+      "unresolved": [],
+      "before": "C. H. Park, M. K. Woo, B. K. Park, Y.-S. Kim, Hyeonjun Baek, S.-W. Lee, H.-T. Lim, S.-W. Jeon, H. Jung, S. Kim*, and S.-W. Han*",
+      "after": "Chang Hoon Park, Min Ki Woo, Byung Kwon Park, Yong-Su Kim, Hyeonjun Baek, Seung-Woo Lee, Hyang-Tag Lim, Seung-Woo Jeon, Hojoong Jung, Sangin Kim*, and Sang-Wook Han*",
+      "appliedNames": [
+        "Chang Hoon Park",
+        "Min Ki Woo",
+        "Byung Kwon Park",
+        "Yong-Su Kim",
+        "Hyeonjun Baek",
+        "Seung-Woo Lee",
+        "Hyang-Tag Lim",
+        "Seung-Woo Jeon",
+        "Hojoong Jung",
+        "Sangin Kim",
+        "Sang-Wook Han"
+      ],
+      "markersPreserved": true,
+      "authorCount": 11
+    },
+    {
+      "id": "pub-17",
+      "doi": "10.1038/s41565-021-00970-9",
+      "authors": [
+        "Hyeonjun Baek",
+        "Mauro Brotons-Gisbert",
+        "Aidan Campbell",
+        "Valerio Vitale",
+        "Johannes Lischner",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Brian D. Gerardot"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41565-021-00970-9",
+          "kind": "publisher article HTML; citation_author metadata and displayed author block",
+          "cache": "figure-work-middle/pub-17.html"
+        }
+      ],
+      "evidence": [
+        "Exact DOI 10.1038/s41565-021-00970-9 confirmed in publisher citation_doi. Ordered citation_author records supply 8 names; publisher displayed author list agrees.",
+        "Published capitalization, hyphenation, diacritics and middle initials retained. No first name inferred from initials."
+      ],
+      "unresolved": [],
+      "before": "Hyeonjun Baek*, M. Brotons-Gisbert, A. Campbell, Valerio Vitale, Johannes Lischner, K. Watanabe, T. Taniguchi, and B. D. Gerardot*",
+      "after": "Hyeonjun Baek*, Mauro Brotons-Gisbert, Aidan Campbell, Valerio Vitale, Johannes Lischner, Kenji Watanabe, Takashi Taniguchi, and Brian D. Gerardot*",
+      "appliedNames": [
+        "Hyeonjun Baek",
+        "Mauro Brotons-Gisbert",
+        "Aidan Campbell",
+        "Valerio Vitale",
+        "Johannes Lischner",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Brian D. Gerardot"
+      ],
+      "markersPreserved": true,
+      "authorCount": 8
+    },
+    {
+      "id": "pub-18",
+      "doi": "10.1126/sciadv.abj3176",
+      "authors": [
+        "Jae-Pil So",
+        "Ha-Reem Kim",
+        "Hyeonjun Baek",
+        "Kwang-Yong Jeong",
+        "Hoo-Cheol Lee",
+        "Woong Huh",
+        "Yoon Seok Kim",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Jungkil Kim",
+        "Chul-Ho Lee",
+        "Hong-Gyu Park"
+      ],
+      "sources": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8528413/",
+          "kind": "publisher-deposited full-text JATS XML in PMC",
+          "cache": "figure-work-middle/PMC8528413.xml"
+        }
+      ],
+      "evidence": [
+        "Exact DOI confirmed in article-meta. The author contrib-group contains these 12 explicit given-names/surname pairs in publication order."
+      ],
+      "unresolved": [],
+      "before": "J.-P. So, H.-R. Kim, Hyeonjun Baek, K.-Y. Jeong, H.-C. Lee, W. Huh, Y. S. Kim, K. Watanabe, T. Taniguchi, J. Kim, C.-H. Lee, H.-G. Park*",
+      "after": "Jae-Pil So, Ha-Reem Kim, Hyeonjun Baek, Kwang-Yong Jeong, Hoo-Cheol Lee, Woong Huh, Yoon Seok Kim, Kenji Watanabe, Takashi Taniguchi, Jungkil Kim, Chul-Ho Lee, and Hong-Gyu Park*",
+      "appliedNames": [
+        "Jae-Pil So",
+        "Ha-Reem Kim",
+        "Hyeonjun Baek",
+        "Kwang-Yong Jeong",
+        "Hoo-Cheol Lee",
+        "Woong Huh",
+        "Yoon Seok Kim",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Jungkil Kim",
+        "Chul-Ho Lee",
+        "Hong-Gyu Park"
+      ],
+      "markersPreserved": true,
+      "authorCount": 12
+    },
+    {
+      "id": "pub-19",
+      "doi": "10.1103/PhysRevX.11.031033",
+      "authors": [
+        "Mauro Brotons-Gisbert",
+        "Hyeonjun Baek",
+        "Aidan Campbell",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Brian D. Gerardot"
+      ],
+      "sources": [
+        {
+          "url": "https://pure.hw.ac.uk/ws/portalfiles/portal/50713363/PhysRevX.11.031033.pdf",
+          "kind": "published version PDF archived by author institution",
+          "cache": "figure-work-middle/pub-19.pdf"
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1103%2FPhysRevX.11.031033",
+          "kind": "newly fetched publisher-deposited exact-DOI Crossref metadata",
+          "cache": "tmp/publication-full-authors/crossref/pub-19.json"
+        }
+      ],
+      "evidence": [
+        "The first article page (PDF page 2 after repository cover) explicitly prints all six expanded given names in this order and DOI 10.1103/PhysRevX.11.031033.",
+        "Brian D. Gerardot is the published form; the middle initial is retained.",
+        "New Crossref exact-DOI author array independently agrees with all names and their order."
+      ],
+      "unresolved": [],
+      "before": "M. Brotons-Gisbert*, Hyeonjun Baek, A. Campbell, K. Watanabe, T. Taniguchi, and B. D. Gerardot*",
+      "after": "Mauro Brotons-Gisbert*, Hyeonjun Baek, Aidan Campbell, Kenji Watanabe, Takashi Taniguchi, and Brian D. Gerardot*",
+      "appliedNames": [
+        "Mauro Brotons-Gisbert",
+        "Hyeonjun Baek",
+        "Aidan Campbell",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Brian D. Gerardot"
+      ],
+      "markersPreserved": true,
+      "authorCount": 6
+    },
+    {
+      "id": "pub-20",
+      "doi": "10.1038/s41427-021-00324-w",
+      "authors": [
+        "Jun Beom Park",
+        "Minho S. Song",
+        "Ramesh Ghosh",
+        "Rajendra Kumar Saroj",
+        "Yunjae Hwang",
+        "Youngbin Tchoe",
+        "Hongseok Oh",
+        "Hyeonjun Baek",
+        "Yoonseo Lim",
+        "Bosung Kim",
+        "Sang-Woo Kim",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41427-021-00324-w",
+          "kind": "publisher article HTML; citation_author metadata and displayed author block",
+          "cache": "figure-work-middle/pub-20.html"
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fs41427-021-00324-w",
+          "kind": "newly fetched publisher-deposited exact-DOI Crossref metadata",
+          "cache": "tmp/publication-full-authors/crossref/pub-20.json"
+        }
+      ],
+      "evidence": [
+        "Exact DOI 10.1038/s41427-021-00324-w confirmed in publisher citation_doi. Ordered citation_author records supply 12 names; publisher displayed author list agrees.",
+        "Published capitalization, hyphenation, diacritics and middle initials retained. No first name inferred from initials.",
+        "New Crossref exact-DOI author array independently agrees with all names and their order."
+      ],
+      "unresolved": [],
+      "before": "J. B. Park†, M. S. Song†, R. Ghosh*, R. K. Saroj, Y. Hwang, Y. Tchoe, H. Oh, Hyeonjun Baek, Y. Lim, B. Kim, S.-W. Kim, and G.-C. Yi*",
+      "after": "Jun Beom Park†, Minho S. Song†, Ramesh Ghosh*, Rajendra Kumar Saroj, Yunjae Hwang, Youngbin Tchoe, Hongseok Oh, Hyeonjun Baek, Yoonseo Lim, Bosung Kim, Sang-Woo Kim, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Jun Beom Park",
+        "Minho S. Song",
+        "Ramesh Ghosh",
+        "Rajendra Kumar Saroj",
+        "Yunjae Hwang",
+        "Youngbin Tchoe",
+        "Hongseok Oh",
+        "Hyeonjun Baek",
+        "Yoonseo Lim",
+        "Bosung Kim",
+        "Sang-Woo Kim",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 12
+    },
+    {
+      "id": "pub-21",
+      "doi": "10.1038/s41427-021-00301-3",
+      "authors": [
+        "Youngbin Tchoe",
+        "Janghyun Jo",
+        "HoSung Kim",
+        "Heehun Kim",
+        "Hyeonjun Baek",
+        "Keundong Lee",
+        "Dongha Yoo",
+        "Won Jun Choi",
+        "Miyoung Kim",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41427-021-00301-3",
+          "kind": "publisher article HTML; citation_author metadata and displayed author block",
+          "cache": "figure-work-middle/pub-21.html"
+        }
+      ],
+      "evidence": [
+        "Exact DOI 10.1038/s41427-021-00301-3 confirmed in publisher citation_doi. Ordered citation_author records supply 10 names; publisher displayed author list agrees.",
+        "Published capitalization, hyphenation, diacritics and middle initials retained. No first name inferred from initials."
+      ],
+      "unresolved": [],
+      "before": "Y. Tchoe, J. Jo, H. Kim, H. Kim, Hyeonjun Baek, K. Lee, D. Yoo, W. J. Choi, M. Kim, and G.-C. Yi*",
+      "after": "Youngbin Tchoe, Janghyun Jo, HoSung Kim, Heehun Kim, Hyeonjun Baek, Keundong Lee, Dongha Yoo, Won Jun Choi, Miyoung Kim, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Youngbin Tchoe",
+        "Janghyun Jo",
+        "HoSung Kim",
+        "Heehun Kim",
+        "Hyeonjun Baek",
+        "Keundong Lee",
+        "Dongha Yoo",
+        "Won Jun Choi",
+        "Miyoung Kim",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 10
+    },
+    {
+      "id": "pub-22",
+      "doi": "10.1038/s41427-021-00299-8",
+      "authors": [
+        "Minho S. Song",
+        "Hyeonjun Baek",
+        "Keundong Lee",
+        "Dongha Yoo",
+        "Kunook Chung",
+        "Jamin Lee",
+        "Hyungseok C. Moon",
+        "Byung Hun Lee",
+        "Hye Yoon Park",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41427-021-00299-8",
+          "kind": "publisher article HTML; citation_author metadata and displayed author block",
+          "cache": "figure-work-middle/pub-22.html"
+        }
+      ],
+      "evidence": [
+        "Exact DOI 10.1038/s41427-021-00299-8 confirmed in publisher citation_doi. Ordered citation_author records supply 10 names; publisher displayed author list agrees.",
+        "Published capitalization, hyphenation, diacritics and middle initials retained. No first name inferred from initials."
+      ],
+      "unresolved": [],
+      "before": "M. S. Song, Hyeonjun Baek, K. Lee, D. Yoo, K. Chung, J. Lee, H. Moon, B. H. Lee, H. Y. Park, and G.-C. Yi*",
+      "after": "Minho S. Song, Hyeonjun Baek, Keundong Lee, Dongha Yoo, Kunook Chung, Jamin Lee, Hyungseok C. Moon, Byung Hun Lee, Hye Yoon Park, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Minho S. Song",
+        "Hyeonjun Baek",
+        "Keundong Lee",
+        "Dongha Yoo",
+        "Kunook Chung",
+        "Jamin Lee",
+        "Hyungseok C. Moon",
+        "Byung Hun Lee",
+        "Hye Yoon Park",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 10
+    },
+    {
+      "id": "pub-23",
+      "doi": "10.1016/j.nanoen.2020.104955",
+      "authors": [
+        "Youngbin Tchoe",
+        "Minho S. Song",
+        "Heehun Kim",
+        "Hyeonjun Baek",
+        "Joon Young Park",
+        "Hongseok Oh",
+        "Keundong Lee",
+        "Kyungmin Chung",
+        "Jerome K. Hyun",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        {
+          "url": "https://api.crossref.org/works/10.1016%2Fj.nanoen.2020.104955",
+          "kind": "publisher-deposited exact-DOI Crossref metadata",
+          "cache": "figure-work-middle/pub23-crossref.json"
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S2211285520305127",
+          "kind": "publisher displayed ordered full author byline; retrieved through web search result"
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1016%2Fj.nanoen.2020.104955",
+          "kind": "newly fetched publisher-deposited exact-DOI Crossref metadata",
+          "cache": "tmp/publication-full-authors/crossref/pub-23.json"
+        }
+      ],
+      "evidence": [
+        "Crossref exact-DOI author array and ScienceDirect displayed byline independently agree on all 10 full first names and order.",
+        "Author 8 is Kyungmin Chung (not Kunook Chung). Author 2 is Minho S. Song and author 9 is Jerome K. Hyun, preserving their published middle initials.",
+        "New Crossref exact-DOI author array independently agrees with all names and their order."
+      ],
+      "unresolved": [],
+      "before": "Y. Tchoe, M. Song, H. Kim, Hyeonjun Baek, J. Y. Park, H. Oh, K. Lee, K. Chung, J. K. Hyun, and G.-C. Yi*",
+      "after": "Youngbin Tchoe, Minho S. Song, Heehun Kim, Hyeonjun Baek, Joon Young Park, Hongseok Oh, Keundong Lee, Kyungmin Chung, Jerome K. Hyun, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Youngbin Tchoe",
+        "Minho S. Song",
+        "Heehun Kim",
+        "Hyeonjun Baek",
+        "Joon Young Park",
+        "Hongseok Oh",
+        "Keundong Lee",
+        "Kyungmin Chung",
+        "Jerome K. Hyun",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 10
+    },
+    {
+      "id": "pub-24",
+      "doi": "10.1126/sciadv.aba8526",
+      "authors": [
+        "Hyeonjun Baek",
+        "Mauro Brotons-Gisbert",
+        "Zhe Xian Koong",
+        "Aidan Campbell",
+        "Markus Rambach",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Brian D. Gerardot"
+      ],
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2001.04305",
+          "kind": "author-submitted preprint metadata; submitted by Hyeonjun Baek"
+        },
+        {
+          "url": "https://pure.hw.ac.uk/ws/files/42124860/eaba8526.full.pdf",
+          "kind": "published version PDF archived by author institution",
+          "cache": "review-assets/explicit/pub-24.pdf"
+        }
+      ],
+      "evidence": [
+        "Published PDF page 2 confirms DOI 10.1126/sciadv.aba8526 and ordered initials H. Baek, M. Brotons-Gisbert, Z. X. Koong, A. Campbell, M. Rambach, K. Watanabe, T. Taniguchi, B. D. Gerardot.",
+        "The same paper author-submitted preprint arXiv:2001.04305 has all eight full first names in that identical order, resolving Z. X. to Zhe Xian and M. Rambach to Markus without guessing. The preprint title is Highly tunable quantum light from moire trapped excitons; the published title adds energy-."
+      ],
+      "unresolved": [],
+      "before": "Hyeonjun Baek†*, M. Brotons-Gisbert†, Z. X. Koong, A. Campbell, M. Rambach, K. Watanabe, T. Taniguchi, and B. D. Gerardot*",
+      "after": "Hyeonjun Baek†*, Mauro Brotons-Gisbert†, Zhe Xian Koong, Aidan Campbell, Markus Rambach, Kenji Watanabe, Takashi Taniguchi, and Brian D. Gerardot*",
+      "appliedNames": [
+        "Hyeonjun Baek",
+        "Mauro Brotons-Gisbert",
+        "Zhe Xian Koong",
+        "Aidan Campbell",
+        "Markus Rambach",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Brian D. Gerardot"
+      ],
+      "markersPreserved": true,
+      "authorCount": 8
+    },
+    {
+      "id": "pub-25",
+      "doi": "10.1038/s41563-020-0687-7",
+      "authors": [
+        "Mauro Brotons-Gisbert",
+        "Hyeonjun Baek",
+        "Alejandro Molina-Sánchez",
+        "Aidan Campbell",
+        "Eleanor Scerri",
+        "Daniel White",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Cristian Bonato",
+        "Brian D. Gerardot"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41563-020-0687-7",
+          "kind": "publisher article HTML; citation_author metadata and displayed author block",
+          "cache": "figure-work-middle/pub-25.html"
+        },
+        {
+          "url": "https://arxiv.org/abs/1908.03778",
+          "kind": "author-submitted preprint metadata with exact related published DOI"
+        }
+      ],
+      "evidence": [
+        "Exact DOI 10.1038/s41563-020-0687-7 confirmed in publisher citation_doi. Ordered citation_author records supply 10 names; publisher displayed author list agrees.",
+        "Published capitalization, hyphenation, diacritics and middle initials retained. No first name inferred from initials.",
+        "Current Nature displayed author block, citation_author metadata, and author-submitted arXiv:1908.03778 all name author 5 Eleanor Scerri. arXiv explicitly links related DOI 10.1038/s41563-020-0687-7. Existing D. Scerri is replaced from these direct sources, not expanded by assumption."
+      ],
+      "unresolved": [],
+      "before": "M. Brotons-Gisbert†*, Hyeonjun Baek†*, A. Molina-Sánchez, A. Campbell, D. Scerri, D. White, K. Watanabe, T. Taniguchi, C. Bonato, and B. D. Gerardot*",
+      "after": "Mauro Brotons-Gisbert†*, Hyeonjun Baek†*, Alejandro Molina-Sánchez, Aidan Campbell, Eleanor Scerri, Daniel White, Kenji Watanabe, Takashi Taniguchi, Cristian Bonato, and Brian D. Gerardot*",
+      "appliedNames": [
+        "Mauro Brotons-Gisbert",
+        "Hyeonjun Baek",
+        "Alejandro Molina-Sánchez",
+        "Aidan Campbell",
+        "Eleanor Scerri",
+        "Daniel White",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Cristian Bonato",
+        "Brian D. Gerardot"
+      ],
+      "markersPreserved": true,
+      "authorCount": 10
+    },
+    {
+      "id": "pub-26",
+      "doi": "10.1063/1.4981646",
+      "authors": [
+        "Hyeonjun Baek",
+        "Hankyul Kwak",
+        "Minho S. Song",
+        "Go Eun Ha",
+        "Jongwoo Park",
+        "Youngbin Tchoe",
+        "Jerome K. Hyun",
+        "Hye Yoon Park",
+        "Eunji Cheong",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        {
+          "url": "https://aipp.silverchair-cdn.com/article-minimal/121564",
+          "kind": "AIP publisher full-text author block",
+          "cache": "figure-work-middle/pub-26-cdn.html"
+        },
+        {
+          "url": "https://pubs.aip.org/aip/apm/article/5/4/046106/121564/ZnO-nanotube-waveguide-arrays-on-graphene-films",
+          "kind": "AIP canonical article DOI page"
+        }
+      ],
+      "evidence": [
+        "The cached AIP full text explicitly repeats these 10 names in the leading author list and Author & Article Information section, followed by DOI 10.1063/1.4981646.",
+        "Jongwoo Park is the spelling printed in this article; published middle initials in Minho S. Song and Jerome K. Hyun are retained."
+      ],
+      "unresolved": [],
+      "before": "Hyeonjun Baek, H. Kwak, M. S. Song, G. E. Ha, J. Park, Y. Tchoe, J. K. Hyun, H. Y. Park, E. Cheong*, and G.-C. Yi*",
+      "after": "Hyeonjun Baek, Hankyul Kwak, Minho S. Song, Go Eun Ha, Jongwoo Park, Youngbin Tchoe, Jerome K. Hyun, Hye Yoon Park, Eunji Cheong*, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Hyeonjun Baek",
+        "Hankyul Kwak",
+        "Minho S. Song",
+        "Go Eun Ha",
+        "Jongwoo Park",
+        "Youngbin Tchoe",
+        "Jerome K. Hyun",
+        "Hye Yoon Park",
+        "Eunji Cheong",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 10
+    },
+    {
+      "id": "pub-27",
+      "doi": "10.1063/1.4954798",
+      "authors": [
+        "Hyeonjun Baek",
+        "Jun Beom Park",
+        "Jong-woo Park",
+        "Jerome K. Hyun",
+        "Hosang Yoon",
+        "Hongseok Oh",
+        "Jiyoung Yoon"
+      ],
+      "sources": [
+        {
+          "url": "https://aipp.silverchair-cdn.com/article-minimal/30764",
+          "kind": "AIP publisher full-text author block",
+          "cache": "figure-work-middle/pub-27-cdn.html"
+        },
+        {
+          "url": "https://pubs.aip.org/aip/apl/article/108/26/263102/30764/ZnO-nanolasers-on-graphene-films",
+          "kind": "AIP canonical article DOI page"
+        }
+      ],
+      "evidence": [
+        "The cached AIP full text explicitly repeats these seven names in the leading author list and Author & Article Information section, followed by DOI 10.1063/1.4954798.",
+        "Jong-woo Park is the hyphenated spelling printed in this article; no normalization to a different article spelling."
+      ],
+      "unresolved": [],
+      "before": "Hyeonjun Baek*, J. B. Park, J. Park, J. K. Hyun, H. Yoon, H. Oh, and J. Yoon",
+      "after": "Hyeonjun Baek*, Jun Beom Park, Jong-woo Park, Jerome K. Hyun, Hosang Yoon, Hongseok Oh, and Jiyoung Yoon",
+      "appliedNames": [
+        "Hyeonjun Baek",
+        "Jun Beom Park",
+        "Jong-woo Park",
+        "Jerome K. Hyun",
+        "Hosang Yoon",
+        "Hongseok Oh",
+        "Jiyoung Yoon"
+      ],
+      "markersPreserved": true,
+      "authorCount": 7
+    },
+    {
+      "id": "pub-28",
+      "doi": "10.1002/adma.201601894",
+      "authors": [
+        "Kunook Chung",
+        "Hyobin Yoo",
+        "Jerome K. Hyun",
+        "Hongseok Oh",
+        "Youngbin Tchoe",
+        "Keundong Lee",
+        "Hyeonjun Baek",
+        "Miyoung Kim",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        {
+          "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.201601894",
+          "kind": "Wiley publisher displayed ordered author and affiliation list; accessed 2026-11-05"
+        }
+      ],
+      "evidence": [
+        "Wiley article byline and repeated author/affiliation listing explicitly supply all nine full first names in this order, with exact DOI 10.1002/adma.201601894.",
+        "The malformed existing H. Oh. Y. Tchoe separator resolves to two distinct authors Hongseok Oh and Youngbin Tchoe."
+      ],
+      "unresolved": [],
+      "before": "K. Chung, H. Yoo, J. K. Hyun, H. Oh. Y. Tchoe, K. Lee, Hyeonjun Baek, M. Kim, and G-C. Yi*",
+      "after": "Kunook Chung, Hyobin Yoo, Jerome K. Hyun, Hongseok Oh, Youngbin Tchoe, Keundong Lee, Hyeonjun Baek, Miyoung Kim, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Kunook Chung",
+        "Hyobin Yoo",
+        "Jerome K. Hyun",
+        "Hongseok Oh",
+        "Youngbin Tchoe",
+        "Keundong Lee",
+        "Hyeonjun Baek",
+        "Miyoung Kim",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 9
+    },
+    {
+      "id": "pub-29",
+      "doi": "10.1038/srep27451",
+      "authors": [
+        "Keundong Lee",
+        "Youngbin Tchoe",
+        "Hosang Yoon",
+        "Hyeonjun Baek",
+        "Kunook Chung",
+        "Sangik Lee",
+        "Chansoo Yoon",
+        "Bae Ho Park",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/srep27451",
+          "kind": "publisher article HTML; citation_author metadata and displayed author block",
+          "cache": "figure-work-middle/pub-29.html"
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1038%2Fsrep27451",
+          "kind": "newly fetched publisher-deposited exact-DOI Crossref metadata",
+          "cache": "tmp/publication-full-authors/crossref/pub-29.json"
+        }
+      ],
+      "evidence": [
+        "Exact DOI 10.1038/srep27451 confirmed in publisher citation_doi. Ordered citation_author records supply 9 names; publisher displayed author list agrees.",
+        "Published capitalization, hyphenation, diacritics and middle initials retained. No first name inferred from initials.",
+        "New Crossref exact-DOI author array independently agrees with all names and their order."
+      ],
+      "unresolved": [],
+      "before": "K. Lee, Y. Tchoe, H. Yoon, Hyeonjun Baek, K. Chung, S. Lee, C. Yoon, B. H. Park*, and G.-C. Yi*",
+      "after": "Keundong Lee, Youngbin Tchoe, Hosang Yoon, Hyeonjun Baek, Kunook Chung, Sangik Lee, Chansoo Yoon, Bae Ho Park*, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Keundong Lee",
+        "Youngbin Tchoe",
+        "Hosang Yoon",
+        "Hyeonjun Baek",
+        "Kunook Chung",
+        "Sangik Lee",
+        "Chansoo Yoon",
+        "Bae Ho Park",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 9
+    },
+    {
+      "id": "pub-30",
+      "doi": "10.1063/1.4948452",
+      "authors": [
+        "Hyeong-Yong Hwang",
+        "Hyeonjun Baek",
+        "Gyu-Chul Yi",
+        "Hyoung-Chan Kim",
+        "Young-Dahl Jho"
+      ],
+      "sources": [
+        {
+          "url": "https://aipp.silverchair-cdn.com/article-minimal/21997",
+          "kind": "AIP publisher full-text author block",
+          "cache": "figure-work-middle/pub-30-cdn.html"
+        },
+        {
+          "url": "https://pubs.aip.org/aip/adv/article/6/4/045021/21997/Distinctive-mapping-of-strain-and-quantum-size",
+          "kind": "AIP canonical article DOI page"
+        }
+      ],
+      "evidence": [
+        "The cached AIP full text explicitly repeats these five names in the leading author list and Author & Article Information section, followed by DOI 10.1063/1.4948452.",
+        "Hyeong-Yong Hwang, Hyoung-Chan Kim, and Young-Dahl Jho are copied from the publisher; they are not inferred from initials."
+      ],
+      "unresolved": [],
+      "before": "H.-Y. Hwang, Hyeonjun Baek, G.-C. Yi, H.-C. Kim, and Y.-D. Jho*",
+      "after": "Hyeong-Yong Hwang, Hyeonjun Baek, Gyu-Chul Yi, Hyoung-Chan Kim, and Young-Dahl Jho*",
+      "appliedNames": [
+        "Hyeong-Yong Hwang",
+        "Hyeonjun Baek",
+        "Gyu-Chul Yi",
+        "Hyoung-Chan Kim",
+        "Young-Dahl Jho"
+      ],
+      "markersPreserved": true,
+      "authorCount": 5
+    },
+    {
+      "id": "pub-31",
+      "doi": "10.1021/acsnano.5b07905",
+      "authors": [
+        "Youngbin Tchoe",
+        "Chul-Ho Lee",
+        "Jun Beom Park",
+        "Hyeonjun Baek",
+        "Kunook Chung",
+        "Janghyun Jo",
+        "Miyoung Kim",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        {
+          "url": "https://acs.figshare.com/articles/journal_contribution/Microtube_Light_Emitting_Diode_Arrays_with_Metal_Cores/2118016",
+          "kind": "ACS publisher supplementary article metadata",
+          "cache": "figure-work-middle/pub31-metadata.json"
+        },
+        {
+          "url": "https://ndownloader.figshare.com/files/3751756",
+          "kind": "ACS Supporting Information PDF, first-page author byline",
+          "cache": "figure-work-middle/pub-31-si.pdf"
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1021%2Facsnano.5b07905",
+          "kind": "newly fetched publisher-deposited exact-DOI Crossref metadata",
+          "cache": "tmp/publication-full-authors/crossref/pub-31.json"
+        }
+      ],
+      "evidence": [
+        "ACS Figshare metadata resource_doi and IsSupplementTo both identify exact DOI 10.1021/acsnano.5b07905. Its eight full_name entries agree with the Supporting Information PDF page 1 author byline and order.",
+        "New Crossref exact-DOI author array independently agrees with all names and their order."
+      ],
+      "unresolved": [],
+      "before": "Y. Tchoe, C.-H. Lee, J. B. Park, Hyeonjun Baek, K. Chung, J. Jo, M. Kim, and G.-C. Yi*",
+      "after": "Youngbin Tchoe, Chul-Ho Lee, Jun Beom Park, Hyeonjun Baek, Kunook Chung, Janghyun Jo, Miyoung Kim, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Youngbin Tchoe",
+        "Chul-Ho Lee",
+        "Jun Beom Park",
+        "Hyeonjun Baek",
+        "Kunook Chung",
+        "Janghyun Jo",
+        "Miyoung Kim",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 8
+    },
+    {
+      "id": "pub-32",
+      "doi": "10.1021/acsphotonics.5b00268",
+      "authors": [
+        "Jerome K. Hyun",
+        "Taehee Kang",
+        "Hyeonjun Baek",
+        "Hongseok Oh",
+        "Dai-sik Kim",
+        "Gyu-chul Yi"
+      ],
+      "sources": [
+        "https://pubs.acs.org/doi/10.1021/acsphotonics.5b00268",
+        "https://ndownloader.figshare.com/files/3765241"
+      ],
+      "evidence": [
+        "ACS Figshare metadata authors and SI first-page byline agree on six-author order. Local: figure-research-early/pub-32-si.json and pub-32-si.pdf. ACS indexed primary page spells Dai-sik Kim; SI says Daisik Kim. Jerome K. Hyun is published with middle initial."
+      ],
+      "unresolved": [],
+      "before": "J. K. Hyun, T. Kang, Hyeonjun Baek, H. Oh, D.-S. Kim, and G.-C Yi*",
+      "after": "Jerome K. Hyun, Taehee Kang, Hyeonjun Baek, Hongseok Oh, Dai-sik Kim, and Gyu-chul Yi*",
+      "appliedNames": [
+        "Jerome K. Hyun",
+        "Taehee Kang",
+        "Hyeonjun Baek",
+        "Hongseok Oh",
+        "Dai-sik Kim",
+        "Gyu-chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 6
+    },
+    {
+      "id": "pub-33",
+      "doi": "10.1021/acs.nanolett.5b02049",
+      "authors": [
+        "Jerome K. Hyun",
+        "Taehee Kang",
+        "Hyeonjun Baek",
+        "Dai-sik Kim",
+        "Gyu-chul Yi"
+      ],
+      "sources": [
+        "https://pubs.acs.org/doi/10.1021/acs.nanolett.5b02049",
+        "https://ndownloader.figshare.com/files/3767056"
+      ],
+      "evidence": [
+        "ACS primary article full byline; local pub-33-si.json, SI PDF page1 and Crossref pub-33.json agree on five names/order. Keep published middle initial K."
+      ],
+      "unresolved": [],
+      "before": "J. K. Hyun, T. Kang, Hyeonjun Baek, D.-S. Kim, and G.-C Yi*",
+      "after": "Jerome K. Hyun, Taehee Kang, Hyeonjun Baek, Dai-sik Kim, and Gyu-chul Yi*",
+      "appliedNames": [
+        "Jerome K. Hyun",
+        "Taehee Kang",
+        "Hyeonjun Baek",
+        "Dai-sik Kim",
+        "Gyu-chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 5
+    },
+    {
+      "id": "pub-34",
+      "doi": "10.1063/1.4905488",
+      "authors": [
+        "Suk In Park",
+        "Youngbin Tchoe",
+        "Hyeonjun Baek",
+        "Jaehyuk Heo",
+        "Jerome K. Hyun",
+        "Janghyun Jo",
+        "Miyoung Kim",
+        "Nam-Jung Kim",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        "https://aipp.silverchair-cdn.com/article-minimal/238344",
+        "https://doi.org/10.1063/1.4905488"
+      ],
+      "evidence": [
+        "Primary publisher linked-name elements in figure-research-early/pub-34-alt.html expose all nine full names/order; Crossref pub-34.json matches. Suk In Park, Jaehyuk Heo, Janghyun Jo and Nam-Jung Kim verified."
+      ],
+      "unresolved": [],
+      "before": "S. I. Park, Y. Tchoe, Hyeonjun Baek, J. Heo, J. K. Hyun, J. Jo, M. Kim, N.-J. Kim*, and G.-C. Yi*",
+      "after": "Suk In Park, Youngbin Tchoe, Hyeonjun Baek, Jaehyuk Heo, Jerome K. Hyun, Janghyun Jo, Miyoung Kim, Nam-Jung Kim*, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Suk In Park",
+        "Youngbin Tchoe",
+        "Hyeonjun Baek",
+        "Jaehyuk Heo",
+        "Jerome K. Hyun",
+        "Janghyun Jo",
+        "Miyoung Kim",
+        "Nam-Jung Kim",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 9
+    },
+    {
+      "id": "pub-35",
+      "doi": "10.1038/am.2014.108",
+      "authors": [
+        "Hongseok Oh",
+        "Young Joon Hong",
+        "Kun-Su Kim",
+        "Sangmoon Yoon",
+        "Hyeonjun Baek",
+        "Seoung-Hun Kang",
+        "Young-Kyun Kwon",
+        "Miyoung Kim",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/am2014108"
+      ],
+      "evidence": [
+        "Nature primary visible byline and citation_author tags in figure-research-early/pub-35.html list nine names/order; Crossref pub-35.json agrees. Seoung-Hun Kang follows exact published spelling."
+      ],
+      "unresolved": [],
+      "before": "H. Oh†, Y. J. Hong†, K.-S. Kim, S. Yoon, Hyeonjun Baek, S.-H. Kang, Y.-K. Kwon, M. Kim, and G.-C. Yi*",
+      "after": "Hongseok Oh†, Young Joon Hong†, Kun-Su Kim, Sangmoon Yoon, Hyeonjun Baek, Seoung-Hun Kang, Young-Kyun Kwon, Miyoung Kim, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Hongseok Oh",
+        "Young Joon Hong",
+        "Kun-Su Kim",
+        "Sangmoon Yoon",
+        "Hyeonjun Baek",
+        "Seoung-Hun Kang",
+        "Young-Kyun Kwon",
+        "Miyoung Kim",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 9
+    },
+    {
+      "id": "pub-36",
+      "doi": "10.1063/1.4902373",
+      "authors": [
+        "Hyeonjun Baek",
+        "Jerome K. Hyun",
+        "Kunook Chung",
+        "Hongseok Oh",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        "https://aipp.silverchair-cdn.com/article-minimal/27587",
+        "https://doi.org/10.1063/1.4902373"
+      ],
+      "evidence": [
+        "Primary publisher linked-name elements in figure-research-early/pub-36-alt.html expose all five names/order. Jerome K. Hyun retains published middle initial."
+      ],
+      "unresolved": [],
+      "before": "Hyeonjun Baek, J. K Hyun, K. Chung, H. Oh, and G.-C. Yi*",
+      "after": "Hyeonjun Baek, Jerome K. Hyun, Kunook Chung, Hongseok Oh, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Hyeonjun Baek",
+        "Jerome K. Hyun",
+        "Kunook Chung",
+        "Hongseok Oh",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 5
+    },
+    {
+      "id": "pub-37",
+      "doi": "10.1088/0022-3727/47/48/485302",
+      "authors": [
+        "Jing Xu",
+        "Chunrui Wang",
+        "Aijiang Lu",
+        "Binhe Wu",
+        "Xiaoshuang Chen",
+        "Hongseok Oh",
+        "Hyeonjun Baek",
+        "Gyu-Chul Yi",
+        "Lizhi Ouyang"
+      ],
+      "sources": [
+        "https://iopscience.iop.org/article/10.1088/0022-3727/47/48/485302"
+      ],
+      "evidence": [
+        "Primary IOP HTML citation_author and dc.creator tags in figure-research-early/pub-37.html expose nine names/order. Final author is Lizhi Ouyang, fourth is Binhe Wu."
+      ],
+      "unresolved": [],
+      "before": "J. Xu, C. Wang*, A. Lu*, B. Wu, X. Chen, H. Oh, Hyeonjun Baek, G.-C. Yi, and L. Ouyang",
+      "after": "Jing Xu, Chunrui Wang*, Aijiang Lu*, Binhe Wu, Xiaoshuang Chen, Hongseok Oh, Hyeonjun Baek, Gyu-Chul Yi, and Lizhi Ouyang",
+      "appliedNames": [
+        "Jing Xu",
+        "Chunrui Wang",
+        "Aijiang Lu",
+        "Binhe Wu",
+        "Xiaoshuang Chen",
+        "Hongseok Oh",
+        "Hyeonjun Baek",
+        "Gyu-Chul Yi",
+        "Lizhi Ouyang"
+      ],
+      "markersPreserved": true,
+      "authorCount": 9
+    },
+    {
+      "id": "pub-38",
+      "doi": "10.1063/1.4900850",
+      "authors": [
+        "Jing Xu",
+        "Chunrui Wang",
+        "Binhe Wu",
+        "Xiaofeng Xu",
+        "Xiaoshuang Chen",
+        "Hongseok Oh",
+        "Hyeonjun Baek",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        "https://aipp.silverchair-cdn.com/article-minimal/281433",
+        "https://doi.org/10.1063/1.4900850"
+      ],
+      "evidence": [
+        "Primary publisher linked-name elements in figure-research-early/pub-38-alt.html give eight names/order; Crossref pub-38.json agrees. X. Xu is Xiaofeng Xu, distinct from first author Jing Xu."
+      ],
+      "unresolved": [],
+      "before": "J. Xu, C. Wang*, B. Wu, X. Xu, X. Chen, H. Oh, Hyeonjun Baek, and G.-C. Yi",
+      "after": "Jing Xu, Chunrui Wang*, Binhe Wu, Xiaofeng Xu, Xiaoshuang Chen, Hongseok Oh, Hyeonjun Baek, and Gyu-Chul Yi",
+      "appliedNames": [
+        "Jing Xu",
+        "Chunrui Wang",
+        "Binhe Wu",
+        "Xiaofeng Xu",
+        "Xiaoshuang Chen",
+        "Hongseok Oh",
+        "Hyeonjun Baek",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 8
+    },
+    {
+      "id": "pub-39",
+      "doi": "10.1063/1.4894780",
+      "authors": [
+        "Kunook Chung",
+        "Hyeonjun Baek",
+        "Youngbin Tchoe",
+        "Hongseok Oh",
+        "Hyobin Yoo",
+        "Miyoung Kim",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        "https://pubs.aip.org/aip/apm/article/2/9/092512/150627/Growth-and-characterizations-of-GaN-micro-rods-on",
+        "https://doi.org/10.1063/1.4894780"
+      ],
+      "evidence": [
+        "Primary publisher linked-name elements in figure-research-early/pub-39-alt.html give seven names/order. Documented identity override: publisher Hyeonjun Beak -> canonical Hyeonjun Baek, per instruction."
+      ],
+      "unresolved": [],
+      "before": "K. Chung, Hyeonjun Baek, Y. Tchoe, H. Oh, H. Yoo, M. Kim, and G.-C. Yi*",
+      "after": "Kunook Chung, Hyeonjun Baek, Youngbin Tchoe, Hongseok Oh, Hyobin Yoo, Miyoung Kim, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Kunook Chung",
+        "Hyeonjun Baek",
+        "Youngbin Tchoe",
+        "Hongseok Oh",
+        "Hyobin Yoo",
+        "Miyoung Kim",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 7
+    },
+    {
+      "id": "pub-40",
+      "doi": "10.1166/jnn.2014.8303",
+      "authors": [
+        "D. M. Kim",
+        "Y.-H. Cho",
+        "H. Jeong",
+        "Hyeonjun Baek",
+        "Gyu-Chul Yi",
+        "Young Dahl Jho"
+      ],
+      "sources": [
+        "https://doi.org/10.1166/jnn.2014.8303",
+        "https://scholar.gist.ac.kr/handle/local/23470",
+        "https://scholar.gist.ac.kr/handle/local/23967"
+      ],
+      "evidence": [
+        "User-provided original kim2014.pdf p1 verifies exact DOI/title and six-author order but byline uses initials. GIST primary related 2012 nanotube conference record lists Dong Min Kim and Young-Hoon Cho, H. with same coauthor initials, but is a different publication.",
+        "GIST faculty authority verifies JHO, Young Dahl. OpenAlex associates H. Jeong with Hoon Jeong, but GIST group also has Hoonill Jeong; do not trust algorithmic identity expansion."
+      ],
+      "unresolved": [
+        "D. M. Kim: Dong Min Kim only evidenced in related conference record; exact-paper primary fullname unavailable.",
+        "Y.-H. Cho: Young-Hoon Cho only evidenced in related conference record; exact-paper primary fullname unavailable.",
+        "H. Jeong: full given name unverified; retain initials rather than guess."
+      ],
+      "before": "D. M. Kim, Y.-H. Cho, H. Jeong, Hyeonjun Baek, G.-C. Yi, and Y. D. Jho",
+      "after": "D. M. Kim, Y.-H. Cho, H. Jeong, Hyeonjun Baek, Gyu-Chul Yi, and Young Dahl Jho",
+      "appliedNames": [
+        "D. M. Kim",
+        "Y.-H. Cho",
+        "H. Jeong",
+        "Hyeonjun Baek",
+        "Gyu-Chul Yi",
+        "Young Dahl Jho"
+      ],
+      "markersPreserved": true,
+      "authorCount": 6
+    },
+    {
+      "id": "pub-41",
+      "doi": "10.1002/adem.201300405",
+      "authors": [
+        "Jing Xu",
+        "Aijiang Lu",
+        "Chunrui Wang",
+        "Rujia Zou",
+        "Xiaoyun Liu",
+        "Xing Wu",
+        "Yuxi Wang",
+        "Sijia Li",
+        "Litao Sun",
+        "Xiaoshuang Chen",
+        "Hongseok Oh",
+        "Hyeonjun Baek",
+        "Gyu-Chul Yi",
+        "Junhao Chu"
+      ],
+      "sources": [
+        "https://advanced.onlinelibrary.wiley.com/toc/15272648/16/4",
+        "https://onlinelibrary.wiley.com/doi/10.1002/adem.201300405",
+        "https://snu.elsevierpure.com/en/publications/znse-based-longitudinal-twinning-nanowires/"
+      ],
+      "evidence": [
+        "Primary Wiley April2014 issue contents lists all fourteen full names in exact order beside title/pages459-465. Coauthor SNU institutional record exact DOI independently matches."
+      ],
+      "unresolved": [],
+      "before": "J. Xu, A. Lu, C. Wang*, R. Zou, X. Liu, X. Wu, Y. Wang, S. Li, L. Sun*, X. Chen*, H. Oh, Hyeonjun Baek, G.‐C. Yi*, and J. Chu",
+      "after": "Jing Xu, Aijiang Lu, Chunrui Wang*, Rujia Zou, Xiaoyun Liu, Xing Wu, Yuxi Wang, Sijia Li, Litao Sun*, Xiaoshuang Chen*, Hongseok Oh, Hyeonjun Baek, Gyu-Chul Yi*, and Junhao Chu",
+      "appliedNames": [
+        "Jing Xu",
+        "Aijiang Lu",
+        "Chunrui Wang",
+        "Rujia Zou",
+        "Xiaoyun Liu",
+        "Xing Wu",
+        "Yuxi Wang",
+        "Sijia Li",
+        "Litao Sun",
+        "Xiaoshuang Chen",
+        "Hongseok Oh",
+        "Hyeonjun Baek",
+        "Gyu-Chul Yi",
+        "Junhao Chu"
+      ],
+      "markersPreserved": true,
+      "authorCount": 14
+    },
+    {
+      "id": "pub-42",
+      "doi": "10.1021/nl401011x",
+      "authors": [
+        "Hyeonjun Baek",
+        "Chul-Ho Lee",
+        "Kunook Chung",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        "https://pubs.acs.org/doi/10.1021/nl401011x",
+        "https://ndownloader.figshare.com/files/4046011"
+      ],
+      "evidence": [
+        "ACS SI first-page byline in figure-research-early/pub-42-si.pdf confirms four names/order; local Figshare pub-42-si.json and Crossref pub-42.json agree."
+      ],
+      "unresolved": [],
+      "before": "Hyeonjun Baek†, C.-H. Lee†, K. Chung, and G.-C. Yi*",
+      "after": "Hyeonjun Baek†, Chul-Ho Lee†, Kunook Chung, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Hyeonjun Baek",
+        "Chul-Ho Lee",
+        "Kunook Chung",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 4
+    },
+    {
+      "id": "pub-43",
+      "doi": "10.1038/am.2012.45",
+      "authors": [
+        "Kunook Chung",
+        "Suk In Park",
+        "Hyeonjun Baek",
+        "Jin-Seok Chung",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/am201245"
+      ],
+      "evidence": [
+        "Nature primary visible byline confirms five names/order. Do not reverse erroneous citation_author family=In Park/given=Suk; visible name is Suk In Park. Snapshot figure-research-early/pub-43.html."
+      ],
+      "unresolved": [],
+      "before": "K. Chung, S. I. Park, Hyeonjun Baek, J.-S. Chung, and G.-C. Yi*",
+      "after": "Kunook Chung, Suk In Park, Hyeonjun Baek, Jin-Seok Chung, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Kunook Chung",
+        "Suk In Park",
+        "Hyeonjun Baek",
+        "Jin-Seok Chung",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 5
+    },
+    {
+      "id": "pub-44",
+      "doi": "10.1002/adma.201201966",
+      "authors": [
+        "Yong-Jin Kim",
+        "Hyobin Yoo",
+        "Chul-Ho Lee",
+        "Jun Beom Park",
+        "Hyeonjun Baek",
+        "Miyoung Kim",
+        "Gyu-Chul Yi"
+      ],
+      "sources": [
+        "https://onlinelibrary.wiley.com/doi/10.1002/adma.201201966"
+      ],
+      "evidence": [
+        "Primary Wiley indexed article full byline gives all seven names/order. Exact title/DOI/pages5565-5569 match."
+      ],
+      "unresolved": [],
+      "before": "Y.-J. Kim, H. Yoo, C.-H. Lee, J. B. Park, Hyeonjun Baek, M. Kim, and G.-C. Yi*",
+      "after": "Yong-Jin Kim, Hyobin Yoo, Chul-Ho Lee, Jun Beom Park, Hyeonjun Baek, Miyoung Kim, and Gyu-Chul Yi*",
+      "appliedNames": [
+        "Yong-Jin Kim",
+        "Hyobin Yoo",
+        "Chul-Ho Lee",
+        "Jun Beom Park",
+        "Hyeonjun Baek",
+        "Miyoung Kim",
+        "Gyu-Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 7
+    },
+    {
+      "id": "pub-45",
+      "doi": "10.1021/nl203900q",
+      "authors": [
+        "Hoseok Heo",
+        "Kibum Kang",
+        "Donghun Lee",
+        "Li-Hua Jin",
+        "Hyeonjun Baek",
+        "Inchan Hwang",
+        "Miseong Kim",
+        "Hyun-Seung Lee",
+        "Byeong-Joo Lee",
+        "Gyu-Chul Yi",
+        "Yong-Hoon Cho",
+        "Moon-Ho Jo"
+      ],
+      "sources": [
+        "https://pubs.acs.org/doi/10.1021/nl203900q",
+        "https://pubs.acs.org/nalefd/issue/12/2",
+        "https://ndownloader.figshare.com/files/4195114"
+      ],
+      "evidence": [
+        "Final ACS article page and issue contents list twelve authors in this order. SI has thirteen (adds Yong-Jin Kim and moves Inchan Hwang); final main article takes precedence.",
+        "Documented identity override: ACS Hyeon-Jun Back -> canonical Hyeonjun Baek per instruction."
+      ],
+      "unresolved": [],
+      "before": "H. Heo†, K. Kang†, D. Lee, L.-H. Jin, Hyeonjun Baek, I. Hwang, M. Kim, H.-S. Lee, B.-J. Lee, G.-C. Yi, Y.-H. Cho, and M.-H. Jo*",
+      "after": "Hoseok Heo†, Kibum Kang†, Donghun Lee, Li-Hua Jin, Hyeonjun Baek, Inchan Hwang, Miseong Kim, Hyun-Seung Lee, Byeong-Joo Lee, Gyu-Chul Yi, Yong-Hoon Cho, and Moon-Ho Jo*",
+      "appliedNames": [
+        "Hoseok Heo",
+        "Kibum Kang",
+        "Donghun Lee",
+        "Li-Hua Jin",
+        "Hyeonjun Baek",
+        "Inchan Hwang",
+        "Miseong Kim",
+        "Hyun-Seung Lee",
+        "Byeong-Joo Lee",
+        "Gyu-Chul Yi",
+        "Yong-Hoon Cho",
+        "Moon-Ho Jo"
+      ],
+      "markersPreserved": true,
+      "authorCount": 12
+    },
+    {
+      "id": "pub-46",
+      "doi": "10.1109/JSTQE.2010.2062493",
+      "authors": [
+        "Chul Ho Lee",
+        "Young Joon Hong",
+        "Yong Jin Kim",
+        "Jinkyoung Yoo",
+        "Hyeonjun Baek",
+        "Seong Ran Jeon",
+        "Seung Jae Lee",
+        "Gyu Chul Yi"
+      ],
+      "sources": [
+        "https://ieeexplore.ieee.org/document/5579990",
+        "https://pure.korea.ac.kr/en/publications/ganzno-nanotube-heterostructure-light-emitting-diodes-fabricated-/"
+      ],
+      "evidence": [
+        "Coauthor Korea University primary institutional record exact DOI10.1109/JSTQE.2010.2062493, article5579990, pp966-970 lists all eight full names/order. IEEE fetch unavailable; spacing follows institutional record verbatim, no hyphen inference. Existing S.-J. Le should be Seung Jae Lee."
+      ],
+      "unresolved": [],
+      "before": "C.-H. Lee, Y. J. Hong, Y.-J. Kim, J. Yoo, Hyeonjun Baek, S.-R. Jeon, S.-J. Le, and G.-C. Yi*",
+      "after": "Chul Ho Lee, Young Joon Hong, Yong Jin Kim, Jinkyoung Yoo, Hyeonjun Baek, Seong Ran Jeon, Seung Jae Lee, and Gyu Chul Yi*",
+      "appliedNames": [
+        "Chul Ho Lee",
+        "Young Joon Hong",
+        "Yong Jin Kim",
+        "Jinkyoung Yoo",
+        "Hyeonjun Baek",
+        "Seong Ran Jeon",
+        "Seung Jae Lee",
+        "Gyu Chul Yi"
+      ],
+      "markersPreserved": true,
+      "authorCount": 8
+    }
+  ],
+  "summary": {
+    "papers": 46,
+    "authorOccurrences": 370,
+    "expandedAuthorOccurrences": 312,
+    "unresolved": [
+      {
+        "id": "pub-40",
+        "authors": [
+          "D. M. Kim: Dong Min Kim only evidenced in related conference record; exact-paper primary fullname unavailable.",
+          "Y.-H. Cho: Young-Hoon Cho only evidenced in related conference record; exact-paper primary fullname unavailable.",
+          "H. Jeong: full given name unverified; retain initials rather than guess."
+        ]
+      }
+    ],
+    "completePublishedBylines": 45,
+    "pendingInitialOnlyNames": 3
+  },
+  "validation": {
+    "authorOrder": "Verified per paper against the ordered primary-source byline",
+    "contributionMarkers": "Each existing * and dagger remains attached to the same author",
+    "labEmphasis": "53 rendered lab-author occurrences preserved; labAuthors arrays unchanged",
+    "sourceException": "Keep verified lab identity Hyeonjun Baek despite publisher Beak/Back spelling errors",
+    "separatorCorrection": "pub-28 H. Oh. Y. Tchoe was two separate authors; restore Hongseok Oh and Youngbin Tchoe"
+  }
+}
