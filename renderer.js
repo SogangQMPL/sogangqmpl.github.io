@@ -102,7 +102,7 @@ function header(data,page,edit) {
 
 function footer(data,page,edit) {
  const contactHref=page==='404'?'/join.html#contact-heading':'join.html#contact-heading';
- return `<footer class="site-footer"><div class="container footer-inner"><span class="footer-affiliation"${edit('/site/affiliation','text','소속')}>${e(data.site.affiliation)}</span><div class="footer-contact"><a class="footer-address" href="${contactHref}"${edit('/site/address','text','연구실 주소')}>${e(data.site.address)}</a><span class="footer-email"${edit('/site/email','email','대표 이메일')}>${mail(data.site.email)}</span><span class="copyright">© ${new Date().getUTCFullYear()}</span></div></div></footer>`;
+ return `<footer class="site-footer"><div class="container footer-inner"><span class="footer-affiliation"${edit('/site/affiliation','text','소속')}>${e(data.site.affiliation)}</span><div class="footer-contact"><a class="footer-address" href="${contactHref}"${edit('/site/address','text','연구실 주소')}>${e(data.site.address)}</a><span class="copyright">© ${new Date().getUTCFullYear()}</span></div></div></footer>`;
 }
 function publicationAuthors(p) {
  const authors=Array.isArray(p.authors)?p.authors.join(', '):String(p.authors||'');
