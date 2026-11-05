@@ -67,7 +67,16 @@ function select(value){selection=value;document.body.classList.toggle('has-selec
 function highlightSelection(){const doc=$('site-preview').contentDocument;if(!doc)return;doc.querySelectorAll('.editor-selected').forEach(el=>el.classList.remove('editor-selected'));if(selection?.path){[...doc.querySelectorAll('[data-edit-path],[data-edit-item]')].filter(el=>el.dataset.editPath===selection.path||el.dataset.editItem===selection.path).forEach(el=>el.classList.add('editor-selected'));}}
 function selectedItemPath(){if(!selection)return '';const path=selection.path||'';if(/^\/(news|people|publications|underReview)\/\d+(?:\/|$)/.test(path))return path.match(/^\/(?:news|people|publications|underReview)\/\d+/)[0];const topic=path.match(/^\/research\/\d+\/topics\/\d+/);if(topic)return topic[0];const area=path.match(/^\/research\/\d+/);return area?.[0]||'';}
 function renderItemActions(){const path=selectedItemPath();$('item-actions').hidden=!path||/\/(content|detailSections|detailImages)\//.test(selection?.path||'');const button=$('delete-item');button.textContent=path.startsWith('/news/')?'게시물 삭제':path.startsWith('/publications/')||path.startsWith('/underReview/')?'논문 삭제':path.startsWith('/people/')?'구성원 삭제':'주제 삭제';button.disabled=path.startsWith('/research/')&&!path.includes('/topics/');if(path){const parts=path.split('/'),index=Number(parts.pop()),parent=getAt(data,parts.join('/'));$('move-up').disabled=!index;$('move-down').disabled=index>=parent.length-1;}}
-function navigate(next){if(inlineEditing)$('site-preview').contentDocument.activeElement?.blur();page=next;selection=null;renderAll();}
+function navigate(next,fragment=''){
+ if(next===page&&fragment){
+  const target=$('site-preview').contentDocument?.getElementById(fragment);
+  if(target){target.scrollIntoView();return;}
+ }
+ if(inlineEditing)$('site-preview').contentDocument.activeElement?.blur();
+ page=next;
+ selection=null;
+ renderAll({fragment});
+}
 function renderPages(){$('pages').replaceChildren(...ROUTES.map(([id,title])=>{const b=node('button',title);b.type='button';b.setAttribute('aria-current',String(page===id||page.startsWith('post-')&&id===(isActivities()?'activities':'news')));b.addEventListener('click',()=>navigate(id));return b;}));$('page-name').textContent=page.startsWith('post-')?'게시물':ROUTES.find(([id])=>id===page)?.[1]||page;}
 function isActivities(){return page==='activities'||page.startsWith('post-')&&data.news.find(item=>item.id===page.slice(5))?.category==='Activities';}
 function collection(){if(page==='people'||page==='students')return 'people';if(page==='publications')return 'publications';if(['news','activities'].includes(page)||page.startsWith('post-'))return 'news';if(page==='research')return 'research';return '';}
@@ -77,7 +86,7 @@ function renderItems(){const key=collection(),list=$('item-list');list.replaceCh
  for(const {item,index} of entries){const b=node('button',undefined,'list-item');b.append(node('span',recordLabel(item),'item-name'),node('small',[item.date||item.year||item.role||'',item.category||''].filter(Boolean).join(' · '),'item-meta'));b.addEventListener('click',()=>{if(key==='news'){page='post-'+item.id;renderPages();renderFrame();}select({path:`/${key}/${index}`,type:'record',label:recordLabel(item)});});list.append(b);if(key==='research')for(const [j,topic] of (item.topics||[]).entries()){const sub=node('button','↳ '+topic.title,'list-item sub-item');sub.addEventListener('click',()=>select({path:`/research/${index}/topics/${j}`,type:'record',label:topic.title}));list.append(sub);}}
  if(key==='publications'){const b=node('button','+ 심사 중 논문 추가','list-item');b.addEventListener('click',()=>addRecord('underReview'));list.append(b);for(const [i,item] of (data.underReview||[]).entries()){const b=node('button','심사 중 · '+item.title,'list-item sub-item');b.addEventListener('click',()=>select({path:`/underReview/${i}`,type:'record',label:'심사 중 논문'}));list.append(b);}}
  if(key==='research'){const b=node('button','+ 세부 연구 주제 추가','list-item');b.addEventListener('click',()=>{const area=selection?.path?.match(/^\/research\/(\d+)/)?.[1]||'0';addRecord('topic',Number(area));});list.append(b);}}
-function renderAll(options={}){if(!data)return;renderPages();renderItems();renderFrame();if(!options.preserveInspector){if(selection)select(selection);else select(null);}controls();}
+function renderAll(options={}){if(!data)return;renderPages();renderItems();renderFrame(options.fragment);if(!options.preserveInspector){if(selection)select(selection);else select(null);}controls();}
 function frameHTML(){
  let html=render(data,page,{editable:true});
  const staged=new Map(activeAssets().map(asset=>[asset.path,urlFor(asset)]));
@@ -90,12 +99,50 @@ function frameHTML(){
  });
  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="${SITE}"><link rel="stylesheet" href="${new URL('../styles.css',import.meta.url).href}"><style>html{scrollbar-gutter:stable}body{min-height:100vh}.editing [data-edit-path]{cursor:pointer}.editing [data-edit-path]:hover{outline:2px dashed #5d8ac2;outline-offset:4px}.editing .editor-selected{outline:2px solid #2764a3!important;outline-offset:5px}.editing [contenteditable=true]{cursor:text;outline:2px solid #2764a3;background:#fff;min-width:1em}*{scroll-margin-top:30px}</style></head><body class="${mode==='edit'?'editing':''}" data-page="${page}"><div id="preview-notice" hidden></div><div id="site-shell">${html}</div><script type="module" src="${new URL('../app.js',import.meta.url).href}"></script></body></html>`;
 }
-function renderFrame(){clearTimeout(frameTimer);const sequence=++frameSequence;frameTimer=setTimeout(()=>{const frame=$('site-preview');let scrollY=0;try{if(frame.dataset.page===page)scrollY=frame.contentWindow.scrollY||0;}catch{}frame.dataset.page=page;frame.onload=()=>{if(sequence!==frameSequence)return;const doc=frame.contentDocument;doc.addEventListener('click',frameClick,true);doc.addEventListener('dblclick',inlineEdit,true);highlightSelection();if(scrollY)frame.contentWindow.scrollTo(0,scrollY);};frame.srcdoc=frameHTML();},100);}
-function localPage(href){try{const url=new URL(href,SITE);if(url.origin!==new URL(SITE).origin)return null;const file=url.pathname.split('/').at(-1);if(ROUTES.some(([id])=>file===id+'.html'))return file.slice(0,-5);if(/^post-[a-z0-9_-]+\.html$/i.test(file))return file.slice(0,-5);return null;}catch{return null;}}
+function renderFrame(fragment=''){
+ clearTimeout(frameTimer);
+ const sequence=++frameSequence;
+ frameTimer=setTimeout(()=>{
+  const frame=$('site-preview');
+  let scrollY=0;
+  try{if(frame.dataset.page===page)scrollY=frame.contentWindow.scrollY||0;}catch{}
+  frame.dataset.page=page;
+  frame.onload=()=>{
+   if(sequence!==frameSequence)return;
+   const doc=frame.contentDocument;
+   doc.addEventListener('click',frameClick,true);
+   doc.addEventListener('dblclick',inlineEdit,true);
+   highlightSelection();
+   const target=fragment&&doc.getElementById(fragment);
+   if(target)target.scrollIntoView();
+   else if(scrollY)frame.contentWindow.scrollTo(0,scrollY);
+  };
+  frame.srcdoc=frameHTML();
+ },100);
+}
+function localPage(href){
+ try{
+  const url=new URL(href,SITE);
+  if(url.origin!==new URL(SITE).origin)return null;
+  const file=url.pathname.split('/').at(-1);
+  if(ROUTES.some(([id])=>file===id+'.html')||/^post-[a-z0-9_-]+\.html$/i.test(file)){
+   return {page:file.slice(0,-5),fragment:decodeURIComponent(url.hash.slice(1))};
+  }
+ }catch{}
+ return null;
+}
 function frameClick(event){if(event.target.closest('summary'))return;
  const jump=event.target.closest('.research-jump a[href^="#"]');
  if(jump){event.preventDefault();jump.ownerDocument.getElementById(jump.hash.slice(1))?.scrollIntoView();return;}
- const category=event.target.closest('a[data-category]');if(category){event.preventDefault();event.stopImmediatePropagation();const value=category.dataset.category,doc=category.ownerDocument;let count=0;doc.querySelectorAll('#news-results>article[data-category]').forEach(el=>{el.hidden=value!=='all'&&el.dataset.category!==value;if(!el.hidden)count++;});doc.querySelectorAll('a[data-category]').forEach(el=>{if(el.dataset.category===value)el.setAttribute('aria-current','true');else el.removeAttribute('aria-current');});const status=doc.getElementById('news-count');if(status)status.textContent=count+' news items';return;}if(inlineEditing&&event.target.isContentEditable)return;const field=event.target.closest('[data-edit-path]');if(mode==='edit'&&field){event.preventDefault();event.stopImmediatePropagation();select(descriptor(field));return;}const link=event.target.closest('a[href]');if(link){const target=localPage(link.getAttribute('href'));if(target){event.preventDefault();event.stopImmediatePropagation();navigate(target);return;}if(mode==='edit'){event.preventDefault();event.stopImmediatePropagation();const item=event.target.closest('[data-edit-item]');if(item)select({path:item.dataset.editItem,type:'record',label:'내용 수정'});return;}}
+ const category=event.target.closest('a[data-category]');if(category){event.preventDefault();event.stopImmediatePropagation();const value=category.dataset.category,doc=category.ownerDocument;let count=0;doc.querySelectorAll('#news-results>article[data-category]').forEach(el=>{el.hidden=value!=='all'&&el.dataset.category!==value;if(!el.hidden)count++;});doc.querySelectorAll('a[data-category]').forEach(el=>{if(el.dataset.category===value)el.setAttribute('aria-current','true');else el.removeAttribute('aria-current');});const status=doc.getElementById('news-count');if(status)status.textContent=count+' news items';return;}
+ if(inlineEditing&&event.target.isContentEditable)return;
+ const field=event.target.closest('[data-edit-path]');if(mode==='edit'&&field){event.preventDefault();event.stopImmediatePropagation();select(descriptor(field));return;}
+ const link=event.target.closest('a[href]');
+ if(link){
+  const target=localPage(link.getAttribute('href'));
+  if(target){event.preventDefault();event.stopImmediatePropagation();navigate(target.page,target.fragment);return;}
+  if(mode==='edit'){event.preventDefault();event.stopImmediatePropagation();const item=event.target.closest('[data-edit-item]');if(item)select({path:item.dataset.editItem,type:'record',label:'내용 수정'});return;}
+ }
  if(mode==='edit'){const item=event.target.closest('[data-edit-item]');if(item){event.preventDefault();select({path:item.dataset.editItem,type:'record',label:'내용 수정'});}}}
 function inlineEdit(event){if(mode!=='edit'||publishing)return;const el=event.target.closest('[data-edit-path]');if(!el||!['text','multiline','email'].includes(el.dataset.editType))return;event.preventDefault();event.stopImmediatePropagation();const d=descriptor(el),original=getAt(data,d.path);inlineEditing=true;el.contentEditable='true';el.addEventListener('paste',ev=>{ev.preventDefault();const plain=ev.clipboardData.getData('text/plain'),selection=el.ownerDocument.getSelection();if(selection?.rangeCount){const range=selection.getRangeAt(0);range.deleteContents();const text=el.ownerDocument.createTextNode(plain);range.insertNode(text);range.setStartAfter(text);range.collapse(true);selection.removeAllRanges();selection.addRange(range);}});el.focus();const range=el.ownerDocument.createRange();range.selectNodeContents(el);const s=el.ownerDocument.getSelection();s.removeAllRanges();s.addRange(range);let cancelled=false;el.addEventListener('keydown',ev=>{if(ev.key==='Escape'){cancelled=true;el.blur();}if(ev.key==='Enter'&&d.type!=='multiline'){ev.preventDefault();el.blur();}},{capture:true});el.addEventListener('blur',()=>{const value=el.innerText.replace(/\r/g,'').trim();inlineEditing=false;el.contentEditable='false';if(!cancelled&&value!==String(original||''))change(draft=>setAt(draft,d.path,value),d.label+' 수정');else renderFrame();},{once:true});}
 function urlFor(asset){if(asset.previewURL)return asset.previewURL;if(assetURLs.has(asset.path))return assetURLs.get(asset.path);const binary=atob(asset.base64),bytes=Uint8Array.from(binary,c=>c.charCodeAt(0)),url=URL.createObjectURL(new Blob([bytes],{type:asset.mime||'image/webp'}));assetURLs.set(asset.path,url);return url;}
