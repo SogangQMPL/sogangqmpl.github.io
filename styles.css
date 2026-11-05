@@ -134,7 +134,7 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 .research-layout[data-research-rail] > :is(.research-jump,.research-groups){grid-area:1/1}
 .research-layout[data-research-rail] .research-jump{
  top:var(--research-rail-top,24px);align-self:start;justify-self:start;flex-direction:column;gap:8px;padding:0;
- width:var(--research-rail-width);margin-inline-start:calc(0px - var(--research-rail-width) - 12px);
+ width:var(--research-rail-width);margin-inline-start:calc(0px - var(--research-rail-width) - 12px);margin-block-start:var(--research-rail-shift,0px);
  background:transparent;max-height:calc(100dvh - var(--research-rail-top,24px) - 16px);
  overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scroll-padding-block:6px;
 }
@@ -144,7 +144,7 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 }
 .research-layout[data-research-rail] .research-jump-area{flex:none;width:100%;max-width:none}
 .research-layout[data-research-rail] .research-area-link{
- flex:none;max-width:none;width:calc(100% - 18px);min-height:52px;padding:8px 14px 8px 10px;
+ flex:none;max-width:none;width:calc(100% - 8px);min-height:52px;padding:8px 14px 8px 10px;
  justify-content:flex-start;text-align:start;font-size:13px;transition:width 160ms ease-out;
 }
 .research-layout[data-research-rail] .research-area-link[aria-current=location]{width:100%}

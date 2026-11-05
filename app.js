@@ -170,10 +170,14 @@ function connectResearchNavigation(){
   }
   const root=document.documentElement;
   if(rail){
-   // Keep the rail at its initial inset and let it scroll in short windows.
-   const top=Math.max(0,Math.min(layoutBounds.top+window.scrollY,root.clientHeight-160));
+   // Keep a stable inset, lifting the rail in short windows so all topics can fit.
+   const startTop=layoutBounds.top+window.scrollY;
+   const navHeight=Math.ceil(Math.max(nav.scrollHeight,nav.getBoundingClientRect().height));
+   const top=Math.max(16,Math.min(startTop,root.clientHeight-navHeight-16));
    const inset=`${Math.round(top)}px`;
    if(nav.style.getPropertyValue('--research-rail-top')!==inset)nav.style.setProperty('--research-rail-top',inset);
+   const shift=`${Math.round(top-startTop)}px`;
+   if(nav.style.getPropertyValue('--research-rail-shift')!==shift)nav.style.setProperty('--research-rail-shift',shift);
   }else{
    const offset=`${Math.ceil(nav.getBoundingClientRect().height)}px`;
    if(layout.style.getPropertyValue('--research-jump-offset')!==offset)layout.style.setProperty('--research-jump-offset',offset);
