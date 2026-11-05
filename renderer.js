@@ -93,7 +93,7 @@ function header(data,page,edit) {
      <div class="nav-item">${link('publications','Publication')}</div>
      <div class="nav-item">${link('research','Research')}</div>
      ${group(mobile,'highlights','Highlights',highlights,'news',link('news','News')+link('activities','Activities'))}`;
- return `<header class="site-header"><div class="container header-inner">
+ return `<header id="top" class="site-header"><div class="container header-inner">
    <a class="brand" href="${prefix}index.html" aria-label="${e(data.site.title)} — Home"><span${edit('/site/group','text','연구 그룹명')}>${e(data.site.group)}</span><small>@ Sogang Univ.</small></a>
    <button class="menu-toggle" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="mobile-navigation"><span class="menu-label">Menu</span><span class="menu-icon" aria-hidden="true">☰</span></button>
    <nav id="main-nav" aria-label="Main navigation">${navigation(false)}</nav>
@@ -101,7 +101,7 @@ function header(data,page,edit) {
 }
 
 function footer(data,page,edit) {
- const contactHref=page==='404'?'/join.html#contact-heading':'join.html#contact-heading';
+ const contactHref=page==='404'?'/join.html#top':'join.html#top';
  return `<footer class="site-footer"><div class="container footer-inner"><a class="footer-contact" href="${contactHref}"><span class="footer-affiliation"${edit('/site/affiliation','text','소속')}>${e(data.site.affiliation)}</span><span class="footer-address"${edit('/site/address','text','연구실 주소')}>${e(data.site.address)}</span></a><span class="copyright">© ${new Date().getUTCFullYear()} <span${edit('/site/group','text','연구 그룹명')}>${e(data.site.group)}</span></span></div></footer>`;
 }
 function publicationAuthors(p) {
