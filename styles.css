@@ -349,7 +349,7 @@ html:not(.nav-disclosures-ready) #main-nav .nav-item:is(:hover,:focus-within) .n
  display:inline-flex;align-items:center;min-height:44px;padding:5px 8px;margin-inline-start:-8px;border-radius:4px;
  font-size:14px;line-height:1.65;color:#d7e0eb;text-decoration:underline;text-decoration-color:#9bafc6;text-underline-offset:3px;
 }
-.footer-inner .footer-address:is(:hover,:focus-visible,:active){color:#fff;text-decoration-color:currentColor;background:rgb(255 255 255 / .1)}
+.footer-inner .footer-address:is(:hover,:focus-visible,:active){text-decoration-color:currentColor}
 .footer-inner .footer-address:focus-visible{outline:2px solid #d7e0eb;outline-offset:1px}
 .footer-inner .copyright{font-size:13px;margin:0;color:#d7e0eb;white-space:nowrap}
 /* Three themes, five topics, linked results */
