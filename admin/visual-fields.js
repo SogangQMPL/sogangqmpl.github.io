@@ -609,6 +609,7 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
       add('enabled', '홈 공지 표시', 'boolean'); add('title', '공지 제목'); add('body', '공지 내용', 'multiline'); add('url', '연결 주소 (선택)', 'url');
     } else if (parts[0] === 'join') {
       add('title', '모집 제목'); add('description', '모집 안내', 'multiline'); add('office', '교수실'); add('laboratory', '실험실');
+      add('mailingAddressKo', '국문 우편·배송 주소', 'multiline'); add('mailingAddressEn', '영문 우편·배송 주소', 'multiline');
     } else if (parts[0] === 'people') {
       add('name', '이름'); add('role', '직위 · 과정', 'text', {options: [{value:'Principal Investigator',label:'교수'},{value:'PhD student',label:'박사과정'},{value:'Master’s student',label:'석사과정'},{value:'Undergraduate researcher',label:'학부연구생'},{value:'Postdoctoral researcher',label:'박사후연구원'},{value:'Alumni',label:'졸업생'}]}); add('email', '이메일', 'email'); add('description', '소개 · 경력 · 학력', 'multiline'); image('image', '인물 사진'); add('url', '개인 홈페이지 (선택)', 'url');
     } else if (['publications', 'underReview'].includes(parts[0])) {
