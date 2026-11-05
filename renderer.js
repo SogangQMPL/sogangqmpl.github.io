@@ -84,6 +84,8 @@ function editContext(data, enabled = false) {
 function header(data,page,edit) {
  const member=['people','students'].includes(page),highlights=['news','activities'].includes(page)||page.startsWith('post-');
  const prefix=page==='404'?'/':'';
+ const brand=`<a class="brand" href="${prefix}index.html" aria-label="${e(data.site.title)} — Home"><span${edit('/site/group','text','연구 그룹명')}>${e(data.site.group)}</span><small>@ Sogang Univ.</small></a>`;
+ if(page==='404')return `<header id="top" class="site-header"><div class="container header-inner">${brand}</div></header>`;
  const link=(id,label,state=page===id?' aria-current="page"':'')=>`<a href="${prefix}${id}.html"${state}>${label}</a>`;
  const group=(mobile,id,label,active,first,children)=>mobile
   ?`<div class="nav-item"><span class="nav-group-label${active?' section-current':''}" id="mobile-nav-${id}">${label}</span><div class="nav-dropdown" role="group" aria-labelledby="mobile-nav-${id}">${children}</div></div>`
@@ -94,7 +96,7 @@ function header(data,page,edit) {
      <div class="nav-item">${link('research','Research')}</div>
      ${group(mobile,'highlights','Highlights',highlights,'news',link('news','News')+link('activities','Activities'))}`;
  return `<header id="top" class="site-header"><div class="container header-inner">
-   <a class="brand" href="${prefix}index.html" aria-label="${e(data.site.title)} — Home"><span${edit('/site/group','text','연구 그룹명')}>${e(data.site.group)}</span><small>@ Sogang Univ.</small></a>
+   ${brand}
    <button class="menu-toggle" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="mobile-navigation"><span class="menu-label">Menu</span><span class="menu-icon" aria-hidden="true">☰</span></button>
    <nav id="main-nav" aria-label="Main navigation">${navigation(false)}</nav>
  </div><dialog id="mobile-navigation" class="mobile-menu" aria-labelledby="mobile-menu-title"><div class="mobile-menu-heading"><h2 id="mobile-menu-title">Menu</h2><button class="mobile-menu-close" type="button" aria-label="Close menu" autofocus><span aria-hidden="true">×</span></button></div><nav class="mobile-menu-links" aria-label="Mobile navigation">${navigation(true)}</nav></dialog></header>`;
