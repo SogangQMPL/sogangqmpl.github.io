@@ -163,7 +163,7 @@ function connectResearchNavigation(){
   // The flag, its gap to the article, and its focus outline must fit in the actual gutter.
   const layoutBounds=layout.getBoundingClientRect();
   const gutter=mobileNavigation.matches?0:layoutBounds.left;
-  const rail=gutter>=188?'full':gutter>=116?'compact':null;
+  const rail=gutter>=188?'full':null;
   if(rail!==layout.getAttribute('data-research-rail')){
    if(rail)layout.setAttribute('data-research-rail',rail);
    else layout.removeAttribute('data-research-rail');
@@ -174,8 +174,11 @@ function connectResearchNavigation(){
    const top=Math.max(0,Math.min(layoutBounds.top+window.scrollY,root.clientHeight-160));
    const inset=`${Math.round(top)}px`;
    if(nav.style.getPropertyValue('--research-rail-top')!==inset)nav.style.setProperty('--research-rail-top',inset);
+  }else{
+   const offset=`${Math.ceil(nav.getBoundingClientRect().height)}px`;
+   if(layout.style.getPropertyValue('--research-jump-offset')!==offset)layout.style.setProperty('--research-jump-offset',offset);
   }
-  const readingLine=rail?96:Math.max(60,nav.getBoundingClientRect().bottom+24);
+  const readingLine=rail?96:Math.max(60,nav.getBoundingClientRect().bottom+32);
   const atBottom=window.scrollY>0&&root.scrollHeight-root.clientHeight-window.scrollY<=2;
   const current=atBottom?areas.at(-1):areas.findLast(area=>area.section.getBoundingClientRect().top<=readingLine)||areas[0];
   if(current.link!==currentLink){
@@ -183,7 +186,7 @@ function connectResearchNavigation(){
    currentLink=current.link;
    currentLink.setAttribute('aria-current','location');
   }
-  const topic=rail?(atBottom?current.topics.at(-1):current.topics.findLast(item=>item.section.getBoundingClientRect().top<=readingLine)):null;
+  const topic=(rail||!mobileNavigation.matches)?(atBottom?current.topics.at(-1):current.topics.findLast(item=>item.section.getBoundingClientRect().top<=readingLine)):null;
   const topicLink=topic?.link||null;
   if(topicLink!==currentTopicLink){
    currentTopicLink?.removeAttribute('aria-current');
