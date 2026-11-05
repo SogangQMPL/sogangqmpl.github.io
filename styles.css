@@ -4,7 +4,7 @@
 @font-face{font-family:WixAvenirLight;src:url('assets/fonts/Wix-Avenir-Light.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
 @font-face{font-family:Pretendard;src:url('assets/fonts/Pretendard-Regular.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
 @font-face{font-family:Pretendard;src:url('assets/fonts/Pretendard-SemiBold.woff2') format('woff2');font-style:normal;font-weight:600;font-display:swap}
-:root{--paper:#fff;--ink:#28303b;--muted:#68717d;--group-gray:#757575;--navy:#002e5d;--purple:#7860bb;--purple-text:#68469f;--line:#e6e8ed;--sans:Inter,Pretendard,system-ui,sans-serif;--page-width:1280px;--page-gutter:40px;--layout-gap:32px}
+:root{--paper:#fff;--ink:#28303b;--muted:#68717d;--group-gray:#757575;--navy:#002e5d;--purple:#7860bb;--purple-text:#68469f;--line:#e6e8ed;--sans:Inter,Pretendard,system-ui,sans-serif;--page-width:1440px;--page-gutter:40px;--layout-gap:32px}
 *{box-sizing:border-box}
 html{scroll-behavior:auto;scroll-padding-top:28px;scrollbar-gutter:stable}
 @supports not (scrollbar-gutter:stable){html{overflow-y:scroll}}
@@ -25,9 +25,10 @@ h2{font-size:24px;font-weight:550;letter-spacing:-.02em}
 h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 [hidden]{display:none!important}
 .container{width:calc(100% - var(--page-gutter)*2);max-width:var(--page-width);margin-inline:auto}
-@media(min-width:1360px){
- .container{width:calc(100% - max(var(--page-gutter),188px)*2)}
- .home .home-hero-title{font-size:clamp(48px,calc(7.5vw - 54px),60px)}
+@media(min-width:901px){
+ .container{width:calc(100% - max(var(--page-gutter),clamp(40px,calc(34vw - 266px),188px))*2)}
+ .home .home-hero{container-type:inline-size}
+ .home .home-hero-title{font-size:clamp(38px,5cqi,60px)}
 }
 /* One outer frame for Home, subpages and individual posts. */
 .page-layout{padding-block:var(--layout-gap) 12px;flex:1}
@@ -489,7 +490,7 @@ html:not(.nav-disclosures-ready) #main-nav .nav-item:is(:hover,:focus-within) .n
 .student-card .person-info>p:not(.person-role){font-size:16px;line-height:1.6;margin-top:4px}
 .student-card .person-info>a{font-size:16px;overflow-wrap:anywhere}
 @media(max-width:1100px){.students-list{grid-template-columns:repeat(2,minmax(0,1fr))}.topic-layout{grid-template-columns:1fr;gap:24px}.topic-schematic{width:100%;max-width:520px;margin:0 auto}}
-@media(max-width:1050px){
+@media(max-width:1280px){
  .header-inner{gap:26px}
  #main-nav{gap:27px}
  .brand{min-width:210px;font-size:19px}
