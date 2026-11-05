@@ -185,7 +185,8 @@ function connectResearchNavigation(){
   }
   for(const area of areas){
    if(!area.topics.length)continue;
-   const expanded=String(Boolean(rail)&&area===current);
+   if(!rail){area.link.removeAttribute('aria-expanded');continue;}
+   const expanded=String(area===current);
    if(area.link.getAttribute('aria-expanded')!==expanded)area.link.setAttribute('aria-expanded',expanded);
   }
   const topic=rail?(atBottom?current.topics.at(-1):current.topics.findLast(item=>item.section.getBoundingClientRect().top<=readingLine)):null;
