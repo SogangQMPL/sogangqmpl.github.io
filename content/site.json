@@ -2782,10 +2782,10 @@
       "content": [
         {
           "type": "image",
-          "src": "assets/posts/news-2026-kps-taegyu-jang-poster-award-display.webp",
+          "src": "assets/posts/news-2026-kps-taegyu-jang-poster-award-landscape.webp",
           "alt": "Taegyu Jang's poster with an Outstanding Poster Presentation Awards ribbon at the 2026 KPS Fall Meeting.",
           "width": 1200,
-          "height": 1600,
+          "height": 900,
           "fullSrc": "assets/posts/news-2026-kps-taegyu-jang-poster-award-original.jpg"
         },
         {
@@ -2809,7 +2809,7 @@
           ]
         }
       ],
-      "image": "assets/posts/news-2026-kps-taegyu-jang-poster-award-display.webp",
+      "image": "assets/posts/news-2026-kps-taegyu-jang-poster-award-landscape.webp",
       "imageAlt": "Taegyu Jang's poster with an Outstanding Poster Presentation Awards ribbon at the 2026 KPS Fall Meeting.",
       "facts": [
         {
@@ -2826,25 +2826,25 @@
         }
       ],
       "imageThumbnail": {
-        "source": "assets/posts/news-2026-kps-taegyu-jang-poster-award-display.webp",
+        "source": "assets/posts/news-2026-kps-taegyu-jang-poster-award-landscape.webp",
         "variants": [
           {
-            "src": "assets/uploads/news-2026-kps-taegyu-jang-poster-award-thumb-420.webp",
+            "src": "assets/posts/news-2026-kps-taegyu-jang-poster-award-landscape-420.webp",
             "width": 420,
-            "height": 560
+            "height": 315
           },
           {
-            "src": "assets/uploads/news-2026-kps-taegyu-jang-poster-award-thumb-840.webp",
+            "src": "assets/posts/news-2026-kps-taegyu-jang-poster-award-landscape-840.webp",
             "width": 840,
-            "height": 1120
+            "height": 630
           }
         ]
       },
       "shareImage": {
-        "source": "assets/posts/news-2026-kps-taegyu-jang-poster-award-display.webp",
-        "src": "assets/uploads/news-2026-kps-taegyu-jang-poster-award-share.jpg",
-        "width": 900,
-        "height": 1200
+        "source": "assets/posts/news-2026-kps-taegyu-jang-poster-award-landscape.webp",
+        "src": "assets/posts/news-2026-kps-taegyu-jang-poster-award-landscape-share.jpg",
+        "width": 1200,
+        "height": 900
       }
     },
     {
