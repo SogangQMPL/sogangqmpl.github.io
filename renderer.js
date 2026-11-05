@@ -54,11 +54,21 @@ function thumbnailImage(display,source,sizes,crop=null) {
  return {src,width,height,responsive:variants.length>1?` srcset="${e(variants.map(v=>`${v.src} ${v.width}w`).join(', '))}" sizes="${sizes}"`:''};
 }
 const zoomIcon='<span class="figure-zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M7.5 10.5h6m-3-3v6"/></svg></span>';
-function zoomLink({image,original=image,title,label='',source='',width,height,cls=''},content) {
+function zoomLink({image,original=image,title,label='',source='',width,height,crop,originalAlt='',cls=''},content) {
  const dimensions=Number(width)>0&&Number(height)>0?` data-figure-width="${Number(width)}" data-figure-height="${Number(height)}"`:'';
- return `<a class="figure-trigger${cls?' '+cls:''}" href="${e(original)}" target="_blank" rel="noopener noreferrer" data-figure-image="${e(image)}" data-figure-title="${e(title)}" data-figure-label="${e(label)}" data-figure-source="${e(source)}"${dimensions} aria-label="Enlarge image — ${e(title)}">${content}${zoomIcon}</a>`;
+ const panel=crop?` data-figure-crop="${e(JSON.stringify(crop))}"`:'';
+ return `<a class="figure-trigger${cls?' '+cls:''}" href="${e(original)}" target="_blank" rel="noopener noreferrer" data-figure-image="${e(image)}" data-figure-title="${e(title)}" data-figure-label="${e(label)}" data-figure-source="${e(source)}"${originalAlt?` data-figure-original-alt="${e(originalAlt)}"`:''}${dimensions}${panel} aria-label="Enlarge image — ${e(title)}">${content}${zoomIcon}</a>`;
 }
-const figureViewer = `<dialog id="image-viewer" class="publication-viewer" aria-labelledby="figure-viewer-title"><div class="figure-viewer-heading"><h2 id="figure-viewer-title"></h2><button class="figure-viewer-close" type="button" aria-label="Close image">×</button></div><p class="figure-viewer-label"></p><img class="figure-viewer-image" alt=""><div class="figure-viewer-links"><a class="figure-viewer-original" target="_blank" rel="noopener noreferrer">Open original image ↗</a><a class="figure-viewer-source" target="_blank" rel="noopener noreferrer">Figure source ↗</a></div></dialog>`;
+const figureViewer = `<dialog id="image-viewer" class="publication-viewer" aria-labelledby="figure-viewer-title">
+ <div class="figure-viewer-heading"><h2 id="figure-viewer-title"></h2><button class="figure-viewer-close" type="button" aria-label="Close image">×</button></div>
+ <p class="figure-viewer-label"></p>
+ <div class="figure-viewer-tools">
+  <div class="figure-viewer-modes" role="group" aria-label="Image view" hidden><button type="button" data-figure-mode="panel" aria-pressed="true">Selected panel</button><button type="button" data-figure-mode="full" aria-pressed="false">Full figure</button></div>
+  <div class="figure-viewer-scale" role="group" aria-label="Image zoom"><button class="figure-viewer-zoom" type="button" aria-label="Zoom in">+</button><button class="figure-viewer-fit" type="button">Fit to screen</button></div>
+ </div>
+ <div class="figure-viewer-viewport" role="region" aria-label="Figure. Scroll to move around the zoomed image."><div class="figure-viewer-frame"><img class="figure-viewer-image" alt=""></div></div>
+ <div class="figure-viewer-links"><a class="figure-viewer-original" target="_blank" rel="noopener noreferrer">Open original image ↗</a><a class="figure-viewer-source" target="_blank" rel="noopener noreferrer">Figure source ↗</a></div>
+</dialog>`;
 
 function editContext(data, enabled = false) {
  const edit=(path,type,label,descriptor={})=>enabled&&path?` data-edit-path="${e(path)}" data-edit-type="${e(type)}" data-edit-label="${e(label)}" data-edit-descriptor="${e(JSON.stringify({path,type,label,...descriptor}))}"`:'';
@@ -121,8 +131,8 @@ function pubEntry(p,number,compact=false,edit) {
  const cropInCSS=hasCrop&&!display, width=display?.width||p.imageWidth,height=display?.height||p.imageHeight;
  const imageHTML=`<img src="${e(display?.src||image)}"${display?.responsive||''} alt="${e(p.imageAlt||label+' from '+p.title)}" loading="lazy" decoding="async"${width&&height?` width="${Number(width)}" height="${Number(height)}"`:''}${cropInCSS?` style="position:absolute;max-width:none;max-height:none;width:${100/crop.width}%;height:auto;left:${-100*crop.x/crop.width}%;top:${-100*crop.y/crop.height}%"`:''}${edit(path+'/image','image','논문 그림',{altPath:path+'/imageAlt',widthPath:path+'/imageWidth',heightPath:path+'/imageHeight',cropPath:path+'/imagePreview',sourcePath:path+'/imageSource',imageLabelPath:path+'/imageLabel'})}>`;
  const thumbnail=cropInCSS?`<span class="pub-figure-panel" style="--preview-ratio:${p.imageWidth*crop.width/(p.imageHeight*crop.height)};aspect-ratio:var(--preview-ratio)">${imageHTML}</span>`:imageHTML;
- const figure=image?`<figure class="pub-figure">${zoomLink({image,title:p.title,label,source:safeURL(p.imageSource),width:p.imageWidth,height:p.imageHeight,cls:'pub-figure-link'},thumbnail)}</figure>`:'';
- return `<article class="publication${compact?' publication-short':' publication-illustrated'+(image?' has-figure':'')}" data-year="${e(p.year)}" data-search="${e([p.title,p.authors,p.journal,p.doi].join(' '))}" data-publication-url="${e(safeURL(p.url))}"${edit.item(path,'논문')}>
+ const figure=image?`<figure class="pub-figure">${zoomLink({image,title:p.title,label,source:safeURL(p.imageSource),width:p.imageWidth,height:p.imageHeight,crop:hasCrop?crop:null,originalAlt:hasCrop?`Full ${label.toLowerCase()} from ${p.title}`:'',cls:'pub-figure-link'},thumbnail)}</figure>`:'';
+ return `<article class="publication${compact?' publication-short':' publication-illustrated'+(image?' has-figure':'')}" data-year="${e(p.year)}" data-search="${e([p.title,p.authors,p.journal,p.doi].join(' '))}" data-publication-url="${e(safeURL(p.url))}" data-publication-doi="${e(p.doi||'')}" data-publication-figure-source="${e(safeURL(p.imageSource))}"${edit.item(path,'논문')}>
    ${compact?'':`<span class="pub-index">${number}.</span>`}
    <div class="pub-content"><h3${edit(path+'/title','publication-title','논문 제목',{segmentsPath:path+'/titleSegments',urlPath:path+'/url',doiPath:path+'/doi'})}>${external(p.url||(p.doi?'https://doi.org/'+p.doi:''),publicationTitle(p))}</h3>
    <p class="authors"${edit(path+'/authors','multiline','논문 저자',{labAuthorsPath:path+'/labAuthors'})}>${publicationAuthors(p)}</p>
@@ -252,14 +262,22 @@ const pageIntro = (title, description) => `<header class="page-intro"><h1>${titl
 function researchPage(data,page,edit) {
  const lookup=new Map(data.publications.map(p=>[p.id,p]));
  const areaIcon=r=>safeURL(r.icon)?`<img class="area-icon" src="${e(safeURL(r.icon))}" alt="" aria-hidden="true" width="80" height="80"${edit(edit.path('research',r)+'/icon','image','연구 분야 아이콘')}>`:'';
+ const shortAreaTitles={'Quantum Information':'Quantum info','Solid-State Physics':'Solid-state','Semiconductor Devices':'Devices'};
+ const areaLinks=data.research.map(area=>{
+  const shortTitle=Object.hasOwn(shortAreaTitles,area.title)?shortAreaTitles[area.title]:'';
+  const label=shortTitle?`<span class="research-jump-full">${e(area.title)}</span><span class="research-jump-short">${e(shortTitle)}</span>`:e(area.title);
+  return `<a href="#${e(area.id)}"${shortTitle?` aria-label="${e(area.title)}"`:''}>${label}</a>`;
+ }).join('');
  const originalFigure=(image,path,legacy=false)=>{
   const src=safeURL(image.src);if(!src)return '';
   const fullSrc=safeURL(image.fullSrc)||src;
-  const size=Number(image.width)>0&&Number(image.height)>0?` width="${Number(image.width)}" height="${Number(image.height)}"`:'';
-  const imagePath=legacy?path+'/image':path+'/src',descriptor=legacy?{altPath:path+'/imageAlt'}:{altPath:path+'/alt',widthPath:path+'/width',heightPath:path+'/height',fullSrcPath:path+'/fullSrc',sourcePath:path+'/sourceURL'};
+  const display=thumbnailImage(image.imageThumbnail,src,'(max-width: 600px) calc(100vw - 40px), (max-width: 900px) min(760px, calc(100vw - 80px)), min(560px, 48vw)');
+  const width=display?.width||image.width,height=display?.height||image.height;
+  const size=Number(width)>0&&Number(height)>0?` width="${Number(width)}" height="${Number(height)}"`:'';
+  const imagePath=legacy?path+'/image':path+'/src',descriptor=legacy?{altPath:path+'/imageAlt'}:{altPath:path+'/alt',widthPath:path+'/width',heightPath:path+'/height',fullSrcPath:path+'/fullSrc',sourcePath:path+'/sourceURL',thumbnailPath:path+'/imageThumbnail'};
   const imageURL=fullSrc.startsWith('assets/')||/\.(?:webp|png|jpe?g|gif|svg)(?:[?#]|$)/i.test(fullSrc)?fullSrc:src;
   const source=fullSrc!==imageURL?fullSrc:safeURL(image.sourceURL);
-  const figure=`<img src="${e(src)}" alt="${e(image.alt||'')}"${size} loading="lazy" decoding="async"${edit(imagePath,'image','상세 연구 그림',descriptor)}>`;
+  const figure=`<img src="${e(display?.src||src)}"${display?.responsive||''} alt="${e(image.alt||'')}"${size} loading="lazy" decoding="async"${edit(imagePath,'image','상세 연구 그림',descriptor)}>`;
   return `<figure class="research-original-figure"${legacy?'':edit.item(path,'상세 연구 그림')}>${zoomLink({image:imageURL,original:fullSrc,title:image.alt||'Research diagram',label:image.caption,source,width:imageURL===src?image.width:undefined,height:imageURL===src?image.height:undefined},figure)}${image.caption?`<figcaption${language(image.caption)}${edit(path+'/caption','text','연구 그림 설명')}>${e(image.caption)}</figcaption>`:''}</figure>`;
  };
  const papersFor=ids=>[...new Set(ids||[])].map(id=>lookup.get(id)).filter(Boolean).sort((a,b)=>Number(b.year)-Number(a.year));
@@ -273,7 +291,7 @@ function researchPage(data,page,edit) {
    const width=display?.width||t.schematicWidth,height=display?.height||t.schematicHeight;
    const schematicSize=Number(width)>0&&Number(height)>0?` width="${Number(width)}" height="${Number(height)}"`:'';
    const credit=t.schematicCredit,creditHTML=credit?.source===schematic&&credit?.text?`<figcaption class="topic-figure-credit">Image: ${external(credit.url,e(credit.text))}${credit.license?` · ${external(credit.licenseURL,e(credit.license))}`:''}${credit.note?` · ${e(credit.note)}`:''}</figcaption>`:'';
-   const schematicHTML=schematic?`<img src="${e(display?.src||schematic)}"${display?.responsive||''} alt="${e(t.schematicAlt||t.imageAlt||t.title)}"${schematicSize} loading="lazy" decoding="async"${edit(path+(safeURL(t.schematic)?'/schematic':'/image'),'image','연구 주제 도식',{altPath:path+(safeURL(t.schematic)?'/schematicAlt':'/imageAlt'),...(safeURL(t.schematic)?{widthPath:path+'/schematicWidth',heightPath:path+'/schematicHeight'}:{})})}>`:'';
+   const schematicHTML=schematic?`<img src="${e(display?.src||schematic)}"${display?.responsive||''} alt="${e(t.schematicAlt||t.imageAlt||t.title)}"${schematicSize} loading="lazy" decoding="async"${edit(path+(safeURL(t.schematic)?'/schematic':'/image'),'image','연구 주제 도식',{altPath:path+(safeURL(t.schematic)?'/schematicAlt':'/imageAlt'),...(safeURL(t.schematic)?{widthPath:path+'/schematicWidth',heightPath:path+'/schematicHeight',thumbnailPath:path+'/schematicThumbnail'}:{})})}>`:'';
    const detailImages=Array.isArray(t.detailImages)?t.detailImages:(t.image?[{src:t.image,alt:t.imageAlt||t.title}]:[]);
    const sections=Array.isArray(t.detailSections)?t.detailSections.filter(section=>section&&(section.title?.trim()||section.body?.trim()||section.images?.length)):null;
    const detailContent=sections?sections.map((section,index)=>{
@@ -290,7 +308,7 @@ function researchPage(data,page,edit) {
      ${papers.length?`<div class="topic-evidence"><p class="result-label"${edit(path+'/paperIds','relation','관련 논문 연결',{collection:'/publications'})}>Related papers</p><ul class="result-list">${papers.map(paper=>{const paperPath=edit.path('publications',paper),outcomeIndex=(t.outcomes||[]).findLastIndex(outcome=>outcome.paperIds?.length===1&&outcome.paperIds[0]===paper.id),titlePath=outcomeIndex>=0?path+'/outcomes/'+outcomeIndex+'/title':paperPath+'/title';return `<li data-paper-id="${e(paper.id)}">${external(paper.url||(paper.doi?'https://doi.org/'+paper.doi:''),publicationTitle(paper,shortTitles.get(paper.id)||paper.title),'',edit(titlePath,outcomeIndex>=0?'text':'publication-title',outcomeIndex>=0?'관련 논문 표시 제목':'논문 제목',{urlPath:paperPath+'/url',segmentsPath:paperPath+'/titleSegments'}))}<span class="result-citation"${edit(paperPath+(paper.journal?'/journal':'/year'),paper.journal?'text':'number','논문 서지 정보')}>${publicationCitation(paper.journal||paper.year)}</span></li>`;}).join('')}</ul></div>`:''}
    </article>`;
  };
- return `<main id="main" tabindex="-1" class="container page-layout research-page">${pageIntro('Research','')}
+ return `<main id="main" tabindex="-1" class="container page-layout research-page"><header class="page-intro"><h1>Research</h1>${areaLinks?`<nav class="research-jump" aria-label="Jump to research area"><span class="research-jump-label" aria-hidden="true">Jump to</span>${areaLinks}</nav>`:''}</header>
    <div class="research-groups"${edit.collection('/research','연구 분야')}>${data.research.map((r,i)=>{const path=edit.path('research',r);return `<section class="research-group" data-area="${e(r.id)}" id="${e(r.id)}" aria-labelledby="${e(r.id)}-title"${edit.item(path,'연구 분야')}><header class="theme-heading">${areaIcon(r)}<div class="theme-title"><span class="theme-number" aria-hidden="true">0${i+1}</span><h2 id="${e(r.id)}-title"${edit(path+'/title','text','연구 분야명')}>${e(r.title)}</h2></div><p${edit(path+'/summary','multiline','연구 분야 소개')}>${e(r.summary)}</p></header><div class="theme-content"><div class="research-topics"${edit.collection(path+'/topics','하위 연구 주제')}>${(r.topics||[]).map((t,j)=>topic(t,i,j)).join('')}</div></div></section>`;}).join('')}</div>
    <details class="original-research-map"><summary>Research map</summary>${zoomLink({image:'assets/research/original-overview.webp',title:'Research map',width:1500,height:844},'<img src="assets/research/original-overview.webp" alt="Two-dimensional materials supporting quantum information, solid-state physics and semiconductor devices" loading="lazy" width="1500" height="844">')}<div class="theme-map-diagrams">${data.research.filter(r=>safeURL(r.image)).map(r=>{const path=edit.path('research',r),image=safeURL(r.image);return `<figure>${zoomLink({image,title:r.title},`<img src="${e(image)}" alt="${e(r.imageAlt||r.title)}" width="420" height="300" loading="lazy"${edit(path+'/image','image','분야 개념도',{altPath:path+'/imageAlt'})}>`)}<figcaption${edit(path+'/title','text','연구 분야명')}>${e(r.title)}</figcaption></figure>`;}).join('')}</div></details>
  </main>`;

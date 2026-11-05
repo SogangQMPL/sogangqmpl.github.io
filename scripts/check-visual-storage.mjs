@@ -173,6 +173,26 @@ try {
     width = 5000; height = 800; const before = canvases.length; const staged = await stageImage(file(HEADER['image/gif'], 'image/gif'));
     assert.equal(canvases.length, before); assert.equal(staged.width, 5000); assert.equal(staged.height, 800); assert.equal(staged.base64, HEADER['image/gif'].toString('base64')); assert.match(staged.path, /\.gif$/); release(staged);
   });
+  await check('publication upload preserves original bytes and persists its display variants with the draft', async () => {
+    width = 2400; height = 1200;
+    const {variants, ...original} = await stageImage(file(HEADER['image/png']), {publicationFigure: true});
+    assert.equal(original.base64, HEADER['image/png'].toString('base64'));
+    assert.deepEqual([original.width, original.height], [2400, 1200]);
+    assert.deepEqual(variants.map(({width, height, mime}) => [width, height, mime]), [[320, 160, 'image/webp'], [720, 360, 'image/webp']]);
+    const thumbnail = {source: original.path, variants: variants.map(({path, width, height}) => ({src: path, width, height}))};
+    await saveLocalDraft({...draft(), data: {imageThumbnail: thumbnail}, assets: [original, ...variants]});
+    const restored = await loadLocalDraft();
+    assert.deepEqual(restored.data.imageThumbnail, thumbnail);
+    assert.deepEqual(restored.assets.map(value => value.path), [original.path, ...variants.map(value => value.path)]);
+    release(original);
+  });
+  await check('small publication thumbnails stay at natural size without duplicate widths', async () => {
+    width = 160; height = 80;
+    const staged = await stageImage(file(HEADER['image/gif']), {publicationFigure: true});
+    assert.equal(staged.base64, HEADER['image/gif'].toString('base64'));
+    assert.deepEqual(staged.variants.map(({width, height}) => [width, height]), [[160, 80]]);
+    release(staged);
+  });
   await check('invalid files and original/GIF size limits fail before decoding', async () => {
     await errorCode('IMAGE', () => stageImage(file(Buffer.from('<svg></svg>'), 'image/svg+xml')));
     await errorCode('IMAGE', () => stageImage(file(Buffer.from('not an image'), 'image/png')));

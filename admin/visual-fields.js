@@ -189,6 +189,13 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
   }
 
   function imageField(spec, target) {
+    const publicationPath = spec.path.match(/^\/publications\/\d+(?=\/image$)/)?.[0];
+    if (publicationPath) spec = {
+      altPath: publicationPath + '/imageAlt', widthPath: publicationPath + '/imageWidth',
+      heightPath: publicationPath + '/imageHeight', cropPath: publicationPath + '/imagePreview',
+      sourcePath: publicationPath + '/imageSource', imageLabelPath: publicationPath + '/imageLabel',
+      thumbnailPath: publicationPath + '/imageThumbnail', ...spec
+    };
     const sourceObject = spec.path.endsWith('/src') ? getAt(data, spec.path.slice(0, -4)) : null;
     if (sourceObject && typeof sourceObject === 'object' && ('caption' in sourceObject || sourceObject.type === 'image')) spec = {captionPath: spec.path.slice(0, -4) + '/caption', ...spec};
     const {wrapper, label} = fieldWrapper(spec, target), preview = element(doc, 'img', undefined, 'image-preview');
@@ -207,30 +214,151 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
       alt.addEventListener('input', saveAlt); alt.addEventListener('change', saveAlt); applyButton(wrapper, saveAlt);
     }
     if (spec.captionPath) basicField({path: spec.captionPath, type: 'multiline', label: '사진 아래 설명 (선택)'}, wrapper);
-    async function replaceImage(path, metadata = {}, options = {}) {
-      await commit((draft) => {
+    function replaceImage(path, metadata = {}, options = {}) {
+      return commit((draft) => {
         setAt(draft, spec.path, path);
-        if (spec.altPath && altInput) setAt(draft, spec.altPath, altInput.value);
+        const review = metadata.review;
+        if (spec.altPath && altInput) setAt(draft, spec.altPath, review ? review.alt : altInput.value);
+        if (review) {
+          setAt(draft, spec.imageLabelPath, review.label);
+          if (review.source) setAt(draft, spec.sourcePath, review.source);
+          else removeAt(draft, spec.sourcePath);
+        }
         if (spec.fullSrcPath) setAt(draft, spec.fullSrcPath, path);
         for (const [field, value] of [[spec.widthPath, metadata.width], [spec.heightPath, metadata.height]]) if (field) {
           if (Number.isFinite(value) && value > 0) setAt(draft, field, Math.round(value)); else removeAt(draft, field);
         }
         if (spec.cropPath) removeAt(draft, spec.cropPath);
+        if (spec.thumbnailPath) {
+          if (metadata.variants?.length) {
+            const variants = metadata.variants.map(({path, width, height}) => ({src: path, width, height}));
+            setAt(draft, spec.thumbnailPath, {source: path, variants});
+          } else removeAt(draft, spec.thumbnailPath);
+        }
       }, (spec.label || '사진') + ' 교체', options);
     }
+
+    async function stageAndReplace(file, review) {
+      let original;
+      let applied = false;
+      try {
+        const {variants = [], ...staged} = await stageImage(file, {publicationFigure: Boolean(review)});
+        original = staged;
+        if (!alive()) return false;
+        if (!staged.path || !validURL(staged.path, {image: true})) throw new Error('사진을 준비하지 못했습니다. 다른 파일로 다시 시도해 주세요.');
+        if (!resolveImage && staged.previewURL) stagedPreviews.set(staged.path, staged.previewURL);
+        applied = await replaceImage(staged.path, {...staged, variants, review}, {stagedAssets: [staged, ...variants]});
+        return applied;
+      } finally {
+        if (!applied && original?.previewURL) {
+          stagedPreviews.delete(original.path);
+          URL.revokeObjectURL(original.previewURL);
+        }
+      }
+    }
+
+    let reviewReplacement;
+    if (publicationPath) {
+      const panel = element(doc, 'fieldset', undefined, 'figure-review');
+      panel.hidden = true;
+      panel.append(element(doc, 'legend', '새 논문 그림 확인'));
+      const selected = element(doc, 'p', '', 'field-hint');
+      const previous = element(doc, 'p', '', 'field-hint');
+      const reuse = element(doc, 'button', '기존 출처와 그림 이름 가져오기');
+      reuse.type = 'button';
+      panel.append(selected, previous, reuse);
+      function reviewInput(text, mode) {
+        const label = element(doc, 'label', text);
+        const input = element(doc, 'input');
+        input.type = 'text';
+        if (mode) input.inputMode = mode;
+        label.append(input);
+        panel.append(label);
+        return input;
+      }
+      const figureLabel = reviewInput('새 그림 이름');
+      figureLabel.placeholder = '예: Figure 2, Graphical abstract';
+      const source = reviewInput('새 그림의 출처 페이지 주소', 'url');
+      source.placeholder = 'https://…';
+      panel.append(element(doc, 'small', '연결할 공개 출처 페이지가 없으면 주소를 비워 두세요.', 'field-hint'));
+      const alt = reviewInput('새 그림 설명 (선택)');
+      const checkLabel = element(doc, 'label', undefined, 'figure-review-check');
+      const checked = element(doc, 'input');
+      checked.type = 'checkbox';
+      checkLabel.append(checked, doc.createTextNode('이 그림의 출처와 이름을 확인했습니다.'));
+      const status = element(doc, 'p', '', 'field-feedback');
+      status.setAttribute('role', 'status');
+      const actions = element(doc, 'div', undefined, 'field-actions');
+      const cancel = element(doc, 'button', '취소');
+      const apply = element(doc, 'button', '그림 교체', 'primary');
+      cancel.type = apply.type = 'button';
+      actions.append(cancel, apply);
+      panel.append(checkLabel, status, actions);
+      wrapper.append(panel);
+      let candidate;
+      const reviewMessage = (text, error = false) => {
+        status.textContent = text;
+        status.classList.toggle('error', error);
+      };
+      reviewReplacement = next => {
+        if (panel.disabled) return;
+        candidate = next;
+        selected.textContent = next.file?.name || next.path;
+        const oldLabel = getAt(data, spec.imageLabelPath) || '';
+        const oldSource = getAt(data, spec.sourcePath) || '';
+        previous.textContent = [oldLabel, oldSource].filter(Boolean).join(' · ');
+        previous.hidden = reuse.hidden = !previous.textContent;
+        if (previous.textContent) previous.textContent = '기존 그림 정보 · ' + previous.textContent;
+        figureLabel.value = source.value = alt.value = '';
+        checked.checked = false;
+        reviewMessage('');
+        panel.hidden = false;
+        figureLabel.focus();
+      };
+      reuse.addEventListener('click', () => {
+        figureLabel.value = getAt(data, spec.imageLabelPath) || '';
+        source.value = getAt(data, spec.sourcePath) || '';
+        checked.checked = false;
+        figureLabel.focus();
+      });
+      for (const input of [figureLabel, source]) input.addEventListener('input', () => { checked.checked = false; });
+      cancel.addEventListener('click', () => {
+        const trigger = candidate?.file ? upload : address;
+        candidate = null;
+        panel.hidden = true;
+        trigger.focus();
+      });
+      apply.addEventListener('click', async () => {
+        if (!candidate || panel.disabled) return;
+        const review = {label: figureLabel.value.trim(), source: source.value.trim(), alt: alt.value.trim()};
+        if (!review.label) { reviewMessage('새 그림 이름을 입력하세요.', true); figureLabel.focus(); return; }
+        if (!validURL(review.source)) { reviewMessage('출처 페이지는 https://로 시작하는 주소를 입력하세요.', true); source.focus(); return; }
+        if (!checked.checked) { reviewMessage('출처와 이름을 확인한 뒤 확인란을 선택하세요.', true); checked.focus(); return; }
+        panel.disabled = upload.disabled = true;
+        reviewMessage(candidate.file ? '원본과 표시용 썸네일을 준비하고 있습니다…' : '그림 주소를 바꾸고 있습니다…');
+        try {
+          const applied = candidate.file ? await stageAndReplace(candidate.file, review) : await replaceImage(candidate.path, {review});
+          if (alive() && !applied) reviewMessage(feedback.textContent || '그림을 교체하지 못했습니다.', true);
+          if (alive() && applied) panel.hidden = true;
+        } catch (error) {
+          if (alive()) reviewMessage(error?.message || '그림을 교체하지 못했습니다.', true);
+        } finally {
+          if (alive()) { panel.disabled = false; upload.disabled = typeof stageImage !== 'function'; }
+        }
+      });
+    }
+
     upload.disabled = typeof stageImage !== 'function';
     upload.addEventListener('change', async () => {
-      const file = upload.files?.[0]; if (!file) return;
-      upload.disabled = true; message('사진을 준비하고 있습니다…');
-      try {
-        const staged = await stageImage(file);
-        if (!alive()) return;
-        if (!staged?.path || !validURL(staged.path, {image: true})) throw new Error('사진을 준비하지 못했습니다. 다른 파일로 다시 시도해 주세요.');
-        if (staged.previewURL) stagedPreviews.set(staged.path, staged.previewURL);
-        await replaceImage(staged.path, staged);
-        if (alive()) { preview.src = staged.previewURL || previewImage(staged.path); preview.hidden = false; }
-      } catch (error) { message(error?.message || '사진을 올리지 못했습니다.', true); }
-      finally { if (alive()) { upload.disabled = false; upload.value = ''; } }
+      const file = upload.files?.[0];
+      upload.value = '';
+      if (!file) return;
+      if (reviewReplacement) { reviewReplacement({file}); return; }
+      upload.disabled = true;
+      message('사진을 준비하고 있습니다…');
+      try { await stageAndReplace(file); }
+      catch (error) { message(error?.message || '사진을 올리지 못했습니다.', true); }
+      finally { if (alive()) upload.disabled = false; }
     });
     const extra = element(doc, 'details', undefined, 'image-extra'); extra.append(element(doc, 'summary', '이미지 주소 · 추가 정보'));
     const addressLabel = element(doc, 'label', '사진 주소'), address = element(doc, 'input'); address.type = 'text'; address.inputMode = 'url'; address.value = current; addressLabel.append(address); extra.append(addressLabel);
@@ -238,10 +366,12 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
       const next = address.value.trim();
       if (!next || !validURL(next, {image: true})) { message('사진 파일을 선택하거나 사용할 이미지 주소를 입력하세요.', true); return; }
       if (next === getAt(data, spec.path)) return;
-      await replaceImage(next, {}, {preserveInspector:true, coalesceKey:spec.path});
-      if (alive()) { preview.src = previewImage(next); preview.hidden = false; }
+      if (reviewReplacement) { reviewReplacement({path: next}); return; }
+      const applied = await replaceImage(next, {}, {preserveInspector:true, coalesceKey:spec.path});
+      if (applied && alive()) { preview.src = previewImage(next); preview.hidden = false; }
     }
-    address.addEventListener('change', saveAddress); applyButton(extra, saveAddress);
+    if (!reviewReplacement) address.addEventListener('change', saveAddress);
+    applyButton(extra, saveAddress, reviewReplacement ? '사진 주소로 교체' : '적용');
     if (spec.fullSrcPath) basicField({path: spec.fullSrcPath, type: 'url', label: '고해상도 원본 주소 (선택)', imageURL: true, hint: '별도 원본이 없다면 비워 두어도 됩니다.'}, extra);
     if (spec.sourcePath) basicField({path: spec.sourcePath, type: 'url', label: '그림 출처 페이지 (선택)'}, extra);
     if (spec.imageLabelPath) basicField({path: spec.imageLabelPath, type: 'text', label: '그림 이름'}, extra);
@@ -362,7 +492,7 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
   }
 
   function imageSelection(path, label = '본문 사진') {
-    return {path: path + '/src', type: 'image', label, altPath: path + '/alt', fullSrcPath: path + '/fullSrc', widthPath: path + '/width', heightPath: path + '/height', captionPath: path + '/caption', sourcePath: path + '/sourceURL'};
+    return {path: path + '/src', type: 'image', label, altPath: path + '/alt', fullSrcPath: path + '/fullSrc', widthPath: path + '/width', heightPath: path + '/height', captionPath: path + '/caption', sourcePath: path + '/sourceURL', ...(path.startsWith('/research/') ? {thumbnailPath: path + '/imageThumbnail'} : {})};
   }
   function selectField(spec) { if (onChooseRecord) onChooseRecord(spec); }
   function rowAction(target, label, action, disabled = false) {
@@ -470,7 +600,7 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
     if (!value || typeof value !== 'object') { target.append(element(doc, 'p', '화면에서 편집할 글이나 사진을 다시 선택하세요.', 'record-note')); return; }
     if (value.type && ['paragraph', 'heading', 'quote', 'list'].includes(value.type)) { richField({...spec, type: 'richtext'}, target); return; }
     if (value.type === 'image' || (parts.at(-2) === 'images' && 'src' in value)) {
-      image('src', '사진', {altPath: base + '/alt', fullSrcPath: base + '/fullSrc', widthPath: base + '/width', heightPath: base + '/height', captionPath:base+'/caption', ...('sourceURL' in value ? {sourcePath: base + '/sourceURL'} : {})});
+      image('src', '사진', {altPath: base + '/alt', fullSrcPath: base + '/fullSrc', widthPath: base + '/width', heightPath: base + '/height', captionPath:base+'/caption', ...('sourceURL' in value ? {sourcePath: base + '/sourceURL'} : {}), ...(parts[0] === 'research' ? {thumbnailPath: base + '/imageThumbnail'} : {})});
     } else if (parts[0] === 'site') {
       add('title', '연구실 정식 이름'); add('group', '연구 그룹명'); add('affiliation', '소속'); add('email', '대표 이메일', 'email'); add('address', '주소'); add('description', '사이트 소개', 'multiline');
     } else if (parts[0] === 'hero') {
@@ -483,7 +613,7 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
       add('name', '이름'); add('role', '직위 · 과정', 'text', {options: [{value:'Principal Investigator',label:'교수'},{value:'PhD student',label:'박사과정'},{value:'Master’s student',label:'석사과정'},{value:'Undergraduate researcher',label:'학부연구생'},{value:'Postdoctoral researcher',label:'박사후연구원'},{value:'Alumni',label:'졸업생'}]}); add('email', '이메일', 'email'); add('description', '소개 · 경력 · 학력', 'multiline'); image('image', '인물 사진'); add('url', '개인 홈페이지 (선택)', 'url');
     } else if (['publications', 'underReview'].includes(parts[0])) {
       add('title', '논문 제목', 'publication-title', {segmentsPath:base+'/titleSegments'}); add('authors', '저자', 'multiline', {hint:'원고 순서대로 입력하세요. 공동 기여 †, 교신저자 *는 이름 뒤에 붙입니다.'}); add('labAuthors', '강조할 연구실 저자', 'list', {hint:'저자 목록과 같은 이름을 한 줄에 한 명씩 입력하세요. †와 *는 제외합니다.'});
-      if (parts[0] === 'publications') { add('journal', '학술지 · 권 · 페이지'); add('year', '연도', 'number', {min:1900,max:2100}); add('doi', 'DOI (선택)'); image('image', '논문 대표 그림', {altPath:base+'/imageAlt',widthPath:base+'/imageWidth',heightPath:base+'/imageHeight',cropPath:base+'/imagePreview',sourcePath:base+'/imageSource',imageLabelPath:base+'/imageLabel'}); add('featured', '홈 대표 논문에 표시', 'boolean'); }
+      if (parts[0] === 'publications') { add('journal', '학술지 · 권 · 페이지'); add('year', '연도', 'number', {min:1900,max:2100}); add('doi', 'DOI (선택)'); image('image', '논문 대표 그림'); add('featured', '홈 대표 논문에 표시', 'boolean'); }
       add('url', '논문 · 원고 링크 (선택)', 'url');
     } else if (parts[0] === 'news') {
       add('title', '게시물 제목'); add('date', '날짜', 'date', {hint:'예: 2026-10-27'}); add('category', '분류', 'text', {options:['Awards','Conferences','Activities']}); add('excerpt', '목록 소개 (선택)', 'multiline', {hint:'비우면 본문 앞부분을 표시합니다. 본문은 화면에서 문단을 선택해 편집하세요.'}); image('image', '목록 대표 사진', {altPath:base+'/imageAlt'}); if (!value.content?.length) add('body', '본문', 'multiline');
@@ -491,7 +621,7 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
     } else if (parts[0] === 'research' && parts.at(-2) === 'detailSections') {
       add('title', '소제목 (선택)'); add('body', '상세 설명', 'multiline');
     } else if (parts[0] === 'research' && parts[2] === 'topics' && parts.length === 4) {
-      add('title', '하위 연구 주제명'); add('summary', '짧은 소개', 'multiline'); add('focus', '연구 초점', 'list', {hint:'한 줄에 한 항목을 입력하세요.'}); image('schematic', '주제 도식', {altPath:base+'/schematicAlt',widthPath:base+'/schematicWidth',heightPath:base+'/schematicHeight'}); add('paperIds', '관련 논문', 'relation', {collection:'/publications'});
+      add('title', '하위 연구 주제명'); add('summary', '짧은 소개', 'multiline'); add('focus', '연구 초점', 'list', {hint:'한 줄에 한 항목을 입력하세요.'}); image('schematic', '주제 도식', {altPath:base+'/schematicAlt',widthPath:base+'/schematicWidth',heightPath:base+'/schematicHeight',thumbnailPath:base+'/schematicThumbnail'}); add('paperIds', '관련 논문', 'relation', {collection:'/publications'});
     } else if (parts[0] === 'research' && parts.length === 2) {
       add('title', '연구 분야명'); add('summary', '연구 분야 소개', 'multiline'); image('icon', '분야 아이콘'); image('image', '분야 개념도', {altPath:base+'/imageAlt'});
     } else if (typeof value.title === 'string') add('title', '표시 제목');
