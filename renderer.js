@@ -390,7 +390,7 @@ function joinPage(data,page,edit) {
    <section class="contact-details" aria-labelledby="contact-heading">
     <h2 id="contact-heading" tabindex="-1">Contact</h2>
     <div class="contact-layout">
-     <div><p class="contact-name">Hyeonjun Baek</p><p${edit('/site/affiliation','text','소속')}>${e(data.site.affiliation)}</p>${mailingAddresses?'':`<p>Ricci Hall (R Building) · <span lang="ko">리치과학관</span><br><span${edit('/site/address','text','연구실 주소')}>${e(data.site.address)}</span></p>`}<div class="contact-rooms">${data.join.office?`<p${edit('/join/office','text','교수실')}>Office: ${e(data.join.office)}</p>`:''}${data.join.laboratory?`<p${edit('/join/laboratory','text','실험실')}>Laboratory: ${e(data.join.laboratory)}</p>`:''}</div>${mailingAddresses}</div>
+     <div><p class="contact-name">Hyeonjun Baek</p><p${edit('/site/affiliation','text','소속')}>${e(data.site.affiliation)}</p>${mailingAddresses||`<p>Ricci Hall (R Building) · <span lang="ko">리치과학관</span><br><span${edit('/site/address','text','연구실 주소')}>${e(data.site.address)}</span></p>`}<div class="contact-rooms">${data.join.office?`<p${edit('/join/office','text','교수실')}>Office: ${e(data.join.office)}</p>`:''}${data.join.laboratory?`<p${edit('/join/laboratory','text','실험실')}>Laboratory: ${e(data.join.laboratory)}</p>`:''}</div></div>
      <figure class="contact-map">
       <iframe src="${e(ricciHallMap)}" title="Google Maps pin for Ricci Hall (R Building), Sogang University" width="640" height="320" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       ${external(ricciHallDirections,'Directions in Google Maps <span aria-hidden="true">↗</span>','contact-map-link')}
