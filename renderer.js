@@ -374,9 +374,21 @@ function activitiesPage(data,page,edit) {
  return `<main id="main" tabindex="-1" class="container page-layout interior">${pageIntro('Activities','')}${highlightNavigation('activities')}<section class="news-list activities-list"${edit.collection('/news','활동')}>${items.map(item=>highlightEntry(item,edit)).join('')}</section></main>`;
 }
 function joinPage(data,page,edit) {
+ const ricciHallMap='https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x357c98bcfd85c72d%3A0xd41e7652fbe4e84a!2z7ISc6rCV64yA7ZWZ6rWQIOumrOy5mOqzvO2Vmeq0gA!5e0!3m2!1sko!2skr!4v1793846536710!5m2!1sko!2skr';
+ const ricciHallDirections='https://www.google.com/maps/dir/?api=1&destination=Ricci%20Hall%2C%20Sogang%20University&destination_place_id=ChIJLceF_byYfDURSujk-1J2HtQ';
  return `<main id="main" tabindex="-1" class="container page-layout interior">${pageIntro('Join Us','')}
    <section class="join-copy"${edit.item('/join','모집 안내')}><h2 lang="ko"${edit('/join/title','text','모집 제목')}>${e(data.join.title)}</h2><p lang="ko"${edit('/join/description','multiline','모집 안내 내용')}>${e(data.join.description)}</p><p${edit('/site/email','email','대표 이메일')}>${mail(data.site.email)}</p></section>
-   <section class="contact-details"><h2>Contact</h2><p>Hyeonjun Baek</p><p${edit('/site/affiliation','text','소속')}>${e(data.site.affiliation)}</p><p${edit('/site/address','text','연구실 주소')}>${e(data.site.address)}</p>${data.join.office?`<p${edit('/join/office','text','교수실')}>Office: ${e(data.join.office)}</p>`:''}${data.join.laboratory?`<p${edit('/join/laboratory','text','실험실')}>Laboratory: ${e(data.join.laboratory)}</p>`:''}</section>
+   <section class="contact-details" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact</h2>
+    <div class="contact-layout">
+     <div><p>Hyeonjun Baek</p><p${edit('/site/affiliation','text','소속')}>${e(data.site.affiliation)}</p><p${edit('/site/address','text','연구실 주소')}>${e(data.site.address)}</p>${data.join.office?`<p${edit('/join/office','text','교수실')}>Office: ${e(data.join.office)}</p>`:''}${data.join.laboratory?`<p${edit('/join/laboratory','text','실험실')}>Laboratory: ${e(data.join.laboratory)}</p>`:''}</div>
+     <figure class="contact-map">
+      <figcaption>Ricci Hall (R Building) <span lang="ko">리치과학관</span></figcaption>
+      <iframe src="${e(ricciHallMap)}" title="Google Maps pin for Ricci Hall (R Building), Sogang University" width="640" height="320" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      ${external(ricciHallDirections,'Directions in Google Maps <span aria-hidden="true">↗</span>','contact-map-link')}
+     </figure>
+    </div>
+   </section>
  </main>`;
 }
 export function render(data, page='index', options={}) {
