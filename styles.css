@@ -344,9 +344,9 @@ html:not(.nav-disclosures-ready) #main-nav .nav-item:is(:hover,:focus-within) .n
 .site-footer{padding:18px 0;background:var(--navy)}
 .footer-inner{max-width:var(--page-width);display:flex;flex-direction:column;align-items:flex-start;gap:4px}
 .footer-affiliation{font-size:15px;font-weight:550;line-height:1.65}
-.footer-contact{display:flex;flex-wrap:wrap;align-items:center;gap:3px 18px;width:100%}
+.footer-contact{display:flex;flex-wrap:wrap;align-items:baseline;gap:3px 18px;width:100%}
 .footer-inner .footer-address{
- display:inline-flex;align-items:center;min-height:44px;padding:5px 8px;margin-inline-start:-8px;border-radius:4px;
+ display:inline-flex;align-items:flex-start;min-height:44px;padding:0 8px;margin-inline-start:-8px;border-radius:4px;
  font-size:14px;line-height:1.65;color:#d7e0eb;text-decoration:underline;text-decoration-color:#9bafc6;text-underline-offset:3px;
 }
 .footer-inner .footer-address:is(:hover,:focus-visible,:active){text-decoration-color:currentColor}
