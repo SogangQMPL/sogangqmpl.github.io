@@ -1,0 +1,1358 @@
+{
+  "date": "2026-11-05",
+  "scope": "Publication list thumbnail whitespace",
+  "method": "Conservative exterior white-space trim only, retaining two source pixels around detected content. Preserve native aspect ratio and do not enlarge low-resolution images. Common 4px display inset is supplied by the figure link. Original figures and imagePreview selections remain unchanged.",
+  "arrowEdit": {
+    "id": "pub-43",
+    "tool": "built-in imagegen",
+    "rect": [
+      0,
+      98,
+      33,
+      189
+    ],
+    "prompt": "Use case: precise-object-edit. Input image1 is edit target, a scientific layered device schematic331pixels wide×280pixels high. Remove ONLY the clipped hollow black right-pointing arrow at extreme LEFT MARGIN. That arrow occupies original source coordinates x=0..30,y=100..187; its left vertical stroke is clipped by the image left edge and its tip is near x29,y144. Replace ONLY this arrow and its antialias edge with the existing plain white background. Preserve absolute registration, exact full framing, original diagram composition, all layer geometries, diagonal outline edges, device outline, gray layered stacks, yellow electrodes, translucent textures, and every other pixel as closely as possible. Preserve verbatim all scientific text and its original placement: 'Ni/Au', 'p-GaN', 'MQWs', 'n-GaN', 'Ti/Au', 'n-GaN/ZnO nanowalls', 'CVD graphene films', and 'Amorphous oxide thin film on silica substrate'. Do not alter the device, labels, colors, scientific structures, or any other arrows or lines. Keep source image331×280 framing without cropping, resizing composition, shifting, adding or duplicating elements. Only erase this single left-margin hollow arrow to white.\n",
+    "changedChannelsOutsideROI": 0
+  },
+  "entries": [
+    {
+      "id": "pub-01",
+      "title": "Photoresponsive MoS₂‐Based Artificial Synaptic Transistor for Wavelength‐Dependent Physical Reservoir Computing",
+      "input": "assets/publications/pub-01-graphical-abstract-reviewed.jpg",
+      "inputSize": [
+        433,
+        374
+      ],
+      "inputSha256": "e98c3aa87d18d996a6e61e547a5a718f225547ab92ff01be37c9bad0cf9ba79f",
+      "trim": [
+        0,
+        0,
+        433,
+        374
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-01-320.webp",
+          "width": 320,
+          "height": 276
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-01-433.webp",
+          "width": 433,
+          "height": 374
+        }
+      ],
+      "source": "assets/publications/pub-01-graphical-abstract-reviewed.jpg",
+      "sourceSha256": "e98c3aa87d18d996a6e61e547a5a718f225547ab92ff01be37c9bad0cf9ba79f"
+    },
+    {
+      "id": "pub-02",
+      "title": "Photoexcitation of moiré-trapped interlayer excitons via chiral phonons",
+      "input": "assets/publications/clean-thumbnails/pub-02-720.webp",
+      "inputSize": [
+        720,
+        513
+      ],
+      "inputSha256": "14d5a6a9f8b69a3dd97f60147cec39ab71f90be67b82dbe9741215ea671775c9",
+      "trim": [
+        0,
+        4,
+        713,
+        507
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-02-320.webp",
+          "width": 320,
+          "height": 226
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-02-713.webp",
+          "width": 713,
+          "height": 503
+        }
+      ],
+      "source": "assets/publications/pub-02-figure2-cd-no-border.png",
+      "sourceSha256": "c405684efda590ce92e57d26dc76de49bcf590e8ce417d3342873e6f4504ade2"
+    },
+    {
+      "id": "pub-03",
+      "title": "WSe₂ Nanodots on Dielectric Nanopillars for Efficient Waveguide Coupling of Localized Emitters",
+      "input": "assets/uploads/pub-03-thumb-520.webp",
+      "inputSize": [
+        520,
+        322
+      ],
+      "inputSha256": "2b3525d131bfc5342e6175acd39c50dc4aa54999da3cddcd6219a63f8b32e7e7",
+      "trim": [
+        0,
+        0,
+        520,
+        322
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-03-320.webp",
+          "width": 320,
+          "height": 198
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-03-520.webp",
+          "width": 520,
+          "height": 322
+        }
+      ],
+      "source": "assets/publications/pub-03-original.png",
+      "sourceSha256": "d54df7166569b1fe47d88ba1cf8a036bae00209b25d8088e4949aabc2cf09099"
+    },
+    {
+      "id": "pub-04",
+      "title": "Interfacial Interaction Monitoring and Constitutional Isomer Discrimination Using a Graphene-Integrated Terahertz Metasurface",
+      "input": "assets/uploads/pub-04-thumb-520.webp",
+      "inputSize": [
+        520,
+        325
+      ],
+      "inputSha256": "ce60bb6074874093d221474e29a2fddab1e2a7fe4d47c822164f02711cbee573",
+      "trim": [
+        0,
+        0,
+        519,
+        323
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-04-320.webp",
+          "width": 320,
+          "height": 199
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-04-519.webp",
+          "width": 519,
+          "height": 323
+        }
+      ],
+      "source": "assets/publications/pub-04-original.png",
+      "sourceSha256": "bf2b48dcc8953dddff7e99c7291a5ce1bb1823c6c5191d1e4599301d207ecdd9"
+    },
+    {
+      "id": "pub-05",
+      "title": "Symmetric Interlayer Trions in 3R- and 2H-Stacked MoS₂ Bilayers",
+      "input": "assets/uploads/pub-05-thumb-520.webp",
+      "inputSize": [
+        520,
+        258
+      ],
+      "inputSha256": "6b050c58636c171ec16b39cc347736d5b4261c7fa384bc112e6c2fde9f273401",
+      "trim": [
+        0,
+        0,
+        520,
+        257
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-05-320.webp",
+          "width": 320,
+          "height": 158
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-05-520.webp",
+          "width": 520,
+          "height": 257
+        }
+      ],
+      "source": "assets/publications/pub-05-original.png",
+      "sourceSha256": "ac52dee94af9dfc450a0f1f5839cfa047475124f730e7b0c9cc875adc6b16b3b"
+    },
+    {
+      "id": "pub-06",
+      "title": "Wavelength-tunable Zn₁₋ₓMgₓO nanotube lasers on graphene films",
+      "input": "assets/publications/clean-thumbnails/pub-06-324.webp",
+      "inputSize": [
+        324,
+        315
+      ],
+      "inputSha256": "0cead854b4d7181ef8cc338f0a49f5ecc828793328c2b1e75a2ccb81323705a8",
+      "trim": [
+        23,
+        41,
+        318,
+        311
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-06-295.webp",
+          "width": 295,
+          "height": 270
+        }
+      ],
+      "source": "assets/publications/pub-06-fig4-reviewed.jpeg",
+      "sourceSha256": "27f7027a6ba0b8cdb407b5cc68dad6690514da129544f64cf0b3fb8e14562fa9"
+    },
+    {
+      "id": "pub-07",
+      "title": "Quadrupolar and Dipolar Excitons in Bilayer 2H-MoSe₂",
+      "input": "assets/publications/clean-thumbnails/pub-07-443.webp",
+      "inputSize": [
+        443,
+        591
+      ],
+      "inputSha256": "aae50ba2ea4aac4810e71f60e6dec02f2cb001420fc08b3386ffe6d2e8192a03",
+      "trim": [
+        0,
+        5,
+        438,
+        590
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-07-320.webp",
+          "width": 320,
+          "height": 427
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-07-438.webp",
+          "width": 438,
+          "height": 585
+        }
+      ],
+      "source": "assets/publications/pub-07-figure1.png",
+      "sourceSha256": "8c7b6e3f1664bc3a0d1d3b8a5a0e9402be7f17a7701995b9651feaceafb63497"
+    },
+    {
+      "id": "pub-08",
+      "title": "In-situ fabrication of GaN/short-range ordered BN heterostructure light-emitting diodes",
+      "input": "assets/uploads/pub-08-thumb-463.webp",
+      "inputSize": [
+        463,
+        430
+      ],
+      "inputSha256": "8f6a18b6265c305c855c174cab85d5a318da4182d1eaf339a164c8584be2d285",
+      "trim": [
+        0,
+        10,
+        462,
+        415
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-08-320.webp",
+          "width": 320,
+          "height": 281
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-08-462.webp",
+          "width": 462,
+          "height": 405
+        }
+      ],
+      "source": "assets/publications/pub-08-figure1-original.webp",
+      "sourceSha256": "4cafdacce010d43c85b9d4d305fcd252364d0fa41067452b9aa785960889c2c0"
+    },
+    {
+      "id": "pub-09",
+      "title": "MoTe₂ synaptic transistor and its application to physical reservoir computing",
+      "input": "assets/uploads/pub-09-thumb-603.webp",
+      "inputSize": [
+        603,
+        473
+      ],
+      "inputSha256": "e4253ec4aadebfb63279e5738ce3717873f997caa1cd410428c0d9a14d4da51f",
+      "trim": [
+        0,
+        0,
+        603,
+        473
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-09-320.webp",
+          "width": 320,
+          "height": 251
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-09-603.webp",
+          "width": 603,
+          "height": 473
+        }
+      ],
+      "source": "assets/publications/pub-09-graphical-abstract.jpg",
+      "sourceSha256": "f1511fc039d42add74bb983343d04f8f8bc0aa07373b68e63483f922a3b9529e"
+    },
+    {
+      "id": "pub-10",
+      "title": "Highly tunable ground and excited state excitonic dipoles in multilayer 2H-MoSe₂",
+      "input": "assets/publications/clean-thumbnails/pub-10-720.webp",
+      "inputSize": [
+        720,
+        437
+      ],
+      "inputSha256": "553b26272eaacc1133882e8ae925afef38b173353e171425053177334d9358eb",
+      "trim": [
+        0,
+        44,
+        702,
+        417
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-10-320.webp",
+          "width": 320,
+          "height": 170
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-10-702.webp",
+          "width": 702,
+          "height": 373
+        }
+      ],
+      "source": "assets/publications/pub-10-figure1-original.webp",
+      "sourceSha256": "4b15b732c736a8d92bcbb2fedf8f2b8a8db79d404c6b15199af5496bff745a82"
+    },
+    {
+      "id": "pub-11",
+      "title": "The interplay of field-tunable strongly correlated states in a multi-orbital moiré system",
+      "input": "assets/publications/clean-thumbnails/pub-11-418.webp",
+      "inputSize": [
+        418,
+        566
+      ],
+      "inputSha256": "31cafbf1b1e4a1e652abf3b7ef52c4816256fa456a9d985499162fa4c245dbe1",
+      "trim": [
+        14,
+        15,
+        386,
+        561
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-11-320.webp",
+          "width": 320,
+          "height": 470
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-11-372.webp",
+          "width": 372,
+          "height": 546
+        }
+      ],
+      "source": "assets/publications/pub-11-fig4-reviewed.png",
+      "sourceSha256": "88e97db5b894726b6c921664b191f7e2f76880696fbe2ee0645a2d8c5656f2c6"
+    },
+    {
+      "id": "pub-12",
+      "title": "Initial Growth Behavior in Catalyst-Free-Grown Vertical ZnO Nanorods on c-Al₂O₃, as Observed Using Synchrotron Radiation X-ray Scattering",
+      "input": "assets/uploads/pub-12-thumb-520.webp",
+      "inputSize": [
+        520,
+        179
+      ],
+      "inputSha256": "1b719776d1b698978823c84668009b697876da2b73a9d9c9f8eff6cfb70ce717",
+      "trim": [
+        0,
+        0,
+        518,
+        179
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-12-320.webp",
+          "width": 320,
+          "height": 111
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-12-518.webp",
+          "width": 518,
+          "height": 179
+        }
+      ],
+      "source": "assets/publications/pub-12-original.png",
+      "sourceSha256": "015f1ecae260994df9e5c3d3924f26ce31da77163345048d52984f429fb52e15"
+    },
+    {
+      "id": "pub-13",
+      "title": "Exciton-polarons in the presence of strongly correlated electronic states in a MoSe₂/WSe₂ moiré superlattice",
+      "input": "assets/publications/clean-thumbnails/pub-13-654.webp",
+      "inputSize": [
+        654,
+        842
+      ],
+      "inputSha256": "1efd41bfbb969e20df3086fb3cd1a97a54950418cf47550ac34d3469a6a382bd",
+      "trim": [
+        40,
+        0,
+        652,
+        832
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-13-320.webp",
+          "width": 320,
+          "height": 435
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-13-612.webp",
+          "width": 612,
+          "height": 832
+        }
+      ],
+      "source": "assets/publications/pub-13-figure2-original.png",
+      "sourceSha256": "b0af5a6dc25829f2f6bbe5d13a5a5a19f53a871fe06507872590a81c6147c643"
+    },
+    {
+      "id": "pub-14",
+      "title": "Nanoscale mapping of surface strain in tapered nanorods using confocal photoluminescence spectroscopy",
+      "input": "assets/publications/clean-thumbnails/pub-14-509.webp",
+      "inputSize": [
+        509,
+        369
+      ],
+      "inputSha256": "7455d00609ab44aedb3c13705ea042224b5347fe4f7756b3109536ef207ca833",
+      "trim": [
+        11,
+        0,
+        499,
+        369
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-14-320.webp",
+          "width": 320,
+          "height": 242
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-14-488.webp",
+          "width": 488,
+          "height": 369
+        }
+      ],
+      "source": "assets/publications/pub-14-fig5-reviewed.png",
+      "sourceSha256": "ac78bd24e1daa05f5c861bb944799f5e47a5454f9a5d2c085a03ce12811becc7"
+    },
+    {
+      "id": "pub-15",
+      "title": "IGZO synaptic thin-film transistors with embedded AlOₓ charge-trapping layers",
+      "input": "assets/uploads/pub-15-thumb-310.webp",
+      "inputSize": [
+        310,
+        140
+      ],
+      "inputSha256": "af7d19b389f5a9afab79f7abe5c23ba75cf5905ec7e023a1e4dd56b08bdac0de",
+      "trim": [
+        15,
+        17,
+        297,
+        132
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-15-282.webp",
+          "width": 282,
+          "height": 115
+        }
+      ],
+      "source": "assets/publications/pub-15-figure1.jpg",
+      "sourceSha256": "d872bd6d89fccdfd51964e73deb654f10162ce7c7a3735efdb35d02bb77fca5a"
+    },
+    {
+      "id": "pub-16",
+      "title": "2×N twin-field quantum key distribution network configuration based on polarization, wavelength, and time division multiplexing",
+      "input": "assets/uploads/pub-16-thumb-720.webp",
+      "inputSize": [
+        720,
+        622
+      ],
+      "inputSha256": "45b7cb3de04b4b642c5d7e8b1213d87bb5cda0fcf2b63a373dd3f9fcc326a739",
+      "trim": [
+        0,
+        0,
+        720,
+        622
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-16-320.webp",
+          "width": 320,
+          "height": 276
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-16-720.webp",
+          "width": 720,
+          "height": 622
+        }
+      ],
+      "source": "assets/publications/pub-16-figure2-original.webp",
+      "sourceSha256": "71ad95e73ed8ddedc203f3b628a68d099b97446f97ac35563c6ac0dee598886c"
+    },
+    {
+      "id": "pub-17",
+      "title": "Optical read-out of Coulomb staircases in a moiré superlattice via trapped interlayer trions",
+      "input": "assets/publications/clean-thumbnails/pub-17-720.webp",
+      "inputSize": [
+        720,
+        268
+      ],
+      "inputSha256": "fa7014ed307b5675f50474b1d89893f605bedc56043b1058c38b62806376e120",
+      "trim": [
+        20,
+        9,
+        697,
+        268
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-17-320.webp",
+          "width": 320,
+          "height": 122
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-17-677.webp",
+          "width": 677,
+          "height": 259
+        }
+      ],
+      "source": "assets/publications/pub-17-fig1-reviewed.png",
+      "sourceSha256": "80fb27bd7a94d72775d72df5dbb4d6a7e6f02c80a6e3518b3da65fd05200f3dd"
+    },
+    {
+      "id": "pub-18",
+      "title": "Electrically driven strain-induced deterministic single-photon emitters in a van der Waals heterostructure",
+      "input": "assets/publications/clean-thumbnails/pub-18-413.webp",
+      "inputSize": [
+        413,
+        227
+      ],
+      "inputSha256": "27ae9640ccfe6d009e57bf8ed61d59d197a7533a9d6bd59bc2d36a7279bcfd05",
+      "trim": [
+        0,
+        28,
+        399,
+        210
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-18-320.webp",
+          "width": 320,
+          "height": 146
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-18-399.webp",
+          "width": 399,
+          "height": 182
+        }
+      ],
+      "source": "assets/publications/pub-18-fig1.jpg",
+      "sourceSha256": "b3e6cb80476aa2407bb05b3c28ad326fbc8472c2bca457691e2666f0ea2c4c7c"
+    },
+    {
+      "id": "pub-19",
+      "title": "Moiré-Trapped Interlayer Trions in a Charge-Tunable WSe₂/MoSe₂ Heterobilayer",
+      "input": "assets/publications/clean-thumbnails/pub-19-464.webp",
+      "inputSize": [
+        464,
+        581
+      ],
+      "inputSha256": "e4dddebb7040a653e08ed08302d2d6726d03f33444d26ed979b79203bfd26572",
+      "trim": [
+        10,
+        45,
+        464,
+        581
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-19-320.webp",
+          "width": 320,
+          "height": 378
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-19-454.webp",
+          "width": 454,
+          "height": 536
+        }
+      ],
+      "source": "assets/publications/pub-19-fig4-reviewed.png",
+      "sourceSha256": "48efe450826937fd9beccff28480afd5d8bee1b7d2f4fdf32cf5f6077fc0b4b1",
+      "manualTrimReason": "Exclude isolated pale compression residue from the removed panel label; manually verified a two-pixel buffer before the first scientific glyph or image boundary."
+    },
+    {
+      "id": "pub-20",
+      "title": "Highly sensitive and flexible pressure sensors using position- and dimension-controlled ZnO nanotube arrays grown on graphene films",
+      "input": "assets/uploads/pub-20-thumb-313.webp",
+      "inputSize": [
+        313,
+        314
+      ],
+      "inputSha256": "af6f6cf4ba41d9e44a7ac94d9dd44881b8beb6b5fed556609eab4f8509045023",
+      "trim": [
+        0,
+        1,
+        310,
+        314
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-20-310.webp",
+          "width": 310,
+          "height": 313
+        }
+      ],
+      "source": "assets/publications/pub-20-fig1-reviewed.png",
+      "sourceSha256": "54cbd04db513b14e470ee3fd23665fd037eae2977e353837b5a1049af07d48b5"
+    },
+    {
+      "id": "pub-21",
+      "title": "Vertical monolithic integration of wide- and narrow-bandgap semiconductor nanostructures on graphene films",
+      "input": "assets/publications/clean-thumbnails/pub-21-685.webp",
+      "inputSize": [
+        685,
+        309
+      ],
+      "inputSha256": "1b2d61fcaf5f0660261d638674a387073b031a35d727b9b593a3f03ec4aab6b4",
+      "trim": [
+        0,
+        27,
+        685,
+        309
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-21-320.webp",
+          "width": 320,
+          "height": 132
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-21-685.webp",
+          "width": 685,
+          "height": 282
+        }
+      ],
+      "source": "assets/publications/pub-21-fig2-reviewed.png",
+      "sourceSha256": "dadde8295467ad521a87220fcd0ea43bb4678ca6b8da67ddb81da16f6c9e03c5"
+    },
+    {
+      "id": "pub-22",
+      "title": "Intracellular gallium nitride microrod laser",
+      "input": "assets/uploads/pub-22-thumb-288.webp",
+      "inputSize": [
+        288,
+        294
+      ],
+      "inputSha256": "9e0bf1bd6b440e9950aab63bb8ae68ead34dd43c48eede145b9ac9f96bd0ef5f",
+      "trim": [
+        1,
+        5,
+        288,
+        283
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-22-287.webp",
+          "width": 287,
+          "height": 278
+        }
+      ],
+      "source": "assets/publications/pub-22-fig1.png",
+      "sourceSha256": "82fa8b24bce04efac55bedf1f238a8d5cd75ab690d63f7021073eb0b69a806d5"
+    },
+    {
+      "id": "pub-23",
+      "title": "Individually addressable, high-density vertical nanotube Schottky diode crossbar array",
+      "input": "assets/uploads/pub-23-thumb-720.webp",
+      "inputSize": [
+        720,
+        268
+      ],
+      "inputSha256": "e1fe35cc2c639a17008790a07d9e3c443967e073d3282c4afcbd74e207ef0700",
+      "trim": [
+        0,
+        0,
+        720,
+        268
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-23-320.webp",
+          "width": 320,
+          "height": 119
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-23-720.webp",
+          "width": 720,
+          "height": 268
+        }
+      ],
+      "source": "assets/publications/pub-23-graphical-abstract-reviewed.png",
+      "sourceSha256": "69b6299f7f4210ae38fdbca8e082e9e485266e0811e64a5c545b1a0499e71a9d"
+    },
+    {
+      "id": "pub-24",
+      "title": "Highly energy-tunable quantum light from moiré-trapped excitons",
+      "input": "assets/publications/clean-thumbnails/pub-24-630.webp",
+      "inputSize": [
+        630,
+        531
+      ],
+      "inputSha256": "6c846b7027214112d4ffe89a130bc09e7be59914a066ce330a3de6462e59cdf5",
+      "trim": [
+        22,
+        60,
+        619,
+        524
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-24-320.webp",
+          "width": 320,
+          "height": 249
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-24-597.webp",
+          "width": 597,
+          "height": 464
+        }
+      ],
+      "source": "assets/publications/pub-24-fig3-reviewed.png",
+      "sourceSha256": "85d28627b9f4daf14f11bdbc925b47c72d65d175e4a2f92a63a5333f094bcb60"
+    },
+    {
+      "id": "pub-25",
+      "title": "Spin–layer locking of interlayer excitons trapped in moiré potentials",
+      "input": "assets/publications/clean-thumbnails/pub-25-452.webp",
+      "inputSize": [
+        452,
+        184
+      ],
+      "inputSha256": "55212c75011c133f1342e91b757f8d114ae4ea14ed92a2fda63e2d90f02d85e5",
+      "trim": [
+        26,
+        6,
+        405,
+        168
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-25-320.webp",
+          "width": 320,
+          "height": 137
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-25-379.webp",
+          "width": 379,
+          "height": 162
+        }
+      ],
+      "source": "assets/publications/pub-25-fig1.png",
+      "sourceSha256": "e67400f808a038a8c79b77258d760b661019705a25608e5f7aa722bff034c029"
+    },
+    {
+      "id": "pub-26",
+      "title": "ZnO nanotube waveguide arrays on graphene films for local optical excitation on biological cells",
+      "input": "assets/publications/clean-thumbnails/pub-26-169.webp",
+      "inputSize": [
+        169,
+        151
+      ],
+      "inputSha256": "164a97a6e2da4c83fd7531d53df0e0c4e65e7e641eec9d7c1a8116c9684f8fef",
+      "trim": [
+        0,
+        22,
+        169,
+        151
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-26-169.webp",
+          "width": 169,
+          "height": 129
+        }
+      ],
+      "source": "assets/publications/pub-26-fig1-reviewed.png",
+      "sourceSha256": "ad8b5a64445dc260a4f7b2d4035da9378b78d2b2a8e44f11dd7c97491f4285f5",
+      "manualTrimReason": "Exclude isolated pale compression residue from the removed panel label; manually verified a two-pixel buffer before the first scientific glyph or image boundary."
+    },
+    {
+      "id": "pub-27",
+      "title": "ZnO nanolasers on graphene films",
+      "input": "assets/publications/clean-thumbnails/pub-27-520.webp",
+      "inputSize": [
+        520,
+        272
+      ],
+      "inputSha256": "8eea8a2a31b43ea2f1d79ff792a64513416436aa6dd61bfa86b2a74303c77e09",
+      "trim": [
+        15,
+        32,
+        497,
+        268
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-27-320.webp",
+          "width": 320,
+          "height": 157
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-27-482.webp",
+          "width": 482,
+          "height": 236
+        }
+      ],
+      "source": "assets/publications/pub-27-original.jpeg",
+      "sourceSha256": "775a6e6fc8bd5146c157eba5a143b4d6c695a43b02f156f2dedcf4545015abda",
+      "manualTrimReason": "Exclude isolated pale compression residue from the removed panel label; manually verified a two-pixel buffer before the first scientific glyph or image boundary."
+    },
+    {
+      "id": "pub-28",
+      "title": "Flexible GaN Light-Emitting Diodes Using GaN Microdisks Epitaxial Laterally Overgrown on Graphene Dots",
+      "input": "assets/uploads/pub-28-thumb-433.webp",
+      "inputSize": [
+        433,
+        400
+      ],
+      "inputSha256": "468d226b4f8648a0a6a273d3c7bbf7b827ee90078d9b64c5b727b7fc441edf5f",
+      "trim": [
+        0,
+        0,
+        433,
+        400
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-28-320.webp",
+          "width": 320,
+          "height": 296
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-28-433.webp",
+          "width": 433,
+          "height": 400
+        }
+      ],
+      "source": "assets/publications/pub-28-original.jpg",
+      "sourceSha256": "d5b91a8c8d38ceca67d4c7cc1bf3600d3306c719c874c28e0023ec7054853415"
+    },
+    {
+      "id": "pub-29",
+      "title": "Real-time device-scale imaging of conducting filament dynamics in resistive switching materials",
+      "input": "assets/publications/clean-thumbnails/pub-29-697.webp",
+      "inputSize": [
+        697,
+        762
+      ],
+      "inputSha256": "2f5fb98a5193fca17ebf7e8efef99d71c03f6f70874f028ce291e6d7ff9d64da",
+      "trim": [
+        23,
+        30,
+        696,
+        760
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-29-320.webp",
+          "width": 320,
+          "height": 347
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-29-673.webp",
+          "width": 673,
+          "height": 730
+        }
+      ],
+      "source": "assets/publications/pub-29-fig5-reviewed.jpg",
+      "sourceSha256": "dce9841a5ee9b779ede257e743d5f2ab0e8ea8c8250a65cdd0195556cc5a4d92"
+    },
+    {
+      "id": "pub-30",
+      "title": "Distinctive mapping of strain and quantum size effects using depth-resolved photoluminescence in ZnO nanoneedles",
+      "input": "assets/publications/clean-thumbnails/pub-30-276.webp",
+      "inputSize": [
+        276,
+        266
+      ],
+      "inputSha256": "fbe6f970e00924c365387c74a4a183372885a9b79715b72452df7c6bd3489fb9",
+      "trim": [
+        0,
+        0,
+        276,
+        266
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-30-276.webp",
+          "width": 276,
+          "height": 266
+        }
+      ],
+      "source": "assets/publications/pub-30-fig4-reviewed.jpg",
+      "sourceSha256": "1a22762fc5d625d3d4276771129e725ab1fe4635c8f779e1da49deed6ec9dba1"
+    },
+    {
+      "id": "pub-31",
+      "title": "Microtube Light-Emitting Diode Arrays with Metal Cores",
+      "input": "assets/uploads/pub-31-thumb-520.webp",
+      "inputSize": [
+        520,
+        256
+      ],
+      "inputSha256": "3b236fa566cf60b8d2d93a232fd827c2bd29679bf44b6831ddee3f6a0d5f755a",
+      "trim": [
+        0,
+        0,
+        520,
+        256
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-31-320.webp",
+          "width": 320,
+          "height": 158
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-31-520.webp",
+          "width": 520,
+          "height": 256
+        }
+      ],
+      "source": "assets/publications/pub-31-original.png",
+      "sourceSha256": "75699cff736aec3252b2ffea6a20413f2dea49ff2dcb0085f9c192fe04a404fd"
+    },
+    {
+      "id": "pub-32",
+      "title": "Enhanced Second Harmonic Generation by Coupling to Exciton Ensembles in Ag-coated ZnO Nanorods",
+      "input": "assets/uploads/pub-32-thumb-520.webp",
+      "inputSize": [
+        520,
+        218
+      ],
+      "inputSha256": "6afbd175cdb6b85523e9c9c6b481dc44e41267ae51fddb6639c916786e4f9618",
+      "trim": [
+        0,
+        0,
+        519,
+        217
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-32-320.webp",
+          "width": 320,
+          "height": 134
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-32-519.webp",
+          "width": 519,
+          "height": 217
+        }
+      ],
+      "source": "assets/publications/pub-32-original.png",
+      "sourceSha256": "873a70a415caab1e010277a4343a560a36a2116d1d33808d1fd7e9370274fac1"
+    },
+    {
+      "id": "pub-33",
+      "title": "Nanoscale Single-Element Color Filters",
+      "input": "assets/uploads/pub-33-thumb-520.webp",
+      "inputSize": [
+        520,
+        354
+      ],
+      "inputSha256": "3693b285e9cd4106262b8ac81a9e5843a72caa9e2b9778abe567838454d69fa7",
+      "trim": [
+        0,
+        0,
+        518,
+        354
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-33-320.webp",
+          "width": 320,
+          "height": 219
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-33-518.webp",
+          "width": 518,
+          "height": 354
+        }
+      ],
+      "source": "assets/publications/pub-33-original.png",
+      "sourceSha256": "1c2b90ea341f397154631487c06ceb4e60f74fac55e106da41a11d3ca4675a80"
+    },
+    {
+      "id": "pub-34",
+      "title": "Growth and optical characteristics of high-quality ZnO thin films on graphene layers",
+      "input": "assets/publications/clean-thumbnails/pub-34-520.webp",
+      "inputSize": [
+        520,
+        219
+      ],
+      "inputSha256": "e5b68552959c4e77fe4682753f69ffb03f39e82b20c1091eaddf6eeef416a239",
+      "trim": [
+        0,
+        12,
+        520,
+        219
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-34-320.webp",
+          "width": 320,
+          "height": 127
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-34-520.webp",
+          "width": 520,
+          "height": 207
+        }
+      ],
+      "source": "assets/publications/pub-34-fig2-reviewed.jpg",
+      "sourceSha256": "8323765b017d14b328c096e155ebe1fae5dd0635507e53dba3d98065e30ed20d"
+    },
+    {
+      "id": "pub-35",
+      "title": "Architectured van der Waals epitaxy of ZnO nanostructures on hexagonal BN",
+      "input": "assets/publications/clean-thumbnails/pub-35-188.webp",
+      "inputSize": [
+        188,
+        162
+      ],
+      "inputSha256": "3481e0dc01896b05079f2abe551e8eb2b1cea3817077a4a4f0643ce4c34907d6",
+      "trim": [
+        0,
+        0,
+        188,
+        162
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-35-188.webp",
+          "width": 188,
+          "height": 162
+        }
+      ],
+      "source": "assets/publications/pub-35.jpg",
+      "sourceSha256": "0a6cc9c657e1a5e37bf77d3e754f2e7e1acdb0adc9947ea69d9c527daea59685"
+    },
+    {
+      "id": "pub-36",
+      "title": "Selective excitation of Fabry-Perot or whispering-gallery mode-type lasing in GaN microrods",
+      "input": "assets/publications/clean-thumbnails/pub-36-700.webp",
+      "inputSize": [
+        700,
+        588
+      ],
+      "inputSha256": "b963a29db8f10325a88ddc6564608224ec2d73ab40ac650bb03966116a12d680",
+      "trim": [
+        0,
+        11,
+        700,
+        584
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-36-320.webp",
+          "width": 320,
+          "height": 262
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-36-700.webp",
+          "width": 700,
+          "height": 573
+        }
+      ],
+      "source": "assets/publications/pub-36-figure4-original.jpeg",
+      "sourceSha256": "5725f9cf317e9a6c5d69e6d5cb483d64e3f2e7292f20af0409a40ecb6ba2fd40"
+    },
+    {
+      "id": "pub-37",
+      "title": "Photoluminescence of excitons and defects in ZnSe-based longitudinal twinning nanowires",
+      "input": "assets/publications/clean-thumbnails/pub-37-628.webp",
+      "inputSize": [
+        628,
+        634
+      ],
+      "inputSha256": "ea43135a73908ab69ee7ffeb86eb1da429b651859f3eecc4dec3416579a8fa1f",
+      "trim": [
+        2,
+        6,
+        628,
+        634
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-37-320.webp",
+          "width": 320,
+          "height": 321
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-37-626.webp",
+          "width": 626,
+          "height": 628
+        }
+      ],
+      "source": "assets/publications/pub-37.jpg",
+      "sourceSha256": "2bbcd6e0a24837dd9fcd7129f867053f32178a32b5a61dd587b07b70838c90e8"
+    },
+    {
+      "id": "pub-38",
+      "title": "Twinning effect on photoluminescence spectra of ZnSe nanowires",
+      "input": "assets/publications/clean-thumbnails/pub-38-243.webp",
+      "inputSize": [
+        243,
+        214
+      ],
+      "inputSha256": "4a9da8bb9f037ea031047628bc5338b9b0b08c7f93092c485a265000fa3910ac",
+      "trim": [
+        0,
+        0,
+        243,
+        214
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-38-243.webp",
+          "width": 243,
+          "height": 214
+        }
+      ],
+      "source": "assets/publications/pub-38-original.jpeg",
+      "sourceSha256": "254eadee662223f38d0318af427f6f5fbd3214049c01bf5dd15d064a79987128"
+    },
+    {
+      "id": "pub-39",
+      "title": "Growth and characterizations of GaN micro-rods on graphene films for flexible light emitting diodes",
+      "input": "assets/publications/clean-thumbnails/pub-39-344.webp",
+      "inputSize": [
+        344,
+        221
+      ],
+      "inputSha256": "4e6c1471a79d09c6721e18871ac277f3f9c58118e92970340736033ecdc4d4b4",
+      "trim": [
+        22,
+        0,
+        344,
+        221
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-39-320.webp",
+          "width": 320,
+          "height": 220
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-39-322.webp",
+          "width": 322,
+          "height": 221
+        }
+      ],
+      "source": "assets/publications/pub-39-fig3-reviewed.jpg",
+      "sourceSha256": "52e01840fd7cea988b445638d8cac287df96eed4a6f4844a0eb9840f168cb6ac",
+      "manualTrimReason": "Exclude isolated pale compression residue from the removed panel label; manually verified a two-pixel buffer before the first scientific glyph or image boundary."
+    },
+    {
+      "id": "pub-40",
+      "title": "Stimulated Emission Features of Bound Excitons in ZnO Nanotubes",
+      "input": "assets/publications/clean-thumbnails/pub-40-470.webp",
+      "inputSize": [
+        470,
+        469
+      ],
+      "inputSha256": "7b9670429836a6d9a42eeef5d685215d0f5b078094c705aa4892a4f914c042db",
+      "trim": [
+        0,
+        0,
+        470,
+        469
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-40-320.webp",
+          "width": 320,
+          "height": 319
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-40-470.webp",
+          "width": 470,
+          "height": 469
+        }
+      ],
+      "source": "assets/publications/pub-40-figure1-original.png",
+      "sourceSha256": "ff2d253593c73564b62a87b8fcbf91b85d5f6f1690b28db8146282c755c18acb"
+    },
+    {
+      "id": "pub-41",
+      "title": "ZnSe-Based Longitudinal Twinning Nanowires",
+      "input": "assets/uploads/pub-41-thumb-623.webp",
+      "inputSize": [
+        623,
+        567
+      ],
+      "inputSha256": "8fb7a3e040348ffaf0fee1e4abd7bcd2e765c4870838b08176e75d8136792a51",
+      "trim": [
+        0,
+        0,
+        623,
+        567
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-41-320.webp",
+          "width": 320,
+          "height": 291
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-41-623.webp",
+          "width": 623,
+          "height": 567
+        }
+      ],
+      "source": "assets/publications/pub-41-graphical-abstract-reviewed.jpg",
+      "sourceSha256": "d7c2b33436e422acfb5675ccda6c5ce346605cb6799807e00085f6d8c9155866"
+    },
+    {
+      "id": "pub-42",
+      "title": "Epitaxial GaN Microdisk Lasers Grown on Graphene Microdots",
+      "input": "assets/uploads/pub-42-thumb-520.webp",
+      "inputSize": [
+        520,
+        242
+      ],
+      "inputSha256": "c582845964412b4f0bbc95bebe5a2a7c521b07f3a7f966552a7b37a525921784",
+      "trim": [
+        0,
+        0,
+        520,
+        242
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-42-320.webp",
+          "width": 320,
+          "height": 149
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-42-520.webp",
+          "width": 520,
+          "height": 242
+        }
+      ],
+      "source": "assets/publications/pub-42-original.png",
+      "sourceSha256": "721a111589c603cab0b882e0f9f1a65ef7a30a7cc468e844dfa27ad7c391f63f"
+    },
+    {
+      "id": "pub-43",
+      "title": "High-quality GaN films grown on chemical vapor-deposited graphene films",
+      "input": "assets/uploads/pub-43-thumb-331.webp",
+      "inputSize": [
+        331,
+        280
+      ],
+      "inputSha256": "7f86336c360bd2d97473bb01e87060a664fecd0deb93cb778ce3a0054d6c367f",
+      "trim": [
+        0,
+        0,
+        331,
+        277
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-43-320.webp",
+          "width": 320,
+          "height": 268
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-43-331.webp",
+          "width": 331,
+          "height": 277
+        }
+      ],
+      "source": "assets/publications/pub-43.jpg",
+      "sourceSha256": "7c03e0b77a875500d182939ec8fbdfb5d5ea1a7cb21c8d8a73e830a9151ac047"
+    },
+    {
+      "id": "pub-44",
+      "title": "Position- and Morphology-Controlled ZnO Nanostructures Grown on Graphene Layers",
+      "input": "assets/uploads/pub-44-thumb-312.webp",
+      "inputSize": [
+        312,
+        156
+      ],
+      "inputSha256": "014c0952dd0a37467c3ac1545187fe05c394b8f76a7d69d269f5952c51efaa43",
+      "trim": [
+        0,
+        0,
+        312,
+        156
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-44-312.webp",
+          "width": 312,
+          "height": 156
+        }
+      ],
+      "source": "assets/publications/pub-44-original.jpg",
+      "sourceSha256": "2b2b9973be3a40a2beca29b4c483655048437f1a641a37b84e2ac85fecc23f44"
+    },
+    {
+      "id": "pub-45",
+      "title": "Tunable Catalytic Alloying Eliminates Stacking Faults in Compound Semiconductor Nanowires",
+      "input": "assets/uploads/pub-45-thumb-520.webp",
+      "inputSize": [
+        520,
+        219
+      ],
+      "inputSha256": "a41ec8c2b0a3d3c8a01f0c7668d970166f75909737b01e8996356709ff891750",
+      "trim": [
+        1,
+        0,
+        520,
+        219
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-45-320.webp",
+          "width": 320,
+          "height": 135
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-45-519.webp",
+          "width": 519,
+          "height": 219
+        }
+      ],
+      "source": "assets/publications/pub-45-original.png",
+      "sourceSha256": "2ee6754457576d60522bd3318f2e27fa9b8dd390a531f53118e9dff11fc665eb"
+    },
+    {
+      "id": "pub-46",
+      "title": "GaN/ZnO Nanotube Heterostructure Light-Emitting Diodes Fabricated on Si",
+      "input": "assets/publications/clean-thumbnails/pub-46-720.webp",
+      "inputSize": [
+        720,
+        421
+      ],
+      "inputSha256": "9bd1d46daaf2644d257cf5e7df39fb253cdda910c55e3e7e4634db9dc40b9680",
+      "trim": [
+        0,
+        3,
+        720,
+        421
+      ],
+      "output": [
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-46-320.webp",
+          "width": 320,
+          "height": 186
+        },
+        {
+          "src": "assets/publications/normalized-thumbnails/pub-46-720.webp",
+          "width": 720,
+          "height": 418
+        }
+      ],
+      "source": "assets/publications/pub-46-fig2.gif",
+      "sourceSha256": "63972979fb71a76c692082fe31569157196dd9dc56b0c1bade44d68691594269"
+    }
+  ]
+}
