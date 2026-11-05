@@ -82,10 +82,10 @@ function editContext(data, enabled = false) {
 
 
 function header(data,page,edit) {
+ if(page==='404')return '';
  const member=['people','students'].includes(page),highlights=['news','activities'].includes(page)||page.startsWith('post-');
  const prefix=page==='404'?'/':'';
  const brand=`<a class="brand" href="${prefix}index.html" aria-label="${e(data.site.title)} — Home"><span${edit('/site/group','text','연구 그룹명')}>${e(data.site.group)}</span><small>@ Sogang Univ.</small></a>`;
- if(page==='404')return `<header id="top" class="site-header"><div class="container header-inner">${brand}</div></header>`;
  const link=(id,label,state=page===id?' aria-current="page"':'')=>`<a href="${prefix}${id}.html"${state}>${label}</a>`;
  const group=(mobile,id,label,active,first,children)=>mobile
   ?`<div class="nav-item"><span class="nav-group-label${active?' section-current':''}" id="mobile-nav-${id}">${label}</span><div class="nav-dropdown" role="group" aria-labelledby="mobile-nav-${id}">${children}</div></div>`
@@ -103,6 +103,7 @@ function header(data,page,edit) {
 }
 
 function footer(data,page,edit) {
+ if(page==='404')return '';
  const contactHref=page==='404'?'/join.html#top':'join.html#top';
  return `<footer class="site-footer"><div class="container footer-inner"><a class="footer-contact" href="${contactHref}"><span class="footer-affiliation"${edit('/site/affiliation','text','소속')}>${e(data.site.affiliation)}</span><span class="footer-address"${edit('/site/address','text','연구실 주소')}>${e(data.site.address)}</span></a><span class="copyright">© ${new Date().getUTCFullYear()} <span${edit('/site/group','text','연구 그룹명')}>${e(data.site.group)}</span></span></div></footer>`;
 }
