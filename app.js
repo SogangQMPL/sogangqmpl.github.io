@@ -146,6 +146,7 @@ function connectArchiveReturn(){
 function connectResearchNavigation(){
  const nav=document.querySelector('.research-jump');
  if(!nav)return;
+ const layout=nav.parentElement;
  const areas=[...nav.querySelectorAll('a[data-area]')].map(link=>({
   link,
   section:document.getElementById(link.dataset.area),
@@ -155,7 +156,14 @@ function connectResearchNavigation(){
  let frame=null,currentLink=null;
  function updateCurrentArea(){
   frame=null;
-  const readingLine=mobileNavigation.matches?Math.max(60,nav.getBoundingClientRect().bottom+24):60;
+  // The flag, its gap to the article, and its focus outline must fit in the actual gutter.
+  const gutter=mobileNavigation.matches?0:layout.getBoundingClientRect().left;
+  const rail=gutter>=188?'full':gutter>=116?'compact':null;
+  if(rail!==layout.getAttribute('data-research-rail')){
+   if(rail)layout.setAttribute('data-research-rail',rail);
+   else layout.removeAttribute('data-research-rail');
+  }
+  const readingLine=rail?60:Math.max(60,nav.getBoundingClientRect().bottom+24);
   const root=document.documentElement;
   const atBottom=window.scrollY>0&&root.scrollHeight-root.clientHeight-window.scrollY<=2;
   const current=atBottom?areas.at(-1):areas.findLast(area=>area.section.getBoundingClientRect().top<=readingLine)||areas[0];
