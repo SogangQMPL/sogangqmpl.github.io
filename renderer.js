@@ -100,8 +100,9 @@ function header(data,page,edit) {
  </div><dialog id="mobile-navigation" class="mobile-menu" aria-labelledby="mobile-menu-title"><div class="mobile-menu-heading"><h2 id="mobile-menu-title">Menu</h2><button class="mobile-menu-close" type="button" aria-label="Close menu" autofocus><span aria-hidden="true">×</span></button></div><nav class="mobile-menu-links" aria-label="Mobile navigation">${navigation(true)}</nav></dialog></header>`;
 }
 
-function footer(data,edit) {
- return `<footer class="site-footer"><div class="container footer-inner"><span class="footer-affiliation"${edit('/site/affiliation','text','소속')}>${e(data.site.affiliation)}</span><div class="footer-contact"><span class="footer-address"${edit('/site/address','text','연구실 주소')}>${e(data.site.address)}</span><span class="footer-email"${edit('/site/email','email','대표 이메일')}>${mail(data.site.email)}</span><span class="copyright">© ${new Date().getUTCFullYear()}</span></div></div></footer>`;
+function footer(data,page,edit) {
+ const contactHref=page==='404'?'/join.html#contact-heading':'join.html#contact-heading';
+ return `<footer class="site-footer"><div class="container footer-inner"><span class="footer-affiliation"${edit('/site/affiliation','text','소속')}>${e(data.site.affiliation)}</span><div class="footer-contact"><a class="footer-address" href="${contactHref}"${edit('/site/address','text','연구실 주소')}>${e(data.site.address)}</a><span class="footer-email"${edit('/site/email','email','대표 이메일')}>${mail(data.site.email)}</span><span class="copyright">© ${new Date().getUTCFullYear()}</span></div></div></footer>`;
 }
 function publicationAuthors(p) {
  const authors=Array.isArray(p.authors)?p.authors.join(', '):String(p.authors||'');
@@ -379,7 +380,7 @@ function joinPage(data,page,edit) {
  return `<main id="main" tabindex="-1" class="container page-layout interior">${pageIntro('Join Us','')}
    <section class="join-copy"${edit.item('/join','모집 안내')}><h2 lang="ko"${edit('/join/title','text','모집 제목')}>${e(data.join.title)}</h2><p lang="ko"${edit('/join/description','multiline','모집 안내 내용')}>${e(data.join.description)}</p><p${edit('/site/email','email','대표 이메일')}>${mail(data.site.email)}</p></section>
    <section class="contact-details" aria-labelledby="contact-heading">
-    <h2 id="contact-heading">Contact</h2>
+    <h2 id="contact-heading" tabindex="-1">Contact</h2>
     <div class="contact-layout">
      <div><p>Hyeonjun Baek</p><p${edit('/site/affiliation','text','소속')}>${e(data.site.affiliation)}</p><p${edit('/site/address','text','연구실 주소')}>${e(data.site.address)}</p>${data.join.office?`<p${edit('/join/office','text','교수실')}>Office: ${e(data.join.office)}</p>`:''}${data.join.laboratory?`<p${edit('/join/laboratory','text','실험실')}>Laboratory: ${e(data.join.laboratory)}</p>`:''}</div>
      <figure class="contact-map">
@@ -396,5 +397,5 @@ export function render(data, page='index', options={}) {
  const appearance=appearanceCSS(data);
  const content={index:home,research:researchPage,people:peoplePage,students:studentsPage,publications:publicationsPage,news:newsPage,activities:activitiesPage,join:joinPage,'404':notFoundPage};
  const showViewer=page==='publications'||page==='research'||page.startsWith('post-');
- return (appearance?`<style data-site-appearance>${appearance}</style>`:'')+header(data,page,edit)+(page.startsWith('post-')?postPage(data,page,edit):(content[page]||home)(data,page,edit))+footer(data,edit)+(showViewer?figureViewer:'');
+ return (appearance?`<style data-site-appearance>${appearance}</style>`:'')+header(data,page,edit)+(page.startsWith('post-')?postPage(data,page,edit):(content[page]||home)(data,page,edit))+footer(data,page,edit)+(showViewer?figureViewer:'');
 }
