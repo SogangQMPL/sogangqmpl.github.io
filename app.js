@@ -170,7 +170,7 @@ function connectResearchNavigation(){
   }
   const root=document.documentElement;
   if(rail){
-   // Use a stable inset when subtopics expand, and allow the rail itself to scroll in short windows.
+   // Keep the rail at its initial inset and let it scroll in short windows.
    const top=Math.max(0,Math.min(layoutBounds.top+window.scrollY,root.clientHeight-160));
    const inset=`${Math.round(top)}px`;
    if(nav.style.getPropertyValue('--research-rail-top')!==inset)nav.style.setProperty('--research-rail-top',inset);
@@ -182,12 +182,6 @@ function connectResearchNavigation(){
    currentLink?.removeAttribute('aria-current');
    currentLink=current.link;
    currentLink.setAttribute('aria-current','location');
-  }
-  for(const area of areas){
-   if(!area.topics.length)continue;
-   if(!rail){area.link.removeAttribute('aria-expanded');continue;}
-   const expanded=String(area===current);
-   if(area.link.getAttribute('aria-expanded')!==expanded)area.link.setAttribute('aria-expanded',expanded);
   }
   const topic=rail?(atBottom?current.topics.at(-1):current.topics.findLast(item=>item.section.getBoundingClientRect().top<=readingLine)):null;
   const topicLink=topic?.link||null;
