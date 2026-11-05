@@ -185,15 +185,13 @@ function postInline(block) {
   return text;
  }).join('');
 }
-function postBlock(block,edit,path,legacyField='',coverThumbnail) {
+function postBlock(block,edit,path,legacyField='') {
  if(block.type==='image'){
   const src=safeURL(block.src);if(!src)return '';const fullSrc=safeURL(block.fullSrc)||src;
   const size=Number(block.width)>0&&Number(block.height)>0?` width="${Number(block.width)}" height="${Number(block.height)}"`:'';
   const imagePath=legacyField?path+'/image':path+'/src',descriptor=legacyField?{altPath:path+'/imageAlt'}:{altPath:path+'/alt',widthPath:path+'/width',heightPath:path+'/height',fullSrcPath:path+'/fullSrc'};
   const photo=`<img src="${e(src)}" alt="${e(block.alt||'')}"${size} loading="lazy" decoding="async"${edit(imagePath,'image','본문 사진',descriptor)}>`;
-  const cover=thumbnailImage(coverThumbnail,src,'(max-width: 600px) calc(100vw - 48px), calc(100vw - 56px)');
-  const responsivePhoto=cover?.responsive?`<picture><source media="(max-width: 800px)"${cover.responsive}>${photo}</picture>`:photo;
-  return `<figure class="post-photo"${legacyField?'':edit.item(path,'본문 사진')}>${zoomLink({image:fullSrc,title:block.alt||'Photo',label:block.caption,width:fullSrc===src?block.width:undefined,height:fullSrc===src?block.height:undefined},responsivePhoto)}${block.caption?`<figcaption${language(block.caption)}${edit(path+'/caption','text','사진 아래 설명')}>${e(block.caption)}</figcaption>`:''}</figure>`;
+  return `<figure class="post-photo"${legacyField?'':edit.item(path,'본문 사진')}>${zoomLink({image:fullSrc,title:block.alt||'Photo',label:block.caption,width:fullSrc===src?block.width:undefined,height:fullSrc===src?block.height:undefined},photo)}${block.caption?`<figcaption${language(block.caption)}${edit(path+'/caption','text','사진 아래 설명')}>${e(block.caption)}</figcaption>`:''}</figure>`;
  }
  const lang=language(block.text||(block.children||[]).map(run=>run.text).join(' '));
  const attributes=edit(legacyField?path+'/'+legacyField:path,legacyField?'multiline':'richtext',block.type==='heading'?'본문 소제목':block.type==='quote'?'인용문':block.type==='list'?'본문 목록':'게시물 본문')+(legacyField?'':edit.item(path,'본문 내용'));
@@ -218,7 +216,7 @@ function postPage(data,page,edit) {
   if(!older&&!newer)return '';
   return `<nav class="post-navigation" aria-label="More ${e((filtered?post.category:label).toLowerCase())} posts"${filtered?' data-filtered-posts hidden':''}>${adjacent(older,'previous','Older post')}${adjacent(newer,'next','Newer post')}</nav>`;
  };
- const body=blocks.map((block,index)=>postBlock(block,edit,hasContent?path+'/content/'+index:path,hasContent?'':post.body?'body':'summary',post.imageThumbnail)).join('');
+ const body=blocks.map((block,index)=>postBlock(block,edit,hasContent?path+'/content/'+index:path,hasContent?'':post.body?'body':'summary')).join('');
  return `<main id="main" tabindex="-1" class="container page-layout post-page" data-post-category="${e(post.category)}"><a class="post-back" href="${archive}.html">← ${label}</a><article class="post"${edit.item(path,'게시물')}><header class="post-header"><p class="post-category"${edit(path+'/category','text','게시물 분류',{options:['Awards','Conferences','Activities']})}>${e(post.category)}</p><h1${language(post.title)}${edit(path+'/title','text','게시물 제목')}>${e(post.title)}</h1><time datetime="${e(post.date)}"${edit(path+'/date','date','게시 날짜')}>${e(date(post.date))}</time></header><div class="post-body"${edit.collection(path+'/content','게시물 내용')}>${body}</div></article>${navigation(siblings)}${activity?'':navigation(siblings.filter(n=>n.category===post.category),true)}<a class="post-back post-back-bottom" href="${archive}.html">All ${label.toLowerCase()}</a></main>`;
 }
 

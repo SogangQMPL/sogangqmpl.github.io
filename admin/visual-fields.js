@@ -618,7 +618,7 @@ export function renderInspector({root, data, selection, onChange, stageImage, on
       add('url', '논문 · 원고 링크 (선택)', 'url');
     } else if (parts[0] === 'news') {
       add('title', '게시물 제목'); add('date', '날짜', 'date', {hint:'예: 2026-10-27'}); add('category', '분류', 'text', {options:['Awards','Conferences','Activities']}); add('excerpt', '목록 소개 (선택)', 'multiline', {hint:'비우면 본문 앞부분을 표시합니다. 본문은 화면에서 문단을 선택해 편집하세요.'}); image('image', '목록 대표 사진', {altPath:base+'/imageAlt'}); if (!value.content?.length) add('body', '본문', 'multiline');
-      target.append(element(doc, 'p', '아래에서 문단과 사진을 추가하고, 화면에서도 직접 선택해 편집할 수 있습니다.', 'record-note'));
+      target.append(element(doc, 'p', '본문에는 자르지 않은 전체 사진을 넣으세요. 목록 썸네일은 자동으로 4:3으로 표시합니다. 대표 사진을 비우면 본문 첫 사진을 사용합니다.', 'record-note'));
     } else if (parts[0] === 'research' && parts.at(-2) === 'detailSections') {
       add('title', '소제목 (선택)'); add('body', '상세 설명', 'multiline');
     } else if (parts[0] === 'research' && parts[2] === 'topics' && parts.length === 4) {
