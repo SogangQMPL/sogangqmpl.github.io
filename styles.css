@@ -134,9 +134,10 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 }
 .research-layout[data-research-rail] > :is(.research-jump,.research-groups){grid-area:1/1}
 .research-layout[data-research-rail] .research-jump{
- top:var(--research-rail-top,24px);align-self:start;justify-self:start;flex-direction:column;gap:8px;padding:0;
- width:var(--research-rail-width);margin-inline-start:calc(0px - var(--research-rail-width) - 12px);margin-block-start:var(--research-rail-shift,0px);
- background:transparent;max-height:calc(100dvh - var(--research-rail-top,24px) - 16px);
+ position:fixed;z-index:5;top:var(--research-rail-top,24px);left:var(--research-rail-left,8px);
+ align-self:start;justify-self:start;flex-direction:column;gap:8px;padding:0;
+ width:var(--research-rail-width);margin:0;
+ background:var(--paper);max-height:calc(100dvh - var(--research-rail-top,24px) - 16px);
  overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scroll-padding-block:6px;
 }
 .research-layout[data-research-rail] .research-jump-label{
