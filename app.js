@@ -147,6 +147,8 @@ function connectResearchNavigation(){
  const nav=document.querySelector('.research-jump');
  if(!nav)return;
  const layout=nav.parentElement;
+ const researchPage=nav.closest('main');
+ const footer=document.querySelector('.site-footer');
  const areas=[...nav.querySelectorAll('a[data-area]')].map(link=>({
   link,
   section:document.getElementById(link.dataset.area),
@@ -170,16 +172,20 @@ function connectResearchNavigation(){
   }
   const root=document.documentElement;
   if(rail){
-   // Anchor to the viewport at its original position, including over the footer.
+   // Keep the original viewport position until the rail reaches the footer.
    const railWidth=parseFloat(getComputedStyle(layout).getPropertyValue('--research-rail-width'));
    const left=`${Math.round(layoutBounds.left-railWidth-12)}px`;
    if(nav.style.getPropertyValue('--research-rail-left')!==left)nav.style.setProperty('--research-rail-left',left);
-   // Lift only to fit short windows; page scrolling must never move the rail.
+   // Size from the normal inset; footer clearance must not change max-height.
    const startTop=layoutBounds.top+window.scrollY;
    const navHeight=Math.ceil(Math.max(nav.scrollHeight,nav.getBoundingClientRect().height));
-   const top=Math.max(16,Math.min(startTop,root.clientHeight-navHeight-16));
-   const inset=`${Math.round(top)}px`;
+   const top=Math.round(Math.max(16,Math.min(startTop,root.clientHeight-navHeight-16)));
+   const inset=`${top}px`;
    if(nav.style.getPropertyValue('--research-rail-top')!==inset)nav.style.setProperty('--research-rail-top',inset);
+   const renderedHeight=nav.getBoundingClientRect().height;
+   const shift=footer?Math.min(0,Math.floor(footer.getBoundingClientRect().top-16-top-renderedHeight)):0;
+   const footerShift=`${shift}px`;
+   if(nav.style.getPropertyValue('--research-rail-footer-shift')!==footerShift)nav.style.setProperty('--research-rail-footer-shift',footerShift);
   }else{
    const offset=`${Math.ceil(nav.getBoundingClientRect().height)}px`;
    if(layout.style.getPropertyValue('--research-jump-offset')!==offset)layout.style.setProperty('--research-jump-offset',offset);
@@ -217,6 +223,8 @@ function connectResearchNavigation(){
  if(typeof ResizeObserver==='function'){
   const observer=new ResizeObserver(scheduleUpdate);
   observer.observe(nav);
+  if(researchPage)observer.observe(researchPage);
+  if(footer)observer.observe(footer);
   for(const area of areas)observer.observe(area.section);
  }
 }
