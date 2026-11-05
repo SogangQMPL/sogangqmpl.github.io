@@ -107,7 +107,7 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 .research-jump a[aria-current=location]{flex-grow:1.2;max-width:178px;color:#fff;font-weight:650}
 .research-jump a[aria-current=location]::before{background:var(--area-color)}
 .research-jump a:focus-visible{outline-offset:2px}
-.research-flag-number,.research-jump-short{display:none}
+.research-flag-number,.research-jump-short,.research-jump-label{display:none}
 .research-layout:not([data-research-rail]) :is(.research-group,.research-topic){scroll-margin-top:52px}
 @media(max-width:600px){
  .research-jump-full{display:none}
@@ -123,6 +123,10 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
  top:var(--research-rail-top,24px);align-self:start;justify-self:start;flex-direction:column;gap:8px;padding:0;
  width:var(--research-rail-width);margin-inline-start:calc(0px - var(--research-rail-width) - 12px);
  background:transparent;
+}
+.research-layout[data-research-rail] .research-jump-label{
+ display:block;margin-inline-end:8px;padding:0 0 6px 3px;border-bottom:1px solid var(--line);
+ color:var(--navy);font-size:14px;font-weight:650;line-height:1.35;letter-spacing:-.015em;
 }
 .research-layout[data-research-rail] .research-jump a{
  flex:none;max-width:none;width:calc(100% - 18px);min-height:52px;padding:8px 14px 8px 10px;
