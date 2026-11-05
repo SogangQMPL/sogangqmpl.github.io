@@ -384,7 +384,7 @@ function joinPage(data,page,edit) {
  const ricciHallDirections='https://www.google.com/maps/dir/?api=1&destination=Ricci%20Hall%2C%20Sogang%20University&destination_place_id=ChIJLceF_byYfDURSujk-1J2HtQ';
  const mailingAddresses=[['mailingAddressKo','국문 주소','ko'],['mailingAddressEn','English address','en']]
   .filter(([field])=>data.join[field]?.trim())
-  .map(([field,title,lang])=>`<section class="contact-address-block" lang="${lang}"><h3>${title}</h3><address${edit('/join/'+field,'multiline',title)}>${e(data.join[field]).replaceAll('\n','<br>')}</address></section>`).join('');
+  .map(([field,title,lang])=>`<section class="contact-address-block" lang="${lang}" aria-label="${title}"><address${edit('/join/'+field,'multiline',title)}>${e(data.join[field]).replaceAll('\n','<br>')}</address></section>`).join('');
  return `<main id="main" tabindex="-1" class="container page-layout interior">${pageIntro('Join Us','')}
    <section class="join-copy"${edit.item('/join','모집 안내')}><h2 lang="ko"${edit('/join/title','text','모집 제목')}>${e(data.join.title)}</h2><p lang="ko"${edit('/join/description','multiline','모집 안내 내용')}>${e(data.join.description)}</p><p${edit('/site/email','email','대표 이메일')}>${mail(data.site.email)}</p></section>
    <section class="contact-details" aria-labelledby="contact-heading">
