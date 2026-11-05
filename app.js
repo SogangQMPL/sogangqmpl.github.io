@@ -157,14 +157,21 @@ function connectResearchNavigation(){
  function updateCurrentArea(){
   frame=null;
   // The flag, its gap to the article, and its focus outline must fit in the actual gutter.
-  const gutter=mobileNavigation.matches?0:layout.getBoundingClientRect().left;
+  const layoutBounds=layout.getBoundingClientRect();
+  const gutter=mobileNavigation.matches?0:layoutBounds.left;
   const rail=gutter>=188?'full':gutter>=116?'compact':null;
   if(rail!==layout.getAttribute('data-research-rail')){
    if(rail)layout.setAttribute('data-research-rail',rail);
    else layout.removeAttribute('data-research-rail');
   }
-  const readingLine=rail?60:Math.max(60,nav.getBoundingClientRect().bottom+24);
   const root=document.documentElement;
+  if(rail){
+   // Keep the rail at its unscrolled height, with room for all flags in short windows.
+   const top=Math.max(0,Math.min(layoutBounds.top+window.scrollY,root.clientHeight-nav.offsetHeight-24));
+   const inset=`${Math.round(top)}px`;
+   if(nav.style.getPropertyValue('--research-rail-top')!==inset)nav.style.setProperty('--research-rail-top',inset);
+  }
+  const readingLine=rail?60:Math.max(60,nav.getBoundingClientRect().bottom+24);
   const atBottom=window.scrollY>0&&root.scrollHeight-root.clientHeight-window.scrollY<=2;
   const current=atBottom?areas.at(-1):areas.findLast(area=>area.section.getBoundingClientRect().top<=readingLine)||areas[0];
   if(current.link===currentLink)return;
