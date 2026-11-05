@@ -111,7 +111,14 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 .research-flag-number{flex:none;font-size:11px;font-variant-numeric:tabular-nums}
 .research-jump-short{display:none}
 @media(width > 900px){
- .research-layout:has(>.research-jump){display:grid;grid-template-columns:168px minmax(0,1fr);gap:20px}
+ .research-layout:has(>.research-jump){
+  --rail-width:168px;
+  --rail-gap:20px;
+  --page-side-space:max(var(--page-gutter),calc((100vw - var(--page-width)) / 2));
+  --rail-outset:clamp(0px,calc(var(--page-side-space) - 20px),calc(var(--rail-width) + var(--rail-gap)));
+  display:grid;grid-template-columns:var(--rail-width) minmax(0,1fr);gap:var(--rail-gap);
+  margin-inline-start:calc(0px - var(--rail-outset));
+ }
  .research-groups{min-width:0}
 }
 @media(max-width:900px){
