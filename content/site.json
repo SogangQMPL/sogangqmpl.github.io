@@ -3791,7 +3791,9 @@
     "title": "대학원생·학부연구생 모집",
     "description": "참여 문의는 이메일로 보내주세요.",
     "office": "R1021",
-    "laboratory": "R303"
+    "laboratory": "R303",
+    "mailingAddressKo": "우편번호 04107\n서울특별시 마포구 백범로 35\n서강대학교 리치과학관(R관) 1021호\n물리학과 백현준 교수 귀하",
+    "mailingAddressEn": "Hyeonjun Baek\nDepartment of Physics, Sogang University\nRoom 1021, Ricci Hall (R Building)\n35 Baekbeom-ro, Mapo-gu\nSeoul 04107\nRepublic of Korea"
   },
   "provenance": {
     "auditedAt": "2026-11-01",
