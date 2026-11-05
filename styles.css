@@ -134,39 +134,33 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 }
 .research-layout[data-research-rail] > :is(.research-jump,.research-groups){grid-area:1/1}
 .research-layout[data-research-rail] .research-jump{
- position:fixed;z-index:5;top:var(--research-rail-top,24px);left:var(--research-rail-left,8px);
- align-self:start;justify-self:start;flex-direction:column;gap:0;padding:8px 6px 6px;
+ position:fixed;z-index:5;top:calc(var(--research-rail-top,24px) + var(--research-rail-footer-shift,0px));left:var(--research-rail-left,8px);
+ align-self:start;justify-self:start;flex-direction:column;gap:8px;padding:0;
  width:var(--research-rail-width);margin:0;
- border:1px solid #dce3eb;border-radius:6px;box-shadow:0 4px 16px #002e5d14;
  background:var(--paper);max-height:calc(100dvh - var(--research-rail-top,24px) - 16px);
  overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scroll-padding-block:6px;
 }
 .research-layout[data-research-rail] .research-jump-label{
- display:block;margin:0 3px 8px;padding:0 2px 8px;border-bottom:1px solid var(--line);
- color:var(--navy);font-size:13px;font-weight:600;line-height:1.4;letter-spacing:-.01em;
+ display:block;margin-inline-end:8px;padding:0 0 6px 3px;border-bottom:1px solid var(--line);
+ color:var(--navy);font-size:14px;font-weight:650;line-height:1.35;letter-spacing:-.015em;
 }
 .research-layout[data-research-rail] .research-jump-area{flex:none;width:100%;max-width:none}
-.research-layout[data-research-rail] .research-jump-area+.research-jump-area{margin-top:8px}
 .research-layout[data-research-rail] .research-area-link{
- flex:none;max-width:none;width:calc(100% - 4px);min-height:48px;padding:6px 10px 6px 8px;
- justify-content:flex-start;gap:6px;text-align:start;font-size:13px;font-weight:600;line-height:1.4;transition:width 160ms ease-out;
+ flex:none;max-width:none;width:calc(100% - 8px);min-height:52px;padding:8px 14px 8px 10px;
+ justify-content:flex-start;text-align:start;font-size:13px;transition:width 160ms ease-out;
 }
 .research-layout[data-research-rail] .research-area-link[aria-current=location]{width:100%}
 .research-layout[data-research-rail] .research-area-link::before{
- clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%);
+ clip-path:polygon(0 0,calc(100% - 8px) 0,100% 50%,calc(100% - 8px) 100%,0 100%);
 }
-.research-layout[data-research-rail=full] .research-flag-number{display:inline;flex:none;width:16px;font-size:10px;font-variant-numeric:tabular-nums;opacity:.8}
-.research-layout[data-research-rail] .research-topic-links{display:block;margin:4px 0 0 2px;padding:2px 0 2px 4px;border-left:1px solid var(--area-line)}
+.research-layout[data-research-rail=full] .research-flag-number{display:inline;flex:none;font-size:11px;font-variant-numeric:tabular-nums}
+.research-layout[data-research-rail] .research-topic-links{display:block;margin:4px 5px 0 3px;padding-left:6px;border-left:1px solid var(--area-line)}
 .research-area-link[aria-current=location]+.research-topic-links{background:var(--area-tint)}
 .research-topic-link{display:grid;grid-template-columns:20px minmax(0,1fr);align-items:center;gap:5px;min-height:44px;padding:5px 3px;color:var(--muted);font-size:12px;line-height:1.45;text-decoration:none;overflow-wrap:anywhere}
 .research-topic-number{font-size:11px;font-variant-numeric:tabular-nums}
 .research-topic-link:hover,.research-topic-link[aria-current=location]{color:var(--area-color);text-decoration:underline;text-underline-offset:3px}
 .research-topic-link[aria-current=location]{font-weight:600}
-.research-layout[data-research-rail] .research-topic-link{position:relative;padding-inline:3px 5px}
-.research-layout[data-research-rail] .research-topic-link:is(:hover,[aria-current=location]){text-decoration:none}
-.research-layout[data-research-rail] .research-topic-link:hover{background:#002e5d05}
-.research-layout[data-research-rail] .research-topic-link[aria-current=location]::before{content:'';position:absolute;left:-5px;top:8px;bottom:8px;width:2px;border-radius:2px;background:var(--area-color)}
-.research-layout[data-research-rail] .research-jump a:focus-visible{outline-offset:1px}
+.research-layout[data-research-rail] .research-jump a:focus-visible{outline-offset:-2px}
 @media(min-width:901px){
  .research-layout:not([data-research-rail]){--research-jump-offset:152px}
  .research-layout:not([data-research-rail]) .research-jump{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start;padding-block:6px 10px}
