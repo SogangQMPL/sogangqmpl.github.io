@@ -25,6 +25,10 @@ h2{font-size:24px;font-weight:550;letter-spacing:-.02em}
 h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 [hidden]{display:none!important}
 .container{width:calc(100% - var(--page-gutter)*2);max-width:var(--page-width);margin-inline:auto}
+@media(min-width:1360px){
+ .container{width:calc(100% - max(var(--page-gutter),188px)*2)}
+ .home .home-hero-title{font-size:clamp(48px,calc(7.5vw - 54px),60px)}
+}
 /* One outer frame for Home, subpages and individual posts. */
 .page-layout{padding-block:var(--layout-gap) 12px;flex:1}
 .site-header{border-bottom:1px solid var(--line)}
