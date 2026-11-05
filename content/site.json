@@ -3183,13 +3183,28 @@
           "text": "Yongju Jeong and Taegyu Jang also attended the conference."
         }
       ],
-      "image": "assets/posts/news-12-1-display.webp",
+      "image": "assets/posts/news-12-four-three-thumb.webp",
       "imageAlt": "Poster with layer schematics and photoluminescence plots for symmetric interlayer trions in stacked MoS₂.",
       "shareImage": {
-        "source": "assets/posts/news-12-1-display.webp",
-        "src": "assets/uploads/news-12-share.jpg",
-        "width": 795,
-        "height": 439
+        "source": "assets/posts/news-12-four-three-thumb.webp",
+        "src": "assets/posts/news-12-four-three-thumb-share.jpg",
+        "width": 584,
+        "height": 438
+      },
+      "imageThumbnail": {
+        "source": "assets/posts/news-12-four-three-thumb.webp",
+        "variants": [
+          {
+            "src": "assets/posts/news-12-four-three-thumb-420.webp",
+            "width": 420,
+            "height": 315
+          },
+          {
+            "src": "assets/posts/news-12-four-three-thumb-584.webp",
+            "width": 584,
+            "height": 438
+          }
+        ]
       }
     },
     {
@@ -3236,7 +3251,7 @@
           "caption": "Yongju Jeong — 2024 KPS Fall poster presentation."
         }
       ],
-      "image": "assets/posts/news-13-1-display.webp",
+      "image": "assets/posts/news-13-four-three-thumb.webp",
       "imageAlt": "Seongwon Gim presenting a poster at the 2024 KPS Fall Meeting.",
       "aliases": [
         "news-14"
@@ -3246,25 +3261,25 @@
         "https://baahyyjuu.wixsite.com/hyeonjun/post/2024-kps-fall-poster-presentation"
       ],
       "imageThumbnail": {
-        "source": "assets/posts/news-13-1-display.webp",
+        "source": "assets/posts/news-13-four-three-thumb.webp",
         "variants": [
           {
-            "src": "assets/uploads/news-13-thumb-420.webp",
+            "src": "assets/posts/news-13-four-three-thumb-420.webp",
             "width": 420,
-            "height": 258
+            "height": 315
           },
           {
-            "src": "assets/uploads/news-13-thumb-840.webp",
+            "src": "assets/posts/news-13-four-three-thumb-840.webp",
             "width": 840,
-            "height": 517
+            "height": 630
           }
         ]
       },
       "shareImage": {
-        "source": "assets/posts/news-13-1-display.webp",
-        "src": "assets/uploads/news-13-share.jpg",
-        "width": 1118,
-        "height": 688
+        "source": "assets/posts/news-13-four-three-thumb.webp",
+        "src": "assets/posts/news-13-four-three-thumb-share.jpg",
+        "width": 916,
+        "height": 687
       }
     },
     {
@@ -3507,13 +3522,28 @@
           "text": "Seongwon Gim presented a poster at the workshop."
         }
       ],
-      "image": "assets/posts/ceqmf-2nd-yongju-jeong-oral-display.webp",
+      "image": "assets/posts/news-2025-ceqmf-2nd-workshop-four-three-thumb.webp",
       "imageAlt": "Yongju Jeong delivering an oral presentation at the 2nd Workshop on Functional Quantum Matter.",
       "shareImage": {
-        "source": "assets/posts/ceqmf-2nd-yongju-jeong-oral-display.webp",
-        "src": "assets/uploads/news-2025-ceqmf-2nd-workshop-share.jpg",
+        "source": "assets/posts/news-2025-ceqmf-2nd-workshop-four-three-thumb.webp",
+        "src": "assets/posts/news-2025-ceqmf-2nd-workshop-four-three-thumb-share.jpg",
         "width": 1200,
-        "height": 1200
+        "height": 900
+      },
+      "imageThumbnail": {
+        "source": "assets/posts/news-2025-ceqmf-2nd-workshop-four-three-thumb.webp",
+        "variants": [
+          {
+            "src": "assets/posts/news-2025-ceqmf-2nd-workshop-four-three-thumb-420.webp",
+            "width": 420,
+            "height": 315
+          },
+          {
+            "src": "assets/posts/news-2025-ceqmf-2nd-workshop-four-three-thumb-840.webp",
+            "width": 840,
+            "height": 630
+          }
+        ]
       }
     },
     {
@@ -3539,13 +3569,28 @@
           "text": "Hyunjun Jo attended the 4th Applied Physics Academy (응용물리아카데미)."
         }
       ],
-      "image": "assets/posts/applied-physics-academy-4th-display.webp",
+      "image": "assets/posts/news-2025-applied-physics-academy-four-three-thumb.webp",
       "imageAlt": "Group photo from the 4th Applied Physics Academy.",
       "shareImage": {
-        "source": "assets/posts/applied-physics-academy-4th-display.webp",
-        "src": "assets/uploads/news-2025-applied-physics-academy-share.jpg",
-        "width": 804,
+        "source": "assets/posts/news-2025-applied-physics-academy-four-three-thumb.webp",
+        "src": "assets/posts/news-2025-applied-physics-academy-four-three-thumb-share.jpg",
+        "width": 600,
         "height": 450
+      },
+      "imageThumbnail": {
+        "source": "assets/posts/news-2025-applied-physics-academy-four-three-thumb.webp",
+        "variants": [
+          {
+            "src": "assets/posts/news-2025-applied-physics-academy-four-three-thumb-420.webp",
+            "width": 420,
+            "height": 315
+          },
+          {
+            "src": "assets/posts/news-2025-applied-physics-academy-four-three-thumb-600.webp",
+            "width": 600,
+            "height": 450
+          }
+        ]
       }
     }
   ],
