@@ -267,7 +267,9 @@ function researchPage(data,page,edit) {
  const areaLinks=data.research.map((area,index)=>{
   const shortTitle=Object.hasOwn(shortAreaTitles,area.title)?shortAreaTitles[area.title]:area.title;
   const number=String(index+1).padStart(2,'0');
-  return `<a href="#${e(area.id)}" data-area="${e(area.id)}" aria-label="${e(area.title)}"><span class="research-flag-number" aria-hidden="true">${number}</span><span class="research-jump-full">${e(area.title)}</span><span class="research-jump-short">${e(shortTitle)}</span></a>`;
+  const topics=(area.topics||[]).map((topic,topicIndex)=>`<li><a class="research-topic-link" href="#${e(topic.id)}" data-topic="${e(topic.id)}"><span class="research-topic-number" aria-hidden="true">${index+1}.${topicIndex+1}</span><span>${e(topic.title)}</span></a></li>`).join('');
+  const topicListID=`${area.id}-topic-navigation`;
+  return `<div class="research-jump-area" data-area="${e(area.id)}"><a class="research-area-link" href="#${e(area.id)}" data-area="${e(area.id)}" aria-label="${e(area.title)}"${topics?` aria-controls="${e(topicListID)}" aria-expanded="false"`:''}><span class="research-flag-number" aria-hidden="true">${number}</span><span class="research-jump-full">${e(area.title)}</span><span class="research-jump-short">${e(shortTitle)}</span></a>${topics?`<ul class="research-topic-links" id="${e(topicListID)}" aria-label="${e(area.title)} topics">${topics}</ul>`:''}</div>`;
  }).join('');
  const originalFigure=(image,path,legacy=false)=>{
   const src=safeURL(image.src);if(!src)return '';
