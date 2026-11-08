@@ -173,9 +173,10 @@ function connectResearchNavigation(){
   const root=document.documentElement;
   if(rail){
    const railWidth=parseFloat(getComputedStyle(layout).getPropertyValue('--research-rail-width'));
-   // Share spare gutter space between the screen edge and the article.
-   const gap=Math.min(48,Math.max(12,(gutter-railWidth)/2));
-   const left=`${Math.round(gutter-railWidth-gap)}px`;
+   // Give the article most of the extra space while keeping the flags inside the screen.
+   const spareGutter=gutter-railWidth;
+   const gap=Math.min(80,spareGutter-8,spareGutter*.75);
+   const left=`${Math.round(spareGutter-gap)}px`;
    if(nav.style.getPropertyValue('--research-rail-left')!==left)nav.style.setProperty('--research-rail-left',left);
    // Size from the normal inset; footer clearance must not change max-height.
    const startTop=layoutBounds.top+window.scrollY;

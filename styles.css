@@ -26,7 +26,8 @@ h3{font-size:19px;font-weight:550;letter-spacing:-.012em}
 [hidden]{display:none!important}
 .container{width:calc(100% - var(--page-gutter)*2);max-width:var(--page-width);margin-inline:auto}
 @media(min-width:901px){
- .container{width:calc(100% - max(var(--page-gutter),clamp(40px,calc(34vw - 266px),188px))*2)}
+ .container{width:calc(100% - max(var(--page-gutter),clamp(40px,calc(34vw - 266px),var(--page-gutter-max,188px)))*2)}
+ .research-page{--page-gutter-max:224px}
  .home .home-hero{container-type:inline-size}
  .home .home-hero-title{font-size:clamp(38px,5cqi,60px)}
 }
