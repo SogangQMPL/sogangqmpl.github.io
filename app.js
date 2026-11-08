@@ -172,9 +172,10 @@ function connectResearchNavigation(){
   }
   const root=document.documentElement;
   if(rail){
-   // Keep the original viewport position until the rail reaches the footer.
    const railWidth=parseFloat(getComputedStyle(layout).getPropertyValue('--research-rail-width'));
-   const left=`${Math.round(layoutBounds.left-railWidth-12)}px`;
+   // Share spare gutter space between the screen edge and the article.
+   const gap=Math.min(48,Math.max(12,(gutter-railWidth)/2));
+   const left=`${Math.round(gutter-railWidth-gap)}px`;
    if(nav.style.getPropertyValue('--research-rail-left')!==left)nav.style.setProperty('--research-rail-left',left);
    // Size from the normal inset; footer clearance must not change max-height.
    const startTop=layoutBounds.top+window.scrollY;
