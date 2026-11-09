@@ -415,9 +415,10 @@ html:not(.nav-disclosures-ready) #main-nav .nav-item:is(:hover,:focus-within) .n
 .topic-figure-credit{margin-top:10px;color:var(--muted);font-size:14px;line-height:1.7;overflow-wrap:anywhere}
 .topic-figure-credit a{color:inherit;text-underline-offset:3px;text-decoration-color:#b7bec7}
 .topic-figure-credit a:hover{color:var(--navy)}
-.topic-focus{grid-column:2;display:flex;flex-wrap:wrap;gap:2px 10px;list-style:none;padding:0;margin:4px 0 0;font-size:14px;line-height:1.55;color:#5d6876}
+.topic-focus{display:flex;flex-wrap:wrap;gap:2px 10px;list-style:none;padding:0;margin:0;font-size:16px;font-weight:500;line-height:1.55;color:var(--area-color)}
 .topic-focus li:not(:last-child)::after{content:' ·';margin-left:6px;color:var(--muted)}
 .topic-summary{font-size:17px;line-height:1.8;color:#4d5968;max-width:60ch}
+.topic-focus+.topic-summary{margin-top:7px}
 .topic-evidence{margin-left:var(--topic-copy-start);padding-top:12px}
 .topic-more+.topic-evidence{border-top:1px solid var(--line)}
 .result-label{font-size:15px;font-weight:600;color:var(--ink);margin:0 0 5px}
