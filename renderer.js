@@ -313,12 +313,13 @@ function researchPage(data,page,edit) {
     return `<li data-paper-id="${e(paper.id)}">${external(paper.url||(paper.doi?'https://doi.org/'+paper.doi:''),title+citation,'result-paper')}</li>`;
    }).join('');
    return `<article class="research-topic" id="${e(t.id)}"${edit.item(path,'하위 연구 주제')}>
-     <header class="topic-heading"><span class="topic-number" aria-hidden="true">${groupIndex+1}.${topicIndex+1}</span><h3${edit(path+'/title','text','하위 연구 주제명')}>${e(t.title)}</h3>
-      ${t.focus?.length?`<ul class="topic-focus" aria-label="Research focus"${edit(path+'/focus','list','연구 초점')}>${t.focus.map(f=>`<li>${e(f)}</li>`).join('')}</ul>`:''}
-     </header>
+     <header class="topic-heading"><span class="topic-number" aria-hidden="true">${groupIndex+1}.${topicIndex+1}</span><h3${edit(path+'/title','text','하위 연구 주제명')}>${e(t.title)}</h3></header>
      <div class="topic-layout${schematic?'':' topic-text-only'}">
       ${schematic?`<figure class="topic-schematic">${zoomLink({image:schematic,title:t.title,source:safeURL(credit?.url),width:t.schematicWidth,height:t.schematicHeight},schematicHTML)}${creditHTML}</figure>`:''}
-      ${summary?`<div class="topic-body"><p class="topic-summary"${edit(path+(t.summary?'/summary':'/description'),'multiline','연구 주제 소개')}>${e(summary)}</p></div>`:''}
+      ${summary||t.focus?.length?`<div class="topic-body">
+       ${t.focus?.length?`<ul class="topic-focus" aria-label="Research focus"${edit(path+'/focus','list','연구 초점')}>${t.focus.map(f=>`<li>${e(f)}</li>`).join('')}</ul>`:''}
+       ${summary?`<p class="topic-summary"${edit(path+(t.summary?'/summary':'/description'),'multiline','연구 주제 소개')}>${e(summary)}</p>`:''}
+      </div>`:''}
       ${detailContent?`<details class="topic-more"><summary aria-label="Research details — ${e(t.title)}"><span class="topic-more-label">Research details</span><span class="topic-more-icon" aria-hidden="true"></span></summary><div class="topic-more-content"${edit.collection(path+'/detailSections','연구 상세 설명')}>${detailContent}</div></details>`:''}
       ${relatedPapers?`<div class="topic-evidence"><h4 class="result-label"${edit(path+'/paperIds','relation','관련 논문 연결',{collection:'/publications'})}>Related papers</h4><ul class="result-list">${relatedPapers}</ul></div>`:''}
      </div>
