@@ -76,7 +76,7 @@
             }
           ],
           "mappingNote": "All six papers are retained from the original Quantum information related-paper list. The phonon, spin and charge papers support the material platform; do not describe every paper as demonstrating single-photon emission.",
-          "summary": "We identify and characterize quantum light sources for quantum communication and computing, focusing on nonclassical photon properties and two-dimensional materials.",
+          "summary": "We identify and characterize sources of nonclassical light in 2D materials for quantum communication and computing.",
           "image": "assets/research/quantum-light-platforms.webp",
           "imageAlt": "Quantum light sources — conceptual diagram",
           "schematic": "assets/research/quantum-light-wse2-1h-emitter.svg",
@@ -130,7 +130,7 @@
           "paperIds": [],
           "outcomes": [],
           "claimLimit": "The Wix page explicitly discusses entangled photons and twist-angle engineering. Preserve these concepts as research objectives; the page does not document a completed entangled-photon experiment or link a publication.",
-          "summary": "We study SPDC in strongly nonlinear 2D materials to generate entangled photons, using twist-angle control to engineer quantum light sources.",
+          "summary": "We investigate how twist-angle control in strongly nonlinear 2D materials can generate entangled photon pairs via SPDC.",
           "image": "assets/research/quantum-photonics.jpg",
           "imageAlt": "SPDC in 2D materials — conceptual diagram",
           "schematic": "assets/research/spdc-photon-pair-original-crop.png",
@@ -263,7 +263,7 @@
               ]
             }
           ],
-          "summary": "We study tunable moiré potentials, exciton arrays and strongly correlated states as platforms for quantum light, Bose–Hubbard physics and quantum simulation.",
+          "summary": "We study exciton arrays and strong correlations in tunable moiré potentials for quantum light, Bose–Hubbard physics and quantum simulation.",
           "image": "assets/research/moire-heterostructure.webp",
           "imageAlt": "Moiré physics — conceptual diagram",
           "schematic": "assets/research/moire-lattices-original-crop.png",
@@ -384,7 +384,7 @@
             }
           ],
           "claimLimit": "Retain the original discussion of hybridized states, Stark tuning, patterned-electrode trapping, quantum simulators and exciton-polariton applications. The applications are research directions rather than claims of completed simulator or polariton devices from the linked papers.",
-          "summary": "We study dipolar, hybridized, quadrupolar and symmetric interlayer excitons, using electric fields and patterned electrodes to control their optical response and confinement.",
+          "summary": "We study dipolar, hybridized, quadrupolar and symmetric interlayer excitons. Electric fields and patterned electrodes tune their optical response and confinement.",
           "image": "assets/research/interlayer-excitons.webp",
           "imageAlt": "Interlayer excitons — conceptual diagram",
           "schematic": "assets/research/interlayer-device-original-crop.png",
@@ -551,7 +551,7 @@
             }
           ],
           "mappingNote": "pub-09 is the original overview link. pub-01 is a newer related paper already present in the lab Publication archive and is marked as an addition rather than an original overview link.",
-          "summary": "We develop atomically thin 2D transistors with strong gate control, using flexible material stacking for neuromorphic devices and physical reservoir computing.",
+          "summary": "We stack 2D materials to build atomically thin transistors with strong gate control for physical reservoir computing.",
           "image": "assets/research/semiconductor-devices.webp",
           "imageAlt": "2D semiconductor devices — conceptual diagram",
           "schematic": "assets/research/semiconductor-devices-original.png",

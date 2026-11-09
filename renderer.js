@@ -304,17 +304,23 @@ function researchPage(data,page,edit) {
     const titleID=`${t.id}-detail-${index+1}`;
     return `<section class="research-detail-section${images.length?' has-detail-figures':''}${wide?' wide-detail-figure':''}${imageLeft?' detail-figure-left':''}"${heading?` aria-labelledby="${e(titleID)}"`:''}${edit.item(sectionPath,'연구 상세 설명')}><div class="research-detail-copy">${heading?`<h4 id="${e(titleID)}"${language(heading)}${edit(sectionPath+'/title','text','상세 설명 제목')}>${e(heading)}</h4>`:''}${edit.paragraphs(section.body,sectionPath+'/body','연구 상세 내용')}</div>${images.length?`<div class="research-detail-media"${edit.collection(sectionPath+'/images','상세 연구 그림')}>${images.map((image,imageIndex)=>originalFigure(image,sectionPath+'/images/'+imageIndex)).join('')}</div>`:''}</section>`;
    }).join(''):edit.paragraphs(description,path+'/description','연구 상세 내용')+detailImages.map((image,index)=>originalFigure(image,Array.isArray(t.detailImages)?path+'/detailImages/'+index:path,!Array.isArray(t.detailImages))).join('');
-   return `<article class="research-topic" id="${e(t.id)}"${edit.item(path,'하위 연구 주제')}><header class="topic-heading"><span class="topic-number" aria-hidden="true">${groupIndex+1}.${topicIndex+1}</span><h3${edit(path+'/title','text','하위 연구 주제명')}>${e(t.title)}</h3></header>
+   const relatedPapers=papers.map(paper=>{
+    const paperPath=edit.path('publications',paper);
+    const outcomeIndex=(t.outcomes||[]).findLastIndex(outcome=>outcome.paperIds?.length===1&&outcome.paperIds[0]===paper.id);
+    const titlePath=outcomeIndex>=0?path+'/outcomes/'+outcomeIndex+'/title':paperPath+'/title';
+    const title=`<span class="result-title"${edit(titlePath,outcomeIndex>=0?'text':'publication-title',outcomeIndex>=0?'관련 논문 표시 제목':'논문 제목',{urlPath:paperPath+'/url',segmentsPath:paperPath+'/titleSegments'})}>${publicationTitle(paper,shortTitles.get(paper.id)||paper.title)}</span>`;
+    const citation=`<span class="result-citation"${edit(paperPath+(paper.journal?'/journal':'/year'),paper.journal?'text':'number','논문 서지 정보')}>${publicationCitation(paper.journal||paper.year)}</span>`;
+    return `<li data-paper-id="${e(paper.id)}">${external(paper.url||(paper.doi?'https://doi.org/'+paper.doi:''),title+citation,'result-paper')}</li>`;
+   }).join('');
+   return `<article class="research-topic" id="${e(t.id)}"${edit.item(path,'하위 연구 주제')}>
+     <header class="topic-heading"><span class="topic-number" aria-hidden="true">${groupIndex+1}.${topicIndex+1}</span><h3${edit(path+'/title','text','하위 연구 주제명')}>${e(t.title)}</h3>
+      ${t.focus?.length?`<ul class="topic-focus" aria-label="Research focus"${edit(path+'/focus','list','연구 초점')}>${t.focus.map(f=>`<li>${e(f)}</li>`).join('')}</ul>`:''}
+     </header>
      <div class="topic-layout${schematic?'':' topic-text-only'}">
-      <div class="topic-body">
-       ${summary?`<p class="topic-summary"${edit(path+(t.summary?'/summary':'/description'),'multiline','연구 주제 소개')}>${e(summary)}</p>`:''}
-       ${t.focus?.length?`<ul class="topic-focus" aria-label="Research focus"${edit(path+'/focus','list','연구 초점')}>${t.focus.map(f=>`<li>${e(f)}</li>`).join('')}</ul>`:''}
-      </div>
       ${schematic?`<figure class="topic-schematic">${zoomLink({image:schematic,title:t.title,source:safeURL(credit?.url),width:t.schematicWidth,height:t.schematicHeight},schematicHTML)}${creditHTML}</figure>`:''}
-      ${detailContent||papers.length?`<div class="topic-resources">
-       ${detailContent?`<details class="topic-more"><summary aria-label="Research details — ${e(t.title)}"><span class="topic-more-label">Research details</span><span class="topic-more-icon" aria-hidden="true"></span></summary><div class="topic-more-content"${edit.collection(path+'/detailSections','연구 상세 설명')}>${detailContent}</div></details>`:''}
-       ${papers.length?`<div class="topic-evidence"><h4 class="result-label"${edit(path+'/paperIds','relation','관련 논문 연결',{collection:'/publications'})}>Related papers</h4><ul class="result-list">${papers.map(paper=>{const paperPath=edit.path('publications',paper),outcomeIndex=(t.outcomes||[]).findLastIndex(outcome=>outcome.paperIds?.length===1&&outcome.paperIds[0]===paper.id),titlePath=outcomeIndex>=0?path+'/outcomes/'+outcomeIndex+'/title':paperPath+'/title';return `<li data-paper-id="${e(paper.id)}">${external(paper.url||(paper.doi?'https://doi.org/'+paper.doi:''),publicationTitle(paper,shortTitles.get(paper.id)||paper.title),'',edit(titlePath,outcomeIndex>=0?'text':'publication-title',outcomeIndex>=0?'관련 논문 표시 제목':'논문 제목',{urlPath:paperPath+'/url',segmentsPath:paperPath+'/titleSegments'}))}<span class="result-citation"${edit(paperPath+(paper.journal?'/journal':'/year'),paper.journal?'text':'number','논문 서지 정보')}>${publicationCitation(paper.journal||paper.year)}</span></li>`;}).join('')}</ul></div>`:''}
-      </div>`:''}
+      ${summary?`<div class="topic-body"><p class="topic-summary"${edit(path+(t.summary?'/summary':'/description'),'multiline','연구 주제 소개')}>${e(summary)}</p></div>`:''}
+      ${detailContent?`<details class="topic-more"><summary aria-label="Research details — ${e(t.title)}"><span class="topic-more-label">Research details</span><span class="topic-more-icon" aria-hidden="true"></span></summary><div class="topic-more-content"${edit.collection(path+'/detailSections','연구 상세 설명')}>${detailContent}</div></details>`:''}
+      ${relatedPapers?`<div class="topic-evidence"><h4 class="result-label"${edit(path+'/paperIds','relation','관련 논문 연결',{collection:'/publications'})}>Related papers</h4><ul class="result-list">${relatedPapers}</ul></div>`:''}
      </div>
    </article>`;
  };
