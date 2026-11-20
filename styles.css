@@ -364,14 +364,12 @@ html:not(.nav-disclosures-ready) #main-nav .nav-item:is(:hover,:focus-within) .n
 .home-image-filter{position:absolute;pointer-events:none}
 .home-hero-figure img{width:100%;height:auto;filter:url(#home-lattice-tint)}
 .home-hero-figure:after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 24px 16px #fff;pointer-events:none}
-.photon-parade{--photon-width:62px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:10px;flex-shrink:0;margin-block-start:var(--layout-gap)}
+.photon-parade{--photon-width:62px;flex-shrink:0;margin-block-start:var(--layout-gap)}
 .photon-parade+.site-footer{margin-top:0}
 .photon-track{position:relative;height:calc(var(--photon-width) * 13 / 12);overflow:hidden;pointer-events:none}
 .photon-route{position:absolute;inset:0 var(--photon-width) 0 0;transform:translateX(4%)}
 /* Offset the sprite sheet's three transparent pixels below the standing pose. */
 .photon-sprite{display:block;width:var(--photon-width);height:100%;background-size:800% 400%;background-repeat:no-repeat;transform:translateY(calc(var(--photon-width) * 3 / 96))}
-.photon-toggle{min-width:60px;min-height:44px;padding:4px 5px;border:0;background:none;color:var(--muted);font:500 14px/1.5 var(--sans);cursor:pointer}
-.photon-toggle:hover{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
 @media(max-width:800px){.photon-parade{--photon-width:52px}}
 .not-found{display:flex;align-items:center}
 .not-found .home-hero{width:100%}
