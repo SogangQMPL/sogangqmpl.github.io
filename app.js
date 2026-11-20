@@ -230,6 +230,74 @@ function connectResearchNavigation(){
   for(const area of areas)observer.observe(area.section);
  }
 }
+function connectPhoton(){
+ const parade=document.querySelector('.photon-parade');
+ if(!parade)return;
+ const route=parade.querySelector('.photon-route');
+ const sprite=parade.querySelector('.photon-sprite');
+ const toggle=parade.querySelector('.photon-toggle');
+ if(typeof sprite.animate!=='function')return;
+
+ // Each frame keeps its cell registration from the original Photon sprite sheet.
+ const idle=[280,110,110,140,140,320];
+ const running=Array(8).fill(120);
+ const jump=[140,140,140,140,280];
+ const itinerary=[
+  {end:4,row:0,timing:idle,duration:1400},
+  {end:38,row:1,timing:running,duration:3200},
+  {end:38,row:3,timing:jump,duration:840},
+  {end:96,row:1,timing:running,duration:4800},
+  {end:96,row:0,timing:idle,duration:1550},
+  {end:61,row:2,timing:running,duration:3200},
+  {end:61,row:3,timing:jump,duration:840},
+  {end:4,row:2,timing:running,duration:4800},
+ ];
+ const duration=itinerary.reduce((total,stop)=>total+stop.duration,0);
+ const positions=[{transform:'translateX(4%)',offset:0}];
+ const frames=[];
+ let elapsed=0;
+ for(const stop of itinerary){
+  let frame=0;
+  for(let time=0;time<stop.duration;time+=stop.timing[frame],frame=(frame+1)%stop.timing.length){
+   const backgroundPosition=`${frame/7*100}% ${stop.row/3*100}%`;
+   frames.push({backgroundPosition,offset:(elapsed+time)/duration,easing:'steps(1, end)'});
+  }
+  elapsed+=stop.duration;
+  positions.push({transform:`translateX(${stop.end}%)`,offset:elapsed/duration});
+ }
+ frames.push({...frames[0],offset:1});
+ const playback={duration,iterations:Infinity};
+ const animations=[route.animate(positions,playback),sprite.animate(frames,playback)];
+ const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+ let paused=false;
+ let visible=typeof IntersectionObserver!=='function';
+ function syncPlayback(){
+  const reduced=reducedMotion.matches;
+  toggle.hidden=reduced;
+  toggle.textContent=paused?'Play':'Pause';
+  toggle.setAttribute('aria-label',`${paused?'Play':'Pause'} Photon animation`);
+  for(const animation of animations){
+   if(paused||reduced||!visible||document.hidden)animation.pause();
+   else animation.play();
+   if(reduced)animation.currentTime=0;
+  }
+ }
+ toggle.addEventListener('click',()=>{
+  paused=!paused;
+  syncPlayback();
+ });
+ reducedMotion.addEventListener('change',syncPlayback);
+ document.addEventListener('visibilitychange',syncPlayback);
+ if(typeof IntersectionObserver==='function'){
+  const observer=new IntersectionObserver(([entry])=>{
+   visible=entry.isIntersecting;
+   syncPlayback();
+  });
+  observer.observe(parade);
+ }
+ syncPlayback();
+}
+
 function connect() {
  if(preview) for(const link of document.querySelectorAll('a[href]')) {
    const href=link.getAttribute('href');
@@ -415,6 +483,7 @@ function connect() {
  }
  connectArchiveReturn();
  connectResearchNavigation();
+ connectPhoton();
 }
 connect();
 document.body.dataset.ready='true';
