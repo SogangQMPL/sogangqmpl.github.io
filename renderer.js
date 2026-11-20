@@ -237,7 +237,12 @@ function home(data,page,edit) {
   ?`<div class="announcement-body">(<span${edit('/announcement/body','multiline','홈 공지 내용')}>${mail(data.site.email)}</span>)</div>`
   :`<div class="announcement-body"${edit('/announcement/body','multiline','홈 공지 내용')}>${paragraphs(notice.body)}</div>`;
  const announcement=notice.enabled?`<section class="announcement" aria-label="Announcement"${edit.item('/announcement','홈 공지')}><h2${language(notice.title)}${edit('/announcement/title','text','홈 공지 제목',{urlPath:'/announcement/url'})}>${href?`<a href="${e(href)}">${e(notice.title)}</a>`:e(notice.title)}</h2>${announcementBody}</section>`:'';
- return `<main id="main" tabindex="-1" class="container page-layout home">${intro}${announcement}
+ return `<main id="main" tabindex="-1" class="container page-layout home">${intro}
+   <div class="photon-parade">
+    <div class="photon-track" aria-hidden="true"><div class="photon-route"><span class="photon-sprite" style="background-image:url('assets/mascot/photon.webp')"></span></div></div>
+    <button class="photon-toggle" type="button" aria-label="Pause Photon animation" hidden>Pause</button>
+   </div>
+   ${announcement}
    <section class="home-news home-section">${sectionTitle('News','news.html','More news')}<div class="news-list"${edit.collection('/news','소식')}>${sortedNews(data).filter(n=>n.category!=='Activities').slice(0,3).map(n=>newsEntry(n,edit)).join('')}</div></section>
    <section class="home-publications home-section">${sectionTitle('Publications','publications.html','More papers')}<div class="publication-list"${edit.collection('/publications','논문')}>${selected.map((p,i)=>pubEntry(p,i,true,edit)).join('')}</div></section>
  </main>`;
