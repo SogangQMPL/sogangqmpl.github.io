@@ -104,9 +104,8 @@ function header(data,page,edit) {
 
 function footer(data,page,edit) {
  if(page==='404')return '';
- const mascot=page==='index'?`<div class="container photon-parade">
-    <div class="photon-track" aria-hidden="true"><div class="photon-route"><span class="photon-sprite" style="background-image:url('assets/mascot/photon.webp')"></span></div></div>
-    <button class="photon-toggle" type="button" aria-label="Pause Photon animation" hidden>Pause</button>
+ const mascot=page==='index'?`<div class="container photon-parade" aria-hidden="true">
+    <div class="photon-track"><div class="photon-route"><span class="photon-sprite" style="background-image:url('assets/mascot/photon.webp')"></span></div></div>
    </div>`:'';
  return `${mascot}<footer class="site-footer"><div class="container footer-inner"><div class="footer-contact"><span class="footer-affiliation"${edit('/site/affiliation','text','소속')}>${e(data.site.affiliation)}</span><a class="footer-address" href="join.html#top"${edit('/site/address','text','연구실 주소')}>${e(data.site.address)}</a></div><span class="copyright">© ${new Date().getUTCFullYear()} <span${edit('/site/group','text','연구 그룹명')}>${e(data.site.group)}</span></span></div></footer>`;
 }
