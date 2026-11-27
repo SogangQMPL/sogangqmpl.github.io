@@ -1,4 +1,5 @@
 export const pages = ['index', 'research', 'people', 'students', 'publications', 'news', 'activities', 'join'];
+export const studentsPageEnabled = false;
 export const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const e = escapeHTML;
 export function safeURL(value, fallback = '') {
@@ -91,7 +92,9 @@ function header(data,page,edit) {
   ?`<div class="nav-item"><span class="nav-group-label${active?' section-current':''}" id="mobile-nav-${id}">${label}</span><div class="nav-dropdown" role="group" aria-labelledby="mobile-nav-${id}">${children}</div></div>`
   :`<div class="nav-item has-submenu">${link(first,label,active?' class="section-current"':'')}<button type="button" class="nav-submenu-toggle" aria-label="${label} submenu" aria-expanded="false" aria-controls="nav-${id}"></button><div class="nav-dropdown" id="nav-${id}">${children}</div></div>`;
  const navigation=mobile=>`<div class="nav-item">${link('index','Home')}</div>
-     ${group(mobile,'member','Member',member,'people',link('people','Professor')+link('students','Students'))}
+     ${studentsPageEnabled
+       ? group(mobile,'member','Member',member,'people',link('people','Professor')+link('students','Students'))
+       : `<div class="nav-item">${link('people','Member')}</div>`}
      <div class="nav-item">${link('publications','Publication')}</div>
      <div class="nav-item">${link('research','Research')}</div>
      ${group(mobile,'highlights','Highlights',highlights,'news',link('news','News')+link('activities','Activities'))}`;
@@ -338,6 +341,7 @@ function researchPage(data,page,edit) {
 
 const isPI=p=>/principal investigator|^pi$|교수/i.test(p.role||'');
 function memberNavigation(current) {
+ if(!studentsPageEnabled)return '';
  return `<nav class="member-navigation" aria-label="Member pages"><a href="people.html" ${current==='people'?'aria-current="page"':''}>Professor</a><a href="students.html" ${current==='students'?'aria-current="page"':''}>Students</a></nav>`;
 }
 const biographyContent=value=>String(value||'').split(/\n+/).filter(Boolean).map(line=>{
