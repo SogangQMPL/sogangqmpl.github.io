@@ -231,8 +231,14 @@ function connectResearchNavigation(){
  }
 }
 function connectPhoton(){
- const parade=document.querySelector('.photon-parade');
- if(!parade)return;
+ const template=document.getElementById('photon-template');
+ if(!template)return;
+ if(Math.random()>=0.5){
+  template.remove();
+  return;
+ }
+ const parade=template.content.firstElementChild;
+ template.replaceWith(parade);
  const route=parade.querySelector('.photon-route');
  const sprite=parade.querySelector('.photon-sprite');
  if(typeof sprite.animate!=='function')return;
