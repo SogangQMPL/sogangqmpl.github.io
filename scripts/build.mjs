@@ -2,7 +2,7 @@ import {readFile,writeFile,mkdir,cp,unlink} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {render,pages,escapeHTML,pageTitle,postFileName,findPost,safeURL} from '../renderer.js';
+import {render,pages,studentsPageEnabled,escapeHTML,pageTitle,postFileName,findPost,safeURL} from '../renderer.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const data=JSON.parse(await readFile(path.join(root,'content/site.json'),'utf8'));
 const stylesheetVersion=createHash('sha256').update(await readFile(path.join(root,'styles.css'))).digest('hex').slice(0,12);
@@ -30,6 +30,10 @@ const pageShareAlt=shareCard?'Quantum Materials & Photonics Lab, Sogang Universi
 await mkdir(output,{recursive:true});
 const allPages=[...pages,...data.news.map(n=>'post-'+n.id),'404'];
 for(const page of allPages){
+ if(page==='students'&&!studentsPageEnabled){
+  await writeFile(path.join(output,'students.html'),`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=people.html"><link rel="canonical" href="${siteURL}people.html"><title>Member | ${escapeHTML(data.site.title)}</title></head><body><p><a href="people.html">Continue to Professor</a></p></body></html>`);
+  continue;
+ }
  const notFound=page==='404',title=pageTitle(data,page),post=findPost(data,page),description=post?(post.body||post.summary||post.title):notFound?'Page not found.':pageDescriptions[page]||data.site.description;
  let html=template.replaceAll('%%ROOT%%',notFound?'/':'').replaceAll('%%TITLE%%',escapeHTML(title)).replaceAll('%%DESCRIPTION%%',escapeHTML(description)).replaceAll('%%PAGE%%',page).replace('%%CONTENT%%',render(data,page));
  if(notFound)html=html.replace('  <title>','  <meta name="robots" content="noindex">\n  <title>');
